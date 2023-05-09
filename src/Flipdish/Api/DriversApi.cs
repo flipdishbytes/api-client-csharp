@@ -25,7 +25,7 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Add driver token
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -36,7 +36,7 @@ namespace Flipdish.Api
         void AddDriverNotificationToken (UpdateDriverNotificationToken updateDriverToken);
 
         /// <summary>
-        /// Add driver token
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -46,7 +46,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> AddDriverNotificationTokenWithHttpInfo (UpdateDriverNotificationToken updateDriverToken);
         /// <summary>
-        /// Delete driver profile image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -56,7 +56,7 @@ namespace Flipdish.Api
         void DeleteDriverProfileImage ();
 
         /// <summary>
-        /// Delete driver profile image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -65,49 +65,49 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteDriverProfileImageWithHttpInfo ();
         /// <summary>
-        /// [PRIVATE] Login with phone number and pin
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="driverLoginModel">Driver request login code model</param>
+        /// <param name="driverLoginModel"></param>
         /// <returns></returns>
         void DriverLogin (DriverLoginModel driverLoginModel);
 
         /// <summary>
-        /// [PRIVATE] Login with phone number and pin
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="driverLoginModel">Driver request login code model</param>
+        /// <param name="driverLoginModel"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DriverLoginWithHttpInfo (DriverLoginModel driverLoginModel);
         /// <summary>
-        /// [PRIVATE] Request an SMS to be sent to the driver with their login code
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="driverRequestLoginPinModel">Driver request login code model</param>
+        /// <param name="driverRequestLoginPinModel"></param>
         /// <returns></returns>
         void DriverRequestLoginCodeSms (DriverRequestLoginPinModel driverRequestLoginPinModel);
 
         /// <summary>
-        /// [PRIVATE] Request an SMS to be sent to the driver with their login code
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="driverRequestLoginPinModel">Driver request login code model</param>
+        /// <param name="driverRequestLoginPinModel"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DriverRequestLoginCodeSmsWithHttpInfo (DriverRequestLoginPinModel driverRequestLoginPinModel);
         /// <summary>
-        /// Get driver profile
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -117,7 +117,7 @@ namespace Flipdish.Api
         RestApiResultDriver GetDriverProfile ();
 
         /// <summary>
-        /// Get driver profile
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -126,7 +126,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultDriver</returns>
         ApiResponse<RestApiResultDriver> GetDriverProfileWithHttpInfo ();
         /// <summary>
-        /// Get stores for driver
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -136,7 +136,7 @@ namespace Flipdish.Api
         RestApiArrayResultDriverStore GetStoresForDriver ();
 
         /// <summary>
-        /// Get stores for driver
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -145,7 +145,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultDriverStore</returns>
         ApiResponse<RestApiArrayResultDriverStore> GetStoresForDriverWithHttpInfo ();
         /// <summary>
-        /// Delete driver token
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -156,7 +156,7 @@ namespace Flipdish.Api
         void RemoveDriverNotificationToken (UpdateDriverNotificationToken removeDriverToken);
 
         /// <summary>
-        /// Delete driver token
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -189,7 +189,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> SetDriverPresenceForStoreWithHttpInfo (int? storeId, string presence);
         /// <summary>
-        /// Set driver profile image and returns it&#39;s url
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -199,7 +199,7 @@ namespace Flipdish.Api
         RestApiStringResult SetDriverProfileImage ();
 
         /// <summary>
-        /// Set driver profile image and returns it&#39;s url
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -208,53 +208,53 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiStringResult</returns>
         ApiResponse<RestApiStringResult> SetDriverProfileImageWithHttpInfo ();
         /// <summary>
-        /// Change delivery tracking status and return the updated status.
+        /// 
         /// </summary>
         /// <remarks>
-        /// ...
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Order identifier</param>
+        /// <param name="orderId"></param>
         /// <param name="deliveryTrackingStatus"></param>
         /// <returns>RestApiStringResult</returns>
         RestApiStringResult UpdateDeliveryTrackingStatus (int? orderId, string deliveryTrackingStatus);
 
         /// <summary>
-        /// Change delivery tracking status and return the updated status.
+        /// 
         /// </summary>
         /// <remarks>
-        /// ...
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Order identifier</param>
+        /// <param name="orderId"></param>
         /// <param name="deliveryTrackingStatus"></param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
         ApiResponse<RestApiStringResult> UpdateDeliveryTrackingStatusWithHttpInfo (int? orderId, string deliveryTrackingStatus);
         /// <summary>
-        /// Update driver profile
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="updateDriverProfile">Update the driver profile (i.e Name)</param>
+        /// <param name="updateDriverProfile"></param>
         /// <returns></returns>
         void UpdateDriverProfile (UpdateDriverProfileModel updateDriverProfile);
 
         /// <summary>
-        /// Update driver profile
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="updateDriverProfile">Update the driver profile (i.e Name)</param>
+        /// <param name="updateDriverProfile"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateDriverProfileWithHttpInfo (UpdateDriverProfileModel updateDriverProfile);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Add driver token
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -265,7 +265,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task AddDriverNotificationTokenAsync (UpdateDriverNotificationToken updateDriverToken);
 
         /// <summary>
-        /// Add driver token
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -275,7 +275,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AddDriverNotificationTokenAsyncWithHttpInfo (UpdateDriverNotificationToken updateDriverToken);
         /// <summary>
-        /// Delete driver profile image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -285,7 +285,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task DeleteDriverProfileImageAsync ();
 
         /// <summary>
-        /// Delete driver profile image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -294,49 +294,49 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDriverProfileImageAsyncWithHttpInfo ();
         /// <summary>
-        /// [PRIVATE] Login with phone number and pin
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="driverLoginModel">Driver request login code model</param>
+        /// <param name="driverLoginModel"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DriverLoginAsync (DriverLoginModel driverLoginModel);
 
         /// <summary>
-        /// [PRIVATE] Login with phone number and pin
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="driverLoginModel">Driver request login code model</param>
+        /// <param name="driverLoginModel"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DriverLoginAsyncWithHttpInfo (DriverLoginModel driverLoginModel);
         /// <summary>
-        /// [PRIVATE] Request an SMS to be sent to the driver with their login code
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="driverRequestLoginPinModel">Driver request login code model</param>
+        /// <param name="driverRequestLoginPinModel"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DriverRequestLoginCodeSmsAsync (DriverRequestLoginPinModel driverRequestLoginPinModel);
 
         /// <summary>
-        /// [PRIVATE] Request an SMS to be sent to the driver with their login code
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="driverRequestLoginPinModel">Driver request login code model</param>
+        /// <param name="driverRequestLoginPinModel"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DriverRequestLoginCodeSmsAsyncWithHttpInfo (DriverRequestLoginPinModel driverRequestLoginPinModel);
         /// <summary>
-        /// Get driver profile
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -346,7 +346,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultDriver> GetDriverProfileAsync ();
 
         /// <summary>
-        /// Get driver profile
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -355,7 +355,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultDriver)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultDriver>> GetDriverProfileAsyncWithHttpInfo ();
         /// <summary>
-        /// Get stores for driver
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -365,7 +365,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultDriverStore> GetStoresForDriverAsync ();
 
         /// <summary>
-        /// Get stores for driver
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -374,7 +374,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultDriverStore)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultDriverStore>> GetStoresForDriverAsyncWithHttpInfo ();
         /// <summary>
-        /// Delete driver token
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -385,7 +385,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task RemoveDriverNotificationTokenAsync (UpdateDriverNotificationToken removeDriverToken);
 
         /// <summary>
-        /// Delete driver token
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -418,7 +418,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> SetDriverPresenceForStoreAsyncWithHttpInfo (int? storeId, string presence);
         /// <summary>
-        /// Set driver profile image and returns it&#39;s url
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -428,7 +428,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiStringResult> SetDriverProfileImageAsync ();
 
         /// <summary>
-        /// Set driver profile image and returns it&#39;s url
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -437,47 +437,47 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> SetDriverProfileImageAsyncWithHttpInfo ();
         /// <summary>
-        /// Change delivery tracking status and return the updated status.
+        /// 
         /// </summary>
         /// <remarks>
-        /// ...
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Order identifier</param>
+        /// <param name="orderId"></param>
         /// <param name="deliveryTrackingStatus"></param>
         /// <returns>Task of RestApiStringResult</returns>
         System.Threading.Tasks.Task<RestApiStringResult> UpdateDeliveryTrackingStatusAsync (int? orderId, string deliveryTrackingStatus);
 
         /// <summary>
-        /// Change delivery tracking status and return the updated status.
+        /// 
         /// </summary>
         /// <remarks>
-        /// ...
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Order identifier</param>
+        /// <param name="orderId"></param>
         /// <param name="deliveryTrackingStatus"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> UpdateDeliveryTrackingStatusAsyncWithHttpInfo (int? orderId, string deliveryTrackingStatus);
         /// <summary>
-        /// Update driver profile
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="updateDriverProfile">Update the driver profile (i.e Name)</param>
+        /// <param name="updateDriverProfile"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UpdateDriverProfileAsync (UpdateDriverProfileModel updateDriverProfile);
 
         /// <summary>
-        /// Update driver profile
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="updateDriverProfile">Update the driver profile (i.e Name)</param>
+        /// <param name="updateDriverProfile"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateDriverProfileAsyncWithHttpInfo (UpdateDriverProfileModel updateDriverProfile);
         #endregion Asynchronous Operations
@@ -581,7 +581,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add driver token 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateDriverToken"></param>
@@ -592,7 +592,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add driver token 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateDriverToken"></param>
@@ -667,7 +667,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add driver token 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateDriverToken"></param>
@@ -679,7 +679,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add driver token 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateDriverToken"></param>
@@ -754,7 +754,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete driver profile image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
@@ -764,7 +764,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete driver profile image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -822,7 +822,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete driver profile image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
@@ -833,7 +833,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete driver profile image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
@@ -891,10 +891,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Login with phone number and pin 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="driverLoginModel">Driver request login code model</param>
+        /// <param name="driverLoginModel"></param>
         /// <returns></returns>
         public void DriverLogin (DriverLoginModel driverLoginModel)
         {
@@ -902,10 +902,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Login with phone number and pin 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="driverLoginModel">Driver request login code model</param>
+        /// <param name="driverLoginModel"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DriverLoginWithHttpInfo (DriverLoginModel driverLoginModel)
         {
@@ -977,10 +977,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Login with phone number and pin 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="driverLoginModel">Driver request login code model</param>
+        /// <param name="driverLoginModel"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DriverLoginAsync (DriverLoginModel driverLoginModel)
         {
@@ -989,10 +989,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Login with phone number and pin 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="driverLoginModel">Driver request login code model</param>
+        /// <param name="driverLoginModel"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DriverLoginAsyncWithHttpInfo (DriverLoginModel driverLoginModel)
         {
@@ -1064,10 +1064,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Request an SMS to be sent to the driver with their login code 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="driverRequestLoginPinModel">Driver request login code model</param>
+        /// <param name="driverRequestLoginPinModel"></param>
         /// <returns></returns>
         public void DriverRequestLoginCodeSms (DriverRequestLoginPinModel driverRequestLoginPinModel)
         {
@@ -1075,10 +1075,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Request an SMS to be sent to the driver with their login code 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="driverRequestLoginPinModel">Driver request login code model</param>
+        /// <param name="driverRequestLoginPinModel"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DriverRequestLoginCodeSmsWithHttpInfo (DriverRequestLoginPinModel driverRequestLoginPinModel)
         {
@@ -1150,10 +1150,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Request an SMS to be sent to the driver with their login code 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="driverRequestLoginPinModel">Driver request login code model</param>
+        /// <param name="driverRequestLoginPinModel"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DriverRequestLoginCodeSmsAsync (DriverRequestLoginPinModel driverRequestLoginPinModel)
         {
@@ -1162,10 +1162,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Request an SMS to be sent to the driver with their login code 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="driverRequestLoginPinModel">Driver request login code model</param>
+        /// <param name="driverRequestLoginPinModel"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DriverRequestLoginCodeSmsAsyncWithHttpInfo (DriverRequestLoginPinModel driverRequestLoginPinModel)
         {
@@ -1237,7 +1237,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get driver profile 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RestApiResultDriver</returns>
@@ -1248,7 +1248,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get driver profile 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RestApiResultDriver</returns>
@@ -1306,7 +1306,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get driver profile 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of RestApiResultDriver</returns>
@@ -1318,7 +1318,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get driver profile 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RestApiResultDriver)</returns>
@@ -1376,7 +1376,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get stores for driver 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RestApiArrayResultDriverStore</returns>
@@ -1387,7 +1387,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get stores for driver 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RestApiArrayResultDriverStore</returns>
@@ -1445,7 +1445,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get stores for driver 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of RestApiArrayResultDriverStore</returns>
@@ -1457,7 +1457,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get stores for driver 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RestApiArrayResultDriverStore)</returns>
@@ -1515,7 +1515,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete driver token 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="removeDriverToken"></param>
@@ -1526,7 +1526,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete driver token 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="removeDriverToken"></param>
@@ -1601,7 +1601,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete driver token 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="removeDriverToken"></param>
@@ -1613,7 +1613,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete driver token 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="removeDriverToken"></param>
@@ -1849,7 +1849,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set driver profile image and returns it&#39;s url 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RestApiStringResult</returns>
@@ -1860,7 +1860,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set driver profile image and returns it&#39;s url 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RestApiStringResult</returns>
@@ -1918,7 +1918,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set driver profile image and returns it&#39;s url 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of RestApiStringResult</returns>
@@ -1930,7 +1930,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set driver profile image and returns it&#39;s url 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
@@ -1988,10 +1988,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Change delivery tracking status and return the updated status. ...
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Order identifier</param>
+        /// <param name="orderId"></param>
         /// <param name="deliveryTrackingStatus"></param>
         /// <returns>RestApiStringResult</returns>
         public RestApiStringResult UpdateDeliveryTrackingStatus (int? orderId, string deliveryTrackingStatus)
@@ -2001,10 +2001,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Change delivery tracking status and return the updated status. ...
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Order identifier</param>
+        /// <param name="orderId"></param>
         /// <param name="deliveryTrackingStatus"></param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
         public ApiResponse< RestApiStringResult > UpdateDeliveryTrackingStatusWithHttpInfo (int? orderId, string deliveryTrackingStatus)
@@ -2069,10 +2069,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Change delivery tracking status and return the updated status. ...
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Order identifier</param>
+        /// <param name="orderId"></param>
         /// <param name="deliveryTrackingStatus"></param>
         /// <returns>Task of RestApiStringResult</returns>
         public async System.Threading.Tasks.Task<RestApiStringResult> UpdateDeliveryTrackingStatusAsync (int? orderId, string deliveryTrackingStatus)
@@ -2083,10 +2083,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Change delivery tracking status and return the updated status. ...
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Order identifier</param>
+        /// <param name="orderId"></param>
         /// <param name="deliveryTrackingStatus"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> UpdateDeliveryTrackingStatusAsyncWithHttpInfo (int? orderId, string deliveryTrackingStatus)
@@ -2151,10 +2151,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update driver profile 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="updateDriverProfile">Update the driver profile (i.e Name)</param>
+        /// <param name="updateDriverProfile"></param>
         /// <returns></returns>
         public void UpdateDriverProfile (UpdateDriverProfileModel updateDriverProfile)
         {
@@ -2162,10 +2162,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update driver profile 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="updateDriverProfile">Update the driver profile (i.e Name)</param>
+        /// <param name="updateDriverProfile"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> UpdateDriverProfileWithHttpInfo (UpdateDriverProfileModel updateDriverProfile)
         {
@@ -2237,10 +2237,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update driver profile 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="updateDriverProfile">Update the driver profile (i.e Name)</param>
+        /// <param name="updateDriverProfile"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UpdateDriverProfileAsync (UpdateDriverProfileModel updateDriverProfile)
         {
@@ -2249,10 +2249,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update driver profile 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="updateDriverProfile">Update the driver profile (i.e Name)</param>
+        /// <param name="updateDriverProfile"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateDriverProfileAsyncWithHttpInfo (UpdateDriverProfileModel updateDriverProfile)
         {

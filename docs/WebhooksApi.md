@@ -4,23 +4,23 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateWebhookSubscription**](WebhooksApi.md#createwebhooksubscription) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | Create a webhook subscription for you Oauth App
-[**CreateWebhookSubscriptionEventNames**](WebhooksApi.md#createwebhooksubscriptioneventnames) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Add event name to your webhook subscription
-[**DeleteWebhookSubscription**](WebhooksApi.md#deletewebhooksubscription) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | Delete you webhook subscription
-[**DeleteWebhookSubscriptionEventName**](WebhooksApi.md#deletewebhooksubscriptioneventname) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Remove event name to your webhook subscription
-[**GetWebhookEventNames**](WebhooksApi.md#getwebhookeventnames) | **GET** /api/v1.0/{appId}/webhooks/events | Get all webhook subscription event names
-[**GetWebhookEventNamesBySubscriptionId**](WebhooksApi.md#getwebhookeventnamesbysubscriptionid) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events | Get your webhook subscriptions selected event names
-[**GetWebhookEventSample**](WebhooksApi.md#getwebhookeventsample) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}/test | Get a sample event from a webhook subscription
-[**GetWebhookLogs**](WebhooksApi.md#getwebhooklogs) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/logs | Get logs for your webhook subscription
-[**GetWebhookSubscriptions**](WebhooksApi.md#getwebhooksubscriptions) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | Get all webhook subscriptions by your Oauth App id
-[**UpdateWebhookSubscription**](WebhooksApi.md#updatewebhooksubscription) | **PUT** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | Update a webhook subscription object
+[**CreateWebhookSubscription**](WebhooksApi.md#createwebhooksubscription) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | 
+[**CreateWebhookSubscriptionEventNames**](WebhooksApi.md#createwebhooksubscriptioneventnames) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | 
+[**DeleteWebhookSubscription**](WebhooksApi.md#deletewebhooksubscription) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | 
+[**DeleteWebhookSubscriptionEventName**](WebhooksApi.md#deletewebhooksubscriptioneventname) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | 
+[**GetWebhookEventNames**](WebhooksApi.md#getwebhookeventnames) | **GET** /api/v1.0/{appId}/webhooks/events | 
+[**GetWebhookEventNamesBySubscriptionId**](WebhooksApi.md#getwebhookeventnamesbysubscriptionid) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events | 
+[**GetWebhookEventSample**](WebhooksApi.md#getwebhookeventsample) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}/test | 
+[**GetWebhookLogs**](WebhooksApi.md#getwebhooklogs) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/logs | 
+[**GetWebhookSubscriptions**](WebhooksApi.md#getwebhooksubscriptions) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | 
+[**UpdateWebhookSubscription**](WebhooksApi.md#updatewebhooksubscription) | **PUT** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | 
 
 
 <a name="createwebhooksubscription"></a>
 # **CreateWebhookSubscription**
 > RestApiIntegerResult CreateWebhookSubscription (string oauthAppId, WebhookSubscription webhookSubscription, string appId)
 
-Create a webhook subscription for you Oauth App
+
 
 ### Example
 ```csharp
@@ -40,13 +40,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WebhooksApi();
-            var oauthAppId = oauthAppId_example;  // string | Oauth App identifier
-            var webhookSubscription = new WebhookSubscription(); // WebhookSubscription | Webhook subscription object
+            var oauthAppId = oauthAppId_example;  // string | 
+            var webhookSubscription = new WebhookSubscription(); // WebhookSubscription | 
             var appId = appId_example;  // string | 
 
             try
             {
-                // Create a webhook subscription for you Oauth App
                 RestApiIntegerResult result = apiInstance.CreateWebhookSubscription(oauthAppId, webhookSubscription, appId);
                 Debug.WriteLine(result);
             }
@@ -63,8 +62,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **string**| Oauth App identifier | 
- **webhookSubscription** | [**WebhookSubscription**](WebhookSubscription.md)| Webhook subscription object | 
+ **oauthAppId** | **string**|  | 
+ **webhookSubscription** | [**WebhookSubscription**](WebhookSubscription.md)|  | 
  **appId** | **string**|  | 
 
 ### Return type
@@ -86,7 +85,7 @@ Name | Type | Description  | Notes
 # **CreateWebhookSubscriptionEventNames**
 > void CreateWebhookSubscriptionEventNames (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId)
 
-Add event name to your webhook subscription
+
 
 ### Example
 ```csharp
@@ -106,14 +105,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WebhooksApi();
-            var oauthAppId = oauthAppId_example;  // string | Oauth App identifier
-            var webhookSubscriptionId = 56;  // int? | Webhook subscription identifier
-            var eventName = eventName_example;  // string | Webhook subscription event name
+            var oauthAppId = oauthAppId_example;  // string | 
+            var webhookSubscriptionId = 56;  // int? | 
+            var eventName = eventName_example;  // string | 
             var appId = appId_example;  // string | 
 
             try
             {
-                // Add event name to your webhook subscription
                 apiInstance.CreateWebhookSubscriptionEventNames(oauthAppId, webhookSubscriptionId, eventName, appId);
             }
             catch (Exception e)
@@ -129,9 +127,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **string**| Oauth App identifier | 
- **webhookSubscriptionId** | **int?**| Webhook subscription identifier | 
- **eventName** | **string**| Webhook subscription event name | 
+ **oauthAppId** | **string**|  | 
+ **webhookSubscriptionId** | **int?**|  | 
+ **eventName** | **string**|  | 
  **appId** | **string**|  | 
 
 ### Return type
@@ -153,7 +151,7 @@ void (empty response body)
 # **DeleteWebhookSubscription**
 > void DeleteWebhookSubscription (string oauthAppId, int? webhookSubscriptionId, string appId)
 
-Delete you webhook subscription
+
 
 ### Example
 ```csharp
@@ -173,13 +171,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WebhooksApi();
-            var oauthAppId = oauthAppId_example;  // string | Oauth App identifier
-            var webhookSubscriptionId = 56;  // int? | Webhook subscription identifier
+            var oauthAppId = oauthAppId_example;  // string | 
+            var webhookSubscriptionId = 56;  // int? | 
             var appId = appId_example;  // string | 
 
             try
             {
-                // Delete you webhook subscription
                 apiInstance.DeleteWebhookSubscription(oauthAppId, webhookSubscriptionId, appId);
             }
             catch (Exception e)
@@ -195,8 +192,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **string**| Oauth App identifier | 
- **webhookSubscriptionId** | **int?**| Webhook subscription identifier | 
+ **oauthAppId** | **string**|  | 
+ **webhookSubscriptionId** | **int?**|  | 
  **appId** | **string**|  | 
 
 ### Return type
@@ -218,7 +215,7 @@ void (empty response body)
 # **DeleteWebhookSubscriptionEventName**
 > void DeleteWebhookSubscriptionEventName (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId)
 
-Remove event name to your webhook subscription
+
 
 ### Example
 ```csharp
@@ -238,14 +235,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WebhooksApi();
-            var oauthAppId = oauthAppId_example;  // string | Oauth App identifier
-            var webhookSubscriptionId = 56;  // int? | Webhook subscription identifier
-            var eventName = eventName_example;  // string | Webhook subscription event name
+            var oauthAppId = oauthAppId_example;  // string | 
+            var webhookSubscriptionId = 56;  // int? | 
+            var eventName = eventName_example;  // string | 
             var appId = appId_example;  // string | 
 
             try
             {
-                // Remove event name to your webhook subscription
                 apiInstance.DeleteWebhookSubscriptionEventName(oauthAppId, webhookSubscriptionId, eventName, appId);
             }
             catch (Exception e)
@@ -261,9 +257,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **string**| Oauth App identifier | 
- **webhookSubscriptionId** | **int?**| Webhook subscription identifier | 
- **eventName** | **string**| Webhook subscription event name | 
+ **oauthAppId** | **string**|  | 
+ **webhookSubscriptionId** | **int?**|  | 
+ **eventName** | **string**|  | 
  **appId** | **string**|  | 
 
 ### Return type
@@ -285,7 +281,7 @@ void (empty response body)
 # **GetWebhookEventNames**
 > RestApiStringArrayResult GetWebhookEventNames (string appId)
 
-Get all webhook subscription event names
+
 
 ### Example
 ```csharp
@@ -309,7 +305,6 @@ namespace Example
 
             try
             {
-                // Get all webhook subscription event names
                 RestApiStringArrayResult result = apiInstance.GetWebhookEventNames(appId);
                 Debug.WriteLine(result);
             }
@@ -347,7 +342,7 @@ Name | Type | Description  | Notes
 # **GetWebhookEventNamesBySubscriptionId**
 > RestApiStringArrayResult GetWebhookEventNamesBySubscriptionId (string oauthAppId, int? webhookSubscriptionId, string appId)
 
-Get your webhook subscriptions selected event names
+
 
 ### Example
 ```csharp
@@ -367,13 +362,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WebhooksApi();
-            var oauthAppId = oauthAppId_example;  // string | Oauth App identifier
-            var webhookSubscriptionId = 56;  // int? | Webhook subscription identifier
+            var oauthAppId = oauthAppId_example;  // string | 
+            var webhookSubscriptionId = 56;  // int? | 
             var appId = appId_example;  // string | 
 
             try
             {
-                // Get your webhook subscriptions selected event names
                 RestApiStringArrayResult result = apiInstance.GetWebhookEventNamesBySubscriptionId(oauthAppId, webhookSubscriptionId, appId);
                 Debug.WriteLine(result);
             }
@@ -390,8 +384,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **string**| Oauth App identifier | 
- **webhookSubscriptionId** | **int?**| Webhook subscription identifier | 
+ **oauthAppId** | **string**|  | 
+ **webhookSubscriptionId** | **int?**|  | 
  **appId** | **string**|  | 
 
 ### Return type
@@ -413,7 +407,7 @@ Name | Type | Description  | Notes
 # **GetWebhookEventSample**
 > WebhookEventSample GetWebhookEventSample (string eventName, string appId, string oauthAppId, string webhookSubscriptionId, string version = null)
 
-Get a sample event from a webhook subscription
+
 
 ### Example
 ```csharp
@@ -441,7 +435,6 @@ namespace Example
 
             try
             {
-                // Get a sample event from a webhook subscription
                 WebhookEventSample result = apiInstance.GetWebhookEventSample(eventName, appId, oauthAppId, webhookSubscriptionId, version);
                 Debug.WriteLine(result);
             }
@@ -483,7 +476,7 @@ Name | Type | Description  | Notes
 # **GetWebhookLogs**
 > RestApiPaginationResultWebhookLog GetWebhookLogs (string oauthAppId, int? webhookSubscriptionId, DateTime? start, DateTime? end, string appId, int? page = null, int? limit = null)
 
-Get logs for your webhook subscription
+
 
 ### Example
 ```csharp
@@ -503,17 +496,16 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WebhooksApi();
-            var oauthAppId = oauthAppId_example;  // string | Oauth App identifier
-            var webhookSubscriptionId = 56;  // int? | Webhook subscription identifier
-            var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start time
-            var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End time
+            var oauthAppId = oauthAppId_example;  // string | 
+            var webhookSubscriptionId = 56;  // int? | 
+            var start = 2013-10-20T19:20:30+01:00;  // DateTime? | 
+            var end = 2013-10-20T19:20:30+01:00;  // DateTime? | 
             var appId = appId_example;  // string | 
-            var page = 56;  // int? | Page number (optional) 
-            var limit = 56;  // int? | Page size (optional) 
+            var page = 56;  // int? |  (optional) 
+            var limit = 56;  // int? |  (optional) 
 
             try
             {
-                // Get logs for your webhook subscription
                 RestApiPaginationResultWebhookLog result = apiInstance.GetWebhookLogs(oauthAppId, webhookSubscriptionId, start, end, appId, page, limit);
                 Debug.WriteLine(result);
             }
@@ -530,13 +522,13 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **string**| Oauth App identifier | 
- **webhookSubscriptionId** | **int?**| Webhook subscription identifier | 
- **start** | **DateTime?**| Start time | 
- **end** | **DateTime?**| End time | 
+ **oauthAppId** | **string**|  | 
+ **webhookSubscriptionId** | **int?**|  | 
+ **start** | **DateTime?**|  | 
+ **end** | **DateTime?**|  | 
  **appId** | **string**|  | 
- **page** | **int?**| Page number | [optional] 
- **limit** | **int?**| Page size | [optional] 
+ **page** | **int?**|  | [optional] 
+ **limit** | **int?**|  | [optional] 
 
 ### Return type
 
@@ -557,7 +549,7 @@ Name | Type | Description  | Notes
 # **GetWebhookSubscriptions**
 > RestApiPaginationResultWebhookSubscription GetWebhookSubscriptions (string oauthAppId, string appId, int? page = null, int? limit = null)
 
-Get all webhook subscriptions by your Oauth App id
+
 
 ### Example
 ```csharp
@@ -577,14 +569,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WebhooksApi();
-            var oauthAppId = oauthAppId_example;  // string | Oauth App identifier
+            var oauthAppId = oauthAppId_example;  // string | 
             var appId = appId_example;  // string | 
             var page = 56;  // int? |  (optional) 
             var limit = 56;  // int? |  (optional) 
 
             try
             {
-                // Get all webhook subscriptions by your Oauth App id
                 RestApiPaginationResultWebhookSubscription result = apiInstance.GetWebhookSubscriptions(oauthAppId, appId, page, limit);
                 Debug.WriteLine(result);
             }
@@ -601,7 +592,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **string**| Oauth App identifier | 
+ **oauthAppId** | **string**|  | 
  **appId** | **string**|  | 
  **page** | **int?**|  | [optional] 
  **limit** | **int?**|  | [optional] 
@@ -625,7 +616,7 @@ Name | Type | Description  | Notes
 # **UpdateWebhookSubscription**
 > void UpdateWebhookSubscription (string oauthAppId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription, string appId)
 
-Update a webhook subscription object
+
 
 ### Example
 ```csharp
@@ -645,14 +636,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WebhooksApi();
-            var oauthAppId = oauthAppId_example;  // string | Oauth App identifier
-            var webhookSubscriptionId = 56;  // int? | Webhook subscription identifier
-            var webhookSubscription = new WebhookSubscription(); // WebhookSubscription | Webhook subscription object
+            var oauthAppId = oauthAppId_example;  // string | 
+            var webhookSubscriptionId = 56;  // int? | 
+            var webhookSubscription = new WebhookSubscription(); // WebhookSubscription | 
             var appId = appId_example;  // string | 
 
             try
             {
-                // Update a webhook subscription object
                 apiInstance.UpdateWebhookSubscription(oauthAppId, webhookSubscriptionId, webhookSubscription, appId);
             }
             catch (Exception e)
@@ -668,9 +658,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **string**| Oauth App identifier | 
- **webhookSubscriptionId** | **int?**| Webhook subscription identifier | 
- **webhookSubscription** | [**WebhookSubscription**](WebhookSubscription.md)| Webhook subscription object | 
+ **oauthAppId** | **string**|  | 
+ **webhookSubscriptionId** | **int?**|  | 
+ **webhookSubscription** | [**WebhookSubscription**](WebhookSubscription.md)|  | 
  **appId** | **string**|  | 
 
 ### Return type

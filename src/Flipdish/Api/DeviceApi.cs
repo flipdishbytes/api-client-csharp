@@ -25,197 +25,197 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Assign device to AppId. Device must have been enrolled before
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="assignDeviceRequest">Assign request</param>
+        /// <param name="appId"></param>
+        /// <param name="assignDeviceRequest"></param>
         /// <returns>RestApiResultClientDeviceEnrollmentResult</returns>
         RestApiResultClientDeviceEnrollmentResult AssignDevice (string appId, ClientDeviceAssignEnrolledDevice assignDeviceRequest);
 
         /// <summary>
-        /// Assign device to AppId. Device must have been enrolled before
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="assignDeviceRequest">Assign request</param>
+        /// <param name="appId"></param>
+        /// <param name="assignDeviceRequest"></param>
         /// <returns>ApiResponse of RestApiResultClientDeviceEnrollmentResult</returns>
         ApiResponse<RestApiResultClientDeviceEnrollmentResult> AssignDeviceWithHttpInfo (string appId, ClientDeviceAssignEnrolledDevice assignDeviceRequest);
         /// <summary>
-        /// Enroll a new device - this returns a PIN code for actually assigning it later
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id - not for the device, only for permission checking</param>
-        /// <param name="deviceEnrollmentRequest">Request object for enrolling device</param>
+        /// <param name="appId"></param>
+        /// <param name="deviceEnrollmentRequest"></param>
         /// <returns>RestApiResultClientDeviceEnrollmentResult</returns>
         RestApiResultClientDeviceEnrollmentResult EnrollDevice (string appId, ClientDeviceEnroll deviceEnrollmentRequest);
 
         /// <summary>
-        /// Enroll a new device - this returns a PIN code for actually assigning it later
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id - not for the device, only for permission checking</param>
-        /// <param name="deviceEnrollmentRequest">Request object for enrolling device</param>
+        /// <param name="appId"></param>
+        /// <param name="deviceEnrollmentRequest"></param>
         /// <returns>ApiResponse of RestApiResultClientDeviceEnrollmentResult</returns>
         ApiResponse<RestApiResultClientDeviceEnrollmentResult> EnrollDeviceWithHttpInfo (string appId, ClientDeviceEnroll deviceEnrollmentRequest);
         /// <summary>
-        /// Get details for a device by model and deviceid
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="deviceModel">Device Model</param>
-        /// <param name="deviceId">Device Id</param>
+        /// <param name="appId"></param>
+        /// <param name="deviceModel"></param>
+        /// <param name="deviceId"></param>
         /// <returns>RestApiResultClientDevice</returns>
         RestApiResultClientDevice GetDeviceDetails (string appId, string deviceModel, string deviceId);
 
         /// <summary>
-        /// Get details for a device by model and deviceid
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="deviceModel">Device Model</param>
-        /// <param name="deviceId">Device Id</param>
+        /// <param name="appId"></param>
+        /// <param name="deviceModel"></param>
+        /// <param name="deviceId"></param>
         /// <returns>ApiResponse of RestApiResultClientDevice</returns>
         ApiResponse<RestApiResultClientDevice> GetDeviceDetailsWithHttpInfo (string appId, string deviceModel, string deviceId);
         /// <summary>
-        /// Search devices by AppId and optionally storeId
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="storeId">Store Id (optional) (optional)</param>
-        /// <param name="deviceModel">Device Model (optional) (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="deviceModel"> (optional)</param>
         /// <returns>RestApiArrayResultClientDeviceSummary</returns>
         RestApiArrayResultClientDeviceSummary SearchDevices (string appId, int? storeId = null, string deviceModel = null);
 
         /// <summary>
-        /// Search devices by AppId and optionally storeId
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="storeId">Store Id (optional) (optional)</param>
-        /// <param name="deviceModel">Device Model (optional) (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="deviceModel"> (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultClientDeviceSummary</returns>
         ApiResponse<RestApiArrayResultClientDeviceSummary> SearchDevicesWithHttpInfo (string appId, int? storeId = null, string deviceModel = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Assign device to AppId. Device must have been enrolled before
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="assignDeviceRequest">Assign request</param>
+        /// <param name="appId"></param>
+        /// <param name="assignDeviceRequest"></param>
         /// <returns>Task of RestApiResultClientDeviceEnrollmentResult</returns>
         System.Threading.Tasks.Task<RestApiResultClientDeviceEnrollmentResult> AssignDeviceAsync (string appId, ClientDeviceAssignEnrolledDevice assignDeviceRequest);
 
         /// <summary>
-        /// Assign device to AppId. Device must have been enrolled before
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="assignDeviceRequest">Assign request</param>
+        /// <param name="appId"></param>
+        /// <param name="assignDeviceRequest"></param>
         /// <returns>Task of ApiResponse (RestApiResultClientDeviceEnrollmentResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultClientDeviceEnrollmentResult>> AssignDeviceAsyncWithHttpInfo (string appId, ClientDeviceAssignEnrolledDevice assignDeviceRequest);
         /// <summary>
-        /// Enroll a new device - this returns a PIN code for actually assigning it later
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id - not for the device, only for permission checking</param>
-        /// <param name="deviceEnrollmentRequest">Request object for enrolling device</param>
+        /// <param name="appId"></param>
+        /// <param name="deviceEnrollmentRequest"></param>
         /// <returns>Task of RestApiResultClientDeviceEnrollmentResult</returns>
         System.Threading.Tasks.Task<RestApiResultClientDeviceEnrollmentResult> EnrollDeviceAsync (string appId, ClientDeviceEnroll deviceEnrollmentRequest);
 
         /// <summary>
-        /// Enroll a new device - this returns a PIN code for actually assigning it later
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id - not for the device, only for permission checking</param>
-        /// <param name="deviceEnrollmentRequest">Request object for enrolling device</param>
+        /// <param name="appId"></param>
+        /// <param name="deviceEnrollmentRequest"></param>
         /// <returns>Task of ApiResponse (RestApiResultClientDeviceEnrollmentResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultClientDeviceEnrollmentResult>> EnrollDeviceAsyncWithHttpInfo (string appId, ClientDeviceEnroll deviceEnrollmentRequest);
         /// <summary>
-        /// Get details for a device by model and deviceid
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="deviceModel">Device Model</param>
-        /// <param name="deviceId">Device Id</param>
+        /// <param name="appId"></param>
+        /// <param name="deviceModel"></param>
+        /// <param name="deviceId"></param>
         /// <returns>Task of RestApiResultClientDevice</returns>
         System.Threading.Tasks.Task<RestApiResultClientDevice> GetDeviceDetailsAsync (string appId, string deviceModel, string deviceId);
 
         /// <summary>
-        /// Get details for a device by model and deviceid
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="deviceModel">Device Model</param>
-        /// <param name="deviceId">Device Id</param>
+        /// <param name="appId"></param>
+        /// <param name="deviceModel"></param>
+        /// <param name="deviceId"></param>
         /// <returns>Task of ApiResponse (RestApiResultClientDevice)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultClientDevice>> GetDeviceDetailsAsyncWithHttpInfo (string appId, string deviceModel, string deviceId);
         /// <summary>
-        /// Search devices by AppId and optionally storeId
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="storeId">Store Id (optional) (optional)</param>
-        /// <param name="deviceModel">Device Model (optional) (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="deviceModel"> (optional)</param>
         /// <returns>Task of RestApiArrayResultClientDeviceSummary</returns>
         System.Threading.Tasks.Task<RestApiArrayResultClientDeviceSummary> SearchDevicesAsync (string appId, int? storeId = null, string deviceModel = null);
 
         /// <summary>
-        /// Search devices by AppId and optionally storeId
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="storeId">Store Id (optional) (optional)</param>
-        /// <param name="deviceModel">Device Model (optional) (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="deviceModel"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultClientDeviceSummary)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultClientDeviceSummary>> SearchDevicesAsyncWithHttpInfo (string appId, int? storeId = null, string deviceModel = null);
         #endregion Asynchronous Operations
@@ -319,11 +319,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign device to AppId. Device must have been enrolled before [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="assignDeviceRequest">Assign request</param>
+        /// <param name="appId"></param>
+        /// <param name="assignDeviceRequest"></param>
         /// <returns>RestApiResultClientDeviceEnrollmentResult</returns>
         public RestApiResultClientDeviceEnrollmentResult AssignDevice (string appId, ClientDeviceAssignEnrolledDevice assignDeviceRequest)
         {
@@ -332,11 +332,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign device to AppId. Device must have been enrolled before [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="assignDeviceRequest">Assign request</param>
+        /// <param name="appId"></param>
+        /// <param name="assignDeviceRequest"></param>
         /// <returns>ApiResponse of RestApiResultClientDeviceEnrollmentResult</returns>
         public ApiResponse< RestApiResultClientDeviceEnrollmentResult > AssignDeviceWithHttpInfo (string appId, ClientDeviceAssignEnrolledDevice assignDeviceRequest)
         {
@@ -412,11 +412,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign device to AppId. Device must have been enrolled before [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="assignDeviceRequest">Assign request</param>
+        /// <param name="appId"></param>
+        /// <param name="assignDeviceRequest"></param>
         /// <returns>Task of RestApiResultClientDeviceEnrollmentResult</returns>
         public async System.Threading.Tasks.Task<RestApiResultClientDeviceEnrollmentResult> AssignDeviceAsync (string appId, ClientDeviceAssignEnrolledDevice assignDeviceRequest)
         {
@@ -426,11 +426,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign device to AppId. Device must have been enrolled before [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="assignDeviceRequest">Assign request</param>
+        /// <param name="appId"></param>
+        /// <param name="assignDeviceRequest"></param>
         /// <returns>Task of ApiResponse (RestApiResultClientDeviceEnrollmentResult)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultClientDeviceEnrollmentResult>> AssignDeviceAsyncWithHttpInfo (string appId, ClientDeviceAssignEnrolledDevice assignDeviceRequest)
         {
@@ -506,11 +506,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Enroll a new device - this returns a PIN code for actually assigning it later [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id - not for the device, only for permission checking</param>
-        /// <param name="deviceEnrollmentRequest">Request object for enrolling device</param>
+        /// <param name="appId"></param>
+        /// <param name="deviceEnrollmentRequest"></param>
         /// <returns>RestApiResultClientDeviceEnrollmentResult</returns>
         public RestApiResultClientDeviceEnrollmentResult EnrollDevice (string appId, ClientDeviceEnroll deviceEnrollmentRequest)
         {
@@ -519,11 +519,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Enroll a new device - this returns a PIN code for actually assigning it later [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id - not for the device, only for permission checking</param>
-        /// <param name="deviceEnrollmentRequest">Request object for enrolling device</param>
+        /// <param name="appId"></param>
+        /// <param name="deviceEnrollmentRequest"></param>
         /// <returns>ApiResponse of RestApiResultClientDeviceEnrollmentResult</returns>
         public ApiResponse< RestApiResultClientDeviceEnrollmentResult > EnrollDeviceWithHttpInfo (string appId, ClientDeviceEnroll deviceEnrollmentRequest)
         {
@@ -599,11 +599,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Enroll a new device - this returns a PIN code for actually assigning it later [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id - not for the device, only for permission checking</param>
-        /// <param name="deviceEnrollmentRequest">Request object for enrolling device</param>
+        /// <param name="appId"></param>
+        /// <param name="deviceEnrollmentRequest"></param>
         /// <returns>Task of RestApiResultClientDeviceEnrollmentResult</returns>
         public async System.Threading.Tasks.Task<RestApiResultClientDeviceEnrollmentResult> EnrollDeviceAsync (string appId, ClientDeviceEnroll deviceEnrollmentRequest)
         {
@@ -613,11 +613,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Enroll a new device - this returns a PIN code for actually assigning it later [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id - not for the device, only for permission checking</param>
-        /// <param name="deviceEnrollmentRequest">Request object for enrolling device</param>
+        /// <param name="appId"></param>
+        /// <param name="deviceEnrollmentRequest"></param>
         /// <returns>Task of ApiResponse (RestApiResultClientDeviceEnrollmentResult)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultClientDeviceEnrollmentResult>> EnrollDeviceAsyncWithHttpInfo (string appId, ClientDeviceEnroll deviceEnrollmentRequest)
         {
@@ -693,12 +693,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get details for a device by model and deviceid [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="deviceModel">Device Model</param>
-        /// <param name="deviceId">Device Id</param>
+        /// <param name="appId"></param>
+        /// <param name="deviceModel"></param>
+        /// <param name="deviceId"></param>
         /// <returns>RestApiResultClientDevice</returns>
         public RestApiResultClientDevice GetDeviceDetails (string appId, string deviceModel, string deviceId)
         {
@@ -707,12 +707,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get details for a device by model and deviceid [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="deviceModel">Device Model</param>
-        /// <param name="deviceId">Device Id</param>
+        /// <param name="appId"></param>
+        /// <param name="deviceModel"></param>
+        /// <param name="deviceId"></param>
         /// <returns>ApiResponse of RestApiResultClientDevice</returns>
         public ApiResponse< RestApiResultClientDevice > GetDeviceDetailsWithHttpInfo (string appId, string deviceModel, string deviceId)
         {
@@ -780,12 +780,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get details for a device by model and deviceid [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="deviceModel">Device Model</param>
-        /// <param name="deviceId">Device Id</param>
+        /// <param name="appId"></param>
+        /// <param name="deviceModel"></param>
+        /// <param name="deviceId"></param>
         /// <returns>Task of RestApiResultClientDevice</returns>
         public async System.Threading.Tasks.Task<RestApiResultClientDevice> GetDeviceDetailsAsync (string appId, string deviceModel, string deviceId)
         {
@@ -795,12 +795,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get details for a device by model and deviceid [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="deviceModel">Device Model</param>
-        /// <param name="deviceId">Device Id</param>
+        /// <param name="appId"></param>
+        /// <param name="deviceModel"></param>
+        /// <param name="deviceId"></param>
         /// <returns>Task of ApiResponse (RestApiResultClientDevice)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultClientDevice>> GetDeviceDetailsAsyncWithHttpInfo (string appId, string deviceModel, string deviceId)
         {
@@ -868,12 +868,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Search devices by AppId and optionally storeId [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="storeId">Store Id (optional) (optional)</param>
-        /// <param name="deviceModel">Device Model (optional) (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="deviceModel"> (optional)</param>
         /// <returns>RestApiArrayResultClientDeviceSummary</returns>
         public RestApiArrayResultClientDeviceSummary SearchDevices (string appId, int? storeId = null, string deviceModel = null)
         {
@@ -882,12 +882,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Search devices by AppId and optionally storeId [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="storeId">Store Id (optional) (optional)</param>
-        /// <param name="deviceModel">Device Model (optional) (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="deviceModel"> (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultClientDeviceSummary</returns>
         public ApiResponse< RestApiArrayResultClientDeviceSummary > SearchDevicesWithHttpInfo (string appId, int? storeId = null, string deviceModel = null)
         {
@@ -949,12 +949,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Search devices by AppId and optionally storeId [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="storeId">Store Id (optional) (optional)</param>
-        /// <param name="deviceModel">Device Model (optional) (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="deviceModel"> (optional)</param>
         /// <returns>Task of RestApiArrayResultClientDeviceSummary</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultClientDeviceSummary> SearchDevicesAsync (string appId, int? storeId = null, string deviceModel = null)
         {
@@ -964,12 +964,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Search devices by AppId and optionally storeId [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="storeId">Store Id (optional) (optional)</param>
-        /// <param name="deviceModel">Device Model (optional) (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="deviceModel"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultClientDeviceSummary)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultClientDeviceSummary>> SearchDevicesAsyncWithHttpInfo (string appId, int? storeId = null, string deviceModel = null)
         {

@@ -4,23 +4,23 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateLoyaltyCampaign**](CampaignsApi.md#createloyaltycampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty | Creates loyalty campaign
-[**CreateRetentionCampaign**](CampaignsApi.md#createretentioncampaign) | **POST** /api/v1.0/{appId}/campaigns/retention | Creates retention campaign
-[**GetLoyaltyCampaignsForApp**](CampaignsApi.md#getloyaltycampaignsforapp) | **GET** /api/v1.0/{appId}/campaigns/loyalty | Gets loyalty campaigns for app
-[**GetLoyaltyCampaignsForStore**](CampaignsApi.md#getloyaltycampaignsforstore) | **GET** /api/v1.0/{appId}/campaigns/loyalty/{storeId} | Gets loyalty campaigns for store
-[**GetRetentionCampaignsForApp**](CampaignsApi.md#getretentioncampaignsforapp) | **GET** /api/v1.0/{appId}/campaigns/retention | Gets retention campaigns for app
-[**GetRetentionCampaignsForStore**](CampaignsApi.md#getretentioncampaignsforstore) | **GET** /api/v1.0/{appId}/campaigns/retention/{storeId} | Gets retention campaigns for store
-[**GetStoreList**](CampaignsApi.md#getstorelist) | **GET** /api/v1.0/{appId}/campaigns/stores | Gets list of stores for app
-[**RemoveCampaign**](CampaignsApi.md#removecampaign) | **DELETE** /api/v1.0/{appId}/campaigns/{campaignId} | Deletes a campaign
-[**UpdateLoyaltyCampaign**](CampaignsApi.md#updateloyaltycampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty/{campaignId} | Updates loyalty campaign
-[**UpdateRetentionCampaign**](CampaignsApi.md#updateretentioncampaign) | **POST** /api/v1.0/{appId}/campaigns/retention/{campaignId} | Updates retention campaign
+[**CreateLoyaltyCampaign**](CampaignsApi.md#createloyaltycampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty | 
+[**CreateRetentionCampaign**](CampaignsApi.md#createretentioncampaign) | **POST** /api/v1.0/{appId}/campaigns/retention | 
+[**GetLoyaltyCampaignsForApp**](CampaignsApi.md#getloyaltycampaignsforapp) | **GET** /api/v1.0/{appId}/campaigns/loyalty | 
+[**GetLoyaltyCampaignsForStore**](CampaignsApi.md#getloyaltycampaignsforstore) | **GET** /api/v1.0/{appId}/campaigns/loyalty/{storeId} | 
+[**GetRetentionCampaignsForApp**](CampaignsApi.md#getretentioncampaignsforapp) | **GET** /api/v1.0/{appId}/campaigns/retention | 
+[**GetRetentionCampaignsForStore**](CampaignsApi.md#getretentioncampaignsforstore) | **GET** /api/v1.0/{appId}/campaigns/retention/{storeId} | 
+[**GetStoreList**](CampaignsApi.md#getstorelist) | **GET** /api/v1.0/{appId}/campaigns/stores | 
+[**RemoveCampaign**](CampaignsApi.md#removecampaign) | **DELETE** /api/v1.0/{appId}/campaigns/{campaignId} | 
+[**UpdateLoyaltyCampaign**](CampaignsApi.md#updateloyaltycampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty/{campaignId} | 
+[**UpdateRetentionCampaign**](CampaignsApi.md#updateretentioncampaign) | **POST** /api/v1.0/{appId}/campaigns/retention/{campaignId} | 
 
 
 <a name="createloyaltycampaign"></a>
 # **CreateLoyaltyCampaign**
 > RestApiResultLoyaltyCampaign CreateLoyaltyCampaign (string appId, LoyaltyCampaignBase campaign)
 
-Creates loyalty campaign
+
 
 ### Example
 ```csharp
@@ -40,12 +40,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new CampaignsApi();
-            var appId = appId_example;  // string | App Name Id
-            var campaign = new LoyaltyCampaignBase(); // LoyaltyCampaignBase | Loyalty campaign details
+            var appId = appId_example;  // string | 
+            var campaign = new LoyaltyCampaignBase(); // LoyaltyCampaignBase | 
 
             try
             {
-                // Creates loyalty campaign
                 RestApiResultLoyaltyCampaign result = apiInstance.CreateLoyaltyCampaign(appId, campaign);
                 Debug.WriteLine(result);
             }
@@ -62,8 +61,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
- **campaign** | [**LoyaltyCampaignBase**](LoyaltyCampaignBase.md)| Loyalty campaign details | 
+ **appId** | **string**|  | 
+ **campaign** | [**LoyaltyCampaignBase**](LoyaltyCampaignBase.md)|  | 
 
 ### Return type
 
@@ -84,7 +83,7 @@ Name | Type | Description  | Notes
 # **CreateRetentionCampaign**
 > RestApiResultRetentionCampaign CreateRetentionCampaign (string appId, RetentionCampaignBase campaign)
 
-Creates retention campaign
+
 
 ### Example
 ```csharp
@@ -104,12 +103,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new CampaignsApi();
-            var appId = appId_example;  // string | App Name Id
-            var campaign = new RetentionCampaignBase(); // RetentionCampaignBase | Retention campaign details
+            var appId = appId_example;  // string | 
+            var campaign = new RetentionCampaignBase(); // RetentionCampaignBase | 
 
             try
             {
-                // Creates retention campaign
                 RestApiResultRetentionCampaign result = apiInstance.CreateRetentionCampaign(appId, campaign);
                 Debug.WriteLine(result);
             }
@@ -126,8 +124,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
- **campaign** | [**RetentionCampaignBase**](RetentionCampaignBase.md)| Retention campaign details | 
+ **appId** | **string**|  | 
+ **campaign** | [**RetentionCampaignBase**](RetentionCampaignBase.md)|  | 
 
 ### Return type
 
@@ -148,7 +146,7 @@ Name | Type | Description  | Notes
 # **GetLoyaltyCampaignsForApp**
 > RestApiArrayResultLoyaltyCampaign GetLoyaltyCampaignsForApp (string appId)
 
-Gets loyalty campaigns for app
+
 
 ### Example
 ```csharp
@@ -168,11 +166,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new CampaignsApi();
-            var appId = appId_example;  // string | App Name Id
+            var appId = appId_example;  // string | 
 
             try
             {
-                // Gets loyalty campaigns for app
                 RestApiArrayResultLoyaltyCampaign result = apiInstance.GetLoyaltyCampaignsForApp(appId);
                 Debug.WriteLine(result);
             }
@@ -189,7 +186,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
+ **appId** | **string**|  | 
 
 ### Return type
 
@@ -210,7 +207,7 @@ Name | Type | Description  | Notes
 # **GetLoyaltyCampaignsForStore**
 > RestApiArrayResultLoyaltyCampaign GetLoyaltyCampaignsForStore (string appId, int? storeId)
 
-Gets loyalty campaigns for store
+
 
 ### Example
 ```csharp
@@ -230,12 +227,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new CampaignsApi();
-            var appId = appId_example;  // string | App Name Id
-            var storeId = 56;  // int? | Store Id
+            var appId = appId_example;  // string | 
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Gets loyalty campaigns for store
                 RestApiArrayResultLoyaltyCampaign result = apiInstance.GetLoyaltyCampaignsForStore(appId, storeId);
                 Debug.WriteLine(result);
             }
@@ -252,8 +248,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
- **storeId** | **int?**| Store Id | 
+ **appId** | **string**|  | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -274,7 +270,7 @@ Name | Type | Description  | Notes
 # **GetRetentionCampaignsForApp**
 > RestApiArrayResultRetentionCampaign GetRetentionCampaignsForApp (string appId)
 
-Gets retention campaigns for app
+
 
 ### Example
 ```csharp
@@ -294,11 +290,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new CampaignsApi();
-            var appId = appId_example;  // string | App Name Id
+            var appId = appId_example;  // string | 
 
             try
             {
-                // Gets retention campaigns for app
                 RestApiArrayResultRetentionCampaign result = apiInstance.GetRetentionCampaignsForApp(appId);
                 Debug.WriteLine(result);
             }
@@ -315,7 +310,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
+ **appId** | **string**|  | 
 
 ### Return type
 
@@ -336,7 +331,7 @@ Name | Type | Description  | Notes
 # **GetRetentionCampaignsForStore**
 > RestApiArrayResultRetentionCampaign GetRetentionCampaignsForStore (string appId, int? storeId)
 
-Gets retention campaigns for store
+
 
 ### Example
 ```csharp
@@ -356,12 +351,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new CampaignsApi();
-            var appId = appId_example;  // string | App Name Id
-            var storeId = 56;  // int? | Store Id
+            var appId = appId_example;  // string | 
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Gets retention campaigns for store
                 RestApiArrayResultRetentionCampaign result = apiInstance.GetRetentionCampaignsForStore(appId, storeId);
                 Debug.WriteLine(result);
             }
@@ -378,8 +372,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
- **storeId** | **int?**| Store Id | 
+ **appId** | **string**|  | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -400,7 +394,7 @@ Name | Type | Description  | Notes
 # **GetStoreList**
 > RestApiArrayResultStoreListItem GetStoreList (string appId, bool? onlyPublished = null)
 
-Gets list of stores for app
+
 
 ### Example
 ```csharp
@@ -420,12 +414,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new CampaignsApi();
-            var appId = appId_example;  // string | App Name Id
+            var appId = appId_example;  // string | 
             var onlyPublished = true;  // bool? |  (optional) 
 
             try
             {
-                // Gets list of stores for app
                 RestApiArrayResultStoreListItem result = apiInstance.GetStoreList(appId, onlyPublished);
                 Debug.WriteLine(result);
             }
@@ -442,7 +435,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
+ **appId** | **string**|  | 
  **onlyPublished** | **bool?**|  | [optional] 
 
 ### Return type
@@ -464,7 +457,7 @@ Name | Type | Description  | Notes
 # **RemoveCampaign**
 > void RemoveCampaign (string appId, int? campaignId)
 
-Deletes a campaign
+
 
 ### Example
 ```csharp
@@ -484,12 +477,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new CampaignsApi();
-            var appId = appId_example;  // string | App Name Id
-            var campaignId = 56;  // int? | Campaign Id
+            var appId = appId_example;  // string | 
+            var campaignId = 56;  // int? | 
 
             try
             {
-                // Deletes a campaign
                 apiInstance.RemoveCampaign(appId, campaignId);
             }
             catch (Exception e)
@@ -505,8 +497,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
- **campaignId** | **int?**| Campaign Id | 
+ **appId** | **string**|  | 
+ **campaignId** | **int?**|  | 
 
 ### Return type
 
@@ -527,7 +519,7 @@ void (empty response body)
 # **UpdateLoyaltyCampaign**
 > RestApiResultLoyaltyCampaign UpdateLoyaltyCampaign (string appId, int? campaignId, LoyaltyCampaignBase campaign)
 
-Updates loyalty campaign
+
 
 ### Example
 ```csharp
@@ -547,13 +539,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new CampaignsApi();
-            var appId = appId_example;  // string | App Name Id
-            var campaignId = 56;  // int? | Loyalty campaign Id
-            var campaign = new LoyaltyCampaignBase(); // LoyaltyCampaignBase | Loyalty campaign details
+            var appId = appId_example;  // string | 
+            var campaignId = 56;  // int? | 
+            var campaign = new LoyaltyCampaignBase(); // LoyaltyCampaignBase | 
 
             try
             {
-                // Updates loyalty campaign
                 RestApiResultLoyaltyCampaign result = apiInstance.UpdateLoyaltyCampaign(appId, campaignId, campaign);
                 Debug.WriteLine(result);
             }
@@ -570,9 +561,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
- **campaignId** | **int?**| Loyalty campaign Id | 
- **campaign** | [**LoyaltyCampaignBase**](LoyaltyCampaignBase.md)| Loyalty campaign details | 
+ **appId** | **string**|  | 
+ **campaignId** | **int?**|  | 
+ **campaign** | [**LoyaltyCampaignBase**](LoyaltyCampaignBase.md)|  | 
 
 ### Return type
 
@@ -593,7 +584,7 @@ Name | Type | Description  | Notes
 # **UpdateRetentionCampaign**
 > RestApiResultRetentionCampaign UpdateRetentionCampaign (string appId, int? campaignId, RetentionCampaignBase campaign)
 
-Updates retention campaign
+
 
 ### Example
 ```csharp
@@ -613,13 +604,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new CampaignsApi();
-            var appId = appId_example;  // string | App Name Id
-            var campaignId = 56;  // int? | Retention campaign Id
-            var campaign = new RetentionCampaignBase(); // RetentionCampaignBase | Retention campaign details
+            var appId = appId_example;  // string | 
+            var campaignId = 56;  // int? | 
+            var campaign = new RetentionCampaignBase(); // RetentionCampaignBase | 
 
             try
             {
-                // Updates retention campaign
                 RestApiResultRetentionCampaign result = apiInstance.UpdateRetentionCampaign(appId, campaignId, campaign);
                 Debug.WriteLine(result);
             }
@@ -636,9 +626,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
- **campaignId** | **int?**| Retention campaign Id | 
- **campaign** | [**RetentionCampaignBase**](RetentionCampaignBase.md)| Retention campaign details | 
+ **appId** | **string**|  | 
+ **campaignId** | **int?**|  | 
+ **campaign** | [**RetentionCampaignBase**](RetentionCampaignBase.md)|  | 
 
 ### Return type
 

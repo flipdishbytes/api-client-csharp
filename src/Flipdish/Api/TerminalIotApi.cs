@@ -25,20 +25,20 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RestApiResultKioskIotConnectionParameters</returns>
         RestApiResultKioskIotConnectionParameters GetTerminalIotConnection ();
 
         /// <summary>
-        /// Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RestApiResultKioskIotConnectionParameters</returns>
@@ -46,20 +46,20 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of RestApiResultKioskIotConnectionParameters</returns>
         System.Threading.Tasks.Task<RestApiResultKioskIotConnectionParameters> GetTerminalIotConnectionAsync ();
 
         /// <summary>
-        /// Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RestApiResultKioskIotConnectionParameters)</returns>
@@ -165,7 +165,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RestApiResultKioskIotConnectionParameters</returns>
@@ -176,7 +176,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RestApiResultKioskIotConnectionParameters</returns>
@@ -234,7 +234,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of RestApiResultKioskIotConnectionParameters</returns>
@@ -246,7 +246,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RestApiResultKioskIotConnectionParameters)</returns>

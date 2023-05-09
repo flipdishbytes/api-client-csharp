@@ -25,78 +25,78 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create a new Bank Account and Stripe connected account
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="account">Account to be created</param>
+        /// <param name="appId"></param>
+        /// <param name="account"></param>
         /// <returns>RestApiResultBankAccountDetail</returns>
         RestApiResultBankAccountDetail CreateBankAccountAndConnectedAccount (string appId, BankAccountCreate account);
 
         /// <summary>
-        /// Create a new Bank Account and Stripe connected account
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="account">Account to be created</param>
+        /// <param name="appId"></param>
+        /// <param name="account"></param>
         /// <returns>ApiResponse of RestApiResultBankAccountDetail</returns>
         ApiResponse<RestApiResultBankAccountDetail> CreateBankAccountAndConnectedAccountWithHttpInfo (string appId, BankAccountCreate account);
         /// <summary>
-        /// Create or update a Stripe connected account associated with the bank account of bankAccountId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
         /// <returns>RestApiResultStripeConnectedAccount</returns>
         RestApiResultStripeConnectedAccount CreateStripeConnectedAccount (string appId, int? bankAccountId);
 
         /// <summary>
-        /// Create or update a Stripe connected account associated with the bank account of bankAccountId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
         /// <returns>ApiResponse of RestApiResultStripeConnectedAccount</returns>
         ApiResponse<RestApiResultStripeConnectedAccount> CreateStripeConnectedAccountWithHttpInfo (string appId, int? bankAccountId);
         /// <summary>
-        /// Gets a single-use Stripe URL for the given account
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="stripeConnectedAccountId">Stripe Connected Account Id</param>
+        /// <param name="appId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
         /// <param name="stripeAccountLinkRequest"></param>
         /// <returns>RestApiResultStripeConnectedAccount</returns>
         RestApiResultStripeConnectedAccount CreateStripeConnectedAccountLink (string appId, string stripeConnectedAccountId, StripeAccountLinkRequest stripeAccountLinkRequest);
 
         /// <summary>
-        /// Gets a single-use Stripe URL for the given account
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="stripeConnectedAccountId">Stripe Connected Account Id</param>
+        /// <param name="appId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
         /// <param name="stripeAccountLinkRequest"></param>
         /// <returns>ApiResponse of RestApiResultStripeConnectedAccount</returns>
         ApiResponse<RestApiResultStripeConnectedAccount> CreateStripeConnectedAccountLinkWithHttpInfo (string appId, string stripeConnectedAccountId, StripeAccountLinkRequest stripeAccountLinkRequest);
         /// <summary>
-        /// Gets a list of stripe custom connect ids information
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -108,7 +108,7 @@ namespace Flipdish.Api
         RestApiArrayResultStripeCustomConnectedAccount GetCustomConnect (int? storeId, string appId);
 
         /// <summary>
-        /// Gets a list of stripe custom connect ids information
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -119,7 +119,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultStripeCustomConnectedAccount</returns>
         ApiResponse<RestApiArrayResultStripeCustomConnectedAccount> GetCustomConnectWithHttpInfo (int? storeId, string appId);
         /// <summary>
-        /// Gets the current verification status of the given connected account
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -131,7 +131,7 @@ namespace Flipdish.Api
         RestApiResultStripeConnectedAccount GetVerificationStatus (string appId, string stripeConnectedAccountId);
 
         /// <summary>
-        /// Gets the current verification status of the given connected account
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -142,28 +142,28 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultStripeConnectedAccount</returns>
         ApiResponse<RestApiResultStripeConnectedAccount> GetVerificationStatusWithHttpInfo (string appId, string stripeConnectedAccountId);
         /// <summary>
-        /// Update bank account&#39;s BusinessType and create a Stripe Connected Account
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <param name="businessType">Bank Account business type</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="businessType"></param>
         /// <returns>RestApiResultBankAccountDetail</returns>
         RestApiResultBankAccountDetail SetBankAccountBusinessType (string appId, int? bankAccountId, string businessType);
 
         /// <summary>
-        /// Update bank account&#39;s BusinessType and create a Stripe Connected Account
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <param name="businessType">Bank Account business type</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="businessType"></param>
         /// <returns>ApiResponse of RestApiResultBankAccountDetail</returns>
         ApiResponse<RestApiResultBankAccountDetail> SetBankAccountBusinessTypeWithHttpInfo (string appId, int? bankAccountId, string businessType);
         /// <summary>
@@ -190,32 +190,32 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> StripeCustomConnectRefreshWithHttpInfo (int? linkRequestId, string appId);
         /// <summary>
-        /// Update bank account details
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <param name="updateRequest">fields to be updated</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="updateRequest"></param>
         /// <returns>RestApiResultStripeConnectedAccount</returns>
         RestApiResultStripeConnectedAccount UpdateBankAccountDetails (string appId, int? bankAccountId, BankAccountDetailsUpdateRequest updateRequest);
 
         /// <summary>
-        /// Update bank account details
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <param name="updateRequest">fields to be updated</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="updateRequest"></param>
         /// <returns>ApiResponse of RestApiResultStripeConnectedAccount</returns>
         ApiResponse<RestApiResultStripeConnectedAccount> UpdateBankAccountDetailsWithHttpInfo (string appId, int? bankAccountId, BankAccountDetailsUpdateRequest updateRequest);
         /// <summary>
-        /// Update Stripe Connection Account&#39;s payout schedule
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -228,7 +228,7 @@ namespace Flipdish.Api
         RestApiResultModelBase UpdatePayoutSchedule (string appId, string stripeConnectedAccountId, string interval);
 
         /// <summary>
-        /// Update Stripe Connection Account&#39;s payout schedule
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -242,78 +242,78 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create a new Bank Account and Stripe connected account
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="account">Account to be created</param>
+        /// <param name="appId"></param>
+        /// <param name="account"></param>
         /// <returns>Task of RestApiResultBankAccountDetail</returns>
         System.Threading.Tasks.Task<RestApiResultBankAccountDetail> CreateBankAccountAndConnectedAccountAsync (string appId, BankAccountCreate account);
 
         /// <summary>
-        /// Create a new Bank Account and Stripe connected account
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="account">Account to be created</param>
+        /// <param name="appId"></param>
+        /// <param name="account"></param>
         /// <returns>Task of ApiResponse (RestApiResultBankAccountDetail)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultBankAccountDetail>> CreateBankAccountAndConnectedAccountAsyncWithHttpInfo (string appId, BankAccountCreate account);
         /// <summary>
-        /// Create or update a Stripe connected account associated with the bank account of bankAccountId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
         /// <returns>Task of RestApiResultStripeConnectedAccount</returns>
         System.Threading.Tasks.Task<RestApiResultStripeConnectedAccount> CreateStripeConnectedAccountAsync (string appId, int? bankAccountId);
 
         /// <summary>
-        /// Create or update a Stripe connected account associated with the bank account of bankAccountId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
         /// <returns>Task of ApiResponse (RestApiResultStripeConnectedAccount)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> CreateStripeConnectedAccountAsyncWithHttpInfo (string appId, int? bankAccountId);
         /// <summary>
-        /// Gets a single-use Stripe URL for the given account
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="stripeConnectedAccountId">Stripe Connected Account Id</param>
+        /// <param name="appId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
         /// <param name="stripeAccountLinkRequest"></param>
         /// <returns>Task of RestApiResultStripeConnectedAccount</returns>
         System.Threading.Tasks.Task<RestApiResultStripeConnectedAccount> CreateStripeConnectedAccountLinkAsync (string appId, string stripeConnectedAccountId, StripeAccountLinkRequest stripeAccountLinkRequest);
 
         /// <summary>
-        /// Gets a single-use Stripe URL for the given account
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="stripeConnectedAccountId">Stripe Connected Account Id</param>
+        /// <param name="appId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
         /// <param name="stripeAccountLinkRequest"></param>
         /// <returns>Task of ApiResponse (RestApiResultStripeConnectedAccount)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> CreateStripeConnectedAccountLinkAsyncWithHttpInfo (string appId, string stripeConnectedAccountId, StripeAccountLinkRequest stripeAccountLinkRequest);
         /// <summary>
-        /// Gets a list of stripe custom connect ids information
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -325,7 +325,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultStripeCustomConnectedAccount> GetCustomConnectAsync (int? storeId, string appId);
 
         /// <summary>
-        /// Gets a list of stripe custom connect ids information
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -336,7 +336,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultStripeCustomConnectedAccount)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStripeCustomConnectedAccount>> GetCustomConnectAsyncWithHttpInfo (int? storeId, string appId);
         /// <summary>
-        /// Gets the current verification status of the given connected account
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -348,7 +348,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultStripeConnectedAccount> GetVerificationStatusAsync (string appId, string stripeConnectedAccountId);
 
         /// <summary>
-        /// Gets the current verification status of the given connected account
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -359,28 +359,28 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultStripeConnectedAccount)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> GetVerificationStatusAsyncWithHttpInfo (string appId, string stripeConnectedAccountId);
         /// <summary>
-        /// Update bank account&#39;s BusinessType and create a Stripe Connected Account
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <param name="businessType">Bank Account business type</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="businessType"></param>
         /// <returns>Task of RestApiResultBankAccountDetail</returns>
         System.Threading.Tasks.Task<RestApiResultBankAccountDetail> SetBankAccountBusinessTypeAsync (string appId, int? bankAccountId, string businessType);
 
         /// <summary>
-        /// Update bank account&#39;s BusinessType and create a Stripe Connected Account
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <param name="businessType">Bank Account business type</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="businessType"></param>
         /// <returns>Task of ApiResponse (RestApiResultBankAccountDetail)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultBankAccountDetail>> SetBankAccountBusinessTypeAsyncWithHttpInfo (string appId, int? bankAccountId, string businessType);
         /// <summary>
@@ -407,32 +407,32 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> StripeCustomConnectRefreshAsyncWithHttpInfo (int? linkRequestId, string appId);
         /// <summary>
-        /// Update bank account details
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <param name="updateRequest">fields to be updated</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="updateRequest"></param>
         /// <returns>Task of RestApiResultStripeConnectedAccount</returns>
         System.Threading.Tasks.Task<RestApiResultStripeConnectedAccount> UpdateBankAccountDetailsAsync (string appId, int? bankAccountId, BankAccountDetailsUpdateRequest updateRequest);
 
         /// <summary>
-        /// Update bank account details
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <param name="updateRequest">fields to be updated</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="updateRequest"></param>
         /// <returns>Task of ApiResponse (RestApiResultStripeConnectedAccount)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> UpdateBankAccountDetailsAsyncWithHttpInfo (string appId, int? bankAccountId, BankAccountDetailsUpdateRequest updateRequest);
         /// <summary>
-        /// Update Stripe Connection Account&#39;s payout schedule
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -445,7 +445,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultModelBase> UpdatePayoutScheduleAsync (string appId, string stripeConnectedAccountId, string interval);
 
         /// <summary>
-        /// Update Stripe Connection Account&#39;s payout schedule
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -557,11 +557,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new Bank Account and Stripe connected account 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="account">Account to be created</param>
+        /// <param name="appId"></param>
+        /// <param name="account"></param>
         /// <returns>RestApiResultBankAccountDetail</returns>
         public RestApiResultBankAccountDetail CreateBankAccountAndConnectedAccount (string appId, BankAccountCreate account)
         {
@@ -570,11 +570,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new Bank Account and Stripe connected account 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="account">Account to be created</param>
+        /// <param name="appId"></param>
+        /// <param name="account"></param>
         /// <returns>ApiResponse of RestApiResultBankAccountDetail</returns>
         public ApiResponse< RestApiResultBankAccountDetail > CreateBankAccountAndConnectedAccountWithHttpInfo (string appId, BankAccountCreate account)
         {
@@ -650,11 +650,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new Bank Account and Stripe connected account 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="account">Account to be created</param>
+        /// <param name="appId"></param>
+        /// <param name="account"></param>
         /// <returns>Task of RestApiResultBankAccountDetail</returns>
         public async System.Threading.Tasks.Task<RestApiResultBankAccountDetail> CreateBankAccountAndConnectedAccountAsync (string appId, BankAccountCreate account)
         {
@@ -664,11 +664,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new Bank Account and Stripe connected account 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="account">Account to be created</param>
+        /// <param name="appId"></param>
+        /// <param name="account"></param>
         /// <returns>Task of ApiResponse (RestApiResultBankAccountDetail)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultBankAccountDetail>> CreateBankAccountAndConnectedAccountAsyncWithHttpInfo (string appId, BankAccountCreate account)
         {
@@ -744,11 +744,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create or update a Stripe connected account associated with the bank account of bankAccountId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
         /// <returns>RestApiResultStripeConnectedAccount</returns>
         public RestApiResultStripeConnectedAccount CreateStripeConnectedAccount (string appId, int? bankAccountId)
         {
@@ -757,11 +757,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create or update a Stripe connected account associated with the bank account of bankAccountId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
         /// <returns>ApiResponse of RestApiResultStripeConnectedAccount</returns>
         public ApiResponse< RestApiResultStripeConnectedAccount > CreateStripeConnectedAccountWithHttpInfo (string appId, int? bankAccountId)
         {
@@ -825,11 +825,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create or update a Stripe connected account associated with the bank account of bankAccountId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
         /// <returns>Task of RestApiResultStripeConnectedAccount</returns>
         public async System.Threading.Tasks.Task<RestApiResultStripeConnectedAccount> CreateStripeConnectedAccountAsync (string appId, int? bankAccountId)
         {
@@ -839,11 +839,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create or update a Stripe connected account associated with the bank account of bankAccountId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
         /// <returns>Task of ApiResponse (RestApiResultStripeConnectedAccount)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> CreateStripeConnectedAccountAsyncWithHttpInfo (string appId, int? bankAccountId)
         {
@@ -907,11 +907,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets a single-use Stripe URL for the given account 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="stripeConnectedAccountId">Stripe Connected Account Id</param>
+        /// <param name="appId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
         /// <param name="stripeAccountLinkRequest"></param>
         /// <returns>RestApiResultStripeConnectedAccount</returns>
         public RestApiResultStripeConnectedAccount CreateStripeConnectedAccountLink (string appId, string stripeConnectedAccountId, StripeAccountLinkRequest stripeAccountLinkRequest)
@@ -921,11 +921,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets a single-use Stripe URL for the given account 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="stripeConnectedAccountId">Stripe Connected Account Id</param>
+        /// <param name="appId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
         /// <param name="stripeAccountLinkRequest"></param>
         /// <returns>ApiResponse of RestApiResultStripeConnectedAccount</returns>
         public ApiResponse< RestApiResultStripeConnectedAccount > CreateStripeConnectedAccountLinkWithHttpInfo (string appId, string stripeConnectedAccountId, StripeAccountLinkRequest stripeAccountLinkRequest)
@@ -1006,11 +1006,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets a single-use Stripe URL for the given account 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="stripeConnectedAccountId">Stripe Connected Account Id</param>
+        /// <param name="appId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
         /// <param name="stripeAccountLinkRequest"></param>
         /// <returns>Task of RestApiResultStripeConnectedAccount</returns>
         public async System.Threading.Tasks.Task<RestApiResultStripeConnectedAccount> CreateStripeConnectedAccountLinkAsync (string appId, string stripeConnectedAccountId, StripeAccountLinkRequest stripeAccountLinkRequest)
@@ -1021,11 +1021,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets a single-use Stripe URL for the given account 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="stripeConnectedAccountId">Stripe Connected Account Id</param>
+        /// <param name="appId"></param>
+        /// <param name="stripeConnectedAccountId"></param>
         /// <param name="stripeAccountLinkRequest"></param>
         /// <returns>Task of ApiResponse (RestApiResultStripeConnectedAccount)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> CreateStripeConnectedAccountLinkAsyncWithHttpInfo (string appId, string stripeConnectedAccountId, StripeAccountLinkRequest stripeAccountLinkRequest)
@@ -1106,7 +1106,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets a list of stripe custom connect ids information 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
@@ -1119,7 +1119,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets a list of stripe custom connect ids information 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
@@ -1187,7 +1187,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets a list of stripe custom connect ids information 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
@@ -1201,7 +1201,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets a list of stripe custom connect ids information 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
@@ -1269,7 +1269,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets the current verification status of the given connected account 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1282,7 +1282,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets the current verification status of the given connected account 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1350,7 +1350,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets the current verification status of the given connected account 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1364,7 +1364,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets the current verification status of the given connected account 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1432,12 +1432,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update bank account&#39;s BusinessType and create a Stripe Connected Account 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <param name="businessType">Bank Account business type</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="businessType"></param>
         /// <returns>RestApiResultBankAccountDetail</returns>
         public RestApiResultBankAccountDetail SetBankAccountBusinessType (string appId, int? bankAccountId, string businessType)
         {
@@ -1446,12 +1446,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update bank account&#39;s BusinessType and create a Stripe Connected Account 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <param name="businessType">Bank Account business type</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="businessType"></param>
         /// <returns>ApiResponse of RestApiResultBankAccountDetail</returns>
         public ApiResponse< RestApiResultBankAccountDetail > SetBankAccountBusinessTypeWithHttpInfo (string appId, int? bankAccountId, string businessType)
         {
@@ -1531,12 +1531,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update bank account&#39;s BusinessType and create a Stripe Connected Account 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <param name="businessType">Bank Account business type</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="businessType"></param>
         /// <returns>Task of RestApiResultBankAccountDetail</returns>
         public async System.Threading.Tasks.Task<RestApiResultBankAccountDetail> SetBankAccountBusinessTypeAsync (string appId, int? bankAccountId, string businessType)
         {
@@ -1546,12 +1546,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update bank account&#39;s BusinessType and create a Stripe Connected Account 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <param name="businessType">Bank Account business type</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="businessType"></param>
         /// <returns>Task of ApiResponse (RestApiResultBankAccountDetail)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultBankAccountDetail>> SetBankAccountBusinessTypeAsyncWithHttpInfo (string appId, int? bankAccountId, string businessType)
         {
@@ -1794,12 +1794,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update bank account details 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <param name="updateRequest">fields to be updated</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="updateRequest"></param>
         /// <returns>RestApiResultStripeConnectedAccount</returns>
         public RestApiResultStripeConnectedAccount UpdateBankAccountDetails (string appId, int? bankAccountId, BankAccountDetailsUpdateRequest updateRequest)
         {
@@ -1808,12 +1808,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update bank account details 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <param name="updateRequest">fields to be updated</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="updateRequest"></param>
         /// <returns>ApiResponse of RestApiResultStripeConnectedAccount</returns>
         public ApiResponse< RestApiResultStripeConnectedAccount > UpdateBankAccountDetailsWithHttpInfo (string appId, int? bankAccountId, BankAccountDetailsUpdateRequest updateRequest)
         {
@@ -1893,12 +1893,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update bank account details 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <param name="updateRequest">fields to be updated</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="updateRequest"></param>
         /// <returns>Task of RestApiResultStripeConnectedAccount</returns>
         public async System.Threading.Tasks.Task<RestApiResultStripeConnectedAccount> UpdateBankAccountDetailsAsync (string appId, int? bankAccountId, BankAccountDetailsUpdateRequest updateRequest)
         {
@@ -1908,12 +1908,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update bank account details 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="bankAccountId">Bank Account Id</param>
-        /// <param name="updateRequest">fields to be updated</param>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="updateRequest"></param>
         /// <returns>Task of ApiResponse (RestApiResultStripeConnectedAccount)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeConnectedAccount>> UpdateBankAccountDetailsAsyncWithHttpInfo (string appId, int? bankAccountId, BankAccountDetailsUpdateRequest updateRequest)
         {
@@ -1993,7 +1993,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update Stripe Connection Account&#39;s payout schedule 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2007,7 +2007,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update Stripe Connection Account&#39;s payout schedule 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2080,7 +2080,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update Stripe Connection Account&#39;s payout schedule 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2095,7 +2095,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update Stripe Connection Account&#39;s payout schedule 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>

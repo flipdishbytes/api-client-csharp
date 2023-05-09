@@ -4,28 +4,26 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CancelCurrentlyInitiatedBluetoothDeviceUpdate**](CardReadersApi.md#cancelcurrentlyinitiatedbluetoothdeviceupdate) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/cancelUpdate | Cancel currently initiated install update for bluetooth terminal
-[**CancelReaderAction**](CardReadersApi.md#cancelreaderaction) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action | Cancel terminals action
-[**CardReadersGetReader**](CardReadersApi.md#cardreadersgetreader) | **GET** /api/v1.0/{appId}/payments/terminals/stripe/{readerId} | Get reader
-[**GenerateStripeTerminalLocation**](CardReadersApi.md#generatestripeterminallocation) | **POST** /api/v1.0/{appId}/stripeterminal/location | Get Location ID for Stripe Terminal
-[**GetBluetoothTerminalStatus**](CardReadersApi.md#getbluetoothterminalstatus) | **GET** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status | Get the status of the bluetooth terminal
-[**GetStripeConnectionToken**](CardReadersApi.md#getstripeconnectiontoken) | **GET** /api/v1.0/{appId}/stripeterminal/connectiontoken | Get Connection Token For a Stripe Terminal
-[**InitiateBluetoothTerminalDeviceUpdateCheck**](CardReadersApi.md#initiatebluetoothterminaldeviceupdatecheck) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate | Trigger check for Bluetooth device update on Kiosk
-[**InitiateKioskBluetoothPairingMode**](CardReadersApi.md#initiatekioskbluetoothpairingmode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | Initiate stripe terminal pairing mode
-[**InitiateKioskBluetoothUpdateInstall**](CardReadersApi.md#initiatekioskbluetoothupdateinstall) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate | Initiate Kiosk Update Install for bluetooth terminal
-[**InitiateReaderProcessPaymentIntent**](CardReadersApi.md#initiatereaderprocesspaymentintent) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/processPaymentIntent | Initiate Stripe terminal to Process Payment Intent
+[**CancelCurrentlyInitiatedBluetoothDeviceUpdate**](CardReadersApi.md#cancelcurrentlyinitiatedbluetoothdeviceupdate) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/cancelUpdate | 
+[**CancelReaderAction**](CardReadersApi.md#cancelreaderaction) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action | 
+[**CardReadersGetReader**](CardReadersApi.md#cardreadersgetreader) | **GET** /api/v1.0/{appId}/payments/terminals/stripe/{readerId} | 
+[**GenerateStripeTerminalLocation**](CardReadersApi.md#generatestripeterminallocation) | **POST** /api/v1.0/{appId}/stripeterminal/location | 
+[**GetBluetoothTerminalStatus**](CardReadersApi.md#getbluetoothterminalstatus) | **GET** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status | 
+[**GetStripeConnectionToken**](CardReadersApi.md#getstripeconnectiontoken) | **GET** /api/v1.0/{appId}/stripeterminal/connectiontoken | 
+[**InitiateBluetoothTerminalDeviceUpdateCheck**](CardReadersApi.md#initiatebluetoothterminaldeviceupdatecheck) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate | 
+[**InitiateKioskBluetoothPairingMode**](CardReadersApi.md#initiatekioskbluetoothpairingmode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | 
+[**InitiateKioskBluetoothUpdateInstall**](CardReadersApi.md#initiatekioskbluetoothupdateinstall) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate | 
+[**InitiateReaderProcessPaymentIntent**](CardReadersApi.md#initiatereaderprocesspaymentintent) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/processPaymentIntent | 
 [**RegisterStripeTerminal**](CardReadersApi.md#registerstripeterminal) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/register | 
-[**UnRegisterTerminal**](CardReadersApi.md#unregisterterminal) | **DELETE** /api/v1.0/{appId}/payments/terminals/stripe/unregister | Un-register terminal by deleting it from stripe
-[**UnpairCurrentlyPairedBluetoothDevice**](CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | Unpair the currently paired stripe terminal
+[**UnRegisterTerminal**](CardReadersApi.md#unregisterterminal) | **DELETE** /api/v1.0/{appId}/payments/terminals/stripe/unregister | 
+[**UnpairCurrentlyPairedBluetoothDevice**](CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | 
 
 
 <a name="cancelcurrentlyinitiatedbluetoothdeviceupdate"></a>
 # **CancelCurrentlyInitiatedBluetoothDeviceUpdate**
 > void CancelCurrentlyInitiatedBluetoothDeviceUpdate (string appId, string deviceId, string terminalType)
 
-Cancel currently initiated install update for bluetooth terminal
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -51,7 +49,6 @@ namespace Example
 
             try
             {
-                // Cancel currently initiated install update for bluetooth terminal
                 apiInstance.CancelCurrentlyInitiatedBluetoothDeviceUpdate(appId, deviceId, terminalType);
             }
             catch (Exception e)
@@ -90,9 +87,7 @@ void (empty response body)
 # **CancelReaderAction**
 > RestApiResultCardReader CancelReaderAction (string readerId, string appId)
 
-Cancel terminals action
 
-Can only be called by Kiosk
 
 ### Example
 ```csharp
@@ -117,7 +112,6 @@ namespace Example
 
             try
             {
-                // Cancel terminals action
                 RestApiResultCardReader result = apiInstance.CancelReaderAction(readerId, appId);
                 Debug.WriteLine(result);
             }
@@ -156,9 +150,7 @@ Name | Type | Description  | Notes
 # **CardReadersGetReader**
 > RestApiResultCardReader CardReadersGetReader (string readerId, string appId)
 
-Get reader
 
-Can only be called by Kiosk
 
 ### Example
 ```csharp
@@ -183,7 +175,6 @@ namespace Example
 
             try
             {
-                // Get reader
                 RestApiResultCardReader result = apiInstance.CardReadersGetReader(readerId, appId);
                 Debug.WriteLine(result);
             }
@@ -222,9 +213,7 @@ Name | Type | Description  | Notes
 # **GenerateStripeTerminalLocation**
 > RestApiResultStripeTerminalLocation GenerateStripeTerminalLocation (GeoPointRequest geoPointRequest, string appId)
 
-Get Location ID for Stripe Terminal
 
-Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -249,7 +238,6 @@ namespace Example
 
             try
             {
-                // Get Location ID for Stripe Terminal
                 RestApiResultStripeTerminalLocation result = apiInstance.GenerateStripeTerminalLocation(geoPointRequest, appId);
                 Debug.WriteLine(result);
             }
@@ -288,9 +276,7 @@ Name | Type | Description  | Notes
 # **GetBluetoothTerminalStatus**
 > RestApiResultBluetoothTerminalStatus GetBluetoothTerminalStatus (string appId, string deviceId)
 
-Get the status of the bluetooth terminal
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -315,7 +301,6 @@ namespace Example
 
             try
             {
-                // Get the status of the bluetooth terminal
                 RestApiResultBluetoothTerminalStatus result = apiInstance.GetBluetoothTerminalStatus(appId, deviceId);
                 Debug.WriteLine(result);
             }
@@ -354,9 +339,7 @@ Name | Type | Description  | Notes
 # **GetStripeConnectionToken**
 > RestApiResultStripeTerminalConnectionToken GetStripeConnectionToken (string appId)
 
-Get Connection Token For a Stripe Terminal
 
-Can only be called by Kiosk
 
 ### Example
 ```csharp
@@ -380,7 +363,6 @@ namespace Example
 
             try
             {
-                // Get Connection Token For a Stripe Terminal
                 RestApiResultStripeTerminalConnectionToken result = apiInstance.GetStripeConnectionToken(appId);
                 Debug.WriteLine(result);
             }
@@ -418,9 +400,7 @@ Name | Type | Description  | Notes
 # **InitiateBluetoothTerminalDeviceUpdateCheck**
 > void InitiateBluetoothTerminalDeviceUpdateCheck (string appId, string deviceId, string terminalType)
 
-Trigger check for Bluetooth device update on Kiosk
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -446,7 +426,6 @@ namespace Example
 
             try
             {
-                // Trigger check for Bluetooth device update on Kiosk
                 apiInstance.InitiateBluetoothTerminalDeviceUpdateCheck(appId, deviceId, terminalType);
             }
             catch (Exception e)
@@ -485,9 +464,7 @@ void (empty response body)
 # **InitiateKioskBluetoothPairingMode**
 > void InitiateKioskBluetoothPairingMode (string appId, string deviceId, string terminalType)
 
-Initiate stripe terminal pairing mode
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -513,7 +490,6 @@ namespace Example
 
             try
             {
-                // Initiate stripe terminal pairing mode
                 apiInstance.InitiateKioskBluetoothPairingMode(appId, deviceId, terminalType);
             }
             catch (Exception e)
@@ -552,9 +528,7 @@ void (empty response body)
 # **InitiateKioskBluetoothUpdateInstall**
 > void InitiateKioskBluetoothUpdateInstall (string appId, string deviceId, string terminalType)
 
-Initiate Kiosk Update Install for bluetooth terminal
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -580,7 +554,6 @@ namespace Example
 
             try
             {
-                // Initiate Kiosk Update Install for bluetooth terminal
                 apiInstance.InitiateKioskBluetoothUpdateInstall(appId, deviceId, terminalType);
             }
             catch (Exception e)
@@ -619,9 +592,7 @@ void (empty response body)
 # **InitiateReaderProcessPaymentIntent**
 > RestApiResultCardReader InitiateReaderProcessPaymentIntent (ProcessPaymentIntentRequest request, string readerId, string appId)
 
-Initiate Stripe terminal to Process Payment Intent
 
-Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -647,7 +618,6 @@ namespace Example
 
             try
             {
-                // Initiate Stripe terminal to Process Payment Intent
                 RestApiResultCardReader result = apiInstance.InitiateReaderProcessPaymentIntent(request, readerId, appId);
                 Debug.WriteLine(result);
             }
@@ -750,9 +720,7 @@ Name | Type | Description  | Notes
 # **UnRegisterTerminal**
 > RestApiResultCardReader UnRegisterTerminal (UnRegisterCardReaderRequest request, string appId)
 
-Un-register terminal by deleting it from stripe
 
-Can only be called by Kiosk
 
 ### Example
 ```csharp
@@ -777,7 +745,6 @@ namespace Example
 
             try
             {
-                // Un-register terminal by deleting it from stripe
                 RestApiResultCardReader result = apiInstance.UnRegisterTerminal(request, appId);
                 Debug.WriteLine(result);
             }
@@ -816,9 +783,7 @@ Name | Type | Description  | Notes
 # **UnpairCurrentlyPairedBluetoothDevice**
 > void UnpairCurrentlyPairedBluetoothDevice (string appId, string deviceId)
 
-Unpair the currently paired stripe terminal
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -843,7 +808,6 @@ namespace Example
 
             try
             {
-                // Unpair the currently paired stripe terminal
                 apiInstance.UnpairCurrentlyPairedBluetoothDevice(appId, deviceId);
             }
             catch (Exception e)

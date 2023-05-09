@@ -4,22 +4,22 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AppStoreConfigurationsAppStoreHandleOauthResponseCode**](AppStoreConfigurationsApi.md#appstoreconfigurationsappstorehandleoauthresponsecode) | **GET** /api/v1.0/appstore/oauthresponse/{appStoreAppId}/responsecode | Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
-[**CreateAppStoreConfig**](AppStoreConfigurationsApi.md#createappstoreconfig) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config | Create App store app configuration
-[**DeleteAppStoreConfig**](AppStoreConfigurationsApi.md#deleteappstoreconfig) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Delete App store app configuration
-[**ExecuteConfigurationAction**](AppStoreConfigurationsApi.md#executeconfigurationaction) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/action | Execute configuration action on a configuration item (eg. handle button press)
-[**GetAppStoreConfig**](AppStoreConfigurationsApi.md#getappstoreconfig) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Get App store app configuration
-[**GetConfiguredAppSingleApp**](AppStoreConfigurationsApi.md#getconfiguredappsingleapp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | Get list of App store app configurations for one App store app
-[**GetConfiguredApps**](AppStoreConfigurationsApi.md#getconfiguredapps) | **GET** /api/v1.0/{appId}/appstore/apps | Get list of App store apps which have been configured
-[**UpdateAppStoreConfig**](AppStoreConfigurationsApi.md#updateappstoreconfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Update App store app configuration
-[**UpdateAppStoreConfigSettingValues**](AppStoreConfigurationsApi.md#updateappstoreconfigsettingvalues) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/updatesettings | Update AppStore App Configuration values, specified settings only
+[**AppStoreConfigurationsAppStoreHandleOauthResponseCode**](AppStoreConfigurationsApi.md#appstoreconfigurationsappstorehandleoauthresponsecode) | **GET** /api/v1.0/appstore/oauthresponse/{appStoreAppId}/responsecode | 
+[**CreateAppStoreConfig**](AppStoreConfigurationsApi.md#createappstoreconfig) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config | 
+[**DeleteAppStoreConfig**](AppStoreConfigurationsApi.md#deleteappstoreconfig) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | 
+[**ExecuteConfigurationAction**](AppStoreConfigurationsApi.md#executeconfigurationaction) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/action | 
+[**GetAppStoreConfig**](AppStoreConfigurationsApi.md#getappstoreconfig) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | 
+[**GetConfiguredAppSingleApp**](AppStoreConfigurationsApi.md#getconfiguredappsingleapp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | 
+[**GetConfiguredApps**](AppStoreConfigurationsApi.md#getconfiguredapps) | **GET** /api/v1.0/{appId}/appstore/apps | 
+[**UpdateAppStoreConfig**](AppStoreConfigurationsApi.md#updateappstoreconfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | 
+[**UpdateAppStoreConfigSettingValues**](AppStoreConfigurationsApi.md#updateappstoreconfigsettingvalues) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/updatesettings | 
 
 
 <a name="appstoreconfigurationsappstorehandleoauthresponsecode"></a>
 # **AppStoreConfigurationsAppStoreHandleOauthResponseCode**
 > Object AppStoreConfigurationsAppStoreHandleOauthResponseCode (string appStoreAppId)
 
-Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
+
 
 ### Example
 ```csharp
@@ -43,7 +43,6 @@ namespace Example
 
             try
             {
-                // Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
                 Object result = apiInstance.AppStoreConfigurationsAppStoreHandleOauthResponseCode(appStoreAppId);
                 Debug.WriteLine(result);
             }
@@ -81,9 +80,7 @@ Name | Type | Description  | Notes
 # **CreateAppStoreConfig**
 > RestApiResultAppStoreAppConfiguration CreateAppStoreConfig (string appId, string appStoreAppId)
 
-Create App store app configuration
 
-[BETA - this endpoint is under development, do not use it in your production system] This adds an Application to a Whitelabel that can later be configured to specific stores
 
 ### Example
 ```csharp
@@ -103,12 +100,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreConfigurationsApi();
-            var appId = appId_example;  // string | App id
-            var appStoreAppId = appStoreAppId_example;  // string | App store app id
+            var appId = appId_example;  // string | 
+            var appStoreAppId = appStoreAppId_example;  // string | 
 
             try
             {
-                // Create App store app configuration
                 RestApiResultAppStoreAppConfiguration result = apiInstance.CreateAppStoreConfig(appId, appStoreAppId);
                 Debug.WriteLine(result);
             }
@@ -125,8 +121,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App id | 
- **appStoreAppId** | **string**| App store app id | 
+ **appId** | **string**|  | 
+ **appStoreAppId** | **string**|  | 
 
 ### Return type
 
@@ -147,9 +143,7 @@ Name | Type | Description  | Notes
 # **DeleteAppStoreConfig**
 > RestApiStringResult DeleteAppStoreConfig (string appId, string appStoreAppId, string configId)
 
-Delete App store app configuration
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -169,13 +163,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreConfigurationsApi();
-            var appId = appId_example;  // string | App id
-            var appStoreAppId = appStoreAppId_example;  // string | App store app id
-            var configId = configId_example;  // string | App store app configuration id
+            var appId = appId_example;  // string | 
+            var appStoreAppId = appStoreAppId_example;  // string | 
+            var configId = configId_example;  // string | 
 
             try
             {
-                // Delete App store app configuration
                 RestApiStringResult result = apiInstance.DeleteAppStoreConfig(appId, appStoreAppId, configId);
                 Debug.WriteLine(result);
             }
@@ -192,9 +185,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App id | 
- **appStoreAppId** | **string**| App store app id | 
- **configId** | **string**| App store app configuration id | 
+ **appId** | **string**|  | 
+ **appStoreAppId** | **string**|  | 
+ **configId** | **string**|  | 
 
 ### Return type
 
@@ -215,7 +208,7 @@ Name | Type | Description  | Notes
 # **ExecuteConfigurationAction**
 > ExecuteConfigurationActionResult ExecuteConfigurationAction (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest)
 
-Execute configuration action on a configuration item (eg. handle button press)
+
 
 ### Example
 ```csharp
@@ -235,14 +228,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreConfigurationsApi();
-            var appId = appId_example;  // string | App Id
-            var appStoreAppId = appStoreAppId_example;  // string | AppStore App Id
-            var configId = configId_example;  // string | AppStore App configuration Id
-            var executeConfigurationActionRequest = new ExecuteConfigurationActionRequest(); // ExecuteConfigurationActionRequest | Action request details
+            var appId = appId_example;  // string | 
+            var appStoreAppId = appStoreAppId_example;  // string | 
+            var configId = configId_example;  // string | 
+            var executeConfigurationActionRequest = new ExecuteConfigurationActionRequest(); // ExecuteConfigurationActionRequest | 
 
             try
             {
-                // Execute configuration action on a configuration item (eg. handle button press)
                 ExecuteConfigurationActionResult result = apiInstance.ExecuteConfigurationAction(appId, appStoreAppId, configId, executeConfigurationActionRequest);
                 Debug.WriteLine(result);
             }
@@ -259,10 +251,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Id | 
- **appStoreAppId** | **string**| AppStore App Id | 
- **configId** | **string**| AppStore App configuration Id | 
- **executeConfigurationActionRequest** | [**ExecuteConfigurationActionRequest**](ExecuteConfigurationActionRequest.md)| Action request details | 
+ **appId** | **string**|  | 
+ **appStoreAppId** | **string**|  | 
+ **configId** | **string**|  | 
+ **executeConfigurationActionRequest** | [**ExecuteConfigurationActionRequest**](ExecuteConfigurationActionRequest.md)|  | 
 
 ### Return type
 
@@ -283,9 +275,7 @@ Name | Type | Description  | Notes
 # **GetAppStoreConfig**
 > AppStoreAppConfiguration GetAppStoreConfig (string appId, string appStoreAppId, string configId)
 
-Get App store app configuration
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -305,13 +295,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreConfigurationsApi();
-            var appId = appId_example;  // string | App id
-            var appStoreAppId = appStoreAppId_example;  // string | App store app id
-            var configId = configId_example;  // string | App store app configuration id
+            var appId = appId_example;  // string | 
+            var appStoreAppId = appStoreAppId_example;  // string | 
+            var configId = configId_example;  // string | 
 
             try
             {
-                // Get App store app configuration
                 AppStoreAppConfiguration result = apiInstance.GetAppStoreConfig(appId, appStoreAppId, configId);
                 Debug.WriteLine(result);
             }
@@ -328,9 +317,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App id | 
- **appStoreAppId** | **string**| App store app id | 
- **configId** | **string**| App store app configuration id | 
+ **appId** | **string**|  | 
+ **appStoreAppId** | **string**|  | 
+ **configId** | **string**|  | 
 
 ### Return type
 
@@ -351,9 +340,7 @@ Name | Type | Description  | Notes
 # **GetConfiguredAppSingleApp**
 > RestApiArrayResultAppStoreAppConfigurationSummary GetConfiguredAppSingleApp (string appId, string appStoreAppId)
 
-Get list of App store app configurations for one App store app
 
-[ALPHA - this endpoint is not ready to be consumed]
 
 ### Example
 ```csharp
@@ -373,12 +360,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreConfigurationsApi();
-            var appId = appId_example;  // string | App id
-            var appStoreAppId = appStoreAppId_example;  // string | App store app id
+            var appId = appId_example;  // string | 
+            var appStoreAppId = appStoreAppId_example;  // string | 
 
             try
             {
-                // Get list of App store app configurations for one App store app
                 RestApiArrayResultAppStoreAppConfigurationSummary result = apiInstance.GetConfiguredAppSingleApp(appId, appStoreAppId);
                 Debug.WriteLine(result);
             }
@@ -395,8 +381,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App id | 
- **appStoreAppId** | **string**| App store app id | 
+ **appId** | **string**|  | 
+ **appStoreAppId** | **string**|  | 
 
 ### Return type
 
@@ -417,9 +403,7 @@ Name | Type | Description  | Notes
 # **GetConfiguredApps**
 > RestApiArrayResultAppStoreAppConfigurationHeader GetConfiguredApps (string appId)
 
-Get list of App store apps which have been configured
 
-[ALPHA - this endpoint is not ready to be consumed]
 
 ### Example
 ```csharp
@@ -439,11 +423,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreConfigurationsApi();
-            var appId = appId_example;  // string | App id
+            var appId = appId_example;  // string | 
 
             try
             {
-                // Get list of App store apps which have been configured
                 RestApiArrayResultAppStoreAppConfigurationHeader result = apiInstance.GetConfiguredApps(appId);
                 Debug.WriteLine(result);
             }
@@ -460,7 +443,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App id | 
+ **appId** | **string**|  | 
 
 ### Return type
 
@@ -481,9 +464,7 @@ Name | Type | Description  | Notes
 # **UpdateAppStoreConfig**
 > void UpdateAppStoreConfig (string appId, string appStoreAppId, string configId, UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration)
 
-Update App store app configuration
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -503,14 +484,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreConfigurationsApi();
-            var appId = appId_example;  // string | App id
-            var appStoreAppId = appStoreAppId_example;  // string | App store app id
-            var configId = configId_example;  // string | App store app configuration id
-            var updateAppStoreAppConfiguration = new UpdateAppStoreAppConfiguration(); // UpdateAppStoreAppConfiguration | Update App store app configuration
+            var appId = appId_example;  // string | 
+            var appStoreAppId = appStoreAppId_example;  // string | 
+            var configId = configId_example;  // string | 
+            var updateAppStoreAppConfiguration = new UpdateAppStoreAppConfiguration(); // UpdateAppStoreAppConfiguration | 
 
             try
             {
-                // Update App store app configuration
                 apiInstance.UpdateAppStoreConfig(appId, appStoreAppId, configId, updateAppStoreAppConfiguration);
             }
             catch (Exception e)
@@ -526,10 +506,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App id | 
- **appStoreAppId** | **string**| App store app id | 
- **configId** | **string**| App store app configuration id | 
- **updateAppStoreAppConfiguration** | [**UpdateAppStoreAppConfiguration**](UpdateAppStoreAppConfiguration.md)| Update App store app configuration | 
+ **appId** | **string**|  | 
+ **appStoreAppId** | **string**|  | 
+ **configId** | **string**|  | 
+ **updateAppStoreAppConfiguration** | [**UpdateAppStoreAppConfiguration**](UpdateAppStoreAppConfiguration.md)|  | 
 
 ### Return type
 
@@ -550,9 +530,7 @@ void (empty response body)
 # **UpdateAppStoreConfigSettingValues**
 > void UpdateAppStoreConfigSettingValues (string appId, string appStoreAppId, string configId, UpdateAppStoreAppConfigurationValuesBatch updateAppStoreAppConfigurationValues)
 
-Update AppStore App Configuration values, specified settings only
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -579,7 +557,6 @@ namespace Example
 
             try
             {
-                // Update AppStore App Configuration values, specified settings only
                 apiInstance.UpdateAppStoreConfigSettingValues(appId, appStoreAppId, configId, updateAppStoreAppConfigurationValues);
             }
             catch (Exception e)

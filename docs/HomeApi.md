@@ -4,18 +4,18 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CompleteHomeAction**](HomeApi.md#completehomeaction) | **POST** /api/v1.0/{appId}/home/{homeActionId} | [PRIVATE API] Complete Home Action
-[**DismissOldPortalAction**](HomeApi.md#dismissoldportalaction) | **POST** /api/v1.0/home/dismissoldportalaction | [PRIVATE API] Complete Home Action
-[**GetHomeActions**](HomeApi.md#gethomeactions) | **GET** /api/v1.0/{appId}/home | [PRIVATE API] Get Home Actions
-[**GetHomeStatistics**](HomeApi.md#gethomestatistics) | **GET** /api/v1.0/{appId}/home/stats | [PRIVATE API] Get Home Statistics
-[**GetOktaPortalFeatureFlag**](HomeApi.md#getoktaportalfeatureflag) | **GET** /api/v1.0/home/okta-portal | [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
+[**CompleteHomeAction**](HomeApi.md#completehomeaction) | **POST** /api/v1.0/{appId}/home/{homeActionId} | 
+[**DismissOldPortalAction**](HomeApi.md#dismissoldportalaction) | **POST** /api/v1.0/home/dismissoldportalaction | 
+[**GetHomeActions**](HomeApi.md#gethomeactions) | **GET** /api/v1.0/{appId}/home | 
+[**GetHomeStatistics**](HomeApi.md#gethomestatistics) | **GET** /api/v1.0/{appId}/home/stats | 
+[**GetOktaPortalFeatureFlag**](HomeApi.md#getoktaportalfeatureflag) | **GET** /api/v1.0/home/okta-portal | 
 
 
 <a name="completehomeaction"></a>
 # **CompleteHomeAction**
 > Object CompleteHomeAction (string appId, int? homeActionId, bool? isDismissed)
 
-[PRIVATE API] Complete Home Action
+
 
 ### Example
 ```csharp
@@ -35,13 +35,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new HomeApi();
-            var appId = appId_example;  // string | App Name Id
-            var homeActionId = 56;  // int? | Id of the action
+            var appId = appId_example;  // string | 
+            var homeActionId = 56;  // int? | 
             var isDismissed = true;  // bool? | 
 
             try
             {
-                // [PRIVATE API] Complete Home Action
                 Object result = apiInstance.CompleteHomeAction(appId, homeActionId, isDismissed);
                 Debug.WriteLine(result);
             }
@@ -58,8 +57,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
- **homeActionId** | **int?**| Id of the action | 
+ **appId** | **string**|  | 
+ **homeActionId** | **int?**|  | 
  **isDismissed** | **bool?**|  | 
 
 ### Return type
@@ -81,7 +80,7 @@ Name | Type | Description  | Notes
 # **DismissOldPortalAction**
 > Object DismissOldPortalAction ()
 
-[PRIVATE API] Complete Home Action
+
 
 ### Example
 ```csharp
@@ -104,7 +103,6 @@ namespace Example
 
             try
             {
-                // [PRIVATE API] Complete Home Action
                 Object result = apiInstance.DismissOldPortalAction();
                 Debug.WriteLine(result);
             }
@@ -139,7 +137,7 @@ This endpoint does not need any parameter.
 # **GetHomeActions**
 > RestApiArrayResultHomeAction GetHomeActions (string appId)
 
-[PRIVATE API] Get Home Actions
+
 
 ### Example
 ```csharp
@@ -159,11 +157,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new HomeApi();
-            var appId = appId_example;  // string | App Name Id
+            var appId = appId_example;  // string | 
 
             try
             {
-                // [PRIVATE API] Get Home Actions
                 RestApiArrayResultHomeAction result = apiInstance.GetHomeActions(appId);
                 Debug.WriteLine(result);
             }
@@ -180,7 +177,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
+ **appId** | **string**|  | 
 
 ### Return type
 
@@ -201,7 +198,7 @@ Name | Type | Description  | Notes
 # **GetHomeStatistics**
 > RestApiResultHomeStatistics GetHomeStatistics (string appId)
 
-[PRIVATE API] Get Home Statistics
+
 
 ### Example
 ```csharp
@@ -221,11 +218,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new HomeApi();
-            var appId = appId_example;  // string | App Name Id
+            var appId = appId_example;  // string | 
 
             try
             {
-                // [PRIVATE API] Get Home Statistics
                 RestApiResultHomeStatistics result = apiInstance.GetHomeStatistics(appId);
                 Debug.WriteLine(result);
             }
@@ -242,7 +238,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
+ **appId** | **string**|  | 
 
 ### Return type
 
@@ -263,7 +259,7 @@ Name | Type | Description  | Notes
 # **GetOktaPortalFeatureFlag**
 > RestApiResultOktaPortalFeatureFlag GetOktaPortalFeatureFlag ()
 
-[PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
+
 
 ### Example
 ```csharp
@@ -286,7 +282,6 @@ namespace Example
 
             try
             {
-                // [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
                 RestApiResultOktaPortalFeatureFlag result = apiInstance.GetOktaPortalFeatureFlag();
                 Debug.WriteLine(result);
             }

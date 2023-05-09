@@ -4,19 +4,19 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetApmStatus**](ApmApi.md#getapmstatus) | **GET** /api/v1.0/{appId}/apm/status | [PRIVATE API] Returns true if APM is enabled on at least one store in an application
-[**GetBasicStatistics**](ApmApi.md#getbasicstatistics) | **GET** /api/v1.0/{appId}/apm/statistics | [PRIVATE API] Get Basic Statistics
-[**GetCalendarWeekStatistics**](ApmApi.md#getcalendarweekstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calendar | [PRIVATE API] Get Calendar statistics
-[**GetCallsStatistics**](ApmApi.md#getcallsstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calls/{aggregateDataBy} | [PRIVATE API] Get Calls Statistics
-[**GetOrderStatistics**](ApmApi.md#getorderstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy} | [PRIVATE API] Get Order Statistics (Value of Orders)
-[**GetPaginatedCallList**](ApmApi.md#getpaginatedcalllist) | **GET** /api/v1.0/{appId}/apm/calls | [PRIVATE API] Get paginated APM call list
+[**GetApmStatus**](ApmApi.md#getapmstatus) | **GET** /api/v1.0/{appId}/apm/status | 
+[**GetBasicStatistics**](ApmApi.md#getbasicstatistics) | **GET** /api/v1.0/{appId}/apm/statistics | 
+[**GetCalendarWeekStatistics**](ApmApi.md#getcalendarweekstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calendar | 
+[**GetCallsStatistics**](ApmApi.md#getcallsstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calls/{aggregateDataBy} | 
+[**GetOrderStatistics**](ApmApi.md#getorderstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy} | 
+[**GetPaginatedCallList**](ApmApi.md#getpaginatedcalllist) | **GET** /api/v1.0/{appId}/apm/calls | 
 
 
 <a name="getapmstatus"></a>
 # **GetApmStatus**
 > RestApiResultApmStatus GetApmStatus (string appId)
 
-[PRIVATE API] Returns true if APM is enabled on at least one store in an application
+
 
 ### Example
 ```csharp
@@ -36,11 +36,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ApmApi();
-            var appId = appId_example;  // string | App Id
+            var appId = appId_example;  // string | 
 
             try
             {
-                // [PRIVATE API] Returns true if APM is enabled on at least one store in an application
                 RestApiResultApmStatus result = apiInstance.GetApmStatus(appId);
                 Debug.WriteLine(result);
             }
@@ -57,7 +56,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Id | 
+ **appId** | **string**|  | 
 
 ### Return type
 
@@ -78,7 +77,7 @@ Name | Type | Description  | Notes
 # **GetBasicStatistics**
 > RestApiResultApmStatistics GetBasicStatistics (string appId, List<int?> storeId = null)
 
-[PRIVATE API] Get Basic Statistics
+
 
 ### Example
 ```csharp
@@ -98,12 +97,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ApmApi();
-            var appId = appId_example;  // string | App Id
-            var storeId = new List<int?>(); // List<int?> | List of stores to search by (optional) 
+            var appId = appId_example;  // string | 
+            var storeId = new List<int?>(); // List<int?> |  (optional) 
 
             try
             {
-                // [PRIVATE API] Get Basic Statistics
                 RestApiResultApmStatistics result = apiInstance.GetBasicStatistics(appId, storeId);
                 Debug.WriteLine(result);
             }
@@ -120,8 +118,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Id | 
- **storeId** | [**List&lt;int?&gt;**](int?.md)| List of stores to search by | [optional] 
+ **appId** | **string**|  | 
+ **storeId** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
 
 ### Return type
 
@@ -142,7 +140,7 @@ Name | Type | Description  | Notes
 # **GetCalendarWeekStatistics**
 > RestApiArrayResultApmHourlyDataPoint GetCalendarWeekStatistics (string appId, List<int?> storeId = null)
 
-[PRIVATE API] Get Calendar statistics
+
 
 ### Example
 ```csharp
@@ -162,12 +160,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ApmApi();
-            var appId = appId_example;  // string | App Id
-            var storeId = new List<int?>(); // List<int?> | List of stores to search by (optional) 
+            var appId = appId_example;  // string | 
+            var storeId = new List<int?>(); // List<int?> |  (optional) 
 
             try
             {
-                // [PRIVATE API] Get Calendar statistics
                 RestApiArrayResultApmHourlyDataPoint result = apiInstance.GetCalendarWeekStatistics(appId, storeId);
                 Debug.WriteLine(result);
             }
@@ -184,8 +181,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Id | 
- **storeId** | [**List&lt;int?&gt;**](int?.md)| List of stores to search by | [optional] 
+ **appId** | **string**|  | 
+ **storeId** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
 
 ### Return type
 
@@ -206,7 +203,7 @@ Name | Type | Description  | Notes
 # **GetCallsStatistics**
 > RestApiArrayResultApmDataPoint GetCallsStatistics (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null)
 
-[PRIVATE API] Get Calls Statistics
+
 
 ### Example
 ```csharp
@@ -226,14 +223,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ApmApi();
-            var appId = appId_example;  // string | App Id
-            var aggregateDataBy = aggregateDataBy_example;  // string | Aggregate data by day \\ week
-            var dataPointLimit = 56;  // int? | Amount of data points per request (optional) 
-            var storeId = new List<int?>(); // List<int?> | List of stores to search by (optional) 
+            var appId = appId_example;  // string | 
+            var aggregateDataBy = aggregateDataBy_example;  // string | 
+            var dataPointLimit = 56;  // int? |  (optional) 
+            var storeId = new List<int?>(); // List<int?> |  (optional) 
 
             try
             {
-                // [PRIVATE API] Get Calls Statistics
                 RestApiArrayResultApmDataPoint result = apiInstance.GetCallsStatistics(appId, aggregateDataBy, dataPointLimit, storeId);
                 Debug.WriteLine(result);
             }
@@ -250,10 +246,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Id | 
- **aggregateDataBy** | **string**| Aggregate data by day \\ week | 
- **dataPointLimit** | **int?**| Amount of data points per request | [optional] 
- **storeId** | [**List&lt;int?&gt;**](int?.md)| List of stores to search by | [optional] 
+ **appId** | **string**|  | 
+ **aggregateDataBy** | **string**|  | 
+ **dataPointLimit** | **int?**|  | [optional] 
+ **storeId** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
 
 ### Return type
 
@@ -274,7 +270,7 @@ Name | Type | Description  | Notes
 # **GetOrderStatistics**
 > RestApiArrayResultApmCurrencyDataPoint GetOrderStatistics (string appId, string aggregateDataBy, int? dataPointLimit = null, List<int?> storeId = null)
 
-[PRIVATE API] Get Order Statistics (Value of Orders)
+
 
 ### Example
 ```csharp
@@ -294,14 +290,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ApmApi();
-            var appId = appId_example;  // string | App Id
-            var aggregateDataBy = aggregateDataBy_example;  // string | Aggregate data by day \\ week
-            var dataPointLimit = 56;  // int? | Amount of data points per request (optional) 
-            var storeId = new List<int?>(); // List<int?> | List of stores to search by (optional) 
+            var appId = appId_example;  // string | 
+            var aggregateDataBy = aggregateDataBy_example;  // string | 
+            var dataPointLimit = 56;  // int? |  (optional) 
+            var storeId = new List<int?>(); // List<int?> |  (optional) 
 
             try
             {
-                // [PRIVATE API] Get Order Statistics (Value of Orders)
                 RestApiArrayResultApmCurrencyDataPoint result = apiInstance.GetOrderStatistics(appId, aggregateDataBy, dataPointLimit, storeId);
                 Debug.WriteLine(result);
             }
@@ -318,10 +313,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Id | 
- **aggregateDataBy** | **string**| Aggregate data by day \\ week | 
- **dataPointLimit** | **int?**| Amount of data points per request | [optional] 
- **storeId** | [**List&lt;int?&gt;**](int?.md)| List of stores to search by | [optional] 
+ **appId** | **string**|  | 
+ **aggregateDataBy** | **string**|  | 
+ **dataPointLimit** | **int?**|  | [optional] 
+ **storeId** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
 
 ### Return type
 
@@ -342,7 +337,7 @@ Name | Type | Description  | Notes
 # **GetPaginatedCallList**
 > RestApiPaginationResultPhoneCall GetPaginatedCallList (string appId, int? page = null, int? limit = null, List<int?> storeId = null)
 
-[PRIVATE API] Get paginated APM call list
+
 
 ### Example
 ```csharp
@@ -362,14 +357,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ApmApi();
-            var appId = appId_example;  // string | App Id
-            var page = 56;  // int? | Requested page index (optional) 
-            var limit = 56;  // int? | Requested page limit (optional) 
-            var storeId = new List<int?>(); // List<int?> | List of stores to search by (optional) 
+            var appId = appId_example;  // string | 
+            var page = 56;  // int? |  (optional) 
+            var limit = 56;  // int? |  (optional) 
+            var storeId = new List<int?>(); // List<int?> |  (optional) 
 
             try
             {
-                // [PRIVATE API] Get paginated APM call list
                 RestApiPaginationResultPhoneCall result = apiInstance.GetPaginatedCallList(appId, page, limit, storeId);
                 Debug.WriteLine(result);
             }
@@ -386,10 +380,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Id | 
- **page** | **int?**| Requested page index | [optional] 
- **limit** | **int?**| Requested page limit | [optional] 
- **storeId** | [**List&lt;int?&gt;**](int?.md)| List of stores to search by | [optional] 
+ **appId** | **string**|  | 
+ **page** | **int?**|  | [optional] 
+ **limit** | **int?**|  | [optional] 
+ **storeId** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
 
 ### Return type
 

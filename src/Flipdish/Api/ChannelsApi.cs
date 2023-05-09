@@ -25,193 +25,193 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Assign a given AppId to a Sales Channel
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Object</returns>
         Object AssignAppIdToSalesChannel (string appId, int? channelId);
 
         /// <summary>
-        /// Assign a given AppId to a Sales Channel
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> AssignAppIdToSalesChannelWithHttpInfo (string appId, int? channelId);
         /// <summary>
-        /// Assign a Store to a Sales Channel
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (123, 456)</param>
-        /// <param name="appId">AppId (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Object</returns>
         Object AssignStoreToChannel (int? storeId, string appId, int? channelId);
 
         /// <summary>
-        /// Assign a Store to a Sales Channel
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (123, 456)</param>
-        /// <param name="appId">AppId (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> AssignStoreToChannelWithHttpInfo (int? storeId, string appId, int? channelId);
         /// <summary>
-        /// Attachs the specified store to the given sales channel.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
-        /// <param name="storeId">Store Id (Phyisical Restaurant) to attach.</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Object</returns>
         Object AttachStoreToSalesChannel (string appId, int? channelId, int? storeId);
 
         /// <summary>
-        /// Attachs the specified store to the given sales channel.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
-        /// <param name="storeId">Store Id (Phyisical Restaurant) to attach.</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> AttachStoreToSalesChannelWithHttpInfo (string appId, int? channelId, int? storeId);
         /// <summary>
-        /// Detaches all the stores from the given sales channel.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Object</returns>
         Object DetachAllStoresFromSalesChannel (string appId, int? channelId);
 
         /// <summary>
-        /// Detaches all the stores from the given sales channel.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> DetachAllStoresFromSalesChannelWithHttpInfo (string appId, int? channelId);
         /// <summary>
-        /// Detaches the specified store from the given sales channel.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
-        /// <param name="storeId">Store Id (Phyisical Restaurant) to detach.</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Object</returns>
         Object DetachStoreFromSalesChannel (string appId, int? channelId, int? storeId);
 
         /// <summary>
-        /// Detaches the specified store from the given sales channel.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
-        /// <param name="storeId">Store Id (Phyisical Restaurant) to detach.</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> DetachStoreFromSalesChannelWithHttpInfo (string appId, int? channelId, int? storeId);
         /// <summary>
-        /// Returns a list of sales channels that are assigned to a given AppId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiArrayResultChannel</returns>
         RestApiArrayResultChannel GetAssignedChannels (string appId);
 
         /// <summary>
-        /// Returns a list of sales channels that are assigned to a given AppId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiArrayResultChannel</returns>
         ApiResponse<RestApiArrayResultChannel> GetAssignedChannelsWithHttpInfo (string appId);
         /// <summary>
-        /// Returns a list of sales channels that are not yet assigned to a given AppId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiArrayResultChannel</returns>
         RestApiArrayResultChannel GetAvailableChannels (string appId);
 
         /// <summary>
-        /// Returns a list of sales channels that are not yet assigned to a given AppId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiArrayResultChannel</returns>
         ApiResponse<RestApiArrayResultChannel> GetAvailableChannelsWithHttpInfo (string appId);
         /// <summary>
-        /// Returns a Sales Channel by Id.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ChannelId</param>
-        /// <param name="appId">AppId</param>
+        /// <param name="id"></param>
+        /// <param name="appId"></param>
         /// <returns>RestApiResultChannel</returns>
         RestApiResultChannel GetChannel (int? id, string appId);
 
         /// <summary>
-        /// Returns a Sales Channel by Id.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ChannelId</param>
-        /// <param name="appId">AppId</param>
+        /// <param name="id"></param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultChannel</returns>
         ApiResponse<RestApiResultChannel> GetChannelWithHttpInfo (int? id, string appId);
         /// <summary>
-        /// Returns a list of enabled Channels
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -222,7 +222,7 @@ namespace Flipdish.Api
         RestApiArrayResultChannel GetChannels (string appId);
 
         /// <summary>
-        /// Returns a list of enabled Channels
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -232,266 +232,266 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultChannel</returns>
         ApiResponse<RestApiArrayResultChannel> GetChannelsWithHttpInfo (string appId);
         /// <summary>
-        /// Returns a list of stores of an AppId that are assigned to a given Sales Channel
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>RestApiArrayResultStoreChannelAssignment</returns>
         RestApiArrayResultStoreChannelAssignment GetStoresAssignedToChannel (string appId, int? channelId);
 
         /// <summary>
-        /// Returns a list of stores of an AppId that are assigned to a given Sales Channel
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>ApiResponse of RestApiArrayResultStoreChannelAssignment</returns>
         ApiResponse<RestApiArrayResultStoreChannelAssignment> GetStoresAssignedToChannelWithHttpInfo (string appId, int? channelId);
         /// <summary>
-        /// Returns a list of store ids attached to the given channel type for the specified app.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Response</returns>
         Response GetStoresBySalesChannel (string appId, int? channelId);
 
         /// <summary>
-        /// Returns a list of store ids attached to the given channel type for the specified app.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>ApiResponse of Response</returns>
         ApiResponse<Response> GetStoresBySalesChannelWithHttpInfo (string appId, int? channelId);
         /// <summary>
-        /// Unassign a Store from a Sales Channel
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (123, 456)</param>
-        /// <param name="appId">AppId (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Object</returns>
         Object UnassignStoreFromChannel (int? storeId, string appId, int? channelId);
 
         /// <summary>
-        /// Unassign a Store from a Sales Channel
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (123, 456)</param>
-        /// <param name="appId">AppId (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> UnassignStoreFromChannelWithHttpInfo (int? storeId, string appId, int? channelId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Assign a given AppId to a Sales Channel
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> AssignAppIdToSalesChannelAsync (string appId, int? channelId);
 
         /// <summary>
-        /// Assign a given AppId to a Sales Channel
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AssignAppIdToSalesChannelAsyncWithHttpInfo (string appId, int? channelId);
         /// <summary>
-        /// Assign a Store to a Sales Channel
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (123, 456)</param>
-        /// <param name="appId">AppId (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> AssignStoreToChannelAsync (int? storeId, string appId, int? channelId);
 
         /// <summary>
-        /// Assign a Store to a Sales Channel
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (123, 456)</param>
-        /// <param name="appId">AppId (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AssignStoreToChannelAsyncWithHttpInfo (int? storeId, string appId, int? channelId);
         /// <summary>
-        /// Attachs the specified store to the given sales channel.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
-        /// <param name="storeId">Store Id (Phyisical Restaurant) to attach.</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> AttachStoreToSalesChannelAsync (string appId, int? channelId, int? storeId);
 
         /// <summary>
-        /// Attachs the specified store to the given sales channel.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
-        /// <param name="storeId">Store Id (Phyisical Restaurant) to attach.</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AttachStoreToSalesChannelAsyncWithHttpInfo (string appId, int? channelId, int? storeId);
         /// <summary>
-        /// Detaches all the stores from the given sales channel.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> DetachAllStoresFromSalesChannelAsync (string appId, int? channelId);
 
         /// <summary>
-        /// Detaches all the stores from the given sales channel.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DetachAllStoresFromSalesChannelAsyncWithHttpInfo (string appId, int? channelId);
         /// <summary>
-        /// Detaches the specified store from the given sales channel.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
-        /// <param name="storeId">Store Id (Phyisical Restaurant) to detach.</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> DetachStoreFromSalesChannelAsync (string appId, int? channelId, int? storeId);
 
         /// <summary>
-        /// Detaches the specified store from the given sales channel.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
-        /// <param name="storeId">Store Id (Phyisical Restaurant) to detach.</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DetachStoreFromSalesChannelAsyncWithHttpInfo (string appId, int? channelId, int? storeId);
         /// <summary>
-        /// Returns a list of sales channels that are assigned to a given AppId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiArrayResultChannel</returns>
         System.Threading.Tasks.Task<RestApiArrayResultChannel> GetAssignedChannelsAsync (string appId);
 
         /// <summary>
-        /// Returns a list of sales channels that are assigned to a given AppId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultChannel)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultChannel>> GetAssignedChannelsAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// Returns a list of sales channels that are not yet assigned to a given AppId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiArrayResultChannel</returns>
         System.Threading.Tasks.Task<RestApiArrayResultChannel> GetAvailableChannelsAsync (string appId);
 
         /// <summary>
-        /// Returns a list of sales channels that are not yet assigned to a given AppId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultChannel)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultChannel>> GetAvailableChannelsAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// Returns a Sales Channel by Id.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ChannelId</param>
-        /// <param name="appId">AppId</param>
+        /// <param name="id"></param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiResultChannel</returns>
         System.Threading.Tasks.Task<RestApiResultChannel> GetChannelAsync (int? id, string appId);
 
         /// <summary>
-        /// Returns a Sales Channel by Id.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ChannelId</param>
-        /// <param name="appId">AppId</param>
+        /// <param name="id"></param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultChannel)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultChannel>> GetChannelAsyncWithHttpInfo (int? id, string appId);
         /// <summary>
-        /// Returns a list of enabled Channels
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -502,7 +502,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultChannel> GetChannelsAsync (string appId);
 
         /// <summary>
-        /// Returns a list of enabled Channels
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -512,74 +512,74 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultChannel)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultChannel>> GetChannelsAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// Returns a list of stores of an AppId that are assigned to a given Sales Channel
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of RestApiArrayResultStoreChannelAssignment</returns>
         System.Threading.Tasks.Task<RestApiArrayResultStoreChannelAssignment> GetStoresAssignedToChannelAsync (string appId, int? channelId);
 
         /// <summary>
-        /// Returns a list of stores of an AppId that are assigned to a given Sales Channel
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultStoreChannelAssignment)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreChannelAssignment>> GetStoresAssignedToChannelAsyncWithHttpInfo (string appId, int? channelId);
         /// <summary>
-        /// Returns a list of store ids attached to the given channel type for the specified app.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of Response</returns>
         System.Threading.Tasks.Task<Response> GetStoresBySalesChannelAsync (string appId, int? channelId);
 
         /// <summary>
-        /// Returns a list of store ids attached to the given channel type for the specified app.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of ApiResponse (Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<Response>> GetStoresBySalesChannelAsyncWithHttpInfo (string appId, int? channelId);
         /// <summary>
-        /// Unassign a Store from a Sales Channel
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (123, 456)</param>
-        /// <param name="appId">AppId (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> UnassignStoreFromChannelAsync (int? storeId, string appId, int? channelId);
 
         /// <summary>
-        /// Unassign a Store from a Sales Channel
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (123, 456)</param>
-        /// <param name="appId">AppId (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UnassignStoreFromChannelAsyncWithHttpInfo (int? storeId, string appId, int? channelId);
         #endregion Asynchronous Operations
@@ -683,11 +683,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign a given AppId to a Sales Channel 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Object</returns>
         public Object AssignAppIdToSalesChannel (string appId, int? channelId)
         {
@@ -696,11 +696,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign a given AppId to a Sales Channel 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > AssignAppIdToSalesChannelWithHttpInfo (string appId, int? channelId)
         {
@@ -764,11 +764,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign a given AppId to a Sales Channel 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> AssignAppIdToSalesChannelAsync (string appId, int? channelId)
         {
@@ -778,11 +778,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign a given AppId to a Sales Channel 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AssignAppIdToSalesChannelAsyncWithHttpInfo (string appId, int? channelId)
         {
@@ -846,12 +846,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign a Store to a Sales Channel 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (123, 456)</param>
-        /// <param name="appId">AppId (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Object</returns>
         public Object AssignStoreToChannel (int? storeId, string appId, int? channelId)
         {
@@ -860,12 +860,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign a Store to a Sales Channel 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (123, 456)</param>
-        /// <param name="appId">AppId (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > AssignStoreToChannelWithHttpInfo (int? storeId, string appId, int? channelId)
         {
@@ -933,12 +933,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign a Store to a Sales Channel 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (123, 456)</param>
-        /// <param name="appId">AppId (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> AssignStoreToChannelAsync (int? storeId, string appId, int? channelId)
         {
@@ -948,12 +948,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign a Store to a Sales Channel 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (123, 456)</param>
-        /// <param name="appId">AppId (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AssignStoreToChannelAsyncWithHttpInfo (int? storeId, string appId, int? channelId)
         {
@@ -1021,12 +1021,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Attachs the specified store to the given sales channel. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
-        /// <param name="storeId">Store Id (Phyisical Restaurant) to attach.</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Object</returns>
         public Object AttachStoreToSalesChannel (string appId, int? channelId, int? storeId)
         {
@@ -1035,12 +1035,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Attachs the specified store to the given sales channel. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
-        /// <param name="storeId">Store Id (Phyisical Restaurant) to attach.</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > AttachStoreToSalesChannelWithHttpInfo (string appId, int? channelId, int? storeId)
         {
@@ -1108,12 +1108,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Attachs the specified store to the given sales channel. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
-        /// <param name="storeId">Store Id (Phyisical Restaurant) to attach.</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> AttachStoreToSalesChannelAsync (string appId, int? channelId, int? storeId)
         {
@@ -1123,12 +1123,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Attachs the specified store to the given sales channel. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
-        /// <param name="storeId">Store Id (Phyisical Restaurant) to attach.</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AttachStoreToSalesChannelAsyncWithHttpInfo (string appId, int? channelId, int? storeId)
         {
@@ -1196,11 +1196,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Detaches all the stores from the given sales channel. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Object</returns>
         public Object DetachAllStoresFromSalesChannel (string appId, int? channelId)
         {
@@ -1209,11 +1209,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Detaches all the stores from the given sales channel. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > DetachAllStoresFromSalesChannelWithHttpInfo (string appId, int? channelId)
         {
@@ -1277,11 +1277,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Detaches all the stores from the given sales channel. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> DetachAllStoresFromSalesChannelAsync (string appId, int? channelId)
         {
@@ -1291,11 +1291,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Detaches all the stores from the given sales channel. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DetachAllStoresFromSalesChannelAsyncWithHttpInfo (string appId, int? channelId)
         {
@@ -1359,12 +1359,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Detaches the specified store from the given sales channel. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
-        /// <param name="storeId">Store Id (Phyisical Restaurant) to detach.</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Object</returns>
         public Object DetachStoreFromSalesChannel (string appId, int? channelId, int? storeId)
         {
@@ -1373,12 +1373,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Detaches the specified store from the given sales channel. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
-        /// <param name="storeId">Store Id (Phyisical Restaurant) to detach.</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > DetachStoreFromSalesChannelWithHttpInfo (string appId, int? channelId, int? storeId)
         {
@@ -1446,12 +1446,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Detaches the specified store from the given sales channel. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
-        /// <param name="storeId">Store Id (Phyisical Restaurant) to detach.</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> DetachStoreFromSalesChannelAsync (string appId, int? channelId, int? storeId)
         {
@@ -1461,12 +1461,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Detaches the specified store from the given sales channel. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
-        /// <param name="storeId">Store Id (Phyisical Restaurant) to detach.</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DetachStoreFromSalesChannelAsyncWithHttpInfo (string appId, int? channelId, int? storeId)
         {
@@ -1534,10 +1534,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a list of sales channels that are assigned to a given AppId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiArrayResultChannel</returns>
         public RestApiArrayResultChannel GetAssignedChannels (string appId)
         {
@@ -1546,10 +1546,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a list of sales channels that are assigned to a given AppId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiArrayResultChannel</returns>
         public ApiResponse< RestApiArrayResultChannel > GetAssignedChannelsWithHttpInfo (string appId)
         {
@@ -1609,10 +1609,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a list of sales channels that are assigned to a given AppId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiArrayResultChannel</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultChannel> GetAssignedChannelsAsync (string appId)
         {
@@ -1622,10 +1622,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a list of sales channels that are assigned to a given AppId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultChannel)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultChannel>> GetAssignedChannelsAsyncWithHttpInfo (string appId)
         {
@@ -1685,10 +1685,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a list of sales channels that are not yet assigned to a given AppId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiArrayResultChannel</returns>
         public RestApiArrayResultChannel GetAvailableChannels (string appId)
         {
@@ -1697,10 +1697,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a list of sales channels that are not yet assigned to a given AppId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiArrayResultChannel</returns>
         public ApiResponse< RestApiArrayResultChannel > GetAvailableChannelsWithHttpInfo (string appId)
         {
@@ -1760,10 +1760,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a list of sales channels that are not yet assigned to a given AppId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiArrayResultChannel</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultChannel> GetAvailableChannelsAsync (string appId)
         {
@@ -1773,10 +1773,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a list of sales channels that are not yet assigned to a given AppId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameIdxxx)</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultChannel)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultChannel>> GetAvailableChannelsAsyncWithHttpInfo (string appId)
         {
@@ -1836,11 +1836,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a Sales Channel by Id. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ChannelId</param>
-        /// <param name="appId">AppId</param>
+        /// <param name="id"></param>
+        /// <param name="appId"></param>
         /// <returns>RestApiResultChannel</returns>
         public RestApiResultChannel GetChannel (int? id, string appId)
         {
@@ -1849,11 +1849,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a Sales Channel by Id. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ChannelId</param>
-        /// <param name="appId">AppId</param>
+        /// <param name="id"></param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultChannel</returns>
         public ApiResponse< RestApiResultChannel > GetChannelWithHttpInfo (int? id, string appId)
         {
@@ -1917,11 +1917,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a Sales Channel by Id. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ChannelId</param>
-        /// <param name="appId">AppId</param>
+        /// <param name="id"></param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiResultChannel</returns>
         public async System.Threading.Tasks.Task<RestApiResultChannel> GetChannelAsync (int? id, string appId)
         {
@@ -1931,11 +1931,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a Sales Channel by Id. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ChannelId</param>
-        /// <param name="appId">AppId</param>
+        /// <param name="id"></param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultChannel)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultChannel>> GetChannelAsyncWithHttpInfo (int? id, string appId)
         {
@@ -1999,7 +1999,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a list of enabled Channels 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2011,7 +2011,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a list of enabled Channels 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2074,7 +2074,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a list of enabled Channels 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2087,7 +2087,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a list of enabled Channels 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2150,11 +2150,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a list of stores of an AppId that are assigned to a given Sales Channel 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>RestApiArrayResultStoreChannelAssignment</returns>
         public RestApiArrayResultStoreChannelAssignment GetStoresAssignedToChannel (string appId, int? channelId)
         {
@@ -2163,11 +2163,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a list of stores of an AppId that are assigned to a given Sales Channel 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>ApiResponse of RestApiArrayResultStoreChannelAssignment</returns>
         public ApiResponse< RestApiArrayResultStoreChannelAssignment > GetStoresAssignedToChannelWithHttpInfo (string appId, int? channelId)
         {
@@ -2231,11 +2231,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a list of stores of an AppId that are assigned to a given Sales Channel 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of RestApiArrayResultStoreChannelAssignment</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultStoreChannelAssignment> GetStoresAssignedToChannelAsync (string appId, int? channelId)
         {
@@ -2245,11 +2245,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a list of stores of an AppId that are assigned to a given Sales Channel 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultStoreChannelAssignment)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreChannelAssignment>> GetStoresAssignedToChannelAsyncWithHttpInfo (string appId, int? channelId)
         {
@@ -2313,11 +2313,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a list of store ids attached to the given channel type for the specified app. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Response</returns>
         public Response GetStoresBySalesChannel (string appId, int? channelId)
         {
@@ -2326,11 +2326,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a list of store ids attached to the given channel type for the specified app. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>ApiResponse of Response</returns>
         public ApiResponse< Response > GetStoresBySalesChannelWithHttpInfo (string appId, int? channelId)
         {
@@ -2394,11 +2394,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a list of store ids attached to the given channel type for the specified app. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of Response</returns>
         public async System.Threading.Tasks.Task<Response> GetStoresBySalesChannelAsync (string appId, int? channelId)
         {
@@ -2408,11 +2408,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a list of store ids attached to the given channel type for the specified app. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id (AppNameId)</param>
-        /// <param name="channelId">Type of sales channel (Android, IOS, Web, etc.)</param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of ApiResponse (Response)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Response>> GetStoresBySalesChannelAsyncWithHttpInfo (string appId, int? channelId)
         {
@@ -2476,12 +2476,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Unassign a Store from a Sales Channel 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (123, 456)</param>
-        /// <param name="appId">AppId (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Object</returns>
         public Object UnassignStoreFromChannel (int? storeId, string appId, int? channelId)
         {
@@ -2490,12 +2490,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Unassign a Store from a Sales Channel 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (123, 456)</param>
-        /// <param name="appId">AppId (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > UnassignStoreFromChannelWithHttpInfo (int? storeId, string appId, int? channelId)
         {
@@ -2563,12 +2563,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Unassign a Store from a Sales Channel 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (123, 456)</param>
-        /// <param name="appId">AppId (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> UnassignStoreFromChannelAsync (int? storeId, string appId, int? channelId)
         {
@@ -2578,12 +2578,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Unassign a Store from a Sales Channel 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id (123, 456)</param>
-        /// <param name="appId">AppId (AppNameIdxxx)</param>
-        /// <param name="channelId">Channel Id (123, 456)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="channelId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UnassignStoreFromChannelAsyncWithHttpInfo (int? storeId, string appId, int? channelId)
         {

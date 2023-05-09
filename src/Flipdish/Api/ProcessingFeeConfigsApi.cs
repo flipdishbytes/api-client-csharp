@@ -25,47 +25,47 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get processing fee configs by store identifiers
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeIds">Store identifiers</param>
+        /// <param name="storeIds"></param>
         /// <returns>RestApiArrayResultProcessingFeeConfig</returns>
         RestApiArrayResultProcessingFeeConfig GetProcessingFeeConfigsByStoreIds (List<int?> storeIds);
 
         /// <summary>
-        /// Get processing fee configs by store identifiers
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeIds">Store identifiers</param>
+        /// <param name="storeIds"></param>
         /// <returns>ApiResponse of RestApiArrayResultProcessingFeeConfig</returns>
         ApiResponse<RestApiArrayResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdsWithHttpInfo (List<int?> storeIds);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get processing fee configs by store identifiers
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeIds">Store identifiers</param>
+        /// <param name="storeIds"></param>
         /// <returns>Task of RestApiArrayResultProcessingFeeConfig</returns>
         System.Threading.Tasks.Task<RestApiArrayResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdsAsync (List<int?> storeIds);
 
         /// <summary>
-        /// Get processing fee configs by store identifiers
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeIds">Store identifiers</param>
+        /// <param name="storeIds"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultProcessingFeeConfig)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdsAsyncWithHttpInfo (List<int?> storeIds);
         #endregion Asynchronous Operations
@@ -169,10 +169,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get processing fee configs by store identifiers 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeIds">Store identifiers</param>
+        /// <param name="storeIds"></param>
         /// <returns>RestApiArrayResultProcessingFeeConfig</returns>
         public RestApiArrayResultProcessingFeeConfig GetProcessingFeeConfigsByStoreIds (List<int?> storeIds)
         {
@@ -181,10 +181,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get processing fee configs by store identifiers 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeIds">Store identifiers</param>
+        /// <param name="storeIds"></param>
         /// <returns>ApiResponse of RestApiArrayResultProcessingFeeConfig</returns>
         public ApiResponse< RestApiArrayResultProcessingFeeConfig > GetProcessingFeeConfigsByStoreIdsWithHttpInfo (List<int?> storeIds)
         {
@@ -244,10 +244,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get processing fee configs by store identifiers 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeIds">Store identifiers</param>
+        /// <param name="storeIds"></param>
         /// <returns>Task of RestApiArrayResultProcessingFeeConfig</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdsAsync (List<int?> storeIds)
         {
@@ -257,10 +257,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get processing fee configs by store identifiers 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeIds">Store identifiers</param>
+        /// <param name="storeIds"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultProcessingFeeConfig)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdsAsyncWithHttpInfo (List<int?> storeIds)
         {

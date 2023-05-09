@@ -4,17 +4,17 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**StuartCancelJob**](StuartApi.md#stuartcanceljob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | Cancel a stuart job
-[**StuartGetJob**](StuartApi.md#stuartgetjob) | **GET** /api/v1.0/stuart/jobs/{jobId} | Get start job details
-[**StuartGetStuartSettings**](StuartApi.md#stuartgetstuartsettings) | **GET** /api/v1.0/stuart/settings/{storeId} | Get stuart settings for a store
-[**StuartPostStuartSettings**](StuartApi.md#stuartpoststuartsettings) | **POST** /api/v1.0/stuart/settings/{storeId} | Set stuart settings for a store
+[**StuartCancelJob**](StuartApi.md#stuartcanceljob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | 
+[**StuartGetJob**](StuartApi.md#stuartgetjob) | **GET** /api/v1.0/stuart/jobs/{jobId} | 
+[**StuartGetStuartSettings**](StuartApi.md#stuartgetstuartsettings) | **GET** /api/v1.0/stuart/settings/{storeId} | 
+[**StuartPostStuartSettings**](StuartApi.md#stuartpoststuartsettings) | **POST** /api/v1.0/stuart/settings/{storeId} | 
 
 
 <a name="stuartcanceljob"></a>
 # **StuartCancelJob**
 > Object StuartCancelJob (int? jobId, int? storeId)
 
-Cancel a stuart job
+
 
 ### Example
 ```csharp
@@ -34,12 +34,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StuartApi();
-            var jobId = 56;  // int? | Stuart job identifier
-            var storeId = 56;  // int? | Store identifier
+            var jobId = 56;  // int? | 
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Cancel a stuart job
                 Object result = apiInstance.StuartCancelJob(jobId, storeId);
                 Debug.WriteLine(result);
             }
@@ -56,8 +55,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **jobId** | **int?**| Stuart job identifier | 
- **storeId** | **int?**| Store identifier | 
+ **jobId** | **int?**|  | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -78,7 +77,7 @@ Name | Type | Description  | Notes
 # **StuartGetJob**
 > RestApiResultJobResponse StuartGetJob (int? jobId, int? storeId)
 
-Get start job details
+
 
 ### Example
 ```csharp
@@ -98,12 +97,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StuartApi();
-            var jobId = 56;  // int? | Stuart job identifier
-            var storeId = 56;  // int? | Store identifier
+            var jobId = 56;  // int? | 
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Get start job details
                 RestApiResultJobResponse result = apiInstance.StuartGetJob(jobId, storeId);
                 Debug.WriteLine(result);
             }
@@ -120,8 +118,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **jobId** | **int?**| Stuart job identifier | 
- **storeId** | **int?**| Store identifier | 
+ **jobId** | **int?**|  | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -142,7 +140,7 @@ Name | Type | Description  | Notes
 # **StuartGetStuartSettings**
 > RestApiResultStuartSettings StuartGetStuartSettings (int? storeId)
 
-Get stuart settings for a store
+
 
 ### Example
 ```csharp
@@ -162,11 +160,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StuartApi();
-            var storeId = 56;  // int? | Store Identifier
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Get stuart settings for a store
                 RestApiResultStuartSettings result = apiInstance.StuartGetStuartSettings(storeId);
                 Debug.WriteLine(result);
             }
@@ -183,7 +180,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store Identifier | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -204,7 +201,7 @@ Name | Type | Description  | Notes
 # **StuartPostStuartSettings**
 > Object StuartPostStuartSettings (int? storeId, StuartSettings stuartSettings)
 
-Set stuart settings for a store
+
 
 ### Example
 ```csharp
@@ -224,12 +221,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StuartApi();
-            var storeId = 56;  // int? | Store Identifier
-            var stuartSettings = new StuartSettings(); // StuartSettings | Stuart settings model
+            var storeId = 56;  // int? | 
+            var stuartSettings = new StuartSettings(); // StuartSettings | 
 
             try
             {
-                // Set stuart settings for a store
                 Object result = apiInstance.StuartPostStuartSettings(storeId, stuartSettings);
                 Debug.WriteLine(result);
             }
@@ -246,8 +242,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store Identifier | 
- **stuartSettings** | [**StuartSettings**](StuartSettings.md)| Stuart settings model | 
+ **storeId** | **int?**|  | 
+ **stuartSettings** | [**StuartSettings**](StuartSettings.md)|  | 
 
 ### Return type
 

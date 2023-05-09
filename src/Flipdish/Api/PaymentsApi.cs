@@ -25,47 +25,47 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Returns payment refund information related to the order with the order id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Order identifier</param>
+        /// <param name="orderId"></param>
         /// <returns>RestApiResultOrderPaymentInformation</returns>
         RestApiResultOrderPaymentInformation GetOrderPaymentInformation (int? orderId);
 
         /// <summary>
-        /// Returns payment refund information related to the order with the order id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Order identifier</param>
+        /// <param name="orderId"></param>
         /// <returns>ApiResponse of RestApiResultOrderPaymentInformation</returns>
         ApiResponse<RestApiResultOrderPaymentInformation> GetOrderPaymentInformationWithHttpInfo (int? orderId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Returns payment refund information related to the order with the order id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Order identifier</param>
+        /// <param name="orderId"></param>
         /// <returns>Task of RestApiResultOrderPaymentInformation</returns>
         System.Threading.Tasks.Task<RestApiResultOrderPaymentInformation> GetOrderPaymentInformationAsync (int? orderId);
 
         /// <summary>
-        /// Returns payment refund information related to the order with the order id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Order identifier</param>
+        /// <param name="orderId"></param>
         /// <returns>Task of ApiResponse (RestApiResultOrderPaymentInformation)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderPaymentInformation>> GetOrderPaymentInformationAsyncWithHttpInfo (int? orderId);
         #endregion Asynchronous Operations
@@ -169,10 +169,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns payment refund information related to the order with the order id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Order identifier</param>
+        /// <param name="orderId"></param>
         /// <returns>RestApiResultOrderPaymentInformation</returns>
         public RestApiResultOrderPaymentInformation GetOrderPaymentInformation (int? orderId)
         {
@@ -181,10 +181,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns payment refund information related to the order with the order id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Order identifier</param>
+        /// <param name="orderId"></param>
         /// <returns>ApiResponse of RestApiResultOrderPaymentInformation</returns>
         public ApiResponse< RestApiResultOrderPaymentInformation > GetOrderPaymentInformationWithHttpInfo (int? orderId)
         {
@@ -244,10 +244,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns payment refund information related to the order with the order id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Order identifier</param>
+        /// <param name="orderId"></param>
         /// <returns>Task of RestApiResultOrderPaymentInformation</returns>
         public async System.Threading.Tasks.Task<RestApiResultOrderPaymentInformation> GetOrderPaymentInformationAsync (int? orderId)
         {
@@ -257,10 +257,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns payment refund information related to the order with the order id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Order identifier</param>
+        /// <param name="orderId"></param>
         /// <returns>Task of ApiResponse (RestApiResultOrderPaymentInformation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderPaymentInformation>> GetOrderPaymentInformationAsyncWithHttpInfo (int? orderId)
         {

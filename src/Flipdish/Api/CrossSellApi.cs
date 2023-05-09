@@ -25,62 +25,62 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get all Menu items by MenuId for cross sells
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can be called by any flipdish kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Requested MenuId</param>
-        /// <param name="menuItemId">Selected Menu items</param>
-        /// <param name="limit">Set the limit of items returned</param>
-        /// <param name="totalValue">Get the total cost of items in the basket</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuItemId"></param>
+        /// <param name="limit"></param>
+        /// <param name="totalValue"></param>
         /// <param name="appId"></param>
         /// <returns>RestApiResultCrossSellMenuItems</returns>
         RestApiResultCrossSellMenuItems GetCrossSellMenuItems (int? menuId, List<int?> menuItemId, int? limit, double? totalValue, string appId);
 
         /// <summary>
-        /// Get all Menu items by MenuId for cross sells
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can be called by any flipdish kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Requested MenuId</param>
-        /// <param name="menuItemId">Selected Menu items</param>
-        /// <param name="limit">Set the limit of items returned</param>
-        /// <param name="totalValue">Get the total cost of items in the basket</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuItemId"></param>
+        /// <param name="limit"></param>
+        /// <param name="totalValue"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultCrossSellMenuItems</returns>
         ApiResponse<RestApiResultCrossSellMenuItems> GetCrossSellMenuItemsWithHttpInfo (int? menuId, List<int?> menuItemId, int? limit, double? totalValue, string appId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get all Menu items by MenuId for cross sells
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can be called by any flipdish kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Requested MenuId</param>
-        /// <param name="menuItemId">Selected Menu items</param>
-        /// <param name="limit">Set the limit of items returned</param>
-        /// <param name="totalValue">Get the total cost of items in the basket</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuItemId"></param>
+        /// <param name="limit"></param>
+        /// <param name="totalValue"></param>
         /// <param name="appId"></param>
         /// <returns>Task of RestApiResultCrossSellMenuItems</returns>
         System.Threading.Tasks.Task<RestApiResultCrossSellMenuItems> GetCrossSellMenuItemsAsync (int? menuId, List<int?> menuItemId, int? limit, double? totalValue, string appId);
 
         /// <summary>
-        /// Get all Menu items by MenuId for cross sells
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can be called by any flipdish kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Requested MenuId</param>
-        /// <param name="menuItemId">Selected Menu items</param>
-        /// <param name="limit">Set the limit of items returned</param>
-        /// <param name="totalValue">Get the total cost of items in the basket</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuItemId"></param>
+        /// <param name="limit"></param>
+        /// <param name="totalValue"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultCrossSellMenuItems)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultCrossSellMenuItems>> GetCrossSellMenuItemsAsyncWithHttpInfo (int? menuId, List<int?> menuItemId, int? limit, double? totalValue, string appId);
@@ -185,13 +185,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all Menu items by MenuId for cross sells Can be called by any flipdish kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Requested MenuId</param>
-        /// <param name="menuItemId">Selected Menu items</param>
-        /// <param name="limit">Set the limit of items returned</param>
-        /// <param name="totalValue">Get the total cost of items in the basket</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuItemId"></param>
+        /// <param name="limit"></param>
+        /// <param name="totalValue"></param>
         /// <param name="appId"></param>
         /// <returns>RestApiResultCrossSellMenuItems</returns>
         public RestApiResultCrossSellMenuItems GetCrossSellMenuItems (int? menuId, List<int?> menuItemId, int? limit, double? totalValue, string appId)
@@ -201,13 +201,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all Menu items by MenuId for cross sells Can be called by any flipdish kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Requested MenuId</param>
-        /// <param name="menuItemId">Selected Menu items</param>
-        /// <param name="limit">Set the limit of items returned</param>
-        /// <param name="totalValue">Get the total cost of items in the basket</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuItemId"></param>
+        /// <param name="limit"></param>
+        /// <param name="totalValue"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultCrossSellMenuItems</returns>
         public ApiResponse< RestApiResultCrossSellMenuItems > GetCrossSellMenuItemsWithHttpInfo (int? menuId, List<int?> menuItemId, int? limit, double? totalValue, string appId)
@@ -284,13 +284,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all Menu items by MenuId for cross sells Can be called by any flipdish kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Requested MenuId</param>
-        /// <param name="menuItemId">Selected Menu items</param>
-        /// <param name="limit">Set the limit of items returned</param>
-        /// <param name="totalValue">Get the total cost of items in the basket</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuItemId"></param>
+        /// <param name="limit"></param>
+        /// <param name="totalValue"></param>
         /// <param name="appId"></param>
         /// <returns>Task of RestApiResultCrossSellMenuItems</returns>
         public async System.Threading.Tasks.Task<RestApiResultCrossSellMenuItems> GetCrossSellMenuItemsAsync (int? menuId, List<int?> menuItemId, int? limit, double? totalValue, string appId)
@@ -301,13 +301,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all Menu items by MenuId for cross sells Can be called by any flipdish kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Requested MenuId</param>
-        /// <param name="menuItemId">Selected Menu items</param>
-        /// <param name="limit">Set the limit of items returned</param>
-        /// <param name="totalValue">Get the total cost of items in the basket</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuItemId"></param>
+        /// <param name="limit"></param>
+        /// <param name="totalValue"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultCrossSellMenuItems)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultCrossSellMenuItems>> GetCrossSellMenuItemsAsyncWithHttpInfo (int? menuId, List<int?> menuItemId, int? limit, double? totalValue, string appId)

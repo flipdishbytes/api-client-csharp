@@ -4,27 +4,27 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetApp**](AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | Get the application configuration
-[**GetAppHostnameStatus**](AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | Get the application hostname DNS delegation states for A and CNAME records.
-[**GetApps**](AppsApi.md#getapps) | **GET** /api/v1.0/apps | Get Apps
-[**GetCompliance**](AppsApi.md#getcompliance) | **GET** /api/v1.0/apps/{appId}/compliance | Get the application compliance configuration
-[**GetPanaceaVanityUrl**](AppsApi.md#getpanaceavanityurl) | **GET** /api/v1.0/apps/{appId}/panacea/url | Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
-[**GetSupportedCountries**](AppsApi.md#getsupportedcountries) | **GET** /api/v1.0/apps/supportedcountries | Get all supported countries.
-[**IsPanaceaVanityUrlAvailable**](AppsApi.md#ispanaceavanityurlavailable) | **GET** /api/v1.0/apps/{appId}/panacea/url/available | Is panacea vanity url available
-[**SetAppConfig**](AppsApi.md#setappconfig) | **POST** /api/v1.0/apps/{appId}/config | Set the application configuration
-[**SetAppHostname**](AppsApi.md#setapphostname) | **POST** /api/v1.0/apps/{appId}/hostname | Set the application hostname.
-[**SetAppLanguages**](AppsApi.md#setapplanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | Set the application languages
-[**SetCompliance**](AppsApi.md#setcompliance) | **POST** /api/v1.0/apps/{appId}/compliance | Set the application compliance configuration
-[**SetPanaceaVanityUrl**](AppsApi.md#setpanaceavanityurl) | **POST** /api/v1.0/apps/{appId}/panacea/url | Set panacea vanity url
-[**ToggleNextGenWeb**](AppsApi.md#togglenextgenweb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | Toggle Next Gen Web
-[**UploadAppLogo**](AppsApi.md#uploadapplogo) | **POST** /api/v1.0/apps/{appId}/logo | Set the application logo \\ icon
+[**GetApp**](AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | 
+[**GetAppHostnameStatus**](AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
+[**GetApps**](AppsApi.md#getapps) | **GET** /api/v1.0/apps | 
+[**GetCompliance**](AppsApi.md#getcompliance) | **GET** /api/v1.0/apps/{appId}/compliance | 
+[**GetPanaceaVanityUrl**](AppsApi.md#getpanaceavanityurl) | **GET** /api/v1.0/apps/{appId}/panacea/url | 
+[**GetSupportedCountries**](AppsApi.md#getsupportedcountries) | **GET** /api/v1.0/apps/supportedcountries | 
+[**IsPanaceaVanityUrlAvailable**](AppsApi.md#ispanaceavanityurlavailable) | **GET** /api/v1.0/apps/{appId}/panacea/url/available | 
+[**SetAppConfig**](AppsApi.md#setappconfig) | **POST** /api/v1.0/apps/{appId}/config | 
+[**SetAppHostname**](AppsApi.md#setapphostname) | **POST** /api/v1.0/apps/{appId}/hostname | 
+[**SetAppLanguages**](AppsApi.md#setapplanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | 
+[**SetCompliance**](AppsApi.md#setcompliance) | **POST** /api/v1.0/apps/{appId}/compliance | 
+[**SetPanaceaVanityUrl**](AppsApi.md#setpanaceavanityurl) | **POST** /api/v1.0/apps/{appId}/panacea/url | 
+[**ToggleNextGenWeb**](AppsApi.md#togglenextgenweb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | 
+[**UploadAppLogo**](AppsApi.md#uploadapplogo) | **POST** /api/v1.0/apps/{appId}/logo | 
 
 
 <a name="getapp"></a>
 # **GetApp**
 > RestApiResultApp GetApp (string appId)
 
-Get the application configuration
+
 
 ### Example
 ```csharp
@@ -44,11 +44,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi();
-            var appId = appId_example;  // string | Application identifier
+            var appId = appId_example;  // string | 
 
             try
             {
-                // Get the application configuration
                 RestApiResultApp result = apiInstance.GetApp(appId);
                 Debug.WriteLine(result);
             }
@@ -65,7 +64,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application identifier | 
+ **appId** | **string**|  | 
 
 ### Return type
 
@@ -86,9 +85,7 @@ Name | Type | Description  | Notes
 # **GetAppHostnameStatus**
 > RestApiResultDnsRecordInformation GetAppHostnameStatus (string appId)
 
-Get the application hostname DNS delegation states for A and CNAME records.
 
-A domain might be ready but still need 10 minutes to work properly because of HAProxy.
 
 ### Example
 ```csharp
@@ -108,11 +105,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi();
-            var appId = appId_example;  // string | Application identifier.
+            var appId = appId_example;  // string | 
 
             try
             {
-                // Get the application hostname DNS delegation states for A and CNAME records.
                 RestApiResultDnsRecordInformation result = apiInstance.GetAppHostnameStatus(appId);
                 Debug.WriteLine(result);
             }
@@ -129,7 +125,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application identifier. | 
+ **appId** | **string**|  | 
 
 ### Return type
 
@@ -150,7 +146,7 @@ Name | Type | Description  | Notes
 # **GetApps**
 > RestApiPaginationResultApp GetApps (string nameFilter = null, int? page = null, int? limit = null)
 
-Get Apps
+
 
 ### Example
 ```csharp
@@ -176,7 +172,6 @@ namespace Example
 
             try
             {
-                // Get Apps
                 RestApiPaginationResultApp result = apiInstance.GetApps(nameFilter, page, limit);
                 Debug.WriteLine(result);
             }
@@ -216,7 +211,7 @@ Name | Type | Description  | Notes
 # **GetCompliance**
 > RestApiResultAppCompliance GetCompliance (string appId)
 
-Get the application compliance configuration
+
 
 ### Example
 ```csharp
@@ -236,11 +231,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi();
-            var appId = appId_example;  // string | Application identifier
+            var appId = appId_example;  // string | 
 
             try
             {
-                // Get the application compliance configuration
                 RestApiResultAppCompliance result = apiInstance.GetCompliance(appId);
                 Debug.WriteLine(result);
             }
@@ -257,7 +251,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application identifier | 
+ **appId** | **string**|  | 
 
 ### Return type
 
@@ -278,7 +272,7 @@ Name | Type | Description  | Notes
 # **GetPanaceaVanityUrl**
 > RestApiStringResult GetPanaceaVanityUrl (string appId)
 
-Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
+
 
 ### Example
 ```csharp
@@ -298,11 +292,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi();
-            var appId = appId_example;  // string | Application identifier.
+            var appId = appId_example;  // string | 
 
             try
             {
-                // Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
                 RestApiStringResult result = apiInstance.GetPanaceaVanityUrl(appId);
                 Debug.WriteLine(result);
             }
@@ -319,7 +312,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application identifier. | 
+ **appId** | **string**|  | 
 
 ### Return type
 
@@ -340,7 +333,7 @@ Name | Type | Description  | Notes
 # **GetSupportedCountries**
 > RestApiArrayResultSupportedCountry GetSupportedCountries ()
 
-Get all supported countries.
+
 
 ### Example
 ```csharp
@@ -363,7 +356,6 @@ namespace Example
 
             try
             {
-                // Get all supported countries.
                 RestApiArrayResultSupportedCountry result = apiInstance.GetSupportedCountries();
                 Debug.WriteLine(result);
             }
@@ -398,9 +390,7 @@ This endpoint does not need any parameter.
 # **IsPanaceaVanityUrlAvailable**
 > RestApiStringResult IsPanaceaVanityUrlAvailable (string vanityUrl, string appId)
 
-Is panacea vanity url available
 
-Minimum length of 3 characters
 
 ### Example
 ```csharp
@@ -420,12 +410,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi();
-            var vanityUrl = vanityUrl_example;  // string | Vanity url to check
+            var vanityUrl = vanityUrl_example;  // string | 
             var appId = appId_example;  // string | 
 
             try
             {
-                // Is panacea vanity url available
                 RestApiStringResult result = apiInstance.IsPanaceaVanityUrlAvailable(vanityUrl, appId);
                 Debug.WriteLine(result);
             }
@@ -442,7 +431,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **vanityUrl** | **string**| Vanity url to check | 
+ **vanityUrl** | **string**|  | 
  **appId** | **string**|  | 
 
 ### Return type
@@ -464,7 +453,7 @@ Name | Type | Description  | Notes
 # **SetAppConfig**
 > RestApiResultApp SetAppConfig (string appId, AppConfigUpdateModel appConfigUpdate)
 
-Set the application configuration
+
 
 ### Example
 ```csharp
@@ -484,12 +473,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi();
-            var appId = appId_example;  // string | Application identifier
-            var appConfigUpdate = new AppConfigUpdateModel(); // AppConfigUpdateModel | Changes to the configuration
+            var appId = appId_example;  // string | 
+            var appConfigUpdate = new AppConfigUpdateModel(); // AppConfigUpdateModel | 
 
             try
             {
-                // Set the application configuration
                 RestApiResultApp result = apiInstance.SetAppConfig(appId, appConfigUpdate);
                 Debug.WriteLine(result);
             }
@@ -506,8 +494,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application identifier | 
- **appConfigUpdate** | [**AppConfigUpdateModel**](AppConfigUpdateModel.md)| Changes to the configuration | 
+ **appId** | **string**|  | 
+ **appConfigUpdate** | [**AppConfigUpdateModel**](AppConfigUpdateModel.md)|  | 
 
 ### Return type
 
@@ -528,9 +516,7 @@ Name | Type | Description  | Notes
 # **SetAppHostname**
 > RestApiStringResult SetAppHostname (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null)
 
-Set the application hostname.
 
-If no subdomain is specified in {hostname} 'www' will be prepended.
 
 ### Example
 ```csharp
@@ -550,14 +536,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi();
-            var appId = appId_example;  // string | Application identifier.
-            var hostname = hostname_example;  // string | The new Hostname.
-            var isEmbed = true;  // bool? | Will the website be embedded (optional) 
-            var isNextGenWeb = true;  // bool? | Enables the NextGen web editor (optional) 
+            var appId = appId_example;  // string | 
+            var hostname = hostname_example;  // string | 
+            var isEmbed = true;  // bool? |  (optional) 
+            var isNextGenWeb = true;  // bool? |  (optional) 
 
             try
             {
-                // Set the application hostname.
                 RestApiStringResult result = apiInstance.SetAppHostname(appId, hostname, isEmbed, isNextGenWeb);
                 Debug.WriteLine(result);
             }
@@ -574,10 +559,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application identifier. | 
- **hostname** | **string**| The new Hostname. | 
- **isEmbed** | **bool?**| Will the website be embedded | [optional] 
- **isNextGenWeb** | **bool?**| Enables the NextGen web editor | [optional] 
+ **appId** | **string**|  | 
+ **hostname** | **string**|  | 
+ **isEmbed** | **bool?**|  | [optional] 
+ **isNextGenWeb** | **bool?**|  | [optional] 
 
 ### Return type
 
@@ -598,7 +583,7 @@ Name | Type | Description  | Notes
 # **SetAppLanguages**
 > RestApiResultApp SetAppLanguages (string appId, List<Language> languages)
 
-Set the application languages
+
 
 ### Example
 ```csharp
@@ -618,12 +603,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi();
-            var appId = appId_example;  // string | Application identifier
-            var languages = new List<Language>(); // List<Language> | New list of languages
+            var appId = appId_example;  // string | 
+            var languages = new List<Language>(); // List<Language> | 
 
             try
             {
-                // Set the application languages
                 RestApiResultApp result = apiInstance.SetAppLanguages(appId, languages);
                 Debug.WriteLine(result);
             }
@@ -640,8 +624,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application identifier | 
- **languages** | [**List&lt;Language&gt;**](Language.md)| New list of languages | 
+ **appId** | **string**|  | 
+ **languages** | [**List&lt;Language&gt;**](Language.md)|  | 
 
 ### Return type
 
@@ -662,7 +646,7 @@ Name | Type | Description  | Notes
 # **SetCompliance**
 > RestApiResultAppCompliance SetCompliance (string appId, string complianceType)
 
-Set the application compliance configuration
+
 
 ### Example
 ```csharp
@@ -682,12 +666,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi();
-            var appId = appId_example;  // string | Application identifier
-            var complianceType = complianceType_example;  // string | Compliance type
+            var appId = appId_example;  // string | 
+            var complianceType = complianceType_example;  // string | 
 
             try
             {
-                // Set the application compliance configuration
                 RestApiResultAppCompliance result = apiInstance.SetCompliance(appId, complianceType);
                 Debug.WriteLine(result);
             }
@@ -704,8 +687,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application identifier | 
- **complianceType** | **string**| Compliance type | 
+ **appId** | **string**|  | 
+ **complianceType** | **string**|  | 
 
 ### Return type
 
@@ -726,9 +709,7 @@ Name | Type | Description  | Notes
 # **SetPanaceaVanityUrl**
 > RestApiStringResult SetPanaceaVanityUrl (string appId, string vanityUrl)
 
-Set panacea vanity url
 
-Minimum length of 3 characters
 
 ### Example
 ```csharp
@@ -748,12 +729,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi();
-            var appId = appId_example;  // string | Application identifier.
-            var vanityUrl = vanityUrl_example;  // string | Vanity url
+            var appId = appId_example;  // string | 
+            var vanityUrl = vanityUrl_example;  // string | 
 
             try
             {
-                // Set panacea vanity url
                 RestApiStringResult result = apiInstance.SetPanaceaVanityUrl(appId, vanityUrl);
                 Debug.WriteLine(result);
             }
@@ -770,8 +750,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application identifier. | 
- **vanityUrl** | **string**| Vanity url | 
+ **appId** | **string**|  | 
+ **vanityUrl** | **string**|  | 
 
 ### Return type
 
@@ -792,7 +772,7 @@ Name | Type | Description  | Notes
 # **ToggleNextGenWeb**
 > RestApiStringResult ToggleNextGenWeb (string appId, string hostname, string vanityUrl, bool? isNextGenWeb)
 
-Toggle Next Gen Web
+
 
 ### Example
 ```csharp
@@ -819,7 +799,6 @@ namespace Example
 
             try
             {
-                // Toggle Next Gen Web
                 RestApiStringResult result = apiInstance.ToggleNextGenWeb(appId, hostname, vanityUrl, isNextGenWeb);
                 Debug.WriteLine(result);
             }
@@ -860,7 +839,7 @@ Name | Type | Description  | Notes
 # **UploadAppLogo**
 > void UploadAppLogo (string appId, System.IO.Stream image)
 
-Set the application logo \\ icon
+
 
 ### Example
 ```csharp
@@ -880,12 +859,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi();
-            var appId = appId_example;  // string | Application identifier
+            var appId = appId_example;  // string | 
             var image = new System.IO.Stream(); // System.IO.Stream | App Logo
 
             try
             {
-                // Set the application logo \\ icon
                 apiInstance.UploadAppLogo(appId, image);
             }
             catch (Exception e)
@@ -901,7 +879,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application identifier | 
+ **appId** | **string**|  | 
  **image** | **System.IO.Stream**| App Logo | 
 
 ### Return type

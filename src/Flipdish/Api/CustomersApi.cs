@@ -25,101 +25,101 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get customer of an app by Id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="customerId">Customer Id</param>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
         /// <returns>RestApiResultCustomer</returns>
         RestApiResultCustomer GetCustomerById (string appId, int? customerId);
 
         /// <summary>
-        /// Get customer of an app by Id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="customerId">Customer Id</param>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
         /// <returns>ApiResponse of RestApiResultCustomer</returns>
         ApiResponse<RestApiResultCustomer> GetCustomerByIdWithHttpInfo (string appId, int? customerId);
         /// <summary>
-        /// Update customer of an app by Id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="customerId">Customer Id</param>
-        /// <param name="updateCustomer">Updated customer information</param>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
+        /// <param name="updateCustomer"></param>
         /// <returns>RestApiResultCustomer</returns>
         RestApiResultCustomer UpdateCustomerById (string appId, int? customerId, CustomerUpdateModel updateCustomer);
 
         /// <summary>
-        /// Update customer of an app by Id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="customerId">Customer Id</param>
-        /// <param name="updateCustomer">Updated customer information</param>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
+        /// <param name="updateCustomer"></param>
         /// <returns>ApiResponse of RestApiResultCustomer</returns>
         ApiResponse<RestApiResultCustomer> UpdateCustomerByIdWithHttpInfo (string appId, int? customerId, CustomerUpdateModel updateCustomer);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get customer of an app by Id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="customerId">Customer Id</param>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
         /// <returns>Task of RestApiResultCustomer</returns>
         System.Threading.Tasks.Task<RestApiResultCustomer> GetCustomerByIdAsync (string appId, int? customerId);
 
         /// <summary>
-        /// Get customer of an app by Id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="customerId">Customer Id</param>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
         /// <returns>Task of ApiResponse (RestApiResultCustomer)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultCustomer>> GetCustomerByIdAsyncWithHttpInfo (string appId, int? customerId);
         /// <summary>
-        /// Update customer of an app by Id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="customerId">Customer Id</param>
-        /// <param name="updateCustomer">Updated customer information</param>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
+        /// <param name="updateCustomer"></param>
         /// <returns>Task of RestApiResultCustomer</returns>
         System.Threading.Tasks.Task<RestApiResultCustomer> UpdateCustomerByIdAsync (string appId, int? customerId, CustomerUpdateModel updateCustomer);
 
         /// <summary>
-        /// Update customer of an app by Id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="customerId">Customer Id</param>
-        /// <param name="updateCustomer">Updated customer information</param>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
+        /// <param name="updateCustomer"></param>
         /// <returns>Task of ApiResponse (RestApiResultCustomer)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultCustomer>> UpdateCustomerByIdAsyncWithHttpInfo (string appId, int? customerId, CustomerUpdateModel updateCustomer);
         #endregion Asynchronous Operations
@@ -223,11 +223,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get customer of an app by Id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="customerId">Customer Id</param>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
         /// <returns>RestApiResultCustomer</returns>
         public RestApiResultCustomer GetCustomerById (string appId, int? customerId)
         {
@@ -236,11 +236,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get customer of an app by Id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="customerId">Customer Id</param>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
         /// <returns>ApiResponse of RestApiResultCustomer</returns>
         public ApiResponse< RestApiResultCustomer > GetCustomerByIdWithHttpInfo (string appId, int? customerId)
         {
@@ -304,11 +304,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get customer of an app by Id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="customerId">Customer Id</param>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
         /// <returns>Task of RestApiResultCustomer</returns>
         public async System.Threading.Tasks.Task<RestApiResultCustomer> GetCustomerByIdAsync (string appId, int? customerId)
         {
@@ -318,11 +318,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get customer of an app by Id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="customerId">Customer Id</param>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
         /// <returns>Task of ApiResponse (RestApiResultCustomer)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultCustomer>> GetCustomerByIdAsyncWithHttpInfo (string appId, int? customerId)
         {
@@ -386,12 +386,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update customer of an app by Id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="customerId">Customer Id</param>
-        /// <param name="updateCustomer">Updated customer information</param>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
+        /// <param name="updateCustomer"></param>
         /// <returns>RestApiResultCustomer</returns>
         public RestApiResultCustomer UpdateCustomerById (string appId, int? customerId, CustomerUpdateModel updateCustomer)
         {
@@ -400,12 +400,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update customer of an app by Id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="customerId">Customer Id</param>
-        /// <param name="updateCustomer">Updated customer information</param>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
+        /// <param name="updateCustomer"></param>
         /// <returns>ApiResponse of RestApiResultCustomer</returns>
         public ApiResponse< RestApiResultCustomer > UpdateCustomerByIdWithHttpInfo (string appId, int? customerId, CustomerUpdateModel updateCustomer)
         {
@@ -485,12 +485,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update customer of an app by Id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="customerId">Customer Id</param>
-        /// <param name="updateCustomer">Updated customer information</param>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
+        /// <param name="updateCustomer"></param>
         /// <returns>Task of RestApiResultCustomer</returns>
         public async System.Threading.Tasks.Task<RestApiResultCustomer> UpdateCustomerByIdAsync (string appId, int? customerId, CustomerUpdateModel updateCustomer)
         {
@@ -500,12 +500,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update customer of an app by Id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="customerId">Customer Id</param>
-        /// <param name="updateCustomer">Updated customer information</param>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
+        /// <param name="updateCustomer"></param>
         /// <returns>Task of ApiResponse (RestApiResultCustomer)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultCustomer>> UpdateCustomerByIdAsyncWithHttpInfo (string appId, int? customerId, CustomerUpdateModel updateCustomer)
         {

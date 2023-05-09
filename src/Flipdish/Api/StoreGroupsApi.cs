@@ -25,124 +25,124 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Creates a Store Group  It will be attached to an existing App
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="storeGroup">Store group definition</param>
+        /// <param name="appNameId"></param>
+        /// <param name="storeGroup"></param>
         /// <returns>RestApiResultStoreGroup</returns>
         RestApiResultStoreGroup CreateStoreGroup (string appNameId, StoreGroupBase storeGroup);
 
         /// <summary>
-        /// Creates a Store Group  It will be attached to an existing App
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="storeGroup">Store group definition</param>
+        /// <param name="appNameId"></param>
+        /// <param name="storeGroup"></param>
         /// <returns>ApiResponse of RestApiResultStoreGroup</returns>
         ApiResponse<RestApiResultStoreGroup> CreateStoreGroupWithHttpInfo (string appNameId, StoreGroupBase storeGroup);
         /// <summary>
-        /// Returns a Store Groups
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
+        /// <param name="storeGroupId"></param>
         /// <returns>RestApiResultStoreGroup</returns>
         RestApiResultStoreGroup GetStoreGroup (int? storeGroupId);
 
         /// <summary>
-        /// Returns a Store Groups
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
+        /// <param name="storeGroupId"></param>
         /// <returns>ApiResponse of RestApiResultStoreGroup</returns>
         ApiResponse<RestApiResultStoreGroup> GetStoreGroupWithHttpInfo (int? storeGroupId);
         /// <summary>
-        /// Returns a paginated list of Store Groups
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appNameId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultStoreGroup</returns>
         RestApiPaginationResultStoreGroup GetStoreGroups (string appNameId, string searchQuery = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Returns a paginated list of Store Groups
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appNameId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultStoreGroup</returns>
         ApiResponse<RestApiPaginationResultStoreGroup> GetStoreGroupsWithHttpInfo (string appNameId, string searchQuery = null, int? page = null, int? limit = null);
         /// <summary>
-        /// [PRIVATE API] Returns a paginated list of Extended Store Groups
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appNameId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <param name="groupingRadius"> (optional)</param>
         /// <returns>RestApiPaginationResultStoreGroupExtended</returns>
         RestApiPaginationResultStoreGroupExtended GetStoreGroupsExtended (string appNameId, string searchQuery = null, int? page = null, int? limit = null, int? groupingRadius = null);
 
         /// <summary>
-        /// [PRIVATE API] Returns a paginated list of Extended Store Groups
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appNameId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <param name="groupingRadius"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultStoreGroupExtended</returns>
         ApiResponse<RestApiPaginationResultStoreGroupExtended> GetStoreGroupsExtendedWithHttpInfo (string appNameId, string searchQuery = null, int? page = null, int? limit = null, int? groupingRadius = null);
         /// <summary>
-        /// Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
+        /// <param name="storeGroupId"></param>
         /// <returns></returns>
         void RemoveStoreGroup (int? storeGroupId);
 
         /// <summary>
-        /// Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
+        /// <param name="storeGroupId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> RemoveStoreGroupWithHttpInfo (int? storeGroupId);
         /// <summary>
@@ -171,149 +171,149 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> SetMenuMessagePerDeliveryTypeWithHttpInfo (int? storeGroupId, string deliveryType, string menuMessage);
         /// <summary>
-        /// Updates Store Group
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
-        /// <param name="storeGroup">Store Group Delta</param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="storeGroup"></param>
         /// <returns>RestApiResultStoreGroupBase</returns>
         RestApiResultStoreGroupBase UpdateStoreGroup (int? storeGroupId, StoreGroupBase storeGroup);
 
         /// <summary>
-        /// Updates Store Group
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
-        /// <param name="storeGroup">Store Group Delta</param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="storeGroup"></param>
         /// <returns>ApiResponse of RestApiResultStoreGroupBase</returns>
         ApiResponse<RestApiResultStoreGroupBase> UpdateStoreGroupWithHttpInfo (int? storeGroupId, StoreGroupBase storeGroup);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Creates a Store Group  It will be attached to an existing App
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="storeGroup">Store group definition</param>
+        /// <param name="appNameId"></param>
+        /// <param name="storeGroup"></param>
         /// <returns>Task of RestApiResultStoreGroup</returns>
         System.Threading.Tasks.Task<RestApiResultStoreGroup> CreateStoreGroupAsync (string appNameId, StoreGroupBase storeGroup);
 
         /// <summary>
-        /// Creates a Store Group  It will be attached to an existing App
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="storeGroup">Store group definition</param>
+        /// <param name="appNameId"></param>
+        /// <param name="storeGroup"></param>
         /// <returns>Task of ApiResponse (RestApiResultStoreGroup)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStoreGroup>> CreateStoreGroupAsyncWithHttpInfo (string appNameId, StoreGroupBase storeGroup);
         /// <summary>
-        /// Returns a Store Groups
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
+        /// <param name="storeGroupId"></param>
         /// <returns>Task of RestApiResultStoreGroup</returns>
         System.Threading.Tasks.Task<RestApiResultStoreGroup> GetStoreGroupAsync (int? storeGroupId);
 
         /// <summary>
-        /// Returns a Store Groups
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
+        /// <param name="storeGroupId"></param>
         /// <returns>Task of ApiResponse (RestApiResultStoreGroup)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStoreGroup>> GetStoreGroupAsyncWithHttpInfo (int? storeGroupId);
         /// <summary>
-        /// Returns a paginated list of Store Groups
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appNameId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultStoreGroup</returns>
         System.Threading.Tasks.Task<RestApiPaginationResultStoreGroup> GetStoreGroupsAsync (string appNameId, string searchQuery = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Returns a paginated list of Store Groups
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appNameId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStoreGroup)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStoreGroup>> GetStoreGroupsAsyncWithHttpInfo (string appNameId, string searchQuery = null, int? page = null, int? limit = null);
         /// <summary>
-        /// [PRIVATE API] Returns a paginated list of Extended Store Groups
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appNameId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <param name="groupingRadius"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultStoreGroupExtended</returns>
         System.Threading.Tasks.Task<RestApiPaginationResultStoreGroupExtended> GetStoreGroupsExtendedAsync (string appNameId, string searchQuery = null, int? page = null, int? limit = null, int? groupingRadius = null);
 
         /// <summary>
-        /// [PRIVATE API] Returns a paginated list of Extended Store Groups
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appNameId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <param name="groupingRadius"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStoreGroupExtended)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStoreGroupExtended>> GetStoreGroupsExtendedAsyncWithHttpInfo (string appNameId, string searchQuery = null, int? page = null, int? limit = null, int? groupingRadius = null);
         /// <summary>
-        /// Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
+        /// <param name="storeGroupId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task RemoveStoreGroupAsync (int? storeGroupId);
 
         /// <summary>
-        /// Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
+        /// <param name="storeGroupId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> RemoveStoreGroupAsyncWithHttpInfo (int? storeGroupId);
         /// <summary>
@@ -342,26 +342,26 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> SetMenuMessagePerDeliveryTypeAsyncWithHttpInfo (int? storeGroupId, string deliveryType, string menuMessage);
         /// <summary>
-        /// Updates Store Group
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
-        /// <param name="storeGroup">Store Group Delta</param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="storeGroup"></param>
         /// <returns>Task of RestApiResultStoreGroupBase</returns>
         System.Threading.Tasks.Task<RestApiResultStoreGroupBase> UpdateStoreGroupAsync (int? storeGroupId, StoreGroupBase storeGroup);
 
         /// <summary>
-        /// Updates Store Group
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
-        /// <param name="storeGroup">Store Group Delta</param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="storeGroup"></param>
         /// <returns>Task of ApiResponse (RestApiResultStoreGroupBase)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStoreGroupBase>> UpdateStoreGroupAsyncWithHttpInfo (int? storeGroupId, StoreGroupBase storeGroup);
         #endregion Asynchronous Operations
@@ -465,11 +465,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Creates a Store Group  It will be attached to an existing App 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="storeGroup">Store group definition</param>
+        /// <param name="appNameId"></param>
+        /// <param name="storeGroup"></param>
         /// <returns>RestApiResultStoreGroup</returns>
         public RestApiResultStoreGroup CreateStoreGroup (string appNameId, StoreGroupBase storeGroup)
         {
@@ -478,11 +478,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Creates a Store Group  It will be attached to an existing App 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="storeGroup">Store group definition</param>
+        /// <param name="appNameId"></param>
+        /// <param name="storeGroup"></param>
         /// <returns>ApiResponse of RestApiResultStoreGroup</returns>
         public ApiResponse< RestApiResultStoreGroup > CreateStoreGroupWithHttpInfo (string appNameId, StoreGroupBase storeGroup)
         {
@@ -558,11 +558,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Creates a Store Group  It will be attached to an existing App 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="storeGroup">Store group definition</param>
+        /// <param name="appNameId"></param>
+        /// <param name="storeGroup"></param>
         /// <returns>Task of RestApiResultStoreGroup</returns>
         public async System.Threading.Tasks.Task<RestApiResultStoreGroup> CreateStoreGroupAsync (string appNameId, StoreGroupBase storeGroup)
         {
@@ -572,11 +572,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Creates a Store Group  It will be attached to an existing App 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="storeGroup">Store group definition</param>
+        /// <param name="appNameId"></param>
+        /// <param name="storeGroup"></param>
         /// <returns>Task of ApiResponse (RestApiResultStoreGroup)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStoreGroup>> CreateStoreGroupAsyncWithHttpInfo (string appNameId, StoreGroupBase storeGroup)
         {
@@ -652,10 +652,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a Store Groups 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
+        /// <param name="storeGroupId"></param>
         /// <returns>RestApiResultStoreGroup</returns>
         public RestApiResultStoreGroup GetStoreGroup (int? storeGroupId)
         {
@@ -664,10 +664,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a Store Groups 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
+        /// <param name="storeGroupId"></param>
         /// <returns>ApiResponse of RestApiResultStoreGroup</returns>
         public ApiResponse< RestApiResultStoreGroup > GetStoreGroupWithHttpInfo (int? storeGroupId)
         {
@@ -727,10 +727,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a Store Groups 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
+        /// <param name="storeGroupId"></param>
         /// <returns>Task of RestApiResultStoreGroup</returns>
         public async System.Threading.Tasks.Task<RestApiResultStoreGroup> GetStoreGroupAsync (int? storeGroupId)
         {
@@ -740,10 +740,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a Store Groups 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
+        /// <param name="storeGroupId"></param>
         /// <returns>Task of ApiResponse (RestApiResultStoreGroup)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStoreGroup>> GetStoreGroupAsyncWithHttpInfo (int? storeGroupId)
         {
@@ -803,13 +803,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a paginated list of Store Groups 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appNameId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultStoreGroup</returns>
         public RestApiPaginationResultStoreGroup GetStoreGroups (string appNameId, string searchQuery = null, int? page = null, int? limit = null)
         {
@@ -818,13 +818,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a paginated list of Store Groups 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appNameId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultStoreGroup</returns>
         public ApiResponse< RestApiPaginationResultStoreGroup > GetStoreGroupsWithHttpInfo (string appNameId, string searchQuery = null, int? page = null, int? limit = null)
         {
@@ -887,13 +887,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a paginated list of Store Groups 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appNameId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultStoreGroup</returns>
         public async System.Threading.Tasks.Task<RestApiPaginationResultStoreGroup> GetStoreGroupsAsync (string appNameId, string searchQuery = null, int? page = null, int? limit = null)
         {
@@ -903,13 +903,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns a paginated list of Store Groups 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appNameId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStoreGroup)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStoreGroup>> GetStoreGroupsAsyncWithHttpInfo (string appNameId, string searchQuery = null, int? page = null, int? limit = null)
         {
@@ -972,13 +972,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Returns a paginated list of Extended Store Groups 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appNameId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <param name="groupingRadius"> (optional)</param>
         /// <returns>RestApiPaginationResultStoreGroupExtended</returns>
         public RestApiPaginationResultStoreGroupExtended GetStoreGroupsExtended (string appNameId, string searchQuery = null, int? page = null, int? limit = null, int? groupingRadius = null)
@@ -988,13 +988,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Returns a paginated list of Extended Store Groups 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appNameId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <param name="groupingRadius"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultStoreGroupExtended</returns>
         public ApiResponse< RestApiPaginationResultStoreGroupExtended > GetStoreGroupsExtendedWithHttpInfo (string appNameId, string searchQuery = null, int? page = null, int? limit = null, int? groupingRadius = null)
@@ -1059,13 +1059,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Returns a paginated list of Extended Store Groups 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appNameId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <param name="groupingRadius"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultStoreGroupExtended</returns>
         public async System.Threading.Tasks.Task<RestApiPaginationResultStoreGroupExtended> GetStoreGroupsExtendedAsync (string appNameId, string searchQuery = null, int? page = null, int? limit = null, int? groupingRadius = null)
@@ -1076,13 +1076,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Returns a paginated list of Extended Store Groups 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appNameId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appNameId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <param name="groupingRadius"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStoreGroupExtended)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStoreGroupExtended>> GetStoreGroupsExtendedAsyncWithHttpInfo (string appNameId, string searchQuery = null, int? page = null, int? limit = null, int? groupingRadius = null)
@@ -1147,10 +1147,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Deletes a Store Group  Can only remove a store group if there is no stores attached to the group 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
+        /// <param name="storeGroupId"></param>
         /// <returns></returns>
         public void RemoveStoreGroup (int? storeGroupId)
         {
@@ -1158,10 +1158,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Deletes a Store Group  Can only remove a store group if there is no stores attached to the group 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
+        /// <param name="storeGroupId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> RemoveStoreGroupWithHttpInfo (int? storeGroupId)
         {
@@ -1221,10 +1221,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Deletes a Store Group  Can only remove a store group if there is no stores attached to the group 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
+        /// <param name="storeGroupId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task RemoveStoreGroupAsync (int? storeGroupId)
         {
@@ -1233,10 +1233,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Deletes a Store Group  Can only remove a store group if there is no stores attached to the group 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
+        /// <param name="storeGroupId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> RemoveStoreGroupAsyncWithHttpInfo (int? storeGroupId)
         {
@@ -1493,11 +1493,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Updates Store Group 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
-        /// <param name="storeGroup">Store Group Delta</param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="storeGroup"></param>
         /// <returns>RestApiResultStoreGroupBase</returns>
         public RestApiResultStoreGroupBase UpdateStoreGroup (int? storeGroupId, StoreGroupBase storeGroup)
         {
@@ -1506,11 +1506,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Updates Store Group 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
-        /// <param name="storeGroup">Store Group Delta</param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="storeGroup"></param>
         /// <returns>ApiResponse of RestApiResultStoreGroupBase</returns>
         public ApiResponse< RestApiResultStoreGroupBase > UpdateStoreGroupWithHttpInfo (int? storeGroupId, StoreGroupBase storeGroup)
         {
@@ -1586,11 +1586,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Updates Store Group 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
-        /// <param name="storeGroup">Store Group Delta</param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="storeGroup"></param>
         /// <returns>Task of RestApiResultStoreGroupBase</returns>
         public async System.Threading.Tasks.Task<RestApiResultStoreGroupBase> UpdateStoreGroupAsync (int? storeGroupId, StoreGroupBase storeGroup)
         {
@@ -1600,11 +1600,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Updates Store Group 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group Id</param>
-        /// <param name="storeGroup">Store Group Delta</param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="storeGroup"></param>
         /// <returns>Task of ApiResponse (RestApiResultStoreGroupBase)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStoreGroupBase>> UpdateStoreGroupAsyncWithHttpInfo (int? storeGroupId, StoreGroupBase storeGroup)
         {

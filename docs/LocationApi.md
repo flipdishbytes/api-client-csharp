@@ -4,18 +4,18 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateLocation**](LocationApi.md#createlocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location | Create a Location i.e: Table, Hotel Room, Car park space
-[**DeleteLocation**](LocationApi.md#deletelocation) | **DELETE** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/delete | Set a Location as deleted
-[**MapLocationToExternalId**](LocationApi.md#maplocationtoexternalid) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/map-external | Set or unset External Location Id on a Location
-[**MoveLocation**](LocationApi.md#movelocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/move | Move a Location to a different location Area
-[**UpdateLocation**](LocationApi.md#updatelocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/update | Update a Location i.e: Table, Hotel Room, Car park space
+[**CreateLocation**](LocationApi.md#createlocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location | 
+[**DeleteLocation**](LocationApi.md#deletelocation) | **DELETE** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/delete | 
+[**MapLocationToExternalId**](LocationApi.md#maplocationtoexternalid) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/map-external | 
+[**MoveLocation**](LocationApi.md#movelocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/move | 
+[**UpdateLocation**](LocationApi.md#updatelocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/update | 
 
 
 <a name="createlocation"></a>
 # **CreateLocation**
 > Object CreateLocation (List<CreateLocation> createLocationInput, int? locationAreaId, string appId, int? storeId)
 
-Create a Location i.e: Table, Hotel Room, Car park space
+
 
 ### Example
 ```csharp
@@ -35,14 +35,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationApi();
-            var createLocationInput = new List<CreateLocation>(); // List<CreateLocation> | Input data for creating the Location
-            var locationAreaId = 56;  // int? | Id of the Location area where the Location belongs
-            var appId = appId_example;  // string | AppId i.e: (fd1234)
-            var storeId = 56;  // int? | Id of the Store
+            var createLocationInput = new List<CreateLocation>(); // List<CreateLocation> | 
+            var locationAreaId = 56;  // int? | 
+            var appId = appId_example;  // string | 
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Create a Location i.e: Table, Hotel Room, Car park space
                 Object result = apiInstance.CreateLocation(createLocationInput, locationAreaId, appId, storeId);
                 Debug.WriteLine(result);
             }
@@ -59,10 +58,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createLocationInput** | [**List&lt;CreateLocation&gt;**](CreateLocation.md)| Input data for creating the Location | 
- **locationAreaId** | **int?**| Id of the Location area where the Location belongs | 
- **appId** | **string**| AppId i.e: (fd1234) | 
- **storeId** | **int?**| Id of the Store | 
+ **createLocationInput** | [**List&lt;CreateLocation&gt;**](CreateLocation.md)|  | 
+ **locationAreaId** | **int?**|  | 
+ **appId** | **string**|  | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -83,7 +82,7 @@ Name | Type | Description  | Notes
 # **DeleteLocation**
 > Object DeleteLocation (int? locationId, int? locationAreaId, string appId, int? storeId)
 
-Set a Location as deleted
+
 
 ### Example
 ```csharp
@@ -103,14 +102,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationApi();
-            var locationId = 56;  // int? | Id of the Location that will be moved
-            var locationAreaId = 56;  // int? | Id of the Location Area that the Location belong
-            var appId = appId_example;  // string | AppId i.e: (fd1234)
-            var storeId = 56;  // int? | Id of the Store
+            var locationId = 56;  // int? | 
+            var locationAreaId = 56;  // int? | 
+            var appId = appId_example;  // string | 
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Set a Location as deleted
                 Object result = apiInstance.DeleteLocation(locationId, locationAreaId, appId, storeId);
                 Debug.WriteLine(result);
             }
@@ -127,10 +125,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **locationId** | **int?**| Id of the Location that will be moved | 
- **locationAreaId** | **int?**| Id of the Location Area that the Location belong | 
- **appId** | **string**| AppId i.e: (fd1234) | 
- **storeId** | **int?**| Id of the Store | 
+ **locationId** | **int?**|  | 
+ **locationAreaId** | **int?**|  | 
+ **appId** | **string**|  | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -151,7 +149,7 @@ Name | Type | Description  | Notes
 # **MapLocationToExternalId**
 > RestApiResultMappedLocation MapLocationToExternalId (int? locationId, int? locationAreaId, string appId, int? storeId, string externalLocationId = null)
 
-Set or unset External Location Id on a Location
+
 
 ### Example
 ```csharp
@@ -171,15 +169,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationApi();
-            var locationId = 56;  // int? | Id of the Location that will be mapped
-            var locationAreaId = 56;  // int? | Id of the Location Area that the Location belong
-            var appId = appId_example;  // string | AppId i.e: (fd1234)
-            var storeId = 56;  // int? | Id of the Store
-            var externalLocationId = externalLocationId_example;  // string | External Id to be mapped to the location (optional) 
+            var locationId = 56;  // int? | 
+            var locationAreaId = 56;  // int? | 
+            var appId = appId_example;  // string | 
+            var storeId = 56;  // int? | 
+            var externalLocationId = externalLocationId_example;  // string |  (optional) 
 
             try
             {
-                // Set or unset External Location Id on a Location
                 RestApiResultMappedLocation result = apiInstance.MapLocationToExternalId(locationId, locationAreaId, appId, storeId, externalLocationId);
                 Debug.WriteLine(result);
             }
@@ -196,11 +193,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **locationId** | **int?**| Id of the Location that will be mapped | 
- **locationAreaId** | **int?**| Id of the Location Area that the Location belong | 
- **appId** | **string**| AppId i.e: (fd1234) | 
- **storeId** | **int?**| Id of the Store | 
- **externalLocationId** | **string**| External Id to be mapped to the location | [optional] 
+ **locationId** | **int?**|  | 
+ **locationAreaId** | **int?**|  | 
+ **appId** | **string**|  | 
+ **storeId** | **int?**|  | 
+ **externalLocationId** | **string**|  | [optional] 
 
 ### Return type
 
@@ -221,7 +218,7 @@ Name | Type | Description  | Notes
 # **MoveLocation**
 > Object MoveLocation (int? locationId, int? locationAreaId, int? newLocationAreaId, string appId, int? storeId)
 
-Move a Location to a different location Area
+
 
 ### Example
 ```csharp
@@ -241,15 +238,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationApi();
-            var locationId = 56;  // int? | Id of the Location that will be moved
-            var locationAreaId = 56;  // int? | Id of the new Location area that it should be moved to
-            var newLocationAreaId = 56;  // int? | Id of the new Location area that it should be moved to
-            var appId = appId_example;  // string | AppId i.e: (fd1234)
-            var storeId = 56;  // int? | Id of the Store
+            var locationId = 56;  // int? | 
+            var locationAreaId = 56;  // int? | 
+            var newLocationAreaId = 56;  // int? | 
+            var appId = appId_example;  // string | 
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Move a Location to a different location Area
                 Object result = apiInstance.MoveLocation(locationId, locationAreaId, newLocationAreaId, appId, storeId);
                 Debug.WriteLine(result);
             }
@@ -266,11 +262,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **locationId** | **int?**| Id of the Location that will be moved | 
- **locationAreaId** | **int?**| Id of the new Location area that it should be moved to | 
- **newLocationAreaId** | **int?**| Id of the new Location area that it should be moved to | 
- **appId** | **string**| AppId i.e: (fd1234) | 
- **storeId** | **int?**| Id of the Store | 
+ **locationId** | **int?**|  | 
+ **locationAreaId** | **int?**|  | 
+ **newLocationAreaId** | **int?**|  | 
+ **appId** | **string**|  | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -291,7 +287,7 @@ Name | Type | Description  | Notes
 # **UpdateLocation**
 > RestApiResultLocationAreaLocation UpdateLocation (CreateLocation updateLocationInput, int? locationAreaId, int? locationId, string appId, int? storeId)
 
-Update a Location i.e: Table, Hotel Room, Car park space
+
 
 ### Example
 ```csharp
@@ -311,15 +307,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationApi();
-            var updateLocationInput = new CreateLocation(); // CreateLocation | Input data for updating the Location
-            var locationAreaId = 56;  // int? | Id of the Location area where the Location belongs
-            var locationId = 56;  // int? | Id of the Location to be updated
-            var appId = appId_example;  // string | AppId i.e: (fd1234)
-            var storeId = 56;  // int? | Id of the Store
+            var updateLocationInput = new CreateLocation(); // CreateLocation | 
+            var locationAreaId = 56;  // int? | 
+            var locationId = 56;  // int? | 
+            var appId = appId_example;  // string | 
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Update a Location i.e: Table, Hotel Room, Car park space
                 RestApiResultLocationAreaLocation result = apiInstance.UpdateLocation(updateLocationInput, locationAreaId, locationId, appId, storeId);
                 Debug.WriteLine(result);
             }
@@ -336,11 +331,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateLocationInput** | [**CreateLocation**](CreateLocation.md)| Input data for updating the Location | 
- **locationAreaId** | **int?**| Id of the Location area where the Location belongs | 
- **locationId** | **int?**| Id of the Location to be updated | 
- **appId** | **string**| AppId i.e: (fd1234) | 
- **storeId** | **int?**| Id of the Store | 
+ **updateLocationInput** | [**CreateLocation**](CreateLocation.md)|  | 
+ **locationAreaId** | **int?**|  | 
+ **locationId** | **int?**|  | 
+ **appId** | **string**|  | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 

@@ -4,17 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetSubscriptionById**](SubscriptionsApi.md#getsubscriptionbyid) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId} | Get subscription by id
-[**GetSubscriptionsForApp**](SubscriptionsApi.md#getsubscriptionsforapp) | **GET** /api/v1.0/{appId}/subscriptions | Get list of subscriptions for an App
+[**GetSubscriptionById**](SubscriptionsApi.md#getsubscriptionbyid) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId} | 
+[**GetSubscriptionsForApp**](SubscriptionsApi.md#getsubscriptionsforapp) | **GET** /api/v1.0/{appId}/subscriptions | 
 
 
 <a name="getsubscriptionbyid"></a>
 # **GetSubscriptionById**
 > RestApiResultSubscription GetSubscriptionById (string appId, string subscriptionId)
 
-Get subscription by id
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -34,12 +32,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SubscriptionsApi();
-            var appId = appId_example;  // string | App Id
-            var subscriptionId = subscriptionId_example;  // string | Subscription Id
+            var appId = appId_example;  // string | 
+            var subscriptionId = subscriptionId_example;  // string | 
 
             try
             {
-                // Get subscription by id
                 RestApiResultSubscription result = apiInstance.GetSubscriptionById(appId, subscriptionId);
                 Debug.WriteLine(result);
             }
@@ -56,8 +53,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Id | 
- **subscriptionId** | **string**| Subscription Id | 
+ **appId** | **string**|  | 
+ **subscriptionId** | **string**|  | 
 
 ### Return type
 
@@ -78,9 +75,7 @@ Name | Type | Description  | Notes
 # **GetSubscriptionsForApp**
 > RestApiArrayResultSubscriptionSummary GetSubscriptionsForApp (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null)
 
-Get list of subscriptions for an App
 
-[BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
 
 ### Example
 ```csharp
@@ -100,13 +95,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SubscriptionsApi();
-            var appId = appId_example;  // string | App Id
-            var excludeNotOwnedSubscriptions = true;  // bool? | Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional) 
-            var storeId = new List<int?>(); // List<int?> | Store Ids (optional) (optional) 
+            var appId = appId_example;  // string | 
+            var excludeNotOwnedSubscriptions = true;  // bool? |  (optional) 
+            var storeId = new List<int?>(); // List<int?> |  (optional) 
 
             try
             {
-                // Get list of subscriptions for an App
                 RestApiArrayResultSubscriptionSummary result = apiInstance.GetSubscriptionsForApp(appId, excludeNotOwnedSubscriptions, storeId);
                 Debug.WriteLine(result);
             }
@@ -123,9 +117,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Id | 
- **excludeNotOwnedSubscriptions** | **bool?**| Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) | [optional] 
- **storeId** | [**List&lt;int?&gt;**](int?.md)| Store Ids (optional) | [optional] 
+ **appId** | **string**|  | 
+ **excludeNotOwnedSubscriptions** | **bool?**|  | [optional] 
+ **storeId** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
 
 ### Return type
 

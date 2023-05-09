@@ -25,7 +25,7 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Assign an EMV terminal to a kiosk
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -38,7 +38,7 @@ namespace Flipdish.Api
         void AssignEmv (string appId, int? hydraConfigId, int? emvTerminalId);
 
         /// <summary>
-        /// Assign an EMV terminal to a kiosk
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -50,7 +50,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> AssignEmvWithHttpInfo (string appId, int? hydraConfigId, int? emvTerminalId);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -63,7 +63,7 @@ namespace Flipdish.Api
         RestApiResultHydraStatus AttachStoreToKiosk (string appId, int? storeId, string deviceId);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -75,7 +75,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultHydraStatus</returns>
         ApiResponse<RestApiResultHydraStatus> AttachStoreToKioskWithHttpInfo (string appId, int? storeId, string deviceId);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -88,7 +88,7 @@ namespace Flipdish.Api
         RestApiResultHydraStatus AttachStoreToTerminal (string appId, string deviceId, int? storeId);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -123,7 +123,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> CancelEmvPaymentWithHttpInfo (int? orderId, string appId);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -136,7 +136,7 @@ namespace Flipdish.Api
         RestApiResultHydraStatus DetachStoreFromTerminal (string appId, string deviceId, int? storeId);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -148,7 +148,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultHydraStatus</returns>
         ApiResponse<RestApiResultHydraStatus> DetachStoreFromTerminalWithHttpInfo (string appId, string deviceId, int? storeId);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -161,7 +161,7 @@ namespace Flipdish.Api
         RestApiResultHydraDeviceDetails GetAttachedDevice (string appId, string deviceType, string deviceId);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -173,7 +173,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultHydraDeviceDetails</returns>
         ApiResponse<RestApiResultHydraDeviceDetails> GetAttachedDeviceWithHttpInfo (string appId, string deviceType, string deviceId);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -190,7 +190,7 @@ namespace Flipdish.Api
         RestApiPaginationResultHydraDeviceDetails GetAttachedDevices (string appId, string deviceType, int? pageIndex = null, int? pageSize = null, int? storeId = null, string deviceName = null, string deviceSerial = null);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -206,7 +206,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiPaginationResultHydraDeviceDetails</returns>
         ApiResponse<RestApiPaginationResultHydraDeviceDetails> GetAttachedDevicesWithHttpInfo (string appId, string deviceType, int? pageIndex = null, int? pageSize = null, int? storeId = null, string deviceName = null, string deviceSerial = null);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -217,7 +217,7 @@ namespace Flipdish.Api
         RestApiResultPaymentTerminalDetails GetEMVTerminalDetails (string appId);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -227,7 +227,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultPaymentTerminalDetails</returns>
         ApiResponse<RestApiResultPaymentTerminalDetails> GetEMVTerminalDetailsWithHttpInfo (string appId);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -239,7 +239,7 @@ namespace Flipdish.Api
         RestApiResultPaymentTerminalTransactionDetails GetEmvOrderState (int? orderId, string appId);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -250,10 +250,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultPaymentTerminalTransactionDetails</returns>
         ApiResponse<RestApiResultPaymentTerminalTransactionDetails> GetEmvOrderStateWithHttpInfo (int? orderId, string appId);
         /// <summary>
-        /// Get the status of Cash Payment Method on Kiosk
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -262,10 +262,10 @@ namespace Flipdish.Api
         RestApiArrayResultKioskCashPaymentSettings GetKioskCashPaymentSettings (string appId, string deviceId);
 
         /// <summary>
-        /// Get the status of Cash Payment Method on Kiosk
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -292,7 +292,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultHydraStatus</returns>
         ApiResponse<RestApiResultHydraStatus> GetRegistrationWithHttpInfo ();
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -302,7 +302,7 @@ namespace Flipdish.Api
         RestApiResultHydraConfig GetSettings ();
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -311,7 +311,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultHydraConfig</returns>
         ApiResponse<RestApiResultHydraConfig> GetSettingsWithHttpInfo ();
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -323,7 +323,7 @@ namespace Flipdish.Api
         Object HydraCreateEmv (string appId, EmvTerminal emv);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -334,7 +334,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> HydraCreateEmvWithHttpInfo (string appId, EmvTerminal emv);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -346,7 +346,7 @@ namespace Flipdish.Api
         Object HydraDeleteEmv (string appId, int? id);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -357,7 +357,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> HydraDeleteEmvWithHttpInfo (string appId, int? id);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -370,7 +370,7 @@ namespace Flipdish.Api
         RestApiResultHydraStatus HydraDetachStoreFromKiosk (string appId, int? storeId, string deviceId);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -382,7 +382,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultHydraStatus</returns>
         ApiResponse<RestApiResultHydraStatus> HydraDetachStoreFromKioskWithHttpInfo (string appId, int? storeId, string deviceId);
         /// <summary>
-        /// List EMV terminals belonging to the given AppNameId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -393,7 +393,7 @@ namespace Flipdish.Api
         RestApiArrayResultEmvTerminalWithAssignments HydraGetEmvsForAppId (string appId);
 
         /// <summary>
-        /// List EMV terminals belonging to the given AppNameId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -403,7 +403,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultEmvTerminalWithAssignments</returns>
         ApiResponse<RestApiArrayResultEmvTerminalWithAssignments> HydraGetEmvsForAppIdWithHttpInfo (string appId);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -416,7 +416,7 @@ namespace Flipdish.Api
         void LoginWithDeviceId (string deviceId, string hydraUserType = null, string serialNumber = null);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -428,7 +428,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> LoginWithDeviceIdWithHttpInfo (string deviceId, string hydraUserType = null, string serialNumber = null);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -440,7 +440,7 @@ namespace Flipdish.Api
         RestApiResultHydraStatus Register (string appId, HydraRegistrationRequest hydraRegistration);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -451,7 +451,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultHydraStatus</returns>
         ApiResponse<RestApiResultHydraStatus> RegisterWithHttpInfo (string appId, HydraRegistrationRequest hydraRegistration);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -463,7 +463,7 @@ namespace Flipdish.Api
         void UnAssign (string appId, string deviceId);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -474,7 +474,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UnAssignWithHttpInfo (string appId, string deviceId);
         /// <summary>
-        /// Unassign the currently assigned EMV terminal from a kiosk
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -486,7 +486,7 @@ namespace Flipdish.Api
         void UnassignEmv (string appId, int? hydraConfigId);
 
         /// <summary>
-        /// Unassign the currently assigned EMV terminal from a kiosk
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -497,10 +497,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UnassignEmvWithHttpInfo (string appId, int? hydraConfigId);
         /// <summary>
-        /// Update the Cash Payment Method Visibility on Kiosk
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -510,10 +510,10 @@ namespace Flipdish.Api
         void UpdateKioskCashVisibilitySettings (string appId, string deviceId, bool? isCashEnabled);
 
         /// <summary>
-        /// Update the Cash Payment Method Visibility on Kiosk
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -524,7 +524,7 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Assign an EMV terminal to a kiosk
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -537,7 +537,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task AssignEmvAsync (string appId, int? hydraConfigId, int? emvTerminalId);
 
         /// <summary>
-        /// Assign an EMV terminal to a kiosk
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -549,7 +549,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AssignEmvAsyncWithHttpInfo (string appId, int? hydraConfigId, int? emvTerminalId);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -562,7 +562,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultHydraStatus> AttachStoreToKioskAsync (string appId, int? storeId, string deviceId);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -574,7 +574,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultHydraStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultHydraStatus>> AttachStoreToKioskAsyncWithHttpInfo (string appId, int? storeId, string deviceId);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -587,7 +587,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultHydraStatus> AttachStoreToTerminalAsync (string appId, string deviceId, int? storeId);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -622,7 +622,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CancelEmvPaymentAsyncWithHttpInfo (int? orderId, string appId);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -635,7 +635,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultHydraStatus> DetachStoreFromTerminalAsync (string appId, string deviceId, int? storeId);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -647,7 +647,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultHydraStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultHydraStatus>> DetachStoreFromTerminalAsyncWithHttpInfo (string appId, string deviceId, int? storeId);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -660,7 +660,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultHydraDeviceDetails> GetAttachedDeviceAsync (string appId, string deviceType, string deviceId);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -672,7 +672,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultHydraDeviceDetails)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultHydraDeviceDetails>> GetAttachedDeviceAsyncWithHttpInfo (string appId, string deviceType, string deviceId);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -689,7 +689,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiPaginationResultHydraDeviceDetails> GetAttachedDevicesAsync (string appId, string deviceType, int? pageIndex = null, int? pageSize = null, int? storeId = null, string deviceName = null, string deviceSerial = null);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -705,7 +705,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiPaginationResultHydraDeviceDetails)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultHydraDeviceDetails>> GetAttachedDevicesAsyncWithHttpInfo (string appId, string deviceType, int? pageIndex = null, int? pageSize = null, int? storeId = null, string deviceName = null, string deviceSerial = null);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -716,7 +716,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultPaymentTerminalDetails> GetEMVTerminalDetailsAsync (string appId);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -726,7 +726,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultPaymentTerminalDetails)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultPaymentTerminalDetails>> GetEMVTerminalDetailsAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -738,7 +738,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultPaymentTerminalTransactionDetails> GetEmvOrderStateAsync (int? orderId, string appId);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -749,10 +749,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultPaymentTerminalTransactionDetails)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultPaymentTerminalTransactionDetails>> GetEmvOrderStateAsyncWithHttpInfo (int? orderId, string appId);
         /// <summary>
-        /// Get the status of Cash Payment Method on Kiosk
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -761,10 +761,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultKioskCashPaymentSettings> GetKioskCashPaymentSettingsAsync (string appId, string deviceId);
 
         /// <summary>
-        /// Get the status of Cash Payment Method on Kiosk
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -791,7 +791,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultHydraStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultHydraStatus>> GetRegistrationAsyncWithHttpInfo ();
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -801,7 +801,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultHydraConfig> GetSettingsAsync ();
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -810,7 +810,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultHydraConfig)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultHydraConfig>> GetSettingsAsyncWithHttpInfo ();
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -822,7 +822,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<Object> HydraCreateEmvAsync (string appId, EmvTerminal emv);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -833,7 +833,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> HydraCreateEmvAsyncWithHttpInfo (string appId, EmvTerminal emv);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -845,7 +845,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<Object> HydraDeleteEmvAsync (string appId, int? id);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -856,7 +856,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> HydraDeleteEmvAsyncWithHttpInfo (string appId, int? id);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -869,7 +869,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultHydraStatus> HydraDetachStoreFromKioskAsync (string appId, int? storeId, string deviceId);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -881,7 +881,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultHydraStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultHydraStatus>> HydraDetachStoreFromKioskAsyncWithHttpInfo (string appId, int? storeId, string deviceId);
         /// <summary>
-        /// List EMV terminals belonging to the given AppNameId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -892,7 +892,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultEmvTerminalWithAssignments> HydraGetEmvsForAppIdAsync (string appId);
 
         /// <summary>
-        /// List EMV terminals belonging to the given AppNameId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -902,7 +902,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultEmvTerminalWithAssignments)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultEmvTerminalWithAssignments>> HydraGetEmvsForAppIdAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -915,7 +915,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task LoginWithDeviceIdAsync (string deviceId, string hydraUserType = null, string serialNumber = null);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -927,7 +927,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> LoginWithDeviceIdAsyncWithHttpInfo (string deviceId, string hydraUserType = null, string serialNumber = null);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -939,7 +939,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultHydraStatus> RegisterAsync (string appId, HydraRegistrationRequest hydraRegistration);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -950,7 +950,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultHydraStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultHydraStatus>> RegisterAsyncWithHttpInfo (string appId, HydraRegistrationRequest hydraRegistration);
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -962,7 +962,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task UnAssignAsync (string appId, string deviceId);
 
         /// <summary>
-        /// [Private]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -973,7 +973,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UnAssignAsyncWithHttpInfo (string appId, string deviceId);
         /// <summary>
-        /// Unassign the currently assigned EMV terminal from a kiosk
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -985,7 +985,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task UnassignEmvAsync (string appId, int? hydraConfigId);
 
         /// <summary>
-        /// Unassign the currently assigned EMV terminal from a kiosk
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -996,10 +996,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UnassignEmvAsyncWithHttpInfo (string appId, int? hydraConfigId);
         /// <summary>
-        /// Update the Cash Payment Method Visibility on Kiosk
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1009,10 +1009,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task UpdateKioskCashVisibilitySettingsAsync (string appId, string deviceId, bool? isCashEnabled);
 
         /// <summary>
-        /// Update the Cash Payment Method Visibility on Kiosk
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1121,7 +1121,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign an EMV terminal to a kiosk 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1134,7 +1134,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign an EMV terminal to a kiosk 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1207,7 +1207,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign an EMV terminal to a kiosk 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1221,7 +1221,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign an EMV terminal to a kiosk 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1294,7 +1294,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1308,7 +1308,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1381,7 +1381,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1396,7 +1396,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1469,7 +1469,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1483,7 +1483,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1556,7 +1556,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1571,7 +1571,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1805,7 +1805,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1819,7 +1819,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1892,7 +1892,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1907,7 +1907,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1980,7 +1980,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1994,7 +1994,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2067,7 +2067,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2082,7 +2082,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2155,7 +2155,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2173,7 +2173,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2251,7 +2251,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2270,7 +2270,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2348,7 +2348,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2360,7 +2360,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2423,7 +2423,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2436,7 +2436,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2499,7 +2499,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
@@ -2512,7 +2512,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
@@ -2580,7 +2580,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
@@ -2594,7 +2594,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
@@ -2662,7 +2662,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the status of Cash Payment Method on Kiosk [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2675,7 +2675,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the status of Cash Payment Method on Kiosk [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2743,7 +2743,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the status of Cash Payment Method on Kiosk [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2757,7 +2757,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the status of Cash Payment Method on Kiosk [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2964,7 +2964,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RestApiResultHydraConfig</returns>
@@ -2975,7 +2975,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RestApiResultHydraConfig</returns>
@@ -3033,7 +3033,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of RestApiResultHydraConfig</returns>
@@ -3045,7 +3045,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RestApiResultHydraConfig)</returns>
@@ -3103,7 +3103,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -3116,7 +3116,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -3196,7 +3196,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -3210,7 +3210,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -3290,7 +3290,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -3303,7 +3303,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -3371,7 +3371,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -3385,7 +3385,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -3453,7 +3453,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -3467,7 +3467,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -3540,7 +3540,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -3555,7 +3555,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -3628,7 +3628,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// List EMV terminals belonging to the given AppNameId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -3640,7 +3640,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// List EMV terminals belonging to the given AppNameId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -3703,7 +3703,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// List EMV terminals belonging to the given AppNameId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -3716,7 +3716,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// List EMV terminals belonging to the given AppNameId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -3779,7 +3779,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId"></param>
@@ -3792,7 +3792,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId"></param>
@@ -3859,7 +3859,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId"></param>
@@ -3873,7 +3873,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId"></param>
@@ -3940,7 +3940,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -3953,7 +3953,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -4033,7 +4033,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -4047,7 +4047,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -4127,7 +4127,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -4139,7 +4139,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -4207,7 +4207,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -4220,7 +4220,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -4288,7 +4288,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Unassign the currently assigned EMV terminal from a kiosk 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -4300,7 +4300,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Unassign the currently assigned EMV terminal from a kiosk 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -4368,7 +4368,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Unassign the currently assigned EMV terminal from a kiosk 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -4381,7 +4381,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Unassign the currently assigned EMV terminal from a kiosk 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -4449,7 +4449,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update the Cash Payment Method Visibility on Kiosk [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -4462,7 +4462,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update the Cash Payment Method Visibility on Kiosk [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -4535,7 +4535,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update the Cash Payment Method Visibility on Kiosk [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -4549,7 +4549,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update the Cash Payment Method Visibility on Kiosk [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>

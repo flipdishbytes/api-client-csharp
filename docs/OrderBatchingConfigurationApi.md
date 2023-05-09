@@ -4,15 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Get**](OrderBatchingConfigurationApi.md#get) | **GET** /api/v1.0/stores/{storeId}/order-batching-configuration | Returns order batching configuration for a specific store
-[**Post**](OrderBatchingConfigurationApi.md#post) | **POST** /api/v1.0/stores/{storeId}/order-batching-configuration | Sets order batching configuration for a specific store
+[**Get**](OrderBatchingConfigurationApi.md#get) | **GET** /api/v1.0/stores/{storeId}/order-batching-configuration | 
+[**Post**](OrderBatchingConfigurationApi.md#post) | **POST** /api/v1.0/stores/{storeId}/order-batching-configuration | 
 
 
 <a name="get"></a>
 # **Get**
 > RestApiResultOrderBatchingConfiguration Get (int? storeId)
 
-Returns order batching configuration for a specific store
+
 
 ### Example
 ```csharp
@@ -32,11 +32,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrderBatchingConfigurationApi();
-            var storeId = 56;  // int? | Store Id
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Returns order batching configuration for a specific store
                 RestApiResultOrderBatchingConfiguration result = apiInstance.Get(storeId);
                 Debug.WriteLine(result);
             }
@@ -53,7 +52,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store Id | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -74,7 +73,7 @@ Name | Type | Description  | Notes
 # **Post**
 > void Post (int? storeId, SetOrderBatchingConfiguration setOrderBatchingConfiguration)
 
-Sets order batching configuration for a specific store
+
 
 ### Example
 ```csharp
@@ -94,12 +93,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrderBatchingConfigurationApi();
-            var storeId = 56;  // int? | Store Id
-            var setOrderBatchingConfiguration = new SetOrderBatchingConfiguration(); // SetOrderBatchingConfiguration | SetOrderBatchingConfiguration
+            var storeId = 56;  // int? | 
+            var setOrderBatchingConfiguration = new SetOrderBatchingConfiguration(); // SetOrderBatchingConfiguration | 
 
             try
             {
-                // Sets order batching configuration for a specific store
                 apiInstance.Post(storeId, setOrderBatchingConfiguration);
             }
             catch (Exception e)
@@ -115,8 +113,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store Id | 
- **setOrderBatchingConfiguration** | [**SetOrderBatchingConfiguration**](SetOrderBatchingConfiguration.md)| SetOrderBatchingConfiguration | 
+ **storeId** | **int?**|  | 
+ **setOrderBatchingConfiguration** | [**SetOrderBatchingConfiguration**](SetOrderBatchingConfiguration.md)|  | 
 
 ### Return type
 

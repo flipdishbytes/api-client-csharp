@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DownloadFile**](FilesApi.md#downloadfile) | **GET** /api/v1.0/{appId}/files/download/{fileId} | Get file from storage
+[**DownloadFile**](FilesApi.md#downloadfile) | **GET** /api/v1.0/{appId}/files/download/{fileId} | 
 
 
 <a name="downloadfile"></a>
 # **DownloadFile**
 > string DownloadFile (string appId, string fileId)
 
-Get file from storage
+
 
 ### Example
 ```csharp
@@ -36,7 +36,6 @@ namespace Example
 
             try
             {
-                // Get file from storage
                 string result = apiInstance.DownloadFile(appId, fileId);
                 Debug.WriteLine(result);
             }

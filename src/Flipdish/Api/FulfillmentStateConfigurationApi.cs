@@ -25,277 +25,277 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create fulfillment configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="fulfillmentStateConfiguration"></param>
         /// <returns>RestApiResultFulfillmentStatesConfiguration</returns>
         RestApiResultFulfillmentStatesConfiguration CreateFulfillmentStatesConfig (string appId, CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration);
 
         /// <summary>
-        /// Create fulfillment configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="fulfillmentStateConfiguration"></param>
         /// <returns>ApiResponse of RestApiResultFulfillmentStatesConfiguration</returns>
         ApiResponse<RestApiResultFulfillmentStatesConfiguration> CreateFulfillmentStatesConfigWithHttpInfo (string appId, CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration);
         /// <summary>
-        /// Delete fulfillment states configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment states configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
         /// <returns>RestApiStringResult</returns>
         RestApiStringResult DeleteFulfillmentStatesConfig (string appId, string configId);
 
         /// <summary>
-        /// Delete fulfillment states configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment states configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
         ApiResponse<RestApiStringResult> DeleteFulfillmentStatesConfigWithHttpInfo (string appId, string configId);
         /// <summary>
-        /// Get fulfillment configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
         /// <returns>FulfillmentStatesConfiguration</returns>
         FulfillmentStatesConfiguration GetFulfillmentStatesConfiguration (string appId, string configId);
 
         /// <summary>
-        /// Get fulfillment configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
         /// <returns>ApiResponse of FulfillmentStatesConfiguration</returns>
         ApiResponse<FulfillmentStatesConfiguration> GetFulfillmentStatesConfigurationWithHttpInfo (string appId, string configId);
         /// <summary>
-        /// Get fulfillment configuration template
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>FulfillmentStatesConfiguration</returns>
         FulfillmentStatesConfiguration GetFulfillmentStatesConfigurationTemplate (string appId);
 
         /// <summary>
-        /// Get fulfillment configuration template
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of FulfillmentStatesConfiguration</returns>
         ApiResponse<FulfillmentStatesConfiguration> GetFulfillmentStatesConfigurationTemplateWithHttpInfo (string appId);
         /// <summary>
-        /// List fulfillment configurations for AppId
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiArrayResultFulfillmentStatesConfigurationSummary</returns>
         RestApiArrayResultFulfillmentStatesConfigurationSummary SearchFulfillmentStatesConfigurations (string appId);
 
         /// <summary>
-        /// List fulfillment configurations for AppId
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiArrayResultFulfillmentStatesConfigurationSummary</returns>
         ApiResponse<RestApiArrayResultFulfillmentStatesConfigurationSummary> SearchFulfillmentStatesConfigurationsWithHttpInfo (string appId);
         /// <summary>
-        /// Update fulfillment configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment states configuration id</param>
-        /// <param name="updateFulfillmentStatesConfiguration">Update fulfillment states configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
+        /// <param name="updateFulfillmentStatesConfiguration"></param>
         /// <returns></returns>
         void UpdateFulfillmentStatesConfig (string appId, string configId, UpdateFulfillmentStatesConfiguration updateFulfillmentStatesConfiguration);
 
         /// <summary>
-        /// Update fulfillment configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment states configuration id</param>
-        /// <param name="updateFulfillmentStatesConfiguration">Update fulfillment states configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
+        /// <param name="updateFulfillmentStatesConfiguration"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateFulfillmentStatesConfigWithHttpInfo (string appId, string configId, UpdateFulfillmentStatesConfiguration updateFulfillmentStatesConfiguration);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create fulfillment configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="fulfillmentStateConfiguration"></param>
         /// <returns>Task of RestApiResultFulfillmentStatesConfiguration</returns>
         System.Threading.Tasks.Task<RestApiResultFulfillmentStatesConfiguration> CreateFulfillmentStatesConfigAsync (string appId, CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration);
 
         /// <summary>
-        /// Create fulfillment configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="fulfillmentStateConfiguration"></param>
         /// <returns>Task of ApiResponse (RestApiResultFulfillmentStatesConfiguration)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultFulfillmentStatesConfiguration>> CreateFulfillmentStatesConfigAsyncWithHttpInfo (string appId, CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration);
         /// <summary>
-        /// Delete fulfillment states configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment states configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
         /// <returns>Task of RestApiStringResult</returns>
         System.Threading.Tasks.Task<RestApiStringResult> DeleteFulfillmentStatesConfigAsync (string appId, string configId);
 
         /// <summary>
-        /// Delete fulfillment states configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment states configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> DeleteFulfillmentStatesConfigAsyncWithHttpInfo (string appId, string configId);
         /// <summary>
-        /// Get fulfillment configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
         /// <returns>Task of FulfillmentStatesConfiguration</returns>
         System.Threading.Tasks.Task<FulfillmentStatesConfiguration> GetFulfillmentStatesConfigurationAsync (string appId, string configId);
 
         /// <summary>
-        /// Get fulfillment configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
         /// <returns>Task of ApiResponse (FulfillmentStatesConfiguration)</returns>
         System.Threading.Tasks.Task<ApiResponse<FulfillmentStatesConfiguration>> GetFulfillmentStatesConfigurationAsyncWithHttpInfo (string appId, string configId);
         /// <summary>
-        /// Get fulfillment configuration template
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of FulfillmentStatesConfiguration</returns>
         System.Threading.Tasks.Task<FulfillmentStatesConfiguration> GetFulfillmentStatesConfigurationTemplateAsync (string appId);
 
         /// <summary>
-        /// Get fulfillment configuration template
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (FulfillmentStatesConfiguration)</returns>
         System.Threading.Tasks.Task<ApiResponse<FulfillmentStatesConfiguration>> GetFulfillmentStatesConfigurationTemplateAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// List fulfillment configurations for AppId
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiArrayResultFulfillmentStatesConfigurationSummary</returns>
         System.Threading.Tasks.Task<RestApiArrayResultFulfillmentStatesConfigurationSummary> SearchFulfillmentStatesConfigurationsAsync (string appId);
 
         /// <summary>
-        /// List fulfillment configurations for AppId
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultFulfillmentStatesConfigurationSummary)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultFulfillmentStatesConfigurationSummary>> SearchFulfillmentStatesConfigurationsAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// Update fulfillment configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment states configuration id</param>
-        /// <param name="updateFulfillmentStatesConfiguration">Update fulfillment states configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
+        /// <param name="updateFulfillmentStatesConfiguration"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UpdateFulfillmentStatesConfigAsync (string appId, string configId, UpdateFulfillmentStatesConfiguration updateFulfillmentStatesConfiguration);
 
         /// <summary>
-        /// Update fulfillment configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment states configuration id</param>
-        /// <param name="updateFulfillmentStatesConfiguration">Update fulfillment states configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
+        /// <param name="updateFulfillmentStatesConfiguration"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateFulfillmentStatesConfigAsyncWithHttpInfo (string appId, string configId, UpdateFulfillmentStatesConfiguration updateFulfillmentStatesConfiguration);
         #endregion Asynchronous Operations
@@ -399,11 +399,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create fulfillment configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="fulfillmentStateConfiguration"></param>
         /// <returns>RestApiResultFulfillmentStatesConfiguration</returns>
         public RestApiResultFulfillmentStatesConfiguration CreateFulfillmentStatesConfig (string appId, CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration)
         {
@@ -412,11 +412,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create fulfillment configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="fulfillmentStateConfiguration"></param>
         /// <returns>ApiResponse of RestApiResultFulfillmentStatesConfiguration</returns>
         public ApiResponse< RestApiResultFulfillmentStatesConfiguration > CreateFulfillmentStatesConfigWithHttpInfo (string appId, CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration)
         {
@@ -492,11 +492,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create fulfillment configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="fulfillmentStateConfiguration"></param>
         /// <returns>Task of RestApiResultFulfillmentStatesConfiguration</returns>
         public async System.Threading.Tasks.Task<RestApiResultFulfillmentStatesConfiguration> CreateFulfillmentStatesConfigAsync (string appId, CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration)
         {
@@ -506,11 +506,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create fulfillment configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="fulfillmentStateConfiguration">Fulfillment state configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="fulfillmentStateConfiguration"></param>
         /// <returns>Task of ApiResponse (RestApiResultFulfillmentStatesConfiguration)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultFulfillmentStatesConfiguration>> CreateFulfillmentStatesConfigAsyncWithHttpInfo (string appId, CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration)
         {
@@ -586,11 +586,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete fulfillment states configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment states configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
         /// <returns>RestApiStringResult</returns>
         public RestApiStringResult DeleteFulfillmentStatesConfig (string appId, string configId)
         {
@@ -599,11 +599,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete fulfillment states configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment states configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
         public ApiResponse< RestApiStringResult > DeleteFulfillmentStatesConfigWithHttpInfo (string appId, string configId)
         {
@@ -667,11 +667,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete fulfillment states configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment states configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
         /// <returns>Task of RestApiStringResult</returns>
         public async System.Threading.Tasks.Task<RestApiStringResult> DeleteFulfillmentStatesConfigAsync (string appId, string configId)
         {
@@ -681,11 +681,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete fulfillment states configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment states configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> DeleteFulfillmentStatesConfigAsyncWithHttpInfo (string appId, string configId)
         {
@@ -749,11 +749,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get fulfillment configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
         /// <returns>FulfillmentStatesConfiguration</returns>
         public FulfillmentStatesConfiguration GetFulfillmentStatesConfiguration (string appId, string configId)
         {
@@ -762,11 +762,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get fulfillment configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
         /// <returns>ApiResponse of FulfillmentStatesConfiguration</returns>
         public ApiResponse< FulfillmentStatesConfiguration > GetFulfillmentStatesConfigurationWithHttpInfo (string appId, string configId)
         {
@@ -830,11 +830,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get fulfillment configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
         /// <returns>Task of FulfillmentStatesConfiguration</returns>
         public async System.Threading.Tasks.Task<FulfillmentStatesConfiguration> GetFulfillmentStatesConfigurationAsync (string appId, string configId)
         {
@@ -844,11 +844,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get fulfillment configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
         /// <returns>Task of ApiResponse (FulfillmentStatesConfiguration)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<FulfillmentStatesConfiguration>> GetFulfillmentStatesConfigurationAsyncWithHttpInfo (string appId, string configId)
         {
@@ -912,10 +912,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get fulfillment configuration template [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>FulfillmentStatesConfiguration</returns>
         public FulfillmentStatesConfiguration GetFulfillmentStatesConfigurationTemplate (string appId)
         {
@@ -924,10 +924,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get fulfillment configuration template [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of FulfillmentStatesConfiguration</returns>
         public ApiResponse< FulfillmentStatesConfiguration > GetFulfillmentStatesConfigurationTemplateWithHttpInfo (string appId)
         {
@@ -987,10 +987,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get fulfillment configuration template [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of FulfillmentStatesConfiguration</returns>
         public async System.Threading.Tasks.Task<FulfillmentStatesConfiguration> GetFulfillmentStatesConfigurationTemplateAsync (string appId)
         {
@@ -1000,10 +1000,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get fulfillment configuration template [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (FulfillmentStatesConfiguration)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<FulfillmentStatesConfiguration>> GetFulfillmentStatesConfigurationTemplateAsyncWithHttpInfo (string appId)
         {
@@ -1063,10 +1063,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// List fulfillment configurations for AppId [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiArrayResultFulfillmentStatesConfigurationSummary</returns>
         public RestApiArrayResultFulfillmentStatesConfigurationSummary SearchFulfillmentStatesConfigurations (string appId)
         {
@@ -1075,10 +1075,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// List fulfillment configurations for AppId [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiArrayResultFulfillmentStatesConfigurationSummary</returns>
         public ApiResponse< RestApiArrayResultFulfillmentStatesConfigurationSummary > SearchFulfillmentStatesConfigurationsWithHttpInfo (string appId)
         {
@@ -1138,10 +1138,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// List fulfillment configurations for AppId [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiArrayResultFulfillmentStatesConfigurationSummary</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultFulfillmentStatesConfigurationSummary> SearchFulfillmentStatesConfigurationsAsync (string appId)
         {
@@ -1151,10 +1151,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// List fulfillment configurations for AppId [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultFulfillmentStatesConfigurationSummary)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultFulfillmentStatesConfigurationSummary>> SearchFulfillmentStatesConfigurationsAsyncWithHttpInfo (string appId)
         {
@@ -1214,12 +1214,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update fulfillment configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment states configuration id</param>
-        /// <param name="updateFulfillmentStatesConfiguration">Update fulfillment states configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
+        /// <param name="updateFulfillmentStatesConfiguration"></param>
         /// <returns></returns>
         public void UpdateFulfillmentStatesConfig (string appId, string configId, UpdateFulfillmentStatesConfiguration updateFulfillmentStatesConfiguration)
         {
@@ -1227,12 +1227,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update fulfillment configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment states configuration id</param>
-        /// <param name="updateFulfillmentStatesConfiguration">Update fulfillment states configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
+        /// <param name="updateFulfillmentStatesConfiguration"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> UpdateFulfillmentStatesConfigWithHttpInfo (string appId, string configId, UpdateFulfillmentStatesConfiguration updateFulfillmentStatesConfiguration)
         {
@@ -1312,12 +1312,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update fulfillment configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment states configuration id</param>
-        /// <param name="updateFulfillmentStatesConfiguration">Update fulfillment states configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
+        /// <param name="updateFulfillmentStatesConfiguration"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UpdateFulfillmentStatesConfigAsync (string appId, string configId, UpdateFulfillmentStatesConfiguration updateFulfillmentStatesConfiguration)
         {
@@ -1326,12 +1326,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update fulfillment configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="configId">Fulfillment states configuration id</param>
-        /// <param name="updateFulfillmentStatesConfiguration">Update fulfillment states configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
+        /// <param name="updateFulfillmentStatesConfiguration"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateFulfillmentStatesConfigAsyncWithHttpInfo (string appId, string configId, UpdateFulfillmentStatesConfiguration updateFulfillmentStatesConfiguration)
         {

@@ -25,10 +25,10 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create an order audit log event
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
@@ -37,10 +37,10 @@ namespace Flipdish.Api
         void AddOrderAuditLog (int? orderId, List<ExternalStoreAuditLog> externalEventCreate);
 
         /// <summary>
-        /// Create an order audit log event
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
@@ -48,10 +48,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> AddOrderAuditLogWithHttpInfo (int? orderId, List<ExternalStoreAuditLog> externalEventCreate);
         /// <summary>
-        /// Create a store audit log event
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
@@ -60,10 +60,10 @@ namespace Flipdish.Api
         void AddStoreAuditLogEvent (int? storeId, List<ExternalStoreAuditLog> externalEventCreate);
 
         /// <summary>
-        /// Create a store audit log event
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
@@ -73,10 +73,10 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create an order audit log event
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
@@ -85,10 +85,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task AddOrderAuditLogAsync (int? orderId, List<ExternalStoreAuditLog> externalEventCreate);
 
         /// <summary>
-        /// Create an order audit log event
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
@@ -96,10 +96,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AddOrderAuditLogAsyncWithHttpInfo (int? orderId, List<ExternalStoreAuditLog> externalEventCreate);
         /// <summary>
-        /// Create a store audit log event
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
@@ -108,10 +108,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task AddStoreAuditLogEventAsync (int? storeId, List<ExternalStoreAuditLog> externalEventCreate);
 
         /// <summary>
-        /// Create a store audit log event
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
@@ -219,7 +219,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create an order audit log event [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
@@ -231,7 +231,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create an order audit log event [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
@@ -311,7 +311,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create an order audit log event [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
@@ -324,7 +324,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create an order audit log event [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
@@ -404,7 +404,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a store audit log event [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
@@ -416,7 +416,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a store audit log event [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
@@ -496,7 +496,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a store audit log event [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
@@ -509,7 +509,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a store audit log event [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>

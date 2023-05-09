@@ -4,17 +4,17 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddDeliveryZone**](DeliveryZoneApi.md#adddeliveryzone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones | Adds a delivery zone to the store id
-[**GetDeliveryZones**](DeliveryZoneApi.md#getdeliveryzones) | **GET** /api/v1.0/stores/{storeId}/deliveryzones | Get all the delivery zones associated with a store
-[**RemoveDeliveryZone**](DeliveryZoneApi.md#removedeliveryzone) | **DELETE** /api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId} | Removes the existing delivery zone
-[**UpdateDeliveryZone**](DeliveryZoneApi.md#updatedeliveryzone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId} | Updates the existing delivery zone
+[**AddDeliveryZone**](DeliveryZoneApi.md#adddeliveryzone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones | 
+[**GetDeliveryZones**](DeliveryZoneApi.md#getdeliveryzones) | **GET** /api/v1.0/stores/{storeId}/deliveryzones | 
+[**RemoveDeliveryZone**](DeliveryZoneApi.md#removedeliveryzone) | **DELETE** /api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId} | 
+[**UpdateDeliveryZone**](DeliveryZoneApi.md#updatedeliveryzone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId} | 
 
 
 <a name="adddeliveryzone"></a>
 # **AddDeliveryZone**
 > RestApiResultDeliveryZone AddDeliveryZone (int? storeId, DeliveryZoneBase deliveryZoneBase)
 
-Adds a delivery zone to the store id
+
 
 ### Example
 ```csharp
@@ -34,12 +34,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DeliveryZoneApi();
-            var storeId = 56;  // int? | Store Id to which the delivery zone will be added
-            var deliveryZoneBase = new DeliveryZoneBase(); // DeliveryZoneBase | Optional delivery zone, if not supplied will create a default zone
+            var storeId = 56;  // int? | 
+            var deliveryZoneBase = new DeliveryZoneBase(); // DeliveryZoneBase | 
 
             try
             {
-                // Adds a delivery zone to the store id
                 RestApiResultDeliveryZone result = apiInstance.AddDeliveryZone(storeId, deliveryZoneBase);
                 Debug.WriteLine(result);
             }
@@ -56,8 +55,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store Id to which the delivery zone will be added | 
- **deliveryZoneBase** | [**DeliveryZoneBase**](DeliveryZoneBase.md)| Optional delivery zone, if not supplied will create a default zone | 
+ **storeId** | **int?**|  | 
+ **deliveryZoneBase** | [**DeliveryZoneBase**](DeliveryZoneBase.md)|  | 
 
 ### Return type
 
@@ -78,7 +77,7 @@ Name | Type | Description  | Notes
 # **GetDeliveryZones**
 > RestApiArrayResultDeliveryZone GetDeliveryZones (int? storeId)
 
-Get all the delivery zones associated with a store
+
 
 ### Example
 ```csharp
@@ -98,11 +97,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DeliveryZoneApi();
-            var storeId = 56;  // int? | Store Id to which the delivery zones are associated
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Get all the delivery zones associated with a store
                 RestApiArrayResultDeliveryZone result = apiInstance.GetDeliveryZones(storeId);
                 Debug.WriteLine(result);
             }
@@ -119,7 +117,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store Id to which the delivery zones are associated | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -140,7 +138,7 @@ Name | Type | Description  | Notes
 # **RemoveDeliveryZone**
 > void RemoveDeliveryZone (int? storeId, int? deliveryZoneId)
 
-Removes the existing delivery zone
+
 
 ### Example
 ```csharp
@@ -160,12 +158,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DeliveryZoneApi();
-            var storeId = 56;  // int? | Store Id to which the delivery zone belongs
-            var deliveryZoneId = 56;  // int? | Delivery zone id to be removed
+            var storeId = 56;  // int? | 
+            var deliveryZoneId = 56;  // int? | 
 
             try
             {
-                // Removes the existing delivery zone
                 apiInstance.RemoveDeliveryZone(storeId, deliveryZoneId);
             }
             catch (Exception e)
@@ -181,8 +178,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store Id to which the delivery zone belongs | 
- **deliveryZoneId** | **int?**| Delivery zone id to be removed | 
+ **storeId** | **int?**|  | 
+ **deliveryZoneId** | **int?**|  | 
 
 ### Return type
 
@@ -203,7 +200,7 @@ void (empty response body)
 # **UpdateDeliveryZone**
 > RestApiResultDeliveryZone UpdateDeliveryZone (int? storeId, int? deliveryZoneId, DeliveryZoneBase deliveryZone)
 
-Updates the existing delivery zone
+
 
 ### Example
 ```csharp
@@ -223,13 +220,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DeliveryZoneApi();
-            var storeId = 56;  // int? | Store Id to which the delivery zone belongs
-            var deliveryZoneId = 56;  // int? | Delivery zone id to be updated
-            var deliveryZone = new DeliveryZoneBase(); // DeliveryZoneBase | Delta of delivery zone parameters that need to be changed
+            var storeId = 56;  // int? | 
+            var deliveryZoneId = 56;  // int? | 
+            var deliveryZone = new DeliveryZoneBase(); // DeliveryZoneBase | 
 
             try
             {
-                // Updates the existing delivery zone
                 RestApiResultDeliveryZone result = apiInstance.UpdateDeliveryZone(storeId, deliveryZoneId, deliveryZone);
                 Debug.WriteLine(result);
             }
@@ -246,9 +242,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store Id to which the delivery zone belongs | 
- **deliveryZoneId** | **int?**| Delivery zone id to be updated | 
- **deliveryZone** | [**DeliveryZoneBase**](DeliveryZoneBase.md)| Delta of delivery zone parameters that need to be changed | 
+ **storeId** | **int?**|  | 
+ **deliveryZoneId** | **int?**|  | 
+ **deliveryZone** | [**DeliveryZoneBase**](DeliveryZoneBase.md)|  | 
 
 ### Return type
 

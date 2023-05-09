@@ -25,101 +25,101 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get App store app
+        /// 
         /// </summary>
         /// <remarks>
-        /// App store app must be verified or you are the owner [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>AppStoreApp</returns>
         AppStoreApp GetAppStoreApp (string appStoreAppId);
 
         /// <summary>
-        /// Get App store app
+        /// 
         /// </summary>
         /// <remarks>
-        /// App store app must be verified or you are the owner [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>ApiResponse of AppStoreApp</returns>
         ApiResponse<AppStoreApp> GetAppStoreAppWithHttpInfo (string appStoreAppId);
         /// <summary>
-        /// Get list of App store app summaries
+        /// 
         /// </summary>
         /// <remarks>
-        /// Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="search">Query App store app name</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="excludeNotOwned">Exclude App store apps that user is not the owner off (optional)</param>
+        /// <param name="search"></param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="excludeNotOwned"> (optional)</param>
         /// <returns>RestApiPaginationResultAppStoreAppSummary</returns>
         RestApiPaginationResultAppStoreAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null);
 
         /// <summary>
-        /// Get list of App store app summaries
+        /// 
         /// </summary>
         /// <remarks>
-        /// Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="search">Query App store app name</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="excludeNotOwned">Exclude App store apps that user is not the owner off (optional)</param>
+        /// <param name="search"></param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="excludeNotOwned"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultAppStoreAppSummary</returns>
         ApiResponse<RestApiPaginationResultAppStoreAppSummary> GetAppStoreAppsWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get App store app
+        /// 
         /// </summary>
         /// <remarks>
-        /// App store app must be verified or you are the owner [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>Task of AppStoreApp</returns>
         System.Threading.Tasks.Task<AppStoreApp> GetAppStoreAppAsync (string appStoreAppId);
 
         /// <summary>
-        /// Get App store app
+        /// 
         /// </summary>
         /// <remarks>
-        /// App store app must be verified or you are the owner [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>Task of ApiResponse (AppStoreApp)</returns>
         System.Threading.Tasks.Task<ApiResponse<AppStoreApp>> GetAppStoreAppAsyncWithHttpInfo (string appStoreAppId);
         /// <summary>
-        /// Get list of App store app summaries
+        /// 
         /// </summary>
         /// <remarks>
-        /// Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="search">Query App store app name</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="excludeNotOwned">Exclude App store apps that user is not the owner off (optional)</param>
+        /// <param name="search"></param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="excludeNotOwned"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultAppStoreAppSummary</returns>
         System.Threading.Tasks.Task<RestApiPaginationResultAppStoreAppSummary> GetAppStoreAppsAsync (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null);
 
         /// <summary>
-        /// Get list of App store app summaries
+        /// 
         /// </summary>
         /// <remarks>
-        /// Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="search">Query App store app name</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="excludeNotOwned">Exclude App store apps that user is not the owner off (optional)</param>
+        /// <param name="search"></param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="excludeNotOwned"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultAppStoreAppSummary)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultAppStoreAppSummary>> GetAppStoreAppsAsyncWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null);
         #endregion Asynchronous Operations
@@ -223,10 +223,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get App store app App store app must be verified or you are the owner [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>AppStoreApp</returns>
         public AppStoreApp GetAppStoreApp (string appStoreAppId)
         {
@@ -235,10 +235,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get App store app App store app must be verified or you are the owner [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>ApiResponse of AppStoreApp</returns>
         public ApiResponse< AppStoreApp > GetAppStoreAppWithHttpInfo (string appStoreAppId)
         {
@@ -298,10 +298,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get App store app App store app must be verified or you are the owner [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>Task of AppStoreApp</returns>
         public async System.Threading.Tasks.Task<AppStoreApp> GetAppStoreAppAsync (string appStoreAppId)
         {
@@ -311,10 +311,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get App store app App store app must be verified or you are the owner [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>Task of ApiResponse (AppStoreApp)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AppStoreApp>> GetAppStoreAppAsyncWithHttpInfo (string appStoreAppId)
         {
@@ -374,13 +374,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of App store app summaries Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="search">Query App store app name</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="excludeNotOwned">Exclude App store apps that user is not the owner off (optional)</param>
+        /// <param name="search"></param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="excludeNotOwned"> (optional)</param>
         /// <returns>RestApiPaginationResultAppStoreAppSummary</returns>
         public RestApiPaginationResultAppStoreAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
         {
@@ -389,13 +389,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of App store app summaries Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="search">Query App store app name</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="excludeNotOwned">Exclude App store apps that user is not the owner off (optional)</param>
+        /// <param name="search"></param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="excludeNotOwned"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultAppStoreAppSummary</returns>
         public ApiResponse< RestApiPaginationResultAppStoreAppSummary > GetAppStoreAppsWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
         {
@@ -458,13 +458,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of App store app summaries Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="search">Query App store app name</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="excludeNotOwned">Exclude App store apps that user is not the owner off (optional)</param>
+        /// <param name="search"></param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="excludeNotOwned"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultAppStoreAppSummary</returns>
         public async System.Threading.Tasks.Task<RestApiPaginationResultAppStoreAppSummary> GetAppStoreAppsAsync (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
         {
@@ -474,13 +474,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of App store app summaries Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="search">Query App store app name</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="excludeNotOwned">Exclude App store apps that user is not the owner off (optional)</param>
+        /// <param name="search"></param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="excludeNotOwned"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultAppStoreAppSummary)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultAppStoreAppSummary>> GetAppStoreAppsAsyncWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
         {

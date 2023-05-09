@@ -4,17 +4,17 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DeletePushNotification**](PushNotificationsApi.md#deletepushnotification) | **DELETE** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Push notification to cutomers
-[**GetPushNotifications**](PushNotificationsApi.md#getpushnotifications) | **GET** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
-[**SchedulePushNotification**](PushNotificationsApi.md#schedulepushnotification) | **POST** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
-[**UpdatePushNotification**](PushNotificationsApi.md#updatepushnotification) | **POST** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Update the push notification
+[**DeletePushNotification**](PushNotificationsApi.md#deletepushnotification) | **DELETE** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | 
+[**GetPushNotifications**](PushNotificationsApi.md#getpushnotifications) | **GET** /api/v1.0/{appId}/pushnotifications | 
+[**SchedulePushNotification**](PushNotificationsApi.md#schedulepushnotification) | **POST** /api/v1.0/{appId}/pushnotifications | 
+[**UpdatePushNotification**](PushNotificationsApi.md#updatepushnotification) | **POST** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | 
 
 
 <a name="deletepushnotification"></a>
 # **DeletePushNotification**
 > void DeletePushNotification (string appId, int? scheduledPushNotificationId)
 
-[PRIVATE] Push notification to cutomers
+
 
 ### Example
 ```csharp
@@ -35,11 +35,10 @@ namespace Example
 
             var apiInstance = new PushNotificationsApi();
             var appId = appId_example;  // string | 
-            var scheduledPushNotificationId = 56;  // int? | ID of Scheduled push notifiaction to delete
+            var scheduledPushNotificationId = 56;  // int? | 
 
             try
             {
-                // [PRIVATE] Push notification to cutomers
                 apiInstance.DeletePushNotification(appId, scheduledPushNotificationId);
             }
             catch (Exception e)
@@ -56,7 +55,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **scheduledPushNotificationId** | **int?**| ID of Scheduled push notifiaction to delete | 
+ **scheduledPushNotificationId** | **int?**|  | 
 
 ### Return type
 
@@ -77,7 +76,7 @@ void (empty response body)
 # **GetPushNotifications**
 > RestApiPaginationResultPushNotificationResponse GetPushNotifications (string appId, int? page = null, int? limit = null)
 
-[PRIVATE] Push notification to cutomers
+
 
 ### Example
 ```csharp
@@ -103,7 +102,6 @@ namespace Example
 
             try
             {
-                // [PRIVATE] Push notification to cutomers
                 RestApiPaginationResultPushNotificationResponse result = apiInstance.GetPushNotifications(appId, page, limit);
                 Debug.WriteLine(result);
             }
@@ -143,7 +141,7 @@ Name | Type | Description  | Notes
 # **SchedulePushNotification**
 > RestApiResultPushNotificationResponse SchedulePushNotification (string appId, PushNotificationRequest notification)
 
-[PRIVATE] Push notification to cutomers
+
 
 ### Example
 ```csharp
@@ -163,12 +161,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new PushNotificationsApi();
-            var appId = appId_example;  // string | Application Id
-            var notification = new PushNotificationRequest(); // PushNotificationRequest | Notification to send
+            var appId = appId_example;  // string | 
+            var notification = new PushNotificationRequest(); // PushNotificationRequest | 
 
             try
             {
-                // [PRIVATE] Push notification to cutomers
                 RestApiResultPushNotificationResponse result = apiInstance.SchedulePushNotification(appId, notification);
                 Debug.WriteLine(result);
             }
@@ -185,8 +182,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application Id | 
- **notification** | [**PushNotificationRequest**](PushNotificationRequest.md)| Notification to send | 
+ **appId** | **string**|  | 
+ **notification** | [**PushNotificationRequest**](PushNotificationRequest.md)|  | 
 
 ### Return type
 
@@ -207,7 +204,7 @@ Name | Type | Description  | Notes
 # **UpdatePushNotification**
 > RestApiResultPushNotificationResponse UpdatePushNotification (string appId, int? scheduledPushNotificationId, PushNotificationRequest notification)
 
-[PRIVATE] Update the push notification
+
 
 ### Example
 ```csharp
@@ -227,13 +224,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new PushNotificationsApi();
-            var appId = appId_example;  // string | Application Id
-            var scheduledPushNotificationId = 56;  // int? | Notification Id
-            var notification = new PushNotificationRequest(); // PushNotificationRequest | Notification to send
+            var appId = appId_example;  // string | 
+            var scheduledPushNotificationId = 56;  // int? | 
+            var notification = new PushNotificationRequest(); // PushNotificationRequest | 
 
             try
             {
-                // [PRIVATE] Update the push notification
                 RestApiResultPushNotificationResponse result = apiInstance.UpdatePushNotification(appId, scheduledPushNotificationId, notification);
                 Debug.WriteLine(result);
             }
@@ -250,9 +246,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application Id | 
- **scheduledPushNotificationId** | **int?**| Notification Id | 
- **notification** | [**PushNotificationRequest**](PushNotificationRequest.md)| Notification to send | 
+ **appId** | **string**|  | 
+ **scheduledPushNotificationId** | **int?**|  | 
+ **notification** | [**PushNotificationRequest**](PushNotificationRequest.md)|  | 
 
 ### Return type
 

@@ -25,30 +25,30 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create teammate and send an invite.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="teammate">teammate model</param>
+        /// <param name="appId"></param>
+        /// <param name="teammate"></param>
         /// <returns>RestApiResultTeammate</returns>
         RestApiResultTeammate CreateTeammate (string appId, CreateTeammate teammate);
 
         /// <summary>
-        /// Create teammate and send an invite.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="teammate">teammate model</param>
+        /// <param name="appId"></param>
+        /// <param name="teammate"></param>
         /// <returns>ApiResponse of RestApiResultTeammate</returns>
         ApiResponse<RestApiResultTeammate> CreateTeammateWithHttpInfo (string appId, CreateTeammate teammate);
         /// <summary>
-        /// Delete teammate
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -60,7 +60,7 @@ namespace Flipdish.Api
         void DeleteTeammate (string appId, string id);
 
         /// <summary>
-        /// Delete teammate
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -71,7 +71,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteTeammateWithHttpInfo (string appId, string id);
         /// <summary>
-        /// Get a teammates by email address
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -83,7 +83,7 @@ namespace Flipdish.Api
         RestApiResultTeammate GetTeammateByAppIdAndTeammateId (string appId, string id);
 
         /// <summary>
-        /// Get a teammates by email address
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -94,7 +94,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultTeammate</returns>
         ApiResponse<RestApiResultTeammate> GetTeammateByAppIdAndTeammateIdWithHttpInfo (string appId, string id);
         /// <summary>
-        /// Get all teammates
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -105,7 +105,7 @@ namespace Flipdish.Api
         RestApiArrayResultTeammate GetTeammatesByAppId (string appId);
 
         /// <summary>
-        /// Get all teammates
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -115,7 +115,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultTeammate</returns>
         ApiResponse<RestApiArrayResultTeammate> GetTeammatesByAppIdWithHttpInfo (string appId);
         /// <summary>
-        /// Redeem one-time code from invitation
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -127,7 +127,7 @@ namespace Flipdish.Api
         RestApiResultRedeemInvitationResult RedeemInvitation (string otc, string appId);
 
         /// <summary>
-        /// Redeem one-time code from invitation
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -138,57 +138,57 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultRedeemInvitationResult</returns>
         ApiResponse<RestApiResultRedeemInvitationResult> RedeemInvitationWithHttpInfo (string otc, string appId);
         /// <summary>
-        /// Update teammates (this method does not support Deltas!)
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="id">teammate identifier</param>
-        /// <param name="teammate">teammate model</param>
+        /// <param name="appId"></param>
+        /// <param name="id"></param>
+        /// <param name="teammate"></param>
         /// <returns>RestApiResultTeammate</returns>
         RestApiResultTeammate UpdateTeammate (string appId, string id, TeammateBase teammate);
 
         /// <summary>
-        /// Update teammates (this method does not support Deltas!)
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="id">teammate identifier</param>
-        /// <param name="teammate">teammate model</param>
+        /// <param name="appId"></param>
+        /// <param name="id"></param>
+        /// <param name="teammate"></param>
         /// <returns>ApiResponse of RestApiResultTeammate</returns>
         ApiResponse<RestApiResultTeammate> UpdateTeammateWithHttpInfo (string appId, string id, TeammateBase teammate);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create teammate and send an invite.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="teammate">teammate model</param>
+        /// <param name="appId"></param>
+        /// <param name="teammate"></param>
         /// <returns>Task of RestApiResultTeammate</returns>
         System.Threading.Tasks.Task<RestApiResultTeammate> CreateTeammateAsync (string appId, CreateTeammate teammate);
 
         /// <summary>
-        /// Create teammate and send an invite.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="teammate">teammate model</param>
+        /// <param name="appId"></param>
+        /// <param name="teammate"></param>
         /// <returns>Task of ApiResponse (RestApiResultTeammate)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultTeammate>> CreateTeammateAsyncWithHttpInfo (string appId, CreateTeammate teammate);
         /// <summary>
-        /// Delete teammate
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -200,7 +200,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task DeleteTeammateAsync (string appId, string id);
 
         /// <summary>
-        /// Delete teammate
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -211,7 +211,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTeammateAsyncWithHttpInfo (string appId, string id);
         /// <summary>
-        /// Get a teammates by email address
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -223,7 +223,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultTeammate> GetTeammateByAppIdAndTeammateIdAsync (string appId, string id);
 
         /// <summary>
-        /// Get a teammates by email address
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -234,7 +234,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultTeammate)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultTeammate>> GetTeammateByAppIdAndTeammateIdAsyncWithHttpInfo (string appId, string id);
         /// <summary>
-        /// Get all teammates
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -245,7 +245,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultTeammate> GetTeammatesByAppIdAsync (string appId);
 
         /// <summary>
-        /// Get all teammates
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -255,7 +255,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultTeammate)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultTeammate>> GetTeammatesByAppIdAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// Redeem one-time code from invitation
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -267,7 +267,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultRedeemInvitationResult> RedeemInvitationAsync (string otc, string appId);
 
         /// <summary>
-        /// Redeem one-time code from invitation
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -278,28 +278,28 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultRedeemInvitationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultRedeemInvitationResult>> RedeemInvitationAsyncWithHttpInfo (string otc, string appId);
         /// <summary>
-        /// Update teammates (this method does not support Deltas!)
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="id">teammate identifier</param>
-        /// <param name="teammate">teammate model</param>
+        /// <param name="appId"></param>
+        /// <param name="id"></param>
+        /// <param name="teammate"></param>
         /// <returns>Task of RestApiResultTeammate</returns>
         System.Threading.Tasks.Task<RestApiResultTeammate> UpdateTeammateAsync (string appId, string id, TeammateBase teammate);
 
         /// <summary>
-        /// Update teammates (this method does not support Deltas!)
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="id">teammate identifier</param>
-        /// <param name="teammate">teammate model</param>
+        /// <param name="appId"></param>
+        /// <param name="id"></param>
+        /// <param name="teammate"></param>
         /// <returns>Task of ApiResponse (RestApiResultTeammate)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultTeammate>> UpdateTeammateAsyncWithHttpInfo (string appId, string id, TeammateBase teammate);
         #endregion Asynchronous Operations
@@ -403,11 +403,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create teammate and send an invite. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="teammate">teammate model</param>
+        /// <param name="appId"></param>
+        /// <param name="teammate"></param>
         /// <returns>RestApiResultTeammate</returns>
         public RestApiResultTeammate CreateTeammate (string appId, CreateTeammate teammate)
         {
@@ -416,11 +416,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create teammate and send an invite. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="teammate">teammate model</param>
+        /// <param name="appId"></param>
+        /// <param name="teammate"></param>
         /// <returns>ApiResponse of RestApiResultTeammate</returns>
         public ApiResponse< RestApiResultTeammate > CreateTeammateWithHttpInfo (string appId, CreateTeammate teammate)
         {
@@ -496,11 +496,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create teammate and send an invite. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="teammate">teammate model</param>
+        /// <param name="appId"></param>
+        /// <param name="teammate"></param>
         /// <returns>Task of RestApiResultTeammate</returns>
         public async System.Threading.Tasks.Task<RestApiResultTeammate> CreateTeammateAsync (string appId, CreateTeammate teammate)
         {
@@ -510,11 +510,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create teammate and send an invite. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="teammate">teammate model</param>
+        /// <param name="appId"></param>
+        /// <param name="teammate"></param>
         /// <returns>Task of ApiResponse (RestApiResultTeammate)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultTeammate>> CreateTeammateAsyncWithHttpInfo (string appId, CreateTeammate teammate)
         {
@@ -590,7 +590,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete teammate 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -602,7 +602,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete teammate 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -670,7 +670,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete teammate 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -683,7 +683,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete teammate 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -751,7 +751,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a teammates by email address 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -764,7 +764,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a teammates by email address 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -832,7 +832,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a teammates by email address 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -846,7 +846,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a teammates by email address 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -914,7 +914,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all teammates 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -926,7 +926,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all teammates 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -989,7 +989,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all teammates 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1002,7 +1002,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all teammates 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1065,7 +1065,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Redeem one-time code from invitation 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="otc"></param>
@@ -1078,7 +1078,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Redeem one-time code from invitation 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="otc"></param>
@@ -1146,7 +1146,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Redeem one-time code from invitation 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="otc"></param>
@@ -1160,7 +1160,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Redeem one-time code from invitation 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="otc"></param>
@@ -1228,12 +1228,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update teammates (this method does not support Deltas!) 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="id">teammate identifier</param>
-        /// <param name="teammate">teammate model</param>
+        /// <param name="appId"></param>
+        /// <param name="id"></param>
+        /// <param name="teammate"></param>
         /// <returns>RestApiResultTeammate</returns>
         public RestApiResultTeammate UpdateTeammate (string appId, string id, TeammateBase teammate)
         {
@@ -1242,12 +1242,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update teammates (this method does not support Deltas!) 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="id">teammate identifier</param>
-        /// <param name="teammate">teammate model</param>
+        /// <param name="appId"></param>
+        /// <param name="id"></param>
+        /// <param name="teammate"></param>
         /// <returns>ApiResponse of RestApiResultTeammate</returns>
         public ApiResponse< RestApiResultTeammate > UpdateTeammateWithHttpInfo (string appId, string id, TeammateBase teammate)
         {
@@ -1327,12 +1327,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update teammates (this method does not support Deltas!) 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="id">teammate identifier</param>
-        /// <param name="teammate">teammate model</param>
+        /// <param name="appId"></param>
+        /// <param name="id"></param>
+        /// <param name="teammate"></param>
         /// <returns>Task of RestApiResultTeammate</returns>
         public async System.Threading.Tasks.Task<RestApiResultTeammate> UpdateTeammateAsync (string appId, string id, TeammateBase teammate)
         {
@@ -1342,12 +1342,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update teammates (this method does not support Deltas!) 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="id">teammate identifier</param>
-        /// <param name="teammate">teammate model</param>
+        /// <param name="appId"></param>
+        /// <param name="id"></param>
+        /// <param name="teammate"></param>
         /// <returns>Task of ApiResponse (RestApiResultTeammate)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultTeammate>> UpdateTeammateAsyncWithHttpInfo (string appId, string id, TeammateBase teammate)
         {

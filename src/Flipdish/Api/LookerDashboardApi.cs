@@ -25,7 +25,7 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get all dashboards
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -36,7 +36,7 @@ namespace Flipdish.Api
         void LookerDashboardGetAll (string appId);
 
         /// <summary>
-        /// Get all dashboards
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -48,7 +48,7 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get all dashboards
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -59,7 +59,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task LookerDashboardGetAllAsync (string appId);
 
         /// <summary>
-        /// Get all dashboards
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -169,7 +169,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all dashboards 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -180,7 +180,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all dashboards 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -243,7 +243,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all dashboards 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -255,7 +255,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all dashboards 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>

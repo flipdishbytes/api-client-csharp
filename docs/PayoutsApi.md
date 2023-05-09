@@ -4,20 +4,20 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetPayout**](PayoutsApi.md#getpayout) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId} | Get Payout details broken down by Store
-[**GetPayoutChargebacks**](PayoutsApi.md#getpayoutchargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks | Get list of payout&#39;s chargebacks
-[**GetPayoutOrders**](PayoutsApi.md#getpayoutorders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders | Get list of payout&#39;s orders
-[**GetPayoutOtherCharges**](PayoutsApi.md#getpayoutothercharges) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges | Get list of payout&#39;s other charges
-[**GetPayoutRefunds**](PayoutsApi.md#getpayoutrefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds | Get list of payout&#39;s refunds
-[**GetPayoutSummaries**](PayoutsApi.md#getpayoutsummaries) | **GET** /api/v1.0/{appId}/payouts/summaries | Get list of payout summaries
-[**GetPayouts**](PayoutsApi.md#getpayouts) | **GET** /api/v1.0/{appId}/payouts | Get list of payouts
+[**GetPayout**](PayoutsApi.md#getpayout) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId} | 
+[**GetPayoutChargebacks**](PayoutsApi.md#getpayoutchargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks | 
+[**GetPayoutOrders**](PayoutsApi.md#getpayoutorders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders | 
+[**GetPayoutOtherCharges**](PayoutsApi.md#getpayoutothercharges) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges | 
+[**GetPayoutRefunds**](PayoutsApi.md#getpayoutrefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds | 
+[**GetPayoutSummaries**](PayoutsApi.md#getpayoutsummaries) | **GET** /api/v1.0/{appId}/payouts/summaries | 
+[**GetPayouts**](PayoutsApi.md#getpayouts) | **GET** /api/v1.0/{appId}/payouts | 
 
 
 <a name="getpayout"></a>
 # **GetPayout**
 > PayoutDetail GetPayout (string appId, int? bankAccountId, int? payoutId)
 
-Get Payout details broken down by Store
+
 
 ### Example
 ```csharp
@@ -43,7 +43,6 @@ namespace Example
 
             try
             {
-                // Get Payout details broken down by Store
                 PayoutDetail result = apiInstance.GetPayout(appId, bankAccountId, payoutId);
                 Debug.WriteLine(result);
             }
@@ -83,7 +82,7 @@ Name | Type | Description  | Notes
 # **GetPayoutChargebacks**
 > RestApiPaginationResultPayoutChargeback GetPayoutChargebacks (string appId, int? bankAccountId, int? payoutId, int? page = null, int? limit = null, List<int?> storeIds = null)
 
-Get list of payout's chargebacks
+
 
 ### Example
 ```csharp
@@ -112,7 +111,6 @@ namespace Example
 
             try
             {
-                // Get list of payout's chargebacks
                 RestApiPaginationResultPayoutChargeback result = apiInstance.GetPayoutChargebacks(appId, bankAccountId, payoutId, page, limit, storeIds);
                 Debug.WriteLine(result);
             }
@@ -155,7 +153,7 @@ Name | Type | Description  | Notes
 # **GetPayoutOrders**
 > RestApiPaginationResultPayoutOrder GetPayoutOrders (string appId, int? bankAccountId, int? payoutId, int? page = null, int? limit = null, List<int?> storeIds = null)
 
-Get list of payout's orders
+
 
 ### Example
 ```csharp
@@ -184,7 +182,6 @@ namespace Example
 
             try
             {
-                // Get list of payout's orders
                 RestApiPaginationResultPayoutOrder result = apiInstance.GetPayoutOrders(appId, bankAccountId, payoutId, page, limit, storeIds);
                 Debug.WriteLine(result);
             }
@@ -227,7 +224,7 @@ Name | Type | Description  | Notes
 # **GetPayoutOtherCharges**
 > RestApiPaginationResultPayoutOtherCharge GetPayoutOtherCharges (string appId, int? bankAccountId, int? payoutId, int? page = null, int? limit = null, List<int?> storeIds = null)
 
-Get list of payout's other charges
+
 
 ### Example
 ```csharp
@@ -256,7 +253,6 @@ namespace Example
 
             try
             {
-                // Get list of payout's other charges
                 RestApiPaginationResultPayoutOtherCharge result = apiInstance.GetPayoutOtherCharges(appId, bankAccountId, payoutId, page, limit, storeIds);
                 Debug.WriteLine(result);
             }
@@ -299,7 +295,7 @@ Name | Type | Description  | Notes
 # **GetPayoutRefunds**
 > RestApiPaginationResultPayoutRefund GetPayoutRefunds (string appId, int? bankAccountId, int? payoutId, int? page = null, int? limit = null, List<int?> storeIds = null)
 
-Get list of payout's refunds
+
 
 ### Example
 ```csharp
@@ -328,7 +324,6 @@ namespace Example
 
             try
             {
-                // Get list of payout's refunds
                 RestApiPaginationResultPayoutRefund result = apiInstance.GetPayoutRefunds(appId, bankAccountId, payoutId, page, limit, storeIds);
                 Debug.WriteLine(result);
             }
@@ -371,9 +366,7 @@ Name | Type | Description  | Notes
 # **GetPayoutSummaries**
 > RestApiArrayResultPayoutSummary GetPayoutSummaries (string appId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
 
-Get list of payout summaries
 
-BETA - this endpoint is under development, do not use it in your production system
 
 ### Example
 ```csharp
@@ -401,7 +394,6 @@ namespace Example
 
             try
             {
-                // Get list of payout summaries
                 RestApiArrayResultPayoutSummary result = apiInstance.GetPayoutSummaries(appId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
                 Debug.WriteLine(result);
             }
@@ -443,9 +435,7 @@ Name | Type | Description  | Notes
 # **GetPayouts**
 > RestApiPaginationResultPayout GetPayouts (string appId, DateTime? startDate = null, DateTime? endDate = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
 
-Get list of payouts
 
-BETA - this endpoint is under development, do not use it in your production system
 
 ### Example
 ```csharp
@@ -475,7 +465,6 @@ namespace Example
 
             try
             {
-                // Get list of payouts
                 RestApiPaginationResultPayout result = apiInstance.GetPayouts(appId, startDate, endDate, page, limit, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
                 Debug.WriteLine(result);
             }

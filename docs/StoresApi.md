@@ -4,45 +4,45 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ArchiveStore**](StoresApi.md#archivestore) | **POST** /api/v1.0/stores/{storeId}/archive | Archive store
-[**AssignMenu**](StoresApi.md#assignmenu) | **POST** /api/v1.0/stores/{storeId}/menu/{menuId} | Assign Menu to Store
-[**CloneStore**](StoresApi.md#clonestore) | **POST** /api/v1.0/stores/{storeId}/clone | Clone store with store clone settings
-[**ConfigureStoreServiceCharge**](StoresApi.md#configurestoreservicecharge) | **POST** /api/v1.0/stores/{storeId}/servicecharge | Configure Store Service Charge; Idempotent Operation
-[**CreateBusinessHoursOverrideByStoreId**](StoresApi.md#createbusinesshoursoverridebystoreid) | **POST** /api/v1.0/stores/{storeId}/businesshoursoverrides | Create Business Hours Override for a store
-[**CreateStore**](StoresApi.md#createstore) | **POST** /api/v1.0/stores | Create store with Store Group identifier
-[**DeleteBusinessHoursOverride**](StoresApi.md#deletebusinesshoursoverride) | **DELETE** /api/v1.0/stores/{storeId}/businesshoursoverrides/{businessHoursOverrideId} | Delete Business Hours Override for a store
-[**GetBankAccountForStore**](StoresApi.md#getbankaccountforstore) | **GET** /api/v1.0/stores/{storeId}/bankaccount | Get Stores Bank Account Id
-[**GetBusinessHours**](StoresApi.md#getbusinesshours) | **GET** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Get Business hours
-[**GetBusinessHoursOverrideByStoreId**](StoresApi.md#getbusinesshoursoverridebystoreid) | **GET** /api/v1.0/stores/{storeId}/businesshoursoverrides | Get business hours overrides by store identifier
-[**GetEndOfDayReport**](StoresApi.md#getendofdayreport) | **GET** /api/v1.0/stores/{storeId}/endofdayreport | Get store end of day report
-[**GetPreOrderConfig**](StoresApi.md#getpreorderconfig) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | Get the pre order config for a store, by type
-[**GetPreOrderPreview**](StoresApi.md#getpreorderpreview) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/preview | Get the Preview times of the pre-order configuration
-[**GetProcessingFeeConfigsByStoreId**](StoresApi.md#getprocessingfeeconfigsbystoreid) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | Get processing fee configs by store identifier
-[**GetProcessingFeeConfigsByStoreIdAndPaymentAccountType**](StoresApi.md#getprocessingfeeconfigsbystoreidandpaymentaccounttype) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | Get processing fee configs by store identifier
-[**GetStoreById**](StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
-[**GetStoreFeeConfig**](StoresApi.md#getstorefeeconfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig | Retrieve Store feeConfig
-[**GetStoreHeadersByAppId**](StoresApi.md#getstoreheadersbyappid) | **GET** /api/v1.0/{appId}/stores/header | Get all stores by app name id
-[**GetStoreNetSales**](StoresApi.md#getstorenetsales) | **GET** /api/v1.0/{appId}/stores/stats | Get stores statistics by app name id and storeIds
-[**GetStoreServiceCharge**](StoresApi.md#getstoreservicecharge) | **GET** /api/v1.0/stores/{storeId}/servicecharge | Retrieve Store Service Charge
-[**GetStores**](StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores, excluding archived ones
-[**GetStoresByAppId**](StoresApi.md#getstoresbyappid) | **GET** /api/v1.0/{appId}/stores | Get all stores by app name id
-[**GetStoresByStoreIdWithValidations**](StoresApi.md#getstoresbystoreidwithvalidations) | **GET** /api/v1.0/{appId}/storevalidation/kiosk | Get store validation by storeIds
-[**PublishStore**](StoresApi.md#publishstore) | **POST** /api/v1.0/stores/{storeId}/publish | Publish store
-[**SetBusinessHours**](StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Set Business hours
-[**SetPreOrdeEnabled**](StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | UPDATE pre order config for a store, by type
-[**UnpublishStore**](StoresApi.md#unpublishstore) | **POST** /api/v1.0/stores/{storeId}/unpublish | Unpublish store
-[**UpdatePreOrderConfig**](StoresApi.md#updatepreorderconfig) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | UPDATE pre order config for a store, by type
-[**UpdateStore**](StoresApi.md#updatestore) | **POST** /api/v1.0/stores/{storeId} | Update store by identifier
-[**UpdateStoreAddress**](StoresApi.md#updatestoreaddress) | **POST** /api/v1.0/stores/{storeId}/address | Update store address
-[**UpdateStoreAddressCoordinates**](StoresApi.md#updatestoreaddresscoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | Update store address coordinates
-[**UpdateStoreAddressForm**](StoresApi.md#updatestoreaddressform) | **POST** /api/v1.0/stores/{storeId}/addressform | Update store address
+[**ArchiveStore**](StoresApi.md#archivestore) | **POST** /api/v1.0/stores/{storeId}/archive | 
+[**AssignMenu**](StoresApi.md#assignmenu) | **POST** /api/v1.0/stores/{storeId}/menu/{menuId} | 
+[**CloneStore**](StoresApi.md#clonestore) | **POST** /api/v1.0/stores/{storeId}/clone | 
+[**ConfigureStoreServiceCharge**](StoresApi.md#configurestoreservicecharge) | **POST** /api/v1.0/stores/{storeId}/servicecharge | 
+[**CreateBusinessHoursOverrideByStoreId**](StoresApi.md#createbusinesshoursoverridebystoreid) | **POST** /api/v1.0/stores/{storeId}/businesshoursoverrides | 
+[**CreateStore**](StoresApi.md#createstore) | **POST** /api/v1.0/stores | 
+[**DeleteBusinessHoursOverride**](StoresApi.md#deletebusinesshoursoverride) | **DELETE** /api/v1.0/stores/{storeId}/businesshoursoverrides/{businessHoursOverrideId} | 
+[**GetBankAccountForStore**](StoresApi.md#getbankaccountforstore) | **GET** /api/v1.0/stores/{storeId}/bankaccount | 
+[**GetBusinessHours**](StoresApi.md#getbusinesshours) | **GET** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
+[**GetBusinessHoursOverrideByStoreId**](StoresApi.md#getbusinesshoursoverridebystoreid) | **GET** /api/v1.0/stores/{storeId}/businesshoursoverrides | 
+[**GetEndOfDayReport**](StoresApi.md#getendofdayreport) | **GET** /api/v1.0/stores/{storeId}/endofdayreport | 
+[**GetPreOrderConfig**](StoresApi.md#getpreorderconfig) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | 
+[**GetPreOrderPreview**](StoresApi.md#getpreorderpreview) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/preview | 
+[**GetProcessingFeeConfigsByStoreId**](StoresApi.md#getprocessingfeeconfigsbystoreid) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | 
+[**GetProcessingFeeConfigsByStoreIdAndPaymentAccountType**](StoresApi.md#getprocessingfeeconfigsbystoreidandpaymentaccounttype) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | 
+[**GetStoreById**](StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | 
+[**GetStoreFeeConfig**](StoresApi.md#getstorefeeconfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig | 
+[**GetStoreHeadersByAppId**](StoresApi.md#getstoreheadersbyappid) | **GET** /api/v1.0/{appId}/stores/header | 
+[**GetStoreNetSales**](StoresApi.md#getstorenetsales) | **GET** /api/v1.0/{appId}/stores/stats | 
+[**GetStoreServiceCharge**](StoresApi.md#getstoreservicecharge) | **GET** /api/v1.0/stores/{storeId}/servicecharge | 
+[**GetStores**](StoresApi.md#getstores) | **GET** /api/v1.0/stores | 
+[**GetStoresByAppId**](StoresApi.md#getstoresbyappid) | **GET** /api/v1.0/{appId}/stores | 
+[**GetStoresByStoreIdWithValidations**](StoresApi.md#getstoresbystoreidwithvalidations) | **GET** /api/v1.0/{appId}/storevalidation/kiosk | 
+[**PublishStore**](StoresApi.md#publishstore) | **POST** /api/v1.0/stores/{storeId}/publish | 
+[**SetBusinessHours**](StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
+[**SetPreOrdeEnabled**](StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
+[**UnpublishStore**](StoresApi.md#unpublishstore) | **POST** /api/v1.0/stores/{storeId}/unpublish | 
+[**UpdatePreOrderConfig**](StoresApi.md#updatepreorderconfig) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | 
+[**UpdateStore**](StoresApi.md#updatestore) | **POST** /api/v1.0/stores/{storeId} | 
+[**UpdateStoreAddress**](StoresApi.md#updatestoreaddress) | **POST** /api/v1.0/stores/{storeId}/address | 
+[**UpdateStoreAddressCoordinates**](StoresApi.md#updatestoreaddresscoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | 
+[**UpdateStoreAddressForm**](StoresApi.md#updatestoreaddressform) | **POST** /api/v1.0/stores/{storeId}/addressform | 
 
 
 <a name="archivestore"></a>
 # **ArchiveStore**
 > void ArchiveStore (int? storeId)
 
-Archive store
+
 
 ### Example
 ```csharp
@@ -62,11 +62,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Archive store
                 apiInstance.ArchiveStore(storeId);
             }
             catch (Exception e)
@@ -82,7 +81,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -103,7 +102,7 @@ void (empty response body)
 # **AssignMenu**
 > RestApiArrayResultRestApiDefaultResponse AssignMenu (int? storeId, int? menuId)
 
-Assign Menu to Store
+
 
 ### Example
 ```csharp
@@ -123,12 +122,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
-            var menuId = 56;  // int? | Id of Menu to assign to store
+            var storeId = 56;  // int? | 
+            var menuId = 56;  // int? | 
 
             try
             {
-                // Assign Menu to Store
                 RestApiArrayResultRestApiDefaultResponse result = apiInstance.AssignMenu(storeId, menuId);
                 Debug.WriteLine(result);
             }
@@ -145,8 +143,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
- **menuId** | **int?**| Id of Menu to assign to store | 
+ **storeId** | **int?**|  | 
+ **menuId** | **int?**|  | 
 
 ### Return type
 
@@ -167,7 +165,7 @@ Name | Type | Description  | Notes
 # **CloneStore**
 > RestApiResultStore CloneStore (int? storeId, StoreCloneSettings settings)
 
-Clone store with store clone settings
+
 
 ### Example
 ```csharp
@@ -187,12 +185,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
-            var settings = new StoreCloneSettings(); // StoreCloneSettings | Settings for cloning the store
+            var storeId = 56;  // int? | 
+            var settings = new StoreCloneSettings(); // StoreCloneSettings | 
 
             try
             {
-                // Clone store with store clone settings
                 RestApiResultStore result = apiInstance.CloneStore(storeId, settings);
                 Debug.WriteLine(result);
             }
@@ -209,8 +206,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
- **settings** | [**StoreCloneSettings**](StoreCloneSettings.md)| Settings for cloning the store | 
+ **storeId** | **int?**|  | 
+ **settings** | [**StoreCloneSettings**](StoreCloneSettings.md)|  | 
 
 ### Return type
 
@@ -231,7 +228,7 @@ Name | Type | Description  | Notes
 # **ConfigureStoreServiceCharge**
 > RestApiResultServiceCharge ConfigureStoreServiceCharge (int? storeId, ServiceCharge serviceCharge)
 
-Configure Store Service Charge; Idempotent Operation
+
 
 ### Example
 ```csharp
@@ -251,12 +248,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
-            var serviceCharge = new ServiceCharge(); // ServiceCharge | Service charge
+            var storeId = 56;  // int? | 
+            var serviceCharge = new ServiceCharge(); // ServiceCharge | 
 
             try
             {
-                // Configure Store Service Charge; Idempotent Operation
                 RestApiResultServiceCharge result = apiInstance.ConfigureStoreServiceCharge(storeId, serviceCharge);
                 Debug.WriteLine(result);
             }
@@ -273,8 +269,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
- **serviceCharge** | [**ServiceCharge**](ServiceCharge.md)| Service charge | 
+ **storeId** | **int?**|  | 
+ **serviceCharge** | [**ServiceCharge**](ServiceCharge.md)|  | 
 
 ### Return type
 
@@ -295,7 +291,7 @@ Name | Type | Description  | Notes
 # **CreateBusinessHoursOverrideByStoreId**
 > RestApiResultBusinessHoursOverride CreateBusinessHoursOverrideByStoreId (int? storeId, BusinessHoursOverrideBase businessHoursOverride)
 
-Create Business Hours Override for a store
+
 
 ### Example
 ```csharp
@@ -315,12 +311,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
-            var businessHoursOverride = new BusinessHoursOverrideBase(); // BusinessHoursOverrideBase | Business Hours Override
+            var storeId = 56;  // int? | 
+            var businessHoursOverride = new BusinessHoursOverrideBase(); // BusinessHoursOverrideBase | 
 
             try
             {
-                // Create Business Hours Override for a store
                 RestApiResultBusinessHoursOverride result = apiInstance.CreateBusinessHoursOverrideByStoreId(storeId, businessHoursOverride);
                 Debug.WriteLine(result);
             }
@@ -337,8 +332,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
- **businessHoursOverride** | [**BusinessHoursOverrideBase**](BusinessHoursOverrideBase.md)| Business Hours Override | 
+ **storeId** | **int?**|  | 
+ **businessHoursOverride** | [**BusinessHoursOverrideBase**](BusinessHoursOverrideBase.md)|  | 
 
 ### Return type
 
@@ -359,7 +354,7 @@ Name | Type | Description  | Notes
 # **CreateStore**
 > RestApiResultStore CreateStore (int? storeGroupId, StoreCreateBase store)
 
-Create store with Store Group identifier
+
 
 ### Example
 ```csharp
@@ -379,12 +374,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeGroupId = 56;  // int? | Store Group identifier
-            var store = new StoreCreateBase(); // StoreCreateBase | Store
+            var storeGroupId = 56;  // int? | 
+            var store = new StoreCreateBase(); // StoreCreateBase | 
 
             try
             {
-                // Create store with Store Group identifier
                 RestApiResultStore result = apiInstance.CreateStore(storeGroupId, store);
                 Debug.WriteLine(result);
             }
@@ -401,8 +395,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeGroupId** | **int?**| Store Group identifier | 
- **store** | [**StoreCreateBase**](StoreCreateBase.md)| Store | 
+ **storeGroupId** | **int?**|  | 
+ **store** | [**StoreCreateBase**](StoreCreateBase.md)|  | 
 
 ### Return type
 
@@ -423,7 +417,7 @@ Name | Type | Description  | Notes
 # **DeleteBusinessHoursOverride**
 > RestApiArrayResultRestApiDefaultResponse DeleteBusinessHoursOverride (int? storeId, int? businessHoursOverrideId)
 
-Delete Business Hours Override for a store
+
 
 ### Example
 ```csharp
@@ -448,7 +442,6 @@ namespace Example
 
             try
             {
-                // Delete Business Hours Override for a store
                 RestApiArrayResultRestApiDefaultResponse result = apiInstance.DeleteBusinessHoursOverride(storeId, businessHoursOverrideId);
                 Debug.WriteLine(result);
             }
@@ -487,7 +480,7 @@ Name | Type | Description  | Notes
 # **GetBankAccountForStore**
 > RestApiResultAssignedBankAccount GetBankAccountForStore (int? storeId)
 
-Get Stores Bank Account Id
+
 
 ### Example
 ```csharp
@@ -507,11 +500,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Get Stores Bank Account Id
                 RestApiResultAssignedBankAccount result = apiInstance.GetBankAccountForStore(storeId);
                 Debug.WriteLine(result);
             }
@@ -528,7 +520,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -549,7 +541,7 @@ Name | Type | Description  | Notes
 # **GetBusinessHours**
 > RestApiArrayResultBusinessHoursPeriod GetBusinessHours (int? storeId, string deliveryType)
 
-Get Business hours
+
 
 ### Example
 ```csharp
@@ -569,12 +561,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
-            var deliveryType = deliveryType_example;  // string | Delivery type
+            var storeId = 56;  // int? | 
+            var deliveryType = deliveryType_example;  // string | 
 
             try
             {
-                // Get Business hours
                 RestApiArrayResultBusinessHoursPeriod result = apiInstance.GetBusinessHours(storeId, deliveryType);
                 Debug.WriteLine(result);
             }
@@ -591,8 +582,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
- **deliveryType** | **string**| Delivery type | 
+ **storeId** | **int?**|  | 
+ **deliveryType** | **string**|  | 
 
 ### Return type
 
@@ -613,7 +604,7 @@ Name | Type | Description  | Notes
 # **GetBusinessHoursOverrideByStoreId**
 > RestApiPaginationResultBusinessHoursOverride GetBusinessHoursOverrideByStoreId (int? storeId, DateTime? after = null, int? page = null, int? limit = null)
 
-Get business hours overrides by store identifier
+
 
 ### Example
 ```csharp
@@ -633,14 +624,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
-            var after = 2013-10-20T19:20:30+01:00;  // DateTime? | Return results that ended after this datetime. Default value is the current datetime. (optional) 
-            var page = 56;  // int? | Requested page index (optional) 
-            var limit = 56;  // int? | Requested page limit (optional) 
+            var storeId = 56;  // int? | 
+            var after = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+            var page = 56;  // int? |  (optional) 
+            var limit = 56;  // int? |  (optional) 
 
             try
             {
-                // Get business hours overrides by store identifier
                 RestApiPaginationResultBusinessHoursOverride result = apiInstance.GetBusinessHoursOverrideByStoreId(storeId, after, page, limit);
                 Debug.WriteLine(result);
             }
@@ -657,10 +647,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
- **after** | **DateTime?**| Return results that ended after this datetime. Default value is the current datetime. | [optional] 
- **page** | **int?**| Requested page index | [optional] 
- **limit** | **int?**| Requested page limit | [optional] 
+ **storeId** | **int?**|  | 
+ **after** | **DateTime?**|  | [optional] 
+ **page** | **int?**|  | [optional] 
+ **limit** | **int?**|  | [optional] 
 
 ### Return type
 
@@ -681,7 +671,7 @@ Name | Type | Description  | Notes
 # **GetEndOfDayReport**
 > RestApiResultStoreEndOfDayReport GetEndOfDayReport (int? storeId, DateTime? date = null)
 
-Get store end of day report
+
 
 ### Example
 ```csharp
@@ -701,12 +691,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
-            var date = 2013-10-20T19:20:30+01:00;  // DateTime? | Store identifier (optional) 
+            var storeId = 56;  // int? | 
+            var date = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
 
             try
             {
-                // Get store end of day report
                 RestApiResultStoreEndOfDayReport result = apiInstance.GetEndOfDayReport(storeId, date);
                 Debug.WriteLine(result);
             }
@@ -723,8 +712,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
- **date** | **DateTime?**| Store identifier | [optional] 
+ **storeId** | **int?**|  | 
+ **date** | **DateTime?**|  | [optional] 
 
 ### Return type
 
@@ -745,7 +734,7 @@ Name | Type | Description  | Notes
 # **GetPreOrderConfig**
 > RestApiResultPreOrderConfig GetPreOrderConfig (int? storeId, string deliveryType)
 
-Get the pre order config for a store, by type
+
 
 ### Example
 ```csharp
@@ -765,12 +754,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
-            var deliveryType = deliveryType_example;  // string | \"delivery\" or \"pickup\"
+            var storeId = 56;  // int? | 
+            var deliveryType = deliveryType_example;  // string | 
 
             try
             {
-                // Get the pre order config for a store, by type
                 RestApiResultPreOrderConfig result = apiInstance.GetPreOrderConfig(storeId, deliveryType);
                 Debug.WriteLine(result);
             }
@@ -787,8 +775,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
- **deliveryType** | **string**| \&quot;delivery\&quot; or \&quot;pickup\&quot; | 
+ **storeId** | **int?**|  | 
+ **deliveryType** | **string**|  | 
 
 ### Return type
 
@@ -809,7 +797,7 @@ Name | Type | Description  | Notes
 # **GetPreOrderPreview**
 > RestApiArrayResultPreOrderTime GetPreOrderPreview (int? storeId, string deliveryType, int? preOrderConfigLeadTimeMinutes = null, int? preOrderConfigIntervalMinutes = null, int? preOrderConfigMaxOrderAheadDays = null, bool? preOrderConfigIncludeAsap = null, bool? preOrderConfigIncludeMoreGranularInitialTime = null, string preOrderConfigCutOffTimePreviousDayBasic = null, string preOrderConfigCutOffTimeCurrentDayBasic = null, string preOrderConfigPreOrderTimeDisplayType = null, bool? preOrderConfigAlwaysAppearOpen = null, bool? preOrderConfigRequireExplicitSelectAlways = null)
 
-Get the Preview times of the pre-order configuration
+
 
 ### Example
 ```csharp
@@ -829,8 +817,8 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
-            var deliveryType = deliveryType_example;  // string | \"delivery\" or \"pickup\"
+            var storeId = 56;  // int? | 
+            var deliveryType = deliveryType_example;  // string | 
             var preOrderConfigLeadTimeMinutes = 56;  // int? | Lead Time in Minutes (optional) 
             var preOrderConfigIntervalMinutes = 56;  // int? | Interval in minutes (optional) 
             var preOrderConfigMaxOrderAheadDays = 56;  // int? | Max Days to order ahead (optional) 
@@ -844,7 +832,6 @@ namespace Example
 
             try
             {
-                // Get the Preview times of the pre-order configuration
                 RestApiArrayResultPreOrderTime result = apiInstance.GetPreOrderPreview(storeId, deliveryType, preOrderConfigLeadTimeMinutes, preOrderConfigIntervalMinutes, preOrderConfigMaxOrderAheadDays, preOrderConfigIncludeAsap, preOrderConfigIncludeMoreGranularInitialTime, preOrderConfigCutOffTimePreviousDayBasic, preOrderConfigCutOffTimeCurrentDayBasic, preOrderConfigPreOrderTimeDisplayType, preOrderConfigAlwaysAppearOpen, preOrderConfigRequireExplicitSelectAlways);
                 Debug.WriteLine(result);
             }
@@ -861,8 +848,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
- **deliveryType** | **string**| \&quot;delivery\&quot; or \&quot;pickup\&quot; | 
+ **storeId** | **int?**|  | 
+ **deliveryType** | **string**|  | 
  **preOrderConfigLeadTimeMinutes** | **int?**| Lead Time in Minutes | [optional] 
  **preOrderConfigIntervalMinutes** | **int?**| Interval in minutes | [optional] 
  **preOrderConfigMaxOrderAheadDays** | **int?**| Max Days to order ahead | [optional] 
@@ -893,7 +880,7 @@ Name | Type | Description  | Notes
 # **GetProcessingFeeConfigsByStoreId**
 > RestApiArrayResultProcessingFeeConfig GetProcessingFeeConfigsByStoreId (int? storeId, string appNameId = null)
 
-Get processing fee configs by store identifier
+
 
 ### Example
 ```csharp
@@ -913,12 +900,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
-            var appNameId = appNameId_example;  // string | App Name Id(Not used, still here for compatability reasons) (optional) 
+            var storeId = 56;  // int? | 
+            var appNameId = appNameId_example;  // string |  (optional) 
 
             try
             {
-                // Get processing fee configs by store identifier
                 RestApiArrayResultProcessingFeeConfig result = apiInstance.GetProcessingFeeConfigsByStoreId(storeId, appNameId);
                 Debug.WriteLine(result);
             }
@@ -935,8 +921,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
- **appNameId** | **string**| App Name Id(Not used, still here for compatability reasons) | [optional] 
+ **storeId** | **int?**|  | 
+ **appNameId** | **string**|  | [optional] 
 
 ### Return type
 
@@ -957,7 +943,7 @@ Name | Type | Description  | Notes
 # **GetProcessingFeeConfigsByStoreIdAndPaymentAccountType**
 > RestApiResultProcessingFeeConfig GetProcessingFeeConfigsByStoreIdAndPaymentAccountType (int? storeId, string paymentAccountType, string appNameId = null)
 
-Get processing fee configs by store identifier
+
 
 ### Example
 ```csharp
@@ -977,13 +963,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
+            var storeId = 56;  // int? | 
             var paymentAccountType = paymentAccountType_example;  // string | 
-            var appNameId = appNameId_example;  // string | App Name Id(Not used, still here for compatability reasons) (optional) 
+            var appNameId = appNameId_example;  // string |  (optional) 
 
             try
             {
-                // Get processing fee configs by store identifier
                 RestApiResultProcessingFeeConfig result = apiInstance.GetProcessingFeeConfigsByStoreIdAndPaymentAccountType(storeId, paymentAccountType, appNameId);
                 Debug.WriteLine(result);
             }
@@ -1000,9 +985,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
+ **storeId** | **int?**|  | 
  **paymentAccountType** | **string**|  | 
- **appNameId** | **string**| App Name Id(Not used, still here for compatability reasons) | [optional] 
+ **appNameId** | **string**|  | [optional] 
 
 ### Return type
 
@@ -1023,7 +1008,7 @@ Name | Type | Description  | Notes
 # **GetStoreById**
 > RestApiResultStore GetStoreById (int? storeId)
 
-Get store by identifier
+
 
 ### Example
 ```csharp
@@ -1043,11 +1028,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Get store by identifier
                 RestApiResultStore result = apiInstance.GetStoreById(storeId);
                 Debug.WriteLine(result);
             }
@@ -1064,7 +1048,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -1085,7 +1069,7 @@ Name | Type | Description  | Notes
 # **GetStoreFeeConfig**
 > StoreFeeConfig GetStoreFeeConfig (int? storeId)
 
-Retrieve Store feeConfig
+
 
 ### Example
 ```csharp
@@ -1105,11 +1089,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Retrieve Store feeConfig
                 StoreFeeConfig result = apiInstance.GetStoreFeeConfig(storeId);
                 Debug.WriteLine(result);
             }
@@ -1126,7 +1109,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -1147,7 +1130,7 @@ Name | Type | Description  | Notes
 # **GetStoreHeadersByAppId**
 > RestApiPaginationResultStoreHeader GetStoreHeadersByAppId (string appId, string storeNameQuery = null, int? page = null, int? limit = null)
 
-Get all stores by app name id
+
 
 ### Example
 ```csharp
@@ -1167,14 +1150,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var appId = appId_example;  // string | App Name Id
+            var appId = appId_example;  // string | 
             var storeNameQuery = storeNameQuery_example;  // string |  (optional) 
             var page = 56;  // int? |  (optional) 
             var limit = 56;  // int? |  (optional) 
 
             try
             {
-                // Get all stores by app name id
                 RestApiPaginationResultStoreHeader result = apiInstance.GetStoreHeadersByAppId(appId, storeNameQuery, page, limit);
                 Debug.WriteLine(result);
             }
@@ -1191,7 +1173,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
+ **appId** | **string**|  | 
  **storeNameQuery** | **string**|  | [optional] 
  **page** | **int?**|  | [optional] 
  **limit** | **int?**|  | [optional] 
@@ -1215,7 +1197,7 @@ Name | Type | Description  | Notes
 # **GetStoreNetSales**
 > RestApiArrayResultStoreStatistics GetStoreNetSales (string appId, List<int?> storeId)
 
-Get stores statistics by app name id and storeIds
+
 
 ### Example
 ```csharp
@@ -1235,12 +1217,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var appId = appId_example;  // string | App Name Id
-            var storeId = new List<int?>(); // List<int?> | Store Ids
+            var appId = appId_example;  // string | 
+            var storeId = new List<int?>(); // List<int?> | 
 
             try
             {
-                // Get stores statistics by app name id and storeIds
                 RestApiArrayResultStoreStatistics result = apiInstance.GetStoreNetSales(appId, storeId);
                 Debug.WriteLine(result);
             }
@@ -1257,8 +1238,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
- **storeId** | [**List&lt;int?&gt;**](int?.md)| Store Ids | 
+ **appId** | **string**|  | 
+ **storeId** | [**List&lt;int?&gt;**](int?.md)|  | 
 
 ### Return type
 
@@ -1279,7 +1260,7 @@ Name | Type | Description  | Notes
 # **GetStoreServiceCharge**
 > ServiceCharge GetStoreServiceCharge (int? storeId)
 
-Retrieve Store Service Charge
+
 
 ### Example
 ```csharp
@@ -1299,11 +1280,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Retrieve Store Service Charge
                 ServiceCharge result = apiInstance.GetStoreServiceCharge(storeId);
                 Debug.WriteLine(result);
             }
@@ -1320,7 +1300,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -1341,7 +1321,7 @@ Name | Type | Description  | Notes
 # **GetStores**
 > RestApiPaginationResultStore GetStores (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null)
 
-Get all stores, excluding archived ones
+
 
 ### Example
 ```csharp
@@ -1361,14 +1341,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var searchQuery = searchQuery_example;  // string | Search query (optional) 
-            var page = 56;  // int? | Requested page index (optional) 
-            var limit = 56;  // int? | Requested page limit (optional) 
-            var storeGroupId = 56;  // int? | Store Group Id (optional) 
+            var searchQuery = searchQuery_example;  // string |  (optional) 
+            var page = 56;  // int? |  (optional) 
+            var limit = 56;  // int? |  (optional) 
+            var storeGroupId = 56;  // int? |  (optional) 
 
             try
             {
-                // Get all stores, excluding archived ones
                 RestApiPaginationResultStore result = apiInstance.GetStores(searchQuery, page, limit, storeGroupId);
                 Debug.WriteLine(result);
             }
@@ -1385,10 +1364,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **searchQuery** | **string**| Search query | [optional] 
- **page** | **int?**| Requested page index | [optional] 
- **limit** | **int?**| Requested page limit | [optional] 
- **storeGroupId** | **int?**| Store Group Id | [optional] 
+ **searchQuery** | **string**|  | [optional] 
+ **page** | **int?**|  | [optional] 
+ **limit** | **int?**|  | [optional] 
+ **storeGroupId** | **int?**|  | [optional] 
 
 ### Return type
 
@@ -1409,7 +1388,7 @@ Name | Type | Description  | Notes
 # **GetStoresByAppId**
 > RestApiPaginationResultStore GetStoresByAppId (string appId, string searchQuery = null, int? page = null, int? limit = null)
 
-Get all stores by app name id
+
 
 ### Example
 ```csharp
@@ -1429,14 +1408,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var appId = appId_example;  // string | App Name Id
-            var searchQuery = searchQuery_example;  // string | Search query (optional) 
-            var page = 56;  // int? | Requested page index (optional) 
-            var limit = 56;  // int? | Requested page limit (optional) 
+            var appId = appId_example;  // string | 
+            var searchQuery = searchQuery_example;  // string |  (optional) 
+            var page = 56;  // int? |  (optional) 
+            var limit = 56;  // int? |  (optional) 
 
             try
             {
-                // Get all stores by app name id
                 RestApiPaginationResultStore result = apiInstance.GetStoresByAppId(appId, searchQuery, page, limit);
                 Debug.WriteLine(result);
             }
@@ -1453,10 +1431,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
- **searchQuery** | **string**| Search query | [optional] 
- **page** | **int?**| Requested page index | [optional] 
- **limit** | **int?**| Requested page limit | [optional] 
+ **appId** | **string**|  | 
+ **searchQuery** | **string**|  | [optional] 
+ **page** | **int?**|  | [optional] 
+ **limit** | **int?**|  | [optional] 
 
 ### Return type
 
@@ -1477,7 +1455,7 @@ Name | Type | Description  | Notes
 # **GetStoresByStoreIdWithValidations**
 > RestApiPaginationResultStoreValidationConfig GetStoresByStoreIdWithValidations (List<int?> storeId, string appId, int? page = null, int? limit = null)
 
-Get store validation by storeIds
+
 
 ### Example
 ```csharp
@@ -1497,14 +1475,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = new List<int?>(); // List<int?> | Store identifier
+            var storeId = new List<int?>(); // List<int?> | 
             var appId = appId_example;  // string | 
-            var page = 56;  // int? | Requested page index (optional) 
-            var limit = 56;  // int? | Requested page limit (optional) 
+            var page = 56;  // int? |  (optional) 
+            var limit = 56;  // int? |  (optional) 
 
             try
             {
-                // Get store validation by storeIds
                 RestApiPaginationResultStoreValidationConfig result = apiInstance.GetStoresByStoreIdWithValidations(storeId, appId, page, limit);
                 Debug.WriteLine(result);
             }
@@ -1521,10 +1498,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | [**List&lt;int?&gt;**](int?.md)| Store identifier | 
+ **storeId** | [**List&lt;int?&gt;**](int?.md)|  | 
  **appId** | **string**|  | 
- **page** | **int?**| Requested page index | [optional] 
- **limit** | **int?**| Requested page limit | [optional] 
+ **page** | **int?**|  | [optional] 
+ **limit** | **int?**|  | [optional] 
 
 ### Return type
 
@@ -1545,7 +1522,7 @@ Name | Type | Description  | Notes
 # **PublishStore**
 > void PublishStore (int? storeId)
 
-Publish store
+
 
 ### Example
 ```csharp
@@ -1565,11 +1542,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Publish store
                 apiInstance.PublishStore(storeId);
             }
             catch (Exception e)
@@ -1585,7 +1561,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -1606,7 +1582,7 @@ void (empty response body)
 # **SetBusinessHours**
 > RestApiResultBusinessHoursPeriod SetBusinessHours (int? storeId, string deliveryType, BusinessHoursPeriodBase businessHoursPeriod)
 
-Set Business hours
+
 
 ### Example
 ```csharp
@@ -1626,13 +1602,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
-            var deliveryType = deliveryType_example;  // string | Delivery type
-            var businessHoursPeriod = new BusinessHoursPeriodBase(); // BusinessHoursPeriodBase | Business Hours Period
+            var storeId = 56;  // int? | 
+            var deliveryType = deliveryType_example;  // string | 
+            var businessHoursPeriod = new BusinessHoursPeriodBase(); // BusinessHoursPeriodBase | 
 
             try
             {
-                // Set Business hours
                 RestApiResultBusinessHoursPeriod result = apiInstance.SetBusinessHours(storeId, deliveryType, businessHoursPeriod);
                 Debug.WriteLine(result);
             }
@@ -1649,9 +1624,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
- **deliveryType** | **string**| Delivery type | 
- **businessHoursPeriod** | [**BusinessHoursPeriodBase**](BusinessHoursPeriodBase.md)| Business Hours Period | 
+ **storeId** | **int?**|  | 
+ **deliveryType** | **string**|  | 
+ **businessHoursPeriod** | [**BusinessHoursPeriodBase**](BusinessHoursPeriodBase.md)|  | 
 
 ### Return type
 
@@ -1672,7 +1647,7 @@ Name | Type | Description  | Notes
 # **SetPreOrdeEnabled**
 > RestApiArrayResultRestApiDefaultResponse SetPreOrdeEnabled (int? storeId, string deliveryType, bool? enabled)
 
-UPDATE pre order config for a store, by type
+
 
 ### Example
 ```csharp
@@ -1692,13 +1667,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
-            var deliveryType = deliveryType_example;  // string | \"delivery\" or \"pickup\"
-            var enabled = true;  // bool? | Update pre order config values
+            var storeId = 56;  // int? | 
+            var deliveryType = deliveryType_example;  // string | 
+            var enabled = true;  // bool? | 
 
             try
             {
-                // UPDATE pre order config for a store, by type
                 RestApiArrayResultRestApiDefaultResponse result = apiInstance.SetPreOrdeEnabled(storeId, deliveryType, enabled);
                 Debug.WriteLine(result);
             }
@@ -1715,9 +1689,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
- **deliveryType** | **string**| \&quot;delivery\&quot; or \&quot;pickup\&quot; | 
- **enabled** | **bool?**| Update pre order config values | 
+ **storeId** | **int?**|  | 
+ **deliveryType** | **string**|  | 
+ **enabled** | **bool?**|  | 
 
 ### Return type
 
@@ -1738,7 +1712,7 @@ Name | Type | Description  | Notes
 # **UnpublishStore**
 > void UnpublishStore (int? storeId)
 
-Unpublish store
+
 
 ### Example
 ```csharp
@@ -1758,11 +1732,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Unpublish store
                 apiInstance.UnpublishStore(storeId);
             }
             catch (Exception e)
@@ -1778,7 +1751,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -1799,7 +1772,7 @@ void (empty response body)
 # **UpdatePreOrderConfig**
 > RestApiArrayResultRestApiDefaultResponse UpdatePreOrderConfig (int? storeId, string deliveryType, PreOrderConfig preOrderConfig)
 
-UPDATE pre order config for a store, by type
+
 
 ### Example
 ```csharp
@@ -1819,13 +1792,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
-            var deliveryType = deliveryType_example;  // string | \"delivery\" or \"pickup\"
-            var preOrderConfig = new PreOrderConfig(); // PreOrderConfig | Update pre order config values
+            var storeId = 56;  // int? | 
+            var deliveryType = deliveryType_example;  // string | 
+            var preOrderConfig = new PreOrderConfig(); // PreOrderConfig | 
 
             try
             {
-                // UPDATE pre order config for a store, by type
                 RestApiArrayResultRestApiDefaultResponse result = apiInstance.UpdatePreOrderConfig(storeId, deliveryType, preOrderConfig);
                 Debug.WriteLine(result);
             }
@@ -1842,9 +1814,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
- **deliveryType** | **string**| \&quot;delivery\&quot; or \&quot;pickup\&quot; | 
- **preOrderConfig** | [**PreOrderConfig**](PreOrderConfig.md)| Update pre order config values | 
+ **storeId** | **int?**|  | 
+ **deliveryType** | **string**|  | 
+ **preOrderConfig** | [**PreOrderConfig**](PreOrderConfig.md)|  | 
 
 ### Return type
 
@@ -1865,7 +1837,7 @@ Name | Type | Description  | Notes
 # **UpdateStore**
 > RestApiResultStore UpdateStore (int? storeId, StoreBase store)
 
-Update store by identifier
+
 
 ### Example
 ```csharp
@@ -1885,12 +1857,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store Group identifier
-            var store = new StoreBase(); // StoreBase | Store
+            var storeId = 56;  // int? | 
+            var store = new StoreBase(); // StoreBase | 
 
             try
             {
-                // Update store by identifier
                 RestApiResultStore result = apiInstance.UpdateStore(storeId, store);
                 Debug.WriteLine(result);
             }
@@ -1907,8 +1878,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store Group identifier | 
- **store** | [**StoreBase**](StoreBase.md)| Store | 
+ **storeId** | **int?**|  | 
+ **store** | [**StoreBase**](StoreBase.md)|  | 
 
 ### Return type
 
@@ -1929,7 +1900,7 @@ Name | Type | Description  | Notes
 # **UpdateStoreAddress**
 > RestApiResultStoreAddress UpdateStoreAddress (int? storeId, StoreAddressBase storeAddress)
 
-Update store address
+
 
 ### Example
 ```csharp
@@ -1949,12 +1920,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
-            var storeAddress = new StoreAddressBase(); // StoreAddressBase | Store address
+            var storeId = 56;  // int? | 
+            var storeAddress = new StoreAddressBase(); // StoreAddressBase | 
 
             try
             {
-                // Update store address
                 RestApiResultStoreAddress result = apiInstance.UpdateStoreAddress(storeId, storeAddress);
                 Debug.WriteLine(result);
             }
@@ -1971,8 +1941,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
- **storeAddress** | [**StoreAddressBase**](StoreAddressBase.md)| Store address | 
+ **storeId** | **int?**|  | 
+ **storeAddress** | [**StoreAddressBase**](StoreAddressBase.md)|  | 
 
 ### Return type
 
@@ -1993,7 +1963,7 @@ Name | Type | Description  | Notes
 # **UpdateStoreAddressCoordinates**
 > RestApiResultCoordinates UpdateStoreAddressCoordinates (int? storeId, Coordinates coordinates, string appNameId = null)
 
-Update store address coordinates
+
 
 ### Example
 ```csharp
@@ -2013,13 +1983,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
-            var coordinates = new Coordinates(); // Coordinates | Store address coordinates
-            var appNameId = appNameId_example;  // string | App Name Id(Not used, still here for compatability reasons) (optional) 
+            var storeId = 56;  // int? | 
+            var coordinates = new Coordinates(); // Coordinates | 
+            var appNameId = appNameId_example;  // string |  (optional) 
 
             try
             {
-                // Update store address coordinates
                 RestApiResultCoordinates result = apiInstance.UpdateStoreAddressCoordinates(storeId, coordinates, appNameId);
                 Debug.WriteLine(result);
             }
@@ -2036,9 +2005,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
- **coordinates** | [**Coordinates**](Coordinates.md)| Store address coordinates | 
- **appNameId** | **string**| App Name Id(Not used, still here for compatability reasons) | [optional] 
+ **storeId** | **int?**|  | 
+ **coordinates** | [**Coordinates**](Coordinates.md)|  | 
+ **appNameId** | **string**|  | [optional] 
 
 ### Return type
 
@@ -2059,7 +2028,7 @@ Name | Type | Description  | Notes
 # **UpdateStoreAddressForm**
 > Object UpdateStoreAddressForm (int? storeId, StoreAddressForm address)
 
-Update store address
+
 
 ### Example
 ```csharp
@@ -2079,12 +2048,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoresApi();
-            var storeId = 56;  // int? | Store identifier
-            var address = new StoreAddressForm(); // StoreAddressForm | Store address
+            var storeId = 56;  // int? | 
+            var address = new StoreAddressForm(); // StoreAddressForm | 
 
             try
             {
-                // Update store address
                 Object result = apiInstance.UpdateStoreAddressForm(storeId, address);
                 Debug.WriteLine(result);
             }
@@ -2101,8 +2069,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
- **address** | [**StoreAddressForm**](StoreAddressForm.md)| Store address | 
+ **storeId** | **int?**|  | 
+ **address** | [**StoreAddressForm**](StoreAddressForm.md)|  | 
 
 ### Return type
 

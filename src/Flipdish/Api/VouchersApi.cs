@@ -25,275 +25,275 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [PRIVATE API] Create voucher
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="voucher">Voucher Details</param>
+        /// <param name="appId"></param>
+        /// <param name="voucher"></param>
         /// <returns>RestApiResultVoucherWithStats</returns>
         RestApiResultVoucherWithStats CreateVoucher (string appId, CreateVoucher voucher);
 
         /// <summary>
-        /// [PRIVATE API] Create voucher
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="voucher">Voucher Details</param>
+        /// <param name="appId"></param>
+        /// <param name="voucher"></param>
         /// <returns>ApiResponse of RestApiResultVoucherWithStats</returns>
         ApiResponse<RestApiResultVoucherWithStats> CreateVoucherWithHttpInfo (string appId, CreateVoucher voucher);
         /// <summary>
-        /// [PRIVATE API] Get voucher by identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
+        /// <param name="voucherId"></param>
         /// <returns>RestApiResultVoucherWithStats</returns>
         RestApiResultVoucherWithStats GetVoucherById (int? voucherId);
 
         /// <summary>
-        /// [PRIVATE API] Get voucher by identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
+        /// <param name="voucherId"></param>
         /// <returns>ApiResponse of RestApiResultVoucherWithStats</returns>
         ApiResponse<RestApiResultVoucherWithStats> GetVoucherByIdWithHttpInfo (int? voucherId);
         /// <summary>
-        /// [PRIVATE API] Get voucher stats by identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
-        /// <param name="aggregateDataBy">Aggregate data by day \\ week \\ month</param>
-        /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
+        /// <param name="voucherId"></param>
+        /// <param name="aggregateDataBy"></param>
+        /// <param name="dataPointLimit"> (optional)</param>
         /// <returns>RestApiArrayResultVoucherDataPoint</returns>
         RestApiArrayResultVoucherDataPoint GetVoucherStatsById (int? voucherId, string aggregateDataBy, int? dataPointLimit = null);
 
         /// <summary>
-        /// [PRIVATE API] Get voucher stats by identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
-        /// <param name="aggregateDataBy">Aggregate data by day \\ week \\ month</param>
-        /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
+        /// <param name="voucherId"></param>
+        /// <param name="aggregateDataBy"></param>
+        /// <param name="dataPointLimit"> (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultVoucherDataPoint</returns>
         ApiResponse<RestApiArrayResultVoucherDataPoint> GetVoucherStatsByIdWithHttpInfo (int? voucherId, string aggregateDataBy, int? dataPointLimit = null);
         /// <summary>
-        /// [PRIVATE API] Get vouchers summaries for App Id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="pageIndex">Page Number (optional)</param>
-        /// <param name="pageSize">Page Size (optional)</param>
-        /// <param name="searchCodes">Search by Voucher Code\\s (optional)</param>
-        /// <param name="statusSearch">Search by Status (optional)</param>
-        /// <param name="typeSearch">Search by Type (optional)</param>
-        /// <param name="subTypeSearch">Search by Sub Type (optional)</param>
-        /// <param name="storeIds">Search by Store Ids (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="searchCodes"> (optional)</param>
+        /// <param name="statusSearch"> (optional)</param>
+        /// <param name="typeSearch"> (optional)</param>
+        /// <param name="subTypeSearch"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
         /// <returns>RestApiPaginationResultVoucherSummary</returns>
         RestApiPaginationResultVoucherSummary GetVouchers (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null);
 
         /// <summary>
-        /// [PRIVATE API] Get vouchers summaries for App Id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="pageIndex">Page Number (optional)</param>
-        /// <param name="pageSize">Page Size (optional)</param>
-        /// <param name="searchCodes">Search by Voucher Code\\s (optional)</param>
-        /// <param name="statusSearch">Search by Status (optional)</param>
-        /// <param name="typeSearch">Search by Type (optional)</param>
-        /// <param name="subTypeSearch">Search by Sub Type (optional)</param>
-        /// <param name="storeIds">Search by Store Ids (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="searchCodes"> (optional)</param>
+        /// <param name="statusSearch"> (optional)</param>
+        /// <param name="typeSearch"> (optional)</param>
+        /// <param name="subTypeSearch"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultVoucherSummary</returns>
         ApiResponse<RestApiPaginationResultVoucherSummary> GetVouchersWithHttpInfo (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null);
         /// <summary>
-        /// [PRIVATE API] Updates voucher
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
-        /// <param name="voucher">Updated details for the voucher</param>
-        /// <param name="storeId">List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)</param>
-        /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
-        /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
-        /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
+        /// <param name="voucherId"></param>
+        /// <param name="voucher"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="percentValue"> (optional)</param>
+        /// <param name="lumpValue"> (optional)</param>
+        /// <param name="freeItemId"> (optional)</param>
         /// <returns>RestApiResultVoucherWithStats</returns>
         RestApiResultVoucherWithStats UpdateVoucher (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null);
 
         /// <summary>
-        /// [PRIVATE API] Updates voucher
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
-        /// <param name="voucher">Updated details for the voucher</param>
-        /// <param name="storeId">List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)</param>
-        /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
-        /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
-        /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
+        /// <param name="voucherId"></param>
+        /// <param name="voucher"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="percentValue"> (optional)</param>
+        /// <param name="lumpValue"> (optional)</param>
+        /// <param name="freeItemId"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultVoucherWithStats</returns>
         ApiResponse<RestApiResultVoucherWithStats> UpdateVoucherWithHttpInfo (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// [PRIVATE API] Create voucher
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="voucher">Voucher Details</param>
+        /// <param name="appId"></param>
+        /// <param name="voucher"></param>
         /// <returns>Task of RestApiResultVoucherWithStats</returns>
         System.Threading.Tasks.Task<RestApiResultVoucherWithStats> CreateVoucherAsync (string appId, CreateVoucher voucher);
 
         /// <summary>
-        /// [PRIVATE API] Create voucher
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="voucher">Voucher Details</param>
+        /// <param name="appId"></param>
+        /// <param name="voucher"></param>
         /// <returns>Task of ApiResponse (RestApiResultVoucherWithStats)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> CreateVoucherAsyncWithHttpInfo (string appId, CreateVoucher voucher);
         /// <summary>
-        /// [PRIVATE API] Get voucher by identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
+        /// <param name="voucherId"></param>
         /// <returns>Task of RestApiResultVoucherWithStats</returns>
         System.Threading.Tasks.Task<RestApiResultVoucherWithStats> GetVoucherByIdAsync (int? voucherId);
 
         /// <summary>
-        /// [PRIVATE API] Get voucher by identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
+        /// <param name="voucherId"></param>
         /// <returns>Task of ApiResponse (RestApiResultVoucherWithStats)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> GetVoucherByIdAsyncWithHttpInfo (int? voucherId);
         /// <summary>
-        /// [PRIVATE API] Get voucher stats by identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
-        /// <param name="aggregateDataBy">Aggregate data by day \\ week \\ month</param>
-        /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
+        /// <param name="voucherId"></param>
+        /// <param name="aggregateDataBy"></param>
+        /// <param name="dataPointLimit"> (optional)</param>
         /// <returns>Task of RestApiArrayResultVoucherDataPoint</returns>
         System.Threading.Tasks.Task<RestApiArrayResultVoucherDataPoint> GetVoucherStatsByIdAsync (int? voucherId, string aggregateDataBy, int? dataPointLimit = null);
 
         /// <summary>
-        /// [PRIVATE API] Get voucher stats by identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
-        /// <param name="aggregateDataBy">Aggregate data by day \\ week \\ month</param>
-        /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
+        /// <param name="voucherId"></param>
+        /// <param name="aggregateDataBy"></param>
+        /// <param name="dataPointLimit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultVoucherDataPoint)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultVoucherDataPoint>> GetVoucherStatsByIdAsyncWithHttpInfo (int? voucherId, string aggregateDataBy, int? dataPointLimit = null);
         /// <summary>
-        /// [PRIVATE API] Get vouchers summaries for App Id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="pageIndex">Page Number (optional)</param>
-        /// <param name="pageSize">Page Size (optional)</param>
-        /// <param name="searchCodes">Search by Voucher Code\\s (optional)</param>
-        /// <param name="statusSearch">Search by Status (optional)</param>
-        /// <param name="typeSearch">Search by Type (optional)</param>
-        /// <param name="subTypeSearch">Search by Sub Type (optional)</param>
-        /// <param name="storeIds">Search by Store Ids (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="searchCodes"> (optional)</param>
+        /// <param name="statusSearch"> (optional)</param>
+        /// <param name="typeSearch"> (optional)</param>
+        /// <param name="subTypeSearch"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultVoucherSummary</returns>
         System.Threading.Tasks.Task<RestApiPaginationResultVoucherSummary> GetVouchersAsync (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null);
 
         /// <summary>
-        /// [PRIVATE API] Get vouchers summaries for App Id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="pageIndex">Page Number (optional)</param>
-        /// <param name="pageSize">Page Size (optional)</param>
-        /// <param name="searchCodes">Search by Voucher Code\\s (optional)</param>
-        /// <param name="statusSearch">Search by Status (optional)</param>
-        /// <param name="typeSearch">Search by Type (optional)</param>
-        /// <param name="subTypeSearch">Search by Sub Type (optional)</param>
-        /// <param name="storeIds">Search by Store Ids (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="searchCodes"> (optional)</param>
+        /// <param name="statusSearch"> (optional)</param>
+        /// <param name="typeSearch"> (optional)</param>
+        /// <param name="subTypeSearch"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultVoucherSummary)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultVoucherSummary>> GetVouchersAsyncWithHttpInfo (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null);
         /// <summary>
-        /// [PRIVATE API] Updates voucher
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
-        /// <param name="voucher">Updated details for the voucher</param>
-        /// <param name="storeId">List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)</param>
-        /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
-        /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
-        /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
+        /// <param name="voucherId"></param>
+        /// <param name="voucher"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="percentValue"> (optional)</param>
+        /// <param name="lumpValue"> (optional)</param>
+        /// <param name="freeItemId"> (optional)</param>
         /// <returns>Task of RestApiResultVoucherWithStats</returns>
         System.Threading.Tasks.Task<RestApiResultVoucherWithStats> UpdateVoucherAsync (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null);
 
         /// <summary>
-        /// [PRIVATE API] Updates voucher
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
-        /// <param name="voucher">Updated details for the voucher</param>
-        /// <param name="storeId">List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)</param>
-        /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
-        /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
-        /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
+        /// <param name="voucherId"></param>
+        /// <param name="voucher"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="percentValue"> (optional)</param>
+        /// <param name="lumpValue"> (optional)</param>
+        /// <param name="freeItemId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultVoucherWithStats)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> UpdateVoucherAsyncWithHttpInfo (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null);
         #endregion Asynchronous Operations
@@ -397,11 +397,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Create voucher 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="voucher">Voucher Details</param>
+        /// <param name="appId"></param>
+        /// <param name="voucher"></param>
         /// <returns>RestApiResultVoucherWithStats</returns>
         public RestApiResultVoucherWithStats CreateVoucher (string appId, CreateVoucher voucher)
         {
@@ -410,11 +410,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Create voucher 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="voucher">Voucher Details</param>
+        /// <param name="appId"></param>
+        /// <param name="voucher"></param>
         /// <returns>ApiResponse of RestApiResultVoucherWithStats</returns>
         public ApiResponse< RestApiResultVoucherWithStats > CreateVoucherWithHttpInfo (string appId, CreateVoucher voucher)
         {
@@ -490,11 +490,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Create voucher 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="voucher">Voucher Details</param>
+        /// <param name="appId"></param>
+        /// <param name="voucher"></param>
         /// <returns>Task of RestApiResultVoucherWithStats</returns>
         public async System.Threading.Tasks.Task<RestApiResultVoucherWithStats> CreateVoucherAsync (string appId, CreateVoucher voucher)
         {
@@ -504,11 +504,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Create voucher 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="voucher">Voucher Details</param>
+        /// <param name="appId"></param>
+        /// <param name="voucher"></param>
         /// <returns>Task of ApiResponse (RestApiResultVoucherWithStats)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> CreateVoucherAsyncWithHttpInfo (string appId, CreateVoucher voucher)
         {
@@ -584,10 +584,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get voucher by identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
+        /// <param name="voucherId"></param>
         /// <returns>RestApiResultVoucherWithStats</returns>
         public RestApiResultVoucherWithStats GetVoucherById (int? voucherId)
         {
@@ -596,10 +596,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get voucher by identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
+        /// <param name="voucherId"></param>
         /// <returns>ApiResponse of RestApiResultVoucherWithStats</returns>
         public ApiResponse< RestApiResultVoucherWithStats > GetVoucherByIdWithHttpInfo (int? voucherId)
         {
@@ -659,10 +659,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get voucher by identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
+        /// <param name="voucherId"></param>
         /// <returns>Task of RestApiResultVoucherWithStats</returns>
         public async System.Threading.Tasks.Task<RestApiResultVoucherWithStats> GetVoucherByIdAsync (int? voucherId)
         {
@@ -672,10 +672,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get voucher by identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
+        /// <param name="voucherId"></param>
         /// <returns>Task of ApiResponse (RestApiResultVoucherWithStats)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> GetVoucherByIdAsyncWithHttpInfo (int? voucherId)
         {
@@ -735,12 +735,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get voucher stats by identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
-        /// <param name="aggregateDataBy">Aggregate data by day \\ week \\ month</param>
-        /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
+        /// <param name="voucherId"></param>
+        /// <param name="aggregateDataBy"></param>
+        /// <param name="dataPointLimit"> (optional)</param>
         /// <returns>RestApiArrayResultVoucherDataPoint</returns>
         public RestApiArrayResultVoucherDataPoint GetVoucherStatsById (int? voucherId, string aggregateDataBy, int? dataPointLimit = null)
         {
@@ -749,12 +749,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get voucher stats by identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
-        /// <param name="aggregateDataBy">Aggregate data by day \\ week \\ month</param>
-        /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
+        /// <param name="voucherId"></param>
+        /// <param name="aggregateDataBy"></param>
+        /// <param name="dataPointLimit"> (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultVoucherDataPoint</returns>
         public ApiResponse< RestApiArrayResultVoucherDataPoint > GetVoucherStatsByIdWithHttpInfo (int? voucherId, string aggregateDataBy, int? dataPointLimit = null)
         {
@@ -819,12 +819,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get voucher stats by identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
-        /// <param name="aggregateDataBy">Aggregate data by day \\ week \\ month</param>
-        /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
+        /// <param name="voucherId"></param>
+        /// <param name="aggregateDataBy"></param>
+        /// <param name="dataPointLimit"> (optional)</param>
         /// <returns>Task of RestApiArrayResultVoucherDataPoint</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultVoucherDataPoint> GetVoucherStatsByIdAsync (int? voucherId, string aggregateDataBy, int? dataPointLimit = null)
         {
@@ -834,12 +834,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get voucher stats by identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
-        /// <param name="aggregateDataBy">Aggregate data by day \\ week \\ month</param>
-        /// <param name="dataPointLimit">Amount of data points per request (optional)</param>
+        /// <param name="voucherId"></param>
+        /// <param name="aggregateDataBy"></param>
+        /// <param name="dataPointLimit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultVoucherDataPoint)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultVoucherDataPoint>> GetVoucherStatsByIdAsyncWithHttpInfo (int? voucherId, string aggregateDataBy, int? dataPointLimit = null)
         {
@@ -904,17 +904,17 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get vouchers summaries for App Id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="pageIndex">Page Number (optional)</param>
-        /// <param name="pageSize">Page Size (optional)</param>
-        /// <param name="searchCodes">Search by Voucher Code\\s (optional)</param>
-        /// <param name="statusSearch">Search by Status (optional)</param>
-        /// <param name="typeSearch">Search by Type (optional)</param>
-        /// <param name="subTypeSearch">Search by Sub Type (optional)</param>
-        /// <param name="storeIds">Search by Store Ids (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="searchCodes"> (optional)</param>
+        /// <param name="statusSearch"> (optional)</param>
+        /// <param name="typeSearch"> (optional)</param>
+        /// <param name="subTypeSearch"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
         /// <returns>RestApiPaginationResultVoucherSummary</returns>
         public RestApiPaginationResultVoucherSummary GetVouchers (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null)
         {
@@ -923,17 +923,17 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get vouchers summaries for App Id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="pageIndex">Page Number (optional)</param>
-        /// <param name="pageSize">Page Size (optional)</param>
-        /// <param name="searchCodes">Search by Voucher Code\\s (optional)</param>
-        /// <param name="statusSearch">Search by Status (optional)</param>
-        /// <param name="typeSearch">Search by Type (optional)</param>
-        /// <param name="subTypeSearch">Search by Sub Type (optional)</param>
-        /// <param name="storeIds">Search by Store Ids (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="searchCodes"> (optional)</param>
+        /// <param name="statusSearch"> (optional)</param>
+        /// <param name="typeSearch"> (optional)</param>
+        /// <param name="subTypeSearch"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultVoucherSummary</returns>
         public ApiResponse< RestApiPaginationResultVoucherSummary > GetVouchersWithHttpInfo (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null)
         {
@@ -1000,17 +1000,17 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get vouchers summaries for App Id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="pageIndex">Page Number (optional)</param>
-        /// <param name="pageSize">Page Size (optional)</param>
-        /// <param name="searchCodes">Search by Voucher Code\\s (optional)</param>
-        /// <param name="statusSearch">Search by Status (optional)</param>
-        /// <param name="typeSearch">Search by Type (optional)</param>
-        /// <param name="subTypeSearch">Search by Sub Type (optional)</param>
-        /// <param name="storeIds">Search by Store Ids (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="searchCodes"> (optional)</param>
+        /// <param name="statusSearch"> (optional)</param>
+        /// <param name="typeSearch"> (optional)</param>
+        /// <param name="subTypeSearch"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultVoucherSummary</returns>
         public async System.Threading.Tasks.Task<RestApiPaginationResultVoucherSummary> GetVouchersAsync (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null)
         {
@@ -1020,17 +1020,17 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get vouchers summaries for App Id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="pageIndex">Page Number (optional)</param>
-        /// <param name="pageSize">Page Size (optional)</param>
-        /// <param name="searchCodes">Search by Voucher Code\\s (optional)</param>
-        /// <param name="statusSearch">Search by Status (optional)</param>
-        /// <param name="typeSearch">Search by Type (optional)</param>
-        /// <param name="subTypeSearch">Search by Sub Type (optional)</param>
-        /// <param name="storeIds">Search by Store Ids (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="pageIndex"> (optional)</param>
+        /// <param name="pageSize"> (optional)</param>
+        /// <param name="searchCodes"> (optional)</param>
+        /// <param name="statusSearch"> (optional)</param>
+        /// <param name="typeSearch"> (optional)</param>
+        /// <param name="subTypeSearch"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultVoucherSummary)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultVoucherSummary>> GetVouchersAsyncWithHttpInfo (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null)
         {
@@ -1097,15 +1097,15 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Updates voucher 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
-        /// <param name="voucher">Updated details for the voucher</param>
-        /// <param name="storeId">List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)</param>
-        /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
-        /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
-        /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
+        /// <param name="voucherId"></param>
+        /// <param name="voucher"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="percentValue"> (optional)</param>
+        /// <param name="lumpValue"> (optional)</param>
+        /// <param name="freeItemId"> (optional)</param>
         /// <returns>RestApiResultVoucherWithStats</returns>
         public RestApiResultVoucherWithStats UpdateVoucher (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null)
         {
@@ -1114,15 +1114,15 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Updates voucher 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
-        /// <param name="voucher">Updated details for the voucher</param>
-        /// <param name="storeId">List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)</param>
-        /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
-        /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
-        /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
+        /// <param name="voucherId"></param>
+        /// <param name="voucher"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="percentValue"> (optional)</param>
+        /// <param name="lumpValue"> (optional)</param>
+        /// <param name="freeItemId"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultVoucherWithStats</returns>
         public ApiResponse< RestApiResultVoucherWithStats > UpdateVoucherWithHttpInfo (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null)
         {
@@ -1202,15 +1202,15 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Updates voucher 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
-        /// <param name="voucher">Updated details for the voucher</param>
-        /// <param name="storeId">List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)</param>
-        /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
-        /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
-        /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
+        /// <param name="voucherId"></param>
+        /// <param name="voucher"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="percentValue"> (optional)</param>
+        /// <param name="lumpValue"> (optional)</param>
+        /// <param name="freeItemId"> (optional)</param>
         /// <returns>Task of RestApiResultVoucherWithStats</returns>
         public async System.Threading.Tasks.Task<RestApiResultVoucherWithStats> UpdateVoucherAsync (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null)
         {
@@ -1220,15 +1220,15 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Updates voucher 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="voucherId">Id of the voucher</param>
-        /// <param name="voucher">Updated details for the voucher</param>
-        /// <param name="storeId">List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)</param>
-        /// <param name="percentValue">Percent voucher value (can have 1 of 3) (optional)</param>
-        /// <param name="lumpValue">Lump voucher value (can have 1 of 3) (optional)</param>
-        /// <param name="freeItemId">Free Item Id (can have 1 of 3) (optional)</param>
+        /// <param name="voucherId"></param>
+        /// <param name="voucher"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="percentValue"> (optional)</param>
+        /// <param name="lumpValue"> (optional)</param>
+        /// <param name="freeItemId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultVoucherWithStats)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> UpdateVoucherAsyncWithHttpInfo (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null)
         {

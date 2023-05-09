@@ -5,7 +5,7 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetPreviousOrderCountForStore**](UsersApi.md#getpreviousordercountforstore) | **GET** /api/v1.0/users/{userId}/previousordercount/{storeId} | 
-[**GetRoles**](UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | Get role names
+[**GetRoles**](UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | 
 
 
 <a name="getpreviousordercountforstore"></a>
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 # **GetRoles**
 > RestApiStringArrayResult GetRoles ()
 
-Get role names
+
 
 ### Example
 ```csharp
@@ -98,7 +98,6 @@ namespace Example
 
             try
             {
-                // Get role names
                 RestApiStringArrayResult result = apiInstance.GetRoles();
                 Debug.WriteLine(result);
             }

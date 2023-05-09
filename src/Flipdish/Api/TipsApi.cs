@@ -25,93 +25,93 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Returns current tip configuration for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiResultTipConfiguration</returns>
         RestApiResultTipConfiguration TipConfigGet (int? storeId);
 
         /// <summary>
-        /// Returns current tip configuration for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultTipConfiguration</returns>
         ApiResponse<RestApiResultTipConfiguration> TipConfigGetWithHttpInfo (int? storeId);
         /// <summary>
-        /// Update or insert current tip configuration for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="updateConfig">Update Configuration</param>
+        /// <param name="storeId"></param>
+        /// <param name="updateConfig"></param>
         /// <returns>RestApiResultTipConfiguration</returns>
         RestApiResultTipConfiguration TipConfigUpsert (int? storeId, UpdateTipConfiguration updateConfig);
 
         /// <summary>
-        /// Update or insert current tip configuration for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="updateConfig">Update Configuration</param>
+        /// <param name="storeId"></param>
+        /// <param name="updateConfig"></param>
         /// <returns>ApiResponse of RestApiResultTipConfiguration</returns>
         ApiResponse<RestApiResultTipConfiguration> TipConfigUpsertWithHttpInfo (int? storeId, UpdateTipConfiguration updateConfig);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Returns current tip configuration for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiResultTipConfiguration</returns>
         System.Threading.Tasks.Task<RestApiResultTipConfiguration> TipConfigGetAsync (int? storeId);
 
         /// <summary>
-        /// Returns current tip configuration for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultTipConfiguration)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultTipConfiguration>> TipConfigGetAsyncWithHttpInfo (int? storeId);
         /// <summary>
-        /// Update or insert current tip configuration for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="updateConfig">Update Configuration</param>
+        /// <param name="storeId"></param>
+        /// <param name="updateConfig"></param>
         /// <returns>Task of RestApiResultTipConfiguration</returns>
         System.Threading.Tasks.Task<RestApiResultTipConfiguration> TipConfigUpsertAsync (int? storeId, UpdateTipConfiguration updateConfig);
 
         /// <summary>
-        /// Update or insert current tip configuration for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="updateConfig">Update Configuration</param>
+        /// <param name="storeId"></param>
+        /// <param name="updateConfig"></param>
         /// <returns>Task of ApiResponse (RestApiResultTipConfiguration)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultTipConfiguration>> TipConfigUpsertAsyncWithHttpInfo (int? storeId, UpdateTipConfiguration updateConfig);
         #endregion Asynchronous Operations
@@ -215,10 +215,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns current tip configuration for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiResultTipConfiguration</returns>
         public RestApiResultTipConfiguration TipConfigGet (int? storeId)
         {
@@ -227,10 +227,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns current tip configuration for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultTipConfiguration</returns>
         public ApiResponse< RestApiResultTipConfiguration > TipConfigGetWithHttpInfo (int? storeId)
         {
@@ -290,10 +290,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns current tip configuration for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiResultTipConfiguration</returns>
         public async System.Threading.Tasks.Task<RestApiResultTipConfiguration> TipConfigGetAsync (int? storeId)
         {
@@ -303,10 +303,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns current tip configuration for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultTipConfiguration)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultTipConfiguration>> TipConfigGetAsyncWithHttpInfo (int? storeId)
         {
@@ -366,11 +366,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update or insert current tip configuration for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="updateConfig">Update Configuration</param>
+        /// <param name="storeId"></param>
+        /// <param name="updateConfig"></param>
         /// <returns>RestApiResultTipConfiguration</returns>
         public RestApiResultTipConfiguration TipConfigUpsert (int? storeId, UpdateTipConfiguration updateConfig)
         {
@@ -379,11 +379,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update or insert current tip configuration for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="updateConfig">Update Configuration</param>
+        /// <param name="storeId"></param>
+        /// <param name="updateConfig"></param>
         /// <returns>ApiResponse of RestApiResultTipConfiguration</returns>
         public ApiResponse< RestApiResultTipConfiguration > TipConfigUpsertWithHttpInfo (int? storeId, UpdateTipConfiguration updateConfig)
         {
@@ -459,11 +459,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update or insert current tip configuration for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="updateConfig">Update Configuration</param>
+        /// <param name="storeId"></param>
+        /// <param name="updateConfig"></param>
         /// <returns>Task of RestApiResultTipConfiguration</returns>
         public async System.Threading.Tasks.Task<RestApiResultTipConfiguration> TipConfigUpsertAsync (int? storeId, UpdateTipConfiguration updateConfig)
         {
@@ -473,11 +473,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update or insert current tip configuration for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="updateConfig">Update Configuration</param>
+        /// <param name="storeId"></param>
+        /// <param name="updateConfig"></param>
         /// <returns>Task of ApiResponse (RestApiResultTipConfiguration)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultTipConfiguration>> TipConfigUpsertAsyncWithHttpInfo (int? storeId, UpdateTipConfiguration updateConfig)
         {

@@ -25,292 +25,292 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Update App store app verification
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="verificationStatus">New verification status</param>
-        /// <returns></returns>
-        void AppVerificationUpdate (string oauthAppId, string appStoreAppId, string verificationStatus);
-
-        /// <summary>
-        /// Update App store app verification
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="verificationStatus">New verification status</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> AppVerificationUpdateWithHttpInfo (string oauthAppId, string appStoreAppId, string verificationStatus);
-        /// <summary>
-        /// Create App store app
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="createAppStoreApp">App store app</param>
-        /// <returns>RestApiResultAppStoreApp</returns>
-        RestApiResultAppStoreApp CreateAppStoreApp (string oauthAppId, CreateAppStoreApp createAppStoreApp);
-
-        /// <summary>
-        /// Create App store app
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="createAppStoreApp">App store app</param>
-        /// <returns>ApiResponse of RestApiResultAppStoreApp</returns>
-        ApiResponse<RestApiResultAppStoreApp> CreateAppStoreAppWithHttpInfo (string oauthAppId, CreateAppStoreApp createAppStoreApp);
-        /// <summary>
-        /// Delete App store app
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <returns>RestApiStringResult</returns>
-        RestApiStringResult DeleteAppStoreApp (string oauthAppId, string appStoreAppId);
-
-        /// <summary>
-        /// Delete App store app
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <returns>ApiResponse of RestApiStringResult</returns>
-        ApiResponse<RestApiStringResult> DeleteAppStoreAppWithHttpInfo (string oauthAppId, string appStoreAppId);
-        /// <summary>
-        /// Get external function action signing key for app
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <returns></returns>
-        void GetExternalFunctionSigningKey (string oauthAppId, string appStoreAppId);
-
-        /// <summary>
-        /// Get external function action signing key for app
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetExternalFunctionSigningKeyWithHttpInfo (string oauthAppId, string appStoreAppId);
-        /// <summary>
-        /// Update App store app
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="appStoreApp">Update App store app</param>
-        /// <returns></returns>
-        void UpdateAppStoreApp (string oauthAppId, string appStoreAppId, UpdateAppStoreApp appStoreApp);
-
-        /// <summary>
-        /// Update App store app
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="appStoreApp">Update App store app</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateAppStoreAppWithHttpInfo (string oauthAppId, string appStoreAppId, UpdateAppStoreApp appStoreApp);
-        /// <summary>
-        /// Upload the App store app logo \\ icon
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="verificationStatus"></param>
+        /// <returns></returns>
+        void AppVerificationUpdate (string oauthAppId, string appStoreAppId, string verificationStatus);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="verificationStatus"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> AppVerificationUpdateWithHttpInfo (string oauthAppId, string appStoreAppId, string verificationStatus);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="createAppStoreApp"></param>
+        /// <returns>RestApiResultAppStoreApp</returns>
+        RestApiResultAppStoreApp CreateAppStoreApp (string oauthAppId, CreateAppStoreApp createAppStoreApp);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="createAppStoreApp"></param>
+        /// <returns>ApiResponse of RestApiResultAppStoreApp</returns>
+        ApiResponse<RestApiResultAppStoreApp> CreateAppStoreAppWithHttpInfo (string oauthAppId, CreateAppStoreApp createAppStoreApp);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>RestApiStringResult</returns>
+        RestApiStringResult DeleteAppStoreApp (string oauthAppId, string appStoreAppId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        ApiResponse<RestApiStringResult> DeleteAppStoreAppWithHttpInfo (string oauthAppId, string appStoreAppId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns></returns>
+        void GetExternalFunctionSigningKey (string oauthAppId, string appStoreAppId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetExternalFunctionSigningKeyWithHttpInfo (string oauthAppId, string appStoreAppId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="appStoreApp"></param>
+        /// <returns></returns>
+        void UpdateAppStoreApp (string oauthAppId, string appStoreAppId, UpdateAppStoreApp appStoreApp);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="appStoreApp"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> UpdateAppStoreAppWithHttpInfo (string oauthAppId, string appStoreAppId, UpdateAppStoreApp appStoreApp);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <param name="image">App Store App Logo</param>
         /// <returns></returns>
         void UploadAppStoreAppLogo (string oauthAppId, string appStoreAppId, System.IO.Stream image);
 
         /// <summary>
-        /// Upload the App store app logo \\ icon
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <param name="image">App Store App Logo</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UploadAppStoreAppLogoWithHttpInfo (string oauthAppId, string appStoreAppId, System.IO.Stream image);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Update App store app verification
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="verificationStatus">New verification status</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task AppVerificationUpdateAsync (string oauthAppId, string appStoreAppId, string verificationStatus);
-
-        /// <summary>
-        /// Update App store app verification
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="verificationStatus">New verification status</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AppVerificationUpdateAsyncWithHttpInfo (string oauthAppId, string appStoreAppId, string verificationStatus);
-        /// <summary>
-        /// Create App store app
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="createAppStoreApp">App store app</param>
-        /// <returns>Task of RestApiResultAppStoreApp</returns>
-        System.Threading.Tasks.Task<RestApiResultAppStoreApp> CreateAppStoreAppAsync (string oauthAppId, CreateAppStoreApp createAppStoreApp);
-
-        /// <summary>
-        /// Create App store app
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="createAppStoreApp">App store app</param>
-        /// <returns>Task of ApiResponse (RestApiResultAppStoreApp)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreApp>> CreateAppStoreAppAsyncWithHttpInfo (string oauthAppId, CreateAppStoreApp createAppStoreApp);
-        /// <summary>
-        /// Delete App store app
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <returns>Task of RestApiStringResult</returns>
-        System.Threading.Tasks.Task<RestApiStringResult> DeleteAppStoreAppAsync (string oauthAppId, string appStoreAppId);
-
-        /// <summary>
-        /// Delete App store app
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> DeleteAppStoreAppAsyncWithHttpInfo (string oauthAppId, string appStoreAppId);
-        /// <summary>
-        /// Get external function action signing key for app
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetExternalFunctionSigningKeyAsync (string oauthAppId, string appStoreAppId);
-
-        /// <summary>
-        /// Get external function action signing key for app
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetExternalFunctionSigningKeyAsyncWithHttpInfo (string oauthAppId, string appStoreAppId);
-        /// <summary>
-        /// Update App store app
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="appStoreApp">Update App store app</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateAppStoreAppAsync (string oauthAppId, string appStoreAppId, UpdateAppStoreApp appStoreApp);
-
-        /// <summary>
-        /// Update App store app
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="appStoreApp">Update App store app</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAppStoreAppAsyncWithHttpInfo (string oauthAppId, string appStoreAppId, UpdateAppStoreApp appStoreApp);
-        /// <summary>
-        /// Upload the App store app logo \\ icon
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="verificationStatus"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task AppVerificationUpdateAsync (string oauthAppId, string appStoreAppId, string verificationStatus);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="verificationStatus"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> AppVerificationUpdateAsyncWithHttpInfo (string oauthAppId, string appStoreAppId, string verificationStatus);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="createAppStoreApp"></param>
+        /// <returns>Task of RestApiResultAppStoreApp</returns>
+        System.Threading.Tasks.Task<RestApiResultAppStoreApp> CreateAppStoreAppAsync (string oauthAppId, CreateAppStoreApp createAppStoreApp);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="createAppStoreApp"></param>
+        /// <returns>Task of ApiResponse (RestApiResultAppStoreApp)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreApp>> CreateAppStoreAppAsyncWithHttpInfo (string oauthAppId, CreateAppStoreApp createAppStoreApp);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Task of RestApiStringResult</returns>
+        System.Threading.Tasks.Task<RestApiStringResult> DeleteAppStoreAppAsync (string oauthAppId, string appStoreAppId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> DeleteAppStoreAppAsyncWithHttpInfo (string oauthAppId, string appStoreAppId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetExternalFunctionSigningKeyAsync (string oauthAppId, string appStoreAppId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetExternalFunctionSigningKeyAsyncWithHttpInfo (string oauthAppId, string appStoreAppId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="appStoreApp"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task UpdateAppStoreAppAsync (string oauthAppId, string appStoreAppId, UpdateAppStoreApp appStoreApp);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="appStoreApp"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAppStoreAppAsyncWithHttpInfo (string oauthAppId, string appStoreAppId, UpdateAppStoreApp appStoreApp);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <param name="image">App Store App Logo</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UploadAppStoreAppLogoAsync (string oauthAppId, string appStoreAppId, System.IO.Stream image);
 
         /// <summary>
-        /// Upload the App store app logo \\ icon
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <param name="image">App Store App Logo</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UploadAppStoreAppLogoAsyncWithHttpInfo (string oauthAppId, string appStoreAppId, System.IO.Stream image);
@@ -415,12 +415,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update App store app verification [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="verificationStatus">New verification status</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="verificationStatus"></param>
         /// <returns></returns>
         public void AppVerificationUpdate (string oauthAppId, string appStoreAppId, string verificationStatus)
         {
@@ -428,12 +428,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update App store app verification [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="verificationStatus">New verification status</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="verificationStatus"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> AppVerificationUpdateWithHttpInfo (string oauthAppId, string appStoreAppId, string verificationStatus)
         {
@@ -501,12 +501,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update App store app verification [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="verificationStatus">New verification status</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="verificationStatus"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task AppVerificationUpdateAsync (string oauthAppId, string appStoreAppId, string verificationStatus)
         {
@@ -515,12 +515,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update App store app verification [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="verificationStatus">New verification status</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="verificationStatus"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AppVerificationUpdateAsyncWithHttpInfo (string oauthAppId, string appStoreAppId, string verificationStatus)
         {
@@ -588,11 +588,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create App store app [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="createAppStoreApp">App store app</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="createAppStoreApp"></param>
         /// <returns>RestApiResultAppStoreApp</returns>
         public RestApiResultAppStoreApp CreateAppStoreApp (string oauthAppId, CreateAppStoreApp createAppStoreApp)
         {
@@ -601,11 +601,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create App store app [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="createAppStoreApp">App store app</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="createAppStoreApp"></param>
         /// <returns>ApiResponse of RestApiResultAppStoreApp</returns>
         public ApiResponse< RestApiResultAppStoreApp > CreateAppStoreAppWithHttpInfo (string oauthAppId, CreateAppStoreApp createAppStoreApp)
         {
@@ -681,11 +681,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create App store app [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="createAppStoreApp">App store app</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="createAppStoreApp"></param>
         /// <returns>Task of RestApiResultAppStoreApp</returns>
         public async System.Threading.Tasks.Task<RestApiResultAppStoreApp> CreateAppStoreAppAsync (string oauthAppId, CreateAppStoreApp createAppStoreApp)
         {
@@ -695,11 +695,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create App store app [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="createAppStoreApp">App store app</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="createAppStoreApp"></param>
         /// <returns>Task of ApiResponse (RestApiResultAppStoreApp)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreApp>> CreateAppStoreAppAsyncWithHttpInfo (string oauthAppId, CreateAppStoreApp createAppStoreApp)
         {
@@ -775,11 +775,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete App store app [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>RestApiStringResult</returns>
         public RestApiStringResult DeleteAppStoreApp (string oauthAppId, string appStoreAppId)
         {
@@ -788,11 +788,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete App store app [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
         public ApiResponse< RestApiStringResult > DeleteAppStoreAppWithHttpInfo (string oauthAppId, string appStoreAppId)
         {
@@ -856,11 +856,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete App store app [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>Task of RestApiStringResult</returns>
         public async System.Threading.Tasks.Task<RestApiStringResult> DeleteAppStoreAppAsync (string oauthAppId, string appStoreAppId)
         {
@@ -870,11 +870,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete App store app [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> DeleteAppStoreAppAsyncWithHttpInfo (string oauthAppId, string appStoreAppId)
         {
@@ -938,11 +938,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get external function action signing key for app [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns></returns>
         public void GetExternalFunctionSigningKey (string oauthAppId, string appStoreAppId)
         {
@@ -950,11 +950,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get external function action signing key for app [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetExternalFunctionSigningKeyWithHttpInfo (string oauthAppId, string appStoreAppId)
         {
@@ -1018,11 +1018,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get external function action signing key for app [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task GetExternalFunctionSigningKeyAsync (string oauthAppId, string appStoreAppId)
         {
@@ -1031,11 +1031,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get external function action signing key for app [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> GetExternalFunctionSigningKeyAsyncWithHttpInfo (string oauthAppId, string appStoreAppId)
         {
@@ -1099,12 +1099,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update App store app [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="appStoreApp">Update App store app</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="appStoreApp"></param>
         /// <returns></returns>
         public void UpdateAppStoreApp (string oauthAppId, string appStoreAppId, UpdateAppStoreApp appStoreApp)
         {
@@ -1112,12 +1112,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update App store app [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="appStoreApp">Update App store app</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="appStoreApp"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> UpdateAppStoreAppWithHttpInfo (string oauthAppId, string appStoreAppId, UpdateAppStoreApp appStoreApp)
         {
@@ -1197,12 +1197,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update App store app [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="appStoreApp">Update App store app</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="appStoreApp"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UpdateAppStoreAppAsync (string oauthAppId, string appStoreAppId, UpdateAppStoreApp appStoreApp)
         {
@@ -1211,12 +1211,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update App store app [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="appStoreApp">Update App store app</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="appStoreApp"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAppStoreAppAsyncWithHttpInfo (string oauthAppId, string appStoreAppId, UpdateAppStoreApp appStoreApp)
         {
@@ -1296,11 +1296,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload the App store app logo \\ icon 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <param name="image">App Store App Logo</param>
         /// <returns></returns>
         public void UploadAppStoreAppLogo (string oauthAppId, string appStoreAppId, System.IO.Stream image)
@@ -1309,11 +1309,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload the App store app logo \\ icon 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <param name="image">App Store App Logo</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> UploadAppStoreAppLogoWithHttpInfo (string oauthAppId, string appStoreAppId, System.IO.Stream image)
@@ -1383,11 +1383,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload the App store app logo \\ icon 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <param name="image">App Store App Logo</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UploadAppStoreAppLogoAsync (string oauthAppId, string appStoreAppId, System.IO.Stream image)
@@ -1397,11 +1397,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload the App store app logo \\ icon 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">OAuth App identifier</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <param name="image">App Store App Logo</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UploadAppStoreAppLogoAsyncWithHttpInfo (string oauthAppId, string appStoreAppId, System.IO.Stream image)

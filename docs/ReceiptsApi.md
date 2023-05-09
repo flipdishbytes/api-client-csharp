@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetReceipt**](ReceiptsApi.md#getreceipt) | **GET** /api/v1.0/receipts/{orderId} | Returns all receipt information for a given orderId
+[**GetReceipt**](ReceiptsApi.md#getreceipt) | **GET** /api/v1.0/receipts/{orderId} | 
 
 
 <a name="getreceipt"></a>
 # **GetReceipt**
 > GetReceiptByOrderIdQueryResponse GetReceipt (int? orderId)
 
-Returns all receipt information for a given orderId
+
 
 ### Example
 ```csharp
@@ -35,7 +35,6 @@ namespace Example
 
             try
             {
-                // Returns all receipt information for a given orderId
                 GetReceiptByOrderIdQueryResponse result = apiInstance.GetReceipt(orderId);
                 Debug.WriteLine(result);
             }

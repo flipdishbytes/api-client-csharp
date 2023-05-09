@@ -25,111 +25,111 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create a webhook subscription for you Oauth App
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscription"></param>
         /// <param name="appId"></param>
         /// <returns>RestApiIntegerResult</returns>
         RestApiIntegerResult CreateWebhookSubscription (string oauthAppId, WebhookSubscription webhookSubscription, string appId);
 
         /// <summary>
-        /// Create a webhook subscription for you Oauth App
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscription"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiIntegerResult</returns>
         ApiResponse<RestApiIntegerResult> CreateWebhookSubscriptionWithHttpInfo (string oauthAppId, WebhookSubscription webhookSubscription, string appId);
         /// <summary>
-        /// Add event name to your webhook subscription
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="eventName"></param>
         /// <param name="appId"></param>
         /// <returns></returns>
         void CreateWebhookSubscriptionEventNames (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId);
 
         /// <summary>
-        /// Add event name to your webhook subscription
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="eventName"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> CreateWebhookSubscriptionEventNamesWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId);
         /// <summary>
-        /// Delete you webhook subscription
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
         /// <param name="appId"></param>
         /// <returns></returns>
         void DeleteWebhookSubscription (string oauthAppId, int? webhookSubscriptionId, string appId);
 
         /// <summary>
-        /// Delete you webhook subscription
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWebhookSubscriptionWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string appId);
         /// <summary>
-        /// Remove event name to your webhook subscription
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="eventName"></param>
         /// <param name="appId"></param>
         /// <returns></returns>
         void DeleteWebhookSubscriptionEventName (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId);
 
         /// <summary>
-        /// Remove event name to your webhook subscription
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="eventName"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWebhookSubscriptionEventNameWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId);
         /// <summary>
-        /// Get all webhook subscription event names
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -140,7 +140,7 @@ namespace Flipdish.Api
         RestApiStringArrayResult GetWebhookEventNames (string appId);
 
         /// <summary>
-        /// Get all webhook subscription event names
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -150,32 +150,32 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiStringArrayResult</returns>
         ApiResponse<RestApiStringArrayResult> GetWebhookEventNamesWithHttpInfo (string appId);
         /// <summary>
-        /// Get your webhook subscriptions selected event names
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
         /// <param name="appId"></param>
         /// <returns>RestApiStringArrayResult</returns>
         RestApiStringArrayResult GetWebhookEventNamesBySubscriptionId (string oauthAppId, int? webhookSubscriptionId, string appId);
 
         /// <summary>
-        /// Get your webhook subscriptions selected event names
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiStringArrayResult</returns>
         ApiResponse<RestApiStringArrayResult> GetWebhookEventNamesBySubscriptionIdWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string appId);
         /// <summary>
-        /// Get a sample event from a webhook subscription
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -190,7 +190,7 @@ namespace Flipdish.Api
         WebhookEventSample GetWebhookEventSample (string eventName, string appId, string oauthAppId, string webhookSubscriptionId, string version = null);
 
         /// <summary>
-        /// Get a sample event from a webhook subscription
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -204,46 +204,46 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of WebhookEventSample</returns>
         ApiResponse<WebhookEventSample> GetWebhookEventSampleWithHttpInfo (string eventName, string appId, string oauthAppId, string webhookSubscriptionId, string version = null);
         /// <summary>
-        /// Get logs for your webhook subscription
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="start">Start time</param>
-        /// <param name="end">End time</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Page number (optional)</param>
-        /// <param name="limit">Page size (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultWebhookLog</returns>
         RestApiPaginationResultWebhookLog GetWebhookLogs (string oauthAppId, int? webhookSubscriptionId, DateTime? start, DateTime? end, string appId, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get logs for your webhook subscription
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="start">Start time</param>
-        /// <param name="end">End time</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Page number (optional)</param>
-        /// <param name="limit">Page size (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultWebhookLog</returns>
         ApiResponse<RestApiPaginationResultWebhookLog> GetWebhookLogsWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, DateTime? start, DateTime? end, string appId, int? page = null, int? limit = null);
         /// <summary>
-        /// Get all webhook subscriptions by your Oauth App id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
+        /// <param name="oauthAppId"></param>
         /// <param name="appId"></param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
@@ -251,153 +251,153 @@ namespace Flipdish.Api
         RestApiPaginationResultWebhookSubscription GetWebhookSubscriptions (string oauthAppId, string appId, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get all webhook subscriptions by your Oauth App id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
+        /// <param name="oauthAppId"></param>
         /// <param name="appId"></param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultWebhookSubscription</returns>
         ApiResponse<RestApiPaginationResultWebhookSubscription> GetWebhookSubscriptionsWithHttpInfo (string oauthAppId, string appId, int? page = null, int? limit = null);
         /// <summary>
-        /// Update a webhook subscription object
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="webhookSubscription"></param>
         /// <param name="appId"></param>
         /// <returns></returns>
         void UpdateWebhookSubscription (string oauthAppId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription, string appId);
 
         /// <summary>
-        /// Update a webhook subscription object
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="webhookSubscription"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateWebhookSubscriptionWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription, string appId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create a webhook subscription for you Oauth App
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscription"></param>
         /// <param name="appId"></param>
         /// <returns>Task of RestApiIntegerResult</returns>
         System.Threading.Tasks.Task<RestApiIntegerResult> CreateWebhookSubscriptionAsync (string oauthAppId, WebhookSubscription webhookSubscription, string appId);
 
         /// <summary>
-        /// Create a webhook subscription for you Oauth App
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscription"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiIntegerResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> CreateWebhookSubscriptionAsyncWithHttpInfo (string oauthAppId, WebhookSubscription webhookSubscription, string appId);
         /// <summary>
-        /// Add event name to your webhook subscription
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="eventName"></param>
         /// <param name="appId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task CreateWebhookSubscriptionEventNamesAsync (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId);
 
         /// <summary>
-        /// Add event name to your webhook subscription
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="eventName"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CreateWebhookSubscriptionEventNamesAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId);
         /// <summary>
-        /// Delete you webhook subscription
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
         /// <param name="appId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteWebhookSubscriptionAsync (string oauthAppId, int? webhookSubscriptionId, string appId);
 
         /// <summary>
-        /// Delete you webhook subscription
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebhookSubscriptionAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string appId);
         /// <summary>
-        /// Remove event name to your webhook subscription
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="eventName"></param>
         /// <param name="appId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteWebhookSubscriptionEventNameAsync (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId);
 
         /// <summary>
-        /// Remove event name to your webhook subscription
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="eventName"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebhookSubscriptionEventNameAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId);
         /// <summary>
-        /// Get all webhook subscription event names
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -408,7 +408,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiStringArrayResult> GetWebhookEventNamesAsync (string appId);
 
         /// <summary>
-        /// Get all webhook subscription event names
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -418,32 +418,32 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiStringArrayResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetWebhookEventNamesAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// Get your webhook subscriptions selected event names
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
         /// <param name="appId"></param>
         /// <returns>Task of RestApiStringArrayResult</returns>
         System.Threading.Tasks.Task<RestApiStringArrayResult> GetWebhookEventNamesBySubscriptionIdAsync (string oauthAppId, int? webhookSubscriptionId, string appId);
 
         /// <summary>
-        /// Get your webhook subscriptions selected event names
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiStringArrayResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetWebhookEventNamesBySubscriptionIdAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string appId);
         /// <summary>
-        /// Get a sample event from a webhook subscription
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -458,7 +458,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<WebhookEventSample> GetWebhookEventSampleAsync (string eventName, string appId, string oauthAppId, string webhookSubscriptionId, string version = null);
 
         /// <summary>
-        /// Get a sample event from a webhook subscription
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -472,46 +472,46 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (WebhookEventSample)</returns>
         System.Threading.Tasks.Task<ApiResponse<WebhookEventSample>> GetWebhookEventSampleAsyncWithHttpInfo (string eventName, string appId, string oauthAppId, string webhookSubscriptionId, string version = null);
         /// <summary>
-        /// Get logs for your webhook subscription
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="start">Start time</param>
-        /// <param name="end">End time</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Page number (optional)</param>
-        /// <param name="limit">Page size (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultWebhookLog</returns>
         System.Threading.Tasks.Task<RestApiPaginationResultWebhookLog> GetWebhookLogsAsync (string oauthAppId, int? webhookSubscriptionId, DateTime? start, DateTime? end, string appId, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get logs for your webhook subscription
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="start">Start time</param>
-        /// <param name="end">End time</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Page number (optional)</param>
-        /// <param name="limit">Page size (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultWebhookLog)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultWebhookLog>> GetWebhookLogsAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, DateTime? start, DateTime? end, string appId, int? page = null, int? limit = null);
         /// <summary>
-        /// Get all webhook subscriptions by your Oauth App id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
+        /// <param name="oauthAppId"></param>
         /// <param name="appId"></param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
@@ -519,42 +519,42 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiPaginationResultWebhookSubscription> GetWebhookSubscriptionsAsync (string oauthAppId, string appId, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get all webhook subscriptions by your Oauth App id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
+        /// <param name="oauthAppId"></param>
         /// <param name="appId"></param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultWebhookSubscription)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultWebhookSubscription>> GetWebhookSubscriptionsAsyncWithHttpInfo (string oauthAppId, string appId, int? page = null, int? limit = null);
         /// <summary>
-        /// Update a webhook subscription object
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="webhookSubscription"></param>
         /// <param name="appId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UpdateWebhookSubscriptionAsync (string oauthAppId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription, string appId);
 
         /// <summary>
-        /// Update a webhook subscription object
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="webhookSubscription"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateWebhookSubscriptionAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription, string appId);
@@ -659,11 +659,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a webhook subscription for you Oauth App 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscription"></param>
         /// <param name="appId"></param>
         /// <returns>RestApiIntegerResult</returns>
         public RestApiIntegerResult CreateWebhookSubscription (string oauthAppId, WebhookSubscription webhookSubscription, string appId)
@@ -673,11 +673,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a webhook subscription for you Oauth App 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscription"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiIntegerResult</returns>
         public ApiResponse< RestApiIntegerResult > CreateWebhookSubscriptionWithHttpInfo (string oauthAppId, WebhookSubscription webhookSubscription, string appId)
@@ -758,11 +758,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a webhook subscription for you Oauth App 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscription"></param>
         /// <param name="appId"></param>
         /// <returns>Task of RestApiIntegerResult</returns>
         public async System.Threading.Tasks.Task<RestApiIntegerResult> CreateWebhookSubscriptionAsync (string oauthAppId, WebhookSubscription webhookSubscription, string appId)
@@ -773,11 +773,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a webhook subscription for you Oauth App 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscription"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiIntegerResult)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> CreateWebhookSubscriptionAsyncWithHttpInfo (string oauthAppId, WebhookSubscription webhookSubscription, string appId)
@@ -858,12 +858,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add event name to your webhook subscription 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="eventName"></param>
         /// <param name="appId"></param>
         /// <returns></returns>
         public void CreateWebhookSubscriptionEventNames (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId)
@@ -872,12 +872,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add event name to your webhook subscription 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="eventName"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> CreateWebhookSubscriptionEventNamesWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId)
@@ -950,12 +950,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add event name to your webhook subscription 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="eventName"></param>
         /// <param name="appId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task CreateWebhookSubscriptionEventNamesAsync (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId)
@@ -965,12 +965,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add event name to your webhook subscription 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="eventName"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateWebhookSubscriptionEventNamesAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId)
@@ -1043,11 +1043,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete you webhook subscription 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
         /// <param name="appId"></param>
         /// <returns></returns>
         public void DeleteWebhookSubscription (string oauthAppId, int? webhookSubscriptionId, string appId)
@@ -1056,11 +1056,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete you webhook subscription 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteWebhookSubscriptionWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string appId)
@@ -1129,11 +1129,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete you webhook subscription 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
         /// <param name="appId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteWebhookSubscriptionAsync (string oauthAppId, int? webhookSubscriptionId, string appId)
@@ -1143,11 +1143,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete you webhook subscription 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebhookSubscriptionAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string appId)
@@ -1216,12 +1216,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Remove event name to your webhook subscription 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="eventName"></param>
         /// <param name="appId"></param>
         /// <returns></returns>
         public void DeleteWebhookSubscriptionEventName (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId)
@@ -1230,12 +1230,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Remove event name to your webhook subscription 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="eventName"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteWebhookSubscriptionEventNameWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId)
@@ -1308,12 +1308,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Remove event name to your webhook subscription 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="eventName"></param>
         /// <param name="appId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteWebhookSubscriptionEventNameAsync (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId)
@@ -1323,12 +1323,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Remove event name to your webhook subscription 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="eventName">Webhook subscription event name</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="eventName"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebhookSubscriptionEventNameAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string eventName, string appId)
@@ -1401,7 +1401,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all webhook subscription event names 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1413,7 +1413,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all webhook subscription event names 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1476,7 +1476,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all webhook subscription event names 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1489,7 +1489,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all webhook subscription event names 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1552,11 +1552,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get your webhook subscriptions selected event names 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
         /// <param name="appId"></param>
         /// <returns>RestApiStringArrayResult</returns>
         public RestApiStringArrayResult GetWebhookEventNamesBySubscriptionId (string oauthAppId, int? webhookSubscriptionId, string appId)
@@ -1566,11 +1566,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get your webhook subscriptions selected event names 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiStringArrayResult</returns>
         public ApiResponse< RestApiStringArrayResult > GetWebhookEventNamesBySubscriptionIdWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string appId)
@@ -1639,11 +1639,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get your webhook subscriptions selected event names 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
         /// <param name="appId"></param>
         /// <returns>Task of RestApiStringArrayResult</returns>
         public async System.Threading.Tasks.Task<RestApiStringArrayResult> GetWebhookEventNamesBySubscriptionIdAsync (string oauthAppId, int? webhookSubscriptionId, string appId)
@@ -1654,11 +1654,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get your webhook subscriptions selected event names 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiStringArrayResult)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiStringArrayResult>> GetWebhookEventNamesBySubscriptionIdAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, string appId)
@@ -1727,7 +1727,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a sample event from a webhook subscription 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventName"></param>
@@ -1743,7 +1743,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a sample event from a webhook subscription 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventName"></param>
@@ -1823,7 +1823,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a sample event from a webhook subscription 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventName"></param>
@@ -1840,7 +1840,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get a sample event from a webhook subscription 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventName"></param>
@@ -1920,16 +1920,16 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get logs for your webhook subscription 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="start">Start time</param>
-        /// <param name="end">End time</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Page number (optional)</param>
-        /// <param name="limit">Page size (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultWebhookLog</returns>
         public RestApiPaginationResultWebhookLog GetWebhookLogs (string oauthAppId, int? webhookSubscriptionId, DateTime? start, DateTime? end, string appId, int? page = null, int? limit = null)
         {
@@ -1938,16 +1938,16 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get logs for your webhook subscription 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="start">Start time</param>
-        /// <param name="end">End time</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Page number (optional)</param>
-        /// <param name="limit">Page size (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultWebhookLog</returns>
         public ApiResponse< RestApiPaginationResultWebhookLog > GetWebhookLogsWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, DateTime? start, DateTime? end, string appId, int? page = null, int? limit = null)
         {
@@ -2025,16 +2025,16 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get logs for your webhook subscription 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="start">Start time</param>
-        /// <param name="end">End time</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Page number (optional)</param>
-        /// <param name="limit">Page size (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultWebhookLog</returns>
         public async System.Threading.Tasks.Task<RestApiPaginationResultWebhookLog> GetWebhookLogsAsync (string oauthAppId, int? webhookSubscriptionId, DateTime? start, DateTime? end, string appId, int? page = null, int? limit = null)
         {
@@ -2044,16 +2044,16 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get logs for your webhook subscription 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="start">Start time</param>
-        /// <param name="end">End time</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Page number (optional)</param>
-        /// <param name="limit">Page size (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultWebhookLog)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultWebhookLog>> GetWebhookLogsAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, DateTime? start, DateTime? end, string appId, int? page = null, int? limit = null)
         {
@@ -2131,10 +2131,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all webhook subscriptions by your Oauth App id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
+        /// <param name="oauthAppId"></param>
         /// <param name="appId"></param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
@@ -2146,10 +2146,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all webhook subscriptions by your Oauth App id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
+        /// <param name="oauthAppId"></param>
         /// <param name="appId"></param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
@@ -2218,10 +2218,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all webhook subscriptions by your Oauth App id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
+        /// <param name="oauthAppId"></param>
         /// <param name="appId"></param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
@@ -2234,10 +2234,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all webhook subscriptions by your Oauth App id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
+        /// <param name="oauthAppId"></param>
         /// <param name="appId"></param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
@@ -2306,12 +2306,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a webhook subscription object 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="webhookSubscription"></param>
         /// <param name="appId"></param>
         /// <returns></returns>
         public void UpdateWebhookSubscription (string oauthAppId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription, string appId)
@@ -2320,12 +2320,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a webhook subscription object 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="webhookSubscription"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> UpdateWebhookSubscriptionWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription, string appId)
@@ -2410,12 +2410,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a webhook subscription object 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="webhookSubscription"></param>
         /// <param name="appId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UpdateWebhookSubscriptionAsync (string oauthAppId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription, string appId)
@@ -2425,12 +2425,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a webhook subscription object 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Oauth App identifier</param>
-        /// <param name="webhookSubscriptionId">Webhook subscription identifier</param>
-        /// <param name="webhookSubscription">Webhook subscription object</param>
+        /// <param name="oauthAppId"></param>
+        /// <param name="webhookSubscriptionId"></param>
+        /// <param name="webhookSubscription"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateWebhookSubscriptionAsyncWithHttpInfo (string oauthAppId, int? webhookSubscriptionId, WebhookSubscription webhookSubscription, string appId)

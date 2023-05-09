@@ -4,22 +4,22 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateBankAccountAndConnectedAccount**](StripeCustomConnectApi.md#createbankaccountandconnectedaccount) | **POST** /api/v1.0/{appId}/customconnect/bank-account | Create a new Bank Account and Stripe connected account
-[**CreateStripeConnectedAccount**](StripeCustomConnectApi.md#createstripeconnectedaccount) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/create-update-account | Create or update a Stripe connected account associated with the bank account of bankAccountId
-[**CreateStripeConnectedAccountLink**](StripeCustomConnectApi.md#createstripeconnectedaccountlink) | **POST** /api/v1.0/{appId}/customconnect/{stripeConnectedAccountId}/create-account-link | Gets a single-use Stripe URL for the given account
-[**GetCustomConnect**](StripeCustomConnectApi.md#getcustomconnect) | **GET** /api/v1.0/{appId}/customconnect/{storeId} | Gets a list of stripe custom connect ids information
-[**GetVerificationStatus**](StripeCustomConnectApi.md#getverificationstatus) | **GET** /api/v1.0/{appId}/customconnect/verification-status | Gets the current verification status of the given connected account
-[**SetBankAccountBusinessType**](StripeCustomConnectApi.md#setbankaccountbusinesstype) | **POST** /api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype | Update bank account&#39;s BusinessType and create a Stripe Connected Account
+[**CreateBankAccountAndConnectedAccount**](StripeCustomConnectApi.md#createbankaccountandconnectedaccount) | **POST** /api/v1.0/{appId}/customconnect/bank-account | 
+[**CreateStripeConnectedAccount**](StripeCustomConnectApi.md#createstripeconnectedaccount) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/create-update-account | 
+[**CreateStripeConnectedAccountLink**](StripeCustomConnectApi.md#createstripeconnectedaccountlink) | **POST** /api/v1.0/{appId}/customconnect/{stripeConnectedAccountId}/create-account-link | 
+[**GetCustomConnect**](StripeCustomConnectApi.md#getcustomconnect) | **GET** /api/v1.0/{appId}/customconnect/{storeId} | 
+[**GetVerificationStatus**](StripeCustomConnectApi.md#getverificationstatus) | **GET** /api/v1.0/{appId}/customconnect/verification-status | 
+[**SetBankAccountBusinessType**](StripeCustomConnectApi.md#setbankaccountbusinesstype) | **POST** /api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype | 
 [**StripeCustomConnectRefresh**](StripeCustomConnectApi.md#stripecustomconnectrefresh) | **GET** /api/v1.0/{appId}/customconnect/refresh-link | 
-[**UpdateBankAccountDetails**](StripeCustomConnectApi.md#updatebankaccountdetails) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details | Update bank account details
-[**UpdatePayoutSchedule**](StripeCustomConnectApi.md#updatepayoutschedule) | **POST** /api/v1.0/{appId}/customconnect/update-payout-schedule/{stripeConnectedAccountId}/{interval} | Update Stripe Connection Account&#39;s payout schedule
+[**UpdateBankAccountDetails**](StripeCustomConnectApi.md#updatebankaccountdetails) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details | 
+[**UpdatePayoutSchedule**](StripeCustomConnectApi.md#updatepayoutschedule) | **POST** /api/v1.0/{appId}/customconnect/update-payout-schedule/{stripeConnectedAccountId}/{interval} | 
 
 
 <a name="createbankaccountandconnectedaccount"></a>
 # **CreateBankAccountAndConnectedAccount**
 > RestApiResultBankAccountDetail CreateBankAccountAndConnectedAccount (string appId, BankAccountCreate account)
 
-Create a new Bank Account and Stripe connected account
+
 
 ### Example
 ```csharp
@@ -39,12 +39,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StripeCustomConnectApi();
-            var appId = appId_example;  // string | App Name
-            var account = new BankAccountCreate(); // BankAccountCreate | Account to be created
+            var appId = appId_example;  // string | 
+            var account = new BankAccountCreate(); // BankAccountCreate | 
 
             try
             {
-                // Create a new Bank Account and Stripe connected account
                 RestApiResultBankAccountDetail result = apiInstance.CreateBankAccountAndConnectedAccount(appId, account);
                 Debug.WriteLine(result);
             }
@@ -61,8 +60,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name | 
- **account** | [**BankAccountCreate**](BankAccountCreate.md)| Account to be created | 
+ **appId** | **string**|  | 
+ **account** | [**BankAccountCreate**](BankAccountCreate.md)|  | 
 
 ### Return type
 
@@ -83,7 +82,7 @@ Name | Type | Description  | Notes
 # **CreateStripeConnectedAccount**
 > RestApiResultStripeConnectedAccount CreateStripeConnectedAccount (string appId, int? bankAccountId)
 
-Create or update a Stripe connected account associated with the bank account of bankAccountId
+
 
 ### Example
 ```csharp
@@ -103,12 +102,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StripeCustomConnectApi();
-            var appId = appId_example;  // string | App Name Id
-            var bankAccountId = 56;  // int? | Bank Account Id
+            var appId = appId_example;  // string | 
+            var bankAccountId = 56;  // int? | 
 
             try
             {
-                // Create or update a Stripe connected account associated with the bank account of bankAccountId
                 RestApiResultStripeConnectedAccount result = apiInstance.CreateStripeConnectedAccount(appId, bankAccountId);
                 Debug.WriteLine(result);
             }
@@ -125,8 +123,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
- **bankAccountId** | **int?**| Bank Account Id | 
+ **appId** | **string**|  | 
+ **bankAccountId** | **int?**|  | 
 
 ### Return type
 
@@ -147,7 +145,7 @@ Name | Type | Description  | Notes
 # **CreateStripeConnectedAccountLink**
 > RestApiResultStripeConnectedAccount CreateStripeConnectedAccountLink (string appId, string stripeConnectedAccountId, StripeAccountLinkRequest stripeAccountLinkRequest)
 
-Gets a single-use Stripe URL for the given account
+
 
 ### Example
 ```csharp
@@ -167,13 +165,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StripeCustomConnectApi();
-            var appId = appId_example;  // string | App Name
-            var stripeConnectedAccountId = stripeConnectedAccountId_example;  // string | Stripe Connected Account Id
+            var appId = appId_example;  // string | 
+            var stripeConnectedAccountId = stripeConnectedAccountId_example;  // string | 
             var stripeAccountLinkRequest = new StripeAccountLinkRequest(); // StripeAccountLinkRequest | 
 
             try
             {
-                // Gets a single-use Stripe URL for the given account
                 RestApiResultStripeConnectedAccount result = apiInstance.CreateStripeConnectedAccountLink(appId, stripeConnectedAccountId, stripeAccountLinkRequest);
                 Debug.WriteLine(result);
             }
@@ -190,8 +187,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name | 
- **stripeConnectedAccountId** | **string**| Stripe Connected Account Id | 
+ **appId** | **string**|  | 
+ **stripeConnectedAccountId** | **string**|  | 
  **stripeAccountLinkRequest** | [**StripeAccountLinkRequest**](StripeAccountLinkRequest.md)|  | 
 
 ### Return type
@@ -213,7 +210,7 @@ Name | Type | Description  | Notes
 # **GetCustomConnect**
 > RestApiArrayResultStripeCustomConnectedAccount GetCustomConnect (int? storeId, string appId)
 
-Gets a list of stripe custom connect ids information
+
 
 ### Example
 ```csharp
@@ -238,7 +235,6 @@ namespace Example
 
             try
             {
-                // Gets a list of stripe custom connect ids information
                 RestApiArrayResultStripeCustomConnectedAccount result = apiInstance.GetCustomConnect(storeId, appId);
                 Debug.WriteLine(result);
             }
@@ -277,7 +273,7 @@ Name | Type | Description  | Notes
 # **GetVerificationStatus**
 > RestApiResultStripeConnectedAccount GetVerificationStatus (string appId, string stripeConnectedAccountId)
 
-Gets the current verification status of the given connected account
+
 
 ### Example
 ```csharp
@@ -302,7 +298,6 @@ namespace Example
 
             try
             {
-                // Gets the current verification status of the given connected account
                 RestApiResultStripeConnectedAccount result = apiInstance.GetVerificationStatus(appId, stripeConnectedAccountId);
                 Debug.WriteLine(result);
             }
@@ -341,7 +336,7 @@ Name | Type | Description  | Notes
 # **SetBankAccountBusinessType**
 > RestApiResultBankAccountDetail SetBankAccountBusinessType (string appId, int? bankAccountId, string businessType)
 
-Update bank account's BusinessType and create a Stripe Connected Account
+
 
 ### Example
 ```csharp
@@ -361,13 +356,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StripeCustomConnectApi();
-            var appId = appId_example;  // string | App Name
-            var bankAccountId = 56;  // int? | Bank Account Id
-            var businessType = businessType_example;  // string | Bank Account business type
+            var appId = appId_example;  // string | 
+            var bankAccountId = 56;  // int? | 
+            var businessType = businessType_example;  // string | 
 
             try
             {
-                // Update bank account's BusinessType and create a Stripe Connected Account
                 RestApiResultBankAccountDetail result = apiInstance.SetBankAccountBusinessType(appId, bankAccountId, businessType);
                 Debug.WriteLine(result);
             }
@@ -384,9 +378,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name | 
- **bankAccountId** | **int?**| Bank Account Id | 
- **businessType** | **string**| Bank Account business type | 
+ **appId** | **string**|  | 
+ **bankAccountId** | **int?**|  | 
+ **businessType** | **string**|  | 
 
 ### Return type
 
@@ -470,7 +464,7 @@ Name | Type | Description  | Notes
 # **UpdateBankAccountDetails**
 > RestApiResultStripeConnectedAccount UpdateBankAccountDetails (string appId, int? bankAccountId, BankAccountDetailsUpdateRequest updateRequest)
 
-Update bank account details
+
 
 ### Example
 ```csharp
@@ -490,13 +484,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StripeCustomConnectApi();
-            var appId = appId_example;  // string | App Name Id
-            var bankAccountId = 56;  // int? | Bank Account Id
-            var updateRequest = new BankAccountDetailsUpdateRequest(); // BankAccountDetailsUpdateRequest | fields to be updated
+            var appId = appId_example;  // string | 
+            var bankAccountId = 56;  // int? | 
+            var updateRequest = new BankAccountDetailsUpdateRequest(); // BankAccountDetailsUpdateRequest | 
 
             try
             {
-                // Update bank account details
                 RestApiResultStripeConnectedAccount result = apiInstance.UpdateBankAccountDetails(appId, bankAccountId, updateRequest);
                 Debug.WriteLine(result);
             }
@@ -513,9 +506,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
- **bankAccountId** | **int?**| Bank Account Id | 
- **updateRequest** | [**BankAccountDetailsUpdateRequest**](BankAccountDetailsUpdateRequest.md)| fields to be updated | 
+ **appId** | **string**|  | 
+ **bankAccountId** | **int?**|  | 
+ **updateRequest** | [**BankAccountDetailsUpdateRequest**](BankAccountDetailsUpdateRequest.md)|  | 
 
 ### Return type
 
@@ -536,7 +529,7 @@ Name | Type | Description  | Notes
 # **UpdatePayoutSchedule**
 > RestApiResultModelBase UpdatePayoutSchedule (string appId, string stripeConnectedAccountId, string interval)
 
-Update Stripe Connection Account's payout schedule
+
 
 ### Example
 ```csharp
@@ -562,7 +555,6 @@ namespace Example
 
             try
             {
-                // Update Stripe Connection Account's payout schedule
                 RestApiResultModelBase result = apiInstance.UpdatePayoutSchedule(appId, stripeConnectedAccountId, interval);
                 Debug.WriteLine(result);
             }

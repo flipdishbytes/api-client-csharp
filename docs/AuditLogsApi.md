@@ -4,17 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddOrderAuditLog**](AuditLogsApi.md#addorderauditlog) | **POST** /api/v1.0/auditlogs/orders/{orderId} | Create an order audit log event
-[**AddStoreAuditLogEvent**](AuditLogsApi.md#addstoreauditlogevent) | **POST** /api/v1.0/auditlogs/stores/{storeId} | Create a store audit log event
+[**AddOrderAuditLog**](AuditLogsApi.md#addorderauditlog) | **POST** /api/v1.0/auditlogs/orders/{orderId} | 
+[**AddStoreAuditLogEvent**](AuditLogsApi.md#addstoreauditlogevent) | **POST** /api/v1.0/auditlogs/stores/{storeId} | 
 
 
 <a name="addorderauditlog"></a>
 # **AddOrderAuditLog**
 > void AddOrderAuditLog (int? orderId, List<ExternalStoreAuditLog> externalEventCreate)
 
-Create an order audit log event
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -39,7 +37,6 @@ namespace Example
 
             try
             {
-                // Create an order audit log event
                 apiInstance.AddOrderAuditLog(orderId, externalEventCreate);
             }
             catch (Exception e)
@@ -77,9 +74,7 @@ void (empty response body)
 # **AddStoreAuditLogEvent**
 > void AddStoreAuditLogEvent (int? storeId, List<ExternalStoreAuditLog> externalEventCreate)
 
-Create a store audit log event
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -104,7 +99,6 @@ namespace Example
 
             try
             {
-                // Create a store audit log event
                 apiInstance.AddStoreAuditLogEvent(storeId, externalEventCreate);
             }
             catch (Exception e)

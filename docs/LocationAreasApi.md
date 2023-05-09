@@ -4,17 +4,17 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateLocationArea**](LocationAreasApi.md#createlocationarea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas | Create a Location Area, i.e: Room, Floor, Parking lot
-[**GetLocationArea**](LocationAreasApi.md#getlocationarea) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId} | Retrieve a Location Area
-[**GetLocationAreasForStore**](LocationAreasApi.md#getlocationareasforstore) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas | Retrieve all Location Areas for a Store
-[**UpdateLocationArea**](LocationAreasApi.md#updatelocationarea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/update | Update a Location Area, i.e: Room, Floor, Car park space
+[**CreateLocationArea**](LocationAreasApi.md#createlocationarea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas | 
+[**GetLocationArea**](LocationAreasApi.md#getlocationarea) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId} | 
+[**GetLocationAreasForStore**](LocationAreasApi.md#getlocationareasforstore) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas | 
+[**UpdateLocationArea**](LocationAreasApi.md#updatelocationarea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/update | 
 
 
 <a name="createlocationarea"></a>
 # **CreateLocationArea**
 > Object CreateLocationArea (CreateLocationArea locationAreaInput, string appId, int? storeId)
 
-Create a Location Area, i.e: Room, Floor, Parking lot
+
 
 ### Example
 ```csharp
@@ -34,13 +34,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationAreasApi();
-            var locationAreaInput = new CreateLocationArea(); // CreateLocationArea | Input data for creating the Location Area
-            var appId = appId_example;  // string | AppId i.e: (fd1234)
-            var storeId = 56;  // int? | Id of the Store
+            var locationAreaInput = new CreateLocationArea(); // CreateLocationArea | 
+            var appId = appId_example;  // string | 
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Create a Location Area, i.e: Room, Floor, Parking lot
                 Object result = apiInstance.CreateLocationArea(locationAreaInput, appId, storeId);
                 Debug.WriteLine(result);
             }
@@ -57,9 +56,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **locationAreaInput** | [**CreateLocationArea**](CreateLocationArea.md)| Input data for creating the Location Area | 
- **appId** | **string**| AppId i.e: (fd1234) | 
- **storeId** | **int?**| Id of the Store | 
+ **locationAreaInput** | [**CreateLocationArea**](CreateLocationArea.md)|  | 
+ **appId** | **string**|  | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -80,7 +79,7 @@ Name | Type | Description  | Notes
 # **GetLocationArea**
 > RestApiResultLocationAreaWithLocations GetLocationArea (int? locationAreaId, string appId, int? storeId)
 
-Retrieve a Location Area
+
 
 ### Example
 ```csharp
@@ -100,13 +99,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationAreasApi();
-            var locationAreaId = 56;  // int? | Id of the Location Area
-            var appId = appId_example;  // string | AppId i.e: (fd1234)
-            var storeId = 56;  // int? | Id of the Store
+            var locationAreaId = 56;  // int? | 
+            var appId = appId_example;  // string | 
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Retrieve a Location Area
                 RestApiResultLocationAreaWithLocations result = apiInstance.GetLocationArea(locationAreaId, appId, storeId);
                 Debug.WriteLine(result);
             }
@@ -123,9 +121,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **locationAreaId** | **int?**| Id of the Location Area | 
- **appId** | **string**| AppId i.e: (fd1234) | 
- **storeId** | **int?**| Id of the Store | 
+ **locationAreaId** | **int?**|  | 
+ **appId** | **string**|  | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -146,7 +144,7 @@ Name | Type | Description  | Notes
 # **GetLocationAreasForStore**
 > RestApiArrayResultLocationAreaWithLocations GetLocationAreasForStore (string appId, int? storeId)
 
-Retrieve all Location Areas for a Store
+
 
 ### Example
 ```csharp
@@ -166,12 +164,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationAreasApi();
-            var appId = appId_example;  // string | AppId i.e: (fd1234)
-            var storeId = 56;  // int? | Id of the Store
+            var appId = appId_example;  // string | 
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Retrieve all Location Areas for a Store
                 RestApiArrayResultLocationAreaWithLocations result = apiInstance.GetLocationAreasForStore(appId, storeId);
                 Debug.WriteLine(result);
             }
@@ -188,8 +185,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| AppId i.e: (fd1234) | 
- **storeId** | **int?**| Id of the Store | 
+ **appId** | **string**|  | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -210,7 +207,7 @@ Name | Type | Description  | Notes
 # **UpdateLocationArea**
 > RestApiResultLocationArea UpdateLocationArea (UpdateLocationArea locationAreaInput, string appId, int? storeId, string locationAreaId)
 
-Update a Location Area, i.e: Room, Floor, Car park space
+
 
 ### Example
 ```csharp
@@ -230,14 +227,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationAreasApi();
-            var locationAreaInput = new UpdateLocationArea(); // UpdateLocationArea | Input data for updating the Location Area
-            var appId = appId_example;  // string | AppId i.e: (fd1234)
-            var storeId = 56;  // int? | Id of the Store
+            var locationAreaInput = new UpdateLocationArea(); // UpdateLocationArea | 
+            var appId = appId_example;  // string | 
+            var storeId = 56;  // int? | 
             var locationAreaId = locationAreaId_example;  // string | 
 
             try
             {
-                // Update a Location Area, i.e: Room, Floor, Car park space
                 RestApiResultLocationArea result = apiInstance.UpdateLocationArea(locationAreaInput, appId, storeId, locationAreaId);
                 Debug.WriteLine(result);
             }
@@ -254,9 +250,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **locationAreaInput** | [**UpdateLocationArea**](UpdateLocationArea.md)| Input data for updating the Location Area | 
- **appId** | **string**| AppId i.e: (fd1234) | 
- **storeId** | **int?**| Id of the Store | 
+ **locationAreaInput** | [**UpdateLocationArea**](UpdateLocationArea.md)|  | 
+ **appId** | **string**|  | 
+ **storeId** | **int?**|  | 
  **locationAreaId** | **string**|  | 
 
 ### Return type

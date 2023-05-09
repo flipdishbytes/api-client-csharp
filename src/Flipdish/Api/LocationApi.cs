@@ -25,287 +25,287 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create a Location i.e: Table, Hotel Room, Car park space
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createLocationInput">Input data for creating the Location</param>
-        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="createLocationInput"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Object</returns>
         Object CreateLocation (List<CreateLocation> createLocationInput, int? locationAreaId, string appId, int? storeId);
 
         /// <summary>
-        /// Create a Location i.e: Table, Hotel Room, Car park space
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createLocationInput">Input data for creating the Location</param>
-        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="createLocationInput"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> CreateLocationWithHttpInfo (List<CreateLocation> createLocationInput, int? locationAreaId, string appId, int? storeId);
         /// <summary>
-        /// Set a Location as deleted
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be moved</param>
-        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Object</returns>
         Object DeleteLocation (int? locationId, int? locationAreaId, string appId, int? storeId);
 
         /// <summary>
-        /// Set a Location as deleted
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be moved</param>
-        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> DeleteLocationWithHttpInfo (int? locationId, int? locationAreaId, string appId, int? storeId);
         /// <summary>
-        /// Set or unset External Location Id on a Location
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be mapped</param>
-        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
-        /// <param name="externalLocationId">External Id to be mapped to the location (optional)</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="externalLocationId"> (optional)</param>
         /// <returns>RestApiResultMappedLocation</returns>
         RestApiResultMappedLocation MapLocationToExternalId (int? locationId, int? locationAreaId, string appId, int? storeId, string externalLocationId = null);
 
         /// <summary>
-        /// Set or unset External Location Id on a Location
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be mapped</param>
-        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
-        /// <param name="externalLocationId">External Id to be mapped to the location (optional)</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="externalLocationId"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultMappedLocation</returns>
         ApiResponse<RestApiResultMappedLocation> MapLocationToExternalIdWithHttpInfo (int? locationId, int? locationAreaId, string appId, int? storeId, string externalLocationId = null);
         /// <summary>
-        /// Move a Location to a different location Area
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be moved</param>
-        /// <param name="locationAreaId">Id of the new Location area that it should be moved to</param>
-        /// <param name="newLocationAreaId">Id of the new Location area that it should be moved to</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="newLocationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Object</returns>
         Object MoveLocation (int? locationId, int? locationAreaId, int? newLocationAreaId, string appId, int? storeId);
 
         /// <summary>
-        /// Move a Location to a different location Area
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be moved</param>
-        /// <param name="locationAreaId">Id of the new Location area that it should be moved to</param>
-        /// <param name="newLocationAreaId">Id of the new Location area that it should be moved to</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="newLocationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> MoveLocationWithHttpInfo (int? locationId, int? locationAreaId, int? newLocationAreaId, string appId, int? storeId);
         /// <summary>
-        /// Update a Location i.e: Table, Hotel Room, Car park space
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="updateLocationInput">Input data for updating the Location</param>
-        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
-        /// <param name="locationId">Id of the Location to be updated</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="updateLocationInput"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="locationId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiResultLocationAreaLocation</returns>
         RestApiResultLocationAreaLocation UpdateLocation (CreateLocation updateLocationInput, int? locationAreaId, int? locationId, string appId, int? storeId);
 
         /// <summary>
-        /// Update a Location i.e: Table, Hotel Room, Car park space
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="updateLocationInput">Input data for updating the Location</param>
-        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
-        /// <param name="locationId">Id of the Location to be updated</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="updateLocationInput"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="locationId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultLocationAreaLocation</returns>
         ApiResponse<RestApiResultLocationAreaLocation> UpdateLocationWithHttpInfo (CreateLocation updateLocationInput, int? locationAreaId, int? locationId, string appId, int? storeId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create a Location i.e: Table, Hotel Room, Car park space
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createLocationInput">Input data for creating the Location</param>
-        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="createLocationInput"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> CreateLocationAsync (List<CreateLocation> createLocationInput, int? locationAreaId, string appId, int? storeId);
 
         /// <summary>
-        /// Create a Location i.e: Table, Hotel Room, Car park space
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createLocationInput">Input data for creating the Location</param>
-        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="createLocationInput"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CreateLocationAsyncWithHttpInfo (List<CreateLocation> createLocationInput, int? locationAreaId, string appId, int? storeId);
         /// <summary>
-        /// Set a Location as deleted
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be moved</param>
-        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> DeleteLocationAsync (int? locationId, int? locationAreaId, string appId, int? storeId);
 
         /// <summary>
-        /// Set a Location as deleted
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be moved</param>
-        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLocationAsyncWithHttpInfo (int? locationId, int? locationAreaId, string appId, int? storeId);
         /// <summary>
-        /// Set or unset External Location Id on a Location
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be mapped</param>
-        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
-        /// <param name="externalLocationId">External Id to be mapped to the location (optional)</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="externalLocationId"> (optional)</param>
         /// <returns>Task of RestApiResultMappedLocation</returns>
         System.Threading.Tasks.Task<RestApiResultMappedLocation> MapLocationToExternalIdAsync (int? locationId, int? locationAreaId, string appId, int? storeId, string externalLocationId = null);
 
         /// <summary>
-        /// Set or unset External Location Id on a Location
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be mapped</param>
-        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
-        /// <param name="externalLocationId">External Id to be mapped to the location (optional)</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="externalLocationId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultMappedLocation)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultMappedLocation>> MapLocationToExternalIdAsyncWithHttpInfo (int? locationId, int? locationAreaId, string appId, int? storeId, string externalLocationId = null);
         /// <summary>
-        /// Move a Location to a different location Area
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be moved</param>
-        /// <param name="locationAreaId">Id of the new Location area that it should be moved to</param>
-        /// <param name="newLocationAreaId">Id of the new Location area that it should be moved to</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="newLocationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> MoveLocationAsync (int? locationId, int? locationAreaId, int? newLocationAreaId, string appId, int? storeId);
 
         /// <summary>
-        /// Move a Location to a different location Area
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be moved</param>
-        /// <param name="locationAreaId">Id of the new Location area that it should be moved to</param>
-        /// <param name="newLocationAreaId">Id of the new Location area that it should be moved to</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="newLocationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> MoveLocationAsyncWithHttpInfo (int? locationId, int? locationAreaId, int? newLocationAreaId, string appId, int? storeId);
         /// <summary>
-        /// Update a Location i.e: Table, Hotel Room, Car park space
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="updateLocationInput">Input data for updating the Location</param>
-        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
-        /// <param name="locationId">Id of the Location to be updated</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="updateLocationInput"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="locationId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiResultLocationAreaLocation</returns>
         System.Threading.Tasks.Task<RestApiResultLocationAreaLocation> UpdateLocationAsync (CreateLocation updateLocationInput, int? locationAreaId, int? locationId, string appId, int? storeId);
 
         /// <summary>
-        /// Update a Location i.e: Table, Hotel Room, Car park space
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="updateLocationInput">Input data for updating the Location</param>
-        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
-        /// <param name="locationId">Id of the Location to be updated</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="updateLocationInput"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="locationId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultLocationAreaLocation)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultLocationAreaLocation>> UpdateLocationAsyncWithHttpInfo (CreateLocation updateLocationInput, int? locationAreaId, int? locationId, string appId, int? storeId);
         #endregion Asynchronous Operations
@@ -409,13 +409,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a Location i.e: Table, Hotel Room, Car park space 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createLocationInput">Input data for creating the Location</param>
-        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="createLocationInput"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Object</returns>
         public Object CreateLocation (List<CreateLocation> createLocationInput, int? locationAreaId, string appId, int? storeId)
         {
@@ -424,13 +424,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a Location i.e: Table, Hotel Room, Car park space 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createLocationInput">Input data for creating the Location</param>
-        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="createLocationInput"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > CreateLocationWithHttpInfo (List<CreateLocation> createLocationInput, int? locationAreaId, string appId, int? storeId)
         {
@@ -514,13 +514,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a Location i.e: Table, Hotel Room, Car park space 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createLocationInput">Input data for creating the Location</param>
-        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="createLocationInput"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> CreateLocationAsync (List<CreateLocation> createLocationInput, int? locationAreaId, string appId, int? storeId)
         {
@@ -530,13 +530,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a Location i.e: Table, Hotel Room, Car park space 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createLocationInput">Input data for creating the Location</param>
-        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="createLocationInput"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateLocationAsyncWithHttpInfo (List<CreateLocation> createLocationInput, int? locationAreaId, string appId, int? storeId)
         {
@@ -620,13 +620,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set a Location as deleted 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be moved</param>
-        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Object</returns>
         public Object DeleteLocation (int? locationId, int? locationAreaId, string appId, int? storeId)
         {
@@ -635,13 +635,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set a Location as deleted 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be moved</param>
-        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > DeleteLocationWithHttpInfo (int? locationId, int? locationAreaId, string appId, int? storeId)
         {
@@ -713,13 +713,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set a Location as deleted 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be moved</param>
-        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> DeleteLocationAsync (int? locationId, int? locationAreaId, string appId, int? storeId)
         {
@@ -729,13 +729,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set a Location as deleted 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be moved</param>
-        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLocationAsyncWithHttpInfo (int? locationId, int? locationAreaId, string appId, int? storeId)
         {
@@ -807,14 +807,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set or unset External Location Id on a Location 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be mapped</param>
-        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
-        /// <param name="externalLocationId">External Id to be mapped to the location (optional)</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="externalLocationId"> (optional)</param>
         /// <returns>RestApiResultMappedLocation</returns>
         public RestApiResultMappedLocation MapLocationToExternalId (int? locationId, int? locationAreaId, string appId, int? storeId, string externalLocationId = null)
         {
@@ -823,14 +823,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set or unset External Location Id on a Location 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be mapped</param>
-        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
-        /// <param name="externalLocationId">External Id to be mapped to the location (optional)</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="externalLocationId"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultMappedLocation</returns>
         public ApiResponse< RestApiResultMappedLocation > MapLocationToExternalIdWithHttpInfo (int? locationId, int? locationAreaId, string appId, int? storeId, string externalLocationId = null)
         {
@@ -903,14 +903,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set or unset External Location Id on a Location 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be mapped</param>
-        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
-        /// <param name="externalLocationId">External Id to be mapped to the location (optional)</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="externalLocationId"> (optional)</param>
         /// <returns>Task of RestApiResultMappedLocation</returns>
         public async System.Threading.Tasks.Task<RestApiResultMappedLocation> MapLocationToExternalIdAsync (int? locationId, int? locationAreaId, string appId, int? storeId, string externalLocationId = null)
         {
@@ -920,14 +920,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set or unset External Location Id on a Location 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be mapped</param>
-        /// <param name="locationAreaId">Id of the Location Area that the Location belong</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
-        /// <param name="externalLocationId">External Id to be mapped to the location (optional)</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="externalLocationId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultMappedLocation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultMappedLocation>> MapLocationToExternalIdAsyncWithHttpInfo (int? locationId, int? locationAreaId, string appId, int? storeId, string externalLocationId = null)
         {
@@ -1000,14 +1000,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Move a Location to a different location Area 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be moved</param>
-        /// <param name="locationAreaId">Id of the new Location area that it should be moved to</param>
-        /// <param name="newLocationAreaId">Id of the new Location area that it should be moved to</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="newLocationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Object</returns>
         public Object MoveLocation (int? locationId, int? locationAreaId, int? newLocationAreaId, string appId, int? storeId)
         {
@@ -1016,14 +1016,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Move a Location to a different location Area 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be moved</param>
-        /// <param name="locationAreaId">Id of the new Location area that it should be moved to</param>
-        /// <param name="newLocationAreaId">Id of the new Location area that it should be moved to</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="newLocationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > MoveLocationWithHttpInfo (int? locationId, int? locationAreaId, int? newLocationAreaId, string appId, int? storeId)
         {
@@ -1099,14 +1099,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Move a Location to a different location Area 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be moved</param>
-        /// <param name="locationAreaId">Id of the new Location area that it should be moved to</param>
-        /// <param name="newLocationAreaId">Id of the new Location area that it should be moved to</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="newLocationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> MoveLocationAsync (int? locationId, int? locationAreaId, int? newLocationAreaId, string appId, int? storeId)
         {
@@ -1116,14 +1116,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Move a Location to a different location Area 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="locationId">Id of the Location that will be moved</param>
-        /// <param name="locationAreaId">Id of the new Location area that it should be moved to</param>
-        /// <param name="newLocationAreaId">Id of the new Location area that it should be moved to</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="locationId"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="newLocationAreaId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> MoveLocationAsyncWithHttpInfo (int? locationId, int? locationAreaId, int? newLocationAreaId, string appId, int? storeId)
         {
@@ -1199,14 +1199,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a Location i.e: Table, Hotel Room, Car park space 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="updateLocationInput">Input data for updating the Location</param>
-        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
-        /// <param name="locationId">Id of the Location to be updated</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="updateLocationInput"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="locationId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiResultLocationAreaLocation</returns>
         public RestApiResultLocationAreaLocation UpdateLocation (CreateLocation updateLocationInput, int? locationAreaId, int? locationId, string appId, int? storeId)
         {
@@ -1215,14 +1215,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a Location i.e: Table, Hotel Room, Car park space 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="updateLocationInput">Input data for updating the Location</param>
-        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
-        /// <param name="locationId">Id of the Location to be updated</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="updateLocationInput"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="locationId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultLocationAreaLocation</returns>
         public ApiResponse< RestApiResultLocationAreaLocation > UpdateLocationWithHttpInfo (CreateLocation updateLocationInput, int? locationAreaId, int? locationId, string appId, int? storeId)
         {
@@ -1310,14 +1310,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a Location i.e: Table, Hotel Room, Car park space 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="updateLocationInput">Input data for updating the Location</param>
-        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
-        /// <param name="locationId">Id of the Location to be updated</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="updateLocationInput"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="locationId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiResultLocationAreaLocation</returns>
         public async System.Threading.Tasks.Task<RestApiResultLocationAreaLocation> UpdateLocationAsync (CreateLocation updateLocationInput, int? locationAreaId, int? locationId, string appId, int? storeId)
         {
@@ -1327,14 +1327,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update a Location i.e: Table, Hotel Room, Car park space 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="updateLocationInput">Input data for updating the Location</param>
-        /// <param name="locationAreaId">Id of the Location area where the Location belongs</param>
-        /// <param name="locationId">Id of the Location to be updated</param>
-        /// <param name="appId">AppId i.e: (fd1234)</param>
-        /// <param name="storeId">Id of the Store</param>
+        /// <param name="updateLocationInput"></param>
+        /// <param name="locationAreaId"></param>
+        /// <param name="locationId"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultLocationAreaLocation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultLocationAreaLocation>> UpdateLocationAsyncWithHttpInfo (CreateLocation updateLocationInput, int? locationAreaId, int? locationId, string appId, int? storeId)
         {

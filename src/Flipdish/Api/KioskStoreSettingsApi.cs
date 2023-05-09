@@ -25,30 +25,30 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get all kiosk settings associated with a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
         /// <returns>RestApiResultStoreKioskSettings</returns>
         RestApiResultStoreKioskSettings GetAllKioskSettingsForStore (int? storeId, string appId);
 
         /// <summary>
-        /// Get all kiosk settings associated with a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultStoreKioskSettings</returns>
         ApiResponse<RestApiResultStoreKioskSettings> GetAllKioskSettingsForStoreWithHttpInfo (int? storeId, string appId);
         /// <summary>
-        /// [For Kiosk use only] Get all stores connected to a Kiosk
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -58,7 +58,7 @@ namespace Flipdish.Api
         RestApiResultKioskStoreSettings GetAllStoreSettingsForKioskHydra ();
 
         /// <summary>
-        /// [For Kiosk use only] Get all stores connected to a Kiosk
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -94,30 +94,30 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get all kiosk settings associated with a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiResultStoreKioskSettings</returns>
         System.Threading.Tasks.Task<RestApiResultStoreKioskSettings> GetAllKioskSettingsForStoreAsync (int? storeId, string appId);
 
         /// <summary>
-        /// Get all kiosk settings associated with a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultStoreKioskSettings)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStoreKioskSettings>> GetAllKioskSettingsForStoreAsyncWithHttpInfo (int? storeId, string appId);
         /// <summary>
-        /// [For Kiosk use only] Get all stores connected to a Kiosk
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -127,7 +127,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultKioskStoreSettings> GetAllStoreSettingsForKioskHydraAsync ();
 
         /// <summary>
-        /// [For Kiosk use only] Get all stores connected to a Kiosk
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -261,11 +261,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all kiosk settings associated with a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
         /// <returns>RestApiResultStoreKioskSettings</returns>
         public RestApiResultStoreKioskSettings GetAllKioskSettingsForStore (int? storeId, string appId)
         {
@@ -274,11 +274,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all kiosk settings associated with a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultStoreKioskSettings</returns>
         public ApiResponse< RestApiResultStoreKioskSettings > GetAllKioskSettingsForStoreWithHttpInfo (int? storeId, string appId)
         {
@@ -342,11 +342,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all kiosk settings associated with a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiResultStoreKioskSettings</returns>
         public async System.Threading.Tasks.Task<RestApiResultStoreKioskSettings> GetAllKioskSettingsForStoreAsync (int? storeId, string appId)
         {
@@ -356,11 +356,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all kiosk settings associated with a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="storeId"></param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultStoreKioskSettings)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStoreKioskSettings>> GetAllKioskSettingsForStoreAsyncWithHttpInfo (int? storeId, string appId)
         {
@@ -424,7 +424,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [For Kiosk use only] Get all stores connected to a Kiosk 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RestApiResultKioskStoreSettings</returns>
@@ -435,7 +435,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [For Kiosk use only] Get all stores connected to a Kiosk 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RestApiResultKioskStoreSettings</returns>
@@ -493,7 +493,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [For Kiosk use only] Get all stores connected to a Kiosk 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of RestApiResultKioskStoreSettings</returns>
@@ -505,7 +505,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [For Kiosk use only] Get all stores connected to a Kiosk 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RestApiResultKioskStoreSettings)</returns>

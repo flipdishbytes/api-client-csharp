@@ -25,635 +25,635 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Accept order
+        /// 
         /// </summary>
         /// <remarks>
-        /// To accept an order, you create an &#x60;accept&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
-        /// <param name="acceptObject">Order accept parameters (eg: EstimatedMinutesForDelivery)</param>
+        /// <param name="id"></param>
+        /// <param name="acceptObject"></param>
         /// <returns></returns>
         void AcceptOrder (int? id, Accept acceptObject);
 
         /// <summary>
-        /// Accept order
+        /// 
         /// </summary>
         /// <remarks>
-        /// To accept an order, you create an &#x60;accept&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
-        /// <param name="acceptObject">Order accept parameters (eg: EstimatedMinutesForDelivery)</param>
+        /// <param name="id"></param>
+        /// <param name="acceptObject"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> AcceptOrderWithHttpInfo (int? id, Accept acceptObject);
         /// <summary>
-        /// Dispatch order
+        /// 
         /// </summary>
         /// <remarks>
-        /// To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <returns></returns>
         void DispatchOrder (int? id);
 
         /// <summary>
-        /// Dispatch order
+        /// 
         /// </summary>
         /// <remarks>
-        /// To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DispatchOrderWithHttpInfo (int? id);
         /// <summary>
-        /// Get order delivery information
+        /// 
         /// </summary>
         /// <remarks>
-        /// Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>RestApiResultOrderDeliveryInformation</returns>
         RestApiResultOrderDeliveryInformation GetDeliveryInformation (int? orderId);
 
         /// <summary>
-        /// Get order delivery information
+        /// 
         /// </summary>
         /// <remarks>
-        /// Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>ApiResponse of RestApiResultOrderDeliveryInformation</returns>
         ApiResponse<RestApiResultOrderDeliveryInformation> GetDeliveryInformationWithHttpInfo (int? orderId);
         /// <summary>
-        /// Get order fulfillment state
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>RestApiResultOrderFulfillmentStatus</returns>
         RestApiResultOrderFulfillmentStatus GetFulfillmentState (int? orderId);
 
         /// <summary>
-        /// Get order fulfillment state
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>ApiResponse of RestApiResultOrderFulfillmentStatus</returns>
         ApiResponse<RestApiResultOrderFulfillmentStatus> GetFulfillmentStateWithHttpInfo (int? orderId);
         /// <summary>
-        /// Get order fulfillment state with actionable details like default next state
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>RestApiResultOrderFulfillmentStatusWithConfigurationActions</returns>
         RestApiResultOrderFulfillmentStatusWithConfigurationActions GetFulfillmentStatusWithDetailsAndActions (int? orderId);
 
         /// <summary>
-        /// Get order fulfillment state with actionable details like default next state
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
-        /// <returns>ApiResponse of RestApiResultOrderFulfillmentStatusWithConfigurationActions</returns>
-        ApiResponse<RestApiResultOrderFulfillmentStatusWithConfigurationActions> GetFulfillmentStatusWithDetailsAndActionsWithHttpInfo (int? orderId);
-        /// <summary>
-        /// Get order by ID
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="orderId"></param>
+        /// <returns>ApiResponse of RestApiResultOrderFulfillmentStatusWithConfigurationActions</returns>
+        ApiResponse<RestApiResultOrderFulfillmentStatusWithConfigurationActions> GetFulfillmentStatusWithDetailsAndActionsWithHttpInfo (int? orderId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
         /// <returns>RestApiResultOrder</returns>
         RestApiResultOrder GetOrderById (int? id);
 
         /// <summary>
-        /// Get order by ID
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <returns>ApiResponse of RestApiResultOrder</returns>
         ApiResponse<RestApiResultOrder> GetOrderByIdWithHttpInfo (int? id);
         /// <summary>
-        /// Get orders by filter
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
-        /// <param name="state">Order states (optional)</param>
-        /// <param name="from">Order has been placed after this parameter value (optional)</param>
-        /// <param name="to">Order has been placed before this parameter value (optional)</param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultOrder</returns>
         RestApiPaginationResultOrder GetOrders (List<int?> physicalRestaurantId = null, List<string> state = null, DateTime? from = null, DateTime? to = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get orders by filter
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
-        /// <param name="state">Order states (optional)</param>
-        /// <param name="from">Order has been placed after this parameter value (optional)</param>
-        /// <param name="to">Order has been placed before this parameter value (optional)</param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultOrder</returns>
         ApiResponse<RestApiPaginationResultOrder> GetOrdersWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, DateTime? from = null, DateTime? to = null, int? page = null, int? limit = null);
         /// <summary>
-        /// [PRIVATE API] Get summary of orders by filter
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="searchQuery">Query string (optional)</param>
-        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
-        /// <param name="state">Order states (optional)</param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <param name="orderByRequestedForTime"> (optional)</param>
         /// <param name="channels"> (optional)</param>
-        /// <param name="orderIds">Filter by the given orders (optional)</param>
-        /// <param name="from">Filter by date from (optional)</param>
-        /// <param name="to">Filter by date to (optional)</param>
+        /// <param name="orderIds"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
         /// <returns>RestApiPaginationResultOrderSummary</returns>
         RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null);
 
         /// <summary>
-        /// [PRIVATE API] Get summary of orders by filter
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="searchQuery">Query string (optional)</param>
-        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
-        /// <param name="state">Order states (optional)</param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <param name="orderByRequestedForTime"> (optional)</param>
         /// <param name="channels"> (optional)</param>
-        /// <param name="orderIds">Filter by the given orders (optional)</param>
-        /// <param name="from">Filter by date from (optional)</param>
-        /// <param name="to">Filter by date to (optional)</param>
+        /// <param name="orderIds"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultOrderSummary</returns>
         ApiResponse<RestApiPaginationResultOrderSummary> GetOrdersSummaryWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null);
         /// <summary>
-        /// Refund order
+        /// 
         /// </summary>
         /// <remarks>
-        /// To refund an order, you create a &#x60;refund&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <param name="refundObject"></param>
         /// <returns></returns>
         void RefundOrder (int? id, Refund refundObject);
 
         /// <summary>
-        /// Refund order
+        /// 
         /// </summary>
         /// <remarks>
-        /// To refund an order, you create a &#x60;refund&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <param name="refundObject"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> RefundOrderWithHttpInfo (int? id, Refund refundObject);
         /// <summary>
-        /// Reject order
+        /// 
         /// </summary>
         /// <remarks>
-        /// To reject an order, you create a &#x60;reject&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <param name="rejectObject"></param>
         /// <returns></returns>
         void RejectOrder (int? id, Reject rejectObject);
 
         /// <summary>
-        /// Reject order
+        /// 
         /// </summary>
         /// <remarks>
-        /// To reject an order, you create a &#x60;reject&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <param name="rejectObject"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> RejectOrderWithHttpInfo (int? id, Reject rejectObject);
         /// <summary>
-        /// Get fulfillment status for a list of orders
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="orderIds">Flipdish Order Id list, comma separated</param>
+        /// <param name="appId"></param>
+        /// <param name="orderIds"></param>
         /// <returns>RestApiArrayResultOrderFulfillmentStatus</returns>
         RestApiArrayResultOrderFulfillmentStatus SearchFulfillmentStatuses (string appId, string orderIds);
 
         /// <summary>
-        /// Get fulfillment status for a list of orders
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="orderIds">Flipdish Order Id list, comma separated</param>
+        /// <param name="appId"></param>
+        /// <param name="orderIds"></param>
         /// <returns>ApiResponse of RestApiArrayResultOrderFulfillmentStatus</returns>
         ApiResponse<RestApiArrayResultOrderFulfillmentStatus> SearchFulfillmentStatusesWithHttpInfo (string appId, string orderIds);
         /// <summary>
-        /// Add/update delivery-related information to an order
+        /// 
         /// </summary>
         /// <remarks>
-        /// Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
-        /// <param name="deliveryInformation">Delivery Information</param>
+        /// <param name="orderId"></param>
+        /// <param name="deliveryInformation"></param>
         /// <returns></returns>
         void UpdateDeliveryInformation (int? orderId, OrderDeliveryInformationBase deliveryInformation);
 
         /// <summary>
-        /// Add/update delivery-related information to an order
+        /// 
         /// </summary>
         /// <remarks>
-        /// Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
-        /// <param name="deliveryInformation">Delivery Information</param>
+        /// <param name="orderId"></param>
+        /// <param name="deliveryInformation"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateDeliveryInformationWithHttpInfo (int? orderId, OrderDeliveryInformationBase deliveryInformation);
         /// <summary>
-        /// Update fulfillment status information to an order
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
-        /// <param name="fulfillmentStatusRequest">Fulfillment Status</param>
+        /// <param name="orderId"></param>
+        /// <param name="fulfillmentStatusRequest"></param>
         /// <returns></returns>
         void UpdateFulfillmentState (int? orderId, OrderFulfillmentStatusUpdate fulfillmentStatusRequest);
 
         /// <summary>
-        /// Update fulfillment status information to an order
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
-        /// <param name="fulfillmentStatusRequest">Fulfillment Status</param>
+        /// <param name="orderId"></param>
+        /// <param name="fulfillmentStatusRequest"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateFulfillmentStateWithHttpInfo (int? orderId, OrderFulfillmentStatusUpdate fulfillmentStatusRequest);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Accept order
+        /// 
         /// </summary>
         /// <remarks>
-        /// To accept an order, you create an &#x60;accept&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
-        /// <param name="acceptObject">Order accept parameters (eg: EstimatedMinutesForDelivery)</param>
+        /// <param name="id"></param>
+        /// <param name="acceptObject"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task AcceptOrderAsync (int? id, Accept acceptObject);
 
         /// <summary>
-        /// Accept order
+        /// 
         /// </summary>
         /// <remarks>
-        /// To accept an order, you create an &#x60;accept&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
-        /// <param name="acceptObject">Order accept parameters (eg: EstimatedMinutesForDelivery)</param>
+        /// <param name="id"></param>
+        /// <param name="acceptObject"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AcceptOrderAsyncWithHttpInfo (int? id, Accept acceptObject);
         /// <summary>
-        /// Dispatch order
+        /// 
         /// </summary>
         /// <remarks>
-        /// To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DispatchOrderAsync (int? id);
 
         /// <summary>
-        /// Dispatch order
+        /// 
         /// </summary>
         /// <remarks>
-        /// To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DispatchOrderAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Get order delivery information
+        /// 
         /// </summary>
         /// <remarks>
-        /// Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>Task of RestApiResultOrderDeliveryInformation</returns>
         System.Threading.Tasks.Task<RestApiResultOrderDeliveryInformation> GetDeliveryInformationAsync (int? orderId);
 
         /// <summary>
-        /// Get order delivery information
+        /// 
         /// </summary>
         /// <remarks>
-        /// Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>Task of ApiResponse (RestApiResultOrderDeliveryInformation)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderDeliveryInformation>> GetDeliveryInformationAsyncWithHttpInfo (int? orderId);
         /// <summary>
-        /// Get order fulfillment state
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>Task of RestApiResultOrderFulfillmentStatus</returns>
         System.Threading.Tasks.Task<RestApiResultOrderFulfillmentStatus> GetFulfillmentStateAsync (int? orderId);
 
         /// <summary>
-        /// Get order fulfillment state
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>Task of ApiResponse (RestApiResultOrderFulfillmentStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderFulfillmentStatus>> GetFulfillmentStateAsyncWithHttpInfo (int? orderId);
         /// <summary>
-        /// Get order fulfillment state with actionable details like default next state
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>Task of RestApiResultOrderFulfillmentStatusWithConfigurationActions</returns>
         System.Threading.Tasks.Task<RestApiResultOrderFulfillmentStatusWithConfigurationActions> GetFulfillmentStatusWithDetailsAndActionsAsync (int? orderId);
 
         /// <summary>
-        /// Get order fulfillment state with actionable details like default next state
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
-        /// <returns>Task of ApiResponse (RestApiResultOrderFulfillmentStatusWithConfigurationActions)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderFulfillmentStatusWithConfigurationActions>> GetFulfillmentStatusWithDetailsAndActionsAsyncWithHttpInfo (int? orderId);
-        /// <summary>
-        /// Get order by ID
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="orderId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultOrderFulfillmentStatusWithConfigurationActions)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderFulfillmentStatusWithConfigurationActions>> GetFulfillmentStatusWithDetailsAndActionsAsyncWithHttpInfo (int? orderId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
         /// <returns>Task of RestApiResultOrder</returns>
         System.Threading.Tasks.Task<RestApiResultOrder> GetOrderByIdAsync (int? id);
 
         /// <summary>
-        /// Get order by ID
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <returns>Task of ApiResponse (RestApiResultOrder)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultOrder>> GetOrderByIdAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Get orders by filter
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
-        /// <param name="state">Order states (optional)</param>
-        /// <param name="from">Order has been placed after this parameter value (optional)</param>
-        /// <param name="to">Order has been placed before this parameter value (optional)</param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultOrder</returns>
         System.Threading.Tasks.Task<RestApiPaginationResultOrder> GetOrdersAsync (List<int?> physicalRestaurantId = null, List<string> state = null, DateTime? from = null, DateTime? to = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get orders by filter
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
-        /// <param name="state">Order states (optional)</param>
-        /// <param name="from">Order has been placed after this parameter value (optional)</param>
-        /// <param name="to">Order has been placed before this parameter value (optional)</param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultOrder)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrder>> GetOrdersAsyncWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, DateTime? from = null, DateTime? to = null, int? page = null, int? limit = null);
         /// <summary>
-        /// [PRIVATE API] Get summary of orders by filter
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="searchQuery">Query string (optional)</param>
-        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
-        /// <param name="state">Order states (optional)</param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <param name="orderByRequestedForTime"> (optional)</param>
         /// <param name="channels"> (optional)</param>
-        /// <param name="orderIds">Filter by the given orders (optional)</param>
-        /// <param name="from">Filter by date from (optional)</param>
-        /// <param name="to">Filter by date to (optional)</param>
+        /// <param name="orderIds"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultOrderSummary</returns>
         System.Threading.Tasks.Task<RestApiPaginationResultOrderSummary> GetOrdersSummaryAsync (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null);
 
         /// <summary>
-        /// [PRIVATE API] Get summary of orders by filter
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="searchQuery">Query string (optional)</param>
-        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
-        /// <param name="state">Order states (optional)</param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <param name="orderByRequestedForTime"> (optional)</param>
         /// <param name="channels"> (optional)</param>
-        /// <param name="orderIds">Filter by the given orders (optional)</param>
-        /// <param name="from">Filter by date from (optional)</param>
-        /// <param name="to">Filter by date to (optional)</param>
+        /// <param name="orderIds"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultOrderSummary)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrderSummary>> GetOrdersSummaryAsyncWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null);
         /// <summary>
-        /// Refund order
+        /// 
         /// </summary>
         /// <remarks>
-        /// To refund an order, you create a &#x60;refund&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <param name="refundObject"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task RefundOrderAsync (int? id, Refund refundObject);
 
         /// <summary>
-        /// Refund order
+        /// 
         /// </summary>
         /// <remarks>
-        /// To refund an order, you create a &#x60;refund&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <param name="refundObject"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> RefundOrderAsyncWithHttpInfo (int? id, Refund refundObject);
         /// <summary>
-        /// Reject order
+        /// 
         /// </summary>
         /// <remarks>
-        /// To reject an order, you create a &#x60;reject&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <param name="rejectObject"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task RejectOrderAsync (int? id, Reject rejectObject);
 
         /// <summary>
-        /// Reject order
+        /// 
         /// </summary>
         /// <remarks>
-        /// To reject an order, you create a &#x60;reject&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <param name="rejectObject"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> RejectOrderAsyncWithHttpInfo (int? id, Reject rejectObject);
         /// <summary>
-        /// Get fulfillment status for a list of orders
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="orderIds">Flipdish Order Id list, comma separated</param>
+        /// <param name="appId"></param>
+        /// <param name="orderIds"></param>
         /// <returns>Task of RestApiArrayResultOrderFulfillmentStatus</returns>
         System.Threading.Tasks.Task<RestApiArrayResultOrderFulfillmentStatus> SearchFulfillmentStatusesAsync (string appId, string orderIds);
 
         /// <summary>
-        /// Get fulfillment status for a list of orders
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="orderIds">Flipdish Order Id list, comma separated</param>
+        /// <param name="appId"></param>
+        /// <param name="orderIds"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultOrderFulfillmentStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOrderFulfillmentStatus>> SearchFulfillmentStatusesAsyncWithHttpInfo (string appId, string orderIds);
         /// <summary>
-        /// Add/update delivery-related information to an order
+        /// 
         /// </summary>
         /// <remarks>
-        /// Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
-        /// <param name="deliveryInformation">Delivery Information</param>
+        /// <param name="orderId"></param>
+        /// <param name="deliveryInformation"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UpdateDeliveryInformationAsync (int? orderId, OrderDeliveryInformationBase deliveryInformation);
 
         /// <summary>
-        /// Add/update delivery-related information to an order
+        /// 
         /// </summary>
         /// <remarks>
-        /// Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
-        /// <param name="deliveryInformation">Delivery Information</param>
+        /// <param name="orderId"></param>
+        /// <param name="deliveryInformation"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateDeliveryInformationAsyncWithHttpInfo (int? orderId, OrderDeliveryInformationBase deliveryInformation);
         /// <summary>
-        /// Update fulfillment status information to an order
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
-        /// <param name="fulfillmentStatusRequest">Fulfillment Status</param>
+        /// <param name="orderId"></param>
+        /// <param name="fulfillmentStatusRequest"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UpdateFulfillmentStateAsync (int? orderId, OrderFulfillmentStatusUpdate fulfillmentStatusRequest);
 
         /// <summary>
-        /// Update fulfillment status information to an order
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
-        /// <param name="fulfillmentStatusRequest">Fulfillment Status</param>
+        /// <param name="orderId"></param>
+        /// <param name="fulfillmentStatusRequest"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateFulfillmentStateAsyncWithHttpInfo (int? orderId, OrderFulfillmentStatusUpdate fulfillmentStatusRequest);
         #endregion Asynchronous Operations
@@ -757,11 +757,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Accept order To accept an order, you create an &#x60;accept&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
-        /// <param name="acceptObject">Order accept parameters (eg: EstimatedMinutesForDelivery)</param>
+        /// <param name="id"></param>
+        /// <param name="acceptObject"></param>
         /// <returns></returns>
         public void AcceptOrder (int? id, Accept acceptObject)
         {
@@ -769,11 +769,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Accept order To accept an order, you create an &#x60;accept&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
-        /// <param name="acceptObject">Order accept parameters (eg: EstimatedMinutesForDelivery)</param>
+        /// <param name="id"></param>
+        /// <param name="acceptObject"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> AcceptOrderWithHttpInfo (int? id, Accept acceptObject)
         {
@@ -849,11 +849,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Accept order To accept an order, you create an &#x60;accept&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
-        /// <param name="acceptObject">Order accept parameters (eg: EstimatedMinutesForDelivery)</param>
+        /// <param name="id"></param>
+        /// <param name="acceptObject"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task AcceptOrderAsync (int? id, Accept acceptObject)
         {
@@ -862,11 +862,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Accept order To accept an order, you create an &#x60;accept&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
-        /// <param name="acceptObject">Order accept parameters (eg: EstimatedMinutesForDelivery)</param>
+        /// <param name="id"></param>
+        /// <param name="acceptObject"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AcceptOrderAsyncWithHttpInfo (int? id, Accept acceptObject)
         {
@@ -942,10 +942,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Dispatch order To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <returns></returns>
         public void DispatchOrder (int? id)
         {
@@ -953,10 +953,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Dispatch order To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DispatchOrderWithHttpInfo (int? id)
         {
@@ -1016,10 +1016,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Dispatch order To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DispatchOrderAsync (int? id)
         {
@@ -1028,10 +1028,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Dispatch order To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DispatchOrderAsyncWithHttpInfo (int? id)
         {
@@ -1091,10 +1091,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order delivery information Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>RestApiResultOrderDeliveryInformation</returns>
         public RestApiResultOrderDeliveryInformation GetDeliveryInformation (int? orderId)
         {
@@ -1103,10 +1103,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order delivery information Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>ApiResponse of RestApiResultOrderDeliveryInformation</returns>
         public ApiResponse< RestApiResultOrderDeliveryInformation > GetDeliveryInformationWithHttpInfo (int? orderId)
         {
@@ -1166,10 +1166,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order delivery information Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>Task of RestApiResultOrderDeliveryInformation</returns>
         public async System.Threading.Tasks.Task<RestApiResultOrderDeliveryInformation> GetDeliveryInformationAsync (int? orderId)
         {
@@ -1179,10 +1179,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order delivery information Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>Task of ApiResponse (RestApiResultOrderDeliveryInformation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderDeliveryInformation>> GetDeliveryInformationAsyncWithHttpInfo (int? orderId)
         {
@@ -1242,10 +1242,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order fulfillment state [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>RestApiResultOrderFulfillmentStatus</returns>
         public RestApiResultOrderFulfillmentStatus GetFulfillmentState (int? orderId)
         {
@@ -1254,10 +1254,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order fulfillment state [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>ApiResponse of RestApiResultOrderFulfillmentStatus</returns>
         public ApiResponse< RestApiResultOrderFulfillmentStatus > GetFulfillmentStateWithHttpInfo (int? orderId)
         {
@@ -1317,10 +1317,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order fulfillment state [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>Task of RestApiResultOrderFulfillmentStatus</returns>
         public async System.Threading.Tasks.Task<RestApiResultOrderFulfillmentStatus> GetFulfillmentStateAsync (int? orderId)
         {
@@ -1330,10 +1330,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order fulfillment state [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>Task of ApiResponse (RestApiResultOrderFulfillmentStatus)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderFulfillmentStatus>> GetFulfillmentStateAsyncWithHttpInfo (int? orderId)
         {
@@ -1393,10 +1393,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order fulfillment state with actionable details like default next state [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>RestApiResultOrderFulfillmentStatusWithConfigurationActions</returns>
         public RestApiResultOrderFulfillmentStatusWithConfigurationActions GetFulfillmentStatusWithDetailsAndActions (int? orderId)
         {
@@ -1405,10 +1405,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order fulfillment state with actionable details like default next state [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>ApiResponse of RestApiResultOrderFulfillmentStatusWithConfigurationActions</returns>
         public ApiResponse< RestApiResultOrderFulfillmentStatusWithConfigurationActions > GetFulfillmentStatusWithDetailsAndActionsWithHttpInfo (int? orderId)
         {
@@ -1468,10 +1468,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order fulfillment state with actionable details like default next state [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>Task of RestApiResultOrderFulfillmentStatusWithConfigurationActions</returns>
         public async System.Threading.Tasks.Task<RestApiResultOrderFulfillmentStatusWithConfigurationActions> GetFulfillmentStatusWithDetailsAndActionsAsync (int? orderId)
         {
@@ -1481,10 +1481,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order fulfillment state with actionable details like default next state [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
+        /// <param name="orderId"></param>
         /// <returns>Task of ApiResponse (RestApiResultOrderFulfillmentStatusWithConfigurationActions)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderFulfillmentStatusWithConfigurationActions>> GetFulfillmentStatusWithDetailsAndActionsAsyncWithHttpInfo (int? orderId)
         {
@@ -1544,10 +1544,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order by ID 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <returns>RestApiResultOrder</returns>
         public RestApiResultOrder GetOrderById (int? id)
         {
@@ -1556,10 +1556,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order by ID 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <returns>ApiResponse of RestApiResultOrder</returns>
         public ApiResponse< RestApiResultOrder > GetOrderByIdWithHttpInfo (int? id)
         {
@@ -1619,10 +1619,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order by ID 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <returns>Task of RestApiResultOrder</returns>
         public async System.Threading.Tasks.Task<RestApiResultOrder> GetOrderByIdAsync (int? id)
         {
@@ -1632,10 +1632,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get order by ID 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <returns>Task of ApiResponse (RestApiResultOrder)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOrder>> GetOrderByIdAsyncWithHttpInfo (int? id)
         {
@@ -1695,15 +1695,15 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get orders by filter 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
-        /// <param name="state">Order states (optional)</param>
-        /// <param name="from">Order has been placed after this parameter value (optional)</param>
-        /// <param name="to">Order has been placed before this parameter value (optional)</param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultOrder</returns>
         public RestApiPaginationResultOrder GetOrders (List<int?> physicalRestaurantId = null, List<string> state = null, DateTime? from = null, DateTime? to = null, int? page = null, int? limit = null)
         {
@@ -1712,15 +1712,15 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get orders by filter 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
-        /// <param name="state">Order states (optional)</param>
-        /// <param name="from">Order has been placed after this parameter value (optional)</param>
-        /// <param name="to">Order has been placed before this parameter value (optional)</param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultOrder</returns>
         public ApiResponse< RestApiPaginationResultOrder > GetOrdersWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, DateTime? from = null, DateTime? to = null, int? page = null, int? limit = null)
         {
@@ -1782,15 +1782,15 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get orders by filter 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
-        /// <param name="state">Order states (optional)</param>
-        /// <param name="from">Order has been placed after this parameter value (optional)</param>
-        /// <param name="to">Order has been placed before this parameter value (optional)</param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultOrder</returns>
         public async System.Threading.Tasks.Task<RestApiPaginationResultOrder> GetOrdersAsync (List<int?> physicalRestaurantId = null, List<string> state = null, DateTime? from = null, DateTime? to = null, int? page = null, int? limit = null)
         {
@@ -1800,15 +1800,15 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get orders by filter 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
-        /// <param name="state">Order states (optional)</param>
-        /// <param name="from">Order has been placed after this parameter value (optional)</param>
-        /// <param name="to">Order has been placed before this parameter value (optional)</param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultOrder)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrder>> GetOrdersAsyncWithHttpInfo (List<int?> physicalRestaurantId = null, List<string> state = null, DateTime? from = null, DateTime? to = null, int? page = null, int? limit = null)
         {
@@ -1870,20 +1870,20 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get summary of orders by filter 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="searchQuery">Query string (optional)</param>
-        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
-        /// <param name="state">Order states (optional)</param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <param name="orderByRequestedForTime"> (optional)</param>
         /// <param name="channels"> (optional)</param>
-        /// <param name="orderIds">Filter by the given orders (optional)</param>
-        /// <param name="from">Filter by date from (optional)</param>
-        /// <param name="to">Filter by date to (optional)</param>
+        /// <param name="orderIds"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
         /// <returns>RestApiPaginationResultOrderSummary</returns>
         public RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null)
         {
@@ -1892,20 +1892,20 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get summary of orders by filter 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="searchQuery">Query string (optional)</param>
-        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
-        /// <param name="state">Order states (optional)</param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <param name="orderByRequestedForTime"> (optional)</param>
         /// <param name="channels"> (optional)</param>
-        /// <param name="orderIds">Filter by the given orders (optional)</param>
-        /// <param name="from">Filter by date from (optional)</param>
-        /// <param name="to">Filter by date to (optional)</param>
+        /// <param name="orderIds"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultOrderSummary</returns>
         public ApiResponse< RestApiPaginationResultOrderSummary > GetOrdersSummaryWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null)
         {
@@ -1975,20 +1975,20 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get summary of orders by filter 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="searchQuery">Query string (optional)</param>
-        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
-        /// <param name="state">Order states (optional)</param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <param name="orderByRequestedForTime"> (optional)</param>
         /// <param name="channels"> (optional)</param>
-        /// <param name="orderIds">Filter by the given orders (optional)</param>
-        /// <param name="from">Filter by date from (optional)</param>
-        /// <param name="to">Filter by date to (optional)</param>
+        /// <param name="orderIds"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultOrderSummary</returns>
         public async System.Threading.Tasks.Task<RestApiPaginationResultOrderSummary> GetOrdersSummaryAsync (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null)
         {
@@ -1998,20 +1998,20 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get summary of orders by filter 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="searchQuery">Query string (optional)</param>
-        /// <param name="physicalRestaurantId">Physical restaurant identifiers (optional)</param>
-        /// <param name="state">Order states (optional)</param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <param name="orderByRequestedForTime"> (optional)</param>
         /// <param name="channels"> (optional)</param>
-        /// <param name="orderIds">Filter by the given orders (optional)</param>
-        /// <param name="from">Filter by date from (optional)</param>
-        /// <param name="to">Filter by date to (optional)</param>
+        /// <param name="orderIds"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultOrderSummary)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrderSummary>> GetOrdersSummaryAsyncWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null)
         {
@@ -2081,10 +2081,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Refund order To refund an order, you create a &#x60;refund&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <param name="refundObject"></param>
         /// <returns></returns>
         public void RefundOrder (int? id, Refund refundObject)
@@ -2093,10 +2093,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Refund order To refund an order, you create a &#x60;refund&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <param name="refundObject"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> RefundOrderWithHttpInfo (int? id, Refund refundObject)
@@ -2173,10 +2173,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Refund order To refund an order, you create a &#x60;refund&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <param name="refundObject"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task RefundOrderAsync (int? id, Refund refundObject)
@@ -2186,10 +2186,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Refund order To refund an order, you create a &#x60;refund&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <param name="refundObject"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> RefundOrderAsyncWithHttpInfo (int? id, Refund refundObject)
@@ -2266,10 +2266,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Reject order To reject an order, you create a &#x60;reject&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <param name="rejectObject"></param>
         /// <returns></returns>
         public void RejectOrder (int? id, Reject rejectObject)
@@ -2278,10 +2278,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Reject order To reject an order, you create a &#x60;reject&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <param name="rejectObject"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> RejectOrderWithHttpInfo (int? id, Reject rejectObject)
@@ -2358,10 +2358,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Reject order To reject an order, you create a &#x60;reject&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <param name="rejectObject"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task RejectOrderAsync (int? id, Reject rejectObject)
@@ -2371,10 +2371,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Reject order To reject an order, you create a &#x60;reject&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Order identifier</param>
+        /// <param name="id"></param>
         /// <param name="rejectObject"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> RejectOrderAsyncWithHttpInfo (int? id, Reject rejectObject)
@@ -2451,11 +2451,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get fulfillment status for a list of orders [BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="orderIds">Flipdish Order Id list, comma separated</param>
+        /// <param name="appId"></param>
+        /// <param name="orderIds"></param>
         /// <returns>RestApiArrayResultOrderFulfillmentStatus</returns>
         public RestApiArrayResultOrderFulfillmentStatus SearchFulfillmentStatuses (string appId, string orderIds)
         {
@@ -2464,11 +2464,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get fulfillment status for a list of orders [BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="orderIds">Flipdish Order Id list, comma separated</param>
+        /// <param name="appId"></param>
+        /// <param name="orderIds"></param>
         /// <returns>ApiResponse of RestApiArrayResultOrderFulfillmentStatus</returns>
         public ApiResponse< RestApiArrayResultOrderFulfillmentStatus > SearchFulfillmentStatusesWithHttpInfo (string appId, string orderIds)
         {
@@ -2532,11 +2532,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get fulfillment status for a list of orders [BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="orderIds">Flipdish Order Id list, comma separated</param>
+        /// <param name="appId"></param>
+        /// <param name="orderIds"></param>
         /// <returns>Task of RestApiArrayResultOrderFulfillmentStatus</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultOrderFulfillmentStatus> SearchFulfillmentStatusesAsync (string appId, string orderIds)
         {
@@ -2546,11 +2546,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get fulfillment status for a list of orders [BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="orderIds">Flipdish Order Id list, comma separated</param>
+        /// <param name="appId"></param>
+        /// <param name="orderIds"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultOrderFulfillmentStatus)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOrderFulfillmentStatus>> SearchFulfillmentStatusesAsyncWithHttpInfo (string appId, string orderIds)
         {
@@ -2614,11 +2614,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add/update delivery-related information to an order Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
-        /// <param name="deliveryInformation">Delivery Information</param>
+        /// <param name="orderId"></param>
+        /// <param name="deliveryInformation"></param>
         /// <returns></returns>
         public void UpdateDeliveryInformation (int? orderId, OrderDeliveryInformationBase deliveryInformation)
         {
@@ -2626,11 +2626,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add/update delivery-related information to an order Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
-        /// <param name="deliveryInformation">Delivery Information</param>
+        /// <param name="orderId"></param>
+        /// <param name="deliveryInformation"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> UpdateDeliveryInformationWithHttpInfo (int? orderId, OrderDeliveryInformationBase deliveryInformation)
         {
@@ -2706,11 +2706,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add/update delivery-related information to an order Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
-        /// <param name="deliveryInformation">Delivery Information</param>
+        /// <param name="orderId"></param>
+        /// <param name="deliveryInformation"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UpdateDeliveryInformationAsync (int? orderId, OrderDeliveryInformationBase deliveryInformation)
         {
@@ -2719,11 +2719,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add/update delivery-related information to an order Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
-        /// <param name="deliveryInformation">Delivery Information</param>
+        /// <param name="orderId"></param>
+        /// <param name="deliveryInformation"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateDeliveryInformationAsyncWithHttpInfo (int? orderId, OrderDeliveryInformationBase deliveryInformation)
         {
@@ -2799,11 +2799,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update fulfillment status information to an order [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
-        /// <param name="fulfillmentStatusRequest">Fulfillment Status</param>
+        /// <param name="orderId"></param>
+        /// <param name="fulfillmentStatusRequest"></param>
         /// <returns></returns>
         public void UpdateFulfillmentState (int? orderId, OrderFulfillmentStatusUpdate fulfillmentStatusRequest)
         {
@@ -2811,11 +2811,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update fulfillment status information to an order [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
-        /// <param name="fulfillmentStatusRequest">Fulfillment Status</param>
+        /// <param name="orderId"></param>
+        /// <param name="fulfillmentStatusRequest"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> UpdateFulfillmentStateWithHttpInfo (int? orderId, OrderFulfillmentStatusUpdate fulfillmentStatusRequest)
         {
@@ -2891,11 +2891,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update fulfillment status information to an order [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
-        /// <param name="fulfillmentStatusRequest">Fulfillment Status</param>
+        /// <param name="orderId"></param>
+        /// <param name="fulfillmentStatusRequest"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UpdateFulfillmentStateAsync (int? orderId, OrderFulfillmentStatusUpdate fulfillmentStatusRequest)
         {
@@ -2904,11 +2904,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update fulfillment status information to an order [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orderId">Flipdish Order Id</param>
-        /// <param name="fulfillmentStatusRequest">Fulfillment Status</param>
+        /// <param name="orderId"></param>
+        /// <param name="fulfillmentStatusRequest"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateFulfillmentStateAsyncWithHttpInfo (int? orderId, OrderFulfillmentStatusUpdate fulfillmentStatusRequest)
         {

@@ -4,8 +4,8 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetAllKioskSettingsForStore**](KioskStoreSettingsApi.md#getallkiosksettingsforstore) | **GET** /api/v1.0/{appId}/kiosksettings/store/{storeId} | Get all kiosk settings associated with a store
-[**GetAllStoreSettingsForKioskHydra**](KioskStoreSettingsApi.md#getallstoresettingsforkioskhydra) | **GET** /api/v1.0/kioskstoresettings | [For Kiosk use only] Get all stores connected to a Kiosk
+[**GetAllKioskSettingsForStore**](KioskStoreSettingsApi.md#getallkiosksettingsforstore) | **GET** /api/v1.0/{appId}/kiosksettings/store/{storeId} | 
+[**GetAllStoreSettingsForKioskHydra**](KioskStoreSettingsApi.md#getallstoresettingsforkioskhydra) | **GET** /api/v1.0/kioskstoresettings | 
 [**UpdateCashSettingForKiosk**](KioskStoreSettingsApi.md#updatecashsettingforkiosk) | **POST** /api/v1.0/{appId}/kiosksettings/cash | 
 
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 # **GetAllKioskSettingsForStore**
 > RestApiResultStoreKioskSettings GetAllKioskSettingsForStore (int? storeId, string appId)
 
-Get all kiosk settings associated with a store
+
 
 ### Example
 ```csharp
@@ -33,12 +33,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new KioskStoreSettingsApi();
-            var storeId = 56;  // int? | Store identifier
-            var appId = appId_example;  // string | App Name Id
+            var storeId = 56;  // int? | 
+            var appId = appId_example;  // string | 
 
             try
             {
-                // Get all kiosk settings associated with a store
                 RestApiResultStoreKioskSettings result = apiInstance.GetAllKioskSettingsForStore(storeId, appId);
                 Debug.WriteLine(result);
             }
@@ -55,8 +54,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
- **appId** | **string**| App Name Id | 
+ **storeId** | **int?**|  | 
+ **appId** | **string**|  | 
 
 ### Return type
 
@@ -77,7 +76,7 @@ Name | Type | Description  | Notes
 # **GetAllStoreSettingsForKioskHydra**
 > RestApiResultKioskStoreSettings GetAllStoreSettingsForKioskHydra ()
 
-[For Kiosk use only] Get all stores connected to a Kiosk
+
 
 ### Example
 ```csharp
@@ -100,7 +99,6 @@ namespace Example
 
             try
             {
-                // [For Kiosk use only] Get all stores connected to a Kiosk
                 RestApiResultKioskStoreSettings result = apiInstance.GetAllStoreSettingsForKioskHydra();
                 Debug.WriteLine(result);
             }

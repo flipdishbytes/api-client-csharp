@@ -4,17 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetAppStoreApp**](AppStoreApi.md#getappstoreapp) | **GET** /api/v1.0/appstore/apps/{appStoreAppId} | Get App store app
-[**GetAppStoreApps**](AppStoreApi.md#getappstoreapps) | **GET** /api/v1.0/appstore/apps | Get list of App store app summaries
+[**GetAppStoreApp**](AppStoreApi.md#getappstoreapp) | **GET** /api/v1.0/appstore/apps/{appStoreAppId} | 
+[**GetAppStoreApps**](AppStoreApi.md#getappstoreapps) | **GET** /api/v1.0/appstore/apps | 
 
 
 <a name="getappstoreapp"></a>
 # **GetAppStoreApp**
 > AppStoreApp GetAppStoreApp (string appStoreAppId)
 
-Get App store app
 
-App store app must be verified or you are the owner [BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -34,11 +32,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreApi();
-            var appStoreAppId = appStoreAppId_example;  // string | App store app id
+            var appStoreAppId = appStoreAppId_example;  // string | 
 
             try
             {
-                // Get App store app
                 AppStoreApp result = apiInstance.GetAppStoreApp(appStoreAppId);
                 Debug.WriteLine(result);
             }
@@ -55,7 +52,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appStoreAppId** | **string**| App store app id | 
+ **appStoreAppId** | **string**|  | 
 
 ### Return type
 
@@ -76,9 +73,7 @@ Name | Type | Description  | Notes
 # **GetAppStoreApps**
 > RestApiPaginationResultAppStoreAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
 
-Get list of App store app summaries
 
-Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -98,14 +93,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreApi();
-            var search = search_example;  // string | Query App store app name
-            var page = 56;  // int? | Requested page index (optional) 
-            var limit = 56;  // int? | Requested page limit (optional) 
-            var excludeNotOwned = true;  // bool? | Exclude App store apps that user is not the owner off (optional) 
+            var search = search_example;  // string | 
+            var page = 56;  // int? |  (optional) 
+            var limit = 56;  // int? |  (optional) 
+            var excludeNotOwned = true;  // bool? |  (optional) 
 
             try
             {
-                // Get list of App store app summaries
                 RestApiPaginationResultAppStoreAppSummary result = apiInstance.GetAppStoreApps(search, page, limit, excludeNotOwned);
                 Debug.WriteLine(result);
             }
@@ -122,10 +116,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **search** | **string**| Query App store app name | 
- **page** | **int?**| Requested page index | [optional] 
- **limit** | **int?**| Requested page limit | [optional] 
- **excludeNotOwned** | **bool?**| Exclude App store apps that user is not the owner off | [optional] 
+ **search** | **string**|  | 
+ **page** | **int?**|  | [optional] 
+ **limit** | **int?**|  | [optional] 
+ **excludeNotOwned** | **bool?**|  | [optional] 
 
 ### Return type
 

@@ -25,93 +25,93 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Returns order batching configuration for a specific store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiResultOrderBatchingConfiguration</returns>
         RestApiResultOrderBatchingConfiguration Get (int? storeId);
 
         /// <summary>
-        /// Returns order batching configuration for a specific store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultOrderBatchingConfiguration</returns>
         ApiResponse<RestApiResultOrderBatchingConfiguration> GetWithHttpInfo (int? storeId);
         /// <summary>
-        /// Sets order batching configuration for a specific store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="setOrderBatchingConfiguration">SetOrderBatchingConfiguration</param>
+        /// <param name="storeId"></param>
+        /// <param name="setOrderBatchingConfiguration"></param>
         /// <returns></returns>
         void Post (int? storeId, SetOrderBatchingConfiguration setOrderBatchingConfiguration);
 
         /// <summary>
-        /// Sets order batching configuration for a specific store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="setOrderBatchingConfiguration">SetOrderBatchingConfiguration</param>
+        /// <param name="storeId"></param>
+        /// <param name="setOrderBatchingConfiguration"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostWithHttpInfo (int? storeId, SetOrderBatchingConfiguration setOrderBatchingConfiguration);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Returns order batching configuration for a specific store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiResultOrderBatchingConfiguration</returns>
         System.Threading.Tasks.Task<RestApiResultOrderBatchingConfiguration> GetAsync (int? storeId);
 
         /// <summary>
-        /// Returns order batching configuration for a specific store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultOrderBatchingConfiguration)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderBatchingConfiguration>> GetAsyncWithHttpInfo (int? storeId);
         /// <summary>
-        /// Sets order batching configuration for a specific store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="setOrderBatchingConfiguration">SetOrderBatchingConfiguration</param>
+        /// <param name="storeId"></param>
+        /// <param name="setOrderBatchingConfiguration"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PostAsync (int? storeId, SetOrderBatchingConfiguration setOrderBatchingConfiguration);
 
         /// <summary>
-        /// Sets order batching configuration for a specific store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="setOrderBatchingConfiguration">SetOrderBatchingConfiguration</param>
+        /// <param name="storeId"></param>
+        /// <param name="setOrderBatchingConfiguration"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostAsyncWithHttpInfo (int? storeId, SetOrderBatchingConfiguration setOrderBatchingConfiguration);
         #endregion Asynchronous Operations
@@ -215,10 +215,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns order batching configuration for a specific store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiResultOrderBatchingConfiguration</returns>
         public RestApiResultOrderBatchingConfiguration Get (int? storeId)
         {
@@ -227,10 +227,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns order batching configuration for a specific store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultOrderBatchingConfiguration</returns>
         public ApiResponse< RestApiResultOrderBatchingConfiguration > GetWithHttpInfo (int? storeId)
         {
@@ -290,10 +290,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns order batching configuration for a specific store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiResultOrderBatchingConfiguration</returns>
         public async System.Threading.Tasks.Task<RestApiResultOrderBatchingConfiguration> GetAsync (int? storeId)
         {
@@ -303,10 +303,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns order batching configuration for a specific store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultOrderBatchingConfiguration)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderBatchingConfiguration>> GetAsyncWithHttpInfo (int? storeId)
         {
@@ -366,11 +366,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Sets order batching configuration for a specific store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="setOrderBatchingConfiguration">SetOrderBatchingConfiguration</param>
+        /// <param name="storeId"></param>
+        /// <param name="setOrderBatchingConfiguration"></param>
         /// <returns></returns>
         public void Post (int? storeId, SetOrderBatchingConfiguration setOrderBatchingConfiguration)
         {
@@ -378,11 +378,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Sets order batching configuration for a specific store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="setOrderBatchingConfiguration">SetOrderBatchingConfiguration</param>
+        /// <param name="storeId"></param>
+        /// <param name="setOrderBatchingConfiguration"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostWithHttpInfo (int? storeId, SetOrderBatchingConfiguration setOrderBatchingConfiguration)
         {
@@ -458,11 +458,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Sets order batching configuration for a specific store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="setOrderBatchingConfiguration">SetOrderBatchingConfiguration</param>
+        /// <param name="storeId"></param>
+        /// <param name="setOrderBatchingConfiguration"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PostAsync (int? storeId, SetOrderBatchingConfiguration setOrderBatchingConfiguration)
         {
@@ -471,11 +471,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Sets order batching configuration for a specific store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="setOrderBatchingConfiguration">SetOrderBatchingConfiguration</param>
+        /// <param name="storeId"></param>
+        /// <param name="setOrderBatchingConfiguration"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAsyncWithHttpInfo (int? storeId, SetOrderBatchingConfiguration setOrderBatchingConfiguration)
         {

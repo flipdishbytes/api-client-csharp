@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**LookerDashboardGetAll**](LookerDashboardApi.md#lookerdashboardgetall) | **GET** /api/v1.0/{appId}/looker/dashboards | Get all dashboards
+[**LookerDashboardGetAll**](LookerDashboardApi.md#lookerdashboardgetall) | **GET** /api/v1.0/{appId}/looker/dashboards | 
 
 
 <a name="lookerdashboardgetall"></a>
 # **LookerDashboardGetAll**
 > void LookerDashboardGetAll (string appId)
 
-Get all dashboards
+
 
 ### Example
 ```csharp
@@ -35,7 +35,6 @@ namespace Example
 
             try
             {
-                // Get all dashboards
                 apiInstance.LookerDashboardGetAll(appId);
             }
             catch (Exception e)

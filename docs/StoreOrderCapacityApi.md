@@ -4,15 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetStoreOrderCapacity**](StoreOrderCapacityApi.md#getstoreordercapacity) | **GET** /api/v1.0/{appId}/storeordercapacity/{storeId}/{deliveryType} | Get store&#39;s order capacity configuration
-[**UpdateStoreOrderCapacityConfig**](StoreOrderCapacityApi.md#updatestoreordercapacityconfig) | **POST** /api/v1.0/{appId}/storeordercapacity/{storeId} | Create or update a store&#39;s order capacity configuration
+[**GetStoreOrderCapacity**](StoreOrderCapacityApi.md#getstoreordercapacity) | **GET** /api/v1.0/{appId}/storeordercapacity/{storeId}/{deliveryType} | 
+[**UpdateStoreOrderCapacityConfig**](StoreOrderCapacityApi.md#updatestoreordercapacityconfig) | **POST** /api/v1.0/{appId}/storeordercapacity/{storeId} | 
 
 
 <a name="getstoreordercapacity"></a>
 # **GetStoreOrderCapacity**
 > RestApiResultStoreOrderCapacityConfig GetStoreOrderCapacity (string appId, int? storeId, string deliveryType)
 
-Get store's order capacity configuration
+
 
 ### Example
 ```csharp
@@ -32,13 +32,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoreOrderCapacityApi();
-            var appId = appId_example;  // string | App Name Id
-            var storeId = 56;  // int? | Store Id
-            var deliveryType = deliveryType_example;  // string | Delivery / Pickup
+            var appId = appId_example;  // string | 
+            var storeId = 56;  // int? | 
+            var deliveryType = deliveryType_example;  // string | 
 
             try
             {
-                // Get store's order capacity configuration
                 RestApiResultStoreOrderCapacityConfig result = apiInstance.GetStoreOrderCapacity(appId, storeId, deliveryType);
                 Debug.WriteLine(result);
             }
@@ -55,9 +54,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
- **storeId** | **int?**| Store Id | 
- **deliveryType** | **string**| Delivery / Pickup | 
+ **appId** | **string**|  | 
+ **storeId** | **int?**|  | 
+ **deliveryType** | **string**|  | 
 
 ### Return type
 
@@ -78,7 +77,7 @@ Name | Type | Description  | Notes
 # **UpdateStoreOrderCapacityConfig**
 > void UpdateStoreOrderCapacityConfig (int? storeId, string deliveryType, StoreOrderCapacityConfigEditModel newOrderCapacityConfig, string appId)
 
-Create or update a store's order capacity configuration
+
 
 ### Example
 ```csharp
@@ -98,14 +97,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StoreOrderCapacityApi();
-            var storeId = 56;  // int? | Store identifier
-            var deliveryType = deliveryType_example;  // string | Delivery / Pickup
-            var newOrderCapacityConfig = new StoreOrderCapacityConfigEditModel(); // StoreOrderCapacityConfigEditModel | new order capacity configuration
+            var storeId = 56;  // int? | 
+            var deliveryType = deliveryType_example;  // string | 
+            var newOrderCapacityConfig = new StoreOrderCapacityConfigEditModel(); // StoreOrderCapacityConfigEditModel | 
             var appId = appId_example;  // string | 
 
             try
             {
-                // Create or update a store's order capacity configuration
                 apiInstance.UpdateStoreOrderCapacityConfig(storeId, deliveryType, newOrderCapacityConfig, appId);
             }
             catch (Exception e)
@@ -121,9 +119,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store identifier | 
- **deliveryType** | **string**| Delivery / Pickup | 
- **newOrderCapacityConfig** | [**StoreOrderCapacityConfigEditModel**](StoreOrderCapacityConfigEditModel.md)| new order capacity configuration | 
+ **storeId** | **int?**|  | 
+ **deliveryType** | **string**|  | 
+ **newOrderCapacityConfig** | [**StoreOrderCapacityConfigEditModel**](StoreOrderCapacityConfigEditModel.md)|  | 
  **appId** | **string**|  | 
 
 ### Return type

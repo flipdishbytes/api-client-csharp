@@ -4,17 +4,17 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**FormByApp**](AddressApi.md#formbyapp) | **GET** /api/v1.0/app/{appId}/address/form | Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
-[**FormByCountry**](AddressApi.md#formbycountry) | **GET** /api/v1.0/address/country/{countryCode}/form | Provides a dyamic form definition for the given country code, with labels localized using the provided language.
-[**FormatGoogleAddress**](AddressApi.md#formatgoogleaddress) | **POST** /api/v1.0/address/google | Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
-[**GetCountries**](AddressApi.md#getcountries) | **GET** /api/v1.0/address/countries | Retuns a list of localised countries
+[**FormByApp**](AddressApi.md#formbyapp) | **GET** /api/v1.0/app/{appId}/address/form | 
+[**FormByCountry**](AddressApi.md#formbycountry) | **GET** /api/v1.0/address/country/{countryCode}/form | 
+[**FormatGoogleAddress**](AddressApi.md#formatgoogleaddress) | **POST** /api/v1.0/address/google | 
+[**GetCountries**](AddressApi.md#getcountries) | **GET** /api/v1.0/address/countries | 
 
 
 <a name="formbyapp"></a>
 # **FormByApp**
 > RestApiResultAddressFormResponse FormByApp (string appId, string language = null)
 
-Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
+
 
 ### Example
 ```csharp
@@ -34,12 +34,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AddressApi();
-            var appId = appId_example;  // string | Application (WhiteLabel) Id (WhiteLabelId or AppNameId).
-            var language = language_example;  // string | (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional) 
+            var appId = appId_example;  // string | 
+            var language = language_example;  // string |  (optional) 
 
             try
             {
-                // Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
                 RestApiResultAddressFormResponse result = apiInstance.FormByApp(appId, language);
                 Debug.WriteLine(result);
             }
@@ -56,8 +55,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application (WhiteLabel) Id (WhiteLabelId or AppNameId). | 
- **language** | **string**| (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. | [optional] 
+ **appId** | **string**|  | 
+ **language** | **string**|  | [optional] 
 
 ### Return type
 
@@ -78,7 +77,7 @@ Name | Type | Description  | Notes
 # **FormByCountry**
 > RestApiResultAddressFormResponse FormByCountry (string countryCode, string language = null)
 
-Provides a dyamic form definition for the given country code, with labels localized using the provided language.
+
 
 ### Example
 ```csharp
@@ -98,12 +97,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AddressApi();
-            var countryCode = countryCode_example;  // string | The 2 letter ISO country code, e.g.: IE.
-            var language = language_example;  // string | (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional) 
+            var countryCode = countryCode_example;  // string | 
+            var language = language_example;  // string |  (optional) 
 
             try
             {
-                // Provides a dyamic form definition for the given country code, with labels localized using the provided language.
                 RestApiResultAddressFormResponse result = apiInstance.FormByCountry(countryCode, language);
                 Debug.WriteLine(result);
             }
@@ -120,8 +118,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **countryCode** | **string**| The 2 letter ISO country code, e.g.: IE. | 
- **language** | **string**| (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. | [optional] 
+ **countryCode** | **string**|  | 
+ **language** | **string**|  | [optional] 
 
 ### Return type
 
@@ -142,7 +140,7 @@ Name | Type | Description  | Notes
 # **FormatGoogleAddress**
 > RestApiResultAddressFormResponse FormatGoogleAddress (GoogleAddress googleAddress, string language = null)
 
-Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
+
 
 ### Example
 ```csharp
@@ -162,12 +160,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AddressApi();
-            var googleAddress = new GoogleAddress(); // GoogleAddress | A Google address object, as it is returned from the maps API.
-            var language = language_example;  // string | (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional) 
+            var googleAddress = new GoogleAddress(); // GoogleAddress | 
+            var language = language_example;  // string |  (optional) 
 
             try
             {
-                // Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
                 RestApiResultAddressFormResponse result = apiInstance.FormatGoogleAddress(googleAddress, language);
                 Debug.WriteLine(result);
             }
@@ -184,8 +181,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **googleAddress** | [**GoogleAddress**](GoogleAddress.md)| A Google address object, as it is returned from the maps API. | 
- **language** | **string**| (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. | [optional] 
+ **googleAddress** | [**GoogleAddress**](GoogleAddress.md)|  | 
+ **language** | **string**|  | [optional] 
 
 ### Return type
 
@@ -206,7 +203,7 @@ Name | Type | Description  | Notes
 # **GetCountries**
 > RestApiResultCountryFormResponse GetCountries (string language = null)
 
-Retuns a list of localised countries
+
 
 ### Example
 ```csharp
@@ -230,7 +227,6 @@ namespace Example
 
             try
             {
-                // Retuns a list of localised countries
                 RestApiResultCountryFormResponse result = apiInstance.GetCountries(language);
                 Debug.WriteLine(result);
             }

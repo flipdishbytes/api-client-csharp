@@ -4,17 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetAllOrderBatches**](OrderBatchesApi.md#getallorderbatches) | **GET** /api/v1.0/{appId}/order-batches | Returns order batches
-[**GetOrderBatch**](OrderBatchesApi.md#getorderbatch) | **GET** /api/v1.0/{appId}/order-batches/{orderBatchId} | Returns the order batch details
+[**GetAllOrderBatches**](OrderBatchesApi.md#getallorderbatches) | **GET** /api/v1.0/{appId}/order-batches | 
+[**GetOrderBatch**](OrderBatchesApi.md#getorderbatch) | **GET** /api/v1.0/{appId}/order-batches/{orderBatchId} | 
 
 
 <a name="getallorderbatches"></a>
 # **GetAllOrderBatches**
 > RestApiArrayResultOrderBatch GetAllOrderBatches (string appId, List<int?> storeIds = null, DateTime? createdFrom = null, DateTime? createdTo = null)
 
-Returns order batches
 
-Entries are sorted by date, from the most recent. At most 100 entries are returned.
 
 ### Example
 ```csharp
@@ -34,14 +32,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrderBatchesApi();
-            var appId = appId_example;  // string | App Id
-            var storeIds = new List<int?>(); // List<int?> | List of store Ids (optional) 
-            var createdFrom = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date for retrieving the entries (optional) 
-            var createdTo = 2013-10-20T19:20:30+01:00;  // DateTime? | End date for retrieving the entries (optional) 
+            var appId = appId_example;  // string | 
+            var storeIds = new List<int?>(); // List<int?> |  (optional) 
+            var createdFrom = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+            var createdTo = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
 
             try
             {
-                // Returns order batches
                 RestApiArrayResultOrderBatch result = apiInstance.GetAllOrderBatches(appId, storeIds, createdFrom, createdTo);
                 Debug.WriteLine(result);
             }
@@ -58,10 +55,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Id | 
- **storeIds** | [**List&lt;int?&gt;**](int?.md)| List of store Ids | [optional] 
- **createdFrom** | **DateTime?**| Start date for retrieving the entries | [optional] 
- **createdTo** | **DateTime?**| End date for retrieving the entries | [optional] 
+ **appId** | **string**|  | 
+ **storeIds** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
+ **createdFrom** | **DateTime?**|  | [optional] 
+ **createdTo** | **DateTime?**|  | [optional] 
 
 ### Return type
 
@@ -82,7 +79,7 @@ Name | Type | Description  | Notes
 # **GetOrderBatch**
 > RestApiResultOrderBatch GetOrderBatch (string appId, int? orderBatchId)
 
-Returns the order batch details
+
 
 ### Example
 ```csharp
@@ -102,12 +99,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrderBatchesApi();
-            var appId = appId_example;  // string | App Id
-            var orderBatchId = 56;  // int? | Order Batch Id
+            var appId = appId_example;  // string | 
+            var orderBatchId = 56;  // int? | 
 
             try
             {
-                // Returns the order batch details
                 RestApiResultOrderBatch result = apiInstance.GetOrderBatch(appId, orderBatchId);
                 Debug.WriteLine(result);
             }
@@ -124,8 +120,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Id | 
- **orderBatchId** | **int?**| Order Batch Id | 
+ **appId** | **string**|  | 
+ **orderBatchId** | **int?**|  | 
 
 ### Return type
 

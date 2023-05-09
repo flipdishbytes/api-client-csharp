@@ -25,7 +25,7 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get file from storage
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -37,7 +37,7 @@ namespace Flipdish.Api
         string DownloadFile (string appId, string fileId);
 
         /// <summary>
-        /// Get file from storage
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -50,7 +50,7 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get file from storage
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -62,7 +62,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<string> DownloadFileAsync (string appId, string fileId);
 
         /// <summary>
-        /// Get file from storage
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -173,7 +173,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get file from storage 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -186,7 +186,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get file from storage 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -254,7 +254,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get file from storage 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -268,7 +268,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get file from storage 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>

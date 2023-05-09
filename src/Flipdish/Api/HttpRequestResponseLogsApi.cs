@@ -25,71 +25,71 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get API interaction logs
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="start">Start date time</param>
-        /// <param name="end">End date time</param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
         /// <param name="appId"></param>
-        /// <param name="filterByUserId">User id (optional) (optional)</param>
-        /// <param name="guid">Id of the log (optional)</param>
-        /// <param name="page">Page number (optional)</param>
-        /// <param name="limit">Page size (optional)</param>
+        /// <param name="filterByUserId"> (optional)</param>
+        /// <param name="guid"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultHttpRequestAndResponseLog</returns>
         RestApiPaginationResultHttpRequestAndResponseLog GetLogs (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, string guid = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get API interaction logs
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="start">Start date time</param>
-        /// <param name="end">End date time</param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
         /// <param name="appId"></param>
-        /// <param name="filterByUserId">User id (optional) (optional)</param>
-        /// <param name="guid">Id of the log (optional)</param>
-        /// <param name="page">Page number (optional)</param>
-        /// <param name="limit">Page size (optional)</param>
+        /// <param name="filterByUserId"> (optional)</param>
+        /// <param name="guid"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultHttpRequestAndResponseLog</returns>
         ApiResponse<RestApiPaginationResultHttpRequestAndResponseLog> GetLogsWithHttpInfo (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, string guid = null, int? page = null, int? limit = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get API interaction logs
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="start">Start date time</param>
-        /// <param name="end">End date time</param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
         /// <param name="appId"></param>
-        /// <param name="filterByUserId">User id (optional) (optional)</param>
-        /// <param name="guid">Id of the log (optional)</param>
-        /// <param name="page">Page number (optional)</param>
-        /// <param name="limit">Page size (optional)</param>
+        /// <param name="filterByUserId"> (optional)</param>
+        /// <param name="guid"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultHttpRequestAndResponseLog</returns>
         System.Threading.Tasks.Task<RestApiPaginationResultHttpRequestAndResponseLog> GetLogsAsync (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, string guid = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get API interaction logs
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="start">Start date time</param>
-        /// <param name="end">End date time</param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
         /// <param name="appId"></param>
-        /// <param name="filterByUserId">User id (optional) (optional)</param>
-        /// <param name="guid">Id of the log (optional)</param>
-        /// <param name="page">Page number (optional)</param>
-        /// <param name="limit">Page size (optional)</param>
+        /// <param name="filterByUserId"> (optional)</param>
+        /// <param name="guid"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultHttpRequestAndResponseLog)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultHttpRequestAndResponseLog>> GetLogsAsyncWithHttpInfo (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, string guid = null, int? page = null, int? limit = null);
         #endregion Asynchronous Operations
@@ -193,16 +193,16 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get API interaction logs 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="start">Start date time</param>
-        /// <param name="end">End date time</param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
         /// <param name="appId"></param>
-        /// <param name="filterByUserId">User id (optional) (optional)</param>
-        /// <param name="guid">Id of the log (optional)</param>
-        /// <param name="page">Page number (optional)</param>
-        /// <param name="limit">Page size (optional)</param>
+        /// <param name="filterByUserId"> (optional)</param>
+        /// <param name="guid"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultHttpRequestAndResponseLog</returns>
         public RestApiPaginationResultHttpRequestAndResponseLog GetLogs (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, string guid = null, int? page = null, int? limit = null)
         {
@@ -211,16 +211,16 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get API interaction logs 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="start">Start date time</param>
-        /// <param name="end">End date time</param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
         /// <param name="appId"></param>
-        /// <param name="filterByUserId">User id (optional) (optional)</param>
-        /// <param name="guid">Id of the log (optional)</param>
-        /// <param name="page">Page number (optional)</param>
-        /// <param name="limit">Page size (optional)</param>
+        /// <param name="filterByUserId"> (optional)</param>
+        /// <param name="guid"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultHttpRequestAndResponseLog</returns>
         public ApiResponse< RestApiPaginationResultHttpRequestAndResponseLog > GetLogsWithHttpInfo (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, string guid = null, int? page = null, int? limit = null)
         {
@@ -292,16 +292,16 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get API interaction logs 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="start">Start date time</param>
-        /// <param name="end">End date time</param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
         /// <param name="appId"></param>
-        /// <param name="filterByUserId">User id (optional) (optional)</param>
-        /// <param name="guid">Id of the log (optional)</param>
-        /// <param name="page">Page number (optional)</param>
-        /// <param name="limit">Page size (optional)</param>
+        /// <param name="filterByUserId"> (optional)</param>
+        /// <param name="guid"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultHttpRequestAndResponseLog</returns>
         public async System.Threading.Tasks.Task<RestApiPaginationResultHttpRequestAndResponseLog> GetLogsAsync (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, string guid = null, int? page = null, int? limit = null)
         {
@@ -311,16 +311,16 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get API interaction logs 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="start">Start date time</param>
-        /// <param name="end">End date time</param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
         /// <param name="appId"></param>
-        /// <param name="filterByUserId">User id (optional) (optional)</param>
-        /// <param name="guid">Id of the log (optional)</param>
-        /// <param name="page">Page number (optional)</param>
-        /// <param name="limit">Page size (optional)</param>
+        /// <param name="filterByUserId"> (optional)</param>
+        /// <param name="guid"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultHttpRequestAndResponseLog)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultHttpRequestAndResponseLog>> GetLogsAsyncWithHttpInfo (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, string guid = null, int? page = null, int? limit = null)
         {

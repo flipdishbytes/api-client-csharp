@@ -25,104 +25,104 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get authorization tokens
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Client identifier</param>
+        /// <param name="oauthAppId"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultOAuthTokenModel</returns>
         RestApiPaginationResultOAuthTokenModel GetAuthorizationTokens (string oauthAppId, string appId, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get authorization tokens
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Client identifier</param>
+        /// <param name="oauthAppId"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultOAuthTokenModel</returns>
         ApiResponse<RestApiPaginationResultOAuthTokenModel> GetAuthorizationTokensWithHttpInfo (string oauthAppId, string appId, int? page = null, int? limit = null);
         /// <summary>
-        /// Revoke token
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Token identifier key</param>
+        /// <param name="key"></param>
         /// <param name="appId"></param>
         /// <returns></returns>
         void RevokeToken (string key, string appId);
 
         /// <summary>
-        /// Revoke token
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Token identifier key</param>
+        /// <param name="key"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> RevokeTokenWithHttpInfo (string key, string appId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get authorization tokens
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Client identifier</param>
+        /// <param name="oauthAppId"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultOAuthTokenModel</returns>
         System.Threading.Tasks.Task<RestApiPaginationResultOAuthTokenModel> GetAuthorizationTokensAsync (string oauthAppId, string appId, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get authorization tokens
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Client identifier</param>
+        /// <param name="oauthAppId"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultOAuthTokenModel)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOAuthTokenModel>> GetAuthorizationTokensAsyncWithHttpInfo (string oauthAppId, string appId, int? page = null, int? limit = null);
         /// <summary>
-        /// Revoke token
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Token identifier key</param>
+        /// <param name="key"></param>
         /// <param name="appId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task RevokeTokenAsync (string key, string appId);
 
         /// <summary>
-        /// Revoke token
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Token identifier key</param>
+        /// <param name="key"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> RevokeTokenAsyncWithHttpInfo (string key, string appId);
@@ -227,13 +227,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get authorization tokens 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Client identifier</param>
+        /// <param name="oauthAppId"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultOAuthTokenModel</returns>
         public RestApiPaginationResultOAuthTokenModel GetAuthorizationTokens (string oauthAppId, string appId, int? page = null, int? limit = null)
         {
@@ -242,13 +242,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get authorization tokens 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Client identifier</param>
+        /// <param name="oauthAppId"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultOAuthTokenModel</returns>
         public ApiResponse< RestApiPaginationResultOAuthTokenModel > GetAuthorizationTokensWithHttpInfo (string oauthAppId, string appId, int? page = null, int? limit = null)
         {
@@ -314,13 +314,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get authorization tokens 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Client identifier</param>
+        /// <param name="oauthAppId"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultOAuthTokenModel</returns>
         public async System.Threading.Tasks.Task<RestApiPaginationResultOAuthTokenModel> GetAuthorizationTokensAsync (string oauthAppId, string appId, int? page = null, int? limit = null)
         {
@@ -330,13 +330,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get authorization tokens 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="oauthAppId">Client identifier</param>
+        /// <param name="oauthAppId"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Requested page number (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultOAuthTokenModel)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOAuthTokenModel>> GetAuthorizationTokensAsyncWithHttpInfo (string oauthAppId, string appId, int? page = null, int? limit = null)
         {
@@ -402,10 +402,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Revoke token 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Token identifier key</param>
+        /// <param name="key"></param>
         /// <param name="appId"></param>
         /// <returns></returns>
         public void RevokeToken (string key, string appId)
@@ -414,10 +414,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Revoke token 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Token identifier key</param>
+        /// <param name="key"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> RevokeTokenWithHttpInfo (string key, string appId)
@@ -482,10 +482,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Revoke token 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Token identifier key</param>
+        /// <param name="key"></param>
         /// <param name="appId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task RevokeTokenAsync (string key, string appId)
@@ -495,10 +495,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Revoke token 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Token identifier key</param>
+        /// <param name="key"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> RevokeTokenAsyncWithHttpInfo (string key, string appId)

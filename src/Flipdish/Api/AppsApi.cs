@@ -25,49 +25,49 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get the application configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiResultApp</returns>
         RestApiResultApp GetApp (string appId);
 
         /// <summary>
-        /// Get the application configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultApp</returns>
         ApiResponse<RestApiResultApp> GetAppWithHttpInfo (string appId);
         /// <summary>
-        /// Get the application hostname DNS delegation states for A and CNAME records.
+        /// 
         /// </summary>
         /// <remarks>
-        /// A domain might be ready but still need 10 minutes to work properly because of HAProxy.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiResultDnsRecordInformation</returns>
         RestApiResultDnsRecordInformation GetAppHostnameStatus (string appId);
 
         /// <summary>
-        /// Get the application hostname DNS delegation states for A and CNAME records.
+        /// 
         /// </summary>
         /// <remarks>
-        /// A domain might be ready but still need 10 minutes to work properly because of HAProxy.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultDnsRecordInformation</returns>
         ApiResponse<RestApiResultDnsRecordInformation> GetAppHostnameStatusWithHttpInfo (string appId);
         /// <summary>
-        /// Get Apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -80,7 +80,7 @@ namespace Flipdish.Api
         RestApiPaginationResultApp GetApps (string nameFilter = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get Apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -92,49 +92,49 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiPaginationResultApp</returns>
         ApiResponse<RestApiPaginationResultApp> GetAppsWithHttpInfo (string nameFilter = null, int? page = null, int? limit = null);
         /// <summary>
-        /// Get the application compliance configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiResultAppCompliance</returns>
         RestApiResultAppCompliance GetCompliance (string appId);
 
         /// <summary>
-        /// Get the application compliance configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultAppCompliance</returns>
         ApiResponse<RestApiResultAppCompliance> GetComplianceWithHttpInfo (string appId);
         /// <summary>
-        /// Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiStringResult</returns>
         RestApiStringResult GetPanaceaVanityUrl (string appId);
 
         /// <summary>
-        /// Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
         ApiResponse<RestApiStringResult> GetPanaceaVanityUrlWithHttpInfo (string appId);
         /// <summary>
-        /// Get all supported countries.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -144,7 +144,7 @@ namespace Flipdish.Api
         RestApiArrayResultSupportedCountry GetSupportedCountries ();
 
         /// <summary>
-        /// Get all supported countries.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -153,149 +153,149 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultSupportedCountry</returns>
         ApiResponse<RestApiArrayResultSupportedCountry> GetSupportedCountriesWithHttpInfo ();
         /// <summary>
-        /// Is panacea vanity url available
+        /// 
         /// </summary>
         /// <remarks>
-        /// Minimum length of 3 characters
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="vanityUrl">Vanity url to check</param>
+        /// <param name="vanityUrl"></param>
         /// <param name="appId"></param>
         /// <returns>RestApiStringResult</returns>
         RestApiStringResult IsPanaceaVanityUrlAvailable (string vanityUrl, string appId);
 
         /// <summary>
-        /// Is panacea vanity url available
+        /// 
         /// </summary>
         /// <remarks>
-        /// Minimum length of 3 characters
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="vanityUrl">Vanity url to check</param>
+        /// <param name="vanityUrl"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
         ApiResponse<RestApiStringResult> IsPanaceaVanityUrlAvailableWithHttpInfo (string vanityUrl, string appId);
         /// <summary>
-        /// Set the application configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="appConfigUpdate">Changes to the configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="appConfigUpdate"></param>
         /// <returns>RestApiResultApp</returns>
         RestApiResultApp SetAppConfig (string appId, AppConfigUpdateModel appConfigUpdate);
 
         /// <summary>
-        /// Set the application configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="appConfigUpdate">Changes to the configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="appConfigUpdate"></param>
         /// <returns>ApiResponse of RestApiResultApp</returns>
         ApiResponse<RestApiResultApp> SetAppConfigWithHttpInfo (string appId, AppConfigUpdateModel appConfigUpdate);
         /// <summary>
-        /// Set the application hostname.
+        /// 
         /// </summary>
         /// <remarks>
-        /// If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
-        /// <param name="hostname">The new Hostname.</param>
-        /// <param name="isEmbed">Will the website be embedded (optional)</param>
-        /// <param name="isNextGenWeb">Enables the NextGen web editor (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="hostname"></param>
+        /// <param name="isEmbed"> (optional)</param>
+        /// <param name="isNextGenWeb"> (optional)</param>
         /// <returns>RestApiStringResult</returns>
         RestApiStringResult SetAppHostname (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null);
 
         /// <summary>
-        /// Set the application hostname.
-        /// </summary>
-        /// <remarks>
-        /// If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
-        /// <param name="hostname">The new Hostname.</param>
-        /// <param name="isEmbed">Will the website be embedded (optional)</param>
-        /// <param name="isNextGenWeb">Enables the NextGen web editor (optional)</param>
-        /// <returns>ApiResponse of RestApiStringResult</returns>
-        ApiResponse<RestApiStringResult> SetAppHostnameWithHttpInfo (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null);
-        /// <summary>
-        /// Set the application languages
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="languages">New list of languages</param>
+        /// <param name="appId"></param>
+        /// <param name="hostname"></param>
+        /// <param name="isEmbed"> (optional)</param>
+        /// <param name="isNextGenWeb"> (optional)</param>
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        ApiResponse<RestApiStringResult> SetAppHostnameWithHttpInfo (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="languages"></param>
         /// <returns>RestApiResultApp</returns>
         RestApiResultApp SetAppLanguages (string appId, List<Language> languages);
 
         /// <summary>
-        /// Set the application languages
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="languages">New list of languages</param>
+        /// <param name="appId"></param>
+        /// <param name="languages"></param>
         /// <returns>ApiResponse of RestApiResultApp</returns>
         ApiResponse<RestApiResultApp> SetAppLanguagesWithHttpInfo (string appId, List<Language> languages);
         /// <summary>
-        /// Set the application compliance configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="complianceType">Compliance type</param>
+        /// <param name="appId"></param>
+        /// <param name="complianceType"></param>
         /// <returns>RestApiResultAppCompliance</returns>
         RestApiResultAppCompliance SetCompliance (string appId, string complianceType);
 
         /// <summary>
-        /// Set the application compliance configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="complianceType">Compliance type</param>
+        /// <param name="appId"></param>
+        /// <param name="complianceType"></param>
         /// <returns>ApiResponse of RestApiResultAppCompliance</returns>
         ApiResponse<RestApiResultAppCompliance> SetComplianceWithHttpInfo (string appId, string complianceType);
         /// <summary>
-        /// Set panacea vanity url
+        /// 
         /// </summary>
         /// <remarks>
-        /// Minimum length of 3 characters
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
-        /// <param name="vanityUrl">Vanity url</param>
+        /// <param name="appId"></param>
+        /// <param name="vanityUrl"></param>
         /// <returns>RestApiStringResult</returns>
         RestApiStringResult SetPanaceaVanityUrl (string appId, string vanityUrl);
 
         /// <summary>
-        /// Set panacea vanity url
+        /// 
         /// </summary>
         /// <remarks>
-        /// Minimum length of 3 characters
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
-        /// <param name="vanityUrl">Vanity url</param>
+        /// <param name="appId"></param>
+        /// <param name="vanityUrl"></param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
         ApiResponse<RestApiStringResult> SetPanaceaVanityUrlWithHttpInfo (string appId, string vanityUrl);
         /// <summary>
-        /// Toggle Next Gen Web
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -309,7 +309,7 @@ namespace Flipdish.Api
         RestApiStringResult ToggleNextGenWeb (string appId, string hostname, string vanityUrl, bool? isNextGenWeb);
 
         /// <summary>
-        /// Toggle Next Gen Web
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -322,74 +322,74 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiStringResult</returns>
         ApiResponse<RestApiStringResult> ToggleNextGenWebWithHttpInfo (string appId, string hostname, string vanityUrl, bool? isNextGenWeb);
         /// <summary>
-        /// Set the application logo \\ icon
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <param name="image">App Logo</param>
         /// <returns></returns>
         void UploadAppLogo (string appId, System.IO.Stream image);
 
         /// <summary>
-        /// Set the application logo \\ icon
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <param name="image">App Logo</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UploadAppLogoWithHttpInfo (string appId, System.IO.Stream image);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get the application configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiResultApp</returns>
         System.Threading.Tasks.Task<RestApiResultApp> GetAppAsync (string appId);
 
         /// <summary>
-        /// Get the application configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultApp)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultApp>> GetAppAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// Get the application hostname DNS delegation states for A and CNAME records.
+        /// 
         /// </summary>
         /// <remarks>
-        /// A domain might be ready but still need 10 minutes to work properly because of HAProxy.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiResultDnsRecordInformation</returns>
         System.Threading.Tasks.Task<RestApiResultDnsRecordInformation> GetAppHostnameStatusAsync (string appId);
 
         /// <summary>
-        /// Get the application hostname DNS delegation states for A and CNAME records.
+        /// 
         /// </summary>
         /// <remarks>
-        /// A domain might be ready but still need 10 minutes to work properly because of HAProxy.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultDnsRecordInformation)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultDnsRecordInformation>> GetAppHostnameStatusAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// Get Apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -402,7 +402,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiPaginationResultApp> GetAppsAsync (string nameFilter = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get Apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -414,49 +414,49 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiPaginationResultApp)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultApp>> GetAppsAsyncWithHttpInfo (string nameFilter = null, int? page = null, int? limit = null);
         /// <summary>
-        /// Get the application compliance configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiResultAppCompliance</returns>
         System.Threading.Tasks.Task<RestApiResultAppCompliance> GetComplianceAsync (string appId);
 
         /// <summary>
-        /// Get the application compliance configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultAppCompliance)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultAppCompliance>> GetComplianceAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiStringResult</returns>
         System.Threading.Tasks.Task<RestApiStringResult> GetPanaceaVanityUrlAsync (string appId);
 
         /// <summary>
-        /// Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> GetPanaceaVanityUrlAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// Get all supported countries.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -466,7 +466,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultSupportedCountry> GetSupportedCountriesAsync ();
 
         /// <summary>
-        /// Get all supported countries.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -475,149 +475,149 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultSupportedCountry)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultSupportedCountry>> GetSupportedCountriesAsyncWithHttpInfo ();
         /// <summary>
-        /// Is panacea vanity url available
+        /// 
         /// </summary>
         /// <remarks>
-        /// Minimum length of 3 characters
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="vanityUrl">Vanity url to check</param>
+        /// <param name="vanityUrl"></param>
         /// <param name="appId"></param>
         /// <returns>Task of RestApiStringResult</returns>
         System.Threading.Tasks.Task<RestApiStringResult> IsPanaceaVanityUrlAvailableAsync (string vanityUrl, string appId);
 
         /// <summary>
-        /// Is panacea vanity url available
+        /// 
         /// </summary>
         /// <remarks>
-        /// Minimum length of 3 characters
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="vanityUrl">Vanity url to check</param>
+        /// <param name="vanityUrl"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> IsPanaceaVanityUrlAvailableAsyncWithHttpInfo (string vanityUrl, string appId);
         /// <summary>
-        /// Set the application configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="appConfigUpdate">Changes to the configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="appConfigUpdate"></param>
         /// <returns>Task of RestApiResultApp</returns>
         System.Threading.Tasks.Task<RestApiResultApp> SetAppConfigAsync (string appId, AppConfigUpdateModel appConfigUpdate);
 
         /// <summary>
-        /// Set the application configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="appConfigUpdate">Changes to the configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="appConfigUpdate"></param>
         /// <returns>Task of ApiResponse (RestApiResultApp)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultApp>> SetAppConfigAsyncWithHttpInfo (string appId, AppConfigUpdateModel appConfigUpdate);
         /// <summary>
-        /// Set the application hostname.
+        /// 
         /// </summary>
         /// <remarks>
-        /// If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
-        /// <param name="hostname">The new Hostname.</param>
-        /// <param name="isEmbed">Will the website be embedded (optional)</param>
-        /// <param name="isNextGenWeb">Enables the NextGen web editor (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="hostname"></param>
+        /// <param name="isEmbed"> (optional)</param>
+        /// <param name="isNextGenWeb"> (optional)</param>
         /// <returns>Task of RestApiStringResult</returns>
         System.Threading.Tasks.Task<RestApiStringResult> SetAppHostnameAsync (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null);
 
         /// <summary>
-        /// Set the application hostname.
-        /// </summary>
-        /// <remarks>
-        /// If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
-        /// <param name="hostname">The new Hostname.</param>
-        /// <param name="isEmbed">Will the website be embedded (optional)</param>
-        /// <param name="isNextGenWeb">Enables the NextGen web editor (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> SetAppHostnameAsyncWithHttpInfo (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null);
-        /// <summary>
-        /// Set the application languages
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="languages">New list of languages</param>
+        /// <param name="appId"></param>
+        /// <param name="hostname"></param>
+        /// <param name="isEmbed"> (optional)</param>
+        /// <param name="isNextGenWeb"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> SetAppHostnameAsyncWithHttpInfo (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="languages"></param>
         /// <returns>Task of RestApiResultApp</returns>
         System.Threading.Tasks.Task<RestApiResultApp> SetAppLanguagesAsync (string appId, List<Language> languages);
 
         /// <summary>
-        /// Set the application languages
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="languages">New list of languages</param>
+        /// <param name="appId"></param>
+        /// <param name="languages"></param>
         /// <returns>Task of ApiResponse (RestApiResultApp)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultApp>> SetAppLanguagesAsyncWithHttpInfo (string appId, List<Language> languages);
         /// <summary>
-        /// Set the application compliance configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="complianceType">Compliance type</param>
+        /// <param name="appId"></param>
+        /// <param name="complianceType"></param>
         /// <returns>Task of RestApiResultAppCompliance</returns>
         System.Threading.Tasks.Task<RestApiResultAppCompliance> SetComplianceAsync (string appId, string complianceType);
 
         /// <summary>
-        /// Set the application compliance configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="complianceType">Compliance type</param>
+        /// <param name="appId"></param>
+        /// <param name="complianceType"></param>
         /// <returns>Task of ApiResponse (RestApiResultAppCompliance)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultAppCompliance>> SetComplianceAsyncWithHttpInfo (string appId, string complianceType);
         /// <summary>
-        /// Set panacea vanity url
+        /// 
         /// </summary>
         /// <remarks>
-        /// Minimum length of 3 characters
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
-        /// <param name="vanityUrl">Vanity url</param>
+        /// <param name="appId"></param>
+        /// <param name="vanityUrl"></param>
         /// <returns>Task of RestApiStringResult</returns>
         System.Threading.Tasks.Task<RestApiStringResult> SetPanaceaVanityUrlAsync (string appId, string vanityUrl);
 
         /// <summary>
-        /// Set panacea vanity url
+        /// 
         /// </summary>
         /// <remarks>
-        /// Minimum length of 3 characters
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
-        /// <param name="vanityUrl">Vanity url</param>
+        /// <param name="appId"></param>
+        /// <param name="vanityUrl"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> SetPanaceaVanityUrlAsyncWithHttpInfo (string appId, string vanityUrl);
         /// <summary>
-        /// Toggle Next Gen Web
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -631,7 +631,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiStringResult> ToggleNextGenWebAsync (string appId, string hostname, string vanityUrl, bool? isNextGenWeb);
 
         /// <summary>
-        /// Toggle Next Gen Web
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -644,25 +644,25 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> ToggleNextGenWebAsyncWithHttpInfo (string appId, string hostname, string vanityUrl, bool? isNextGenWeb);
         /// <summary>
-        /// Set the application logo \\ icon
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <param name="image">App Logo</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UploadAppLogoAsync (string appId, System.IO.Stream image);
 
         /// <summary>
-        /// Set the application logo \\ icon
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <param name="image">App Logo</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UploadAppLogoAsyncWithHttpInfo (string appId, System.IO.Stream image);
@@ -767,10 +767,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the application configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiResultApp</returns>
         public RestApiResultApp GetApp (string appId)
         {
@@ -779,10 +779,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the application configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultApp</returns>
         public ApiResponse< RestApiResultApp > GetAppWithHttpInfo (string appId)
         {
@@ -842,10 +842,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the application configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiResultApp</returns>
         public async System.Threading.Tasks.Task<RestApiResultApp> GetAppAsync (string appId)
         {
@@ -855,10 +855,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the application configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultApp)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultApp>> GetAppAsyncWithHttpInfo (string appId)
         {
@@ -918,10 +918,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the application hostname DNS delegation states for A and CNAME records. A domain might be ready but still need 10 minutes to work properly because of HAProxy.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiResultDnsRecordInformation</returns>
         public RestApiResultDnsRecordInformation GetAppHostnameStatus (string appId)
         {
@@ -930,10 +930,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the application hostname DNS delegation states for A and CNAME records. A domain might be ready but still need 10 minutes to work properly because of HAProxy.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultDnsRecordInformation</returns>
         public ApiResponse< RestApiResultDnsRecordInformation > GetAppHostnameStatusWithHttpInfo (string appId)
         {
@@ -993,10 +993,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the application hostname DNS delegation states for A and CNAME records. A domain might be ready but still need 10 minutes to work properly because of HAProxy.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiResultDnsRecordInformation</returns>
         public async System.Threading.Tasks.Task<RestApiResultDnsRecordInformation> GetAppHostnameStatusAsync (string appId)
         {
@@ -1006,10 +1006,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the application hostname DNS delegation states for A and CNAME records. A domain might be ready but still need 10 minutes to work properly because of HAProxy.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultDnsRecordInformation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultDnsRecordInformation>> GetAppHostnameStatusAsyncWithHttpInfo (string appId)
         {
@@ -1069,7 +1069,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nameFilter"> (optional)</param>
@@ -1083,7 +1083,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nameFilter"> (optional)</param>
@@ -1147,7 +1147,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nameFilter"> (optional)</param>
@@ -1162,7 +1162,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nameFilter"> (optional)</param>
@@ -1226,10 +1226,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the application compliance configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiResultAppCompliance</returns>
         public RestApiResultAppCompliance GetCompliance (string appId)
         {
@@ -1238,10 +1238,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the application compliance configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultAppCompliance</returns>
         public ApiResponse< RestApiResultAppCompliance > GetComplianceWithHttpInfo (string appId)
         {
@@ -1301,10 +1301,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the application compliance configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiResultAppCompliance</returns>
         public async System.Threading.Tasks.Task<RestApiResultAppCompliance> GetComplianceAsync (string appId)
         {
@@ -1314,10 +1314,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the application compliance configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultAppCompliance)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppCompliance>> GetComplianceAsyncWithHttpInfo (string appId)
         {
@@ -1377,10 +1377,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiStringResult</returns>
         public RestApiStringResult GetPanaceaVanityUrl (string appId)
         {
@@ -1389,10 +1389,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
         public ApiResponse< RestApiStringResult > GetPanaceaVanityUrlWithHttpInfo (string appId)
         {
@@ -1452,10 +1452,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiStringResult</returns>
         public async System.Threading.Tasks.Task<RestApiStringResult> GetPanaceaVanityUrlAsync (string appId)
         {
@@ -1465,10 +1465,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl] 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> GetPanaceaVanityUrlAsyncWithHttpInfo (string appId)
         {
@@ -1528,7 +1528,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all supported countries. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RestApiArrayResultSupportedCountry</returns>
@@ -1539,7 +1539,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all supported countries. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RestApiArrayResultSupportedCountry</returns>
@@ -1597,7 +1597,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all supported countries. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of RestApiArrayResultSupportedCountry</returns>
@@ -1609,7 +1609,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all supported countries. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RestApiArrayResultSupportedCountry)</returns>
@@ -1667,10 +1667,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Is panacea vanity url available Minimum length of 3 characters
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="vanityUrl">Vanity url to check</param>
+        /// <param name="vanityUrl"></param>
         /// <param name="appId"></param>
         /// <returns>RestApiStringResult</returns>
         public RestApiStringResult IsPanaceaVanityUrlAvailable (string vanityUrl, string appId)
@@ -1680,10 +1680,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Is panacea vanity url available Minimum length of 3 characters
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="vanityUrl">Vanity url to check</param>
+        /// <param name="vanityUrl"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
         public ApiResponse< RestApiStringResult > IsPanaceaVanityUrlAvailableWithHttpInfo (string vanityUrl, string appId)
@@ -1748,10 +1748,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Is panacea vanity url available Minimum length of 3 characters
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="vanityUrl">Vanity url to check</param>
+        /// <param name="vanityUrl"></param>
         /// <param name="appId"></param>
         /// <returns>Task of RestApiStringResult</returns>
         public async System.Threading.Tasks.Task<RestApiStringResult> IsPanaceaVanityUrlAvailableAsync (string vanityUrl, string appId)
@@ -1762,10 +1762,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Is panacea vanity url available Minimum length of 3 characters
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="vanityUrl">Vanity url to check</param>
+        /// <param name="vanityUrl"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> IsPanaceaVanityUrlAvailableAsyncWithHttpInfo (string vanityUrl, string appId)
@@ -1830,11 +1830,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="appConfigUpdate">Changes to the configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="appConfigUpdate"></param>
         /// <returns>RestApiResultApp</returns>
         public RestApiResultApp SetAppConfig (string appId, AppConfigUpdateModel appConfigUpdate)
         {
@@ -1843,11 +1843,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="appConfigUpdate">Changes to the configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="appConfigUpdate"></param>
         /// <returns>ApiResponse of RestApiResultApp</returns>
         public ApiResponse< RestApiResultApp > SetAppConfigWithHttpInfo (string appId, AppConfigUpdateModel appConfigUpdate)
         {
@@ -1923,11 +1923,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="appConfigUpdate">Changes to the configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="appConfigUpdate"></param>
         /// <returns>Task of RestApiResultApp</returns>
         public async System.Threading.Tasks.Task<RestApiResultApp> SetAppConfigAsync (string appId, AppConfigUpdateModel appConfigUpdate)
         {
@@ -1937,11 +1937,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="appConfigUpdate">Changes to the configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="appConfigUpdate"></param>
         /// <returns>Task of ApiResponse (RestApiResultApp)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultApp>> SetAppConfigAsyncWithHttpInfo (string appId, AppConfigUpdateModel appConfigUpdate)
         {
@@ -2017,13 +2017,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application hostname. If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
-        /// <param name="hostname">The new Hostname.</param>
-        /// <param name="isEmbed">Will the website be embedded (optional)</param>
-        /// <param name="isNextGenWeb">Enables the NextGen web editor (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="hostname"></param>
+        /// <param name="isEmbed"> (optional)</param>
+        /// <param name="isNextGenWeb"> (optional)</param>
         /// <returns>RestApiStringResult</returns>
         public RestApiStringResult SetAppHostname (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null)
         {
@@ -2032,13 +2032,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application hostname. If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
-        /// <param name="hostname">The new Hostname.</param>
-        /// <param name="isEmbed">Will the website be embedded (optional)</param>
-        /// <param name="isNextGenWeb">Enables the NextGen web editor (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="hostname"></param>
+        /// <param name="isEmbed"> (optional)</param>
+        /// <param name="isNextGenWeb"> (optional)</param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
         public ApiResponse< RestApiStringResult > SetAppHostnameWithHttpInfo (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null)
         {
@@ -2104,13 +2104,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application hostname. If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
-        /// <param name="hostname">The new Hostname.</param>
-        /// <param name="isEmbed">Will the website be embedded (optional)</param>
-        /// <param name="isNextGenWeb">Enables the NextGen web editor (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="hostname"></param>
+        /// <param name="isEmbed"> (optional)</param>
+        /// <param name="isNextGenWeb"> (optional)</param>
         /// <returns>Task of RestApiStringResult</returns>
         public async System.Threading.Tasks.Task<RestApiStringResult> SetAppHostnameAsync (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null)
         {
@@ -2120,13 +2120,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application hostname. If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
-        /// <param name="hostname">The new Hostname.</param>
-        /// <param name="isEmbed">Will the website be embedded (optional)</param>
-        /// <param name="isNextGenWeb">Enables the NextGen web editor (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="hostname"></param>
+        /// <param name="isEmbed"> (optional)</param>
+        /// <param name="isNextGenWeb"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> SetAppHostnameAsyncWithHttpInfo (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null)
         {
@@ -2192,11 +2192,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application languages 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="languages">New list of languages</param>
+        /// <param name="appId"></param>
+        /// <param name="languages"></param>
         /// <returns>RestApiResultApp</returns>
         public RestApiResultApp SetAppLanguages (string appId, List<Language> languages)
         {
@@ -2205,11 +2205,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application languages 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="languages">New list of languages</param>
+        /// <param name="appId"></param>
+        /// <param name="languages"></param>
         /// <returns>ApiResponse of RestApiResultApp</returns>
         public ApiResponse< RestApiResultApp > SetAppLanguagesWithHttpInfo (string appId, List<Language> languages)
         {
@@ -2285,11 +2285,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application languages 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="languages">New list of languages</param>
+        /// <param name="appId"></param>
+        /// <param name="languages"></param>
         /// <returns>Task of RestApiResultApp</returns>
         public async System.Threading.Tasks.Task<RestApiResultApp> SetAppLanguagesAsync (string appId, List<Language> languages)
         {
@@ -2299,11 +2299,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application languages 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="languages">New list of languages</param>
+        /// <param name="appId"></param>
+        /// <param name="languages"></param>
         /// <returns>Task of ApiResponse (RestApiResultApp)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultApp>> SetAppLanguagesAsyncWithHttpInfo (string appId, List<Language> languages)
         {
@@ -2379,11 +2379,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application compliance configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="complianceType">Compliance type</param>
+        /// <param name="appId"></param>
+        /// <param name="complianceType"></param>
         /// <returns>RestApiResultAppCompliance</returns>
         public RestApiResultAppCompliance SetCompliance (string appId, string complianceType)
         {
@@ -2392,11 +2392,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application compliance configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="complianceType">Compliance type</param>
+        /// <param name="appId"></param>
+        /// <param name="complianceType"></param>
         /// <returns>ApiResponse of RestApiResultAppCompliance</returns>
         public ApiResponse< RestApiResultAppCompliance > SetComplianceWithHttpInfo (string appId, string complianceType)
         {
@@ -2460,11 +2460,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application compliance configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="complianceType">Compliance type</param>
+        /// <param name="appId"></param>
+        /// <param name="complianceType"></param>
         /// <returns>Task of RestApiResultAppCompliance</returns>
         public async System.Threading.Tasks.Task<RestApiResultAppCompliance> SetComplianceAsync (string appId, string complianceType)
         {
@@ -2474,11 +2474,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application compliance configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="complianceType">Compliance type</param>
+        /// <param name="appId"></param>
+        /// <param name="complianceType"></param>
         /// <returns>Task of ApiResponse (RestApiResultAppCompliance)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppCompliance>> SetComplianceAsyncWithHttpInfo (string appId, string complianceType)
         {
@@ -2542,11 +2542,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set panacea vanity url Minimum length of 3 characters
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
-        /// <param name="vanityUrl">Vanity url</param>
+        /// <param name="appId"></param>
+        /// <param name="vanityUrl"></param>
         /// <returns>RestApiStringResult</returns>
         public RestApiStringResult SetPanaceaVanityUrl (string appId, string vanityUrl)
         {
@@ -2555,11 +2555,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set panacea vanity url Minimum length of 3 characters
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
-        /// <param name="vanityUrl">Vanity url</param>
+        /// <param name="appId"></param>
+        /// <param name="vanityUrl"></param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
         public ApiResponse< RestApiStringResult > SetPanaceaVanityUrlWithHttpInfo (string appId, string vanityUrl)
         {
@@ -2623,11 +2623,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set panacea vanity url Minimum length of 3 characters
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
-        /// <param name="vanityUrl">Vanity url</param>
+        /// <param name="appId"></param>
+        /// <param name="vanityUrl"></param>
         /// <returns>Task of RestApiStringResult</returns>
         public async System.Threading.Tasks.Task<RestApiStringResult> SetPanaceaVanityUrlAsync (string appId, string vanityUrl)
         {
@@ -2637,11 +2637,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set panacea vanity url Minimum length of 3 characters
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier.</param>
-        /// <param name="vanityUrl">Vanity url</param>
+        /// <param name="appId"></param>
+        /// <param name="vanityUrl"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> SetPanaceaVanityUrlAsyncWithHttpInfo (string appId, string vanityUrl)
         {
@@ -2705,7 +2705,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Toggle Next Gen Web 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2720,7 +2720,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Toggle Next Gen Web 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2798,7 +2798,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Toggle Next Gen Web 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2814,7 +2814,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Toggle Next Gen Web 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2892,10 +2892,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application logo \\ icon 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <param name="image">App Logo</param>
         /// <returns></returns>
         public void UploadAppLogo (string appId, System.IO.Stream image)
@@ -2904,10 +2904,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application logo \\ icon 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <param name="image">App Logo</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> UploadAppLogoWithHttpInfo (string appId, System.IO.Stream image)
@@ -2973,10 +2973,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application logo \\ icon 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <param name="image">App Logo</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UploadAppLogoAsync (string appId, System.IO.Stream image)
@@ -2986,10 +2986,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set the application logo \\ icon 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <param name="image">App Logo</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UploadAppLogoAsyncWithHttpInfo (string appId, System.IO.Stream image)

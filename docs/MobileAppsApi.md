@@ -4,24 +4,24 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetAppConfigSalesChannel**](MobileAppsApi.md#getappconfigsaleschannel) | **GET** /api/v1.0/mobileapps/{appId}/saleschannel/details | Get sales channel configuration
-[**GetStatistics**](MobileAppsApi.md#getstatistics) | **GET** /api/v1.0/mobileapps/{appId}/statistics | Get statistics mobile apps
-[**GetSubmissionDetails**](MobileAppsApi.md#getsubmissiondetails) | **GET** /api/v1.0/mobileapps/{appId}/submission/details | Get submission details mobile apps
-[**GetSubmissionStatus**](MobileAppsApi.md#getsubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/status | Get submission status mobile apps
-[**Publish**](MobileAppsApi.md#publish) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/publish | Publish mobile apps
-[**Resubmission**](MobileAppsApi.md#resubmission) | **POST** /api/v1.0/mobileapps/{appId}/resubmission | Re-submission form mobile apps
-[**Submission**](MobileAppsApi.md#submission) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
-[**Unpublish**](MobileAppsApi.md#unpublish) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/unpublish | Unpublish mobile apps
-[**UpdateAppConfigSalesChannel**](MobileAppsApi.md#updateappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Update the application sales channel configuration
-[**UpdateSubmissionStatus**](MobileAppsApi.md#updatesubmissionstatus) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/status | Update submission status
-[**UploadImage**](MobileAppsApi.md#uploadimage) | **POST** /api/v1.0/mobileapps/{appId}/submission/image | Upload image mobile apps
+[**GetAppConfigSalesChannel**](MobileAppsApi.md#getappconfigsaleschannel) | **GET** /api/v1.0/mobileapps/{appId}/saleschannel/details | 
+[**GetStatistics**](MobileAppsApi.md#getstatistics) | **GET** /api/v1.0/mobileapps/{appId}/statistics | 
+[**GetSubmissionDetails**](MobileAppsApi.md#getsubmissiondetails) | **GET** /api/v1.0/mobileapps/{appId}/submission/details | 
+[**GetSubmissionStatus**](MobileAppsApi.md#getsubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/status | 
+[**Publish**](MobileAppsApi.md#publish) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/publish | 
+[**Resubmission**](MobileAppsApi.md#resubmission) | **POST** /api/v1.0/mobileapps/{appId}/resubmission | 
+[**Submission**](MobileAppsApi.md#submission) | **POST** /api/v1.0/mobileapps/{appId}/submission | 
+[**Unpublish**](MobileAppsApi.md#unpublish) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/unpublish | 
+[**UpdateAppConfigSalesChannel**](MobileAppsApi.md#updateappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | 
+[**UpdateSubmissionStatus**](MobileAppsApi.md#updatesubmissionstatus) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/status | 
+[**UploadImage**](MobileAppsApi.md#uploadimage) | **POST** /api/v1.0/mobileapps/{appId}/submission/image | 
 
 
 <a name="getappconfigsaleschannel"></a>
 # **GetAppConfigSalesChannel**
 > RestApiResultAppConfigSalesChannel GetAppConfigSalesChannel (string appId)
 
-Get sales channel configuration
+
 
 ### Example
 ```csharp
@@ -45,7 +45,6 @@ namespace Example
 
             try
             {
-                // Get sales channel configuration
                 RestApiResultAppConfigSalesChannel result = apiInstance.GetAppConfigSalesChannel(appId);
                 Debug.WriteLine(result);
             }
@@ -83,7 +82,7 @@ Name | Type | Description  | Notes
 # **GetStatistics**
 > RestApiArrayResultMobileAppsStatistics GetStatistics (string appId, List<string> platformTypes)
 
-Get statistics mobile apps
+
 
 ### Example
 ```csharp
@@ -108,7 +107,6 @@ namespace Example
 
             try
             {
-                // Get statistics mobile apps
                 RestApiArrayResultMobileAppsStatistics result = apiInstance.GetStatistics(appId, platformTypes);
                 Debug.WriteLine(result);
             }
@@ -147,7 +145,7 @@ Name | Type | Description  | Notes
 # **GetSubmissionDetails**
 > RestApiResultMobileAppsSubmissionDetails GetSubmissionDetails (string appId)
 
-Get submission details mobile apps
+
 
 ### Example
 ```csharp
@@ -171,7 +169,6 @@ namespace Example
 
             try
             {
-                // Get submission details mobile apps
                 RestApiResultMobileAppsSubmissionDetails result = apiInstance.GetSubmissionDetails(appId);
                 Debug.WriteLine(result);
             }
@@ -209,7 +206,7 @@ Name | Type | Description  | Notes
 # **GetSubmissionStatus**
 > RestApiResultMobileAppsSubmissionStatus GetSubmissionStatus (string appId, int? submissionId)
 
-Get submission status mobile apps
+
 
 ### Example
 ```csharp
@@ -234,7 +231,6 @@ namespace Example
 
             try
             {
-                // Get submission status mobile apps
                 RestApiResultMobileAppsSubmissionStatus result = apiInstance.GetSubmissionStatus(appId, submissionId);
                 Debug.WriteLine(result);
             }
@@ -273,7 +269,7 @@ Name | Type | Description  | Notes
 # **Publish**
 > RestApiResultRestApiIntegerResult Publish (string appId, int? submissionId, string platformType = null)
 
-Publish mobile apps
+
 
 ### Example
 ```csharp
@@ -299,7 +295,6 @@ namespace Example
 
             try
             {
-                // Publish mobile apps
                 RestApiResultRestApiIntegerResult result = apiInstance.Publish(appId, submissionId, platformType);
                 Debug.WriteLine(result);
             }
@@ -339,7 +334,7 @@ Name | Type | Description  | Notes
 # **Resubmission**
 > RestApiResultMobileAppsSubmission Resubmission (string appId, MobileAppsSubmission mobileAppsSubmission)
 
-Re-submission form mobile apps
+
 
 ### Example
 ```csharp
@@ -364,7 +359,6 @@ namespace Example
 
             try
             {
-                // Re-submission form mobile apps
                 RestApiResultMobileAppsSubmission result = apiInstance.Resubmission(appId, mobileAppsSubmission);
                 Debug.WriteLine(result);
             }
@@ -403,7 +397,7 @@ Name | Type | Description  | Notes
 # **Submission**
 > RestApiResultMobileAppsSubmission Submission (string appId, MobileAppsSubmission mobileAppsSubmission)
 
-Submission form mobile apps
+
 
 ### Example
 ```csharp
@@ -428,7 +422,6 @@ namespace Example
 
             try
             {
-                // Submission form mobile apps
                 RestApiResultMobileAppsSubmission result = apiInstance.Submission(appId, mobileAppsSubmission);
                 Debug.WriteLine(result);
             }
@@ -467,7 +460,7 @@ Name | Type | Description  | Notes
 # **Unpublish**
 > RestApiIntegerResult Unpublish (string appId, int? submissionId, string platformType = null)
 
-Unpublish mobile apps
+
 
 ### Example
 ```csharp
@@ -493,7 +486,6 @@ namespace Example
 
             try
             {
-                // Unpublish mobile apps
                 RestApiIntegerResult result = apiInstance.Unpublish(appId, submissionId, platformType);
                 Debug.WriteLine(result);
             }
@@ -533,7 +525,7 @@ Name | Type | Description  | Notes
 # **UpdateAppConfigSalesChannel**
 > RestApiResultAppConfigSalesChannel UpdateAppConfigSalesChannel (string appId, AppConfigSalesChannel appConfigSalesChannel)
 
-Update the application sales channel configuration
+
 
 ### Example
 ```csharp
@@ -558,7 +550,6 @@ namespace Example
 
             try
             {
-                // Update the application sales channel configuration
                 RestApiResultAppConfigSalesChannel result = apiInstance.UpdateAppConfigSalesChannel(appId, appConfigSalesChannel);
                 Debug.WriteLine(result);
             }
@@ -597,7 +588,7 @@ Name | Type | Description  | Notes
 # **UpdateSubmissionStatus**
 > RestApiResultUpdateMobileAppsSubmissionStatus UpdateSubmissionStatus (string appId, int? submissionId, UpdateMobileAppsSubmissionStatus updateSubmissionStatus)
 
-Update submission status
+
 
 ### Example
 ```csharp
@@ -623,7 +614,6 @@ namespace Example
 
             try
             {
-                // Update submission status
                 RestApiResultUpdateMobileAppsSubmissionStatus result = apiInstance.UpdateSubmissionStatus(appId, submissionId, updateSubmissionStatus);
                 Debug.WriteLine(result);
             }
@@ -663,7 +653,7 @@ Name | Type | Description  | Notes
 # **UploadImage**
 > RestApiResultMobileAppsImage UploadImage (string appId, System.IO.Stream image)
 
-Upload image mobile apps
+
 
 ### Example
 ```csharp
@@ -688,7 +678,6 @@ namespace Example
 
             try
             {
-                // Upload image mobile apps
                 RestApiResultMobileAppsImage result = apiInstance.UploadImage(appId, image);
                 Debug.WriteLine(result);
             }

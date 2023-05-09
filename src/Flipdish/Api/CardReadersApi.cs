@@ -25,10 +25,10 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Cancel currently initiated install update for bluetooth terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -38,10 +38,10 @@ namespace Flipdish.Api
         void CancelCurrentlyInitiatedBluetoothDeviceUpdate (string appId, string deviceId, string terminalType);
 
         /// <summary>
-        /// Cancel currently initiated install update for bluetooth terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -50,10 +50,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> CancelCurrentlyInitiatedBluetoothDeviceUpdateWithHttpInfo (string appId, string deviceId, string terminalType);
         /// <summary>
-        /// Cancel terminals action
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readerId"></param>
@@ -62,10 +62,10 @@ namespace Flipdish.Api
         RestApiResultCardReader CancelReaderAction (string readerId, string appId);
 
         /// <summary>
-        /// Cancel terminals action
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readerId"></param>
@@ -73,10 +73,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultCardReader</returns>
         ApiResponse<RestApiResultCardReader> CancelReaderActionWithHttpInfo (string readerId, string appId);
         /// <summary>
-        /// Get reader
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readerId"></param>
@@ -85,10 +85,10 @@ namespace Flipdish.Api
         RestApiResultCardReader CardReadersGetReader (string readerId, string appId);
 
         /// <summary>
-        /// Get reader
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readerId"></param>
@@ -96,10 +96,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultCardReader</returns>
         ApiResponse<RestApiResultCardReader> CardReadersGetReaderWithHttpInfo (string readerId, string appId);
         /// <summary>
-        /// Get Location ID for Stripe Terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geoPointRequest"></param>
@@ -108,10 +108,10 @@ namespace Flipdish.Api
         RestApiResultStripeTerminalLocation GenerateStripeTerminalLocation (GeoPointRequest geoPointRequest, string appId);
 
         /// <summary>
-        /// Get Location ID for Stripe Terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geoPointRequest"></param>
@@ -119,10 +119,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultStripeTerminalLocation</returns>
         ApiResponse<RestApiResultStripeTerminalLocation> GenerateStripeTerminalLocationWithHttpInfo (GeoPointRequest geoPointRequest, string appId);
         /// <summary>
-        /// Get the status of the bluetooth terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -131,10 +131,10 @@ namespace Flipdish.Api
         RestApiResultBluetoothTerminalStatus GetBluetoothTerminalStatus (string appId, string deviceId);
 
         /// <summary>
-        /// Get the status of the bluetooth terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -142,10 +142,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultBluetoothTerminalStatus</returns>
         ApiResponse<RestApiResultBluetoothTerminalStatus> GetBluetoothTerminalStatusWithHttpInfo (string appId, string deviceId);
         /// <summary>
-        /// Get Connection Token For a Stripe Terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -153,20 +153,20 @@ namespace Flipdish.Api
         RestApiResultStripeTerminalConnectionToken GetStripeConnectionToken (string appId);
 
         /// <summary>
-        /// Get Connection Token For a Stripe Terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultStripeTerminalConnectionToken</returns>
         ApiResponse<RestApiResultStripeTerminalConnectionToken> GetStripeConnectionTokenWithHttpInfo (string appId);
         /// <summary>
-        /// Trigger check for Bluetooth device update on Kiosk
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -176,10 +176,10 @@ namespace Flipdish.Api
         void InitiateBluetoothTerminalDeviceUpdateCheck (string appId, string deviceId, string terminalType);
 
         /// <summary>
-        /// Trigger check for Bluetooth device update on Kiosk
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -188,10 +188,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> InitiateBluetoothTerminalDeviceUpdateCheckWithHttpInfo (string appId, string deviceId, string terminalType);
         /// <summary>
-        /// Initiate stripe terminal pairing mode
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -201,10 +201,10 @@ namespace Flipdish.Api
         void InitiateKioskBluetoothPairingMode (string appId, string deviceId, string terminalType);
 
         /// <summary>
-        /// Initiate stripe terminal pairing mode
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -213,10 +213,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> InitiateKioskBluetoothPairingModeWithHttpInfo (string appId, string deviceId, string terminalType);
         /// <summary>
-        /// Initiate Kiosk Update Install for bluetooth terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -226,10 +226,10 @@ namespace Flipdish.Api
         void InitiateKioskBluetoothUpdateInstall (string appId, string deviceId, string terminalType);
 
         /// <summary>
-        /// Initiate Kiosk Update Install for bluetooth terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -238,10 +238,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> InitiateKioskBluetoothUpdateInstallWithHttpInfo (string appId, string deviceId, string terminalType);
         /// <summary>
-        /// Initiate Stripe terminal to Process Payment Intent
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -251,10 +251,10 @@ namespace Flipdish.Api
         RestApiResultCardReader InitiateReaderProcessPaymentIntent (ProcessPaymentIntentRequest request, string readerId, string appId);
 
         /// <summary>
-        /// Initiate Stripe terminal to Process Payment Intent
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -286,10 +286,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultCardReader</returns>
         ApiResponse<RestApiResultCardReader> RegisterStripeTerminalWithHttpInfo (CardReaderRegistrationRequest request, string appId);
         /// <summary>
-        /// Un-register terminal by deleting it from stripe
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -298,10 +298,10 @@ namespace Flipdish.Api
         RestApiResultCardReader UnRegisterTerminal (UnRegisterCardReaderRequest request, string appId);
 
         /// <summary>
-        /// Un-register terminal by deleting it from stripe
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -309,10 +309,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultCardReader</returns>
         ApiResponse<RestApiResultCardReader> UnRegisterTerminalWithHttpInfo (UnRegisterCardReaderRequest request, string appId);
         /// <summary>
-        /// Unpair the currently paired stripe terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -321,10 +321,10 @@ namespace Flipdish.Api
         void UnpairCurrentlyPairedBluetoothDevice (string appId, string deviceId);
 
         /// <summary>
-        /// Unpair the currently paired stripe terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -334,10 +334,10 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Cancel currently initiated install update for bluetooth terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -347,10 +347,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task CancelCurrentlyInitiatedBluetoothDeviceUpdateAsync (string appId, string deviceId, string terminalType);
 
         /// <summary>
-        /// Cancel currently initiated install update for bluetooth terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -359,10 +359,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CancelCurrentlyInitiatedBluetoothDeviceUpdateAsyncWithHttpInfo (string appId, string deviceId, string terminalType);
         /// <summary>
-        /// Cancel terminals action
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readerId"></param>
@@ -371,10 +371,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultCardReader> CancelReaderActionAsync (string readerId, string appId);
 
         /// <summary>
-        /// Cancel terminals action
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readerId"></param>
@@ -382,10 +382,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultCardReader)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultCardReader>> CancelReaderActionAsyncWithHttpInfo (string readerId, string appId);
         /// <summary>
-        /// Get reader
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readerId"></param>
@@ -394,10 +394,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultCardReader> CardReadersGetReaderAsync (string readerId, string appId);
 
         /// <summary>
-        /// Get reader
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readerId"></param>
@@ -405,10 +405,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultCardReader)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultCardReader>> CardReadersGetReaderAsyncWithHttpInfo (string readerId, string appId);
         /// <summary>
-        /// Get Location ID for Stripe Terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geoPointRequest"></param>
@@ -417,10 +417,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultStripeTerminalLocation> GenerateStripeTerminalLocationAsync (GeoPointRequest geoPointRequest, string appId);
 
         /// <summary>
-        /// Get Location ID for Stripe Terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geoPointRequest"></param>
@@ -428,10 +428,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultStripeTerminalLocation)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeTerminalLocation>> GenerateStripeTerminalLocationAsyncWithHttpInfo (GeoPointRequest geoPointRequest, string appId);
         /// <summary>
-        /// Get the status of the bluetooth terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -440,10 +440,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultBluetoothTerminalStatus> GetBluetoothTerminalStatusAsync (string appId, string deviceId);
 
         /// <summary>
-        /// Get the status of the bluetooth terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -451,10 +451,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultBluetoothTerminalStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultBluetoothTerminalStatus>> GetBluetoothTerminalStatusAsyncWithHttpInfo (string appId, string deviceId);
         /// <summary>
-        /// Get Connection Token For a Stripe Terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -462,20 +462,20 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultStripeTerminalConnectionToken> GetStripeConnectionTokenAsync (string appId);
 
         /// <summary>
-        /// Get Connection Token For a Stripe Terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultStripeTerminalConnectionToken)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStripeTerminalConnectionToken>> GetStripeConnectionTokenAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// Trigger check for Bluetooth device update on Kiosk
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -485,10 +485,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task InitiateBluetoothTerminalDeviceUpdateCheckAsync (string appId, string deviceId, string terminalType);
 
         /// <summary>
-        /// Trigger check for Bluetooth device update on Kiosk
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -497,10 +497,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> InitiateBluetoothTerminalDeviceUpdateCheckAsyncWithHttpInfo (string appId, string deviceId, string terminalType);
         /// <summary>
-        /// Initiate stripe terminal pairing mode
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -510,10 +510,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task InitiateKioskBluetoothPairingModeAsync (string appId, string deviceId, string terminalType);
 
         /// <summary>
-        /// Initiate stripe terminal pairing mode
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -522,10 +522,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> InitiateKioskBluetoothPairingModeAsyncWithHttpInfo (string appId, string deviceId, string terminalType);
         /// <summary>
-        /// Initiate Kiosk Update Install for bluetooth terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -535,10 +535,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task InitiateKioskBluetoothUpdateInstallAsync (string appId, string deviceId, string terminalType);
 
         /// <summary>
-        /// Initiate Kiosk Update Install for bluetooth terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -547,10 +547,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> InitiateKioskBluetoothUpdateInstallAsyncWithHttpInfo (string appId, string deviceId, string terminalType);
         /// <summary>
-        /// Initiate Stripe terminal to Process Payment Intent
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -560,10 +560,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultCardReader> InitiateReaderProcessPaymentIntentAsync (ProcessPaymentIntentRequest request, string readerId, string appId);
 
         /// <summary>
-        /// Initiate Stripe terminal to Process Payment Intent
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -595,10 +595,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultCardReader)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultCardReader>> RegisterStripeTerminalAsyncWithHttpInfo (CardReaderRegistrationRequest request, string appId);
         /// <summary>
-        /// Un-register terminal by deleting it from stripe
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -607,10 +607,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultCardReader> UnRegisterTerminalAsync (UnRegisterCardReaderRequest request, string appId);
 
         /// <summary>
-        /// Un-register terminal by deleting it from stripe
+        /// 
         /// </summary>
         /// <remarks>
-        /// Can only be called by Kiosk
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -618,10 +618,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultCardReader)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultCardReader>> UnRegisterTerminalAsyncWithHttpInfo (UnRegisterCardReaderRequest request, string appId);
         /// <summary>
-        /// Unpair the currently paired stripe terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -630,10 +630,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task UnpairCurrentlyPairedBluetoothDeviceAsync (string appId, string deviceId);
 
         /// <summary>
-        /// Unpair the currently paired stripe terminal
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -741,7 +741,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Cancel currently initiated install update for bluetooth terminal [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -754,7 +754,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Cancel currently initiated install update for bluetooth terminal [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -827,7 +827,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Cancel currently initiated install update for bluetooth terminal [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -841,7 +841,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Cancel currently initiated install update for bluetooth terminal [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -914,7 +914,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Cancel terminals action Can only be called by Kiosk
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readerId"></param>
@@ -927,7 +927,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Cancel terminals action Can only be called by Kiosk
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readerId"></param>
@@ -995,7 +995,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Cancel terminals action Can only be called by Kiosk
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readerId"></param>
@@ -1009,7 +1009,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Cancel terminals action Can only be called by Kiosk
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readerId"></param>
@@ -1077,7 +1077,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get reader Can only be called by Kiosk
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readerId"></param>
@@ -1090,7 +1090,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get reader Can only be called by Kiosk
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readerId"></param>
@@ -1158,7 +1158,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get reader Can only be called by Kiosk
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readerId"></param>
@@ -1172,7 +1172,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get reader Can only be called by Kiosk
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readerId"></param>
@@ -1240,7 +1240,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Location ID for Stripe Terminal Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geoPointRequest"></param>
@@ -1253,7 +1253,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Location ID for Stripe Terminal Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geoPointRequest"></param>
@@ -1333,7 +1333,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Location ID for Stripe Terminal Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geoPointRequest"></param>
@@ -1347,7 +1347,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Location ID for Stripe Terminal Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geoPointRequest"></param>
@@ -1427,7 +1427,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the status of the bluetooth terminal [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1440,7 +1440,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the status of the bluetooth terminal [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1508,7 +1508,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the status of the bluetooth terminal [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1522,7 +1522,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the status of the bluetooth terminal [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1590,7 +1590,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Connection Token For a Stripe Terminal Can only be called by Kiosk
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1602,7 +1602,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Connection Token For a Stripe Terminal Can only be called by Kiosk
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1665,7 +1665,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Connection Token For a Stripe Terminal Can only be called by Kiosk
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1678,7 +1678,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Connection Token For a Stripe Terminal Can only be called by Kiosk
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1741,7 +1741,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Trigger check for Bluetooth device update on Kiosk [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1754,7 +1754,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Trigger check for Bluetooth device update on Kiosk [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1827,7 +1827,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Trigger check for Bluetooth device update on Kiosk [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1841,7 +1841,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Trigger check for Bluetooth device update on Kiosk [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1914,7 +1914,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Initiate stripe terminal pairing mode [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1927,7 +1927,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Initiate stripe terminal pairing mode [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2000,7 +2000,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Initiate stripe terminal pairing mode [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2014,7 +2014,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Initiate stripe terminal pairing mode [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2087,7 +2087,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Initiate Kiosk Update Install for bluetooth terminal [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2100,7 +2100,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Initiate Kiosk Update Install for bluetooth terminal [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2173,7 +2173,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Initiate Kiosk Update Install for bluetooth terminal [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2187,7 +2187,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Initiate Kiosk Update Install for bluetooth terminal [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2260,7 +2260,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Initiate Stripe terminal to Process Payment Intent Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -2274,7 +2274,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Initiate Stripe terminal to Process Payment Intent Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -2359,7 +2359,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Initiate Stripe terminal to Process Payment Intent Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -2374,7 +2374,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Initiate Stripe terminal to Process Payment Intent Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -2646,7 +2646,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Un-register terminal by deleting it from stripe Can only be called by Kiosk
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -2659,7 +2659,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Un-register terminal by deleting it from stripe Can only be called by Kiosk
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -2739,7 +2739,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Un-register terminal by deleting it from stripe Can only be called by Kiosk
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -2753,7 +2753,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Un-register terminal by deleting it from stripe Can only be called by Kiosk
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -2833,7 +2833,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Unpair the currently paired stripe terminal [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2845,7 +2845,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Unpair the currently paired stripe terminal [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2913,7 +2913,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Unpair the currently paired stripe terminal [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2926,7 +2926,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Unpair the currently paired stripe terminal [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>

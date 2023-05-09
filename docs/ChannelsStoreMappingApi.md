@@ -4,15 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ChannelsGetStoreChannelStoreMapping**](ChannelsStoreMappingApi.md#channelsgetstorechannelstoremapping) | **GET** /api/v1.0/{appId}/channels/storemappings | Gets the relationship between Flipdish Store and Channel Store
-[**ChannelsSetStoreChannelStoreMapping**](ChannelsStoreMappingApi.md#channelssetstorechannelstoremapping) | **POST** /api/v1.0/{appId}/channels/storemappings | Sets the relationship between Flipdish Store and Channel Store
+[**ChannelsGetStoreChannelStoreMapping**](ChannelsStoreMappingApi.md#channelsgetstorechannelstoremapping) | **GET** /api/v1.0/{appId}/channels/storemappings | 
+[**ChannelsSetStoreChannelStoreMapping**](ChannelsStoreMappingApi.md#channelssetstorechannelstoremapping) | **POST** /api/v1.0/{appId}/channels/storemappings | 
 
 
 <a name="channelsgetstorechannelstoremapping"></a>
 # **ChannelsGetStoreChannelStoreMapping**
 > RestApiArrayResultStoreChannelStoreMapping ChannelsGetStoreChannelStoreMapping (string appId, int? channelId)
 
-Gets the relationship between Flipdish Store and Channel Store
+
 
 ### Example
 ```csharp
@@ -32,12 +32,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ChannelsStoreMappingApi();
-            var appId = appId_example;  // string | Flipdish App Name Id
-            var channelId = 56;  // int? | Flipdish Channel ID
+            var appId = appId_example;  // string | 
+            var channelId = 56;  // int? | 
 
             try
             {
-                // Gets the relationship between Flipdish Store and Channel Store
                 RestApiArrayResultStoreChannelStoreMapping result = apiInstance.ChannelsGetStoreChannelStoreMapping(appId, channelId);
                 Debug.WriteLine(result);
             }
@@ -54,8 +53,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Flipdish App Name Id | 
- **channelId** | **int?**| Flipdish Channel ID | 
+ **appId** | **string**|  | 
+ **channelId** | **int?**|  | 
 
 ### Return type
 
@@ -76,7 +75,7 @@ Name | Type | Description  | Notes
 # **ChannelsSetStoreChannelStoreMapping**
 > RestApiArrayResultStoreChannelStoreMapping ChannelsSetStoreChannelStoreMapping (string appId, int? channelId, List<ChannelStoreMapping> stores)
 
-Sets the relationship between Flipdish Store and Channel Store
+
 
 ### Example
 ```csharp
@@ -96,13 +95,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ChannelsStoreMappingApi();
-            var appId = appId_example;  // string | Flipdish App Name Id
-            var channelId = 56;  // int? | Flipdish Channel ID
-            var stores = new List<ChannelStoreMapping>(); // List<ChannelStoreMapping> | Flipdish and Channel Store configuration
+            var appId = appId_example;  // string | 
+            var channelId = 56;  // int? | 
+            var stores = new List<ChannelStoreMapping>(); // List<ChannelStoreMapping> | 
 
             try
             {
-                // Sets the relationship between Flipdish Store and Channel Store
                 RestApiArrayResultStoreChannelStoreMapping result = apiInstance.ChannelsSetStoreChannelStoreMapping(appId, channelId, stores);
                 Debug.WriteLine(result);
             }
@@ -119,9 +117,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Flipdish App Name Id | 
- **channelId** | **int?**| Flipdish Channel ID | 
- **stores** | [**List&lt;ChannelStoreMapping&gt;**](ChannelStoreMapping.md)| Flipdish and Channel Store configuration | 
+ **appId** | **string**|  | 
+ **channelId** | **int?**|  | 
+ **stores** | [**List&lt;ChannelStoreMapping&gt;**](ChannelStoreMapping.md)|  | 
 
 ### Return type
 

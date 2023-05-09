@@ -25,30 +25,30 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="scheduledPushNotificationId">ID of Scheduled push notifiaction to delete</param>
+        /// <param name="scheduledPushNotificationId"></param>
         /// <returns></returns>
         void DeletePushNotification (string appId, int? scheduledPushNotificationId);
 
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="scheduledPushNotificationId">ID of Scheduled push notifiaction to delete</param>
+        /// <param name="scheduledPushNotificationId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeletePushNotificationWithHttpInfo (string appId, int? scheduledPushNotificationId);
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -61,7 +61,7 @@ namespace Flipdish.Api
         RestApiPaginationResultPushNotificationResponse GetPushNotifications (string appId, int? page = null, int? limit = null);
 
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -73,80 +73,80 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiPaginationResultPushNotificationResponse</returns>
         ApiResponse<RestApiPaginationResultPushNotificationResponse> GetPushNotificationsWithHttpInfo (string appId, int? page = null, int? limit = null);
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="notification">Notification to send</param>
+        /// <param name="appId"></param>
+        /// <param name="notification"></param>
         /// <returns>RestApiResultPushNotificationResponse</returns>
         RestApiResultPushNotificationResponse SchedulePushNotification (string appId, PushNotificationRequest notification);
 
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="notification">Notification to send</param>
+        /// <param name="appId"></param>
+        /// <param name="notification"></param>
         /// <returns>ApiResponse of RestApiResultPushNotificationResponse</returns>
         ApiResponse<RestApiResultPushNotificationResponse> SchedulePushNotificationWithHttpInfo (string appId, PushNotificationRequest notification);
         /// <summary>
-        /// [PRIVATE] Update the push notification
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="scheduledPushNotificationId">Notification Id</param>
-        /// <param name="notification">Notification to send</param>
+        /// <param name="appId"></param>
+        /// <param name="scheduledPushNotificationId"></param>
+        /// <param name="notification"></param>
         /// <returns>RestApiResultPushNotificationResponse</returns>
         RestApiResultPushNotificationResponse UpdatePushNotification (string appId, int? scheduledPushNotificationId, PushNotificationRequest notification);
 
         /// <summary>
-        /// [PRIVATE] Update the push notification
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="scheduledPushNotificationId">Notification Id</param>
-        /// <param name="notification">Notification to send</param>
+        /// <param name="appId"></param>
+        /// <param name="scheduledPushNotificationId"></param>
+        /// <param name="notification"></param>
         /// <returns>ApiResponse of RestApiResultPushNotificationResponse</returns>
         ApiResponse<RestApiResultPushNotificationResponse> UpdatePushNotificationWithHttpInfo (string appId, int? scheduledPushNotificationId, PushNotificationRequest notification);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="scheduledPushNotificationId">ID of Scheduled push notifiaction to delete</param>
+        /// <param name="scheduledPushNotificationId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeletePushNotificationAsync (string appId, int? scheduledPushNotificationId);
 
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="scheduledPushNotificationId">ID of Scheduled push notifiaction to delete</param>
+        /// <param name="scheduledPushNotificationId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeletePushNotificationAsyncWithHttpInfo (string appId, int? scheduledPushNotificationId);
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -159,7 +159,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiPaginationResultPushNotificationResponse> GetPushNotificationsAsync (string appId, int? page = null, int? limit = null);
 
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -171,51 +171,51 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiPaginationResultPushNotificationResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPushNotificationResponse>> GetPushNotificationsAsyncWithHttpInfo (string appId, int? page = null, int? limit = null);
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="notification">Notification to send</param>
+        /// <param name="appId"></param>
+        /// <param name="notification"></param>
         /// <returns>Task of RestApiResultPushNotificationResponse</returns>
         System.Threading.Tasks.Task<RestApiResultPushNotificationResponse> SchedulePushNotificationAsync (string appId, PushNotificationRequest notification);
 
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="notification">Notification to send</param>
+        /// <param name="appId"></param>
+        /// <param name="notification"></param>
         /// <returns>Task of ApiResponse (RestApiResultPushNotificationResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultPushNotificationResponse>> SchedulePushNotificationAsyncWithHttpInfo (string appId, PushNotificationRequest notification);
         /// <summary>
-        /// [PRIVATE] Update the push notification
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="scheduledPushNotificationId">Notification Id</param>
-        /// <param name="notification">Notification to send</param>
+        /// <param name="appId"></param>
+        /// <param name="scheduledPushNotificationId"></param>
+        /// <param name="notification"></param>
         /// <returns>Task of RestApiResultPushNotificationResponse</returns>
         System.Threading.Tasks.Task<RestApiResultPushNotificationResponse> UpdatePushNotificationAsync (string appId, int? scheduledPushNotificationId, PushNotificationRequest notification);
 
         /// <summary>
-        /// [PRIVATE] Update the push notification
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="scheduledPushNotificationId">Notification Id</param>
-        /// <param name="notification">Notification to send</param>
+        /// <param name="appId"></param>
+        /// <param name="scheduledPushNotificationId"></param>
+        /// <param name="notification"></param>
         /// <returns>Task of ApiResponse (RestApiResultPushNotificationResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultPushNotificationResponse>> UpdatePushNotificationAsyncWithHttpInfo (string appId, int? scheduledPushNotificationId, PushNotificationRequest notification);
         #endregion Asynchronous Operations
@@ -319,11 +319,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="scheduledPushNotificationId">ID of Scheduled push notifiaction to delete</param>
+        /// <param name="scheduledPushNotificationId"></param>
         /// <returns></returns>
         public void DeletePushNotification (string appId, int? scheduledPushNotificationId)
         {
@@ -331,11 +331,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="scheduledPushNotificationId">ID of Scheduled push notifiaction to delete</param>
+        /// <param name="scheduledPushNotificationId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeletePushNotificationWithHttpInfo (string appId, int? scheduledPushNotificationId)
         {
@@ -399,11 +399,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="scheduledPushNotificationId">ID of Scheduled push notifiaction to delete</param>
+        /// <param name="scheduledPushNotificationId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeletePushNotificationAsync (string appId, int? scheduledPushNotificationId)
         {
@@ -412,11 +412,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="scheduledPushNotificationId">ID of Scheduled push notifiaction to delete</param>
+        /// <param name="scheduledPushNotificationId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeletePushNotificationAsyncWithHttpInfo (string appId, int? scheduledPushNotificationId)
         {
@@ -480,7 +480,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -494,7 +494,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -561,7 +561,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -576,7 +576,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -643,11 +643,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="notification">Notification to send</param>
+        /// <param name="appId"></param>
+        /// <param name="notification"></param>
         /// <returns>RestApiResultPushNotificationResponse</returns>
         public RestApiResultPushNotificationResponse SchedulePushNotification (string appId, PushNotificationRequest notification)
         {
@@ -656,11 +656,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="notification">Notification to send</param>
+        /// <param name="appId"></param>
+        /// <param name="notification"></param>
         /// <returns>ApiResponse of RestApiResultPushNotificationResponse</returns>
         public ApiResponse< RestApiResultPushNotificationResponse > SchedulePushNotificationWithHttpInfo (string appId, PushNotificationRequest notification)
         {
@@ -736,11 +736,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="notification">Notification to send</param>
+        /// <param name="appId"></param>
+        /// <param name="notification"></param>
         /// <returns>Task of RestApiResultPushNotificationResponse</returns>
         public async System.Threading.Tasks.Task<RestApiResultPushNotificationResponse> SchedulePushNotificationAsync (string appId, PushNotificationRequest notification)
         {
@@ -750,11 +750,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Push notification to cutomers 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="notification">Notification to send</param>
+        /// <param name="appId"></param>
+        /// <param name="notification"></param>
         /// <returns>Task of ApiResponse (RestApiResultPushNotificationResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultPushNotificationResponse>> SchedulePushNotificationAsyncWithHttpInfo (string appId, PushNotificationRequest notification)
         {
@@ -830,12 +830,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Update the push notification 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="scheduledPushNotificationId">Notification Id</param>
-        /// <param name="notification">Notification to send</param>
+        /// <param name="appId"></param>
+        /// <param name="scheduledPushNotificationId"></param>
+        /// <param name="notification"></param>
         /// <returns>RestApiResultPushNotificationResponse</returns>
         public RestApiResultPushNotificationResponse UpdatePushNotification (string appId, int? scheduledPushNotificationId, PushNotificationRequest notification)
         {
@@ -844,12 +844,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Update the push notification 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="scheduledPushNotificationId">Notification Id</param>
-        /// <param name="notification">Notification to send</param>
+        /// <param name="appId"></param>
+        /// <param name="scheduledPushNotificationId"></param>
+        /// <param name="notification"></param>
         /// <returns>ApiResponse of RestApiResultPushNotificationResponse</returns>
         public ApiResponse< RestApiResultPushNotificationResponse > UpdatePushNotificationWithHttpInfo (string appId, int? scheduledPushNotificationId, PushNotificationRequest notification)
         {
@@ -929,12 +929,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Update the push notification 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="scheduledPushNotificationId">Notification Id</param>
-        /// <param name="notification">Notification to send</param>
+        /// <param name="appId"></param>
+        /// <param name="scheduledPushNotificationId"></param>
+        /// <param name="notification"></param>
         /// <returns>Task of RestApiResultPushNotificationResponse</returns>
         public async System.Threading.Tasks.Task<RestApiResultPushNotificationResponse> UpdatePushNotificationAsync (string appId, int? scheduledPushNotificationId, PushNotificationRequest notification)
         {
@@ -944,12 +944,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Update the push notification 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application Id</param>
-        /// <param name="scheduledPushNotificationId">Notification Id</param>
-        /// <param name="notification">Notification to send</param>
+        /// <param name="appId"></param>
+        /// <param name="scheduledPushNotificationId"></param>
+        /// <param name="notification"></param>
         /// <returns>Task of ApiResponse (RestApiResultPushNotificationResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultPushNotificationResponse>> UpdatePushNotificationAsyncWithHttpInfo (string appId, int? scheduledPushNotificationId, PushNotificationRequest notification)
         {

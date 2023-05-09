@@ -25,7 +25,7 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Returns all receipt information for a given orderId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -36,7 +36,7 @@ namespace Flipdish.Api
         GetReceiptByOrderIdQueryResponse GetReceipt (int? orderId);
 
         /// <summary>
-        /// Returns all receipt information for a given orderId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -48,7 +48,7 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Returns all receipt information for a given orderId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -59,7 +59,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<GetReceiptByOrderIdQueryResponse> GetReceiptAsync (int? orderId);
 
         /// <summary>
-        /// Returns all receipt information for a given orderId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -169,7 +169,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns all receipt information for a given orderId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
@@ -181,7 +181,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns all receipt information for a given orderId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
@@ -244,7 +244,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns all receipt information for a given orderId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
@@ -257,7 +257,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns all receipt information for a given orderId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>

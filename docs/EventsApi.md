@@ -4,22 +4,22 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetCustomerEvents**](EventsApi.md#getcustomerevents) | **GET** /api/v1.0/{appId}/events/customer/{customerId} | Get customer events  For technical reasons, the number of records returned is limited to 100.
-[**GetEvents**](EventsApi.md#getevents) | **GET** /api/v1.0/{appId}/events | Get events  For technical reasons, the number of records returned is limited to 100.
-[**GetEventsById**](EventsApi.md#geteventsbyid) | **GET** /api/v1.0/{appId}/events/{eventId} | Get event by Id  For technical reasons, the number of records returned is limited to 100.
-[**GetMenuEvents**](EventsApi.md#getmenuevents) | **GET** /api/v1.0/{appId}/events/menu/{menuId} | Get menu events  For technical reasons, the number of records returned is limited to 100.
-[**GetOrderEvents**](EventsApi.md#getorderevents) | **GET** /api/v1.0/{appId}/events/order/{orderId} | Get order events  For technical reasons, the number of records returned is limited to 100.
-[**GetOrderEventsByCustomer**](EventsApi.md#getordereventsbycustomer) | **GET** /api/v1.0/{appId}/events/order | Get order events by customer  For technical reasons, the number of records returned is limited to 100.
-[**GetStoreEvents**](EventsApi.md#getstoreevents) | **GET** /api/v1.0/{appId}/events/store/{storeId} | Get store events  For technical reasons, the number of records returned is limited to 100.
-[**GetUserEvents**](EventsApi.md#getuserevents) | **GET** /api/v1.0/{appId}/events/user/{userId} | Get user events  For technical reasons, the number of records returned is limited to 100.
-[**GetWhiteLabelEvents**](EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/{appId}/events/whitelabel/{whitelabelId} | Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
+[**GetCustomerEvents**](EventsApi.md#getcustomerevents) | **GET** /api/v1.0/{appId}/events/customer/{customerId} | 
+[**GetEvents**](EventsApi.md#getevents) | **GET** /api/v1.0/{appId}/events | 
+[**GetEventsById**](EventsApi.md#geteventsbyid) | **GET** /api/v1.0/{appId}/events/{eventId} | 
+[**GetMenuEvents**](EventsApi.md#getmenuevents) | **GET** /api/v1.0/{appId}/events/menu/{menuId} | 
+[**GetOrderEvents**](EventsApi.md#getorderevents) | **GET** /api/v1.0/{appId}/events/order/{orderId} | 
+[**GetOrderEventsByCustomer**](EventsApi.md#getordereventsbycustomer) | **GET** /api/v1.0/{appId}/events/order | 
+[**GetStoreEvents**](EventsApi.md#getstoreevents) | **GET** /api/v1.0/{appId}/events/store/{storeId} | 
+[**GetUserEvents**](EventsApi.md#getuserevents) | **GET** /api/v1.0/{appId}/events/user/{userId} | 
+[**GetWhiteLabelEvents**](EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/{appId}/events/whitelabel/{whitelabelId} | 
 
 
 <a name="getcustomerevents"></a>
 # **GetCustomerEvents**
 > RestApiEventSearchPaginationResult GetCustomerEvents (string appId, int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, List<int?> storeIdList = null, int? storeGroupId = null, int? userId = null, int? menuId = null, int? campaignId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
-Get customer events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```csharp
@@ -40,7 +40,7 @@ namespace Example
 
             var apiInstance = new EventsApi();
             var appId = appId_example;  // string | 
-            var customerId = 56;  // int? | Customer identifier identifier
+            var customerId = 56;  // int? | 
             var limit = 56;  // int? | The maximum elements to return (optional) 
             var page = 56;  // int? | The index of the page to return, starting by 1 (optional) 
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
@@ -60,7 +60,6 @@ namespace Example
 
             try
             {
-                // Get customer events  For technical reasons, the number of records returned is limited to 100.
                 RestApiEventSearchPaginationResult result = apiInstance.GetCustomerEvents(appId, customerId, limit, page, start, end, orderId, storeId, storeIdList, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
@@ -78,7 +77,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **customerId** | **int?**| Customer identifier identifier | 
+ **customerId** | **int?**|  | 
  **limit** | **int?**| The maximum elements to return | [optional] 
  **page** | **int?**| The index of the page to return, starting by 1 | [optional] 
  **start** | **DateTime?**| Start date | [optional] 
@@ -115,7 +114,7 @@ Name | Type | Description  | Notes
 # **GetEvents**
 > RestApiEventSearchPaginationResult GetEvents (string appId, int? whiteLabelId = null, int? customerId = null, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, List<int?> storeIdList = null, int? storeGroupId = null, int? userId = null, int? menuId = null, int? campaignId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
-Get events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```csharp
@@ -136,8 +135,8 @@ namespace Example
 
             var apiInstance = new EventsApi();
             var appId = appId_example;  // string | 
-            var whiteLabelId = 56;  // int? | White Label Id (optional) 
-            var customerId = 56;  // int? | Customer Id (optional) 
+            var whiteLabelId = 56;  // int? |  (optional) 
+            var customerId = 56;  // int? |  (optional) 
             var limit = 56;  // int? | The maximum elements to return (optional) 
             var page = 56;  // int? | The index of the page to return, starting by 1 (optional) 
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
@@ -157,7 +156,6 @@ namespace Example
 
             try
             {
-                // Get events  For technical reasons, the number of records returned is limited to 100.
                 RestApiEventSearchPaginationResult result = apiInstance.GetEvents(appId, whiteLabelId, customerId, limit, page, start, end, orderId, storeId, storeIdList, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
@@ -175,8 +173,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **whiteLabelId** | **int?**| White Label Id | [optional] 
- **customerId** | **int?**| Customer Id | [optional] 
+ **whiteLabelId** | **int?**|  | [optional] 
+ **customerId** | **int?**|  | [optional] 
  **limit** | **int?**| The maximum elements to return | [optional] 
  **page** | **int?**| The index of the page to return, starting by 1 | [optional] 
  **start** | **DateTime?**| Start date | [optional] 
@@ -213,7 +211,7 @@ Name | Type | Description  | Notes
 # **GetEventsById**
 > EventSearchResult GetEventsById (Guid? eventId, string appId)
 
-Get event by Id  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```csharp
@@ -233,12 +231,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new EventsApi();
-            var eventId = new Guid?(); // Guid? | Event identifier (Guid)
+            var eventId = new Guid?(); // Guid? | 
             var appId = appId_example;  // string | 
 
             try
             {
-                // Get event by Id  For technical reasons, the number of records returned is limited to 100.
                 EventSearchResult result = apiInstance.GetEventsById(eventId, appId);
                 Debug.WriteLine(result);
             }
@@ -255,7 +252,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventId** | [**Guid?**](Guid?.md)| Event identifier (Guid) | 
+ **eventId** | [**Guid?**](Guid?.md)|  | 
  **appId** | **string**|  | 
 
 ### Return type
@@ -277,7 +274,7 @@ Name | Type | Description  | Notes
 # **GetMenuEvents**
 > RestApiEventSearchPaginationResult GetMenuEvents (string appId, int? menuId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, List<int?> storeIdList = null, int? storeGroupId = null, int? userId = null, int? menuId2 = null, int? campaignId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
-Get menu events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```csharp
@@ -298,7 +295,7 @@ namespace Example
 
             var apiInstance = new EventsApi();
             var appId = appId_example;  // string | 
-            var menuId = 56;  // int? | Menu Identifier
+            var menuId = 56;  // int? | 
             var limit = 56;  // int? | The maximum elements to return (optional) 
             var page = 56;  // int? | The index of the page to return, starting by 1 (optional) 
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
@@ -318,7 +315,6 @@ namespace Example
 
             try
             {
-                // Get menu events  For technical reasons, the number of records returned is limited to 100.
                 RestApiEventSearchPaginationResult result = apiInstance.GetMenuEvents(appId, menuId, limit, page, start, end, orderId, storeId, storeIdList, storeGroupId, userId, menuId2, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
@@ -336,7 +332,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **menuId** | **int?**| Menu Identifier | 
+ **menuId** | **int?**|  | 
  **limit** | **int?**| The maximum elements to return | [optional] 
  **page** | **int?**| The index of the page to return, starting by 1 | [optional] 
  **start** | **DateTime?**| Start date | [optional] 
@@ -373,7 +369,7 @@ Name | Type | Description  | Notes
 # **GetOrderEvents**
 > RestApiEventSearchPaginationResult GetOrderEvents (string appId, int? orderId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId2 = null, int? storeId = null, List<int?> storeIdList = null, int? storeGroupId = null, int? userId = null, int? menuId = null, int? campaignId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
-Get order events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```csharp
@@ -394,7 +390,7 @@ namespace Example
 
             var apiInstance = new EventsApi();
             var appId = appId_example;  // string | 
-            var orderId = 56;  // int? | Order identifier
+            var orderId = 56;  // int? | 
             var limit = 56;  // int? | The maximum elements to return (optional) 
             var page = 56;  // int? | The index of the page to return, starting by 1 (optional) 
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
@@ -414,7 +410,6 @@ namespace Example
 
             try
             {
-                // Get order events  For technical reasons, the number of records returned is limited to 100.
                 RestApiEventSearchPaginationResult result = apiInstance.GetOrderEvents(appId, orderId, limit, page, start, end, orderId2, storeId, storeIdList, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
@@ -432,7 +427,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **orderId** | **int?**| Order identifier | 
+ **orderId** | **int?**|  | 
  **limit** | **int?**| The maximum elements to return | [optional] 
  **page** | **int?**| The index of the page to return, starting by 1 | [optional] 
  **start** | **DateTime?**| Start date | [optional] 
@@ -469,7 +464,7 @@ Name | Type | Description  | Notes
 # **GetOrderEventsByCustomer**
 > RestApiEventSearchPaginationResult GetOrderEventsByCustomer (string appId, int? customerId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, List<int?> storeIdList = null, int? storeGroupId = null, int? userId = null, int? menuId = null, int? campaignId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
-Get order events by customer  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```csharp
@@ -490,7 +485,7 @@ namespace Example
 
             var apiInstance = new EventsApi();
             var appId = appId_example;  // string | 
-            var customerId = 56;  // int? | Customer identifier
+            var customerId = 56;  // int? | 
             var limit = 56;  // int? | The maximum elements to return (optional) 
             var page = 56;  // int? | The index of the page to return, starting by 1 (optional) 
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
@@ -510,7 +505,6 @@ namespace Example
 
             try
             {
-                // Get order events by customer  For technical reasons, the number of records returned is limited to 100.
                 RestApiEventSearchPaginationResult result = apiInstance.GetOrderEventsByCustomer(appId, customerId, limit, page, start, end, orderId, storeId, storeIdList, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
@@ -528,7 +522,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **customerId** | **int?**| Customer identifier | 
+ **customerId** | **int?**|  | 
  **limit** | **int?**| The maximum elements to return | [optional] 
  **page** | **int?**| The index of the page to return, starting by 1 | [optional] 
  **start** | **DateTime?**| Start date | [optional] 
@@ -565,7 +559,7 @@ Name | Type | Description  | Notes
 # **GetStoreEvents**
 > RestApiEventSearchPaginationResult GetStoreEvents (string appId, int? storeId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId2 = null, List<int?> storeIdList = null, int? storeGroupId = null, int? userId = null, int? menuId = null, int? campaignId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
-Get store events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```csharp
@@ -586,7 +580,7 @@ namespace Example
 
             var apiInstance = new EventsApi();
             var appId = appId_example;  // string | 
-            var storeId = 56;  // int? | Id of the store
+            var storeId = 56;  // int? | 
             var limit = 56;  // int? | The maximum elements to return (optional) 
             var page = 56;  // int? | The index of the page to return, starting by 1 (optional) 
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
@@ -606,7 +600,6 @@ namespace Example
 
             try
             {
-                // Get store events  For technical reasons, the number of records returned is limited to 100.
                 RestApiEventSearchPaginationResult result = apiInstance.GetStoreEvents(appId, storeId, limit, page, start, end, orderId, storeId2, storeIdList, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
@@ -624,7 +617,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **storeId** | **int?**| Id of the store | 
+ **storeId** | **int?**|  | 
  **limit** | **int?**| The maximum elements to return | [optional] 
  **page** | **int?**| The index of the page to return, starting by 1 | [optional] 
  **start** | **DateTime?**| Start date | [optional] 
@@ -661,7 +654,7 @@ Name | Type | Description  | Notes
 # **GetUserEvents**
 > RestApiEventSearchPaginationResult GetUserEvents (string appId, int? userId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, List<int?> storeIdList = null, int? storeGroupId = null, int? userId2 = null, int? menuId = null, int? campaignId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
-Get user events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```csharp
@@ -682,7 +675,7 @@ namespace Example
 
             var apiInstance = new EventsApi();
             var appId = appId_example;  // string | 
-            var userId = 56;  // int? | User identifier
+            var userId = 56;  // int? | 
             var limit = 56;  // int? | The maximum elements to return (optional) 
             var page = 56;  // int? | The index of the page to return, starting by 1 (optional) 
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
@@ -702,7 +695,6 @@ namespace Example
 
             try
             {
-                // Get user events  For technical reasons, the number of records returned is limited to 100.
                 RestApiEventSearchPaginationResult result = apiInstance.GetUserEvents(appId, userId, limit, page, start, end, orderId, storeId, storeIdList, storeGroupId, userId2, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
@@ -720,7 +712,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **userId** | **int?**| User identifier | 
+ **userId** | **int?**|  | 
  **limit** | **int?**| The maximum elements to return | [optional] 
  **page** | **int?**| The index of the page to return, starting by 1 | [optional] 
  **start** | **DateTime?**| Start date | [optional] 
@@ -757,7 +749,7 @@ Name | Type | Description  | Notes
 # **GetWhiteLabelEvents**
 > RestApiEventSearchPaginationResult GetWhiteLabelEvents (string appId, int? whitelabelId, int? limit = null, int? page = null, DateTime? start = null, DateTime? end = null, int? orderId = null, int? storeId = null, List<int?> storeIdList = null, int? storeGroupId = null, int? userId = null, int? menuId = null, int? campaignId = null, string userEmail = null, string userName = null, string voucherCode = null, List<string> eventType = null, string flipdishEventId = null)
 
-Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```csharp
@@ -778,7 +770,7 @@ namespace Example
 
             var apiInstance = new EventsApi();
             var appId = appId_example;  // string | 
-            var whitelabelId = 56;  // int? | White Label Identifier
+            var whitelabelId = 56;  // int? | 
             var limit = 56;  // int? | The maximum elements to return (optional) 
             var page = 56;  // int? | The index of the page to return, starting by 1 (optional) 
             var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date (optional) 
@@ -798,7 +790,6 @@ namespace Example
 
             try
             {
-                // Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
                 RestApiEventSearchPaginationResult result = apiInstance.GetWhiteLabelEvents(appId, whitelabelId, limit, page, start, end, orderId, storeId, storeIdList, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
                 Debug.WriteLine(result);
             }
@@ -816,7 +807,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **whitelabelId** | **int?**| White Label Identifier | 
+ **whitelabelId** | **int?**|  | 
  **limit** | **int?**| The maximum elements to return | [optional] 
  **page** | **int?**| The index of the page to return, starting by 1 | [optional] 
  **start** | **DateTime?**| Start date | [optional] 

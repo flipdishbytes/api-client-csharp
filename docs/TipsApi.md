@@ -4,15 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**TipConfigGet**](TipsApi.md#tipconfigget) | **GET** /api/v1.0/stores/{storeId}/tipconfig | Returns current tip configuration for a store
-[**TipConfigUpsert**](TipsApi.md#tipconfigupsert) | **POST** /api/v1.0/stores/{storeId}/tipconfig | Update or insert current tip configuration for a store
+[**TipConfigGet**](TipsApi.md#tipconfigget) | **GET** /api/v1.0/stores/{storeId}/tipconfig | 
+[**TipConfigUpsert**](TipsApi.md#tipconfigupsert) | **POST** /api/v1.0/stores/{storeId}/tipconfig | 
 
 
 <a name="tipconfigget"></a>
 # **TipConfigGet**
 > RestApiResultTipConfiguration TipConfigGet (int? storeId)
 
-Returns current tip configuration for a store
+
 
 ### Example
 ```csharp
@@ -32,11 +32,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new TipsApi();
-            var storeId = 56;  // int? | Store Id
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Returns current tip configuration for a store
                 RestApiResultTipConfiguration result = apiInstance.TipConfigGet(storeId);
                 Debug.WriteLine(result);
             }
@@ -53,7 +52,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store Id | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -74,7 +73,7 @@ Name | Type | Description  | Notes
 # **TipConfigUpsert**
 > RestApiResultTipConfiguration TipConfigUpsert (int? storeId, UpdateTipConfiguration updateConfig)
 
-Update or insert current tip configuration for a store
+
 
 ### Example
 ```csharp
@@ -94,12 +93,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new TipsApi();
-            var storeId = 56;  // int? | Store Id
-            var updateConfig = new UpdateTipConfiguration(); // UpdateTipConfiguration | Update Configuration
+            var storeId = 56;  // int? | 
+            var updateConfig = new UpdateTipConfiguration(); // UpdateTipConfiguration | 
 
             try
             {
-                // Update or insert current tip configuration for a store
                 RestApiResultTipConfiguration result = apiInstance.TipConfigUpsert(storeId, updateConfig);
                 Debug.WriteLine(result);
             }
@@ -116,8 +114,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store Id | 
- **updateConfig** | [**UpdateTipConfiguration**](UpdateTipConfiguration.md)| Update Configuration | 
+ **storeId** | **int?**|  | 
+ **updateConfig** | [**UpdateTipConfiguration**](UpdateTipConfiguration.md)|  | 
 
 ### Return type
 

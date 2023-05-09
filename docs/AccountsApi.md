@@ -4,30 +4,30 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AnswerSignUpQuestion**](AccountsApi.md#answersignupquestion) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | Answer a signup question
-[**ChangePassword**](AccountsApi.md#changepassword) | **PUT** /api/v1.0/accounts/password | Change password
-[**ChangePasswordWithPin**](AccountsApi.md#changepasswordwithpin) | **PUT** /api/v1.0/accounts/password/pin | Change password
-[**CreateAccount**](AccountsApi.md#createaccount) | **POST** /api/v1.0/accounts | Create account with email address and store name
-[**GetAccountDetails**](AccountsApi.md#getaccountdetails) | **GET** /api/v1.0/accounts | Gets the current account detail
-[**GetLocalisedTimeZones**](AccountsApi.md#getlocalisedtimezones) | **GET** /api/v1.0/accounts/timezones | [PRIVATE API] Get timezones localised to users language
-[**Login**](AccountsApi.md#login) | **POST** /api/v1.0/accounts/login | Login with username and password
-[**LoginSso**](AccountsApi.md#loginsso) | **POST** /api/v1.0/accounts/login/sso | Login with SSO token
-[**LoginWithPin**](AccountsApi.md#loginwithpin) | **POST** /api/v1.0/accounts/login/pin | Login with email and pin
-[**Logout**](AccountsApi.md#logout) | **POST** /api/v1.0/accounts/logout | Log out. It removes Flipdish authorization Cookie.
-[**PasswordResetWithToken**](AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | Reset password with token.
-[**RecaptchaValidate**](AccountsApi.md#recaptchavalidate) | **POST** /api/v1.0/accounts/recaptcha | Validate recaptcha from flipdish portal
-[**RequestLoginPin**](AccountsApi.md#requestloginpin) | **POST** /api/v1.0/accounts/pin | Request login PIN. The server sends the PIN to the email address.
-[**RequestPasswordReset**](AccountsApi.md#requestpasswordreset) | **POST** /api/v1.0/accounts/passwordreset | Request password reset. Flipdish system will send a token via email.
-[**SendPinForPasswordReset**](AccountsApi.md#sendpinforpasswordreset) | **POST** /api/v1.0/accounts/password/resetpin | Request Password Reset PIN. The server sends the PIN to the email address.
-[**SkipSignupStep**](AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | Skip a signup question
-[**UpdateAccount**](AccountsApi.md#updateaccount) | **PUT** /api/v1.0/accounts | Update account with name and language
+[**AnswerSignUpQuestion**](AccountsApi.md#answersignupquestion) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | 
+[**ChangePassword**](AccountsApi.md#changepassword) | **PUT** /api/v1.0/accounts/password | 
+[**ChangePasswordWithPin**](AccountsApi.md#changepasswordwithpin) | **PUT** /api/v1.0/accounts/password/pin | 
+[**CreateAccount**](AccountsApi.md#createaccount) | **POST** /api/v1.0/accounts | 
+[**GetAccountDetails**](AccountsApi.md#getaccountdetails) | **GET** /api/v1.0/accounts | 
+[**GetLocalisedTimeZones**](AccountsApi.md#getlocalisedtimezones) | **GET** /api/v1.0/accounts/timezones | 
+[**Login**](AccountsApi.md#login) | **POST** /api/v1.0/accounts/login | 
+[**LoginSso**](AccountsApi.md#loginsso) | **POST** /api/v1.0/accounts/login/sso | 
+[**LoginWithPin**](AccountsApi.md#loginwithpin) | **POST** /api/v1.0/accounts/login/pin | 
+[**Logout**](AccountsApi.md#logout) | **POST** /api/v1.0/accounts/logout | 
+[**PasswordResetWithToken**](AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | 
+[**RecaptchaValidate**](AccountsApi.md#recaptchavalidate) | **POST** /api/v1.0/accounts/recaptcha | 
+[**RequestLoginPin**](AccountsApi.md#requestloginpin) | **POST** /api/v1.0/accounts/pin | 
+[**RequestPasswordReset**](AccountsApi.md#requestpasswordreset) | **POST** /api/v1.0/accounts/passwordreset | 
+[**SendPinForPasswordReset**](AccountsApi.md#sendpinforpasswordreset) | **POST** /api/v1.0/accounts/password/resetpin | 
+[**SkipSignupStep**](AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | 
+[**UpdateAccount**](AccountsApi.md#updateaccount) | **PUT** /api/v1.0/accounts | 
 
 
 <a name="answersignupquestion"></a>
 # **AnswerSignUpQuestion**
 > void AnswerSignUpQuestion (string signupStepAction, int? answerId)
 
-Answer a signup question
+
 
 ### Example
 ```csharp
@@ -47,12 +47,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var signupStepAction = signupStepAction_example;  // string | Signup step action
-            var answerId = 56;  // int? | Identifier of the answer
+            var signupStepAction = signupStepAction_example;  // string | 
+            var answerId = 56;  // int? | 
 
             try
             {
-                // Answer a signup question
                 apiInstance.AnswerSignUpQuestion(signupStepAction, answerId);
             }
             catch (Exception e)
@@ -68,8 +67,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **signupStepAction** | **string**| Signup step action | 
- **answerId** | **int?**| Identifier of the answer | 
+ **signupStepAction** | **string**|  | 
+ **answerId** | **int?**|  | 
 
 ### Return type
 
@@ -90,7 +89,7 @@ void (empty response body)
 # **ChangePassword**
 > void ChangePassword (ChangePasswordModel changePasswordModel)
 
-Change password
+
 
 ### Example
 ```csharp
@@ -110,11 +109,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var changePasswordModel = new ChangePasswordModel(); // ChangePasswordModel | Change password model
+            var changePasswordModel = new ChangePasswordModel(); // ChangePasswordModel | 
 
             try
             {
-                // Change password
                 apiInstance.ChangePassword(changePasswordModel);
             }
             catch (Exception e)
@@ -130,7 +128,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **changePasswordModel** | [**ChangePasswordModel**](ChangePasswordModel.md)| Change password model | 
+ **changePasswordModel** | [**ChangePasswordModel**](ChangePasswordModel.md)|  | 
 
 ### Return type
 
@@ -151,7 +149,7 @@ void (empty response body)
 # **ChangePasswordWithPin**
 > void ChangePasswordWithPin (SetPasswordWithPinModel changePasswordModel)
 
-Change password
+
 
 ### Example
 ```csharp
@@ -171,11 +169,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var changePasswordModel = new SetPasswordWithPinModel(); // SetPasswordWithPinModel | Change password model
+            var changePasswordModel = new SetPasswordWithPinModel(); // SetPasswordWithPinModel | 
 
             try
             {
-                // Change password
                 apiInstance.ChangePasswordWithPin(changePasswordModel);
             }
             catch (Exception e)
@@ -191,7 +188,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **changePasswordModel** | [**SetPasswordWithPinModel**](SetPasswordWithPinModel.md)| Change password model | 
+ **changePasswordModel** | [**SetPasswordWithPinModel**](SetPasswordWithPinModel.md)|  | 
 
 ### Return type
 
@@ -212,7 +209,7 @@ void (empty response body)
 # **CreateAccount**
 > void CreateAccount (CreateAccountModel createAccountModel)
 
-Create account with email address and store name
+
 
 ### Example
 ```csharp
@@ -232,11 +229,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var createAccountModel = new CreateAccountModel(); // CreateAccountModel | Create account model
+            var createAccountModel = new CreateAccountModel(); // CreateAccountModel | 
 
             try
             {
-                // Create account with email address and store name
                 apiInstance.CreateAccount(createAccountModel);
             }
             catch (Exception e)
@@ -252,7 +248,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createAccountModel** | [**CreateAccountModel**](CreateAccountModel.md)| Create account model | 
+ **createAccountModel** | [**CreateAccountModel**](CreateAccountModel.md)|  | 
 
 ### Return type
 
@@ -273,7 +269,7 @@ void (empty response body)
 # **GetAccountDetails**
 > RestApiResultAccountDetail GetAccountDetails ()
 
-Gets the current account detail
+
 
 ### Example
 ```csharp
@@ -296,7 +292,6 @@ namespace Example
 
             try
             {
-                // Gets the current account detail
                 RestApiResultAccountDetail result = apiInstance.GetAccountDetails();
                 Debug.WriteLine(result);
             }
@@ -331,7 +326,7 @@ This endpoint does not need any parameter.
 # **GetLocalisedTimeZones**
 > RestApiArrayResultLocalisedTimeZone GetLocalisedTimeZones ()
 
-[PRIVATE API] Get timezones localised to users language
+
 
 ### Example
 ```csharp
@@ -354,7 +349,6 @@ namespace Example
 
             try
             {
-                // [PRIVATE API] Get timezones localised to users language
                 RestApiArrayResultLocalisedTimeZone result = apiInstance.GetLocalisedTimeZones();
                 Debug.WriteLine(result);
             }
@@ -389,7 +383,7 @@ This endpoint does not need any parameter.
 # **Login**
 > void Login (LoginModel loginModel)
 
-Login with username and password
+
 
 ### Example
 ```csharp
@@ -409,11 +403,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var loginModel = new LoginModel(); // LoginModel | Login model
+            var loginModel = new LoginModel(); // LoginModel | 
 
             try
             {
-                // Login with username and password
                 apiInstance.Login(loginModel);
             }
             catch (Exception e)
@@ -429,7 +422,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **loginModel** | [**LoginModel**](LoginModel.md)| Login model | 
+ **loginModel** | [**LoginModel**](LoginModel.md)|  | 
 
 ### Return type
 
@@ -450,7 +443,7 @@ void (empty response body)
 # **LoginSso**
 > void LoginSso ()
 
-Login with SSO token
+
 
 ### Example
 ```csharp
@@ -473,7 +466,6 @@ namespace Example
 
             try
             {
-                // Login with SSO token
                 apiInstance.LoginSso();
             }
             catch (Exception e)
@@ -507,7 +499,7 @@ void (empty response body)
 # **LoginWithPin**
 > void LoginWithPin (LoginWithPinModel loginModel)
 
-Login with email and pin
+
 
 ### Example
 ```csharp
@@ -527,11 +519,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var loginModel = new LoginWithPinModel(); // LoginWithPinModel | Login with pin model
+            var loginModel = new LoginWithPinModel(); // LoginWithPinModel | 
 
             try
             {
-                // Login with email and pin
                 apiInstance.LoginWithPin(loginModel);
             }
             catch (Exception e)
@@ -547,7 +538,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **loginModel** | [**LoginWithPinModel**](LoginWithPinModel.md)| Login with pin model | 
+ **loginModel** | [**LoginWithPinModel**](LoginWithPinModel.md)|  | 
 
 ### Return type
 
@@ -568,7 +559,7 @@ void (empty response body)
 # **Logout**
 > void Logout ()
 
-Log out. It removes Flipdish authorization Cookie.
+
 
 ### Example
 ```csharp
@@ -591,7 +582,6 @@ namespace Example
 
             try
             {
-                // Log out. It removes Flipdish authorization Cookie.
                 apiInstance.Logout();
             }
             catch (Exception e)
@@ -625,7 +615,7 @@ void (empty response body)
 # **PasswordResetWithToken**
 > void PasswordResetWithToken (PasswordResetModel passwordResetModel)
 
-Reset password with token.
+
 
 ### Example
 ```csharp
@@ -645,11 +635,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var passwordResetModel = new PasswordResetModel(); // PasswordResetModel | Password reset model
+            var passwordResetModel = new PasswordResetModel(); // PasswordResetModel | 
 
             try
             {
-                // Reset password with token.
                 apiInstance.PasswordResetWithToken(passwordResetModel);
             }
             catch (Exception e)
@@ -665,7 +654,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **passwordResetModel** | [**PasswordResetModel**](PasswordResetModel.md)| Password reset model | 
+ **passwordResetModel** | [**PasswordResetModel**](PasswordResetModel.md)|  | 
 
 ### Return type
 
@@ -686,7 +675,7 @@ void (empty response body)
 # **RecaptchaValidate**
 > void RecaptchaValidate (string token)
 
-Validate recaptcha from flipdish portal
+
 
 ### Example
 ```csharp
@@ -706,11 +695,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var token = token_example;  // string | Request token
+            var token = token_example;  // string | 
 
             try
             {
-                // Validate recaptcha from flipdish portal
                 apiInstance.RecaptchaValidate(token);
             }
             catch (Exception e)
@@ -726,7 +714,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **token** | **string**| Request token | 
+ **token** | **string**|  | 
 
 ### Return type
 
@@ -747,7 +735,7 @@ void (empty response body)
 # **RequestLoginPin**
 > RequestLoginPinResponse RequestLoginPin (RequestLoginPinModel requestLoginPinRequest)
 
-Request login PIN. The server sends the PIN to the email address.
+
 
 ### Example
 ```csharp
@@ -767,11 +755,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var requestLoginPinRequest = new RequestLoginPinModel(); // RequestLoginPinModel | Request login PIN request
+            var requestLoginPinRequest = new RequestLoginPinModel(); // RequestLoginPinModel | 
 
             try
             {
-                // Request login PIN. The server sends the PIN to the email address.
                 RequestLoginPinResponse result = apiInstance.RequestLoginPin(requestLoginPinRequest);
                 Debug.WriteLine(result);
             }
@@ -788,7 +775,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **requestLoginPinRequest** | [**RequestLoginPinModel**](RequestLoginPinModel.md)| Request login PIN request | 
+ **requestLoginPinRequest** | [**RequestLoginPinModel**](RequestLoginPinModel.md)|  | 
 
 ### Return type
 
@@ -809,7 +796,7 @@ Name | Type | Description  | Notes
 # **RequestPasswordReset**
 > void RequestPasswordReset (RequestPasswordResetModel requestPasswordResetModel)
 
-Request password reset. Flipdish system will send a token via email.
+
 
 ### Example
 ```csharp
@@ -829,11 +816,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var requestPasswordResetModel = new RequestPasswordResetModel(); // RequestPasswordResetModel | Request password reset model
+            var requestPasswordResetModel = new RequestPasswordResetModel(); // RequestPasswordResetModel | 
 
             try
             {
-                // Request password reset. Flipdish system will send a token via email.
                 apiInstance.RequestPasswordReset(requestPasswordResetModel);
             }
             catch (Exception e)
@@ -849,7 +835,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **requestPasswordResetModel** | [**RequestPasswordResetModel**](RequestPasswordResetModel.md)| Request password reset model | 
+ **requestPasswordResetModel** | [**RequestPasswordResetModel**](RequestPasswordResetModel.md)|  | 
 
 ### Return type
 
@@ -870,7 +856,7 @@ void (empty response body)
 # **SendPinForPasswordReset**
 > RequestPasswordResetPinResponse SendPinForPasswordReset (RequestPasswordResetModel requestPasswordResetRequest)
 
-Request Password Reset PIN. The server sends the PIN to the email address.
+
 
 ### Example
 ```csharp
@@ -894,7 +880,6 @@ namespace Example
 
             try
             {
-                // Request Password Reset PIN. The server sends the PIN to the email address.
                 RequestPasswordResetPinResponse result = apiInstance.SendPinForPasswordReset(requestPasswordResetRequest);
                 Debug.WriteLine(result);
             }
@@ -932,7 +917,7 @@ Name | Type | Description  | Notes
 # **SkipSignupStep**
 > void SkipSignupStep (string signupStepAction)
 
-Skip a signup question
+
 
 ### Example
 ```csharp
@@ -952,11 +937,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var signupStepAction = signupStepAction_example;  // string | Signup step action
+            var signupStepAction = signupStepAction_example;  // string | 
 
             try
             {
-                // Skip a signup question
                 apiInstance.SkipSignupStep(signupStepAction);
             }
             catch (Exception e)
@@ -972,7 +956,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **signupStepAction** | **string**| Signup step action | 
+ **signupStepAction** | **string**|  | 
 
 ### Return type
 
@@ -993,7 +977,7 @@ void (empty response body)
 # **UpdateAccount**
 > void UpdateAccount (AccountDetailBase updateAccountModel)
 
-Update account with name and language
+
 
 ### Example
 ```csharp
@@ -1013,11 +997,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AccountsApi();
-            var updateAccountModel = new AccountDetailBase(); // AccountDetailBase | Update account model
+            var updateAccountModel = new AccountDetailBase(); // AccountDetailBase | 
 
             try
             {
-                // Update account with name and language
                 apiInstance.UpdateAccount(updateAccountModel);
             }
             catch (Exception e)
@@ -1033,7 +1016,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateAccountModel** | [**AccountDetailBase**](AccountDetailBase.md)| Update account model | 
+ **updateAccountModel** | [**AccountDetailBase**](AccountDetailBase.md)|  | 
 
 ### Return type
 

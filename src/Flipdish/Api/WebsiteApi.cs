@@ -25,170 +25,170 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Add a testimonial
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonial">Testimonial to be added</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonial"></param>
         /// <returns>RestApiResultWebsiteTestimonial</returns>
         RestApiResultWebsiteTestimonial AddTestimonial (string appId, WebsiteTestimonialBase testimonial);
 
         /// <summary>
-        /// Add a testimonial
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonial">Testimonial to be added</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonial"></param>
         /// <returns>ApiResponse of RestApiResultWebsiteTestimonial</returns>
         ApiResponse<RestApiResultWebsiteTestimonial> AddTestimonialWithHttpInfo (string appId, WebsiteTestimonialBase testimonial);
         /// <summary>
-        /// Delete a testimonial
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonialId">Id of the testimonial to delete</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonialId"></param>
         /// <returns></returns>
         void DeleteTestimonial (string appId, int? testimonialId);
 
         /// <summary>
-        /// Delete a testimonial
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonialId">Id of the testimonial to delete</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonialId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteTestimonialWithHttpInfo (string appId, int? testimonialId);
         /// <summary>
-        /// Delete Website Image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="imageId">Id of the image</param>
+        /// <param name="appId"></param>
+        /// <param name="imageId"></param>
         /// <returns></returns>
         void DeleteWebsiteImage (string appId, int? imageId);
 
         /// <summary>
-        /// Delete Website Image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="imageId">Id of the image</param>
+        /// <param name="appId"></param>
+        /// <param name="imageId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWebsiteImageWithHttpInfo (string appId, int? imageId);
         /// <summary>
-        /// Edit a testimonial
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonialId">Id of the testimonial to edit</param>
-        /// <param name="testimonial">New values of the testimonial</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonialId"></param>
+        /// <param name="testimonial"></param>
         /// <returns>RestApiResultWebsiteTestimonial</returns>
         RestApiResultWebsiteTestimonial EditTestimonial (string appId, int? testimonialId, WebsiteTestimonialBase testimonial);
 
         /// <summary>
-        /// Edit a testimonial
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonialId">Id of the testimonial to edit</param>
-        /// <param name="testimonial">New values of the testimonial</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonialId"></param>
+        /// <param name="testimonial"></param>
         /// <returns>ApiResponse of RestApiResultWebsiteTestimonial</returns>
         ApiResponse<RestApiResultWebsiteTestimonial> EditTestimonialWithHttpInfo (string appId, int? testimonialId, WebsiteTestimonialBase testimonial);
         /// <summary>
-        /// Get Index Configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiResultIndexPage</returns>
         RestApiResultIndexPage GetIndexConfiguration (string appId);
 
         /// <summary>
-        /// Get Index Configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultIndexPage</returns>
         ApiResponse<RestApiResultIndexPage> GetIndexConfigurationWithHttpInfo (string appId);
         /// <summary>
-        /// Set Index Configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="indexPage">New index page definition</param>
+        /// <param name="appId"></param>
+        /// <param name="indexPage"></param>
         /// <returns>RestApiResultIndexPageBase</returns>
         RestApiResultIndexPageBase SetIndexConfiguration (string appId, IndexPageBase indexPage);
 
         /// <summary>
-        /// Set Index Configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="indexPage">New index page definition</param>
+        /// <param name="appId"></param>
+        /// <param name="indexPage"></param>
         /// <returns>ApiResponse of RestApiResultIndexPageBase</returns>
         ApiResponse<RestApiResultIndexPageBase> SetIndexConfigurationWithHttpInfo (string appId, IndexPageBase indexPage);
         /// <summary>
-        /// Upload Website Image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="imageLocation">Section for which to upload the image</param>
+        /// <param name="appId"></param>
+        /// <param name="imageLocation"></param>
         /// <param name="image">App Logo</param>
         /// <returns>RestApiResultWebsiteImage</returns>
         RestApiResultWebsiteImage UploadWebsiteImage (string appId, string imageLocation, System.IO.Stream image);
 
         /// <summary>
-        /// Upload Website Image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="imageLocation">Section for which to upload the image</param>
+        /// <param name="appId"></param>
+        /// <param name="imageLocation"></param>
         /// <param name="image">App Logo</param>
         /// <returns>ApiResponse of RestApiResultWebsiteImage</returns>
         ApiResponse<RestApiResultWebsiteImage> UploadWebsiteImageWithHttpInfo (string appId, string imageLocation, System.IO.Stream image);
         /// <summary>
-        /// Triggers a Check DNS Process
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -199,7 +199,7 @@ namespace Flipdish.Api
         void WebsiteCheckNow (string appId);
 
         /// <summary>
-        /// Triggers a Check DNS Process
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -211,170 +211,170 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Add a testimonial
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonial">Testimonial to be added</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonial"></param>
         /// <returns>Task of RestApiResultWebsiteTestimonial</returns>
         System.Threading.Tasks.Task<RestApiResultWebsiteTestimonial> AddTestimonialAsync (string appId, WebsiteTestimonialBase testimonial);
 
         /// <summary>
-        /// Add a testimonial
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonial">Testimonial to be added</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonial"></param>
         /// <returns>Task of ApiResponse (RestApiResultWebsiteTestimonial)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultWebsiteTestimonial>> AddTestimonialAsyncWithHttpInfo (string appId, WebsiteTestimonialBase testimonial);
         /// <summary>
-        /// Delete a testimonial
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonialId">Id of the testimonial to delete</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonialId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteTestimonialAsync (string appId, int? testimonialId);
 
         /// <summary>
-        /// Delete a testimonial
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonialId">Id of the testimonial to delete</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonialId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTestimonialAsyncWithHttpInfo (string appId, int? testimonialId);
         /// <summary>
-        /// Delete Website Image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="imageId">Id of the image</param>
+        /// <param name="appId"></param>
+        /// <param name="imageId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteWebsiteImageAsync (string appId, int? imageId);
 
         /// <summary>
-        /// Delete Website Image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="imageId">Id of the image</param>
+        /// <param name="appId"></param>
+        /// <param name="imageId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebsiteImageAsyncWithHttpInfo (string appId, int? imageId);
         /// <summary>
-        /// Edit a testimonial
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonialId">Id of the testimonial to edit</param>
-        /// <param name="testimonial">New values of the testimonial</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonialId"></param>
+        /// <param name="testimonial"></param>
         /// <returns>Task of RestApiResultWebsiteTestimonial</returns>
         System.Threading.Tasks.Task<RestApiResultWebsiteTestimonial> EditTestimonialAsync (string appId, int? testimonialId, WebsiteTestimonialBase testimonial);
 
         /// <summary>
-        /// Edit a testimonial
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonialId">Id of the testimonial to edit</param>
-        /// <param name="testimonial">New values of the testimonial</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonialId"></param>
+        /// <param name="testimonial"></param>
         /// <returns>Task of ApiResponse (RestApiResultWebsiteTestimonial)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultWebsiteTestimonial>> EditTestimonialAsyncWithHttpInfo (string appId, int? testimonialId, WebsiteTestimonialBase testimonial);
         /// <summary>
-        /// Get Index Configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiResultIndexPage</returns>
         System.Threading.Tasks.Task<RestApiResultIndexPage> GetIndexConfigurationAsync (string appId);
 
         /// <summary>
-        /// Get Index Configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultIndexPage)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultIndexPage>> GetIndexConfigurationAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// Set Index Configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="indexPage">New index page definition</param>
+        /// <param name="appId"></param>
+        /// <param name="indexPage"></param>
         /// <returns>Task of RestApiResultIndexPageBase</returns>
         System.Threading.Tasks.Task<RestApiResultIndexPageBase> SetIndexConfigurationAsync (string appId, IndexPageBase indexPage);
 
         /// <summary>
-        /// Set Index Configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="indexPage">New index page definition</param>
+        /// <param name="appId"></param>
+        /// <param name="indexPage"></param>
         /// <returns>Task of ApiResponse (RestApiResultIndexPageBase)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultIndexPageBase>> SetIndexConfigurationAsyncWithHttpInfo (string appId, IndexPageBase indexPage);
         /// <summary>
-        /// Upload Website Image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="imageLocation">Section for which to upload the image</param>
+        /// <param name="appId"></param>
+        /// <param name="imageLocation"></param>
         /// <param name="image">App Logo</param>
         /// <returns>Task of RestApiResultWebsiteImage</returns>
         System.Threading.Tasks.Task<RestApiResultWebsiteImage> UploadWebsiteImageAsync (string appId, string imageLocation, System.IO.Stream image);
 
         /// <summary>
-        /// Upload Website Image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="imageLocation">Section for which to upload the image</param>
+        /// <param name="appId"></param>
+        /// <param name="imageLocation"></param>
         /// <param name="image">App Logo</param>
         /// <returns>Task of ApiResponse (RestApiResultWebsiteImage)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultWebsiteImage>> UploadWebsiteImageAsyncWithHttpInfo (string appId, string imageLocation, System.IO.Stream image);
         /// <summary>
-        /// Triggers a Check DNS Process
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -385,7 +385,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task WebsiteCheckNowAsync (string appId);
 
         /// <summary>
-        /// Triggers a Check DNS Process
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -495,11 +495,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add a testimonial 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonial">Testimonial to be added</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonial"></param>
         /// <returns>RestApiResultWebsiteTestimonial</returns>
         public RestApiResultWebsiteTestimonial AddTestimonial (string appId, WebsiteTestimonialBase testimonial)
         {
@@ -508,11 +508,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add a testimonial 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonial">Testimonial to be added</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonial"></param>
         /// <returns>ApiResponse of RestApiResultWebsiteTestimonial</returns>
         public ApiResponse< RestApiResultWebsiteTestimonial > AddTestimonialWithHttpInfo (string appId, WebsiteTestimonialBase testimonial)
         {
@@ -588,11 +588,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add a testimonial 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonial">Testimonial to be added</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonial"></param>
         /// <returns>Task of RestApiResultWebsiteTestimonial</returns>
         public async System.Threading.Tasks.Task<RestApiResultWebsiteTestimonial> AddTestimonialAsync (string appId, WebsiteTestimonialBase testimonial)
         {
@@ -602,11 +602,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add a testimonial 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonial">Testimonial to be added</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonial"></param>
         /// <returns>Task of ApiResponse (RestApiResultWebsiteTestimonial)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultWebsiteTestimonial>> AddTestimonialAsyncWithHttpInfo (string appId, WebsiteTestimonialBase testimonial)
         {
@@ -682,11 +682,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete a testimonial 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonialId">Id of the testimonial to delete</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonialId"></param>
         /// <returns></returns>
         public void DeleteTestimonial (string appId, int? testimonialId)
         {
@@ -694,11 +694,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete a testimonial 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonialId">Id of the testimonial to delete</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonialId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteTestimonialWithHttpInfo (string appId, int? testimonialId)
         {
@@ -762,11 +762,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete a testimonial 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonialId">Id of the testimonial to delete</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonialId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteTestimonialAsync (string appId, int? testimonialId)
         {
@@ -775,11 +775,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete a testimonial 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonialId">Id of the testimonial to delete</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonialId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTestimonialAsyncWithHttpInfo (string appId, int? testimonialId)
         {
@@ -843,11 +843,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete Website Image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="imageId">Id of the image</param>
+        /// <param name="appId"></param>
+        /// <param name="imageId"></param>
         /// <returns></returns>
         public void DeleteWebsiteImage (string appId, int? imageId)
         {
@@ -855,11 +855,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete Website Image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="imageId">Id of the image</param>
+        /// <param name="appId"></param>
+        /// <param name="imageId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteWebsiteImageWithHttpInfo (string appId, int? imageId)
         {
@@ -923,11 +923,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete Website Image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="imageId">Id of the image</param>
+        /// <param name="appId"></param>
+        /// <param name="imageId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteWebsiteImageAsync (string appId, int? imageId)
         {
@@ -936,11 +936,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete Website Image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="imageId">Id of the image</param>
+        /// <param name="appId"></param>
+        /// <param name="imageId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebsiteImageAsyncWithHttpInfo (string appId, int? imageId)
         {
@@ -1004,12 +1004,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Edit a testimonial 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonialId">Id of the testimonial to edit</param>
-        /// <param name="testimonial">New values of the testimonial</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonialId"></param>
+        /// <param name="testimonial"></param>
         /// <returns>RestApiResultWebsiteTestimonial</returns>
         public RestApiResultWebsiteTestimonial EditTestimonial (string appId, int? testimonialId, WebsiteTestimonialBase testimonial)
         {
@@ -1018,12 +1018,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Edit a testimonial 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonialId">Id of the testimonial to edit</param>
-        /// <param name="testimonial">New values of the testimonial</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonialId"></param>
+        /// <param name="testimonial"></param>
         /// <returns>ApiResponse of RestApiResultWebsiteTestimonial</returns>
         public ApiResponse< RestApiResultWebsiteTestimonial > EditTestimonialWithHttpInfo (string appId, int? testimonialId, WebsiteTestimonialBase testimonial)
         {
@@ -1103,12 +1103,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Edit a testimonial 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonialId">Id of the testimonial to edit</param>
-        /// <param name="testimonial">New values of the testimonial</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonialId"></param>
+        /// <param name="testimonial"></param>
         /// <returns>Task of RestApiResultWebsiteTestimonial</returns>
         public async System.Threading.Tasks.Task<RestApiResultWebsiteTestimonial> EditTestimonialAsync (string appId, int? testimonialId, WebsiteTestimonialBase testimonial)
         {
@@ -1118,12 +1118,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Edit a testimonial 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="testimonialId">Id of the testimonial to edit</param>
-        /// <param name="testimonial">New values of the testimonial</param>
+        /// <param name="appId"></param>
+        /// <param name="testimonialId"></param>
+        /// <param name="testimonial"></param>
         /// <returns>Task of ApiResponse (RestApiResultWebsiteTestimonial)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultWebsiteTestimonial>> EditTestimonialAsyncWithHttpInfo (string appId, int? testimonialId, WebsiteTestimonialBase testimonial)
         {
@@ -1203,10 +1203,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Index Configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiResultIndexPage</returns>
         public RestApiResultIndexPage GetIndexConfiguration (string appId)
         {
@@ -1215,10 +1215,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Index Configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultIndexPage</returns>
         public ApiResponse< RestApiResultIndexPage > GetIndexConfigurationWithHttpInfo (string appId)
         {
@@ -1278,10 +1278,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Index Configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiResultIndexPage</returns>
         public async System.Threading.Tasks.Task<RestApiResultIndexPage> GetIndexConfigurationAsync (string appId)
         {
@@ -1291,10 +1291,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Index Configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultIndexPage)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultIndexPage>> GetIndexConfigurationAsyncWithHttpInfo (string appId)
         {
@@ -1354,11 +1354,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set Index Configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="indexPage">New index page definition</param>
+        /// <param name="appId"></param>
+        /// <param name="indexPage"></param>
         /// <returns>RestApiResultIndexPageBase</returns>
         public RestApiResultIndexPageBase SetIndexConfiguration (string appId, IndexPageBase indexPage)
         {
@@ -1367,11 +1367,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set Index Configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="indexPage">New index page definition</param>
+        /// <param name="appId"></param>
+        /// <param name="indexPage"></param>
         /// <returns>ApiResponse of RestApiResultIndexPageBase</returns>
         public ApiResponse< RestApiResultIndexPageBase > SetIndexConfigurationWithHttpInfo (string appId, IndexPageBase indexPage)
         {
@@ -1447,11 +1447,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set Index Configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="indexPage">New index page definition</param>
+        /// <param name="appId"></param>
+        /// <param name="indexPage"></param>
         /// <returns>Task of RestApiResultIndexPageBase</returns>
         public async System.Threading.Tasks.Task<RestApiResultIndexPageBase> SetIndexConfigurationAsync (string appId, IndexPageBase indexPage)
         {
@@ -1461,11 +1461,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set Index Configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="indexPage">New index page definition</param>
+        /// <param name="appId"></param>
+        /// <param name="indexPage"></param>
         /// <returns>Task of ApiResponse (RestApiResultIndexPageBase)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultIndexPageBase>> SetIndexConfigurationAsyncWithHttpInfo (string appId, IndexPageBase indexPage)
         {
@@ -1541,11 +1541,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload Website Image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="imageLocation">Section for which to upload the image</param>
+        /// <param name="appId"></param>
+        /// <param name="imageLocation"></param>
         /// <param name="image">App Logo</param>
         /// <returns>RestApiResultWebsiteImage</returns>
         public RestApiResultWebsiteImage UploadWebsiteImage (string appId, string imageLocation, System.IO.Stream image)
@@ -1555,11 +1555,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload Website Image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="imageLocation">Section for which to upload the image</param>
+        /// <param name="appId"></param>
+        /// <param name="imageLocation"></param>
         /// <param name="image">App Logo</param>
         /// <returns>ApiResponse of RestApiResultWebsiteImage</returns>
         public ApiResponse< RestApiResultWebsiteImage > UploadWebsiteImageWithHttpInfo (string appId, string imageLocation, System.IO.Stream image)
@@ -1629,11 +1629,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload Website Image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="imageLocation">Section for which to upload the image</param>
+        /// <param name="appId"></param>
+        /// <param name="imageLocation"></param>
         /// <param name="image">App Logo</param>
         /// <returns>Task of RestApiResultWebsiteImage</returns>
         public async System.Threading.Tasks.Task<RestApiResultWebsiteImage> UploadWebsiteImageAsync (string appId, string imageLocation, System.IO.Stream image)
@@ -1644,11 +1644,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload Website Image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="imageLocation">Section for which to upload the image</param>
+        /// <param name="appId"></param>
+        /// <param name="imageLocation"></param>
         /// <param name="image">App Logo</param>
         /// <returns>Task of ApiResponse (RestApiResultWebsiteImage)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultWebsiteImage>> UploadWebsiteImageAsyncWithHttpInfo (string appId, string imageLocation, System.IO.Stream image)
@@ -1718,7 +1718,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Triggers a Check DNS Process 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1729,7 +1729,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Triggers a Check DNS Process 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1792,7 +1792,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Triggers a Check DNS Process 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1804,7 +1804,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Triggers a Check DNS Process 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>

@@ -25,143 +25,143 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Archive store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns></returns>
         void ArchiveStore (int? storeId);
 
         /// <summary>
-        /// Archive store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ArchiveStoreWithHttpInfo (int? storeId);
         /// <summary>
-        /// Assign Menu to Store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="menuId">Id of Menu to assign to store</param>
+        /// <param name="storeId"></param>
+        /// <param name="menuId"></param>
         /// <returns>RestApiArrayResultRestApiDefaultResponse</returns>
         RestApiArrayResultRestApiDefaultResponse AssignMenu (int? storeId, int? menuId);
 
         /// <summary>
-        /// Assign Menu to Store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="menuId">Id of Menu to assign to store</param>
+        /// <param name="storeId"></param>
+        /// <param name="menuId"></param>
         /// <returns>ApiResponse of RestApiArrayResultRestApiDefaultResponse</returns>
         ApiResponse<RestApiArrayResultRestApiDefaultResponse> AssignMenuWithHttpInfo (int? storeId, int? menuId);
         /// <summary>
-        /// Clone store with store clone settings
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="settings">Settings for cloning the store</param>
+        /// <param name="storeId"></param>
+        /// <param name="settings"></param>
         /// <returns>RestApiResultStore</returns>
         RestApiResultStore CloneStore (int? storeId, StoreCloneSettings settings);
 
         /// <summary>
-        /// Clone store with store clone settings
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="settings">Settings for cloning the store</param>
+        /// <param name="storeId"></param>
+        /// <param name="settings"></param>
         /// <returns>ApiResponse of RestApiResultStore</returns>
         ApiResponse<RestApiResultStore> CloneStoreWithHttpInfo (int? storeId, StoreCloneSettings settings);
         /// <summary>
-        /// Configure Store Service Charge; Idempotent Operation
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="serviceCharge">Service charge</param>
+        /// <param name="storeId"></param>
+        /// <param name="serviceCharge"></param>
         /// <returns>RestApiResultServiceCharge</returns>
         RestApiResultServiceCharge ConfigureStoreServiceCharge (int? storeId, ServiceCharge serviceCharge);
 
         /// <summary>
-        /// Configure Store Service Charge; Idempotent Operation
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="serviceCharge">Service charge</param>
+        /// <param name="storeId"></param>
+        /// <param name="serviceCharge"></param>
         /// <returns>ApiResponse of RestApiResultServiceCharge</returns>
         ApiResponse<RestApiResultServiceCharge> ConfigureStoreServiceChargeWithHttpInfo (int? storeId, ServiceCharge serviceCharge);
         /// <summary>
-        /// Create Business Hours Override for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="businessHoursOverride">Business Hours Override</param>
+        /// <param name="storeId"></param>
+        /// <param name="businessHoursOverride"></param>
         /// <returns>RestApiResultBusinessHoursOverride</returns>
         RestApiResultBusinessHoursOverride CreateBusinessHoursOverrideByStoreId (int? storeId, BusinessHoursOverrideBase businessHoursOverride);
 
         /// <summary>
-        /// Create Business Hours Override for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="businessHoursOverride">Business Hours Override</param>
+        /// <param name="storeId"></param>
+        /// <param name="businessHoursOverride"></param>
         /// <returns>ApiResponse of RestApiResultBusinessHoursOverride</returns>
         ApiResponse<RestApiResultBusinessHoursOverride> CreateBusinessHoursOverrideByStoreIdWithHttpInfo (int? storeId, BusinessHoursOverrideBase businessHoursOverride);
         /// <summary>
-        /// Create store with Store Group identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group identifier</param>
-        /// <param name="store">Store</param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="store"></param>
         /// <returns>RestApiResultStore</returns>
         RestApiResultStore CreateStore (int? storeGroupId, StoreCreateBase store);
 
         /// <summary>
-        /// Create store with Store Group identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group identifier</param>
-        /// <param name="store">Store</param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="store"></param>
         /// <returns>ApiResponse of RestApiResultStore</returns>
         ApiResponse<RestApiResultStore> CreateStoreWithHttpInfo (int? storeGroupId, StoreCreateBase store);
         /// <summary>
-        /// Delete Business Hours Override for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -173,7 +173,7 @@ namespace Flipdish.Api
         RestApiArrayResultRestApiDefaultResponse DeleteBusinessHoursOverride (int? storeId, int? businessHoursOverrideId);
 
         /// <summary>
-        /// Delete Business Hours Override for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -184,131 +184,131 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultRestApiDefaultResponse</returns>
         ApiResponse<RestApiArrayResultRestApiDefaultResponse> DeleteBusinessHoursOverrideWithHttpInfo (int? storeId, int? businessHoursOverrideId);
         /// <summary>
-        /// Get Stores Bank Account Id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiResultAssignedBankAccount</returns>
         RestApiResultAssignedBankAccount GetBankAccountForStore (int? storeId);
 
         /// <summary>
-        /// Get Stores Bank Account Id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultAssignedBankAccount</returns>
         ApiResponse<RestApiResultAssignedBankAccount> GetBankAccountForStoreWithHttpInfo (int? storeId);
         /// <summary>
-        /// Get Business hours
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery type</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>RestApiArrayResultBusinessHoursPeriod</returns>
         RestApiArrayResultBusinessHoursPeriod GetBusinessHours (int? storeId, string deliveryType);
 
         /// <summary>
-        /// Get Business hours
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery type</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>ApiResponse of RestApiArrayResultBusinessHoursPeriod</returns>
         ApiResponse<RestApiArrayResultBusinessHoursPeriod> GetBusinessHoursWithHttpInfo (int? storeId, string deliveryType);
         /// <summary>
-        /// Get business hours overrides by store identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="after">Return results that ended after this datetime. Default value is the current datetime. (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="after"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultBusinessHoursOverride</returns>
         RestApiPaginationResultBusinessHoursOverride GetBusinessHoursOverrideByStoreId (int? storeId, DateTime? after = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get business hours overrides by store identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="after">Return results that ended after this datetime. Default value is the current datetime. (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="after"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultBusinessHoursOverride</returns>
         ApiResponse<RestApiPaginationResultBusinessHoursOverride> GetBusinessHoursOverrideByStoreIdWithHttpInfo (int? storeId, DateTime? after = null, int? page = null, int? limit = null);
         /// <summary>
-        /// Get store end of day report
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="date">Store identifier (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>RestApiResultStoreEndOfDayReport</returns>
         RestApiResultStoreEndOfDayReport GetEndOfDayReport (int? storeId, DateTime? date = null);
 
         /// <summary>
-        /// Get store end of day report
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="date">Store identifier (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultStoreEndOfDayReport</returns>
         ApiResponse<RestApiResultStoreEndOfDayReport> GetEndOfDayReportWithHttpInfo (int? storeId, DateTime? date = null);
         /// <summary>
-        /// Get the pre order config for a store, by type
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>RestApiResultPreOrderConfig</returns>
         RestApiResultPreOrderConfig GetPreOrderConfig (int? storeId, string deliveryType);
 
         /// <summary>
-        /// Get the pre order config for a store, by type
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>ApiResponse of RestApiResultPreOrderConfig</returns>
         ApiResponse<RestApiResultPreOrderConfig> GetPreOrderConfigWithHttpInfo (int? storeId, string deliveryType);
         /// <summary>
-        /// Get the Preview times of the pre-order configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <param name="preOrderConfigLeadTimeMinutes">Lead Time in Minutes (optional)</param>
         /// <param name="preOrderConfigIntervalMinutes">Interval in minutes (optional)</param>
         /// <param name="preOrderConfigMaxOrderAheadDays">Max Days to order ahead (optional)</param>
@@ -323,14 +323,14 @@ namespace Flipdish.Api
         RestApiArrayResultPreOrderTime GetPreOrderPreview (int? storeId, string deliveryType, int? preOrderConfigLeadTimeMinutes = null, int? preOrderConfigIntervalMinutes = null, int? preOrderConfigMaxOrderAheadDays = null, bool? preOrderConfigIncludeAsap = null, bool? preOrderConfigIncludeMoreGranularInitialTime = null, string preOrderConfigCutOffTimePreviousDayBasic = null, string preOrderConfigCutOffTimeCurrentDayBasic = null, string preOrderConfigPreOrderTimeDisplayType = null, bool? preOrderConfigAlwaysAppearOpen = null, bool? preOrderConfigRequireExplicitSelectAlways = null);
 
         /// <summary>
-        /// Get the Preview times of the pre-order configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <param name="preOrderConfigLeadTimeMinutes">Lead Time in Minutes (optional)</param>
         /// <param name="preOrderConfigIntervalMinutes">Interval in minutes (optional)</param>
         /// <param name="preOrderConfigMaxOrderAheadDays">Max Days to order ahead (optional)</param>
@@ -344,103 +344,103 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultPreOrderTime</returns>
         ApiResponse<RestApiArrayResultPreOrderTime> GetPreOrderPreviewWithHttpInfo (int? storeId, string deliveryType, int? preOrderConfigLeadTimeMinutes = null, int? preOrderConfigIntervalMinutes = null, int? preOrderConfigMaxOrderAheadDays = null, bool? preOrderConfigIncludeAsap = null, bool? preOrderConfigIncludeMoreGranularInitialTime = null, string preOrderConfigCutOffTimePreviousDayBasic = null, string preOrderConfigCutOffTimeCurrentDayBasic = null, string preOrderConfigPreOrderTimeDisplayType = null, bool? preOrderConfigAlwaysAppearOpen = null, bool? preOrderConfigRequireExplicitSelectAlways = null);
         /// <summary>
-        /// Get processing fee configs by store identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>RestApiArrayResultProcessingFeeConfig</returns>
         RestApiArrayResultProcessingFeeConfig GetProcessingFeeConfigsByStoreId (int? storeId, string appNameId = null);
 
         /// <summary>
-        /// Get processing fee configs by store identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultProcessingFeeConfig</returns>
         ApiResponse<RestApiArrayResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdWithHttpInfo (int? storeId, string appNameId = null);
         /// <summary>
-        /// Get processing fee configs by store identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <param name="paymentAccountType"></param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>RestApiResultProcessingFeeConfig</returns>
         RestApiResultProcessingFeeConfig GetProcessingFeeConfigsByStoreIdAndPaymentAccountType (int? storeId, string paymentAccountType, string appNameId = null);
 
         /// <summary>
-        /// Get processing fee configs by store identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <param name="paymentAccountType"></param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultProcessingFeeConfig</returns>
         ApiResponse<RestApiResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeWithHttpInfo (int? storeId, string paymentAccountType, string appNameId = null);
         /// <summary>
-        /// Get store by identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiResultStore</returns>
         RestApiResultStore GetStoreById (int? storeId);
 
         /// <summary>
-        /// Get store by identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultStore</returns>
         ApiResponse<RestApiResultStore> GetStoreByIdWithHttpInfo (int? storeId);
         /// <summary>
-        /// Retrieve Store feeConfig
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>StoreFeeConfig</returns>
         StoreFeeConfig GetStoreFeeConfig (int? storeId);
 
         /// <summary>
-        /// Retrieve Store feeConfig
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of StoreFeeConfig</returns>
         ApiResponse<StoreFeeConfig> GetStoreFeeConfigWithHttpInfo (int? storeId);
         /// <summary>
-        /// Get all stores by app name id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <param name="storeNameQuery"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
@@ -448,494 +448,494 @@ namespace Flipdish.Api
         RestApiPaginationResultStoreHeader GetStoreHeadersByAppId (string appId, string storeNameQuery = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get all stores by app name id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <param name="storeNameQuery"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultStoreHeader</returns>
         ApiResponse<RestApiPaginationResultStoreHeader> GetStoreHeadersByAppIdWithHttpInfo (string appId, string storeNameQuery = null, int? page = null, int? limit = null);
         /// <summary>
-        /// Get stores statistics by app name id and storeIds
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Ids</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiArrayResultStoreStatistics</returns>
         RestApiArrayResultStoreStatistics GetStoreNetSales (string appId, List<int?> storeId);
 
         /// <summary>
-        /// Get stores statistics by app name id and storeIds
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Ids</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiArrayResultStoreStatistics</returns>
         ApiResponse<RestApiArrayResultStoreStatistics> GetStoreNetSalesWithHttpInfo (string appId, List<int?> storeId);
         /// <summary>
-        /// Retrieve Store Service Charge
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>ServiceCharge</returns>
         ServiceCharge GetStoreServiceCharge (int? storeId);
 
         /// <summary>
-        /// Retrieve Store Service Charge
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of ServiceCharge</returns>
         ApiResponse<ServiceCharge> GetStoreServiceChargeWithHttpInfo (int? storeId);
         /// <summary>
-        /// Get all stores, excluding archived ones
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="storeGroupId">Store Group Id (optional)</param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="storeGroupId"> (optional)</param>
         /// <returns>RestApiPaginationResultStore</returns>
         RestApiPaginationResultStore GetStores (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null);
 
         /// <summary>
-        /// Get all stores, excluding archived ones
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="storeGroupId">Store Group Id (optional)</param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="storeGroupId"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultStore</returns>
         ApiResponse<RestApiPaginationResultStore> GetStoresWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null);
         /// <summary>
-        /// Get all stores by app name id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultStore</returns>
         RestApiPaginationResultStore GetStoresByAppId (string appId, string searchQuery = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get all stores by app name id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultStore</returns>
         ApiResponse<RestApiPaginationResultStore> GetStoresByAppIdWithHttpInfo (string appId, string searchQuery = null, int? page = null, int? limit = null);
         /// <summary>
-        /// Get store validation by storeIds
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultStoreValidationConfig</returns>
         RestApiPaginationResultStoreValidationConfig GetStoresByStoreIdWithValidations (List<int?> storeId, string appId, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get store validation by storeIds
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultStoreValidationConfig</returns>
         ApiResponse<RestApiPaginationResultStoreValidationConfig> GetStoresByStoreIdWithValidationsWithHttpInfo (List<int?> storeId, string appId, int? page = null, int? limit = null);
         /// <summary>
-        /// Publish store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns></returns>
         void PublishStore (int? storeId);
 
         /// <summary>
-        /// Publish store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PublishStoreWithHttpInfo (int? storeId);
         /// <summary>
-        /// Set Business hours
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery type</param>
-        /// <param name="businessHoursPeriod">Business Hours Period</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="businessHoursPeriod"></param>
         /// <returns>RestApiResultBusinessHoursPeriod</returns>
         RestApiResultBusinessHoursPeriod SetBusinessHours (int? storeId, string deliveryType, BusinessHoursPeriodBase businessHoursPeriod);
 
         /// <summary>
-        /// Set Business hours
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery type</param>
-        /// <param name="businessHoursPeriod">Business Hours Period</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="businessHoursPeriod"></param>
         /// <returns>ApiResponse of RestApiResultBusinessHoursPeriod</returns>
         ApiResponse<RestApiResultBusinessHoursPeriod> SetBusinessHoursWithHttpInfo (int? storeId, string deliveryType, BusinessHoursPeriodBase businessHoursPeriod);
         /// <summary>
-        /// UPDATE pre order config for a store, by type
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
-        /// <param name="enabled">Update pre order config values</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="enabled"></param>
         /// <returns>RestApiArrayResultRestApiDefaultResponse</returns>
         RestApiArrayResultRestApiDefaultResponse SetPreOrdeEnabled (int? storeId, string deliveryType, bool? enabled);
 
         /// <summary>
-        /// UPDATE pre order config for a store, by type
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
-        /// <param name="enabled">Update pre order config values</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="enabled"></param>
         /// <returns>ApiResponse of RestApiArrayResultRestApiDefaultResponse</returns>
         ApiResponse<RestApiArrayResultRestApiDefaultResponse> SetPreOrdeEnabledWithHttpInfo (int? storeId, string deliveryType, bool? enabled);
         /// <summary>
-        /// Unpublish store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns></returns>
         void UnpublishStore (int? storeId);
 
         /// <summary>
-        /// Unpublish store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UnpublishStoreWithHttpInfo (int? storeId);
         /// <summary>
-        /// UPDATE pre order config for a store, by type
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
-        /// <param name="preOrderConfig">Update pre order config values</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="preOrderConfig"></param>
         /// <returns>RestApiArrayResultRestApiDefaultResponse</returns>
         RestApiArrayResultRestApiDefaultResponse UpdatePreOrderConfig (int? storeId, string deliveryType, PreOrderConfig preOrderConfig);
 
         /// <summary>
-        /// UPDATE pre order config for a store, by type
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
-        /// <param name="preOrderConfig">Update pre order config values</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="preOrderConfig"></param>
         /// <returns>ApiResponse of RestApiArrayResultRestApiDefaultResponse</returns>
         ApiResponse<RestApiArrayResultRestApiDefaultResponse> UpdatePreOrderConfigWithHttpInfo (int? storeId, string deliveryType, PreOrderConfig preOrderConfig);
         /// <summary>
-        /// Update store by identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Group identifier</param>
-        /// <param name="store">Store</param>
+        /// <param name="storeId"></param>
+        /// <param name="store"></param>
         /// <returns>RestApiResultStore</returns>
         RestApiResultStore UpdateStore (int? storeId, StoreBase store);
 
         /// <summary>
-        /// Update store by identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Group identifier</param>
-        /// <param name="store">Store</param>
+        /// <param name="storeId"></param>
+        /// <param name="store"></param>
         /// <returns>ApiResponse of RestApiResultStore</returns>
         ApiResponse<RestApiResultStore> UpdateStoreWithHttpInfo (int? storeId, StoreBase store);
         /// <summary>
-        /// Update store address
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="storeAddress">Store address</param>
+        /// <param name="storeId"></param>
+        /// <param name="storeAddress"></param>
         /// <returns>RestApiResultStoreAddress</returns>
         RestApiResultStoreAddress UpdateStoreAddress (int? storeId, StoreAddressBase storeAddress);
 
         /// <summary>
-        /// Update store address
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="storeAddress">Store address</param>
+        /// <param name="storeId"></param>
+        /// <param name="storeAddress"></param>
         /// <returns>ApiResponse of RestApiResultStoreAddress</returns>
         ApiResponse<RestApiResultStoreAddress> UpdateStoreAddressWithHttpInfo (int? storeId, StoreAddressBase storeAddress);
         /// <summary>
-        /// Update store address coordinates
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="coordinates">Store address coordinates</param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="coordinates"></param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>RestApiResultCoordinates</returns>
         RestApiResultCoordinates UpdateStoreAddressCoordinates (int? storeId, Coordinates coordinates, string appNameId = null);
 
         /// <summary>
-        /// Update store address coordinates
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="coordinates">Store address coordinates</param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="coordinates"></param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultCoordinates</returns>
         ApiResponse<RestApiResultCoordinates> UpdateStoreAddressCoordinatesWithHttpInfo (int? storeId, Coordinates coordinates, string appNameId = null);
         /// <summary>
-        /// Update store address
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="address">Store address</param>
+        /// <param name="storeId"></param>
+        /// <param name="address"></param>
         /// <returns>Object</returns>
         Object UpdateStoreAddressForm (int? storeId, StoreAddressForm address);
 
         /// <summary>
-        /// Update store address
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="address">Store address</param>
+        /// <param name="storeId"></param>
+        /// <param name="address"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> UpdateStoreAddressFormWithHttpInfo (int? storeId, StoreAddressForm address);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Archive store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task ArchiveStoreAsync (int? storeId);
 
         /// <summary>
-        /// Archive store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ArchiveStoreAsyncWithHttpInfo (int? storeId);
         /// <summary>
-        /// Assign Menu to Store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="menuId">Id of Menu to assign to store</param>
+        /// <param name="storeId"></param>
+        /// <param name="menuId"></param>
         /// <returns>Task of RestApiArrayResultRestApiDefaultResponse</returns>
         System.Threading.Tasks.Task<RestApiArrayResultRestApiDefaultResponse> AssignMenuAsync (int? storeId, int? menuId);
 
         /// <summary>
-        /// Assign Menu to Store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="menuId">Id of Menu to assign to store</param>
+        /// <param name="storeId"></param>
+        /// <param name="menuId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultRestApiDefaultResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRestApiDefaultResponse>> AssignMenuAsyncWithHttpInfo (int? storeId, int? menuId);
         /// <summary>
-        /// Clone store with store clone settings
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="settings">Settings for cloning the store</param>
+        /// <param name="storeId"></param>
+        /// <param name="settings"></param>
         /// <returns>Task of RestApiResultStore</returns>
         System.Threading.Tasks.Task<RestApiResultStore> CloneStoreAsync (int? storeId, StoreCloneSettings settings);
 
         /// <summary>
-        /// Clone store with store clone settings
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="settings">Settings for cloning the store</param>
+        /// <param name="storeId"></param>
+        /// <param name="settings"></param>
         /// <returns>Task of ApiResponse (RestApiResultStore)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStore>> CloneStoreAsyncWithHttpInfo (int? storeId, StoreCloneSettings settings);
         /// <summary>
-        /// Configure Store Service Charge; Idempotent Operation
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="serviceCharge">Service charge</param>
+        /// <param name="storeId"></param>
+        /// <param name="serviceCharge"></param>
         /// <returns>Task of RestApiResultServiceCharge</returns>
         System.Threading.Tasks.Task<RestApiResultServiceCharge> ConfigureStoreServiceChargeAsync (int? storeId, ServiceCharge serviceCharge);
 
         /// <summary>
-        /// Configure Store Service Charge; Idempotent Operation
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="serviceCharge">Service charge</param>
+        /// <param name="storeId"></param>
+        /// <param name="serviceCharge"></param>
         /// <returns>Task of ApiResponse (RestApiResultServiceCharge)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultServiceCharge>> ConfigureStoreServiceChargeAsyncWithHttpInfo (int? storeId, ServiceCharge serviceCharge);
         /// <summary>
-        /// Create Business Hours Override for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="businessHoursOverride">Business Hours Override</param>
+        /// <param name="storeId"></param>
+        /// <param name="businessHoursOverride"></param>
         /// <returns>Task of RestApiResultBusinessHoursOverride</returns>
         System.Threading.Tasks.Task<RestApiResultBusinessHoursOverride> CreateBusinessHoursOverrideByStoreIdAsync (int? storeId, BusinessHoursOverrideBase businessHoursOverride);
 
         /// <summary>
-        /// Create Business Hours Override for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="businessHoursOverride">Business Hours Override</param>
+        /// <param name="storeId"></param>
+        /// <param name="businessHoursOverride"></param>
         /// <returns>Task of ApiResponse (RestApiResultBusinessHoursOverride)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultBusinessHoursOverride>> CreateBusinessHoursOverrideByStoreIdAsyncWithHttpInfo (int? storeId, BusinessHoursOverrideBase businessHoursOverride);
         /// <summary>
-        /// Create store with Store Group identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group identifier</param>
-        /// <param name="store">Store</param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="store"></param>
         /// <returns>Task of RestApiResultStore</returns>
         System.Threading.Tasks.Task<RestApiResultStore> CreateStoreAsync (int? storeGroupId, StoreCreateBase store);
 
         /// <summary>
-        /// Create store with Store Group identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group identifier</param>
-        /// <param name="store">Store</param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="store"></param>
         /// <returns>Task of ApiResponse (RestApiResultStore)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStore>> CreateStoreAsyncWithHttpInfo (int? storeGroupId, StoreCreateBase store);
         /// <summary>
-        /// Delete Business Hours Override for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -947,7 +947,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultRestApiDefaultResponse> DeleteBusinessHoursOverrideAsync (int? storeId, int? businessHoursOverrideId);
 
         /// <summary>
-        /// Delete Business Hours Override for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -958,131 +958,131 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultRestApiDefaultResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRestApiDefaultResponse>> DeleteBusinessHoursOverrideAsyncWithHttpInfo (int? storeId, int? businessHoursOverrideId);
         /// <summary>
-        /// Get Stores Bank Account Id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiResultAssignedBankAccount</returns>
         System.Threading.Tasks.Task<RestApiResultAssignedBankAccount> GetBankAccountForStoreAsync (int? storeId);
 
         /// <summary>
-        /// Get Stores Bank Account Id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultAssignedBankAccount)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultAssignedBankAccount>> GetBankAccountForStoreAsyncWithHttpInfo (int? storeId);
         /// <summary>
-        /// Get Business hours
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery type</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>Task of RestApiArrayResultBusinessHoursPeriod</returns>
         System.Threading.Tasks.Task<RestApiArrayResultBusinessHoursPeriod> GetBusinessHoursAsync (int? storeId, string deliveryType);
 
         /// <summary>
-        /// Get Business hours
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery type</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultBusinessHoursPeriod)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultBusinessHoursPeriod>> GetBusinessHoursAsyncWithHttpInfo (int? storeId, string deliveryType);
         /// <summary>
-        /// Get business hours overrides by store identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="after">Return results that ended after this datetime. Default value is the current datetime. (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="after"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultBusinessHoursOverride</returns>
         System.Threading.Tasks.Task<RestApiPaginationResultBusinessHoursOverride> GetBusinessHoursOverrideByStoreIdAsync (int? storeId, DateTime? after = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get business hours overrides by store identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="after">Return results that ended after this datetime. Default value is the current datetime. (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="after"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultBusinessHoursOverride)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultBusinessHoursOverride>> GetBusinessHoursOverrideByStoreIdAsyncWithHttpInfo (int? storeId, DateTime? after = null, int? page = null, int? limit = null);
         /// <summary>
-        /// Get store end of day report
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="date">Store identifier (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>Task of RestApiResultStoreEndOfDayReport</returns>
         System.Threading.Tasks.Task<RestApiResultStoreEndOfDayReport> GetEndOfDayReportAsync (int? storeId, DateTime? date = null);
 
         /// <summary>
-        /// Get store end of day report
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="date">Store identifier (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultStoreEndOfDayReport)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStoreEndOfDayReport>> GetEndOfDayReportAsyncWithHttpInfo (int? storeId, DateTime? date = null);
         /// <summary>
-        /// Get the pre order config for a store, by type
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>Task of RestApiResultPreOrderConfig</returns>
         System.Threading.Tasks.Task<RestApiResultPreOrderConfig> GetPreOrderConfigAsync (int? storeId, string deliveryType);
 
         /// <summary>
-        /// Get the pre order config for a store, by type
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>Task of ApiResponse (RestApiResultPreOrderConfig)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultPreOrderConfig>> GetPreOrderConfigAsyncWithHttpInfo (int? storeId, string deliveryType);
         /// <summary>
-        /// Get the Preview times of the pre-order configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <param name="preOrderConfigLeadTimeMinutes">Lead Time in Minutes (optional)</param>
         /// <param name="preOrderConfigIntervalMinutes">Interval in minutes (optional)</param>
         /// <param name="preOrderConfigMaxOrderAheadDays">Max Days to order ahead (optional)</param>
@@ -1097,14 +1097,14 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultPreOrderTime> GetPreOrderPreviewAsync (int? storeId, string deliveryType, int? preOrderConfigLeadTimeMinutes = null, int? preOrderConfigIntervalMinutes = null, int? preOrderConfigMaxOrderAheadDays = null, bool? preOrderConfigIncludeAsap = null, bool? preOrderConfigIncludeMoreGranularInitialTime = null, string preOrderConfigCutOffTimePreviousDayBasic = null, string preOrderConfigCutOffTimeCurrentDayBasic = null, string preOrderConfigPreOrderTimeDisplayType = null, bool? preOrderConfigAlwaysAppearOpen = null, bool? preOrderConfigRequireExplicitSelectAlways = null);
 
         /// <summary>
-        /// Get the Preview times of the pre-order configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <param name="preOrderConfigLeadTimeMinutes">Lead Time in Minutes (optional)</param>
         /// <param name="preOrderConfigIntervalMinutes">Interval in minutes (optional)</param>
         /// <param name="preOrderConfigMaxOrderAheadDays">Max Days to order ahead (optional)</param>
@@ -1118,103 +1118,103 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultPreOrderTime)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultPreOrderTime>> GetPreOrderPreviewAsyncWithHttpInfo (int? storeId, string deliveryType, int? preOrderConfigLeadTimeMinutes = null, int? preOrderConfigIntervalMinutes = null, int? preOrderConfigMaxOrderAheadDays = null, bool? preOrderConfigIncludeAsap = null, bool? preOrderConfigIncludeMoreGranularInitialTime = null, string preOrderConfigCutOffTimePreviousDayBasic = null, string preOrderConfigCutOffTimeCurrentDayBasic = null, string preOrderConfigPreOrderTimeDisplayType = null, bool? preOrderConfigAlwaysAppearOpen = null, bool? preOrderConfigRequireExplicitSelectAlways = null);
         /// <summary>
-        /// Get processing fee configs by store identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>Task of RestApiArrayResultProcessingFeeConfig</returns>
         System.Threading.Tasks.Task<RestApiArrayResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAsync (int? storeId, string appNameId = null);
 
         /// <summary>
-        /// Get processing fee configs by store identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultProcessingFeeConfig)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdAsyncWithHttpInfo (int? storeId, string appNameId = null);
         /// <summary>
-        /// Get processing fee configs by store identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <param name="paymentAccountType"></param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>Task of RestApiResultProcessingFeeConfig</returns>
         System.Threading.Tasks.Task<RestApiResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsync (int? storeId, string paymentAccountType, string appNameId = null);
 
         /// <summary>
-        /// Get processing fee configs by store identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <param name="paymentAccountType"></param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultProcessingFeeConfig)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsyncWithHttpInfo (int? storeId, string paymentAccountType, string appNameId = null);
         /// <summary>
-        /// Get store by identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiResultStore</returns>
         System.Threading.Tasks.Task<RestApiResultStore> GetStoreByIdAsync (int? storeId);
 
         /// <summary>
-        /// Get store by identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultStore)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStore>> GetStoreByIdAsyncWithHttpInfo (int? storeId);
         /// <summary>
-        /// Retrieve Store feeConfig
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of StoreFeeConfig</returns>
         System.Threading.Tasks.Task<StoreFeeConfig> GetStoreFeeConfigAsync (int? storeId);
 
         /// <summary>
-        /// Retrieve Store feeConfig
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (StoreFeeConfig)</returns>
         System.Threading.Tasks.Task<ApiResponse<StoreFeeConfig>> GetStoreFeeConfigAsyncWithHttpInfo (int? storeId);
         /// <summary>
-        /// Get all stores by app name id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <param name="storeNameQuery"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
@@ -1222,352 +1222,352 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiPaginationResultStoreHeader> GetStoreHeadersByAppIdAsync (string appId, string storeNameQuery = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get all stores by app name id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <param name="storeNameQuery"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStoreHeader)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStoreHeader>> GetStoreHeadersByAppIdAsyncWithHttpInfo (string appId, string storeNameQuery = null, int? page = null, int? limit = null);
         /// <summary>
-        /// Get stores statistics by app name id and storeIds
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Ids</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiArrayResultStoreStatistics</returns>
         System.Threading.Tasks.Task<RestApiArrayResultStoreStatistics> GetStoreNetSalesAsync (string appId, List<int?> storeId);
 
         /// <summary>
-        /// Get stores statistics by app name id and storeIds
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Ids</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultStoreStatistics)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreStatistics>> GetStoreNetSalesAsyncWithHttpInfo (string appId, List<int?> storeId);
         /// <summary>
-        /// Retrieve Store Service Charge
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ServiceCharge</returns>
         System.Threading.Tasks.Task<ServiceCharge> GetStoreServiceChargeAsync (int? storeId);
 
         /// <summary>
-        /// Retrieve Store Service Charge
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (ServiceCharge)</returns>
         System.Threading.Tasks.Task<ApiResponse<ServiceCharge>> GetStoreServiceChargeAsyncWithHttpInfo (int? storeId);
         /// <summary>
-        /// Get all stores, excluding archived ones
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="storeGroupId">Store Group Id (optional)</param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="storeGroupId"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultStore</returns>
         System.Threading.Tasks.Task<RestApiPaginationResultStore> GetStoresAsync (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null);
 
         /// <summary>
-        /// Get all stores, excluding archived ones
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="storeGroupId">Store Group Id (optional)</param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="storeGroupId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStore)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStore>> GetStoresAsyncWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null);
         /// <summary>
-        /// Get all stores by app name id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultStore</returns>
         System.Threading.Tasks.Task<RestApiPaginationResultStore> GetStoresByAppIdAsync (string appId, string searchQuery = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get all stores by app name id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStore)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStore>> GetStoresByAppIdAsyncWithHttpInfo (string appId, string searchQuery = null, int? page = null, int? limit = null);
         /// <summary>
-        /// Get store validation by storeIds
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultStoreValidationConfig</returns>
         System.Threading.Tasks.Task<RestApiPaginationResultStoreValidationConfig> GetStoresByStoreIdWithValidationsAsync (List<int?> storeId, string appId, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get store validation by storeIds
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStoreValidationConfig)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStoreValidationConfig>> GetStoresByStoreIdWithValidationsAsyncWithHttpInfo (List<int?> storeId, string appId, int? page = null, int? limit = null);
         /// <summary>
-        /// Publish store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PublishStoreAsync (int? storeId);
 
         /// <summary>
-        /// Publish store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PublishStoreAsyncWithHttpInfo (int? storeId);
         /// <summary>
-        /// Set Business hours
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery type</param>
-        /// <param name="businessHoursPeriod">Business Hours Period</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="businessHoursPeriod"></param>
         /// <returns>Task of RestApiResultBusinessHoursPeriod</returns>
         System.Threading.Tasks.Task<RestApiResultBusinessHoursPeriod> SetBusinessHoursAsync (int? storeId, string deliveryType, BusinessHoursPeriodBase businessHoursPeriod);
 
         /// <summary>
-        /// Set Business hours
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery type</param>
-        /// <param name="businessHoursPeriod">Business Hours Period</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="businessHoursPeriod"></param>
         /// <returns>Task of ApiResponse (RestApiResultBusinessHoursPeriod)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultBusinessHoursPeriod>> SetBusinessHoursAsyncWithHttpInfo (int? storeId, string deliveryType, BusinessHoursPeriodBase businessHoursPeriod);
         /// <summary>
-        /// UPDATE pre order config for a store, by type
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
-        /// <param name="enabled">Update pre order config values</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="enabled"></param>
         /// <returns>Task of RestApiArrayResultRestApiDefaultResponse</returns>
         System.Threading.Tasks.Task<RestApiArrayResultRestApiDefaultResponse> SetPreOrdeEnabledAsync (int? storeId, string deliveryType, bool? enabled);
 
         /// <summary>
-        /// UPDATE pre order config for a store, by type
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
-        /// <param name="enabled">Update pre order config values</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="enabled"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultRestApiDefaultResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRestApiDefaultResponse>> SetPreOrdeEnabledAsyncWithHttpInfo (int? storeId, string deliveryType, bool? enabled);
         /// <summary>
-        /// Unpublish store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UnpublishStoreAsync (int? storeId);
 
         /// <summary>
-        /// Unpublish store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UnpublishStoreAsyncWithHttpInfo (int? storeId);
         /// <summary>
-        /// UPDATE pre order config for a store, by type
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
-        /// <param name="preOrderConfig">Update pre order config values</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="preOrderConfig"></param>
         /// <returns>Task of RestApiArrayResultRestApiDefaultResponse</returns>
         System.Threading.Tasks.Task<RestApiArrayResultRestApiDefaultResponse> UpdatePreOrderConfigAsync (int? storeId, string deliveryType, PreOrderConfig preOrderConfig);
 
         /// <summary>
-        /// UPDATE pre order config for a store, by type
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
-        /// <param name="preOrderConfig">Update pre order config values</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="preOrderConfig"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultRestApiDefaultResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRestApiDefaultResponse>> UpdatePreOrderConfigAsyncWithHttpInfo (int? storeId, string deliveryType, PreOrderConfig preOrderConfig);
         /// <summary>
-        /// Update store by identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Group identifier</param>
-        /// <param name="store">Store</param>
+        /// <param name="storeId"></param>
+        /// <param name="store"></param>
         /// <returns>Task of RestApiResultStore</returns>
         System.Threading.Tasks.Task<RestApiResultStore> UpdateStoreAsync (int? storeId, StoreBase store);
 
         /// <summary>
-        /// Update store by identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Group identifier</param>
-        /// <param name="store">Store</param>
+        /// <param name="storeId"></param>
+        /// <param name="store"></param>
         /// <returns>Task of ApiResponse (RestApiResultStore)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStore>> UpdateStoreAsyncWithHttpInfo (int? storeId, StoreBase store);
         /// <summary>
-        /// Update store address
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="storeAddress">Store address</param>
+        /// <param name="storeId"></param>
+        /// <param name="storeAddress"></param>
         /// <returns>Task of RestApiResultStoreAddress</returns>
         System.Threading.Tasks.Task<RestApiResultStoreAddress> UpdateStoreAddressAsync (int? storeId, StoreAddressBase storeAddress);
 
         /// <summary>
-        /// Update store address
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="storeAddress">Store address</param>
+        /// <param name="storeId"></param>
+        /// <param name="storeAddress"></param>
         /// <returns>Task of ApiResponse (RestApiResultStoreAddress)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStoreAddress>> UpdateStoreAddressAsyncWithHttpInfo (int? storeId, StoreAddressBase storeAddress);
         /// <summary>
-        /// Update store address coordinates
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="coordinates">Store address coordinates</param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="coordinates"></param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>Task of RestApiResultCoordinates</returns>
         System.Threading.Tasks.Task<RestApiResultCoordinates> UpdateStoreAddressCoordinatesAsync (int? storeId, Coordinates coordinates, string appNameId = null);
 
         /// <summary>
-        /// Update store address coordinates
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="coordinates">Store address coordinates</param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="coordinates"></param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultCoordinates)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultCoordinates>> UpdateStoreAddressCoordinatesAsyncWithHttpInfo (int? storeId, Coordinates coordinates, string appNameId = null);
         /// <summary>
-        /// Update store address
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="address">Store address</param>
+        /// <param name="storeId"></param>
+        /// <param name="address"></param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> UpdateStoreAddressFormAsync (int? storeId, StoreAddressForm address);
 
         /// <summary>
-        /// Update store address
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="address">Store address</param>
+        /// <param name="storeId"></param>
+        /// <param name="address"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateStoreAddressFormAsyncWithHttpInfo (int? storeId, StoreAddressForm address);
         #endregion Asynchronous Operations
@@ -1671,10 +1671,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Archive store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns></returns>
         public void ArchiveStore (int? storeId)
         {
@@ -1682,10 +1682,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Archive store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> ArchiveStoreWithHttpInfo (int? storeId)
         {
@@ -1745,10 +1745,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Archive store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task ArchiveStoreAsync (int? storeId)
         {
@@ -1757,10 +1757,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Archive store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> ArchiveStoreAsyncWithHttpInfo (int? storeId)
         {
@@ -1820,11 +1820,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign Menu to Store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="menuId">Id of Menu to assign to store</param>
+        /// <param name="storeId"></param>
+        /// <param name="menuId"></param>
         /// <returns>RestApiArrayResultRestApiDefaultResponse</returns>
         public RestApiArrayResultRestApiDefaultResponse AssignMenu (int? storeId, int? menuId)
         {
@@ -1833,11 +1833,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign Menu to Store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="menuId">Id of Menu to assign to store</param>
+        /// <param name="storeId"></param>
+        /// <param name="menuId"></param>
         /// <returns>ApiResponse of RestApiArrayResultRestApiDefaultResponse</returns>
         public ApiResponse< RestApiArrayResultRestApiDefaultResponse > AssignMenuWithHttpInfo (int? storeId, int? menuId)
         {
@@ -1901,11 +1901,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign Menu to Store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="menuId">Id of Menu to assign to store</param>
+        /// <param name="storeId"></param>
+        /// <param name="menuId"></param>
         /// <returns>Task of RestApiArrayResultRestApiDefaultResponse</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultRestApiDefaultResponse> AssignMenuAsync (int? storeId, int? menuId)
         {
@@ -1915,11 +1915,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign Menu to Store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="menuId">Id of Menu to assign to store</param>
+        /// <param name="storeId"></param>
+        /// <param name="menuId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultRestApiDefaultResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRestApiDefaultResponse>> AssignMenuAsyncWithHttpInfo (int? storeId, int? menuId)
         {
@@ -1983,11 +1983,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Clone store with store clone settings 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="settings">Settings for cloning the store</param>
+        /// <param name="storeId"></param>
+        /// <param name="settings"></param>
         /// <returns>RestApiResultStore</returns>
         public RestApiResultStore CloneStore (int? storeId, StoreCloneSettings settings)
         {
@@ -1996,11 +1996,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Clone store with store clone settings 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="settings">Settings for cloning the store</param>
+        /// <param name="storeId"></param>
+        /// <param name="settings"></param>
         /// <returns>ApiResponse of RestApiResultStore</returns>
         public ApiResponse< RestApiResultStore > CloneStoreWithHttpInfo (int? storeId, StoreCloneSettings settings)
         {
@@ -2076,11 +2076,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Clone store with store clone settings 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="settings">Settings for cloning the store</param>
+        /// <param name="storeId"></param>
+        /// <param name="settings"></param>
         /// <returns>Task of RestApiResultStore</returns>
         public async System.Threading.Tasks.Task<RestApiResultStore> CloneStoreAsync (int? storeId, StoreCloneSettings settings)
         {
@@ -2090,11 +2090,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Clone store with store clone settings 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="settings">Settings for cloning the store</param>
+        /// <param name="storeId"></param>
+        /// <param name="settings"></param>
         /// <returns>Task of ApiResponse (RestApiResultStore)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStore>> CloneStoreAsyncWithHttpInfo (int? storeId, StoreCloneSettings settings)
         {
@@ -2170,11 +2170,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Configure Store Service Charge; Idempotent Operation 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="serviceCharge">Service charge</param>
+        /// <param name="storeId"></param>
+        /// <param name="serviceCharge"></param>
         /// <returns>RestApiResultServiceCharge</returns>
         public RestApiResultServiceCharge ConfigureStoreServiceCharge (int? storeId, ServiceCharge serviceCharge)
         {
@@ -2183,11 +2183,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Configure Store Service Charge; Idempotent Operation 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="serviceCharge">Service charge</param>
+        /// <param name="storeId"></param>
+        /// <param name="serviceCharge"></param>
         /// <returns>ApiResponse of RestApiResultServiceCharge</returns>
         public ApiResponse< RestApiResultServiceCharge > ConfigureStoreServiceChargeWithHttpInfo (int? storeId, ServiceCharge serviceCharge)
         {
@@ -2263,11 +2263,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Configure Store Service Charge; Idempotent Operation 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="serviceCharge">Service charge</param>
+        /// <param name="storeId"></param>
+        /// <param name="serviceCharge"></param>
         /// <returns>Task of RestApiResultServiceCharge</returns>
         public async System.Threading.Tasks.Task<RestApiResultServiceCharge> ConfigureStoreServiceChargeAsync (int? storeId, ServiceCharge serviceCharge)
         {
@@ -2277,11 +2277,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Configure Store Service Charge; Idempotent Operation 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="serviceCharge">Service charge</param>
+        /// <param name="storeId"></param>
+        /// <param name="serviceCharge"></param>
         /// <returns>Task of ApiResponse (RestApiResultServiceCharge)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultServiceCharge>> ConfigureStoreServiceChargeAsyncWithHttpInfo (int? storeId, ServiceCharge serviceCharge)
         {
@@ -2357,11 +2357,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create Business Hours Override for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="businessHoursOverride">Business Hours Override</param>
+        /// <param name="storeId"></param>
+        /// <param name="businessHoursOverride"></param>
         /// <returns>RestApiResultBusinessHoursOverride</returns>
         public RestApiResultBusinessHoursOverride CreateBusinessHoursOverrideByStoreId (int? storeId, BusinessHoursOverrideBase businessHoursOverride)
         {
@@ -2370,11 +2370,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create Business Hours Override for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="businessHoursOverride">Business Hours Override</param>
+        /// <param name="storeId"></param>
+        /// <param name="businessHoursOverride"></param>
         /// <returns>ApiResponse of RestApiResultBusinessHoursOverride</returns>
         public ApiResponse< RestApiResultBusinessHoursOverride > CreateBusinessHoursOverrideByStoreIdWithHttpInfo (int? storeId, BusinessHoursOverrideBase businessHoursOverride)
         {
@@ -2450,11 +2450,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create Business Hours Override for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="businessHoursOverride">Business Hours Override</param>
+        /// <param name="storeId"></param>
+        /// <param name="businessHoursOverride"></param>
         /// <returns>Task of RestApiResultBusinessHoursOverride</returns>
         public async System.Threading.Tasks.Task<RestApiResultBusinessHoursOverride> CreateBusinessHoursOverrideByStoreIdAsync (int? storeId, BusinessHoursOverrideBase businessHoursOverride)
         {
@@ -2464,11 +2464,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create Business Hours Override for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="businessHoursOverride">Business Hours Override</param>
+        /// <param name="storeId"></param>
+        /// <param name="businessHoursOverride"></param>
         /// <returns>Task of ApiResponse (RestApiResultBusinessHoursOverride)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultBusinessHoursOverride>> CreateBusinessHoursOverrideByStoreIdAsyncWithHttpInfo (int? storeId, BusinessHoursOverrideBase businessHoursOverride)
         {
@@ -2544,11 +2544,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create store with Store Group identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group identifier</param>
-        /// <param name="store">Store</param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="store"></param>
         /// <returns>RestApiResultStore</returns>
         public RestApiResultStore CreateStore (int? storeGroupId, StoreCreateBase store)
         {
@@ -2557,11 +2557,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create store with Store Group identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group identifier</param>
-        /// <param name="store">Store</param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="store"></param>
         /// <returns>ApiResponse of RestApiResultStore</returns>
         public ApiResponse< RestApiResultStore > CreateStoreWithHttpInfo (int? storeGroupId, StoreCreateBase store)
         {
@@ -2637,11 +2637,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create store with Store Group identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group identifier</param>
-        /// <param name="store">Store</param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="store"></param>
         /// <returns>Task of RestApiResultStore</returns>
         public async System.Threading.Tasks.Task<RestApiResultStore> CreateStoreAsync (int? storeGroupId, StoreCreateBase store)
         {
@@ -2651,11 +2651,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create store with Store Group identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeGroupId">Store Group identifier</param>
-        /// <param name="store">Store</param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="store"></param>
         /// <returns>Task of ApiResponse (RestApiResultStore)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStore>> CreateStoreAsyncWithHttpInfo (int? storeGroupId, StoreCreateBase store)
         {
@@ -2731,7 +2731,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete Business Hours Override for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
@@ -2744,7 +2744,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete Business Hours Override for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
@@ -2812,7 +2812,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete Business Hours Override for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
@@ -2826,7 +2826,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete Business Hours Override for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
@@ -2894,10 +2894,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Stores Bank Account Id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiResultAssignedBankAccount</returns>
         public RestApiResultAssignedBankAccount GetBankAccountForStore (int? storeId)
         {
@@ -2906,10 +2906,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Stores Bank Account Id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultAssignedBankAccount</returns>
         public ApiResponse< RestApiResultAssignedBankAccount > GetBankAccountForStoreWithHttpInfo (int? storeId)
         {
@@ -2969,10 +2969,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Stores Bank Account Id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiResultAssignedBankAccount</returns>
         public async System.Threading.Tasks.Task<RestApiResultAssignedBankAccount> GetBankAccountForStoreAsync (int? storeId)
         {
@@ -2982,10 +2982,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Stores Bank Account Id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultAssignedBankAccount)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAssignedBankAccount>> GetBankAccountForStoreAsyncWithHttpInfo (int? storeId)
         {
@@ -3045,11 +3045,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Business hours 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery type</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>RestApiArrayResultBusinessHoursPeriod</returns>
         public RestApiArrayResultBusinessHoursPeriod GetBusinessHours (int? storeId, string deliveryType)
         {
@@ -3058,11 +3058,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Business hours 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery type</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>ApiResponse of RestApiArrayResultBusinessHoursPeriod</returns>
         public ApiResponse< RestApiArrayResultBusinessHoursPeriod > GetBusinessHoursWithHttpInfo (int? storeId, string deliveryType)
         {
@@ -3126,11 +3126,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Business hours 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery type</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>Task of RestApiArrayResultBusinessHoursPeriod</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultBusinessHoursPeriod> GetBusinessHoursAsync (int? storeId, string deliveryType)
         {
@@ -3140,11 +3140,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Business hours 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery type</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultBusinessHoursPeriod)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultBusinessHoursPeriod>> GetBusinessHoursAsyncWithHttpInfo (int? storeId, string deliveryType)
         {
@@ -3208,13 +3208,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get business hours overrides by store identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="after">Return results that ended after this datetime. Default value is the current datetime. (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="after"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultBusinessHoursOverride</returns>
         public RestApiPaginationResultBusinessHoursOverride GetBusinessHoursOverrideByStoreId (int? storeId, DateTime? after = null, int? page = null, int? limit = null)
         {
@@ -3223,13 +3223,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get business hours overrides by store identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="after">Return results that ended after this datetime. Default value is the current datetime. (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="after"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultBusinessHoursOverride</returns>
         public ApiResponse< RestApiPaginationResultBusinessHoursOverride > GetBusinessHoursOverrideByStoreIdWithHttpInfo (int? storeId, DateTime? after = null, int? page = null, int? limit = null)
         {
@@ -3292,13 +3292,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get business hours overrides by store identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="after">Return results that ended after this datetime. Default value is the current datetime. (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="after"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultBusinessHoursOverride</returns>
         public async System.Threading.Tasks.Task<RestApiPaginationResultBusinessHoursOverride> GetBusinessHoursOverrideByStoreIdAsync (int? storeId, DateTime? after = null, int? page = null, int? limit = null)
         {
@@ -3308,13 +3308,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get business hours overrides by store identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="after">Return results that ended after this datetime. Default value is the current datetime. (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="after"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultBusinessHoursOverride)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultBusinessHoursOverride>> GetBusinessHoursOverrideByStoreIdAsyncWithHttpInfo (int? storeId, DateTime? after = null, int? page = null, int? limit = null)
         {
@@ -3377,11 +3377,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get store end of day report 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="date">Store identifier (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>RestApiResultStoreEndOfDayReport</returns>
         public RestApiResultStoreEndOfDayReport GetEndOfDayReport (int? storeId, DateTime? date = null)
         {
@@ -3390,11 +3390,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get store end of day report 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="date">Store identifier (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultStoreEndOfDayReport</returns>
         public ApiResponse< RestApiResultStoreEndOfDayReport > GetEndOfDayReportWithHttpInfo (int? storeId, DateTime? date = null)
         {
@@ -3455,11 +3455,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get store end of day report 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="date">Store identifier (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>Task of RestApiResultStoreEndOfDayReport</returns>
         public async System.Threading.Tasks.Task<RestApiResultStoreEndOfDayReport> GetEndOfDayReportAsync (int? storeId, DateTime? date = null)
         {
@@ -3469,11 +3469,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get store end of day report 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="date">Store identifier (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultStoreEndOfDayReport)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStoreEndOfDayReport>> GetEndOfDayReportAsyncWithHttpInfo (int? storeId, DateTime? date = null)
         {
@@ -3534,11 +3534,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the pre order config for a store, by type 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>RestApiResultPreOrderConfig</returns>
         public RestApiResultPreOrderConfig GetPreOrderConfig (int? storeId, string deliveryType)
         {
@@ -3547,11 +3547,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the pre order config for a store, by type 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>ApiResponse of RestApiResultPreOrderConfig</returns>
         public ApiResponse< RestApiResultPreOrderConfig > GetPreOrderConfigWithHttpInfo (int? storeId, string deliveryType)
         {
@@ -3615,11 +3615,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the pre order config for a store, by type 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>Task of RestApiResultPreOrderConfig</returns>
         public async System.Threading.Tasks.Task<RestApiResultPreOrderConfig> GetPreOrderConfigAsync (int? storeId, string deliveryType)
         {
@@ -3629,11 +3629,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the pre order config for a store, by type 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>Task of ApiResponse (RestApiResultPreOrderConfig)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultPreOrderConfig>> GetPreOrderConfigAsyncWithHttpInfo (int? storeId, string deliveryType)
         {
@@ -3697,11 +3697,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the Preview times of the pre-order configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <param name="preOrderConfigLeadTimeMinutes">Lead Time in Minutes (optional)</param>
         /// <param name="preOrderConfigIntervalMinutes">Interval in minutes (optional)</param>
         /// <param name="preOrderConfigMaxOrderAheadDays">Max Days to order ahead (optional)</param>
@@ -3720,11 +3720,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the Preview times of the pre-order configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <param name="preOrderConfigLeadTimeMinutes">Lead Time in Minutes (optional)</param>
         /// <param name="preOrderConfigIntervalMinutes">Interval in minutes (optional)</param>
         /// <param name="preOrderConfigMaxOrderAheadDays">Max Days to order ahead (optional)</param>
@@ -3813,11 +3813,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the Preview times of the pre-order configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <param name="preOrderConfigLeadTimeMinutes">Lead Time in Minutes (optional)</param>
         /// <param name="preOrderConfigIntervalMinutes">Interval in minutes (optional)</param>
         /// <param name="preOrderConfigMaxOrderAheadDays">Max Days to order ahead (optional)</param>
@@ -3837,11 +3837,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get the Preview times of the pre-order configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <param name="preOrderConfigLeadTimeMinutes">Lead Time in Minutes (optional)</param>
         /// <param name="preOrderConfigIntervalMinutes">Interval in minutes (optional)</param>
         /// <param name="preOrderConfigMaxOrderAheadDays">Max Days to order ahead (optional)</param>
@@ -3930,11 +3930,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get processing fee configs by store identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>RestApiArrayResultProcessingFeeConfig</returns>
         public RestApiArrayResultProcessingFeeConfig GetProcessingFeeConfigsByStoreId (int? storeId, string appNameId = null)
         {
@@ -3943,11 +3943,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get processing fee configs by store identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultProcessingFeeConfig</returns>
         public ApiResponse< RestApiArrayResultProcessingFeeConfig > GetProcessingFeeConfigsByStoreIdWithHttpInfo (int? storeId, string appNameId = null)
         {
@@ -4008,11 +4008,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get processing fee configs by store identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>Task of RestApiArrayResultProcessingFeeConfig</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAsync (int? storeId, string appNameId = null)
         {
@@ -4022,11 +4022,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get processing fee configs by store identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultProcessingFeeConfig)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdAsyncWithHttpInfo (int? storeId, string appNameId = null)
         {
@@ -4087,12 +4087,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get processing fee configs by store identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <param name="paymentAccountType"></param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>RestApiResultProcessingFeeConfig</returns>
         public RestApiResultProcessingFeeConfig GetProcessingFeeConfigsByStoreIdAndPaymentAccountType (int? storeId, string paymentAccountType, string appNameId = null)
         {
@@ -4101,12 +4101,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get processing fee configs by store identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <param name="paymentAccountType"></param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultProcessingFeeConfig</returns>
         public ApiResponse< RestApiResultProcessingFeeConfig > GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeWithHttpInfo (int? storeId, string paymentAccountType, string appNameId = null)
         {
@@ -4171,12 +4171,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get processing fee configs by store identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <param name="paymentAccountType"></param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>Task of RestApiResultProcessingFeeConfig</returns>
         public async System.Threading.Tasks.Task<RestApiResultProcessingFeeConfig> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsync (int? storeId, string paymentAccountType, string appNameId = null)
         {
@@ -4186,12 +4186,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get processing fee configs by store identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <param name="paymentAccountType"></param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultProcessingFeeConfig)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultProcessingFeeConfig>> GetProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsyncWithHttpInfo (int? storeId, string paymentAccountType, string appNameId = null)
         {
@@ -4256,10 +4256,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get store by identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiResultStore</returns>
         public RestApiResultStore GetStoreById (int? storeId)
         {
@@ -4268,10 +4268,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get store by identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultStore</returns>
         public ApiResponse< RestApiResultStore > GetStoreByIdWithHttpInfo (int? storeId)
         {
@@ -4331,10 +4331,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get store by identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiResultStore</returns>
         public async System.Threading.Tasks.Task<RestApiResultStore> GetStoreByIdAsync (int? storeId)
         {
@@ -4344,10 +4344,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get store by identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultStore)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStore>> GetStoreByIdAsyncWithHttpInfo (int? storeId)
         {
@@ -4407,10 +4407,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Retrieve Store feeConfig 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>StoreFeeConfig</returns>
         public StoreFeeConfig GetStoreFeeConfig (int? storeId)
         {
@@ -4419,10 +4419,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Retrieve Store feeConfig 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of StoreFeeConfig</returns>
         public ApiResponse< StoreFeeConfig > GetStoreFeeConfigWithHttpInfo (int? storeId)
         {
@@ -4482,10 +4482,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Retrieve Store feeConfig 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of StoreFeeConfig</returns>
         public async System.Threading.Tasks.Task<StoreFeeConfig> GetStoreFeeConfigAsync (int? storeId)
         {
@@ -4495,10 +4495,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Retrieve Store feeConfig 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (StoreFeeConfig)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<StoreFeeConfig>> GetStoreFeeConfigAsyncWithHttpInfo (int? storeId)
         {
@@ -4558,10 +4558,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all stores by app name id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <param name="storeNameQuery"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
@@ -4573,10 +4573,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all stores by app name id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <param name="storeNameQuery"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
@@ -4642,10 +4642,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all stores by app name id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <param name="storeNameQuery"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
@@ -4658,10 +4658,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all stores by app name id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <param name="storeNameQuery"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
@@ -4727,11 +4727,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get stores statistics by app name id and storeIds 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Ids</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiArrayResultStoreStatistics</returns>
         public RestApiArrayResultStoreStatistics GetStoreNetSales (string appId, List<int?> storeId)
         {
@@ -4740,11 +4740,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get stores statistics by app name id and storeIds 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Ids</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiArrayResultStoreStatistics</returns>
         public ApiResponse< RestApiArrayResultStoreStatistics > GetStoreNetSalesWithHttpInfo (string appId, List<int?> storeId)
         {
@@ -4808,11 +4808,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get stores statistics by app name id and storeIds 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Ids</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiArrayResultStoreStatistics</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultStoreStatistics> GetStoreNetSalesAsync (string appId, List<int?> storeId)
         {
@@ -4822,11 +4822,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get stores statistics by app name id and storeIds 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Ids</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultStoreStatistics)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreStatistics>> GetStoreNetSalesAsyncWithHttpInfo (string appId, List<int?> storeId)
         {
@@ -4890,10 +4890,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Retrieve Store Service Charge 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>ServiceCharge</returns>
         public ServiceCharge GetStoreServiceCharge (int? storeId)
         {
@@ -4902,10 +4902,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Retrieve Store Service Charge 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of ServiceCharge</returns>
         public ApiResponse< ServiceCharge > GetStoreServiceChargeWithHttpInfo (int? storeId)
         {
@@ -4965,10 +4965,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Retrieve Store Service Charge 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ServiceCharge</returns>
         public async System.Threading.Tasks.Task<ServiceCharge> GetStoreServiceChargeAsync (int? storeId)
         {
@@ -4978,10 +4978,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Retrieve Store Service Charge 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (ServiceCharge)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ServiceCharge>> GetStoreServiceChargeAsyncWithHttpInfo (int? storeId)
         {
@@ -5041,13 +5041,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all stores, excluding archived ones 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="storeGroupId">Store Group Id (optional)</param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="storeGroupId"> (optional)</param>
         /// <returns>RestApiPaginationResultStore</returns>
         public RestApiPaginationResultStore GetStores (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null)
         {
@@ -5056,13 +5056,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all stores, excluding archived ones 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="storeGroupId">Store Group Id (optional)</param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="storeGroupId"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultStore</returns>
         public ApiResponse< RestApiPaginationResultStore > GetStoresWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null)
         {
@@ -5122,13 +5122,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all stores, excluding archived ones 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="storeGroupId">Store Group Id (optional)</param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="storeGroupId"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultStore</returns>
         public async System.Threading.Tasks.Task<RestApiPaginationResultStore> GetStoresAsync (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null)
         {
@@ -5138,13 +5138,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all stores, excluding archived ones 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
-        /// <param name="storeGroupId">Store Group Id (optional)</param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="storeGroupId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStore)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStore>> GetStoresAsyncWithHttpInfo (string searchQuery = null, int? page = null, int? limit = null, int? storeGroupId = null)
         {
@@ -5204,13 +5204,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all stores by app name id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultStore</returns>
         public RestApiPaginationResultStore GetStoresByAppId (string appId, string searchQuery = null, int? page = null, int? limit = null)
         {
@@ -5219,13 +5219,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all stores by app name id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultStore</returns>
         public ApiResponse< RestApiPaginationResultStore > GetStoresByAppIdWithHttpInfo (string appId, string searchQuery = null, int? page = null, int? limit = null)
         {
@@ -5288,13 +5288,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all stores by app name id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultStore</returns>
         public async System.Threading.Tasks.Task<RestApiPaginationResultStore> GetStoresByAppIdAsync (string appId, string searchQuery = null, int? page = null, int? limit = null)
         {
@@ -5304,13 +5304,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all stores by app name id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="searchQuery">Search query (optional)</param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStore)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStore>> GetStoresByAppIdAsyncWithHttpInfo (string appId, string searchQuery = null, int? page = null, int? limit = null)
         {
@@ -5373,13 +5373,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get store validation by storeIds 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultStoreValidationConfig</returns>
         public RestApiPaginationResultStoreValidationConfig GetStoresByStoreIdWithValidations (List<int?> storeId, string appId, int? page = null, int? limit = null)
         {
@@ -5388,13 +5388,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get store validation by storeIds 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultStoreValidationConfig</returns>
         public ApiResponse< RestApiPaginationResultStoreValidationConfig > GetStoresByStoreIdWithValidationsWithHttpInfo (List<int?> storeId, string appId, int? page = null, int? limit = null)
         {
@@ -5460,13 +5460,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get store validation by storeIds 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultStoreValidationConfig</returns>
         public async System.Threading.Tasks.Task<RestApiPaginationResultStoreValidationConfig> GetStoresByStoreIdWithValidationsAsync (List<int?> storeId, string appId, int? page = null, int? limit = null)
         {
@@ -5476,13 +5476,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get store validation by storeIds 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <param name="appId"></param>
-        /// <param name="page">Requested page index (optional)</param>
-        /// <param name="limit">Requested page limit (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStoreValidationConfig)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStoreValidationConfig>> GetStoresByStoreIdWithValidationsAsyncWithHttpInfo (List<int?> storeId, string appId, int? page = null, int? limit = null)
         {
@@ -5548,10 +5548,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Publish store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns></returns>
         public void PublishStore (int? storeId)
         {
@@ -5559,10 +5559,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Publish store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PublishStoreWithHttpInfo (int? storeId)
         {
@@ -5622,10 +5622,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Publish store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PublishStoreAsync (int? storeId)
         {
@@ -5634,10 +5634,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Publish store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PublishStoreAsyncWithHttpInfo (int? storeId)
         {
@@ -5697,12 +5697,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set Business hours 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery type</param>
-        /// <param name="businessHoursPeriod">Business Hours Period</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="businessHoursPeriod"></param>
         /// <returns>RestApiResultBusinessHoursPeriod</returns>
         public RestApiResultBusinessHoursPeriod SetBusinessHours (int? storeId, string deliveryType, BusinessHoursPeriodBase businessHoursPeriod)
         {
@@ -5711,12 +5711,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set Business hours 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery type</param>
-        /// <param name="businessHoursPeriod">Business Hours Period</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="businessHoursPeriod"></param>
         /// <returns>ApiResponse of RestApiResultBusinessHoursPeriod</returns>
         public ApiResponse< RestApiResultBusinessHoursPeriod > SetBusinessHoursWithHttpInfo (int? storeId, string deliveryType, BusinessHoursPeriodBase businessHoursPeriod)
         {
@@ -5796,12 +5796,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set Business hours 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery type</param>
-        /// <param name="businessHoursPeriod">Business Hours Period</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="businessHoursPeriod"></param>
         /// <returns>Task of RestApiResultBusinessHoursPeriod</returns>
         public async System.Threading.Tasks.Task<RestApiResultBusinessHoursPeriod> SetBusinessHoursAsync (int? storeId, string deliveryType, BusinessHoursPeriodBase businessHoursPeriod)
         {
@@ -5811,12 +5811,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set Business hours 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery type</param>
-        /// <param name="businessHoursPeriod">Business Hours Period</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="businessHoursPeriod"></param>
         /// <returns>Task of ApiResponse (RestApiResultBusinessHoursPeriod)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultBusinessHoursPeriod>> SetBusinessHoursAsyncWithHttpInfo (int? storeId, string deliveryType, BusinessHoursPeriodBase businessHoursPeriod)
         {
@@ -5896,12 +5896,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// UPDATE pre order config for a store, by type 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
-        /// <param name="enabled">Update pre order config values</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="enabled"></param>
         /// <returns>RestApiArrayResultRestApiDefaultResponse</returns>
         public RestApiArrayResultRestApiDefaultResponse SetPreOrdeEnabled (int? storeId, string deliveryType, bool? enabled)
         {
@@ -5910,12 +5910,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// UPDATE pre order config for a store, by type 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
-        /// <param name="enabled">Update pre order config values</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="enabled"></param>
         /// <returns>ApiResponse of RestApiArrayResultRestApiDefaultResponse</returns>
         public ApiResponse< RestApiArrayResultRestApiDefaultResponse > SetPreOrdeEnabledWithHttpInfo (int? storeId, string deliveryType, bool? enabled)
         {
@@ -5983,12 +5983,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// UPDATE pre order config for a store, by type 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
-        /// <param name="enabled">Update pre order config values</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="enabled"></param>
         /// <returns>Task of RestApiArrayResultRestApiDefaultResponse</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultRestApiDefaultResponse> SetPreOrdeEnabledAsync (int? storeId, string deliveryType, bool? enabled)
         {
@@ -5998,12 +5998,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// UPDATE pre order config for a store, by type 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
-        /// <param name="enabled">Update pre order config values</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="enabled"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultRestApiDefaultResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRestApiDefaultResponse>> SetPreOrdeEnabledAsyncWithHttpInfo (int? storeId, string deliveryType, bool? enabled)
         {
@@ -6071,10 +6071,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Unpublish store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns></returns>
         public void UnpublishStore (int? storeId)
         {
@@ -6082,10 +6082,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Unpublish store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> UnpublishStoreWithHttpInfo (int? storeId)
         {
@@ -6145,10 +6145,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Unpublish store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UnpublishStoreAsync (int? storeId)
         {
@@ -6157,10 +6157,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Unpublish store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UnpublishStoreAsyncWithHttpInfo (int? storeId)
         {
@@ -6220,12 +6220,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// UPDATE pre order config for a store, by type 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
-        /// <param name="preOrderConfig">Update pre order config values</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="preOrderConfig"></param>
         /// <returns>RestApiArrayResultRestApiDefaultResponse</returns>
         public RestApiArrayResultRestApiDefaultResponse UpdatePreOrderConfig (int? storeId, string deliveryType, PreOrderConfig preOrderConfig)
         {
@@ -6234,12 +6234,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// UPDATE pre order config for a store, by type 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
-        /// <param name="preOrderConfig">Update pre order config values</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="preOrderConfig"></param>
         /// <returns>ApiResponse of RestApiArrayResultRestApiDefaultResponse</returns>
         public ApiResponse< RestApiArrayResultRestApiDefaultResponse > UpdatePreOrderConfigWithHttpInfo (int? storeId, string deliveryType, PreOrderConfig preOrderConfig)
         {
@@ -6319,12 +6319,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// UPDATE pre order config for a store, by type 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
-        /// <param name="preOrderConfig">Update pre order config values</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="preOrderConfig"></param>
         /// <returns>Task of RestApiArrayResultRestApiDefaultResponse</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultRestApiDefaultResponse> UpdatePreOrderConfigAsync (int? storeId, string deliveryType, PreOrderConfig preOrderConfig)
         {
@@ -6334,12 +6334,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// UPDATE pre order config for a store, by type 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">\&quot;delivery\&quot; or \&quot;pickup\&quot;</param>
-        /// <param name="preOrderConfig">Update pre order config values</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="preOrderConfig"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultRestApiDefaultResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRestApiDefaultResponse>> UpdatePreOrderConfigAsyncWithHttpInfo (int? storeId, string deliveryType, PreOrderConfig preOrderConfig)
         {
@@ -6419,11 +6419,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update store by identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Group identifier</param>
-        /// <param name="store">Store</param>
+        /// <param name="storeId"></param>
+        /// <param name="store"></param>
         /// <returns>RestApiResultStore</returns>
         public RestApiResultStore UpdateStore (int? storeId, StoreBase store)
         {
@@ -6432,11 +6432,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update store by identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Group identifier</param>
-        /// <param name="store">Store</param>
+        /// <param name="storeId"></param>
+        /// <param name="store"></param>
         /// <returns>ApiResponse of RestApiResultStore</returns>
         public ApiResponse< RestApiResultStore > UpdateStoreWithHttpInfo (int? storeId, StoreBase store)
         {
@@ -6512,11 +6512,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update store by identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Group identifier</param>
-        /// <param name="store">Store</param>
+        /// <param name="storeId"></param>
+        /// <param name="store"></param>
         /// <returns>Task of RestApiResultStore</returns>
         public async System.Threading.Tasks.Task<RestApiResultStore> UpdateStoreAsync (int? storeId, StoreBase store)
         {
@@ -6526,11 +6526,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update store by identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Group identifier</param>
-        /// <param name="store">Store</param>
+        /// <param name="storeId"></param>
+        /// <param name="store"></param>
         /// <returns>Task of ApiResponse (RestApiResultStore)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStore>> UpdateStoreAsyncWithHttpInfo (int? storeId, StoreBase store)
         {
@@ -6606,11 +6606,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update store address 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="storeAddress">Store address</param>
+        /// <param name="storeId"></param>
+        /// <param name="storeAddress"></param>
         /// <returns>RestApiResultStoreAddress</returns>
         public RestApiResultStoreAddress UpdateStoreAddress (int? storeId, StoreAddressBase storeAddress)
         {
@@ -6619,11 +6619,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update store address 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="storeAddress">Store address</param>
+        /// <param name="storeId"></param>
+        /// <param name="storeAddress"></param>
         /// <returns>ApiResponse of RestApiResultStoreAddress</returns>
         public ApiResponse< RestApiResultStoreAddress > UpdateStoreAddressWithHttpInfo (int? storeId, StoreAddressBase storeAddress)
         {
@@ -6699,11 +6699,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update store address 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="storeAddress">Store address</param>
+        /// <param name="storeId"></param>
+        /// <param name="storeAddress"></param>
         /// <returns>Task of RestApiResultStoreAddress</returns>
         public async System.Threading.Tasks.Task<RestApiResultStoreAddress> UpdateStoreAddressAsync (int? storeId, StoreAddressBase storeAddress)
         {
@@ -6713,11 +6713,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update store address 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="storeAddress">Store address</param>
+        /// <param name="storeId"></param>
+        /// <param name="storeAddress"></param>
         /// <returns>Task of ApiResponse (RestApiResultStoreAddress)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStoreAddress>> UpdateStoreAddressAsyncWithHttpInfo (int? storeId, StoreAddressBase storeAddress)
         {
@@ -6793,12 +6793,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update store address coordinates 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="coordinates">Store address coordinates</param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="coordinates"></param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>RestApiResultCoordinates</returns>
         public RestApiResultCoordinates UpdateStoreAddressCoordinates (int? storeId, Coordinates coordinates, string appNameId = null)
         {
@@ -6807,12 +6807,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update store address coordinates 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="coordinates">Store address coordinates</param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="coordinates"></param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultCoordinates</returns>
         public ApiResponse< RestApiResultCoordinates > UpdateStoreAddressCoordinatesWithHttpInfo (int? storeId, Coordinates coordinates, string appNameId = null)
         {
@@ -6889,12 +6889,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update store address coordinates 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="coordinates">Store address coordinates</param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="coordinates"></param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>Task of RestApiResultCoordinates</returns>
         public async System.Threading.Tasks.Task<RestApiResultCoordinates> UpdateStoreAddressCoordinatesAsync (int? storeId, Coordinates coordinates, string appNameId = null)
         {
@@ -6904,12 +6904,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update store address coordinates 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="coordinates">Store address coordinates</param>
-        /// <param name="appNameId">App Name Id(Not used, still here for compatability reasons) (optional)</param>
+        /// <param name="storeId"></param>
+        /// <param name="coordinates"></param>
+        /// <param name="appNameId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultCoordinates)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultCoordinates>> UpdateStoreAddressCoordinatesAsyncWithHttpInfo (int? storeId, Coordinates coordinates, string appNameId = null)
         {
@@ -6986,11 +6986,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update store address 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="address">Store address</param>
+        /// <param name="storeId"></param>
+        /// <param name="address"></param>
         /// <returns>Object</returns>
         public Object UpdateStoreAddressForm (int? storeId, StoreAddressForm address)
         {
@@ -6999,11 +6999,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update store address 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="address">Store address</param>
+        /// <param name="storeId"></param>
+        /// <param name="address"></param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > UpdateStoreAddressFormWithHttpInfo (int? storeId, StoreAddressForm address)
         {
@@ -7079,11 +7079,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update store address 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="address">Store address</param>
+        /// <param name="storeId"></param>
+        /// <param name="address"></param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> UpdateStoreAddressFormAsync (int? storeId, StoreAddressForm address)
         {
@@ -7093,11 +7093,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update store address 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="address">Store address</param>
+        /// <param name="storeId"></param>
+        /// <param name="address"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateStoreAddressFormAsyncWithHttpInfo (int? storeId, StoreAddressForm address)
         {

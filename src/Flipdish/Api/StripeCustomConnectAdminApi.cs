@@ -25,47 +25,47 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create a new Bank Account and Stripe connected account
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="accounts">Accounts to be initialized in stripe</param>
+        /// <param name="accounts"></param>
         /// <returns>RestApiResultBankAccountDetail</returns>
         RestApiResultBankAccountDetail InitializeBankAccountConnectedAccount (List<int?> accounts);
 
         /// <summary>
-        /// Create a new Bank Account and Stripe connected account
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="accounts">Accounts to be initialized in stripe</param>
+        /// <param name="accounts"></param>
         /// <returns>ApiResponse of RestApiResultBankAccountDetail</returns>
         ApiResponse<RestApiResultBankAccountDetail> InitializeBankAccountConnectedAccountWithHttpInfo (List<int?> accounts);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create a new Bank Account and Stripe connected account
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="accounts">Accounts to be initialized in stripe</param>
+        /// <param name="accounts"></param>
         /// <returns>Task of RestApiResultBankAccountDetail</returns>
         System.Threading.Tasks.Task<RestApiResultBankAccountDetail> InitializeBankAccountConnectedAccountAsync (List<int?> accounts);
 
         /// <summary>
-        /// Create a new Bank Account and Stripe connected account
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="accounts">Accounts to be initialized in stripe</param>
+        /// <param name="accounts"></param>
         /// <returns>Task of ApiResponse (RestApiResultBankAccountDetail)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultBankAccountDetail>> InitializeBankAccountConnectedAccountAsyncWithHttpInfo (List<int?> accounts);
         #endregion Asynchronous Operations
@@ -169,10 +169,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new Bank Account and Stripe connected account 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="accounts">Accounts to be initialized in stripe</param>
+        /// <param name="accounts"></param>
         /// <returns>RestApiResultBankAccountDetail</returns>
         public RestApiResultBankAccountDetail InitializeBankAccountConnectedAccount (List<int?> accounts)
         {
@@ -181,10 +181,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new Bank Account and Stripe connected account 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="accounts">Accounts to be initialized in stripe</param>
+        /// <param name="accounts"></param>
         /// <returns>ApiResponse of RestApiResultBankAccountDetail</returns>
         public ApiResponse< RestApiResultBankAccountDetail > InitializeBankAccountConnectedAccountWithHttpInfo (List<int?> accounts)
         {
@@ -256,10 +256,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new Bank Account and Stripe connected account 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="accounts">Accounts to be initialized in stripe</param>
+        /// <param name="accounts"></param>
         /// <returns>Task of RestApiResultBankAccountDetail</returns>
         public async System.Threading.Tasks.Task<RestApiResultBankAccountDetail> InitializeBankAccountConnectedAccountAsync (List<int?> accounts)
         {
@@ -269,10 +269,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new Bank Account and Stripe connected account 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="accounts">Accounts to be initialized in stripe</param>
+        /// <param name="accounts"></param>
         /// <returns>Task of ApiResponse (RestApiResultBankAccountDetail)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultBankAccountDetail>> InitializeBankAccountConnectedAccountAsyncWithHttpInfo (List<int?> accounts)
         {

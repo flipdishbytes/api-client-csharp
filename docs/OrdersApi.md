@@ -4,28 +4,26 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AcceptOrder**](OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
-[**DispatchOrder**](OrdersApi.md#dispatchorder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
-[**GetDeliveryInformation**](OrdersApi.md#getdeliveryinformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | Get order delivery information
-[**GetFulfillmentState**](OrdersApi.md#getfulfillmentstate) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state | Get order fulfillment state
-[**GetFulfillmentStatusWithDetailsAndActions**](OrdersApi.md#getfulfillmentstatuswithdetailsandactions) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state/details | Get order fulfillment state with actionable details like default next state
-[**GetOrderById**](OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | Get order by ID
-[**GetOrders**](OrdersApi.md#getorders) | **GET** /api/v1.0/orders | Get orders by filter
-[**GetOrdersSummary**](OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
-[**RefundOrder**](OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | Refund order
-[**RejectOrder**](OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
-[**SearchFulfillmentStatuses**](OrdersApi.md#searchfulfillmentstatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | Get fulfillment status for a list of orders
-[**UpdateDeliveryInformation**](OrdersApi.md#updatedeliveryinformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
-[**UpdateFulfillmentState**](OrdersApi.md#updatefulfillmentstate) | **POST** /api/v1.0/orders/{orderId}/fulfillment/state | Update fulfillment status information to an order
+[**AcceptOrder**](OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | 
+[**DispatchOrder**](OrdersApi.md#dispatchorder) | **POST** /api/v1.0/orders/{id}/dispatch | 
+[**GetDeliveryInformation**](OrdersApi.md#getdeliveryinformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | 
+[**GetFulfillmentState**](OrdersApi.md#getfulfillmentstate) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state | 
+[**GetFulfillmentStatusWithDetailsAndActions**](OrdersApi.md#getfulfillmentstatuswithdetailsandactions) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state/details | 
+[**GetOrderById**](OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | 
+[**GetOrders**](OrdersApi.md#getorders) | **GET** /api/v1.0/orders | 
+[**GetOrdersSummary**](OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | 
+[**RefundOrder**](OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | 
+[**RejectOrder**](OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | 
+[**SearchFulfillmentStatuses**](OrdersApi.md#searchfulfillmentstatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | 
+[**UpdateDeliveryInformation**](OrdersApi.md#updatedeliveryinformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | 
+[**UpdateFulfillmentState**](OrdersApi.md#updatefulfillmentstate) | **POST** /api/v1.0/orders/{orderId}/fulfillment/state | 
 
 
 <a name="acceptorder"></a>
 # **AcceptOrder**
 > void AcceptOrder (int? id, Accept acceptObject)
 
-Accept order
 
-To accept an order, you create an `accept` object and send it to Flipdish API using HTTP POST method. `Id` path parameter identifies the order.
 
 ### Example
 ```csharp
@@ -45,12 +43,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrdersApi();
-            var id = 56;  // int? | Order identifier
-            var acceptObject = new Accept(); // Accept | Order accept parameters (eg: EstimatedMinutesForDelivery)
+            var id = 56;  // int? | 
+            var acceptObject = new Accept(); // Accept | 
 
             try
             {
-                // Accept order
                 apiInstance.AcceptOrder(id, acceptObject);
             }
             catch (Exception e)
@@ -66,8 +63,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**| Order identifier | 
- **acceptObject** | [**Accept**](Accept.md)| Order accept parameters (eg: EstimatedMinutesForDelivery) | 
+ **id** | **int?**|  | 
+ **acceptObject** | [**Accept**](Accept.md)|  | 
 
 ### Return type
 
@@ -88,9 +85,7 @@ void (empty response body)
 # **DispatchOrder**
 > void DispatchOrder (int? id)
 
-Dispatch order
 
-To dispatch an order send a POST request with `Id` path parameter which identifies the order.
 
 ### Example
 ```csharp
@@ -110,11 +105,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrdersApi();
-            var id = 56;  // int? | Order identifier
+            var id = 56;  // int? | 
 
             try
             {
-                // Dispatch order
                 apiInstance.DispatchOrder(id);
             }
             catch (Exception e)
@@ -130,7 +124,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**| Order identifier | 
+ **id** | **int?**|  | 
 
 ### Return type
 
@@ -151,9 +145,7 @@ void (empty response body)
 # **GetDeliveryInformation**
 > RestApiResultOrderDeliveryInformation GetDeliveryInformation (int? orderId)
 
-Get order delivery information
 
-Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
 
 ### Example
 ```csharp
@@ -173,11 +165,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrdersApi();
-            var orderId = 56;  // int? | Flipdish Order Id
+            var orderId = 56;  // int? | 
 
             try
             {
-                // Get order delivery information
                 RestApiResultOrderDeliveryInformation result = apiInstance.GetDeliveryInformation(orderId);
                 Debug.WriteLine(result);
             }
@@ -194,7 +185,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **int?**| Flipdish Order Id | 
+ **orderId** | **int?**|  | 
 
 ### Return type
 
@@ -215,9 +206,7 @@ Name | Type | Description  | Notes
 # **GetFulfillmentState**
 > RestApiResultOrderFulfillmentStatus GetFulfillmentState (int? orderId)
 
-Get order fulfillment state
 
-[BETA - this endpoint is under development, do not use it in your production system] Returns an order's fulfillment state.
 
 ### Example
 ```csharp
@@ -237,11 +226,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrdersApi();
-            var orderId = 56;  // int? | Flipdish Order Id
+            var orderId = 56;  // int? | 
 
             try
             {
-                // Get order fulfillment state
                 RestApiResultOrderFulfillmentStatus result = apiInstance.GetFulfillmentState(orderId);
                 Debug.WriteLine(result);
             }
@@ -258,7 +246,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **int?**| Flipdish Order Id | 
+ **orderId** | **int?**|  | 
 
 ### Return type
 
@@ -279,9 +267,7 @@ Name | Type | Description  | Notes
 # **GetFulfillmentStatusWithDetailsAndActions**
 > RestApiResultOrderFulfillmentStatusWithConfigurationActions GetFulfillmentStatusWithDetailsAndActions (int? orderId)
 
-Get order fulfillment state with actionable details like default next state
 
-[BETA - this endpoint is under development, do not use it in your production system] Returns an order's fulfillment status and details about possible states.
 
 ### Example
 ```csharp
@@ -301,11 +287,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrdersApi();
-            var orderId = 56;  // int? | Flipdish Order Id
+            var orderId = 56;  // int? | 
 
             try
             {
-                // Get order fulfillment state with actionable details like default next state
                 RestApiResultOrderFulfillmentStatusWithConfigurationActions result = apiInstance.GetFulfillmentStatusWithDetailsAndActions(orderId);
                 Debug.WriteLine(result);
             }
@@ -322,7 +307,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **int?**| Flipdish Order Id | 
+ **orderId** | **int?**|  | 
 
 ### Return type
 
@@ -343,7 +328,7 @@ Name | Type | Description  | Notes
 # **GetOrderById**
 > RestApiResultOrder GetOrderById (int? id)
 
-Get order by ID
+
 
 ### Example
 ```csharp
@@ -363,11 +348,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrdersApi();
-            var id = 56;  // int? | Order identifier
+            var id = 56;  // int? | 
 
             try
             {
-                // Get order by ID
                 RestApiResultOrder result = apiInstance.GetOrderById(id);
                 Debug.WriteLine(result);
             }
@@ -384,7 +368,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**| Order identifier | 
+ **id** | **int?**|  | 
 
 ### Return type
 
@@ -405,7 +389,7 @@ Name | Type | Description  | Notes
 # **GetOrders**
 > RestApiPaginationResultOrder GetOrders (List<int?> physicalRestaurantId = null, List<string> state = null, DateTime? from = null, DateTime? to = null, int? page = null, int? limit = null)
 
-Get orders by filter
+
 
 ### Example
 ```csharp
@@ -425,16 +409,15 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrdersApi();
-            var physicalRestaurantId = new List<int?>(); // List<int?> | Physical restaurant identifiers (optional) 
-            var state = state_example;  // List<string> | Order states (optional) 
-            var from = 2013-10-20T19:20:30+01:00;  // DateTime? | Order has been placed after this parameter value (optional) 
-            var to = 2013-10-20T19:20:30+01:00;  // DateTime? | Order has been placed before this parameter value (optional) 
-            var page = 56;  // int? | Requested page number (optional) 
-            var limit = 56;  // int? | Requested page limit (optional) 
+            var physicalRestaurantId = new List<int?>(); // List<int?> |  (optional) 
+            var state = state_example;  // List<string> |  (optional) 
+            var from = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+            var to = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+            var page = 56;  // int? |  (optional) 
+            var limit = 56;  // int? |  (optional) 
 
             try
             {
-                // Get orders by filter
                 RestApiPaginationResultOrder result = apiInstance.GetOrders(physicalRestaurantId, state, from, to, page, limit);
                 Debug.WriteLine(result);
             }
@@ -451,12 +434,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **physicalRestaurantId** | [**List&lt;int?&gt;**](int?.md)| Physical restaurant identifiers | [optional] 
- **state** | **List&lt;string&gt;**| Order states | [optional] 
- **from** | **DateTime?**| Order has been placed after this parameter value | [optional] 
- **to** | **DateTime?**| Order has been placed before this parameter value | [optional] 
- **page** | **int?**| Requested page number | [optional] 
- **limit** | **int?**| Requested page limit | [optional] 
+ **physicalRestaurantId** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
+ **state** | **List&lt;string&gt;**|  | [optional] 
+ **from** | **DateTime?**|  | [optional] 
+ **to** | **DateTime?**|  | [optional] 
+ **page** | **int?**|  | [optional] 
+ **limit** | **int?**|  | [optional] 
 
 ### Return type
 
@@ -477,7 +460,7 @@ Name | Type | Description  | Notes
 # **GetOrdersSummary**
 > RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null)
 
-[PRIVATE API] Get summary of orders by filter
+
 
 ### Example
 ```csharp
@@ -497,21 +480,20 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrdersApi();
-            var appId = appId_example;  // string | App Name Id
-            var searchQuery = searchQuery_example;  // string | Query string (optional) 
-            var physicalRestaurantId = new List<int?>(); // List<int?> | Physical restaurant identifiers (optional) 
-            var state = state_example;  // List<string> | Order states (optional) 
-            var page = 56;  // int? | Requested page number (optional) 
-            var limit = 56;  // int? | Requested page limit (optional) 
+            var appId = appId_example;  // string | 
+            var searchQuery = searchQuery_example;  // string |  (optional) 
+            var physicalRestaurantId = new List<int?>(); // List<int?> |  (optional) 
+            var state = state_example;  // List<string> |  (optional) 
+            var page = 56;  // int? |  (optional) 
+            var limit = 56;  // int? |  (optional) 
             var orderByRequestedForTime = true;  // bool? |  (optional) 
             var channels = channels_example;  // List<string> |  (optional) 
-            var orderIds = new List<int?>(); // List<int?> | Filter by the given orders (optional) 
-            var from = 2013-10-20T19:20:30+01:00;  // DateTime? | Filter by date from (optional) 
-            var to = 2013-10-20T19:20:30+01:00;  // DateTime? | Filter by date to (optional) 
+            var orderIds = new List<int?>(); // List<int?> |  (optional) 
+            var from = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+            var to = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
 
             try
             {
-                // [PRIVATE API] Get summary of orders by filter
                 RestApiPaginationResultOrderSummary result = apiInstance.GetOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to);
                 Debug.WriteLine(result);
             }
@@ -528,17 +510,17 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
- **searchQuery** | **string**| Query string | [optional] 
- **physicalRestaurantId** | [**List&lt;int?&gt;**](int?.md)| Physical restaurant identifiers | [optional] 
- **state** | **List&lt;string&gt;**| Order states | [optional] 
- **page** | **int?**| Requested page number | [optional] 
- **limit** | **int?**| Requested page limit | [optional] 
+ **appId** | **string**|  | 
+ **searchQuery** | **string**|  | [optional] 
+ **physicalRestaurantId** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
+ **state** | **List&lt;string&gt;**|  | [optional] 
+ **page** | **int?**|  | [optional] 
+ **limit** | **int?**|  | [optional] 
  **orderByRequestedForTime** | **bool?**|  | [optional] 
  **channels** | **List&lt;string&gt;**|  | [optional] 
- **orderIds** | [**List&lt;int?&gt;**](int?.md)| Filter by the given orders | [optional] 
- **from** | **DateTime?**| Filter by date from | [optional] 
- **to** | **DateTime?**| Filter by date to | [optional] 
+ **orderIds** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
+ **from** | **DateTime?**|  | [optional] 
+ **to** | **DateTime?**|  | [optional] 
 
 ### Return type
 
@@ -559,9 +541,7 @@ Name | Type | Description  | Notes
 # **RefundOrder**
 > void RefundOrder (int? id, Refund refundObject)
 
-Refund order
 
-To refund an order, you create a `refund` object and send it to Flipdish API using HTTP POST method. `Id` path parameter identifies the order.
 
 ### Example
 ```csharp
@@ -581,12 +561,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrdersApi();
-            var id = 56;  // int? | Order identifier
+            var id = 56;  // int? | 
             var refundObject = new Refund(); // Refund | 
 
             try
             {
-                // Refund order
                 apiInstance.RefundOrder(id, refundObject);
             }
             catch (Exception e)
@@ -602,7 +581,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**| Order identifier | 
+ **id** | **int?**|  | 
  **refundObject** | [**Refund**](Refund.md)|  | 
 
 ### Return type
@@ -624,9 +603,7 @@ void (empty response body)
 # **RejectOrder**
 > void RejectOrder (int? id, Reject rejectObject)
 
-Reject order
 
-To reject an order, you create a `reject` object and send it to Flipdish API using HTTP POST method. `Id` path parameter identifies the order.
 
 ### Example
 ```csharp
@@ -646,12 +623,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrdersApi();
-            var id = 56;  // int? | Order identifier
+            var id = 56;  // int? | 
             var rejectObject = new Reject(); // Reject | 
 
             try
             {
-                // Reject order
                 apiInstance.RejectOrder(id, rejectObject);
             }
             catch (Exception e)
@@ -667,7 +643,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**| Order identifier | 
+ **id** | **int?**|  | 
  **rejectObject** | [**Reject**](Reject.md)|  | 
 
 ### Return type
@@ -689,9 +665,7 @@ void (empty response body)
 # **SearchFulfillmentStatuses**
 > RestApiArrayResultOrderFulfillmentStatus SearchFulfillmentStatuses (string appId, string orderIds)
 
-Get fulfillment status for a list of orders
 
-[BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
 
 ### Example
 ```csharp
@@ -711,12 +685,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrdersApi();
-            var appId = appId_example;  // string | App Id
-            var orderIds = orderIds_example;  // string | Flipdish Order Id list, comma separated
+            var appId = appId_example;  // string | 
+            var orderIds = orderIds_example;  // string | 
 
             try
             {
-                // Get fulfillment status for a list of orders
                 RestApiArrayResultOrderFulfillmentStatus result = apiInstance.SearchFulfillmentStatuses(appId, orderIds);
                 Debug.WriteLine(result);
             }
@@ -733,8 +706,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Id | 
- **orderIds** | **string**| Flipdish Order Id list, comma separated | 
+ **appId** | **string**|  | 
+ **orderIds** | **string**|  | 
 
 ### Return type
 
@@ -755,9 +728,7 @@ Name | Type | Description  | Notes
 # **UpdateDeliveryInformation**
 > void UpdateDeliveryInformation (int? orderId, OrderDeliveryInformationBase deliveryInformation)
 
-Add/update delivery-related information to an order
 
-Returns an order's delivery information. This would be used to display the latest known delivery information on a screen.
 
 ### Example
 ```csharp
@@ -777,12 +748,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrdersApi();
-            var orderId = 56;  // int? | Flipdish Order Id
-            var deliveryInformation = new OrderDeliveryInformationBase(); // OrderDeliveryInformationBase | Delivery Information
+            var orderId = 56;  // int? | 
+            var deliveryInformation = new OrderDeliveryInformationBase(); // OrderDeliveryInformationBase | 
 
             try
             {
-                // Add/update delivery-related information to an order
                 apiInstance.UpdateDeliveryInformation(orderId, deliveryInformation);
             }
             catch (Exception e)
@@ -798,8 +768,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **int?**| Flipdish Order Id | 
- **deliveryInformation** | [**OrderDeliveryInformationBase**](OrderDeliveryInformationBase.md)| Delivery Information | 
+ **orderId** | **int?**|  | 
+ **deliveryInformation** | [**OrderDeliveryInformationBase**](OrderDeliveryInformationBase.md)|  | 
 
 ### Return type
 
@@ -820,9 +790,7 @@ void (empty response body)
 # **UpdateFulfillmentState**
 > void UpdateFulfillmentState (int? orderId, OrderFulfillmentStatusUpdate fulfillmentStatusRequest)
 
-Update fulfillment status information to an order
 
-[BETA - this endpoint is under development, do not use it in your production system] Updates an order's fulfillment states.
 
 ### Example
 ```csharp
@@ -842,12 +810,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrdersApi();
-            var orderId = 56;  // int? | Flipdish Order Id
-            var fulfillmentStatusRequest = new OrderFulfillmentStatusUpdate(); // OrderFulfillmentStatusUpdate | Fulfillment Status
+            var orderId = 56;  // int? | 
+            var fulfillmentStatusRequest = new OrderFulfillmentStatusUpdate(); // OrderFulfillmentStatusUpdate | 
 
             try
             {
-                // Update fulfillment status information to an order
                 apiInstance.UpdateFulfillmentState(orderId, fulfillmentStatusRequest);
             }
             catch (Exception e)
@@ -863,8 +830,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **int?**| Flipdish Order Id | 
- **fulfillmentStatusRequest** | [**OrderFulfillmentStatusUpdate**](OrderFulfillmentStatusUpdate.md)| Fulfillment Status | 
+ **orderId** | **int?**|  | 
+ **fulfillmentStatusRequest** | [**OrderFulfillmentStatusUpdate**](OrderFulfillmentStatusUpdate.md)|  | 
 
 ### Return type
 

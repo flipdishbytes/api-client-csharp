@@ -25,10 +25,10 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Provides an ability to ingest a 3rd party order into Flipdish ecosystem
+        /// 
         /// </summary>
         /// <remarks>
-        /// [ALPHA - this endpoint is under internal development, it is not available just yet to use in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="order"></param>
@@ -37,10 +37,10 @@ namespace Flipdish.Api
         RestApiResultOrderIngestSubmitOrderResponse OrderIngestSubmitNewOrder (OrderIngestSubmitOrderRequest order, string appNameId);
 
         /// <summary>
-        /// Provides an ability to ingest a 3rd party order into Flipdish ecosystem
+        /// 
         /// </summary>
         /// <remarks>
-        /// [ALPHA - this endpoint is under internal development, it is not available just yet to use in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="order"></param>
@@ -50,10 +50,10 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Provides an ability to ingest a 3rd party order into Flipdish ecosystem
+        /// 
         /// </summary>
         /// <remarks>
-        /// [ALPHA - this endpoint is under internal development, it is not available just yet to use in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="order"></param>
@@ -62,10 +62,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultOrderIngestSubmitOrderResponse> OrderIngestSubmitNewOrderAsync (OrderIngestSubmitOrderRequest order, string appNameId);
 
         /// <summary>
-        /// Provides an ability to ingest a 3rd party order into Flipdish ecosystem
+        /// 
         /// </summary>
         /// <remarks>
-        /// [ALPHA - this endpoint is under internal development, it is not available just yet to use in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="order"></param>
@@ -173,7 +173,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Provides an ability to ingest a 3rd party order into Flipdish ecosystem [ALPHA - this endpoint is under internal development, it is not available just yet to use in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="order"></param>
@@ -186,7 +186,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Provides an ability to ingest a 3rd party order into Flipdish ecosystem [ALPHA - this endpoint is under internal development, it is not available just yet to use in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="order"></param>
@@ -266,7 +266,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Provides an ability to ingest a 3rd party order into Flipdish ecosystem [ALPHA - this endpoint is under internal development, it is not available just yet to use in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="order"></param>
@@ -280,7 +280,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Provides an ability to ingest a 3rd party order into Flipdish ecosystem [ALPHA - this endpoint is under internal development, it is not available just yet to use in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="order"></param>

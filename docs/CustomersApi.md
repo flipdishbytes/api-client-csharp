@@ -4,15 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetCustomerById**](CustomersApi.md#getcustomerbyid) | **GET** /api/v1.0/{appId}/customers/{customerId} | Get customer of an app by Id
-[**UpdateCustomerById**](CustomersApi.md#updatecustomerbyid) | **POST** /api/v1.0/{appId}/customers/{customerId} | Update customer of an app by Id
+[**GetCustomerById**](CustomersApi.md#getcustomerbyid) | **GET** /api/v1.0/{appId}/customers/{customerId} | 
+[**UpdateCustomerById**](CustomersApi.md#updatecustomerbyid) | **POST** /api/v1.0/{appId}/customers/{customerId} | 
 
 
 <a name="getcustomerbyid"></a>
 # **GetCustomerById**
 > RestApiResultCustomer GetCustomerById (string appId, int? customerId)
 
-Get customer of an app by Id
+
 
 ### Example
 ```csharp
@@ -32,12 +32,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new CustomersApi();
-            var appId = appId_example;  // string | App Name Id
-            var customerId = 56;  // int? | Customer Id
+            var appId = appId_example;  // string | 
+            var customerId = 56;  // int? | 
 
             try
             {
-                // Get customer of an app by Id
                 RestApiResultCustomer result = apiInstance.GetCustomerById(appId, customerId);
                 Debug.WriteLine(result);
             }
@@ -54,8 +53,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
- **customerId** | **int?**| Customer Id | 
+ **appId** | **string**|  | 
+ **customerId** | **int?**|  | 
 
 ### Return type
 
@@ -76,7 +75,7 @@ Name | Type | Description  | Notes
 # **UpdateCustomerById**
 > RestApiResultCustomer UpdateCustomerById (string appId, int? customerId, CustomerUpdateModel updateCustomer)
 
-Update customer of an app by Id
+
 
 ### Example
 ```csharp
@@ -96,13 +95,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new CustomersApi();
-            var appId = appId_example;  // string | App Name Id
-            var customerId = 56;  // int? | Customer Id
-            var updateCustomer = new CustomerUpdateModel(); // CustomerUpdateModel | Updated customer information
+            var appId = appId_example;  // string | 
+            var customerId = 56;  // int? | 
+            var updateCustomer = new CustomerUpdateModel(); // CustomerUpdateModel | 
 
             try
             {
-                // Update customer of an app by Id
                 RestApiResultCustomer result = apiInstance.UpdateCustomerById(appId, customerId, updateCustomer);
                 Debug.WriteLine(result);
             }
@@ -119,9 +117,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Name Id | 
- **customerId** | **int?**| Customer Id | 
- **updateCustomer** | [**CustomerUpdateModel**](CustomerUpdateModel.md)| Updated customer information | 
+ **appId** | **string**|  | 
+ **customerId** | **int?**|  | 
+ **updateCustomer** | [**CustomerUpdateModel**](CustomerUpdateModel.md)|  | 
 
 ### Return type
 

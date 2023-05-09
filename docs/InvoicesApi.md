@@ -4,16 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetInvoices**](InvoicesApi.md#getinvoices) | **GET** /api/v1.0/{appId}/invoices | Get list of invoices
+[**GetInvoices**](InvoicesApi.md#getinvoices) | **GET** /api/v1.0/{appId}/invoices | 
 
 
 <a name="getinvoices"></a>
 # **GetInvoices**
 > RestApiFinanceSearchPaginationResultInvoice GetInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
 
-Get list of invoices
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -33,19 +31,18 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new InvoicesApi();
-            var appId = appId_example;  // string | App Id
-            var subscriptionId = subscriptionId_example;  // string | Subscription Id (optional) (optional) 
-            var limit = 56;  // int? | Limit of invoices to return (optional) (optional) 
-            var pageId = pageId_example;  // string | Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional) 
-            var excludeNotOwnedInvoices = true;  // bool? | Exclude not owned invoices. Set to true to only view your invoices (optional) (optional) 
-            var dateFrom = 2013-10-20T19:20:30+01:00;  // DateTime? | Filter starting from this date (optional) (optional) 
-            var dateTo = 2013-10-20T19:20:30+01:00;  // DateTime? | Filter ending from this date (optional) (optional) 
-            var invoiceNumber = invoiceNumber_example;  // string | Invoice number (optional) (optional) 
-            var storeId = new List<int?>(); // List<int?> | Store Ids (optional) (optional) 
+            var appId = appId_example;  // string | 
+            var subscriptionId = subscriptionId_example;  // string |  (optional) 
+            var limit = 56;  // int? |  (optional) 
+            var pageId = pageId_example;  // string |  (optional) 
+            var excludeNotOwnedInvoices = true;  // bool? |  (optional) 
+            var dateFrom = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+            var dateTo = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+            var invoiceNumber = invoiceNumber_example;  // string |  (optional) 
+            var storeId = new List<int?>(); // List<int?> |  (optional) 
 
             try
             {
-                // Get list of invoices
                 RestApiFinanceSearchPaginationResultInvoice result = apiInstance.GetInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
                 Debug.WriteLine(result);
             }
@@ -62,15 +59,15 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| App Id | 
- **subscriptionId** | **string**| Subscription Id (optional) | [optional] 
- **limit** | **int?**| Limit of invoices to return (optional) | [optional] 
- **pageId** | **string**| Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) | [optional] 
- **excludeNotOwnedInvoices** | **bool?**| Exclude not owned invoices. Set to true to only view your invoices (optional) | [optional] 
- **dateFrom** | **DateTime?**| Filter starting from this date (optional) | [optional] 
- **dateTo** | **DateTime?**| Filter ending from this date (optional) | [optional] 
- **invoiceNumber** | **string**| Invoice number (optional) | [optional] 
- **storeId** | [**List&lt;int?&gt;**](int?.md)| Store Ids (optional) | [optional] 
+ **appId** | **string**|  | 
+ **subscriptionId** | **string**|  | [optional] 
+ **limit** | **int?**|  | [optional] 
+ **pageId** | **string**|  | [optional] 
+ **excludeNotOwnedInvoices** | **bool?**|  | [optional] 
+ **dateFrom** | **DateTime?**|  | [optional] 
+ **dateTo** | **DateTime?**|  | [optional] 
+ **invoiceNumber** | **string**|  | [optional] 
+ **storeId** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
 
 ### Return type
 

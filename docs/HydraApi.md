@@ -4,34 +4,34 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AssignEmv**](HydraApi.md#assignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/assign/{hydraConfigId}/{emvTerminalId} | Assign an EMV terminal to a kiosk
-[**AttachStoreToKiosk**](HydraApi.md#attachstoretokiosk) | **POST** /api/v1.0/{appId}/AttachStoreToKiosk/{deviceId}/store/{storeId} | [Private]
-[**AttachStoreToTerminal**](HydraApi.md#attachstoretoterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId} | [Private]
+[**AssignEmv**](HydraApi.md#assignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/assign/{hydraConfigId}/{emvTerminalId} | 
+[**AttachStoreToKiosk**](HydraApi.md#attachstoretokiosk) | **POST** /api/v1.0/{appId}/AttachStoreToKiosk/{deviceId}/store/{storeId} | 
+[**AttachStoreToTerminal**](HydraApi.md#attachstoretoterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId} | 
 [**CancelEmvPayment**](HydraApi.md#cancelemvpayment) | **POST** /api/v1.0/{appId}/hydra/cancelemvpayment/{orderId} | 
-[**DetachStoreFromTerminal**](HydraApi.md#detachstorefromterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId} | [Private]
-[**GetAttachedDevice**](HydraApi.md#getattacheddevice) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/{deviceId} | [Private]
-[**GetAttachedDevices**](HydraApi.md#getattacheddevices) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/list | [Private]
-[**GetEMVTerminalDetails**](HydraApi.md#getemvterminaldetails) | **GET** /api/v1.0/{appId}/hydra/emvterminal | [Private]
-[**GetEmvOrderState**](HydraApi.md#getemvorderstate) | **GET** /api/v1.0/{appId}/hydra/emvorderstate/{orderId} | [Private]
-[**GetKioskCashPaymentSettings**](HydraApi.md#getkioskcashpaymentsettings) | **GET** /api/v1.0/{appId}/kioskcashsettings/{deviceId} | Get the status of Cash Payment Method on Kiosk
+[**DetachStoreFromTerminal**](HydraApi.md#detachstorefromterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId} | 
+[**GetAttachedDevice**](HydraApi.md#getattacheddevice) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/{deviceId} | 
+[**GetAttachedDevices**](HydraApi.md#getattacheddevices) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/list | 
+[**GetEMVTerminalDetails**](HydraApi.md#getemvterminaldetails) | **GET** /api/v1.0/{appId}/hydra/emvterminal | 
+[**GetEmvOrderState**](HydraApi.md#getemvorderstate) | **GET** /api/v1.0/{appId}/hydra/emvorderstate/{orderId} | 
+[**GetKioskCashPaymentSettings**](HydraApi.md#getkioskcashpaymentsettings) | **GET** /api/v1.0/{appId}/kioskcashsettings/{deviceId} | 
 [**GetRegistration**](HydraApi.md#getregistration) | **GET** /api/v1.0/hydra/registration | 
-[**GetSettings**](HydraApi.md#getsettings) | **GET** /api/v1.0/hydra/settings | [Private]
-[**HydraCreateEmv**](HydraApi.md#hydracreateemv) | **POST** /api/v1.0/{appId}/emvterminals | [Private]
-[**HydraDeleteEmv**](HydraApi.md#hydradeleteemv) | **DELETE** /api/v1.0/{appId}/emvterminals/{id} | [Private]
-[**HydraDetachStoreFromKiosk**](HydraApi.md#hydradetachstorefromkiosk) | **DELETE** /api/v1.0/{appId}/DetachStoreFromKiosk/{deviceId}/store/{storeId} | [Private]
-[**HydraGetEmvsForAppId**](HydraApi.md#hydragetemvsforappid) | **GET** /api/v1.0/{appId}/emvterminals | List EMV terminals belonging to the given AppNameId
-[**LoginWithDeviceId**](HydraApi.md#loginwithdeviceid) | **POST** /api/v1.0/hydra/{deviceId}/login | [Private]
-[**Register**](HydraApi.md#register) | **POST** /api/v1.0/{appId}/hydra/registration | [Private]
-[**UnAssign**](HydraApi.md#unassign) | **DELETE** /api/v1.0/{appId}/hydra/{deviceId}/registration | [Private]
-[**UnassignEmv**](HydraApi.md#unassignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId} | Unassign the currently assigned EMV terminal from a kiosk
-[**UpdateKioskCashVisibilitySettings**](HydraApi.md#updatekioskcashvisibilitysettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | Update the Cash Payment Method Visibility on Kiosk
+[**GetSettings**](HydraApi.md#getsettings) | **GET** /api/v1.0/hydra/settings | 
+[**HydraCreateEmv**](HydraApi.md#hydracreateemv) | **POST** /api/v1.0/{appId}/emvterminals | 
+[**HydraDeleteEmv**](HydraApi.md#hydradeleteemv) | **DELETE** /api/v1.0/{appId}/emvterminals/{id} | 
+[**HydraDetachStoreFromKiosk**](HydraApi.md#hydradetachstorefromkiosk) | **DELETE** /api/v1.0/{appId}/DetachStoreFromKiosk/{deviceId}/store/{storeId} | 
+[**HydraGetEmvsForAppId**](HydraApi.md#hydragetemvsforappid) | **GET** /api/v1.0/{appId}/emvterminals | 
+[**LoginWithDeviceId**](HydraApi.md#loginwithdeviceid) | **POST** /api/v1.0/hydra/{deviceId}/login | 
+[**Register**](HydraApi.md#register) | **POST** /api/v1.0/{appId}/hydra/registration | 
+[**UnAssign**](HydraApi.md#unassign) | **DELETE** /api/v1.0/{appId}/hydra/{deviceId}/registration | 
+[**UnassignEmv**](HydraApi.md#unassignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId} | 
+[**UpdateKioskCashVisibilitySettings**](HydraApi.md#updatekioskcashvisibilitysettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | 
 
 
 <a name="assignemv"></a>
 # **AssignEmv**
 > void AssignEmv (string appId, int? hydraConfigId, int? emvTerminalId)
 
-Assign an EMV terminal to a kiosk
+
 
 ### Example
 ```csharp
@@ -57,7 +57,6 @@ namespace Example
 
             try
             {
-                // Assign an EMV terminal to a kiosk
                 apiInstance.AssignEmv(appId, hydraConfigId, emvTerminalId);
             }
             catch (Exception e)
@@ -96,7 +95,7 @@ void (empty response body)
 # **AttachStoreToKiosk**
 > RestApiResultHydraStatus AttachStoreToKiosk (string appId, int? storeId, string deviceId)
 
-[Private]
+
 
 ### Example
 ```csharp
@@ -122,7 +121,6 @@ namespace Example
 
             try
             {
-                // [Private]
                 RestApiResultHydraStatus result = apiInstance.AttachStoreToKiosk(appId, storeId, deviceId);
                 Debug.WriteLine(result);
             }
@@ -162,7 +160,7 @@ Name | Type | Description  | Notes
 # **AttachStoreToTerminal**
 > RestApiResultHydraStatus AttachStoreToTerminal (string appId, string deviceId, int? storeId)
 
-[Private]
+
 
 ### Example
 ```csharp
@@ -188,7 +186,6 @@ namespace Example
 
             try
             {
-                // [Private]
                 RestApiResultHydraStatus result = apiInstance.AttachStoreToTerminal(appId, deviceId, storeId);
                 Debug.WriteLine(result);
             }
@@ -290,7 +287,7 @@ void (empty response body)
 # **DetachStoreFromTerminal**
 > RestApiResultHydraStatus DetachStoreFromTerminal (string appId, string deviceId, int? storeId)
 
-[Private]
+
 
 ### Example
 ```csharp
@@ -316,7 +313,6 @@ namespace Example
 
             try
             {
-                // [Private]
                 RestApiResultHydraStatus result = apiInstance.DetachStoreFromTerminal(appId, deviceId, storeId);
                 Debug.WriteLine(result);
             }
@@ -356,7 +352,7 @@ Name | Type | Description  | Notes
 # **GetAttachedDevice**
 > RestApiResultHydraDeviceDetails GetAttachedDevice (string appId, string deviceType, string deviceId)
 
-[Private]
+
 
 ### Example
 ```csharp
@@ -382,7 +378,6 @@ namespace Example
 
             try
             {
-                // [Private]
                 RestApiResultHydraDeviceDetails result = apiInstance.GetAttachedDevice(appId, deviceType, deviceId);
                 Debug.WriteLine(result);
             }
@@ -422,7 +417,7 @@ Name | Type | Description  | Notes
 # **GetAttachedDevices**
 > RestApiPaginationResultHydraDeviceDetails GetAttachedDevices (string appId, string deviceType, int? pageIndex = null, int? pageSize = null, int? storeId = null, string deviceName = null, string deviceSerial = null)
 
-[Private]
+
 
 ### Example
 ```csharp
@@ -452,7 +447,6 @@ namespace Example
 
             try
             {
-                // [Private]
                 RestApiPaginationResultHydraDeviceDetails result = apiInstance.GetAttachedDevices(appId, deviceType, pageIndex, pageSize, storeId, deviceName, deviceSerial);
                 Debug.WriteLine(result);
             }
@@ -496,7 +490,7 @@ Name | Type | Description  | Notes
 # **GetEMVTerminalDetails**
 > RestApiResultPaymentTerminalDetails GetEMVTerminalDetails (string appId)
 
-[Private]
+
 
 ### Example
 ```csharp
@@ -520,7 +514,6 @@ namespace Example
 
             try
             {
-                // [Private]
                 RestApiResultPaymentTerminalDetails result = apiInstance.GetEMVTerminalDetails(appId);
                 Debug.WriteLine(result);
             }
@@ -558,7 +551,7 @@ Name | Type | Description  | Notes
 # **GetEmvOrderState**
 > RestApiResultPaymentTerminalTransactionDetails GetEmvOrderState (int? orderId, string appId)
 
-[Private]
+
 
 ### Example
 ```csharp
@@ -583,7 +576,6 @@ namespace Example
 
             try
             {
-                // [Private]
                 RestApiResultPaymentTerminalTransactionDetails result = apiInstance.GetEmvOrderState(orderId, appId);
                 Debug.WriteLine(result);
             }
@@ -622,9 +614,7 @@ Name | Type | Description  | Notes
 # **GetKioskCashPaymentSettings**
 > RestApiArrayResultKioskCashPaymentSettings GetKioskCashPaymentSettings (string appId, string deviceId)
 
-Get the status of Cash Payment Method on Kiosk
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -649,7 +639,6 @@ namespace Example
 
             try
             {
-                // Get the status of Cash Payment Method on Kiosk
                 RestApiArrayResultKioskCashPaymentSettings result = apiInstance.GetKioskCashPaymentSettings(appId, deviceId);
                 Debug.WriteLine(result);
             }
@@ -745,7 +734,7 @@ This endpoint does not need any parameter.
 # **GetSettings**
 > RestApiResultHydraConfig GetSettings ()
 
-[Private]
+
 
 ### Example
 ```csharp
@@ -768,7 +757,6 @@ namespace Example
 
             try
             {
-                // [Private]
                 RestApiResultHydraConfig result = apiInstance.GetSettings();
                 Debug.WriteLine(result);
             }
@@ -803,7 +791,7 @@ This endpoint does not need any parameter.
 # **HydraCreateEmv**
 > Object HydraCreateEmv (string appId, EmvTerminal emv)
 
-[Private]
+
 
 ### Example
 ```csharp
@@ -828,7 +816,6 @@ namespace Example
 
             try
             {
-                // [Private]
                 Object result = apiInstance.HydraCreateEmv(appId, emv);
                 Debug.WriteLine(result);
             }
@@ -867,7 +854,7 @@ Name | Type | Description  | Notes
 # **HydraDeleteEmv**
 > Object HydraDeleteEmv (string appId, int? id)
 
-[Private]
+
 
 ### Example
 ```csharp
@@ -892,7 +879,6 @@ namespace Example
 
             try
             {
-                // [Private]
                 Object result = apiInstance.HydraDeleteEmv(appId, id);
                 Debug.WriteLine(result);
             }
@@ -931,7 +917,7 @@ Name | Type | Description  | Notes
 # **HydraDetachStoreFromKiosk**
 > RestApiResultHydraStatus HydraDetachStoreFromKiosk (string appId, int? storeId, string deviceId)
 
-[Private]
+
 
 ### Example
 ```csharp
@@ -957,7 +943,6 @@ namespace Example
 
             try
             {
-                // [Private]
                 RestApiResultHydraStatus result = apiInstance.HydraDetachStoreFromKiosk(appId, storeId, deviceId);
                 Debug.WriteLine(result);
             }
@@ -997,7 +982,7 @@ Name | Type | Description  | Notes
 # **HydraGetEmvsForAppId**
 > RestApiArrayResultEmvTerminalWithAssignments HydraGetEmvsForAppId (string appId)
 
-List EMV terminals belonging to the given AppNameId
+
 
 ### Example
 ```csharp
@@ -1021,7 +1006,6 @@ namespace Example
 
             try
             {
-                // List EMV terminals belonging to the given AppNameId
                 RestApiArrayResultEmvTerminalWithAssignments result = apiInstance.HydraGetEmvsForAppId(appId);
                 Debug.WriteLine(result);
             }
@@ -1059,7 +1043,7 @@ Name | Type | Description  | Notes
 # **LoginWithDeviceId**
 > void LoginWithDeviceId (string deviceId, string hydraUserType = null, string serialNumber = null)
 
-[Private]
+
 
 ### Example
 ```csharp
@@ -1085,7 +1069,6 @@ namespace Example
 
             try
             {
-                // [Private]
                 apiInstance.LoginWithDeviceId(deviceId, hydraUserType, serialNumber);
             }
             catch (Exception e)
@@ -1124,7 +1107,7 @@ void (empty response body)
 # **Register**
 > RestApiResultHydraStatus Register (string appId, HydraRegistrationRequest hydraRegistration)
 
-[Private]
+
 
 ### Example
 ```csharp
@@ -1149,7 +1132,6 @@ namespace Example
 
             try
             {
-                // [Private]
                 RestApiResultHydraStatus result = apiInstance.Register(appId, hydraRegistration);
                 Debug.WriteLine(result);
             }
@@ -1188,7 +1170,7 @@ Name | Type | Description  | Notes
 # **UnAssign**
 > void UnAssign (string appId, string deviceId)
 
-[Private]
+
 
 ### Example
 ```csharp
@@ -1213,7 +1195,6 @@ namespace Example
 
             try
             {
-                // [Private]
                 apiInstance.UnAssign(appId, deviceId);
             }
             catch (Exception e)
@@ -1251,7 +1232,7 @@ void (empty response body)
 # **UnassignEmv**
 > void UnassignEmv (string appId, int? hydraConfigId)
 
-Unassign the currently assigned EMV terminal from a kiosk
+
 
 ### Example
 ```csharp
@@ -1276,7 +1257,6 @@ namespace Example
 
             try
             {
-                // Unassign the currently assigned EMV terminal from a kiosk
                 apiInstance.UnassignEmv(appId, hydraConfigId);
             }
             catch (Exception e)
@@ -1314,9 +1294,7 @@ void (empty response body)
 # **UpdateKioskCashVisibilitySettings**
 > void UpdateKioskCashVisibilitySettings (string appId, string deviceId, bool? isCashEnabled)
 
-Update the Cash Payment Method Visibility on Kiosk
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -1342,7 +1320,6 @@ namespace Example
 
             try
             {
-                // Update the Cash Payment Method Visibility on Kiosk
                 apiInstance.UpdateKioskCashVisibilitySettings(appId, deviceId, isCashEnabled);
             }
             catch (Exception e)

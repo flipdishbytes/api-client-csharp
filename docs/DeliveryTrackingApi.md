@@ -4,19 +4,19 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AssignDriverToOrder**](DeliveryTrackingApi.md#assigndrivertoorder) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders/{orderId} | [PRIVATE] Assign driver to order
-[**AssignDriverToOrders**](DeliveryTrackingApi.md#assigndrivertoorders) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders | Assign driver to multiple orders
-[**GetDrivers**](DeliveryTrackingApi.md#getdrivers) | **GET** /api/v1.0/{appId}/drivers | [PRIVATE] Get drivers by App
-[**InviteDriverToApp**](DeliveryTrackingApi.md#invitedrivertoapp) | **POST** /api/v1.0/{appId}/drivers | [PRIVATE] Invite driver
-[**RemoveDriverFromApp**](DeliveryTrackingApi.md#removedriverfromapp) | **DELETE** /api/v1.0/{appId}/drivers/{driverId} | [PRIVATE] Unassign driver from app
-[**UnassignDriverFromOrder**](DeliveryTrackingApi.md#unassigndriverfromorder) | **DELETE** /api/v1.0/{appId}/orders/{orderId}/driver | [PRIVATE] Unassign driver from order
+[**AssignDriverToOrder**](DeliveryTrackingApi.md#assigndrivertoorder) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders/{orderId} | 
+[**AssignDriverToOrders**](DeliveryTrackingApi.md#assigndrivertoorders) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders | 
+[**GetDrivers**](DeliveryTrackingApi.md#getdrivers) | **GET** /api/v1.0/{appId}/drivers | 
+[**InviteDriverToApp**](DeliveryTrackingApi.md#invitedrivertoapp) | **POST** /api/v1.0/{appId}/drivers | 
+[**RemoveDriverFromApp**](DeliveryTrackingApi.md#removedriverfromapp) | **DELETE** /api/v1.0/{appId}/drivers/{driverId} | 
+[**UnassignDriverFromOrder**](DeliveryTrackingApi.md#unassigndriverfromorder) | **DELETE** /api/v1.0/{appId}/orders/{orderId}/driver | 
 
 
 <a name="assigndrivertoorder"></a>
 # **AssignDriverToOrder**
 > void AssignDriverToOrder (string appId, int? orderId, int? driverId)
 
-[PRIVATE] Assign driver to order
+
 
 ### Example
 ```csharp
@@ -36,13 +36,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DeliveryTrackingApi();
-            var appId = appId_example;  // string | Application identifier
-            var orderId = 56;  // int? | Order Id
-            var driverId = 56;  // int? | Driver Id
+            var appId = appId_example;  // string | 
+            var orderId = 56;  // int? | 
+            var driverId = 56;  // int? | 
 
             try
             {
-                // [PRIVATE] Assign driver to order
                 apiInstance.AssignDriverToOrder(appId, orderId, driverId);
             }
             catch (Exception e)
@@ -58,9 +57,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application identifier | 
- **orderId** | **int?**| Order Id | 
- **driverId** | **int?**| Driver Id | 
+ **appId** | **string**|  | 
+ **orderId** | **int?**|  | 
+ **driverId** | **int?**|  | 
 
 ### Return type
 
@@ -81,7 +80,7 @@ void (empty response body)
 # **AssignDriverToOrders**
 > void AssignDriverToOrders (string appId, int? driverId, List<OrderIdAndSequenceNumber> orderIdAndSequenceNumbers)
 
-Assign driver to multiple orders
+
 
 ### Example
 ```csharp
@@ -101,13 +100,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DeliveryTrackingApi();
-            var appId = appId_example;  // string | Application identifier
-            var driverId = 56;  // int? | Driver Id
-            var orderIdAndSequenceNumbers = new List<OrderIdAndSequenceNumber>(); // List<OrderIdAndSequenceNumber> | Array of object containing OrderId and Sequence
+            var appId = appId_example;  // string | 
+            var driverId = 56;  // int? | 
+            var orderIdAndSequenceNumbers = new List<OrderIdAndSequenceNumber>(); // List<OrderIdAndSequenceNumber> | 
 
             try
             {
-                // Assign driver to multiple orders
                 apiInstance.AssignDriverToOrders(appId, driverId, orderIdAndSequenceNumbers);
             }
             catch (Exception e)
@@ -123,9 +121,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application identifier | 
- **driverId** | **int?**| Driver Id | 
- **orderIdAndSequenceNumbers** | [**List&lt;OrderIdAndSequenceNumber&gt;**](OrderIdAndSequenceNumber.md)| Array of object containing OrderId and Sequence | 
+ **appId** | **string**|  | 
+ **driverId** | **int?**|  | 
+ **orderIdAndSequenceNumbers** | [**List&lt;OrderIdAndSequenceNumber&gt;**](OrderIdAndSequenceNumber.md)|  | 
 
 ### Return type
 
@@ -146,7 +144,7 @@ void (empty response body)
 # **GetDrivers**
 > RestApiArrayResultDriver GetDrivers (string appId, string name = null, string phoneNumber = null, int? storeId = null, string presence = null)
 
-[PRIVATE] Get drivers by App
+
 
 ### Example
 ```csharp
@@ -166,15 +164,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DeliveryTrackingApi();
-            var appId = appId_example;  // string | Application identifier
-            var name = name_example;  // string | Driver's username (optional) 
-            var phoneNumber = phoneNumber_example;  // string | Driver's phone number (optional) 
-            var storeId = 56;  // int? | Store Id (optional) 
-            var presence = presence_example;  // string | Offline/Online (optional) 
+            var appId = appId_example;  // string | 
+            var name = name_example;  // string |  (optional) 
+            var phoneNumber = phoneNumber_example;  // string |  (optional) 
+            var storeId = 56;  // int? |  (optional) 
+            var presence = presence_example;  // string |  (optional) 
 
             try
             {
-                // [PRIVATE] Get drivers by App
                 RestApiArrayResultDriver result = apiInstance.GetDrivers(appId, name, phoneNumber, storeId, presence);
                 Debug.WriteLine(result);
             }
@@ -191,11 +188,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application identifier | 
- **name** | **string**| Driver&#39;s username | [optional] 
- **phoneNumber** | **string**| Driver&#39;s phone number | [optional] 
- **storeId** | **int?**| Store Id | [optional] 
- **presence** | **string**| Offline/Online | [optional] 
+ **appId** | **string**|  | 
+ **name** | **string**|  | [optional] 
+ **phoneNumber** | **string**|  | [optional] 
+ **storeId** | **int?**|  | [optional] 
+ **presence** | **string**|  | [optional] 
 
 ### Return type
 
@@ -216,7 +213,7 @@ Name | Type | Description  | Notes
 # **InviteDriverToApp**
 > RestApiResultDriver InviteDriverToApp (string appId, DriverInvitation driverInvitation)
 
-[PRIVATE] Invite driver
+
 
 ### Example
 ```csharp
@@ -236,12 +233,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DeliveryTrackingApi();
-            var appId = appId_example;  // string | Application identifier
-            var driverInvitation = new DriverInvitation(); // DriverInvitation | Driver invitation model
+            var appId = appId_example;  // string | 
+            var driverInvitation = new DriverInvitation(); // DriverInvitation | 
 
             try
             {
-                // [PRIVATE] Invite driver
                 RestApiResultDriver result = apiInstance.InviteDriverToApp(appId, driverInvitation);
                 Debug.WriteLine(result);
             }
@@ -258,8 +254,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application identifier | 
- **driverInvitation** | [**DriverInvitation**](DriverInvitation.md)| Driver invitation model | 
+ **appId** | **string**|  | 
+ **driverInvitation** | [**DriverInvitation**](DriverInvitation.md)|  | 
 
 ### Return type
 
@@ -280,7 +276,7 @@ Name | Type | Description  | Notes
 # **RemoveDriverFromApp**
 > void RemoveDriverFromApp (string appId, int? driverId)
 
-[PRIVATE] Unassign driver from app
+
 
 ### Example
 ```csharp
@@ -300,12 +296,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DeliveryTrackingApi();
-            var appId = appId_example;  // string | Application identifier
-            var driverId = 56;  // int? | Driver Id
+            var appId = appId_example;  // string | 
+            var driverId = 56;  // int? | 
 
             try
             {
-                // [PRIVATE] Unassign driver from app
                 apiInstance.RemoveDriverFromApp(appId, driverId);
             }
             catch (Exception e)
@@ -321,8 +316,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application identifier | 
- **driverId** | **int?**| Driver Id | 
+ **appId** | **string**|  | 
+ **driverId** | **int?**|  | 
 
 ### Return type
 
@@ -343,7 +338,7 @@ void (empty response body)
 # **UnassignDriverFromOrder**
 > void UnassignDriverFromOrder (string appId, int? orderId)
 
-[PRIVATE] Unassign driver from order
+
 
 ### Example
 ```csharp
@@ -363,12 +358,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DeliveryTrackingApi();
-            var appId = appId_example;  // string | Application identifier
-            var orderId = 56;  // int? | Order Id
+            var appId = appId_example;  // string | 
+            var orderId = 56;  // int? | 
 
             try
             {
-                // [PRIVATE] Unassign driver from order
                 apiInstance.UnassignDriverFromOrder(appId, orderId);
             }
             catch (Exception e)
@@ -384,8 +378,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application identifier | 
- **orderId** | **int?**| Order Id | 
+ **appId** | **string**|  | 
+ **orderId** | **int?**|  | 
 
 ### Return type
 

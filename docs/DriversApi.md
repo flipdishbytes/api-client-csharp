@@ -4,24 +4,24 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddDriverNotificationToken**](DriversApi.md#adddrivernotificationtoken) | **POST** /api/v1.0/drivers/token | Add driver token
-[**DeleteDriverProfileImage**](DriversApi.md#deletedriverprofileimage) | **DELETE** /api/v1.0/drivers/profile/image | Delete driver profile image
-[**DriverLogin**](DriversApi.md#driverlogin) | **POST** /api/v1.0/drivers/login | [PRIVATE] Login with phone number and pin
-[**DriverRequestLoginCodeSms**](DriversApi.md#driverrequestlogincodesms) | **POST** /api/v1.0/drivers/pin | [PRIVATE] Request an SMS to be sent to the driver with their login code
-[**GetDriverProfile**](DriversApi.md#getdriverprofile) | **GET** /api/v1.0/drivers/profile | Get driver profile
-[**GetStoresForDriver**](DriversApi.md#getstoresfordriver) | **GET** /api/v1.0/drivers/assignedstores | Get stores for driver
-[**RemoveDriverNotificationToken**](DriversApi.md#removedrivernotificationtoken) | **DELETE** /api/v1.0/drivers/token | Delete driver token
+[**AddDriverNotificationToken**](DriversApi.md#adddrivernotificationtoken) | **POST** /api/v1.0/drivers/token | 
+[**DeleteDriverProfileImage**](DriversApi.md#deletedriverprofileimage) | **DELETE** /api/v1.0/drivers/profile/image | 
+[**DriverLogin**](DriversApi.md#driverlogin) | **POST** /api/v1.0/drivers/login | 
+[**DriverRequestLoginCodeSms**](DriversApi.md#driverrequestlogincodesms) | **POST** /api/v1.0/drivers/pin | 
+[**GetDriverProfile**](DriversApi.md#getdriverprofile) | **GET** /api/v1.0/drivers/profile | 
+[**GetStoresForDriver**](DriversApi.md#getstoresfordriver) | **GET** /api/v1.0/drivers/assignedstores | 
+[**RemoveDriverNotificationToken**](DriversApi.md#removedrivernotificationtoken) | **DELETE** /api/v1.0/drivers/token | 
 [**SetDriverPresenceForStore**](DriversApi.md#setdriverpresenceforstore) | **POST** /api/v1.0/drivers/stores/{storeId}/presence/{presence} | 
-[**SetDriverProfileImage**](DriversApi.md#setdriverprofileimage) | **POST** /api/v1.0/drivers/profile/image | Set driver profile image and returns it&#39;s url
-[**UpdateDeliveryTrackingStatus**](DriversApi.md#updatedeliverytrackingstatus) | **POST** /api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus} | Change delivery tracking status and return the updated status.
-[**UpdateDriverProfile**](DriversApi.md#updatedriverprofile) | **POST** /api/v1.0/drivers/profile | Update driver profile
+[**SetDriverProfileImage**](DriversApi.md#setdriverprofileimage) | **POST** /api/v1.0/drivers/profile/image | 
+[**UpdateDeliveryTrackingStatus**](DriversApi.md#updatedeliverytrackingstatus) | **POST** /api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus} | 
+[**UpdateDriverProfile**](DriversApi.md#updatedriverprofile) | **POST** /api/v1.0/drivers/profile | 
 
 
 <a name="adddrivernotificationtoken"></a>
 # **AddDriverNotificationToken**
 > void AddDriverNotificationToken (UpdateDriverNotificationToken updateDriverToken)
 
-Add driver token
+
 
 ### Example
 ```csharp
@@ -45,7 +45,6 @@ namespace Example
 
             try
             {
-                // Add driver token
                 apiInstance.AddDriverNotificationToken(updateDriverToken);
             }
             catch (Exception e)
@@ -82,7 +81,7 @@ void (empty response body)
 # **DeleteDriverProfileImage**
 > void DeleteDriverProfileImage ()
 
-Delete driver profile image
+
 
 ### Example
 ```csharp
@@ -105,7 +104,6 @@ namespace Example
 
             try
             {
-                // Delete driver profile image
                 apiInstance.DeleteDriverProfileImage();
             }
             catch (Exception e)
@@ -139,7 +137,7 @@ void (empty response body)
 # **DriverLogin**
 > void DriverLogin (DriverLoginModel driverLoginModel)
 
-[PRIVATE] Login with phone number and pin
+
 
 ### Example
 ```csharp
@@ -159,11 +157,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DriversApi();
-            var driverLoginModel = new DriverLoginModel(); // DriverLoginModel | Driver request login code model
+            var driverLoginModel = new DriverLoginModel(); // DriverLoginModel | 
 
             try
             {
-                // [PRIVATE] Login with phone number and pin
                 apiInstance.DriverLogin(driverLoginModel);
             }
             catch (Exception e)
@@ -179,7 +176,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **driverLoginModel** | [**DriverLoginModel**](DriverLoginModel.md)| Driver request login code model | 
+ **driverLoginModel** | [**DriverLoginModel**](DriverLoginModel.md)|  | 
 
 ### Return type
 
@@ -200,7 +197,7 @@ void (empty response body)
 # **DriverRequestLoginCodeSms**
 > void DriverRequestLoginCodeSms (DriverRequestLoginPinModel driverRequestLoginPinModel)
 
-[PRIVATE] Request an SMS to be sent to the driver with their login code
+
 
 ### Example
 ```csharp
@@ -220,11 +217,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DriversApi();
-            var driverRequestLoginPinModel = new DriverRequestLoginPinModel(); // DriverRequestLoginPinModel | Driver request login code model
+            var driverRequestLoginPinModel = new DriverRequestLoginPinModel(); // DriverRequestLoginPinModel | 
 
             try
             {
-                // [PRIVATE] Request an SMS to be sent to the driver with their login code
                 apiInstance.DriverRequestLoginCodeSms(driverRequestLoginPinModel);
             }
             catch (Exception e)
@@ -240,7 +236,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **driverRequestLoginPinModel** | [**DriverRequestLoginPinModel**](DriverRequestLoginPinModel.md)| Driver request login code model | 
+ **driverRequestLoginPinModel** | [**DriverRequestLoginPinModel**](DriverRequestLoginPinModel.md)|  | 
 
 ### Return type
 
@@ -261,7 +257,7 @@ void (empty response body)
 # **GetDriverProfile**
 > RestApiResultDriver GetDriverProfile ()
 
-Get driver profile
+
 
 ### Example
 ```csharp
@@ -284,7 +280,6 @@ namespace Example
 
             try
             {
-                // Get driver profile
                 RestApiResultDriver result = apiInstance.GetDriverProfile();
                 Debug.WriteLine(result);
             }
@@ -319,7 +314,7 @@ This endpoint does not need any parameter.
 # **GetStoresForDriver**
 > RestApiArrayResultDriverStore GetStoresForDriver ()
 
-Get stores for driver
+
 
 ### Example
 ```csharp
@@ -342,7 +337,6 @@ namespace Example
 
             try
             {
-                // Get stores for driver
                 RestApiArrayResultDriverStore result = apiInstance.GetStoresForDriver();
                 Debug.WriteLine(result);
             }
@@ -377,7 +371,7 @@ This endpoint does not need any parameter.
 # **RemoveDriverNotificationToken**
 > void RemoveDriverNotificationToken (UpdateDriverNotificationToken removeDriverToken)
 
-Delete driver token
+
 
 ### Example
 ```csharp
@@ -401,7 +395,6 @@ namespace Example
 
             try
             {
-                // Delete driver token
                 apiInstance.RemoveDriverNotificationToken(removeDriverToken);
             }
             catch (Exception e)
@@ -500,7 +493,7 @@ void (empty response body)
 # **SetDriverProfileImage**
 > RestApiStringResult SetDriverProfileImage ()
 
-Set driver profile image and returns it's url
+
 
 ### Example
 ```csharp
@@ -523,7 +516,6 @@ namespace Example
 
             try
             {
-                // Set driver profile image and returns it's url
                 RestApiStringResult result = apiInstance.SetDriverProfileImage();
                 Debug.WriteLine(result);
             }
@@ -558,9 +550,7 @@ This endpoint does not need any parameter.
 # **UpdateDeliveryTrackingStatus**
 > RestApiStringResult UpdateDeliveryTrackingStatus (int? orderId, string deliveryTrackingStatus)
 
-Change delivery tracking status and return the updated status.
 
-...
 
 ### Example
 ```csharp
@@ -580,12 +570,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DriversApi();
-            var orderId = 56;  // int? | Order identifier
+            var orderId = 56;  // int? | 
             var deliveryTrackingStatus = deliveryTrackingStatus_example;  // string | 
 
             try
             {
-                // Change delivery tracking status and return the updated status.
                 RestApiStringResult result = apiInstance.UpdateDeliveryTrackingStatus(orderId, deliveryTrackingStatus);
                 Debug.WriteLine(result);
             }
@@ -602,7 +591,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **int?**| Order identifier | 
+ **orderId** | **int?**|  | 
  **deliveryTrackingStatus** | **string**|  | 
 
 ### Return type
@@ -624,7 +613,7 @@ Name | Type | Description  | Notes
 # **UpdateDriverProfile**
 > void UpdateDriverProfile (UpdateDriverProfileModel updateDriverProfile)
 
-Update driver profile
+
 
 ### Example
 ```csharp
@@ -644,11 +633,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DriversApi();
-            var updateDriverProfile = new UpdateDriverProfileModel(); // UpdateDriverProfileModel | Update the driver profile (i.e Name)
+            var updateDriverProfile = new UpdateDriverProfileModel(); // UpdateDriverProfileModel | 
 
             try
             {
-                // Update driver profile
                 apiInstance.UpdateDriverProfile(updateDriverProfile);
             }
             catch (Exception e)
@@ -664,7 +652,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateDriverProfile** | [**UpdateDriverProfileModel**](UpdateDriverProfileModel.md)| Update the driver profile (i.e Name) | 
+ **updateDriverProfile** | [**UpdateDriverProfileModel**](UpdateDriverProfileModel.md)|  | 
 
 ### Return type
 

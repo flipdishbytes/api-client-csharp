@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetLogs**](HttpRequestResponseLogsApi.md#getlogs) | **GET** /api/v1.0/{appId}/interactions/logs | Get API interaction logs
+[**GetLogs**](HttpRequestResponseLogsApi.md#getlogs) | **GET** /api/v1.0/{appId}/interactions/logs | 
 
 
 <a name="getlogs"></a>
 # **GetLogs**
 > RestApiPaginationResultHttpRequestAndResponseLog GetLogs (DateTime? start, DateTime? end, string appId, int? filterByUserId = null, string guid = null, int? page = null, int? limit = null)
 
-Get API interaction logs
+
 
 ### Example
 ```csharp
@@ -31,17 +31,16 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new HttpRequestResponseLogsApi();
-            var start = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date time
-            var end = 2013-10-20T19:20:30+01:00;  // DateTime? | End date time
+            var start = 2013-10-20T19:20:30+01:00;  // DateTime? | 
+            var end = 2013-10-20T19:20:30+01:00;  // DateTime? | 
             var appId = appId_example;  // string | 
-            var filterByUserId = 56;  // int? | User id (optional) (optional) 
-            var guid = guid_example;  // string | Id of the log (optional) 
-            var page = 56;  // int? | Page number (optional) 
-            var limit = 56;  // int? | Page size (optional) 
+            var filterByUserId = 56;  // int? |  (optional) 
+            var guid = guid_example;  // string |  (optional) 
+            var page = 56;  // int? |  (optional) 
+            var limit = 56;  // int? |  (optional) 
 
             try
             {
-                // Get API interaction logs
                 RestApiPaginationResultHttpRequestAndResponseLog result = apiInstance.GetLogs(start, end, appId, filterByUserId, guid, page, limit);
                 Debug.WriteLine(result);
             }
@@ -58,13 +57,13 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start** | **DateTime?**| Start date time | 
- **end** | **DateTime?**| End date time | 
+ **start** | **DateTime?**|  | 
+ **end** | **DateTime?**|  | 
  **appId** | **string**|  | 
- **filterByUserId** | **int?**| User id (optional) | [optional] 
- **guid** | **string**| Id of the log | [optional] 
- **page** | **int?**| Page number | [optional] 
- **limit** | **int?**| Page size | [optional] 
+ **filterByUserId** | **int?**|  | [optional] 
+ **guid** | **string**|  | [optional] 
+ **page** | **int?**|  | [optional] 
+ **limit** | **int?**|  | [optional] 
 
 ### Return type
 

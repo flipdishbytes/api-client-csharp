@@ -4,19 +4,19 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateTeammate**](TeammatesApi.md#createteammate) | **POST** /api/v1.0/{appId}/teammates | Create teammate and send an invite.
-[**DeleteTeammate**](TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | Delete teammate
-[**GetTeammateByAppIdAndTeammateId**](TeammatesApi.md#getteammatebyappidandteammateid) | **GET** /api/v1.0/{appId}/teammates/{id} | Get a teammates by email address
-[**GetTeammatesByAppId**](TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | Get all teammates
-[**RedeemInvitation**](TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | Redeem one-time code from invitation
-[**UpdateTeammate**](TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{id} | Update teammates (this method does not support Deltas!)
+[**CreateTeammate**](TeammatesApi.md#createteammate) | **POST** /api/v1.0/{appId}/teammates | 
+[**DeleteTeammate**](TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | 
+[**GetTeammateByAppIdAndTeammateId**](TeammatesApi.md#getteammatebyappidandteammateid) | **GET** /api/v1.0/{appId}/teammates/{id} | 
+[**GetTeammatesByAppId**](TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | 
+[**RedeemInvitation**](TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+[**UpdateTeammate**](TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{id} | 
 
 
 <a name="createteammate"></a>
 # **CreateTeammate**
 > RestApiResultTeammate CreateTeammate (string appId, CreateTeammate teammate)
 
-Create teammate and send an invite.
+
 
 ### Example
 ```csharp
@@ -36,12 +36,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new TeammatesApi();
-            var appId = appId_example;  // string | Application identifier
-            var teammate = new CreateTeammate(); // CreateTeammate | teammate model
+            var appId = appId_example;  // string | 
+            var teammate = new CreateTeammate(); // CreateTeammate | 
 
             try
             {
-                // Create teammate and send an invite.
                 RestApiResultTeammate result = apiInstance.CreateTeammate(appId, teammate);
                 Debug.WriteLine(result);
             }
@@ -58,8 +57,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application identifier | 
- **teammate** | [**CreateTeammate**](CreateTeammate.md)| teammate model | 
+ **appId** | **string**|  | 
+ **teammate** | [**CreateTeammate**](CreateTeammate.md)|  | 
 
 ### Return type
 
@@ -80,7 +79,7 @@ Name | Type | Description  | Notes
 # **DeleteTeammate**
 > void DeleteTeammate (string appId, string id)
 
-Delete teammate
+
 
 ### Example
 ```csharp
@@ -105,7 +104,6 @@ namespace Example
 
             try
             {
-                // Delete teammate
                 apiInstance.DeleteTeammate(appId, id);
             }
             catch (Exception e)
@@ -143,7 +141,7 @@ void (empty response body)
 # **GetTeammateByAppIdAndTeammateId**
 > RestApiResultTeammate GetTeammateByAppIdAndTeammateId (string appId, string id)
 
-Get a teammates by email address
+
 
 ### Example
 ```csharp
@@ -168,7 +166,6 @@ namespace Example
 
             try
             {
-                // Get a teammates by email address
                 RestApiResultTeammate result = apiInstance.GetTeammateByAppIdAndTeammateId(appId, id);
                 Debug.WriteLine(result);
             }
@@ -207,7 +204,7 @@ Name | Type | Description  | Notes
 # **GetTeammatesByAppId**
 > RestApiArrayResultTeammate GetTeammatesByAppId (string appId)
 
-Get all teammates
+
 
 ### Example
 ```csharp
@@ -231,7 +228,6 @@ namespace Example
 
             try
             {
-                // Get all teammates
                 RestApiArrayResultTeammate result = apiInstance.GetTeammatesByAppId(appId);
                 Debug.WriteLine(result);
             }
@@ -269,7 +265,7 @@ Name | Type | Description  | Notes
 # **RedeemInvitation**
 > RestApiResultRedeemInvitationResult RedeemInvitation (string otc, string appId)
 
-Redeem one-time code from invitation
+
 
 ### Example
 ```csharp
@@ -294,7 +290,6 @@ namespace Example
 
             try
             {
-                // Redeem one-time code from invitation
                 RestApiResultRedeemInvitationResult result = apiInstance.RedeemInvitation(otc, appId);
                 Debug.WriteLine(result);
             }
@@ -333,7 +328,7 @@ Name | Type | Description  | Notes
 # **UpdateTeammate**
 > RestApiResultTeammate UpdateTeammate (string appId, string id, TeammateBase teammate)
 
-Update teammates (this method does not support Deltas!)
+
 
 ### Example
 ```csharp
@@ -353,13 +348,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new TeammatesApi();
-            var appId = appId_example;  // string | Application identifier
-            var id = id_example;  // string | teammate identifier
-            var teammate = new TeammateBase(); // TeammateBase | teammate model
+            var appId = appId_example;  // string | 
+            var id = id_example;  // string | 
+            var teammate = new TeammateBase(); // TeammateBase | 
 
             try
             {
-                // Update teammates (this method does not support Deltas!)
                 RestApiResultTeammate result = apiInstance.UpdateTeammate(appId, id, teammate);
                 Debug.WriteLine(result);
             }
@@ -376,9 +370,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application identifier | 
- **id** | **string**| teammate identifier | 
- **teammate** | [**TeammateBase**](TeammateBase.md)| teammate model | 
+ **appId** | **string**|  | 
+ **id** | **string**|  | 
+ **teammate** | [**TeammateBase**](TeammateBase.md)|  | 
 
 ### Return type
 

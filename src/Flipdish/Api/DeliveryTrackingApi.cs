@@ -25,301 +25,301 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [PRIVATE] Assign driver to order
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="orderId">Order Id</param>
-        /// <param name="driverId">Driver Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderId"></param>
+        /// <param name="driverId"></param>
         /// <returns></returns>
         void AssignDriverToOrder (string appId, int? orderId, int? driverId);
 
         /// <summary>
-        /// [PRIVATE] Assign driver to order
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="orderId">Order Id</param>
-        /// <param name="driverId">Driver Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderId"></param>
+        /// <param name="driverId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> AssignDriverToOrderWithHttpInfo (string appId, int? orderId, int? driverId);
         /// <summary>
-        /// Assign driver to multiple orders
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverId">Driver Id</param>
-        /// <param name="orderIdAndSequenceNumbers">Array of object containing OrderId and Sequence</param>
+        /// <param name="appId"></param>
+        /// <param name="driverId"></param>
+        /// <param name="orderIdAndSequenceNumbers"></param>
         /// <returns></returns>
         void AssignDriverToOrders (string appId, int? driverId, List<OrderIdAndSequenceNumber> orderIdAndSequenceNumbers);
 
         /// <summary>
-        /// Assign driver to multiple orders
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverId">Driver Id</param>
-        /// <param name="orderIdAndSequenceNumbers">Array of object containing OrderId and Sequence</param>
+        /// <param name="appId"></param>
+        /// <param name="driverId"></param>
+        /// <param name="orderIdAndSequenceNumbers"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> AssignDriverToOrdersWithHttpInfo (string appId, int? driverId, List<OrderIdAndSequenceNumber> orderIdAndSequenceNumbers);
         /// <summary>
-        /// [PRIVATE] Get drivers by App
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="name">Driver&#39;s username (optional)</param>
-        /// <param name="phoneNumber">Driver&#39;s phone number (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="presence">Offline/Online (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="name"> (optional)</param>
+        /// <param name="phoneNumber"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="presence"> (optional)</param>
         /// <returns>RestApiArrayResultDriver</returns>
         RestApiArrayResultDriver GetDrivers (string appId, string name = null, string phoneNumber = null, int? storeId = null, string presence = null);
 
         /// <summary>
-        /// [PRIVATE] Get drivers by App
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="name">Driver&#39;s username (optional)</param>
-        /// <param name="phoneNumber">Driver&#39;s phone number (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="presence">Offline/Online (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="name"> (optional)</param>
+        /// <param name="phoneNumber"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="presence"> (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultDriver</returns>
         ApiResponse<RestApiArrayResultDriver> GetDriversWithHttpInfo (string appId, string name = null, string phoneNumber = null, int? storeId = null, string presence = null);
         /// <summary>
-        /// [PRIVATE] Invite driver
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverInvitation">Driver invitation model</param>
+        /// <param name="appId"></param>
+        /// <param name="driverInvitation"></param>
         /// <returns>RestApiResultDriver</returns>
         RestApiResultDriver InviteDriverToApp (string appId, DriverInvitation driverInvitation);
 
         /// <summary>
-        /// [PRIVATE] Invite driver
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverInvitation">Driver invitation model</param>
+        /// <param name="appId"></param>
+        /// <param name="driverInvitation"></param>
         /// <returns>ApiResponse of RestApiResultDriver</returns>
         ApiResponse<RestApiResultDriver> InviteDriverToAppWithHttpInfo (string appId, DriverInvitation driverInvitation);
         /// <summary>
-        /// [PRIVATE] Unassign driver from app
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverId">Driver Id</param>
+        /// <param name="appId"></param>
+        /// <param name="driverId"></param>
         /// <returns></returns>
         void RemoveDriverFromApp (string appId, int? driverId);
 
         /// <summary>
-        /// [PRIVATE] Unassign driver from app
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverId">Driver Id</param>
+        /// <param name="appId"></param>
+        /// <param name="driverId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> RemoveDriverFromAppWithHttpInfo (string appId, int? driverId);
         /// <summary>
-        /// [PRIVATE] Unassign driver from order
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="orderId">Order Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderId"></param>
         /// <returns></returns>
         void UnassignDriverFromOrder (string appId, int? orderId);
 
         /// <summary>
-        /// [PRIVATE] Unassign driver from order
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="orderId">Order Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UnassignDriverFromOrderWithHttpInfo (string appId, int? orderId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// [PRIVATE] Assign driver to order
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="orderId">Order Id</param>
-        /// <param name="driverId">Driver Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderId"></param>
+        /// <param name="driverId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task AssignDriverToOrderAsync (string appId, int? orderId, int? driverId);
 
         /// <summary>
-        /// [PRIVATE] Assign driver to order
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="orderId">Order Id</param>
-        /// <param name="driverId">Driver Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderId"></param>
+        /// <param name="driverId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AssignDriverToOrderAsyncWithHttpInfo (string appId, int? orderId, int? driverId);
         /// <summary>
-        /// Assign driver to multiple orders
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverId">Driver Id</param>
-        /// <param name="orderIdAndSequenceNumbers">Array of object containing OrderId and Sequence</param>
+        /// <param name="appId"></param>
+        /// <param name="driverId"></param>
+        /// <param name="orderIdAndSequenceNumbers"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task AssignDriverToOrdersAsync (string appId, int? driverId, List<OrderIdAndSequenceNumber> orderIdAndSequenceNumbers);
 
         /// <summary>
-        /// Assign driver to multiple orders
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverId">Driver Id</param>
-        /// <param name="orderIdAndSequenceNumbers">Array of object containing OrderId and Sequence</param>
+        /// <param name="appId"></param>
+        /// <param name="driverId"></param>
+        /// <param name="orderIdAndSequenceNumbers"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AssignDriverToOrdersAsyncWithHttpInfo (string appId, int? driverId, List<OrderIdAndSequenceNumber> orderIdAndSequenceNumbers);
         /// <summary>
-        /// [PRIVATE] Get drivers by App
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="name">Driver&#39;s username (optional)</param>
-        /// <param name="phoneNumber">Driver&#39;s phone number (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="presence">Offline/Online (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="name"> (optional)</param>
+        /// <param name="phoneNumber"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="presence"> (optional)</param>
         /// <returns>Task of RestApiArrayResultDriver</returns>
         System.Threading.Tasks.Task<RestApiArrayResultDriver> GetDriversAsync (string appId, string name = null, string phoneNumber = null, int? storeId = null, string presence = null);
 
         /// <summary>
-        /// [PRIVATE] Get drivers by App
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="name">Driver&#39;s username (optional)</param>
-        /// <param name="phoneNumber">Driver&#39;s phone number (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="presence">Offline/Online (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="name"> (optional)</param>
+        /// <param name="phoneNumber"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="presence"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultDriver)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultDriver>> GetDriversAsyncWithHttpInfo (string appId, string name = null, string phoneNumber = null, int? storeId = null, string presence = null);
         /// <summary>
-        /// [PRIVATE] Invite driver
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverInvitation">Driver invitation model</param>
+        /// <param name="appId"></param>
+        /// <param name="driverInvitation"></param>
         /// <returns>Task of RestApiResultDriver</returns>
         System.Threading.Tasks.Task<RestApiResultDriver> InviteDriverToAppAsync (string appId, DriverInvitation driverInvitation);
 
         /// <summary>
-        /// [PRIVATE] Invite driver
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverInvitation">Driver invitation model</param>
+        /// <param name="appId"></param>
+        /// <param name="driverInvitation"></param>
         /// <returns>Task of ApiResponse (RestApiResultDriver)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultDriver>> InviteDriverToAppAsyncWithHttpInfo (string appId, DriverInvitation driverInvitation);
         /// <summary>
-        /// [PRIVATE] Unassign driver from app
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverId">Driver Id</param>
+        /// <param name="appId"></param>
+        /// <param name="driverId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task RemoveDriverFromAppAsync (string appId, int? driverId);
 
         /// <summary>
-        /// [PRIVATE] Unassign driver from app
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverId">Driver Id</param>
+        /// <param name="appId"></param>
+        /// <param name="driverId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> RemoveDriverFromAppAsyncWithHttpInfo (string appId, int? driverId);
         /// <summary>
-        /// [PRIVATE] Unassign driver from order
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="orderId">Order Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UnassignDriverFromOrderAsync (string appId, int? orderId);
 
         /// <summary>
-        /// [PRIVATE] Unassign driver from order
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="orderId">Order Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UnassignDriverFromOrderAsyncWithHttpInfo (string appId, int? orderId);
         #endregion Asynchronous Operations
@@ -423,12 +423,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Assign driver to order 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="orderId">Order Id</param>
-        /// <param name="driverId">Driver Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderId"></param>
+        /// <param name="driverId"></param>
         /// <returns></returns>
         public void AssignDriverToOrder (string appId, int? orderId, int? driverId)
         {
@@ -436,12 +436,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Assign driver to order 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="orderId">Order Id</param>
-        /// <param name="driverId">Driver Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderId"></param>
+        /// <param name="driverId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> AssignDriverToOrderWithHttpInfo (string appId, int? orderId, int? driverId)
         {
@@ -509,12 +509,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Assign driver to order 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="orderId">Order Id</param>
-        /// <param name="driverId">Driver Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderId"></param>
+        /// <param name="driverId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task AssignDriverToOrderAsync (string appId, int? orderId, int? driverId)
         {
@@ -523,12 +523,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Assign driver to order 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="orderId">Order Id</param>
-        /// <param name="driverId">Driver Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderId"></param>
+        /// <param name="driverId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AssignDriverToOrderAsyncWithHttpInfo (string appId, int? orderId, int? driverId)
         {
@@ -596,12 +596,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign driver to multiple orders 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverId">Driver Id</param>
-        /// <param name="orderIdAndSequenceNumbers">Array of object containing OrderId and Sequence</param>
+        /// <param name="appId"></param>
+        /// <param name="driverId"></param>
+        /// <param name="orderIdAndSequenceNumbers"></param>
         /// <returns></returns>
         public void AssignDriverToOrders (string appId, int? driverId, List<OrderIdAndSequenceNumber> orderIdAndSequenceNumbers)
         {
@@ -609,12 +609,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign driver to multiple orders 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverId">Driver Id</param>
-        /// <param name="orderIdAndSequenceNumbers">Array of object containing OrderId and Sequence</param>
+        /// <param name="appId"></param>
+        /// <param name="driverId"></param>
+        /// <param name="orderIdAndSequenceNumbers"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> AssignDriverToOrdersWithHttpInfo (string appId, int? driverId, List<OrderIdAndSequenceNumber> orderIdAndSequenceNumbers)
         {
@@ -694,12 +694,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign driver to multiple orders 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverId">Driver Id</param>
-        /// <param name="orderIdAndSequenceNumbers">Array of object containing OrderId and Sequence</param>
+        /// <param name="appId"></param>
+        /// <param name="driverId"></param>
+        /// <param name="orderIdAndSequenceNumbers"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task AssignDriverToOrdersAsync (string appId, int? driverId, List<OrderIdAndSequenceNumber> orderIdAndSequenceNumbers)
         {
@@ -708,12 +708,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Assign driver to multiple orders 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverId">Driver Id</param>
-        /// <param name="orderIdAndSequenceNumbers">Array of object containing OrderId and Sequence</param>
+        /// <param name="appId"></param>
+        /// <param name="driverId"></param>
+        /// <param name="orderIdAndSequenceNumbers"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AssignDriverToOrdersAsyncWithHttpInfo (string appId, int? driverId, List<OrderIdAndSequenceNumber> orderIdAndSequenceNumbers)
         {
@@ -793,14 +793,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Get drivers by App 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="name">Driver&#39;s username (optional)</param>
-        /// <param name="phoneNumber">Driver&#39;s phone number (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="presence">Offline/Online (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="name"> (optional)</param>
+        /// <param name="phoneNumber"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="presence"> (optional)</param>
         /// <returns>RestApiArrayResultDriver</returns>
         public RestApiArrayResultDriver GetDrivers (string appId, string name = null, string phoneNumber = null, int? storeId = null, string presence = null)
         {
@@ -809,14 +809,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Get drivers by App 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="name">Driver&#39;s username (optional)</param>
-        /// <param name="phoneNumber">Driver&#39;s phone number (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="presence">Offline/Online (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="name"> (optional)</param>
+        /// <param name="phoneNumber"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="presence"> (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultDriver</returns>
         public ApiResponse< RestApiArrayResultDriver > GetDriversWithHttpInfo (string appId, string name = null, string phoneNumber = null, int? storeId = null, string presence = null)
         {
@@ -880,14 +880,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Get drivers by App 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="name">Driver&#39;s username (optional)</param>
-        /// <param name="phoneNumber">Driver&#39;s phone number (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="presence">Offline/Online (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="name"> (optional)</param>
+        /// <param name="phoneNumber"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="presence"> (optional)</param>
         /// <returns>Task of RestApiArrayResultDriver</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultDriver> GetDriversAsync (string appId, string name = null, string phoneNumber = null, int? storeId = null, string presence = null)
         {
@@ -897,14 +897,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Get drivers by App 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="name">Driver&#39;s username (optional)</param>
-        /// <param name="phoneNumber">Driver&#39;s phone number (optional)</param>
-        /// <param name="storeId">Store Id (optional)</param>
-        /// <param name="presence">Offline/Online (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="name"> (optional)</param>
+        /// <param name="phoneNumber"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="presence"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultDriver)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultDriver>> GetDriversAsyncWithHttpInfo (string appId, string name = null, string phoneNumber = null, int? storeId = null, string presence = null)
         {
@@ -968,11 +968,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Invite driver 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverInvitation">Driver invitation model</param>
+        /// <param name="appId"></param>
+        /// <param name="driverInvitation"></param>
         /// <returns>RestApiResultDriver</returns>
         public RestApiResultDriver InviteDriverToApp (string appId, DriverInvitation driverInvitation)
         {
@@ -981,11 +981,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Invite driver 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverInvitation">Driver invitation model</param>
+        /// <param name="appId"></param>
+        /// <param name="driverInvitation"></param>
         /// <returns>ApiResponse of RestApiResultDriver</returns>
         public ApiResponse< RestApiResultDriver > InviteDriverToAppWithHttpInfo (string appId, DriverInvitation driverInvitation)
         {
@@ -1061,11 +1061,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Invite driver 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverInvitation">Driver invitation model</param>
+        /// <param name="appId"></param>
+        /// <param name="driverInvitation"></param>
         /// <returns>Task of RestApiResultDriver</returns>
         public async System.Threading.Tasks.Task<RestApiResultDriver> InviteDriverToAppAsync (string appId, DriverInvitation driverInvitation)
         {
@@ -1075,11 +1075,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Invite driver 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverInvitation">Driver invitation model</param>
+        /// <param name="appId"></param>
+        /// <param name="driverInvitation"></param>
         /// <returns>Task of ApiResponse (RestApiResultDriver)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultDriver>> InviteDriverToAppAsyncWithHttpInfo (string appId, DriverInvitation driverInvitation)
         {
@@ -1155,11 +1155,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Unassign driver from app 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverId">Driver Id</param>
+        /// <param name="appId"></param>
+        /// <param name="driverId"></param>
         /// <returns></returns>
         public void RemoveDriverFromApp (string appId, int? driverId)
         {
@@ -1167,11 +1167,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Unassign driver from app 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverId">Driver Id</param>
+        /// <param name="appId"></param>
+        /// <param name="driverId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> RemoveDriverFromAppWithHttpInfo (string appId, int? driverId)
         {
@@ -1235,11 +1235,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Unassign driver from app 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverId">Driver Id</param>
+        /// <param name="appId"></param>
+        /// <param name="driverId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task RemoveDriverFromAppAsync (string appId, int? driverId)
         {
@@ -1248,11 +1248,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Unassign driver from app 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="driverId">Driver Id</param>
+        /// <param name="appId"></param>
+        /// <param name="driverId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> RemoveDriverFromAppAsyncWithHttpInfo (string appId, int? driverId)
         {
@@ -1316,11 +1316,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Unassign driver from order 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="orderId">Order Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderId"></param>
         /// <returns></returns>
         public void UnassignDriverFromOrder (string appId, int? orderId)
         {
@@ -1328,11 +1328,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Unassign driver from order 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="orderId">Order Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> UnassignDriverFromOrderWithHttpInfo (string appId, int? orderId)
         {
@@ -1396,11 +1396,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Unassign driver from order 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="orderId">Order Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UnassignDriverFromOrderAsync (string appId, int? orderId)
         {
@@ -1409,11 +1409,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE] Unassign driver from order 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application identifier</param>
-        /// <param name="orderId">Order Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UnassignDriverFromOrderAsyncWithHttpInfo (string appId, int? orderId)
         {

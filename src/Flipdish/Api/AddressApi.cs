@@ -25,76 +25,76 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application (WhiteLabel) Id (WhiteLabelId or AppNameId).</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>RestApiResultAddressFormResponse</returns>
         RestApiResultAddressFormResponse FormByApp (string appId, string language = null);
 
         /// <summary>
-        /// Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application (WhiteLabel) Id (WhiteLabelId or AppNameId).</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultAddressFormResponse</returns>
         ApiResponse<RestApiResultAddressFormResponse> FormByAppWithHttpInfo (string appId, string language = null);
         /// <summary>
-        /// Provides a dyamic form definition for the given country code, with labels localized using the provided language.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="countryCode">The 2 letter ISO country code, e.g.: IE.</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="countryCode"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>RestApiResultAddressFormResponse</returns>
         RestApiResultAddressFormResponse FormByCountry (string countryCode, string language = null);
 
         /// <summary>
-        /// Provides a dyamic form definition for the given country code, with labels localized using the provided language.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="countryCode">The 2 letter ISO country code, e.g.: IE.</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="countryCode"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultAddressFormResponse</returns>
         ApiResponse<RestApiResultAddressFormResponse> FormByCountryWithHttpInfo (string countryCode, string language = null);
         /// <summary>
-        /// Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleAddress">A Google address object, as it is returned from the maps API.</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="googleAddress"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>RestApiResultAddressFormResponse</returns>
         RestApiResultAddressFormResponse FormatGoogleAddress (GoogleAddress googleAddress, string language = null);
 
         /// <summary>
-        /// Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleAddress">A Google address object, as it is returned from the maps API.</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="googleAddress"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultAddressFormResponse</returns>
         ApiResponse<RestApiResultAddressFormResponse> FormatGoogleAddressWithHttpInfo (GoogleAddress googleAddress, string language = null);
         /// <summary>
-        /// Retuns a list of localised countries
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -105,7 +105,7 @@ namespace Flipdish.Api
         RestApiResultCountryFormResponse GetCountries (string language = null);
 
         /// <summary>
-        /// Retuns a list of localised countries
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -117,76 +117,76 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application (WhiteLabel) Id (WhiteLabelId or AppNameId).</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>Task of RestApiResultAddressFormResponse</returns>
         System.Threading.Tasks.Task<RestApiResultAddressFormResponse> FormByAppAsync (string appId, string language = null);
 
         /// <summary>
-        /// Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application (WhiteLabel) Id (WhiteLabelId or AppNameId).</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultAddressFormResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultAddressFormResponse>> FormByAppAsyncWithHttpInfo (string appId, string language = null);
         /// <summary>
-        /// Provides a dyamic form definition for the given country code, with labels localized using the provided language.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="countryCode">The 2 letter ISO country code, e.g.: IE.</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="countryCode"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>Task of RestApiResultAddressFormResponse</returns>
         System.Threading.Tasks.Task<RestApiResultAddressFormResponse> FormByCountryAsync (string countryCode, string language = null);
 
         /// <summary>
-        /// Provides a dyamic form definition for the given country code, with labels localized using the provided language.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="countryCode">The 2 letter ISO country code, e.g.: IE.</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="countryCode"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultAddressFormResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultAddressFormResponse>> FormByCountryAsyncWithHttpInfo (string countryCode, string language = null);
         /// <summary>
-        /// Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleAddress">A Google address object, as it is returned from the maps API.</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="googleAddress"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>Task of RestApiResultAddressFormResponse</returns>
         System.Threading.Tasks.Task<RestApiResultAddressFormResponse> FormatGoogleAddressAsync (GoogleAddress googleAddress, string language = null);
 
         /// <summary>
-        /// Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleAddress">A Google address object, as it is returned from the maps API.</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="googleAddress"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultAddressFormResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultAddressFormResponse>> FormatGoogleAddressAsyncWithHttpInfo (GoogleAddress googleAddress, string language = null);
         /// <summary>
-        /// Retuns a list of localised countries
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -197,7 +197,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultCountryFormResponse> GetCountriesAsync (string language = null);
 
         /// <summary>
-        /// Retuns a list of localised countries
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -307,11 +307,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application (WhiteLabel) Id (WhiteLabelId or AppNameId).</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>RestApiResultAddressFormResponse</returns>
         public RestApiResultAddressFormResponse FormByApp (string appId, string language = null)
         {
@@ -320,11 +320,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application (WhiteLabel) Id (WhiteLabelId or AppNameId).</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultAddressFormResponse</returns>
         public ApiResponse< RestApiResultAddressFormResponse > FormByAppWithHttpInfo (string appId, string language = null)
         {
@@ -385,11 +385,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application (WhiteLabel) Id (WhiteLabelId or AppNameId).</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>Task of RestApiResultAddressFormResponse</returns>
         public async System.Threading.Tasks.Task<RestApiResultAddressFormResponse> FormByAppAsync (string appId, string language = null)
         {
@@ -399,11 +399,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">Application (WhiteLabel) Id (WhiteLabelId or AppNameId).</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultAddressFormResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAddressFormResponse>> FormByAppAsyncWithHttpInfo (string appId, string language = null)
         {
@@ -464,11 +464,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Provides a dyamic form definition for the given country code, with labels localized using the provided language. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="countryCode">The 2 letter ISO country code, e.g.: IE.</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="countryCode"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>RestApiResultAddressFormResponse</returns>
         public RestApiResultAddressFormResponse FormByCountry (string countryCode, string language = null)
         {
@@ -477,11 +477,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Provides a dyamic form definition for the given country code, with labels localized using the provided language. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="countryCode">The 2 letter ISO country code, e.g.: IE.</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="countryCode"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultAddressFormResponse</returns>
         public ApiResponse< RestApiResultAddressFormResponse > FormByCountryWithHttpInfo (string countryCode, string language = null)
         {
@@ -542,11 +542,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Provides a dyamic form definition for the given country code, with labels localized using the provided language. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="countryCode">The 2 letter ISO country code, e.g.: IE.</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="countryCode"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>Task of RestApiResultAddressFormResponse</returns>
         public async System.Threading.Tasks.Task<RestApiResultAddressFormResponse> FormByCountryAsync (string countryCode, string language = null)
         {
@@ -556,11 +556,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Provides a dyamic form definition for the given country code, with labels localized using the provided language. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="countryCode">The 2 letter ISO country code, e.g.: IE.</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="countryCode"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultAddressFormResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAddressFormResponse>> FormByCountryAsyncWithHttpInfo (string countryCode, string language = null)
         {
@@ -621,11 +621,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleAddress">A Google address object, as it is returned from the maps API.</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="googleAddress"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>RestApiResultAddressFormResponse</returns>
         public RestApiResultAddressFormResponse FormatGoogleAddress (GoogleAddress googleAddress, string language = null)
         {
@@ -634,11 +634,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleAddress">A Google address object, as it is returned from the maps API.</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="googleAddress"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultAddressFormResponse</returns>
         public ApiResponse< RestApiResultAddressFormResponse > FormatGoogleAddressWithHttpInfo (GoogleAddress googleAddress, string language = null)
         {
@@ -711,11 +711,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleAddress">A Google address object, as it is returned from the maps API.</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="googleAddress"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>Task of RestApiResultAddressFormResponse</returns>
         public async System.Threading.Tasks.Task<RestApiResultAddressFormResponse> FormatGoogleAddressAsync (GoogleAddress googleAddress, string language = null)
         {
@@ -725,11 +725,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form. 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleAddress">A Google address object, as it is returned from the maps API.</param>
-        /// <param name="language">(Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)</param>
+        /// <param name="googleAddress"></param>
+        /// <param name="language"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultAddressFormResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAddressFormResponse>> FormatGoogleAddressAsyncWithHttpInfo (GoogleAddress googleAddress, string language = null)
         {
@@ -802,7 +802,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Retuns a list of localised countries 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="language"> (optional)</param>
@@ -814,7 +814,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Retuns a list of localised countries 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="language"> (optional)</param>
@@ -874,7 +874,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Retuns a list of localised countries 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="language"> (optional)</param>
@@ -887,7 +887,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Retuns a list of localised countries 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="language"> (optional)</param>

@@ -4,17 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetKioskIotConnection**](KioskIotApi.md#getkioskiotconnection) | **POST** /api/v1.0/kioskiot/connect | Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
-[**QueryTelemetrySeries**](KioskIotApi.md#querytelemetryseries) | **POST** /api/v1.0/{appId}/kioskiot/timeseries/query | Get the IoT time series values for a given Kiosk Id, properties and time range
+[**GetKioskIotConnection**](KioskIotApi.md#getkioskiotconnection) | **POST** /api/v1.0/kioskiot/connect | 
+[**QueryTelemetrySeries**](KioskIotApi.md#querytelemetryseries) | **POST** /api/v1.0/{appId}/kioskiot/timeseries/query | 
 
 
 <a name="getkioskiotconnection"></a>
 # **GetKioskIotConnection**
 > RestApiResultKioskIotConnectionParameters GetKioskIotConnection ()
 
-Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -37,7 +35,6 @@ namespace Example
 
             try
             {
-                // Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
                 RestApiResultKioskIotConnectionParameters result = apiInstance.GetKioskIotConnection();
                 Debug.WriteLine(result);
             }
@@ -72,9 +69,7 @@ This endpoint does not need any parameter.
 # **QueryTelemetrySeries**
 > RestApiResultTelemetrySeriesResult QueryTelemetrySeries (string appId, TelemetrySeriesQueryParameters queryParams)
 
-Get the IoT time series values for a given Kiosk Id, properties and time range
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -99,7 +94,6 @@ namespace Example
 
             try
             {
-                // Get the IoT time series values for a given Kiosk Id, properties and time range
                 RestApiResultTelemetrySeriesResult result = apiInstance.QueryTelemetrySeries(appId, queryParams);
                 Debug.WriteLine(result);
             }

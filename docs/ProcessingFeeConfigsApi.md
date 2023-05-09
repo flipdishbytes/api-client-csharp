@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetProcessingFeeConfigsByStoreIds**](ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | Get processing fee configs by store identifiers
+[**GetProcessingFeeConfigsByStoreIds**](ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | 
 
 
 <a name="getprocessingfeeconfigsbystoreids"></a>
 # **GetProcessingFeeConfigsByStoreIds**
 > RestApiArrayResultProcessingFeeConfig GetProcessingFeeConfigsByStoreIds (List<int?> storeIds)
 
-Get processing fee configs by store identifiers
+
 
 ### Example
 ```csharp
@@ -31,11 +31,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ProcessingFeeConfigsApi();
-            var storeIds = new List<int?>(); // List<int?> | Store identifiers
+            var storeIds = new List<int?>(); // List<int?> | 
 
             try
             {
-                // Get processing fee configs by store identifiers
                 RestApiArrayResultProcessingFeeConfig result = apiInstance.GetProcessingFeeConfigsByStoreIds(storeIds);
                 Debug.WriteLine(result);
             }
@@ -52,7 +51,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeIds** | [**List&lt;int?&gt;**](int?.md)| Store identifiers | 
+ **storeIds** | [**List&lt;int?&gt;**](int?.md)|  | 
 
 ### Return type
 

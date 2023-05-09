@@ -25,465 +25,465 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Creates loyalty campaign
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaign">Loyalty campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaign"></param>
         /// <returns>RestApiResultLoyaltyCampaign</returns>
         RestApiResultLoyaltyCampaign CreateLoyaltyCampaign (string appId, LoyaltyCampaignBase campaign);
 
         /// <summary>
-        /// Creates loyalty campaign
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaign">Loyalty campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaign"></param>
         /// <returns>ApiResponse of RestApiResultLoyaltyCampaign</returns>
         ApiResponse<RestApiResultLoyaltyCampaign> CreateLoyaltyCampaignWithHttpInfo (string appId, LoyaltyCampaignBase campaign);
         /// <summary>
-        /// Creates retention campaign
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaign">Retention campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaign"></param>
         /// <returns>RestApiResultRetentionCampaign</returns>
         RestApiResultRetentionCampaign CreateRetentionCampaign (string appId, RetentionCampaignBase campaign);
 
         /// <summary>
-        /// Creates retention campaign
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaign">Retention campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaign"></param>
         /// <returns>ApiResponse of RestApiResultRetentionCampaign</returns>
         ApiResponse<RestApiResultRetentionCampaign> CreateRetentionCampaignWithHttpInfo (string appId, RetentionCampaignBase campaign);
         /// <summary>
-        /// Gets loyalty campaigns for app
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiArrayResultLoyaltyCampaign</returns>
         RestApiArrayResultLoyaltyCampaign GetLoyaltyCampaignsForApp (string appId);
 
         /// <summary>
-        /// Gets loyalty campaigns for app
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiArrayResultLoyaltyCampaign</returns>
         ApiResponse<RestApiArrayResultLoyaltyCampaign> GetLoyaltyCampaignsForAppWithHttpInfo (string appId);
         /// <summary>
-        /// Gets loyalty campaigns for store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiArrayResultLoyaltyCampaign</returns>
         RestApiArrayResultLoyaltyCampaign GetLoyaltyCampaignsForStore (string appId, int? storeId);
 
         /// <summary>
-        /// Gets loyalty campaigns for store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiArrayResultLoyaltyCampaign</returns>
         ApiResponse<RestApiArrayResultLoyaltyCampaign> GetLoyaltyCampaignsForStoreWithHttpInfo (string appId, int? storeId);
         /// <summary>
-        /// Gets retention campaigns for app
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiArrayResultRetentionCampaign</returns>
         RestApiArrayResultRetentionCampaign GetRetentionCampaignsForApp (string appId);
 
         /// <summary>
-        /// Gets retention campaigns for app
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiArrayResultRetentionCampaign</returns>
         ApiResponse<RestApiArrayResultRetentionCampaign> GetRetentionCampaignsForAppWithHttpInfo (string appId);
         /// <summary>
-        /// Gets retention campaigns for store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiArrayResultRetentionCampaign</returns>
         RestApiArrayResultRetentionCampaign GetRetentionCampaignsForStore (string appId, int? storeId);
 
         /// <summary>
-        /// Gets retention campaigns for store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiArrayResultRetentionCampaign</returns>
         ApiResponse<RestApiArrayResultRetentionCampaign> GetRetentionCampaignsForStoreWithHttpInfo (string appId, int? storeId);
         /// <summary>
-        /// Gets list of stores for app
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <param name="onlyPublished"> (optional)</param>
         /// <returns>RestApiArrayResultStoreListItem</returns>
         RestApiArrayResultStoreListItem GetStoreList (string appId, bool? onlyPublished = null);
 
         /// <summary>
-        /// Gets list of stores for app
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <param name="onlyPublished"> (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultStoreListItem</returns>
         ApiResponse<RestApiArrayResultStoreListItem> GetStoreListWithHttpInfo (string appId, bool? onlyPublished = null);
         /// <summary>
-        /// Deletes a campaign
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Campaign Id</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
         /// <returns></returns>
         void RemoveCampaign (string appId, int? campaignId);
 
         /// <summary>
-        /// Deletes a campaign
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Campaign Id</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> RemoveCampaignWithHttpInfo (string appId, int? campaignId);
         /// <summary>
-        /// Updates loyalty campaign
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Loyalty campaign Id</param>
-        /// <param name="campaign">Loyalty campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
+        /// <param name="campaign"></param>
         /// <returns>RestApiResultLoyaltyCampaign</returns>
         RestApiResultLoyaltyCampaign UpdateLoyaltyCampaign (string appId, int? campaignId, LoyaltyCampaignBase campaign);
 
         /// <summary>
-        /// Updates loyalty campaign
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Loyalty campaign Id</param>
-        /// <param name="campaign">Loyalty campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
+        /// <param name="campaign"></param>
         /// <returns>ApiResponse of RestApiResultLoyaltyCampaign</returns>
         ApiResponse<RestApiResultLoyaltyCampaign> UpdateLoyaltyCampaignWithHttpInfo (string appId, int? campaignId, LoyaltyCampaignBase campaign);
         /// <summary>
-        /// Updates retention campaign
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Retention campaign Id</param>
-        /// <param name="campaign">Retention campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
+        /// <param name="campaign"></param>
         /// <returns>RestApiResultRetentionCampaign</returns>
         RestApiResultRetentionCampaign UpdateRetentionCampaign (string appId, int? campaignId, RetentionCampaignBase campaign);
 
         /// <summary>
-        /// Updates retention campaign
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Retention campaign Id</param>
-        /// <param name="campaign">Retention campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
+        /// <param name="campaign"></param>
         /// <returns>ApiResponse of RestApiResultRetentionCampaign</returns>
         ApiResponse<RestApiResultRetentionCampaign> UpdateRetentionCampaignWithHttpInfo (string appId, int? campaignId, RetentionCampaignBase campaign);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Creates loyalty campaign
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaign">Loyalty campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaign"></param>
         /// <returns>Task of RestApiResultLoyaltyCampaign</returns>
         System.Threading.Tasks.Task<RestApiResultLoyaltyCampaign> CreateLoyaltyCampaignAsync (string appId, LoyaltyCampaignBase campaign);
 
         /// <summary>
-        /// Creates loyalty campaign
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaign">Loyalty campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaign"></param>
         /// <returns>Task of ApiResponse (RestApiResultLoyaltyCampaign)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultLoyaltyCampaign>> CreateLoyaltyCampaignAsyncWithHttpInfo (string appId, LoyaltyCampaignBase campaign);
         /// <summary>
-        /// Creates retention campaign
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaign">Retention campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaign"></param>
         /// <returns>Task of RestApiResultRetentionCampaign</returns>
         System.Threading.Tasks.Task<RestApiResultRetentionCampaign> CreateRetentionCampaignAsync (string appId, RetentionCampaignBase campaign);
 
         /// <summary>
-        /// Creates retention campaign
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaign">Retention campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaign"></param>
         /// <returns>Task of ApiResponse (RestApiResultRetentionCampaign)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultRetentionCampaign>> CreateRetentionCampaignAsyncWithHttpInfo (string appId, RetentionCampaignBase campaign);
         /// <summary>
-        /// Gets loyalty campaigns for app
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiArrayResultLoyaltyCampaign</returns>
         System.Threading.Tasks.Task<RestApiArrayResultLoyaltyCampaign> GetLoyaltyCampaignsForAppAsync (string appId);
 
         /// <summary>
-        /// Gets loyalty campaigns for app
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultLoyaltyCampaign)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultLoyaltyCampaign>> GetLoyaltyCampaignsForAppAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// Gets loyalty campaigns for store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiArrayResultLoyaltyCampaign</returns>
         System.Threading.Tasks.Task<RestApiArrayResultLoyaltyCampaign> GetLoyaltyCampaignsForStoreAsync (string appId, int? storeId);
 
         /// <summary>
-        /// Gets loyalty campaigns for store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultLoyaltyCampaign)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultLoyaltyCampaign>> GetLoyaltyCampaignsForStoreAsyncWithHttpInfo (string appId, int? storeId);
         /// <summary>
-        /// Gets retention campaigns for app
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiArrayResultRetentionCampaign</returns>
         System.Threading.Tasks.Task<RestApiArrayResultRetentionCampaign> GetRetentionCampaignsForAppAsync (string appId);
 
         /// <summary>
-        /// Gets retention campaigns for app
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultRetentionCampaign)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRetentionCampaign>> GetRetentionCampaignsForAppAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// Gets retention campaigns for store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiArrayResultRetentionCampaign</returns>
         System.Threading.Tasks.Task<RestApiArrayResultRetentionCampaign> GetRetentionCampaignsForStoreAsync (string appId, int? storeId);
 
         /// <summary>
-        /// Gets retention campaigns for store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultRetentionCampaign)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRetentionCampaign>> GetRetentionCampaignsForStoreAsyncWithHttpInfo (string appId, int? storeId);
         /// <summary>
-        /// Gets list of stores for app
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <param name="onlyPublished"> (optional)</param>
         /// <returns>Task of RestApiArrayResultStoreListItem</returns>
         System.Threading.Tasks.Task<RestApiArrayResultStoreListItem> GetStoreListAsync (string appId, bool? onlyPublished = null);
 
         /// <summary>
-        /// Gets list of stores for app
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <param name="onlyPublished"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultStoreListItem)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreListItem>> GetStoreListAsyncWithHttpInfo (string appId, bool? onlyPublished = null);
         /// <summary>
-        /// Deletes a campaign
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Campaign Id</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task RemoveCampaignAsync (string appId, int? campaignId);
 
         /// <summary>
-        /// Deletes a campaign
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Campaign Id</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> RemoveCampaignAsyncWithHttpInfo (string appId, int? campaignId);
         /// <summary>
-        /// Updates loyalty campaign
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Loyalty campaign Id</param>
-        /// <param name="campaign">Loyalty campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
+        /// <param name="campaign"></param>
         /// <returns>Task of RestApiResultLoyaltyCampaign</returns>
         System.Threading.Tasks.Task<RestApiResultLoyaltyCampaign> UpdateLoyaltyCampaignAsync (string appId, int? campaignId, LoyaltyCampaignBase campaign);
 
         /// <summary>
-        /// Updates loyalty campaign
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Loyalty campaign Id</param>
-        /// <param name="campaign">Loyalty campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
+        /// <param name="campaign"></param>
         /// <returns>Task of ApiResponse (RestApiResultLoyaltyCampaign)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultLoyaltyCampaign>> UpdateLoyaltyCampaignAsyncWithHttpInfo (string appId, int? campaignId, LoyaltyCampaignBase campaign);
         /// <summary>
-        /// Updates retention campaign
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Retention campaign Id</param>
-        /// <param name="campaign">Retention campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
+        /// <param name="campaign"></param>
         /// <returns>Task of RestApiResultRetentionCampaign</returns>
         System.Threading.Tasks.Task<RestApiResultRetentionCampaign> UpdateRetentionCampaignAsync (string appId, int? campaignId, RetentionCampaignBase campaign);
 
         /// <summary>
-        /// Updates retention campaign
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Retention campaign Id</param>
-        /// <param name="campaign">Retention campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
+        /// <param name="campaign"></param>
         /// <returns>Task of ApiResponse (RestApiResultRetentionCampaign)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultRetentionCampaign>> UpdateRetentionCampaignAsyncWithHttpInfo (string appId, int? campaignId, RetentionCampaignBase campaign);
         #endregion Asynchronous Operations
@@ -587,11 +587,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Creates loyalty campaign 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaign">Loyalty campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaign"></param>
         /// <returns>RestApiResultLoyaltyCampaign</returns>
         public RestApiResultLoyaltyCampaign CreateLoyaltyCampaign (string appId, LoyaltyCampaignBase campaign)
         {
@@ -600,11 +600,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Creates loyalty campaign 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaign">Loyalty campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaign"></param>
         /// <returns>ApiResponse of RestApiResultLoyaltyCampaign</returns>
         public ApiResponse< RestApiResultLoyaltyCampaign > CreateLoyaltyCampaignWithHttpInfo (string appId, LoyaltyCampaignBase campaign)
         {
@@ -680,11 +680,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Creates loyalty campaign 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaign">Loyalty campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaign"></param>
         /// <returns>Task of RestApiResultLoyaltyCampaign</returns>
         public async System.Threading.Tasks.Task<RestApiResultLoyaltyCampaign> CreateLoyaltyCampaignAsync (string appId, LoyaltyCampaignBase campaign)
         {
@@ -694,11 +694,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Creates loyalty campaign 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaign">Loyalty campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaign"></param>
         /// <returns>Task of ApiResponse (RestApiResultLoyaltyCampaign)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultLoyaltyCampaign>> CreateLoyaltyCampaignAsyncWithHttpInfo (string appId, LoyaltyCampaignBase campaign)
         {
@@ -774,11 +774,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Creates retention campaign 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaign">Retention campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaign"></param>
         /// <returns>RestApiResultRetentionCampaign</returns>
         public RestApiResultRetentionCampaign CreateRetentionCampaign (string appId, RetentionCampaignBase campaign)
         {
@@ -787,11 +787,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Creates retention campaign 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaign">Retention campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaign"></param>
         /// <returns>ApiResponse of RestApiResultRetentionCampaign</returns>
         public ApiResponse< RestApiResultRetentionCampaign > CreateRetentionCampaignWithHttpInfo (string appId, RetentionCampaignBase campaign)
         {
@@ -867,11 +867,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Creates retention campaign 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaign">Retention campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaign"></param>
         /// <returns>Task of RestApiResultRetentionCampaign</returns>
         public async System.Threading.Tasks.Task<RestApiResultRetentionCampaign> CreateRetentionCampaignAsync (string appId, RetentionCampaignBase campaign)
         {
@@ -881,11 +881,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Creates retention campaign 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaign">Retention campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaign"></param>
         /// <returns>Task of ApiResponse (RestApiResultRetentionCampaign)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultRetentionCampaign>> CreateRetentionCampaignAsyncWithHttpInfo (string appId, RetentionCampaignBase campaign)
         {
@@ -961,10 +961,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets loyalty campaigns for app 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiArrayResultLoyaltyCampaign</returns>
         public RestApiArrayResultLoyaltyCampaign GetLoyaltyCampaignsForApp (string appId)
         {
@@ -973,10 +973,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets loyalty campaigns for app 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiArrayResultLoyaltyCampaign</returns>
         public ApiResponse< RestApiArrayResultLoyaltyCampaign > GetLoyaltyCampaignsForAppWithHttpInfo (string appId)
         {
@@ -1036,10 +1036,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets loyalty campaigns for app 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiArrayResultLoyaltyCampaign</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultLoyaltyCampaign> GetLoyaltyCampaignsForAppAsync (string appId)
         {
@@ -1049,10 +1049,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets loyalty campaigns for app 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultLoyaltyCampaign)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultLoyaltyCampaign>> GetLoyaltyCampaignsForAppAsyncWithHttpInfo (string appId)
         {
@@ -1112,11 +1112,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets loyalty campaigns for store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiArrayResultLoyaltyCampaign</returns>
         public RestApiArrayResultLoyaltyCampaign GetLoyaltyCampaignsForStore (string appId, int? storeId)
         {
@@ -1125,11 +1125,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets loyalty campaigns for store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiArrayResultLoyaltyCampaign</returns>
         public ApiResponse< RestApiArrayResultLoyaltyCampaign > GetLoyaltyCampaignsForStoreWithHttpInfo (string appId, int? storeId)
         {
@@ -1193,11 +1193,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets loyalty campaigns for store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiArrayResultLoyaltyCampaign</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultLoyaltyCampaign> GetLoyaltyCampaignsForStoreAsync (string appId, int? storeId)
         {
@@ -1207,11 +1207,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets loyalty campaigns for store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultLoyaltyCampaign)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultLoyaltyCampaign>> GetLoyaltyCampaignsForStoreAsyncWithHttpInfo (string appId, int? storeId)
         {
@@ -1275,10 +1275,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets retention campaigns for app 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiArrayResultRetentionCampaign</returns>
         public RestApiArrayResultRetentionCampaign GetRetentionCampaignsForApp (string appId)
         {
@@ -1287,10 +1287,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets retention campaigns for app 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiArrayResultRetentionCampaign</returns>
         public ApiResponse< RestApiArrayResultRetentionCampaign > GetRetentionCampaignsForAppWithHttpInfo (string appId)
         {
@@ -1350,10 +1350,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets retention campaigns for app 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiArrayResultRetentionCampaign</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultRetentionCampaign> GetRetentionCampaignsForAppAsync (string appId)
         {
@@ -1363,10 +1363,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets retention campaigns for app 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultRetentionCampaign)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRetentionCampaign>> GetRetentionCampaignsForAppAsyncWithHttpInfo (string appId)
         {
@@ -1426,11 +1426,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets retention campaigns for store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiArrayResultRetentionCampaign</returns>
         public RestApiArrayResultRetentionCampaign GetRetentionCampaignsForStore (string appId, int? storeId)
         {
@@ -1439,11 +1439,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets retention campaigns for store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiArrayResultRetentionCampaign</returns>
         public ApiResponse< RestApiArrayResultRetentionCampaign > GetRetentionCampaignsForStoreWithHttpInfo (string appId, int? storeId)
         {
@@ -1507,11 +1507,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets retention campaigns for store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiArrayResultRetentionCampaign</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultRetentionCampaign> GetRetentionCampaignsForStoreAsync (string appId, int? storeId)
         {
@@ -1521,11 +1521,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets retention campaigns for store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultRetentionCampaign)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRetentionCampaign>> GetRetentionCampaignsForStoreAsyncWithHttpInfo (string appId, int? storeId)
         {
@@ -1589,10 +1589,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets list of stores for app 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <param name="onlyPublished"> (optional)</param>
         /// <returns>RestApiArrayResultStoreListItem</returns>
         public RestApiArrayResultStoreListItem GetStoreList (string appId, bool? onlyPublished = null)
@@ -1602,10 +1602,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets list of stores for app 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <param name="onlyPublished"> (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultStoreListItem</returns>
         public ApiResponse< RestApiArrayResultStoreListItem > GetStoreListWithHttpInfo (string appId, bool? onlyPublished = null)
@@ -1667,10 +1667,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets list of stores for app 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <param name="onlyPublished"> (optional)</param>
         /// <returns>Task of RestApiArrayResultStoreListItem</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultStoreListItem> GetStoreListAsync (string appId, bool? onlyPublished = null)
@@ -1681,10 +1681,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Gets list of stores for app 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <param name="onlyPublished"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultStoreListItem)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreListItem>> GetStoreListAsyncWithHttpInfo (string appId, bool? onlyPublished = null)
@@ -1746,11 +1746,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Deletes a campaign 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Campaign Id</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
         /// <returns></returns>
         public void RemoveCampaign (string appId, int? campaignId)
         {
@@ -1758,11 +1758,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Deletes a campaign 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Campaign Id</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> RemoveCampaignWithHttpInfo (string appId, int? campaignId)
         {
@@ -1826,11 +1826,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Deletes a campaign 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Campaign Id</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task RemoveCampaignAsync (string appId, int? campaignId)
         {
@@ -1839,11 +1839,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Deletes a campaign 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Campaign Id</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> RemoveCampaignAsyncWithHttpInfo (string appId, int? campaignId)
         {
@@ -1907,12 +1907,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Updates loyalty campaign 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Loyalty campaign Id</param>
-        /// <param name="campaign">Loyalty campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
+        /// <param name="campaign"></param>
         /// <returns>RestApiResultLoyaltyCampaign</returns>
         public RestApiResultLoyaltyCampaign UpdateLoyaltyCampaign (string appId, int? campaignId, LoyaltyCampaignBase campaign)
         {
@@ -1921,12 +1921,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Updates loyalty campaign 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Loyalty campaign Id</param>
-        /// <param name="campaign">Loyalty campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
+        /// <param name="campaign"></param>
         /// <returns>ApiResponse of RestApiResultLoyaltyCampaign</returns>
         public ApiResponse< RestApiResultLoyaltyCampaign > UpdateLoyaltyCampaignWithHttpInfo (string appId, int? campaignId, LoyaltyCampaignBase campaign)
         {
@@ -2006,12 +2006,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Updates loyalty campaign 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Loyalty campaign Id</param>
-        /// <param name="campaign">Loyalty campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
+        /// <param name="campaign"></param>
         /// <returns>Task of RestApiResultLoyaltyCampaign</returns>
         public async System.Threading.Tasks.Task<RestApiResultLoyaltyCampaign> UpdateLoyaltyCampaignAsync (string appId, int? campaignId, LoyaltyCampaignBase campaign)
         {
@@ -2021,12 +2021,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Updates loyalty campaign 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Loyalty campaign Id</param>
-        /// <param name="campaign">Loyalty campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
+        /// <param name="campaign"></param>
         /// <returns>Task of ApiResponse (RestApiResultLoyaltyCampaign)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultLoyaltyCampaign>> UpdateLoyaltyCampaignAsyncWithHttpInfo (string appId, int? campaignId, LoyaltyCampaignBase campaign)
         {
@@ -2106,12 +2106,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Updates retention campaign 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Retention campaign Id</param>
-        /// <param name="campaign">Retention campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
+        /// <param name="campaign"></param>
         /// <returns>RestApiResultRetentionCampaign</returns>
         public RestApiResultRetentionCampaign UpdateRetentionCampaign (string appId, int? campaignId, RetentionCampaignBase campaign)
         {
@@ -2120,12 +2120,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Updates retention campaign 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Retention campaign Id</param>
-        /// <param name="campaign">Retention campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
+        /// <param name="campaign"></param>
         /// <returns>ApiResponse of RestApiResultRetentionCampaign</returns>
         public ApiResponse< RestApiResultRetentionCampaign > UpdateRetentionCampaignWithHttpInfo (string appId, int? campaignId, RetentionCampaignBase campaign)
         {
@@ -2205,12 +2205,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Updates retention campaign 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Retention campaign Id</param>
-        /// <param name="campaign">Retention campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
+        /// <param name="campaign"></param>
         /// <returns>Task of RestApiResultRetentionCampaign</returns>
         public async System.Threading.Tasks.Task<RestApiResultRetentionCampaign> UpdateRetentionCampaignAsync (string appId, int? campaignId, RetentionCampaignBase campaign)
         {
@@ -2220,12 +2220,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Updates retention campaign 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="campaignId">Retention campaign Id</param>
-        /// <param name="campaign">Retention campaign details</param>
+        /// <param name="appId"></param>
+        /// <param name="campaignId"></param>
+        /// <param name="campaign"></param>
         /// <returns>Task of ApiResponse (RestApiResultRetentionCampaign)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultRetentionCampaign>> UpdateRetentionCampaignAsyncWithHttpInfo (string appId, int? campaignId, RetentionCampaignBase campaign)
         {

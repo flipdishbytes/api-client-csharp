@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetPaymentIntent**](PaymentIntentsApi.md#getpaymentintent) | **GET** /api/v1.0/payment_intents/{paymentIntentId} | Returns stripe payment intent for a given id
+[**GetPaymentIntent**](PaymentIntentsApi.md#getpaymentintent) | **GET** /api/v1.0/payment_intents/{paymentIntentId} | 
 
 
 <a name="getpaymentintent"></a>
 # **GetPaymentIntent**
 > RestApiResultPaymentIntent GetPaymentIntent (string paymentIntentId)
 
-Returns stripe payment intent for a given id
+
 
 ### Example
 ```csharp
@@ -31,11 +31,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new PaymentIntentsApi();
-            var paymentIntentId = paymentIntentId_example;  // string | Stripe payment intent identifier
+            var paymentIntentId = paymentIntentId_example;  // string | 
 
             try
             {
-                // Returns stripe payment intent for a given id
                 RestApiResultPaymentIntent result = apiInstance.GetPaymentIntent(paymentIntentId);
                 Debug.WriteLine(result);
             }
@@ -52,7 +51,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **paymentIntentId** | **string**| Stripe payment intent identifier | 
+ **paymentIntentId** | **string**|  | 
 
 ### Return type
 

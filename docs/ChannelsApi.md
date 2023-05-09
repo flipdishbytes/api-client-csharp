@@ -4,25 +4,25 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AssignAppIdToSalesChannel**](ChannelsApi.md#assignappidtosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/assign-appId | Assign a given AppId to a Sales Channel
-[**AssignStoreToChannel**](ChannelsApi.md#assignstoretochannel) | **POST** /api/v1.0/{appId}/channels/assign-store | Assign a Store to a Sales Channel
-[**AttachStoreToSalesChannel**](ChannelsApi.md#attachstoretosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Attachs the specified store to the given sales channel.
-[**DetachAllStoresFromSalesChannel**](ChannelsApi.md#detachallstoresfromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores | Detaches all the stores from the given sales channel.
-[**DetachStoreFromSalesChannel**](ChannelsApi.md#detachstorefromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Detaches the specified store from the given sales channel.
-[**GetAssignedChannels**](ChannelsApi.md#getassignedchannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | Returns a list of sales channels that are assigned to a given AppId
-[**GetAvailableChannels**](ChannelsApi.md#getavailablechannels) | **GET** /api/v1.0/{appId}/channels/available-channels | Returns a list of sales channels that are not yet assigned to a given AppId
-[**GetChannel**](ChannelsApi.md#getchannel) | **GET** /api/v1.0/{appId}/channels/{id} | Returns a Sales Channel by Id.
-[**GetChannels**](ChannelsApi.md#getchannels) | **GET** /api/v1.0/{appId}/channels | Returns a list of enabled Channels
-[**GetStoresAssignedToChannel**](ChannelsApi.md#getstoresassignedtochannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | Returns a list of stores of an AppId that are assigned to a given Sales Channel
-[**GetStoresBySalesChannel**](ChannelsApi.md#getstoresbysaleschannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/stores | Returns a list of store ids attached to the given channel type for the specified app.
-[**UnassignStoreFromChannel**](ChannelsApi.md#unassignstorefromchannel) | **DELETE** /api/v1.0/{appId}/channels/unassign-store | Unassign a Store from a Sales Channel
+[**AssignAppIdToSalesChannel**](ChannelsApi.md#assignappidtosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/assign-appId | 
+[**AssignStoreToChannel**](ChannelsApi.md#assignstoretochannel) | **POST** /api/v1.0/{appId}/channels/assign-store | 
+[**AttachStoreToSalesChannel**](ChannelsApi.md#attachstoretosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | 
+[**DetachAllStoresFromSalesChannel**](ChannelsApi.md#detachallstoresfromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores | 
+[**DetachStoreFromSalesChannel**](ChannelsApi.md#detachstorefromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | 
+[**GetAssignedChannels**](ChannelsApi.md#getassignedchannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | 
+[**GetAvailableChannels**](ChannelsApi.md#getavailablechannels) | **GET** /api/v1.0/{appId}/channels/available-channels | 
+[**GetChannel**](ChannelsApi.md#getchannel) | **GET** /api/v1.0/{appId}/channels/{id} | 
+[**GetChannels**](ChannelsApi.md#getchannels) | **GET** /api/v1.0/{appId}/channels | 
+[**GetStoresAssignedToChannel**](ChannelsApi.md#getstoresassignedtochannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | 
+[**GetStoresBySalesChannel**](ChannelsApi.md#getstoresbysaleschannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/stores | 
+[**UnassignStoreFromChannel**](ChannelsApi.md#unassignstorefromchannel) | **DELETE** /api/v1.0/{appId}/channels/unassign-store | 
 
 
 <a name="assignappidtosaleschannel"></a>
 # **AssignAppIdToSalesChannel**
 > Object AssignAppIdToSalesChannel (string appId, int? channelId)
 
-Assign a given AppId to a Sales Channel
+
 
 ### Example
 ```csharp
@@ -42,12 +42,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ChannelsApi();
-            var appId = appId_example;  // string | Application Id (AppNameIdxxx)
-            var channelId = 56;  // int? | Channel Id (123, 456)
+            var appId = appId_example;  // string | 
+            var channelId = 56;  // int? | 
 
             try
             {
-                // Assign a given AppId to a Sales Channel
                 Object result = apiInstance.AssignAppIdToSalesChannel(appId, channelId);
                 Debug.WriteLine(result);
             }
@@ -64,8 +63,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application Id (AppNameIdxxx) | 
- **channelId** | **int?**| Channel Id (123, 456) | 
+ **appId** | **string**|  | 
+ **channelId** | **int?**|  | 
 
 ### Return type
 
@@ -86,7 +85,7 @@ Name | Type | Description  | Notes
 # **AssignStoreToChannel**
 > Object AssignStoreToChannel (int? storeId, string appId, int? channelId)
 
-Assign a Store to a Sales Channel
+
 
 ### Example
 ```csharp
@@ -106,13 +105,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ChannelsApi();
-            var storeId = 56;  // int? | Store Id (123, 456)
-            var appId = appId_example;  // string | AppId (AppNameIdxxx)
-            var channelId = 56;  // int? | Channel Id (123, 456)
+            var storeId = 56;  // int? | 
+            var appId = appId_example;  // string | 
+            var channelId = 56;  // int? | 
 
             try
             {
-                // Assign a Store to a Sales Channel
                 Object result = apiInstance.AssignStoreToChannel(storeId, appId, channelId);
                 Debug.WriteLine(result);
             }
@@ -129,9 +127,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store Id (123, 456) | 
- **appId** | **string**| AppId (AppNameIdxxx) | 
- **channelId** | **int?**| Channel Id (123, 456) | 
+ **storeId** | **int?**|  | 
+ **appId** | **string**|  | 
+ **channelId** | **int?**|  | 
 
 ### Return type
 
@@ -152,7 +150,7 @@ Name | Type | Description  | Notes
 # **AttachStoreToSalesChannel**
 > Object AttachStoreToSalesChannel (string appId, int? channelId, int? storeId)
 
-Attachs the specified store to the given sales channel.
+
 
 ### Example
 ```csharp
@@ -172,13 +170,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ChannelsApi();
-            var appId = appId_example;  // string | Application Id (AppNameId)
-            var channelId = 56;  // int? | Type of sales channel (Android, IOS, Web, etc.)
-            var storeId = 56;  // int? | Store Id (Phyisical Restaurant) to attach.
+            var appId = appId_example;  // string | 
+            var channelId = 56;  // int? | 
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Attachs the specified store to the given sales channel.
                 Object result = apiInstance.AttachStoreToSalesChannel(appId, channelId, storeId);
                 Debug.WriteLine(result);
             }
@@ -195,9 +192,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application Id (AppNameId) | 
- **channelId** | **int?**| Type of sales channel (Android, IOS, Web, etc.) | 
- **storeId** | **int?**| Store Id (Phyisical Restaurant) to attach. | 
+ **appId** | **string**|  | 
+ **channelId** | **int?**|  | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -218,7 +215,7 @@ Name | Type | Description  | Notes
 # **DetachAllStoresFromSalesChannel**
 > Object DetachAllStoresFromSalesChannel (string appId, int? channelId)
 
-Detaches all the stores from the given sales channel.
+
 
 ### Example
 ```csharp
@@ -238,12 +235,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ChannelsApi();
-            var appId = appId_example;  // string | Application Id (AppNameId)
-            var channelId = 56;  // int? | Type of sales channel (Android, IOS, Web, etc.)
+            var appId = appId_example;  // string | 
+            var channelId = 56;  // int? | 
 
             try
             {
-                // Detaches all the stores from the given sales channel.
                 Object result = apiInstance.DetachAllStoresFromSalesChannel(appId, channelId);
                 Debug.WriteLine(result);
             }
@@ -260,8 +256,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application Id (AppNameId) | 
- **channelId** | **int?**| Type of sales channel (Android, IOS, Web, etc.) | 
+ **appId** | **string**|  | 
+ **channelId** | **int?**|  | 
 
 ### Return type
 
@@ -282,7 +278,7 @@ Name | Type | Description  | Notes
 # **DetachStoreFromSalesChannel**
 > Object DetachStoreFromSalesChannel (string appId, int? channelId, int? storeId)
 
-Detaches the specified store from the given sales channel.
+
 
 ### Example
 ```csharp
@@ -302,13 +298,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ChannelsApi();
-            var appId = appId_example;  // string | Application Id (AppNameId)
-            var channelId = 56;  // int? | Type of sales channel (Android, IOS, Web, etc.)
-            var storeId = 56;  // int? | Store Id (Phyisical Restaurant) to detach.
+            var appId = appId_example;  // string | 
+            var channelId = 56;  // int? | 
+            var storeId = 56;  // int? | 
 
             try
             {
-                // Detaches the specified store from the given sales channel.
                 Object result = apiInstance.DetachStoreFromSalesChannel(appId, channelId, storeId);
                 Debug.WriteLine(result);
             }
@@ -325,9 +320,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application Id (AppNameId) | 
- **channelId** | **int?**| Type of sales channel (Android, IOS, Web, etc.) | 
- **storeId** | **int?**| Store Id (Phyisical Restaurant) to detach. | 
+ **appId** | **string**|  | 
+ **channelId** | **int?**|  | 
+ **storeId** | **int?**|  | 
 
 ### Return type
 
@@ -348,7 +343,7 @@ Name | Type | Description  | Notes
 # **GetAssignedChannels**
 > RestApiArrayResultChannel GetAssignedChannels (string appId)
 
-Returns a list of sales channels that are assigned to a given AppId
+
 
 ### Example
 ```csharp
@@ -368,11 +363,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ChannelsApi();
-            var appId = appId_example;  // string | Application Id (AppNameIdxxx)
+            var appId = appId_example;  // string | 
 
             try
             {
-                // Returns a list of sales channels that are assigned to a given AppId
                 RestApiArrayResultChannel result = apiInstance.GetAssignedChannels(appId);
                 Debug.WriteLine(result);
             }
@@ -389,7 +383,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application Id (AppNameIdxxx) | 
+ **appId** | **string**|  | 
 
 ### Return type
 
@@ -410,7 +404,7 @@ Name | Type | Description  | Notes
 # **GetAvailableChannels**
 > RestApiArrayResultChannel GetAvailableChannels (string appId)
 
-Returns a list of sales channels that are not yet assigned to a given AppId
+
 
 ### Example
 ```csharp
@@ -430,11 +424,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ChannelsApi();
-            var appId = appId_example;  // string | Application Id (AppNameIdxxx)
+            var appId = appId_example;  // string | 
 
             try
             {
-                // Returns a list of sales channels that are not yet assigned to a given AppId
                 RestApiArrayResultChannel result = apiInstance.GetAvailableChannels(appId);
                 Debug.WriteLine(result);
             }
@@ -451,7 +444,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application Id (AppNameIdxxx) | 
+ **appId** | **string**|  | 
 
 ### Return type
 
@@ -472,7 +465,7 @@ Name | Type | Description  | Notes
 # **GetChannel**
 > RestApiResultChannel GetChannel (int? id, string appId)
 
-Returns a Sales Channel by Id.
+
 
 ### Example
 ```csharp
@@ -492,12 +485,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ChannelsApi();
-            var id = 56;  // int? | ChannelId
-            var appId = appId_example;  // string | AppId
+            var id = 56;  // int? | 
+            var appId = appId_example;  // string | 
 
             try
             {
-                // Returns a Sales Channel by Id.
                 RestApiResultChannel result = apiInstance.GetChannel(id, appId);
                 Debug.WriteLine(result);
             }
@@ -514,8 +506,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**| ChannelId | 
- **appId** | **string**| AppId | 
+ **id** | **int?**|  | 
+ **appId** | **string**|  | 
 
 ### Return type
 
@@ -536,7 +528,7 @@ Name | Type | Description  | Notes
 # **GetChannels**
 > RestApiArrayResultChannel GetChannels (string appId)
 
-Returns a list of enabled Channels
+
 
 ### Example
 ```csharp
@@ -560,7 +552,6 @@ namespace Example
 
             try
             {
-                // Returns a list of enabled Channels
                 RestApiArrayResultChannel result = apiInstance.GetChannels(appId);
                 Debug.WriteLine(result);
             }
@@ -598,7 +589,7 @@ Name | Type | Description  | Notes
 # **GetStoresAssignedToChannel**
 > RestApiArrayResultStoreChannelAssignment GetStoresAssignedToChannel (string appId, int? channelId)
 
-Returns a list of stores of an AppId that are assigned to a given Sales Channel
+
 
 ### Example
 ```csharp
@@ -618,12 +609,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ChannelsApi();
-            var appId = appId_example;  // string | Application Id (AppNameId)
-            var channelId = 56;  // int? | Sales channel (Android, IOS, Web, etc.)
+            var appId = appId_example;  // string | 
+            var channelId = 56;  // int? | 
 
             try
             {
-                // Returns a list of stores of an AppId that are assigned to a given Sales Channel
                 RestApiArrayResultStoreChannelAssignment result = apiInstance.GetStoresAssignedToChannel(appId, channelId);
                 Debug.WriteLine(result);
             }
@@ -640,8 +630,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application Id (AppNameId) | 
- **channelId** | **int?**| Sales channel (Android, IOS, Web, etc.) | 
+ **appId** | **string**|  | 
+ **channelId** | **int?**|  | 
 
 ### Return type
 
@@ -662,7 +652,7 @@ Name | Type | Description  | Notes
 # **GetStoresBySalesChannel**
 > Response GetStoresBySalesChannel (string appId, int? channelId)
 
-Returns a list of store ids attached to the given channel type for the specified app.
+
 
 ### Example
 ```csharp
@@ -682,12 +672,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ChannelsApi();
-            var appId = appId_example;  // string | Application Id (AppNameId)
-            var channelId = 56;  // int? | Type of sales channel (Android, IOS, Web, etc.)
+            var appId = appId_example;  // string | 
+            var channelId = 56;  // int? | 
 
             try
             {
-                // Returns a list of store ids attached to the given channel type for the specified app.
                 Response result = apiInstance.GetStoresBySalesChannel(appId, channelId);
                 Debug.WriteLine(result);
             }
@@ -704,8 +693,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| Application Id (AppNameId) | 
- **channelId** | **int?**| Type of sales channel (Android, IOS, Web, etc.) | 
+ **appId** | **string**|  | 
+ **channelId** | **int?**|  | 
 
 ### Return type
 
@@ -726,7 +715,7 @@ Name | Type | Description  | Notes
 # **UnassignStoreFromChannel**
 > Object UnassignStoreFromChannel (int? storeId, string appId, int? channelId)
 
-Unassign a Store from a Sales Channel
+
 
 ### Example
 ```csharp
@@ -746,13 +735,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ChannelsApi();
-            var storeId = 56;  // int? | Store Id (123, 456)
-            var appId = appId_example;  // string | AppId (AppNameIdxxx)
-            var channelId = 56;  // int? | Channel Id (123, 456)
+            var storeId = 56;  // int? | 
+            var appId = appId_example;  // string | 
+            var channelId = 56;  // int? | 
 
             try
             {
-                // Unassign a Store from a Sales Channel
                 Object result = apiInstance.UnassignStoreFromChannel(storeId, appId, channelId);
                 Debug.WriteLine(result);
             }
@@ -769,9 +757,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **int?**| Store Id (123, 456) | 
- **appId** | **string**| AppId (AppNameIdxxx) | 
- **channelId** | **int?**| Channel Id (123, 456) | 
+ **storeId** | **int?**|  | 
+ **appId** | **string**|  | 
+ **channelId** | **int?**|  | 
 
 ### Return type
 

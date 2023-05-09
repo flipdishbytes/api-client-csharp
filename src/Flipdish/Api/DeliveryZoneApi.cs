@@ -25,189 +25,189 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Adds a delivery zone to the store id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone will be added</param>
-        /// <param name="deliveryZoneBase">Optional delivery zone, if not supplied will create a default zone</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneBase"></param>
         /// <returns>RestApiResultDeliveryZone</returns>
         RestApiResultDeliveryZone AddDeliveryZone (int? storeId, DeliveryZoneBase deliveryZoneBase);
 
         /// <summary>
-        /// Adds a delivery zone to the store id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone will be added</param>
-        /// <param name="deliveryZoneBase">Optional delivery zone, if not supplied will create a default zone</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneBase"></param>
         /// <returns>ApiResponse of RestApiResultDeliveryZone</returns>
         ApiResponse<RestApiResultDeliveryZone> AddDeliveryZoneWithHttpInfo (int? storeId, DeliveryZoneBase deliveryZoneBase);
         /// <summary>
-        /// Get all the delivery zones associated with a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zones are associated</param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiArrayResultDeliveryZone</returns>
         RestApiArrayResultDeliveryZone GetDeliveryZones (int? storeId);
 
         /// <summary>
-        /// Get all the delivery zones associated with a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zones are associated</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiArrayResultDeliveryZone</returns>
         ApiResponse<RestApiArrayResultDeliveryZone> GetDeliveryZonesWithHttpInfo (int? storeId);
         /// <summary>
-        /// Removes the existing delivery zone
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone belongs</param>
-        /// <param name="deliveryZoneId">Delivery zone id to be removed</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneId"></param>
         /// <returns></returns>
         void RemoveDeliveryZone (int? storeId, int? deliveryZoneId);
 
         /// <summary>
-        /// Removes the existing delivery zone
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone belongs</param>
-        /// <param name="deliveryZoneId">Delivery zone id to be removed</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> RemoveDeliveryZoneWithHttpInfo (int? storeId, int? deliveryZoneId);
         /// <summary>
-        /// Updates the existing delivery zone
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone belongs</param>
-        /// <param name="deliveryZoneId">Delivery zone id to be updated</param>
-        /// <param name="deliveryZone">Delta of delivery zone parameters that need to be changed</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneId"></param>
+        /// <param name="deliveryZone"></param>
         /// <returns>RestApiResultDeliveryZone</returns>
         RestApiResultDeliveryZone UpdateDeliveryZone (int? storeId, int? deliveryZoneId, DeliveryZoneBase deliveryZone);
 
         /// <summary>
-        /// Updates the existing delivery zone
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone belongs</param>
-        /// <param name="deliveryZoneId">Delivery zone id to be updated</param>
-        /// <param name="deliveryZone">Delta of delivery zone parameters that need to be changed</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneId"></param>
+        /// <param name="deliveryZone"></param>
         /// <returns>ApiResponse of RestApiResultDeliveryZone</returns>
         ApiResponse<RestApiResultDeliveryZone> UpdateDeliveryZoneWithHttpInfo (int? storeId, int? deliveryZoneId, DeliveryZoneBase deliveryZone);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Adds a delivery zone to the store id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone will be added</param>
-        /// <param name="deliveryZoneBase">Optional delivery zone, if not supplied will create a default zone</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneBase"></param>
         /// <returns>Task of RestApiResultDeliveryZone</returns>
         System.Threading.Tasks.Task<RestApiResultDeliveryZone> AddDeliveryZoneAsync (int? storeId, DeliveryZoneBase deliveryZoneBase);
 
         /// <summary>
-        /// Adds a delivery zone to the store id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone will be added</param>
-        /// <param name="deliveryZoneBase">Optional delivery zone, if not supplied will create a default zone</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneBase"></param>
         /// <returns>Task of ApiResponse (RestApiResultDeliveryZone)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultDeliveryZone>> AddDeliveryZoneAsyncWithHttpInfo (int? storeId, DeliveryZoneBase deliveryZoneBase);
         /// <summary>
-        /// Get all the delivery zones associated with a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zones are associated</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiArrayResultDeliveryZone</returns>
         System.Threading.Tasks.Task<RestApiArrayResultDeliveryZone> GetDeliveryZonesAsync (int? storeId);
 
         /// <summary>
-        /// Get all the delivery zones associated with a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zones are associated</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultDeliveryZone)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultDeliveryZone>> GetDeliveryZonesAsyncWithHttpInfo (int? storeId);
         /// <summary>
-        /// Removes the existing delivery zone
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone belongs</param>
-        /// <param name="deliveryZoneId">Delivery zone id to be removed</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task RemoveDeliveryZoneAsync (int? storeId, int? deliveryZoneId);
 
         /// <summary>
-        /// Removes the existing delivery zone
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone belongs</param>
-        /// <param name="deliveryZoneId">Delivery zone id to be removed</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> RemoveDeliveryZoneAsyncWithHttpInfo (int? storeId, int? deliveryZoneId);
         /// <summary>
-        /// Updates the existing delivery zone
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone belongs</param>
-        /// <param name="deliveryZoneId">Delivery zone id to be updated</param>
-        /// <param name="deliveryZone">Delta of delivery zone parameters that need to be changed</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneId"></param>
+        /// <param name="deliveryZone"></param>
         /// <returns>Task of RestApiResultDeliveryZone</returns>
         System.Threading.Tasks.Task<RestApiResultDeliveryZone> UpdateDeliveryZoneAsync (int? storeId, int? deliveryZoneId, DeliveryZoneBase deliveryZone);
 
         /// <summary>
-        /// Updates the existing delivery zone
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone belongs</param>
-        /// <param name="deliveryZoneId">Delivery zone id to be updated</param>
-        /// <param name="deliveryZone">Delta of delivery zone parameters that need to be changed</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneId"></param>
+        /// <param name="deliveryZone"></param>
         /// <returns>Task of ApiResponse (RestApiResultDeliveryZone)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultDeliveryZone>> UpdateDeliveryZoneAsyncWithHttpInfo (int? storeId, int? deliveryZoneId, DeliveryZoneBase deliveryZone);
         #endregion Asynchronous Operations
@@ -311,11 +311,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Adds a delivery zone to the store id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone will be added</param>
-        /// <param name="deliveryZoneBase">Optional delivery zone, if not supplied will create a default zone</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneBase"></param>
         /// <returns>RestApiResultDeliveryZone</returns>
         public RestApiResultDeliveryZone AddDeliveryZone (int? storeId, DeliveryZoneBase deliveryZoneBase)
         {
@@ -324,11 +324,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Adds a delivery zone to the store id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone will be added</param>
-        /// <param name="deliveryZoneBase">Optional delivery zone, if not supplied will create a default zone</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneBase"></param>
         /// <returns>ApiResponse of RestApiResultDeliveryZone</returns>
         public ApiResponse< RestApiResultDeliveryZone > AddDeliveryZoneWithHttpInfo (int? storeId, DeliveryZoneBase deliveryZoneBase)
         {
@@ -404,11 +404,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Adds a delivery zone to the store id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone will be added</param>
-        /// <param name="deliveryZoneBase">Optional delivery zone, if not supplied will create a default zone</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneBase"></param>
         /// <returns>Task of RestApiResultDeliveryZone</returns>
         public async System.Threading.Tasks.Task<RestApiResultDeliveryZone> AddDeliveryZoneAsync (int? storeId, DeliveryZoneBase deliveryZoneBase)
         {
@@ -418,11 +418,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Adds a delivery zone to the store id 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone will be added</param>
-        /// <param name="deliveryZoneBase">Optional delivery zone, if not supplied will create a default zone</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneBase"></param>
         /// <returns>Task of ApiResponse (RestApiResultDeliveryZone)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultDeliveryZone>> AddDeliveryZoneAsyncWithHttpInfo (int? storeId, DeliveryZoneBase deliveryZoneBase)
         {
@@ -498,10 +498,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all the delivery zones associated with a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zones are associated</param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiArrayResultDeliveryZone</returns>
         public RestApiArrayResultDeliveryZone GetDeliveryZones (int? storeId)
         {
@@ -510,10 +510,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all the delivery zones associated with a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zones are associated</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiArrayResultDeliveryZone</returns>
         public ApiResponse< RestApiArrayResultDeliveryZone > GetDeliveryZonesWithHttpInfo (int? storeId)
         {
@@ -573,10 +573,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all the delivery zones associated with a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zones are associated</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiArrayResultDeliveryZone</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultDeliveryZone> GetDeliveryZonesAsync (int? storeId)
         {
@@ -586,10 +586,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get all the delivery zones associated with a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zones are associated</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultDeliveryZone)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultDeliveryZone>> GetDeliveryZonesAsyncWithHttpInfo (int? storeId)
         {
@@ -649,11 +649,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Removes the existing delivery zone 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone belongs</param>
-        /// <param name="deliveryZoneId">Delivery zone id to be removed</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneId"></param>
         /// <returns></returns>
         public void RemoveDeliveryZone (int? storeId, int? deliveryZoneId)
         {
@@ -661,11 +661,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Removes the existing delivery zone 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone belongs</param>
-        /// <param name="deliveryZoneId">Delivery zone id to be removed</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> RemoveDeliveryZoneWithHttpInfo (int? storeId, int? deliveryZoneId)
         {
@@ -729,11 +729,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Removes the existing delivery zone 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone belongs</param>
-        /// <param name="deliveryZoneId">Delivery zone id to be removed</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task RemoveDeliveryZoneAsync (int? storeId, int? deliveryZoneId)
         {
@@ -742,11 +742,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Removes the existing delivery zone 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone belongs</param>
-        /// <param name="deliveryZoneId">Delivery zone id to be removed</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> RemoveDeliveryZoneAsyncWithHttpInfo (int? storeId, int? deliveryZoneId)
         {
@@ -810,12 +810,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Updates the existing delivery zone 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone belongs</param>
-        /// <param name="deliveryZoneId">Delivery zone id to be updated</param>
-        /// <param name="deliveryZone">Delta of delivery zone parameters that need to be changed</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneId"></param>
+        /// <param name="deliveryZone"></param>
         /// <returns>RestApiResultDeliveryZone</returns>
         public RestApiResultDeliveryZone UpdateDeliveryZone (int? storeId, int? deliveryZoneId, DeliveryZoneBase deliveryZone)
         {
@@ -824,12 +824,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Updates the existing delivery zone 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone belongs</param>
-        /// <param name="deliveryZoneId">Delivery zone id to be updated</param>
-        /// <param name="deliveryZone">Delta of delivery zone parameters that need to be changed</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneId"></param>
+        /// <param name="deliveryZone"></param>
         /// <returns>ApiResponse of RestApiResultDeliveryZone</returns>
         public ApiResponse< RestApiResultDeliveryZone > UpdateDeliveryZoneWithHttpInfo (int? storeId, int? deliveryZoneId, DeliveryZoneBase deliveryZone)
         {
@@ -909,12 +909,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Updates the existing delivery zone 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone belongs</param>
-        /// <param name="deliveryZoneId">Delivery zone id to be updated</param>
-        /// <param name="deliveryZone">Delta of delivery zone parameters that need to be changed</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneId"></param>
+        /// <param name="deliveryZone"></param>
         /// <returns>Task of RestApiResultDeliveryZone</returns>
         public async System.Threading.Tasks.Task<RestApiResultDeliveryZone> UpdateDeliveryZoneAsync (int? storeId, int? deliveryZoneId, DeliveryZoneBase deliveryZone)
         {
@@ -924,12 +924,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Updates the existing delivery zone 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Id to which the delivery zone belongs</param>
-        /// <param name="deliveryZoneId">Delivery zone id to be updated</param>
-        /// <param name="deliveryZone">Delta of delivery zone parameters that need to be changed</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryZoneId"></param>
+        /// <param name="deliveryZone"></param>
         /// <returns>Task of ApiResponse (RestApiResultDeliveryZone)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultDeliveryZone>> UpdateDeliveryZoneAsyncWithHttpInfo (int? storeId, int? deliveryZoneId, DeliveryZoneBase deliveryZone)
         {

@@ -4,19 +4,19 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ExportPayoutChargebacks**](PayoutsExportApi.md#exportpayoutchargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks/export | Export a list of payout&#39;s chargebacks as CSV
-[**ExportPayoutOrders**](PayoutsExportApi.md#exportpayoutorders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders/export | Export a list of payout&#39;s orders as CSV
-[**ExportPayoutOtherCharges**](PayoutsExportApi.md#exportpayoutothercharges) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges/export | Export a list of payout&#39;s other charges as CSV
-[**ExportPayoutRefunds**](PayoutsExportApi.md#exportpayoutrefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds/export | Export a list of payout&#39;s refunds as CSV
-[**ExportPayoutStores**](PayoutsExportApi.md#exportpayoutstores) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/export | Export payout&#39;s details as CSV
-[**ExportPayouts**](PayoutsExportApi.md#exportpayouts) | **GET** /api/v1.0/{appId}/payouts/export | Export payouts as CSV
+[**ExportPayoutChargebacks**](PayoutsExportApi.md#exportpayoutchargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks/export | 
+[**ExportPayoutOrders**](PayoutsExportApi.md#exportpayoutorders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders/export | 
+[**ExportPayoutOtherCharges**](PayoutsExportApi.md#exportpayoutothercharges) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges/export | 
+[**ExportPayoutRefunds**](PayoutsExportApi.md#exportpayoutrefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds/export | 
+[**ExportPayoutStores**](PayoutsExportApi.md#exportpayoutstores) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/export | 
+[**ExportPayouts**](PayoutsExportApi.md#exportpayouts) | **GET** /api/v1.0/{appId}/payouts/export | 
 
 
 <a name="exportpayoutchargebacks"></a>
 # **ExportPayoutChargebacks**
 > string ExportPayoutChargebacks (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null)
 
-Export a list of payout's chargebacks as CSV
+
 
 ### Example
 ```csharp
@@ -43,7 +43,6 @@ namespace Example
 
             try
             {
-                // Export a list of payout's chargebacks as CSV
                 string result = apiInstance.ExportPayoutChargebacks(appId, bankAccountId, payoutId, storeIds);
                 Debug.WriteLine(result);
             }
@@ -84,7 +83,7 @@ Name | Type | Description  | Notes
 # **ExportPayoutOrders**
 > string ExportPayoutOrders (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null)
 
-Export a list of payout's orders as CSV
+
 
 ### Example
 ```csharp
@@ -111,7 +110,6 @@ namespace Example
 
             try
             {
-                // Export a list of payout's orders as CSV
                 string result = apiInstance.ExportPayoutOrders(appId, bankAccountId, payoutId, storeIds);
                 Debug.WriteLine(result);
             }
@@ -152,7 +150,7 @@ Name | Type | Description  | Notes
 # **ExportPayoutOtherCharges**
 > string ExportPayoutOtherCharges (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null)
 
-Export a list of payout's other charges as CSV
+
 
 ### Example
 ```csharp
@@ -179,7 +177,6 @@ namespace Example
 
             try
             {
-                // Export a list of payout's other charges as CSV
                 string result = apiInstance.ExportPayoutOtherCharges(appId, bankAccountId, payoutId, storeIds);
                 Debug.WriteLine(result);
             }
@@ -220,7 +217,7 @@ Name | Type | Description  | Notes
 # **ExportPayoutRefunds**
 > string ExportPayoutRefunds (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null)
 
-Export a list of payout's refunds as CSV
+
 
 ### Example
 ```csharp
@@ -247,7 +244,6 @@ namespace Example
 
             try
             {
-                // Export a list of payout's refunds as CSV
                 string result = apiInstance.ExportPayoutRefunds(appId, bankAccountId, payoutId, storeIds);
                 Debug.WriteLine(result);
             }
@@ -288,7 +284,7 @@ Name | Type | Description  | Notes
 # **ExportPayoutStores**
 > string ExportPayoutStores (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null)
 
-Export payout's details as CSV
+
 
 ### Example
 ```csharp
@@ -315,7 +311,6 @@ namespace Example
 
             try
             {
-                // Export payout's details as CSV
                 string result = apiInstance.ExportPayoutStores(appId, bankAccountId, payoutId, storeIds);
                 Debug.WriteLine(result);
             }
@@ -356,7 +351,7 @@ Name | Type | Description  | Notes
 # **ExportPayouts**
 > string ExportPayouts (string appId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
 
-Export payouts as CSV
+
 
 ### Example
 ```csharp
@@ -384,7 +379,6 @@ namespace Example
 
             try
             {
-                // Export payouts as CSV
                 string result = apiInstance.ExportPayouts(appId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
                 Debug.WriteLine(result);
             }

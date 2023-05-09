@@ -25,7 +25,7 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get sales channel configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -36,7 +36,7 @@ namespace Flipdish.Api
         RestApiResultAppConfigSalesChannel GetAppConfigSalesChannel (string appId);
 
         /// <summary>
-        /// Get sales channel configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -46,7 +46,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultAppConfigSalesChannel</returns>
         ApiResponse<RestApiResultAppConfigSalesChannel> GetAppConfigSalesChannelWithHttpInfo (string appId);
         /// <summary>
-        /// Get statistics mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -58,7 +58,7 @@ namespace Flipdish.Api
         RestApiArrayResultMobileAppsStatistics GetStatistics (string appId, List<string> platformTypes);
 
         /// <summary>
-        /// Get statistics mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -69,7 +69,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultMobileAppsStatistics</returns>
         ApiResponse<RestApiArrayResultMobileAppsStatistics> GetStatisticsWithHttpInfo (string appId, List<string> platformTypes);
         /// <summary>
-        /// Get submission details mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -80,7 +80,7 @@ namespace Flipdish.Api
         RestApiResultMobileAppsSubmissionDetails GetSubmissionDetails (string appId);
 
         /// <summary>
-        /// Get submission details mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -90,7 +90,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultMobileAppsSubmissionDetails</returns>
         ApiResponse<RestApiResultMobileAppsSubmissionDetails> GetSubmissionDetailsWithHttpInfo (string appId);
         /// <summary>
-        /// Get submission status mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -102,7 +102,7 @@ namespace Flipdish.Api
         RestApiResultMobileAppsSubmissionStatus GetSubmissionStatus (string appId, int? submissionId);
 
         /// <summary>
-        /// Get submission status mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -113,7 +113,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultMobileAppsSubmissionStatus</returns>
         ApiResponse<RestApiResultMobileAppsSubmissionStatus> GetSubmissionStatusWithHttpInfo (string appId, int? submissionId);
         /// <summary>
-        /// Publish mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -126,7 +126,7 @@ namespace Flipdish.Api
         RestApiResultRestApiIntegerResult Publish (string appId, int? submissionId, string platformType = null);
 
         /// <summary>
-        /// Publish mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -138,7 +138,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultRestApiIntegerResult</returns>
         ApiResponse<RestApiResultRestApiIntegerResult> PublishWithHttpInfo (string appId, int? submissionId, string platformType = null);
         /// <summary>
-        /// Re-submission form mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -150,7 +150,7 @@ namespace Flipdish.Api
         RestApiResultMobileAppsSubmission Resubmission (string appId, MobileAppsSubmission mobileAppsSubmission);
 
         /// <summary>
-        /// Re-submission form mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -161,7 +161,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultMobileAppsSubmission</returns>
         ApiResponse<RestApiResultMobileAppsSubmission> ResubmissionWithHttpInfo (string appId, MobileAppsSubmission mobileAppsSubmission);
         /// <summary>
-        /// Submission form mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -173,7 +173,7 @@ namespace Flipdish.Api
         RestApiResultMobileAppsSubmission Submission (string appId, MobileAppsSubmission mobileAppsSubmission);
 
         /// <summary>
-        /// Submission form mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -184,7 +184,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultMobileAppsSubmission</returns>
         ApiResponse<RestApiResultMobileAppsSubmission> SubmissionWithHttpInfo (string appId, MobileAppsSubmission mobileAppsSubmission);
         /// <summary>
-        /// Unpublish mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -197,7 +197,7 @@ namespace Flipdish.Api
         RestApiIntegerResult Unpublish (string appId, int? submissionId, string platformType = null);
 
         /// <summary>
-        /// Unpublish mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -209,7 +209,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiIntegerResult</returns>
         ApiResponse<RestApiIntegerResult> UnpublishWithHttpInfo (string appId, int? submissionId, string platformType = null);
         /// <summary>
-        /// Update the application sales channel configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -221,7 +221,7 @@ namespace Flipdish.Api
         RestApiResultAppConfigSalesChannel UpdateAppConfigSalesChannel (string appId, AppConfigSalesChannel appConfigSalesChannel);
 
         /// <summary>
-        /// Update the application sales channel configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -232,7 +232,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultAppConfigSalesChannel</returns>
         ApiResponse<RestApiResultAppConfigSalesChannel> UpdateAppConfigSalesChannelWithHttpInfo (string appId, AppConfigSalesChannel appConfigSalesChannel);
         /// <summary>
-        /// Update submission status
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -245,7 +245,7 @@ namespace Flipdish.Api
         RestApiResultUpdateMobileAppsSubmissionStatus UpdateSubmissionStatus (string appId, int? submissionId, UpdateMobileAppsSubmissionStatus updateSubmissionStatus);
 
         /// <summary>
-        /// Update submission status
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -257,7 +257,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultUpdateMobileAppsSubmissionStatus</returns>
         ApiResponse<RestApiResultUpdateMobileAppsSubmissionStatus> UpdateSubmissionStatusWithHttpInfo (string appId, int? submissionId, UpdateMobileAppsSubmissionStatus updateSubmissionStatus);
         /// <summary>
-        /// Upload image mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -269,7 +269,7 @@ namespace Flipdish.Api
         RestApiResultMobileAppsImage UploadImage (string appId, System.IO.Stream image);
 
         /// <summary>
-        /// Upload image mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -282,7 +282,7 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get sales channel configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -293,7 +293,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultAppConfigSalesChannel> GetAppConfigSalesChannelAsync (string appId);
 
         /// <summary>
-        /// Get sales channel configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -303,7 +303,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultAppConfigSalesChannel)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultAppConfigSalesChannel>> GetAppConfigSalesChannelAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// Get statistics mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -315,7 +315,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultMobileAppsStatistics> GetStatisticsAsync (string appId, List<string> platformTypes);
 
         /// <summary>
-        /// Get statistics mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -326,7 +326,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultMobileAppsStatistics)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMobileAppsStatistics>> GetStatisticsAsyncWithHttpInfo (string appId, List<string> platformTypes);
         /// <summary>
-        /// Get submission details mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -337,7 +337,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultMobileAppsSubmissionDetails> GetSubmissionDetailsAsync (string appId);
 
         /// <summary>
-        /// Get submission details mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -347,7 +347,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultMobileAppsSubmissionDetails)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultMobileAppsSubmissionDetails>> GetSubmissionDetailsAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// Get submission status mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -359,7 +359,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultMobileAppsSubmissionStatus> GetSubmissionStatusAsync (string appId, int? submissionId);
 
         /// <summary>
-        /// Get submission status mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -370,7 +370,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultMobileAppsSubmissionStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultMobileAppsSubmissionStatus>> GetSubmissionStatusAsyncWithHttpInfo (string appId, int? submissionId);
         /// <summary>
-        /// Publish mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -383,7 +383,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultRestApiIntegerResult> PublishAsync (string appId, int? submissionId, string platformType = null);
 
         /// <summary>
-        /// Publish mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -395,7 +395,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultRestApiIntegerResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultRestApiIntegerResult>> PublishAsyncWithHttpInfo (string appId, int? submissionId, string platformType = null);
         /// <summary>
-        /// Re-submission form mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -407,7 +407,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultMobileAppsSubmission> ResubmissionAsync (string appId, MobileAppsSubmission mobileAppsSubmission);
 
         /// <summary>
-        /// Re-submission form mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -418,7 +418,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultMobileAppsSubmission)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultMobileAppsSubmission>> ResubmissionAsyncWithHttpInfo (string appId, MobileAppsSubmission mobileAppsSubmission);
         /// <summary>
-        /// Submission form mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -430,7 +430,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultMobileAppsSubmission> SubmissionAsync (string appId, MobileAppsSubmission mobileAppsSubmission);
 
         /// <summary>
-        /// Submission form mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -441,7 +441,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultMobileAppsSubmission)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultMobileAppsSubmission>> SubmissionAsyncWithHttpInfo (string appId, MobileAppsSubmission mobileAppsSubmission);
         /// <summary>
-        /// Unpublish mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -454,7 +454,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiIntegerResult> UnpublishAsync (string appId, int? submissionId, string platformType = null);
 
         /// <summary>
-        /// Unpublish mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -466,7 +466,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiIntegerResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiIntegerResult>> UnpublishAsyncWithHttpInfo (string appId, int? submissionId, string platformType = null);
         /// <summary>
-        /// Update the application sales channel configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -478,7 +478,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultAppConfigSalesChannel> UpdateAppConfigSalesChannelAsync (string appId, AppConfigSalesChannel appConfigSalesChannel);
 
         /// <summary>
-        /// Update the application sales channel configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -489,7 +489,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultAppConfigSalesChannel)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultAppConfigSalesChannel>> UpdateAppConfigSalesChannelAsyncWithHttpInfo (string appId, AppConfigSalesChannel appConfigSalesChannel);
         /// <summary>
-        /// Update submission status
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -502,7 +502,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultUpdateMobileAppsSubmissionStatus> UpdateSubmissionStatusAsync (string appId, int? submissionId, UpdateMobileAppsSubmissionStatus updateSubmissionStatus);
 
         /// <summary>
-        /// Update submission status
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -514,7 +514,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultUpdateMobileAppsSubmissionStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultUpdateMobileAppsSubmissionStatus>> UpdateSubmissionStatusAsyncWithHttpInfo (string appId, int? submissionId, UpdateMobileAppsSubmissionStatus updateSubmissionStatus);
         /// <summary>
-        /// Upload image mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -526,7 +526,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultMobileAppsImage> UploadImageAsync (string appId, System.IO.Stream image);
 
         /// <summary>
-        /// Upload image mobile apps
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -637,7 +637,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get sales channel configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -649,7 +649,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get sales channel configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -712,7 +712,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get sales channel configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -725,7 +725,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get sales channel configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -788,7 +788,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get statistics mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -801,7 +801,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get statistics mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -869,7 +869,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get statistics mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -883,7 +883,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get statistics mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -951,7 +951,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get submission details mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -963,7 +963,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get submission details mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1026,7 +1026,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get submission details mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1039,7 +1039,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get submission details mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1102,7 +1102,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get submission status mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1115,7 +1115,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get submission status mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1183,7 +1183,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get submission status mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1197,7 +1197,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get submission status mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1265,7 +1265,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Publish mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1279,7 +1279,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Publish mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1349,7 +1349,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Publish mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1364,7 +1364,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Publish mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1434,7 +1434,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Re-submission form mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1447,7 +1447,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Re-submission form mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1527,7 +1527,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Re-submission form mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1541,7 +1541,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Re-submission form mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1621,7 +1621,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Submission form mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1634,7 +1634,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Submission form mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1714,7 +1714,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Submission form mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1728,7 +1728,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Submission form mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1808,7 +1808,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Unpublish mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1822,7 +1822,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Unpublish mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1892,7 +1892,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Unpublish mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1907,7 +1907,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Unpublish mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1977,7 +1977,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update the application sales channel configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1990,7 +1990,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update the application sales channel configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2070,7 +2070,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update the application sales channel configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2084,7 +2084,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update the application sales channel configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2164,7 +2164,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update submission status 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2178,7 +2178,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update submission status 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2263,7 +2263,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update submission status 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2278,7 +2278,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update submission status 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2363,7 +2363,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload image mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2376,7 +2376,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload image mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2445,7 +2445,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload image mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2459,7 +2459,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload image mobile apps 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>

@@ -25,105 +25,105 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Returns order batches
+        /// 
         /// </summary>
         /// <remarks>
-        /// Entries are sorted by date, from the most recent. At most 100 entries are returned.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="storeIds">List of store Ids (optional)</param>
-        /// <param name="createdFrom">Start date for retrieving the entries (optional)</param>
-        /// <param name="createdTo">End date for retrieving the entries (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <param name="createdFrom"> (optional)</param>
+        /// <param name="createdTo"> (optional)</param>
         /// <returns>RestApiArrayResultOrderBatch</returns>
         RestApiArrayResultOrderBatch GetAllOrderBatches (string appId, List<int?> storeIds = null, DateTime? createdFrom = null, DateTime? createdTo = null);
 
         /// <summary>
-        /// Returns order batches
-        /// </summary>
-        /// <remarks>
-        /// Entries are sorted by date, from the most recent. At most 100 entries are returned.
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="storeIds">List of store Ids (optional)</param>
-        /// <param name="createdFrom">Start date for retrieving the entries (optional)</param>
-        /// <param name="createdTo">End date for retrieving the entries (optional)</param>
-        /// <returns>ApiResponse of RestApiArrayResultOrderBatch</returns>
-        ApiResponse<RestApiArrayResultOrderBatch> GetAllOrderBatchesWithHttpInfo (string appId, List<int?> storeIds = null, DateTime? createdFrom = null, DateTime? createdTo = null);
-        /// <summary>
-        /// Returns the order batch details
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="orderBatchId">Order Batch Id</param>
+        /// <param name="appId"></param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <param name="createdFrom"> (optional)</param>
+        /// <param name="createdTo"> (optional)</param>
+        /// <returns>ApiResponse of RestApiArrayResultOrderBatch</returns>
+        ApiResponse<RestApiArrayResultOrderBatch> GetAllOrderBatchesWithHttpInfo (string appId, List<int?> storeIds = null, DateTime? createdFrom = null, DateTime? createdTo = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="orderBatchId"></param>
         /// <returns>RestApiResultOrderBatch</returns>
         RestApiResultOrderBatch GetOrderBatch (string appId, int? orderBatchId);
 
         /// <summary>
-        /// Returns the order batch details
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="orderBatchId">Order Batch Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderBatchId"></param>
         /// <returns>ApiResponse of RestApiResultOrderBatch</returns>
         ApiResponse<RestApiResultOrderBatch> GetOrderBatchWithHttpInfo (string appId, int? orderBatchId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Returns order batches
+        /// 
         /// </summary>
         /// <remarks>
-        /// Entries are sorted by date, from the most recent. At most 100 entries are returned.
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="storeIds">List of store Ids (optional)</param>
-        /// <param name="createdFrom">Start date for retrieving the entries (optional)</param>
-        /// <param name="createdTo">End date for retrieving the entries (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <param name="createdFrom"> (optional)</param>
+        /// <param name="createdTo"> (optional)</param>
         /// <returns>Task of RestApiArrayResultOrderBatch</returns>
         System.Threading.Tasks.Task<RestApiArrayResultOrderBatch> GetAllOrderBatchesAsync (string appId, List<int?> storeIds = null, DateTime? createdFrom = null, DateTime? createdTo = null);
 
         /// <summary>
-        /// Returns order batches
-        /// </summary>
-        /// <remarks>
-        /// Entries are sorted by date, from the most recent. At most 100 entries are returned.
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="storeIds">List of store Ids (optional)</param>
-        /// <param name="createdFrom">Start date for retrieving the entries (optional)</param>
-        /// <param name="createdTo">End date for retrieving the entries (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultOrderBatch)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOrderBatch>> GetAllOrderBatchesAsyncWithHttpInfo (string appId, List<int?> storeIds = null, DateTime? createdFrom = null, DateTime? createdTo = null);
-        /// <summary>
-        /// Returns the order batch details
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="orderBatchId">Order Batch Id</param>
+        /// <param name="appId"></param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <param name="createdFrom"> (optional)</param>
+        /// <param name="createdTo"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultOrderBatch)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOrderBatch>> GetAllOrderBatchesAsyncWithHttpInfo (string appId, List<int?> storeIds = null, DateTime? createdFrom = null, DateTime? createdTo = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="orderBatchId"></param>
         /// <returns>Task of RestApiResultOrderBatch</returns>
         System.Threading.Tasks.Task<RestApiResultOrderBatch> GetOrderBatchAsync (string appId, int? orderBatchId);
 
         /// <summary>
-        /// Returns the order batch details
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="orderBatchId">Order Batch Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderBatchId"></param>
         /// <returns>Task of ApiResponse (RestApiResultOrderBatch)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderBatch>> GetOrderBatchAsyncWithHttpInfo (string appId, int? orderBatchId);
         #endregion Asynchronous Operations
@@ -227,13 +227,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns order batches Entries are sorted by date, from the most recent. At most 100 entries are returned.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="storeIds">List of store Ids (optional)</param>
-        /// <param name="createdFrom">Start date for retrieving the entries (optional)</param>
-        /// <param name="createdTo">End date for retrieving the entries (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <param name="createdFrom"> (optional)</param>
+        /// <param name="createdTo"> (optional)</param>
         /// <returns>RestApiArrayResultOrderBatch</returns>
         public RestApiArrayResultOrderBatch GetAllOrderBatches (string appId, List<int?> storeIds = null, DateTime? createdFrom = null, DateTime? createdTo = null)
         {
@@ -242,13 +242,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns order batches Entries are sorted by date, from the most recent. At most 100 entries are returned.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="storeIds">List of store Ids (optional)</param>
-        /// <param name="createdFrom">Start date for retrieving the entries (optional)</param>
-        /// <param name="createdTo">End date for retrieving the entries (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <param name="createdFrom"> (optional)</param>
+        /// <param name="createdTo"> (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultOrderBatch</returns>
         public ApiResponse< RestApiArrayResultOrderBatch > GetAllOrderBatchesWithHttpInfo (string appId, List<int?> storeIds = null, DateTime? createdFrom = null, DateTime? createdTo = null)
         {
@@ -311,13 +311,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns order batches Entries are sorted by date, from the most recent. At most 100 entries are returned.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="storeIds">List of store Ids (optional)</param>
-        /// <param name="createdFrom">Start date for retrieving the entries (optional)</param>
-        /// <param name="createdTo">End date for retrieving the entries (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <param name="createdFrom"> (optional)</param>
+        /// <param name="createdTo"> (optional)</param>
         /// <returns>Task of RestApiArrayResultOrderBatch</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultOrderBatch> GetAllOrderBatchesAsync (string appId, List<int?> storeIds = null, DateTime? createdFrom = null, DateTime? createdTo = null)
         {
@@ -327,13 +327,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns order batches Entries are sorted by date, from the most recent. At most 100 entries are returned.
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="storeIds">List of store Ids (optional)</param>
-        /// <param name="createdFrom">Start date for retrieving the entries (optional)</param>
-        /// <param name="createdTo">End date for retrieving the entries (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <param name="createdFrom"> (optional)</param>
+        /// <param name="createdTo"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultOrderBatch)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOrderBatch>> GetAllOrderBatchesAsyncWithHttpInfo (string appId, List<int?> storeIds = null, DateTime? createdFrom = null, DateTime? createdTo = null)
         {
@@ -396,11 +396,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns the order batch details 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="orderBatchId">Order Batch Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderBatchId"></param>
         /// <returns>RestApiResultOrderBatch</returns>
         public RestApiResultOrderBatch GetOrderBatch (string appId, int? orderBatchId)
         {
@@ -409,11 +409,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns the order batch details 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="orderBatchId">Order Batch Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderBatchId"></param>
         /// <returns>ApiResponse of RestApiResultOrderBatch</returns>
         public ApiResponse< RestApiResultOrderBatch > GetOrderBatchWithHttpInfo (string appId, int? orderBatchId)
         {
@@ -477,11 +477,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns the order batch details 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="orderBatchId">Order Batch Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderBatchId"></param>
         /// <returns>Task of RestApiResultOrderBatch</returns>
         public async System.Threading.Tasks.Task<RestApiResultOrderBatch> GetOrderBatchAsync (string appId, int? orderBatchId)
         {
@@ -491,11 +491,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Returns the order batch details 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="orderBatchId">Order Batch Id</param>
+        /// <param name="appId"></param>
+        /// <param name="orderBatchId"></param>
         /// <returns>Task of ApiResponse (RestApiResultOrderBatch)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderBatch>> GetOrderBatchAsyncWithHttpInfo (string appId, int? orderBatchId)
         {

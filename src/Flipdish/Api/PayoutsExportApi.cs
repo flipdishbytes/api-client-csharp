@@ -25,7 +25,7 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Export a list of payout&#39;s chargebacks as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -39,7 +39,7 @@ namespace Flipdish.Api
         string ExportPayoutChargebacks (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
 
         /// <summary>
-        /// Export a list of payout&#39;s chargebacks as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -52,7 +52,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> ExportPayoutChargebacksWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
         /// <summary>
-        /// Export a list of payout&#39;s orders as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -66,7 +66,7 @@ namespace Flipdish.Api
         string ExportPayoutOrders (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
 
         /// <summary>
-        /// Export a list of payout&#39;s orders as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -79,7 +79,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> ExportPayoutOrdersWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
         /// <summary>
-        /// Export a list of payout&#39;s other charges as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -93,7 +93,7 @@ namespace Flipdish.Api
         string ExportPayoutOtherCharges (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
 
         /// <summary>
-        /// Export a list of payout&#39;s other charges as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -106,7 +106,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> ExportPayoutOtherChargesWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
         /// <summary>
-        /// Export a list of payout&#39;s refunds as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -120,7 +120,7 @@ namespace Flipdish.Api
         string ExportPayoutRefunds (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
 
         /// <summary>
-        /// Export a list of payout&#39;s refunds as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -133,7 +133,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> ExportPayoutRefundsWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
         /// <summary>
-        /// Export payout&#39;s details as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -147,7 +147,7 @@ namespace Flipdish.Api
         string ExportPayoutStores (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
 
         /// <summary>
-        /// Export payout&#39;s details as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -160,7 +160,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> ExportPayoutStoresWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
         /// <summary>
-        /// Export payouts as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -175,7 +175,7 @@ namespace Flipdish.Api
         string ExportPayouts (string appId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
 
         /// <summary>
-        /// Export payouts as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -191,7 +191,7 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Export a list of payout&#39;s chargebacks as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -205,7 +205,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<string> ExportPayoutChargebacksAsync (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
 
         /// <summary>
-        /// Export a list of payout&#39;s chargebacks as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -218,7 +218,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> ExportPayoutChargebacksAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
         /// <summary>
-        /// Export a list of payout&#39;s orders as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -232,7 +232,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<string> ExportPayoutOrdersAsync (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
 
         /// <summary>
-        /// Export a list of payout&#39;s orders as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -245,7 +245,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> ExportPayoutOrdersAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
         /// <summary>
-        /// Export a list of payout&#39;s other charges as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -259,7 +259,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<string> ExportPayoutOtherChargesAsync (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
 
         /// <summary>
-        /// Export a list of payout&#39;s other charges as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -272,7 +272,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> ExportPayoutOtherChargesAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
         /// <summary>
-        /// Export a list of payout&#39;s refunds as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -286,7 +286,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<string> ExportPayoutRefundsAsync (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
 
         /// <summary>
-        /// Export a list of payout&#39;s refunds as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -299,7 +299,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> ExportPayoutRefundsAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
         /// <summary>
-        /// Export payout&#39;s details as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -313,7 +313,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<string> ExportPayoutStoresAsync (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
 
         /// <summary>
-        /// Export payout&#39;s details as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -326,7 +326,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> ExportPayoutStoresAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
         /// <summary>
-        /// Export payouts as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -341,7 +341,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<string> ExportPayoutsAsync (string appId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
 
         /// <summary>
-        /// Export payouts as CSV
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -455,7 +455,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export a list of payout&#39;s chargebacks as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -470,7 +470,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export a list of payout&#39;s chargebacks as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -545,7 +545,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export a list of payout&#39;s chargebacks as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -561,7 +561,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export a list of payout&#39;s chargebacks as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -636,7 +636,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export a list of payout&#39;s orders as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -651,7 +651,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export a list of payout&#39;s orders as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -726,7 +726,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export a list of payout&#39;s orders as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -742,7 +742,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export a list of payout&#39;s orders as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -817,7 +817,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export a list of payout&#39;s other charges as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -832,7 +832,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export a list of payout&#39;s other charges as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -907,7 +907,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export a list of payout&#39;s other charges as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -923,7 +923,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export a list of payout&#39;s other charges as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -998,7 +998,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export a list of payout&#39;s refunds as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1013,7 +1013,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export a list of payout&#39;s refunds as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1088,7 +1088,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export a list of payout&#39;s refunds as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1104,7 +1104,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export a list of payout&#39;s refunds as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1179,7 +1179,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export payout&#39;s details as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1194,7 +1194,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export payout&#39;s details as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1269,7 +1269,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export payout&#39;s details as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1285,7 +1285,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export payout&#39;s details as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1360,7 +1360,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export payouts as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1376,7 +1376,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export payouts as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1447,7 +1447,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export payouts as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1464,7 +1464,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Export payouts as CSV 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>

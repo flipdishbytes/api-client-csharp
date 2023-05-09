@@ -25,108 +25,108 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get store&#39;s order capacity configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="deliveryType">Delivery / Pickup</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>RestApiResultStoreOrderCapacityConfig</returns>
         RestApiResultStoreOrderCapacityConfig GetStoreOrderCapacity (string appId, int? storeId, string deliveryType);
 
         /// <summary>
-        /// Get store&#39;s order capacity configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="deliveryType">Delivery / Pickup</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>ApiResponse of RestApiResultStoreOrderCapacityConfig</returns>
         ApiResponse<RestApiResultStoreOrderCapacityConfig> GetStoreOrderCapacityWithHttpInfo (string appId, int? storeId, string deliveryType);
         /// <summary>
-        /// Create or update a store&#39;s order capacity configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery / Pickup</param>
-        /// <param name="newOrderCapacityConfig">new order capacity configuration</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="newOrderCapacityConfig"></param>
         /// <param name="appId"></param>
         /// <returns></returns>
         void UpdateStoreOrderCapacityConfig (int? storeId, string deliveryType, StoreOrderCapacityConfigEditModel newOrderCapacityConfig, string appId);
 
         /// <summary>
-        /// Create or update a store&#39;s order capacity configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery / Pickup</param>
-        /// <param name="newOrderCapacityConfig">new order capacity configuration</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="newOrderCapacityConfig"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateStoreOrderCapacityConfigWithHttpInfo (int? storeId, string deliveryType, StoreOrderCapacityConfigEditModel newOrderCapacityConfig, string appId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get store&#39;s order capacity configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="deliveryType">Delivery / Pickup</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>Task of RestApiResultStoreOrderCapacityConfig</returns>
         System.Threading.Tasks.Task<RestApiResultStoreOrderCapacityConfig> GetStoreOrderCapacityAsync (string appId, int? storeId, string deliveryType);
 
         /// <summary>
-        /// Get store&#39;s order capacity configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="deliveryType">Delivery / Pickup</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>Task of ApiResponse (RestApiResultStoreOrderCapacityConfig)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStoreOrderCapacityConfig>> GetStoreOrderCapacityAsyncWithHttpInfo (string appId, int? storeId, string deliveryType);
         /// <summary>
-        /// Create or update a store&#39;s order capacity configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery / Pickup</param>
-        /// <param name="newOrderCapacityConfig">new order capacity configuration</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="newOrderCapacityConfig"></param>
         /// <param name="appId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UpdateStoreOrderCapacityConfigAsync (int? storeId, string deliveryType, StoreOrderCapacityConfigEditModel newOrderCapacityConfig, string appId);
 
         /// <summary>
-        /// Create or update a store&#39;s order capacity configuration
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery / Pickup</param>
-        /// <param name="newOrderCapacityConfig">new order capacity configuration</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="newOrderCapacityConfig"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateStoreOrderCapacityConfigAsyncWithHttpInfo (int? storeId, string deliveryType, StoreOrderCapacityConfigEditModel newOrderCapacityConfig, string appId);
@@ -231,12 +231,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get store&#39;s order capacity configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="deliveryType">Delivery / Pickup</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>RestApiResultStoreOrderCapacityConfig</returns>
         public RestApiResultStoreOrderCapacityConfig GetStoreOrderCapacity (string appId, int? storeId, string deliveryType)
         {
@@ -245,12 +245,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get store&#39;s order capacity configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="deliveryType">Delivery / Pickup</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>ApiResponse of RestApiResultStoreOrderCapacityConfig</returns>
         public ApiResponse< RestApiResultStoreOrderCapacityConfig > GetStoreOrderCapacityWithHttpInfo (string appId, int? storeId, string deliveryType)
         {
@@ -318,12 +318,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get store&#39;s order capacity configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="deliveryType">Delivery / Pickup</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>Task of RestApiResultStoreOrderCapacityConfig</returns>
         public async System.Threading.Tasks.Task<RestApiResultStoreOrderCapacityConfig> GetStoreOrderCapacityAsync (string appId, int? storeId, string deliveryType)
         {
@@ -333,12 +333,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get store&#39;s order capacity configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="storeId">Store Id</param>
-        /// <param name="deliveryType">Delivery / Pickup</param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
         /// <returns>Task of ApiResponse (RestApiResultStoreOrderCapacityConfig)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStoreOrderCapacityConfig>> GetStoreOrderCapacityAsyncWithHttpInfo (string appId, int? storeId, string deliveryType)
         {
@@ -406,12 +406,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create or update a store&#39;s order capacity configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery / Pickup</param>
-        /// <param name="newOrderCapacityConfig">new order capacity configuration</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="newOrderCapacityConfig"></param>
         /// <param name="appId"></param>
         /// <returns></returns>
         public void UpdateStoreOrderCapacityConfig (int? storeId, string deliveryType, StoreOrderCapacityConfigEditModel newOrderCapacityConfig, string appId)
@@ -420,12 +420,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create or update a store&#39;s order capacity configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery / Pickup</param>
-        /// <param name="newOrderCapacityConfig">new order capacity configuration</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="newOrderCapacityConfig"></param>
         /// <param name="appId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> UpdateStoreOrderCapacityConfigWithHttpInfo (int? storeId, string deliveryType, StoreOrderCapacityConfigEditModel newOrderCapacityConfig, string appId)
@@ -510,12 +510,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create or update a store&#39;s order capacity configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery / Pickup</param>
-        /// <param name="newOrderCapacityConfig">new order capacity configuration</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="newOrderCapacityConfig"></param>
         /// <param name="appId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UpdateStoreOrderCapacityConfigAsync (int? storeId, string deliveryType, StoreOrderCapacityConfigEditModel newOrderCapacityConfig, string appId)
@@ -525,12 +525,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create or update a store&#39;s order capacity configuration 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store identifier</param>
-        /// <param name="deliveryType">Delivery / Pickup</param>
-        /// <param name="newOrderCapacityConfig">new order capacity configuration</param>
+        /// <param name="storeId"></param>
+        /// <param name="deliveryType"></param>
+        /// <param name="newOrderCapacityConfig"></param>
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateStoreOrderCapacityConfigAsyncWithHttpInfo (int? storeId, string deliveryType, StoreOrderCapacityConfigEditModel newOrderCapacityConfig, string appId)

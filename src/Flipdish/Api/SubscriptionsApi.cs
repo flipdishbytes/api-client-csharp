@@ -25,101 +25,101 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get subscription by id
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="subscriptionId">Subscription Id</param>
+        /// <param name="appId"></param>
+        /// <param name="subscriptionId"></param>
         /// <returns>RestApiResultSubscription</returns>
         RestApiResultSubscription GetSubscriptionById (string appId, string subscriptionId);
 
         /// <summary>
-        /// Get subscription by id
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="subscriptionId">Subscription Id</param>
+        /// <param name="appId"></param>
+        /// <param name="subscriptionId"></param>
         /// <returns>ApiResponse of RestApiResultSubscription</returns>
         ApiResponse<RestApiResultSubscription> GetSubscriptionByIdWithHttpInfo (string appId, string subscriptionId);
         /// <summary>
-        /// Get list of subscriptions for an App
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="excludeNotOwnedSubscriptions">Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional)</param>
-        /// <param name="storeId">Store Ids (optional) (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="excludeNotOwnedSubscriptions"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
         /// <returns>RestApiArrayResultSubscriptionSummary</returns>
         RestApiArrayResultSubscriptionSummary GetSubscriptionsForApp (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null);
 
         /// <summary>
-        /// Get list of subscriptions for an App
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="excludeNotOwnedSubscriptions">Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional)</param>
-        /// <param name="storeId">Store Ids (optional) (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="excludeNotOwnedSubscriptions"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultSubscriptionSummary</returns>
         ApiResponse<RestApiArrayResultSubscriptionSummary> GetSubscriptionsForAppWithHttpInfo (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get subscription by id
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="subscriptionId">Subscription Id</param>
+        /// <param name="appId"></param>
+        /// <param name="subscriptionId"></param>
         /// <returns>Task of RestApiResultSubscription</returns>
         System.Threading.Tasks.Task<RestApiResultSubscription> GetSubscriptionByIdAsync (string appId, string subscriptionId);
 
         /// <summary>
-        /// Get subscription by id
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="subscriptionId">Subscription Id</param>
+        /// <param name="appId"></param>
+        /// <param name="subscriptionId"></param>
         /// <returns>Task of ApiResponse (RestApiResultSubscription)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultSubscription>> GetSubscriptionByIdAsyncWithHttpInfo (string appId, string subscriptionId);
         /// <summary>
-        /// Get list of subscriptions for an App
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="excludeNotOwnedSubscriptions">Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional)</param>
-        /// <param name="storeId">Store Ids (optional) (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="excludeNotOwnedSubscriptions"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
         /// <returns>Task of RestApiArrayResultSubscriptionSummary</returns>
         System.Threading.Tasks.Task<RestApiArrayResultSubscriptionSummary> GetSubscriptionsForAppAsync (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null);
 
         /// <summary>
-        /// Get list of subscriptions for an App
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="excludeNotOwnedSubscriptions">Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional)</param>
-        /// <param name="storeId">Store Ids (optional) (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="excludeNotOwnedSubscriptions"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultSubscriptionSummary)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultSubscriptionSummary>> GetSubscriptionsForAppAsyncWithHttpInfo (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null);
         #endregion Asynchronous Operations
@@ -223,11 +223,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get subscription by id [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="subscriptionId">Subscription Id</param>
+        /// <param name="appId"></param>
+        /// <param name="subscriptionId"></param>
         /// <returns>RestApiResultSubscription</returns>
         public RestApiResultSubscription GetSubscriptionById (string appId, string subscriptionId)
         {
@@ -236,11 +236,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get subscription by id [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="subscriptionId">Subscription Id</param>
+        /// <param name="appId"></param>
+        /// <param name="subscriptionId"></param>
         /// <returns>ApiResponse of RestApiResultSubscription</returns>
         public ApiResponse< RestApiResultSubscription > GetSubscriptionByIdWithHttpInfo (string appId, string subscriptionId)
         {
@@ -304,11 +304,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get subscription by id [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="subscriptionId">Subscription Id</param>
+        /// <param name="appId"></param>
+        /// <param name="subscriptionId"></param>
         /// <returns>Task of RestApiResultSubscription</returns>
         public async System.Threading.Tasks.Task<RestApiResultSubscription> GetSubscriptionByIdAsync (string appId, string subscriptionId)
         {
@@ -318,11 +318,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get subscription by id [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="subscriptionId">Subscription Id</param>
+        /// <param name="appId"></param>
+        /// <param name="subscriptionId"></param>
         /// <returns>Task of ApiResponse (RestApiResultSubscription)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultSubscription>> GetSubscriptionByIdAsyncWithHttpInfo (string appId, string subscriptionId)
         {
@@ -386,12 +386,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of subscriptions for an App [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="excludeNotOwnedSubscriptions">Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional)</param>
-        /// <param name="storeId">Store Ids (optional) (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="excludeNotOwnedSubscriptions"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
         /// <returns>RestApiArrayResultSubscriptionSummary</returns>
         public RestApiArrayResultSubscriptionSummary GetSubscriptionsForApp (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null)
         {
@@ -400,12 +400,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of subscriptions for an App [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="excludeNotOwnedSubscriptions">Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional)</param>
-        /// <param name="storeId">Store Ids (optional) (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="excludeNotOwnedSubscriptions"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultSubscriptionSummary</returns>
         public ApiResponse< RestApiArrayResultSubscriptionSummary > GetSubscriptionsForAppWithHttpInfo (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null)
         {
@@ -467,12 +467,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of subscriptions for an App [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="excludeNotOwnedSubscriptions">Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional)</param>
-        /// <param name="storeId">Store Ids (optional) (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="excludeNotOwnedSubscriptions"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
         /// <returns>Task of RestApiArrayResultSubscriptionSummary</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultSubscriptionSummary> GetSubscriptionsForAppAsync (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null)
         {
@@ -482,12 +482,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of subscriptions for an App [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="excludeNotOwnedSubscriptions">Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional)</param>
-        /// <param name="storeId">Store Ids (optional) (optional)</param>
+        /// <param name="appId"></param>
+        /// <param name="excludeNotOwnedSubscriptions"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultSubscriptionSummary)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultSubscriptionSummary>> GetSubscriptionsForAppAsyncWithHttpInfo (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null)
         {

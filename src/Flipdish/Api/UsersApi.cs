@@ -48,7 +48,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiStringResult</returns>
         ApiResponse<RestApiStringResult> GetPreviousOrderCountForStoreWithHttpInfo (int? userId, int? storeId);
         /// <summary>
-        /// Get role names
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -58,7 +58,7 @@ namespace Flipdish.Api
         RestApiStringArrayResult GetRoles ();
 
         /// <summary>
-        /// Get role names
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -92,7 +92,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> GetPreviousOrderCountForStoreAsyncWithHttpInfo (int? userId, int? storeId);
         /// <summary>
-        /// Get role names
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -102,7 +102,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiStringArrayResult> GetRolesAsync ();
 
         /// <summary>
-        /// Get role names
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -374,7 +374,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get role names 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RestApiStringArrayResult</returns>
@@ -385,7 +385,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get role names 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RestApiStringArrayResult</returns>
@@ -443,7 +443,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get role names 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of RestApiStringArrayResult</returns>
@@ -455,7 +455,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get role names 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RestApiStringArrayResult)</returns>

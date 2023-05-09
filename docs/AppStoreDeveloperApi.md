@@ -4,21 +4,19 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AppVerificationUpdate**](AppStoreDeveloperApi.md#appverificationupdate) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification | Update App store app verification
-[**CreateAppStoreApp**](AppStoreDeveloperApi.md#createappstoreapp) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps | Create App store app
-[**DeleteAppStoreApp**](AppStoreDeveloperApi.md#deleteappstoreapp) | **DELETE** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Delete App store app
-[**GetExternalFunctionSigningKey**](AppStoreDeveloperApi.md#getexternalfunctionsigningkey) | **GET** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_function_signing_key | Get external function action signing key for app
-[**UpdateAppStoreApp**](AppStoreDeveloperApi.md#updateappstoreapp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Update App store app
-[**UploadAppStoreAppLogo**](AppStoreDeveloperApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | Upload the App store app logo \\ icon
+[**AppVerificationUpdate**](AppStoreDeveloperApi.md#appverificationupdate) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification | 
+[**CreateAppStoreApp**](AppStoreDeveloperApi.md#createappstoreapp) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps | 
+[**DeleteAppStoreApp**](AppStoreDeveloperApi.md#deleteappstoreapp) | **DELETE** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | 
+[**GetExternalFunctionSigningKey**](AppStoreDeveloperApi.md#getexternalfunctionsigningkey) | **GET** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_function_signing_key | 
+[**UpdateAppStoreApp**](AppStoreDeveloperApi.md#updateappstoreapp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | 
+[**UploadAppStoreAppLogo**](AppStoreDeveloperApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | 
 
 
 <a name="appverificationupdate"></a>
 # **AppVerificationUpdate**
 > void AppVerificationUpdate (string oauthAppId, string appStoreAppId, string verificationStatus)
 
-Update App store app verification
 
-[BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
 
 ### Example
 ```csharp
@@ -38,13 +36,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreDeveloperApi();
-            var oauthAppId = oauthAppId_example;  // string | OAuth App identifier
-            var appStoreAppId = appStoreAppId_example;  // string | App store app id
-            var verificationStatus = verificationStatus_example;  // string | New verification status
+            var oauthAppId = oauthAppId_example;  // string | 
+            var appStoreAppId = appStoreAppId_example;  // string | 
+            var verificationStatus = verificationStatus_example;  // string | 
 
             try
             {
-                // Update App store app verification
                 apiInstance.AppVerificationUpdate(oauthAppId, appStoreAppId, verificationStatus);
             }
             catch (Exception e)
@@ -60,9 +57,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **string**| OAuth App identifier | 
- **appStoreAppId** | **string**| App store app id | 
- **verificationStatus** | **string**| New verification status | 
+ **oauthAppId** | **string**|  | 
+ **appStoreAppId** | **string**|  | 
+ **verificationStatus** | **string**|  | 
 
 ### Return type
 
@@ -83,9 +80,7 @@ void (empty response body)
 # **CreateAppStoreApp**
 > RestApiResultAppStoreApp CreateAppStoreApp (string oauthAppId, CreateAppStoreApp createAppStoreApp)
 
-Create App store app
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -105,12 +100,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreDeveloperApi();
-            var oauthAppId = oauthAppId_example;  // string | OAuth App identifier
-            var createAppStoreApp = new CreateAppStoreApp(); // CreateAppStoreApp | App store app
+            var oauthAppId = oauthAppId_example;  // string | 
+            var createAppStoreApp = new CreateAppStoreApp(); // CreateAppStoreApp | 
 
             try
             {
-                // Create App store app
                 RestApiResultAppStoreApp result = apiInstance.CreateAppStoreApp(oauthAppId, createAppStoreApp);
                 Debug.WriteLine(result);
             }
@@ -127,8 +121,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **string**| OAuth App identifier | 
- **createAppStoreApp** | [**CreateAppStoreApp**](CreateAppStoreApp.md)| App store app | 
+ **oauthAppId** | **string**|  | 
+ **createAppStoreApp** | [**CreateAppStoreApp**](CreateAppStoreApp.md)|  | 
 
 ### Return type
 
@@ -149,9 +143,7 @@ Name | Type | Description  | Notes
 # **DeleteAppStoreApp**
 > RestApiStringResult DeleteAppStoreApp (string oauthAppId, string appStoreAppId)
 
-Delete App store app
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -171,12 +163,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreDeveloperApi();
-            var oauthAppId = oauthAppId_example;  // string | OAuth App identifier
-            var appStoreAppId = appStoreAppId_example;  // string | App store app id
+            var oauthAppId = oauthAppId_example;  // string | 
+            var appStoreAppId = appStoreAppId_example;  // string | 
 
             try
             {
-                // Delete App store app
                 RestApiStringResult result = apiInstance.DeleteAppStoreApp(oauthAppId, appStoreAppId);
                 Debug.WriteLine(result);
             }
@@ -193,8 +184,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **string**| OAuth App identifier | 
- **appStoreAppId** | **string**| App store app id | 
+ **oauthAppId** | **string**|  | 
+ **appStoreAppId** | **string**|  | 
 
 ### Return type
 
@@ -215,9 +206,7 @@ Name | Type | Description  | Notes
 # **GetExternalFunctionSigningKey**
 > void GetExternalFunctionSigningKey (string oauthAppId, string appStoreAppId)
 
-Get external function action signing key for app
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -237,12 +226,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreDeveloperApi();
-            var oauthAppId = oauthAppId_example;  // string | OAuth App identifier
-            var appStoreAppId = appStoreAppId_example;  // string | App store app id
+            var oauthAppId = oauthAppId_example;  // string | 
+            var appStoreAppId = appStoreAppId_example;  // string | 
 
             try
             {
-                // Get external function action signing key for app
                 apiInstance.GetExternalFunctionSigningKey(oauthAppId, appStoreAppId);
             }
             catch (Exception e)
@@ -258,8 +246,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **string**| OAuth App identifier | 
- **appStoreAppId** | **string**| App store app id | 
+ **oauthAppId** | **string**|  | 
+ **appStoreAppId** | **string**|  | 
 
 ### Return type
 
@@ -280,9 +268,7 @@ void (empty response body)
 # **UpdateAppStoreApp**
 > void UpdateAppStoreApp (string oauthAppId, string appStoreAppId, UpdateAppStoreApp appStoreApp)
 
-Update App store app
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -302,13 +288,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreDeveloperApi();
-            var oauthAppId = oauthAppId_example;  // string | OAuth App identifier
-            var appStoreAppId = appStoreAppId_example;  // string | App store app id
-            var appStoreApp = new UpdateAppStoreApp(); // UpdateAppStoreApp | Update App store app
+            var oauthAppId = oauthAppId_example;  // string | 
+            var appStoreAppId = appStoreAppId_example;  // string | 
+            var appStoreApp = new UpdateAppStoreApp(); // UpdateAppStoreApp | 
 
             try
             {
-                // Update App store app
                 apiInstance.UpdateAppStoreApp(oauthAppId, appStoreAppId, appStoreApp);
             }
             catch (Exception e)
@@ -324,9 +309,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **string**| OAuth App identifier | 
- **appStoreAppId** | **string**| App store app id | 
- **appStoreApp** | [**UpdateAppStoreApp**](UpdateAppStoreApp.md)| Update App store app | 
+ **oauthAppId** | **string**|  | 
+ **appStoreAppId** | **string**|  | 
+ **appStoreApp** | [**UpdateAppStoreApp**](UpdateAppStoreApp.md)|  | 
 
 ### Return type
 
@@ -347,7 +332,7 @@ void (empty response body)
 # **UploadAppStoreAppLogo**
 > void UploadAppStoreAppLogo (string oauthAppId, string appStoreAppId, System.IO.Stream image)
 
-Upload the App store app logo \\ icon
+
 
 ### Example
 ```csharp
@@ -367,13 +352,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppStoreDeveloperApi();
-            var oauthAppId = oauthAppId_example;  // string | OAuth App identifier
-            var appStoreAppId = appStoreAppId_example;  // string | App store app id
+            var oauthAppId = oauthAppId_example;  // string | 
+            var appStoreAppId = appStoreAppId_example;  // string | 
             var image = new System.IO.Stream(); // System.IO.Stream | App Store App Logo
 
             try
             {
-                // Upload the App store app logo \\ icon
                 apiInstance.UploadAppStoreAppLogo(oauthAppId, appStoreAppId, image);
             }
             catch (Exception e)
@@ -389,8 +373,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **string**| OAuth App identifier | 
- **appStoreAppId** | **string**| App store app id | 
+ **oauthAppId** | **string**|  | 
+ **appStoreAppId** | **string**|  | 
  **image** | **System.IO.Stream**| App Store App Logo | 
 
 ### Return type

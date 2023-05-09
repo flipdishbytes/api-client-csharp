@@ -25,32 +25,32 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [PRIVATE API] Complete Home Action
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="homeActionId">Id of the action</param>
+        /// <param name="appId"></param>
+        /// <param name="homeActionId"></param>
         /// <param name="isDismissed"></param>
         /// <returns>Object</returns>
         Object CompleteHomeAction (string appId, int? homeActionId, bool? isDismissed);
 
         /// <summary>
-        /// [PRIVATE API] Complete Home Action
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="homeActionId">Id of the action</param>
+        /// <param name="appId"></param>
+        /// <param name="homeActionId"></param>
         /// <param name="isDismissed"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> CompleteHomeActionWithHttpInfo (string appId, int? homeActionId, bool? isDismissed);
         /// <summary>
-        /// [PRIVATE API] Complete Home Action
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -60,7 +60,7 @@ namespace Flipdish.Api
         Object DismissOldPortalAction ();
 
         /// <summary>
-        /// [PRIVATE API] Complete Home Action
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -69,49 +69,49 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> DismissOldPortalActionWithHttpInfo ();
         /// <summary>
-        /// [PRIVATE API] Get Home Actions
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiArrayResultHomeAction</returns>
         RestApiArrayResultHomeAction GetHomeActions (string appId);
 
         /// <summary>
-        /// [PRIVATE API] Get Home Actions
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiArrayResultHomeAction</returns>
         ApiResponse<RestApiArrayResultHomeAction> GetHomeActionsWithHttpInfo (string appId);
         /// <summary>
-        /// [PRIVATE API] Get Home Statistics
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiResultHomeStatistics</returns>
         RestApiResultHomeStatistics GetHomeStatistics (string appId);
 
         /// <summary>
-        /// [PRIVATE API] Get Home Statistics
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultHomeStatistics</returns>
         ApiResponse<RestApiResultHomeStatistics> GetHomeStatisticsWithHttpInfo (string appId);
         /// <summary>
-        /// [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -121,7 +121,7 @@ namespace Flipdish.Api
         RestApiResultOktaPortalFeatureFlag GetOktaPortalFeatureFlag ();
 
         /// <summary>
-        /// [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -132,32 +132,32 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// [PRIVATE API] Complete Home Action
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="homeActionId">Id of the action</param>
+        /// <param name="appId"></param>
+        /// <param name="homeActionId"></param>
         /// <param name="isDismissed"></param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> CompleteHomeActionAsync (string appId, int? homeActionId, bool? isDismissed);
 
         /// <summary>
-        /// [PRIVATE API] Complete Home Action
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="homeActionId">Id of the action</param>
+        /// <param name="appId"></param>
+        /// <param name="homeActionId"></param>
         /// <param name="isDismissed"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CompleteHomeActionAsyncWithHttpInfo (string appId, int? homeActionId, bool? isDismissed);
         /// <summary>
-        /// [PRIVATE API] Complete Home Action
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -167,7 +167,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<Object> DismissOldPortalActionAsync ();
 
         /// <summary>
-        /// [PRIVATE API] Complete Home Action
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -176,49 +176,49 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DismissOldPortalActionAsyncWithHttpInfo ();
         /// <summary>
-        /// [PRIVATE API] Get Home Actions
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiArrayResultHomeAction</returns>
         System.Threading.Tasks.Task<RestApiArrayResultHomeAction> GetHomeActionsAsync (string appId);
 
         /// <summary>
-        /// [PRIVATE API] Get Home Actions
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultHomeAction)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultHomeAction>> GetHomeActionsAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// [PRIVATE API] Get Home Statistics
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiResultHomeStatistics</returns>
         System.Threading.Tasks.Task<RestApiResultHomeStatistics> GetHomeStatisticsAsync (string appId);
 
         /// <summary>
-        /// [PRIVATE API] Get Home Statistics
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultHomeStatistics)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultHomeStatistics>> GetHomeStatisticsAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -228,7 +228,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultOktaPortalFeatureFlag> GetOktaPortalFeatureFlagAsync ();
 
         /// <summary>
-        /// [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -337,11 +337,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Complete Home Action 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="homeActionId">Id of the action</param>
+        /// <param name="appId"></param>
+        /// <param name="homeActionId"></param>
         /// <param name="isDismissed"></param>
         /// <returns>Object</returns>
         public Object CompleteHomeAction (string appId, int? homeActionId, bool? isDismissed)
@@ -351,11 +351,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Complete Home Action 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="homeActionId">Id of the action</param>
+        /// <param name="appId"></param>
+        /// <param name="homeActionId"></param>
         /// <param name="isDismissed"></param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > CompleteHomeActionWithHttpInfo (string appId, int? homeActionId, bool? isDismissed)
@@ -424,11 +424,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Complete Home Action 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="homeActionId">Id of the action</param>
+        /// <param name="appId"></param>
+        /// <param name="homeActionId"></param>
         /// <param name="isDismissed"></param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> CompleteHomeActionAsync (string appId, int? homeActionId, bool? isDismissed)
@@ -439,11 +439,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Complete Home Action 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
-        /// <param name="homeActionId">Id of the action</param>
+        /// <param name="appId"></param>
+        /// <param name="homeActionId"></param>
         /// <param name="isDismissed"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> CompleteHomeActionAsyncWithHttpInfo (string appId, int? homeActionId, bool? isDismissed)
@@ -512,7 +512,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Complete Home Action 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
@@ -523,7 +523,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Complete Home Action 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
@@ -581,7 +581,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Complete Home Action 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
@@ -593,7 +593,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Complete Home Action 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
@@ -651,10 +651,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get Home Actions 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiArrayResultHomeAction</returns>
         public RestApiArrayResultHomeAction GetHomeActions (string appId)
         {
@@ -663,10 +663,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get Home Actions 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiArrayResultHomeAction</returns>
         public ApiResponse< RestApiArrayResultHomeAction > GetHomeActionsWithHttpInfo (string appId)
         {
@@ -726,10 +726,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get Home Actions 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiArrayResultHomeAction</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultHomeAction> GetHomeActionsAsync (string appId)
         {
@@ -739,10 +739,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get Home Actions 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultHomeAction)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultHomeAction>> GetHomeActionsAsyncWithHttpInfo (string appId)
         {
@@ -802,10 +802,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get Home Statistics 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiResultHomeStatistics</returns>
         public RestApiResultHomeStatistics GetHomeStatistics (string appId)
         {
@@ -814,10 +814,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get Home Statistics 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultHomeStatistics</returns>
         public ApiResponse< RestApiResultHomeStatistics > GetHomeStatisticsWithHttpInfo (string appId)
         {
@@ -877,10 +877,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get Home Statistics 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiResultHomeStatistics</returns>
         public async System.Threading.Tasks.Task<RestApiResultHomeStatistics> GetHomeStatisticsAsync (string appId)
         {
@@ -890,10 +890,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get Home Statistics 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Name Id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultHomeStatistics)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultHomeStatistics>> GetHomeStatisticsAsyncWithHttpInfo (string appId)
         {
@@ -953,7 +953,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RestApiResultOktaPortalFeatureFlag</returns>
@@ -964,7 +964,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RestApiResultOktaPortalFeatureFlag</returns>
@@ -1022,7 +1022,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of RestApiResultOktaPortalFeatureFlag</returns>
@@ -1034,7 +1034,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RestApiResultOktaPortalFeatureFlag)</returns>

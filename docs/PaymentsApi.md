@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetOrderPaymentInformation**](PaymentsApi.md#getorderpaymentinformation) | **GET** /api/v1.0/payments/payment/{orderId}/refundable | Returns payment refund information related to the order with the order id
+[**GetOrderPaymentInformation**](PaymentsApi.md#getorderpaymentinformation) | **GET** /api/v1.0/payments/payment/{orderId}/refundable | 
 
 
 <a name="getorderpaymentinformation"></a>
 # **GetOrderPaymentInformation**
 > RestApiResultOrderPaymentInformation GetOrderPaymentInformation (int? orderId)
 
-Returns payment refund information related to the order with the order id
+
 
 ### Example
 ```csharp
@@ -31,11 +31,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new PaymentsApi();
-            var orderId = 56;  // int? | Order identifier
+            var orderId = 56;  // int? | 
 
             try
             {
-                // Returns payment refund information related to the order with the order id
                 RestApiResultOrderPaymentInformation result = apiInstance.GetOrderPaymentInformation(orderId);
                 Debug.WriteLine(result);
             }
@@ -52,7 +51,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **int?**| Order identifier | 
+ **orderId** | **int?**|  | 
 
 ### Return type
 

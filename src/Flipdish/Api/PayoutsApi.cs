@@ -25,7 +25,7 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get Payout details broken down by Store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -38,7 +38,7 @@ namespace Flipdish.Api
         PayoutDetail GetPayout (string appId, int? bankAccountId, int? payoutId);
 
         /// <summary>
-        /// Get Payout details broken down by Store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -50,7 +50,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of PayoutDetail</returns>
         ApiResponse<PayoutDetail> GetPayoutWithHttpInfo (string appId, int? bankAccountId, int? payoutId);
         /// <summary>
-        /// Get list of payout&#39;s chargebacks
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -66,7 +66,7 @@ namespace Flipdish.Api
         RestApiPaginationResultPayoutChargeback GetPayoutChargebacks (string appId, int? bankAccountId, int? payoutId, int? page = null, int? limit = null, List<int?> storeIds = null);
 
         /// <summary>
-        /// Get list of payout&#39;s chargebacks
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -81,7 +81,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiPaginationResultPayoutChargeback</returns>
         ApiResponse<RestApiPaginationResultPayoutChargeback> GetPayoutChargebacksWithHttpInfo (string appId, int? bankAccountId, int? payoutId, int? page = null, int? limit = null, List<int?> storeIds = null);
         /// <summary>
-        /// Get list of payout&#39;s orders
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -97,7 +97,7 @@ namespace Flipdish.Api
         RestApiPaginationResultPayoutOrder GetPayoutOrders (string appId, int? bankAccountId, int? payoutId, int? page = null, int? limit = null, List<int?> storeIds = null);
 
         /// <summary>
-        /// Get list of payout&#39;s orders
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -112,7 +112,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiPaginationResultPayoutOrder</returns>
         ApiResponse<RestApiPaginationResultPayoutOrder> GetPayoutOrdersWithHttpInfo (string appId, int? bankAccountId, int? payoutId, int? page = null, int? limit = null, List<int?> storeIds = null);
         /// <summary>
-        /// Get list of payout&#39;s other charges
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -128,7 +128,7 @@ namespace Flipdish.Api
         RestApiPaginationResultPayoutOtherCharge GetPayoutOtherCharges (string appId, int? bankAccountId, int? payoutId, int? page = null, int? limit = null, List<int?> storeIds = null);
 
         /// <summary>
-        /// Get list of payout&#39;s other charges
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -143,7 +143,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiPaginationResultPayoutOtherCharge</returns>
         ApiResponse<RestApiPaginationResultPayoutOtherCharge> GetPayoutOtherChargesWithHttpInfo (string appId, int? bankAccountId, int? payoutId, int? page = null, int? limit = null, List<int?> storeIds = null);
         /// <summary>
-        /// Get list of payout&#39;s refunds
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -159,7 +159,7 @@ namespace Flipdish.Api
         RestApiPaginationResultPayoutRefund GetPayoutRefunds (string appId, int? bankAccountId, int? payoutId, int? page = null, int? limit = null, List<int?> storeIds = null);
 
         /// <summary>
-        /// Get list of payout&#39;s refunds
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -174,10 +174,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiPaginationResultPayoutRefund</returns>
         ApiResponse<RestApiPaginationResultPayoutRefund> GetPayoutRefundsWithHttpInfo (string appId, int? bankAccountId, int? payoutId, int? page = null, int? limit = null, List<int?> storeIds = null);
         /// <summary>
-        /// Get list of payout summaries
+        /// 
         /// </summary>
         /// <remarks>
-        /// BETA - this endpoint is under development, do not use it in your production system
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -189,10 +189,10 @@ namespace Flipdish.Api
         RestApiArrayResultPayoutSummary GetPayoutSummaries (string appId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
 
         /// <summary>
-        /// Get list of payout summaries
+        /// 
         /// </summary>
         /// <remarks>
-        /// BETA - this endpoint is under development, do not use it in your production system
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -203,10 +203,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultPayoutSummary</returns>
         ApiResponse<RestApiArrayResultPayoutSummary> GetPayoutSummariesWithHttpInfo (string appId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
         /// <summary>
-        /// Get list of payouts
+        /// 
         /// </summary>
         /// <remarks>
-        /// BETA - this endpoint is under development, do not use it in your production system
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -220,10 +220,10 @@ namespace Flipdish.Api
         RestApiPaginationResultPayout GetPayouts (string appId, DateTime? startDate = null, DateTime? endDate = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
 
         /// <summary>
-        /// Get list of payouts
+        /// 
         /// </summary>
         /// <remarks>
-        /// BETA - this endpoint is under development, do not use it in your production system
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -238,7 +238,7 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get Payout details broken down by Store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -251,7 +251,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<PayoutDetail> GetPayoutAsync (string appId, int? bankAccountId, int? payoutId);
 
         /// <summary>
-        /// Get Payout details broken down by Store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -263,7 +263,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (PayoutDetail)</returns>
         System.Threading.Tasks.Task<ApiResponse<PayoutDetail>> GetPayoutAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId);
         /// <summary>
-        /// Get list of payout&#39;s chargebacks
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -279,7 +279,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiPaginationResultPayoutChargeback> GetPayoutChargebacksAsync (string appId, int? bankAccountId, int? payoutId, int? page = null, int? limit = null, List<int?> storeIds = null);
 
         /// <summary>
-        /// Get list of payout&#39;s chargebacks
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -294,7 +294,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiPaginationResultPayoutChargeback)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPayoutChargeback>> GetPayoutChargebacksAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, int? page = null, int? limit = null, List<int?> storeIds = null);
         /// <summary>
-        /// Get list of payout&#39;s orders
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -310,7 +310,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiPaginationResultPayoutOrder> GetPayoutOrdersAsync (string appId, int? bankAccountId, int? payoutId, int? page = null, int? limit = null, List<int?> storeIds = null);
 
         /// <summary>
-        /// Get list of payout&#39;s orders
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -325,7 +325,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiPaginationResultPayoutOrder)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPayoutOrder>> GetPayoutOrdersAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, int? page = null, int? limit = null, List<int?> storeIds = null);
         /// <summary>
-        /// Get list of payout&#39;s other charges
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -341,7 +341,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiPaginationResultPayoutOtherCharge> GetPayoutOtherChargesAsync (string appId, int? bankAccountId, int? payoutId, int? page = null, int? limit = null, List<int?> storeIds = null);
 
         /// <summary>
-        /// Get list of payout&#39;s other charges
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -356,7 +356,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiPaginationResultPayoutOtherCharge)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPayoutOtherCharge>> GetPayoutOtherChargesAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, int? page = null, int? limit = null, List<int?> storeIds = null);
         /// <summary>
-        /// Get list of payout&#39;s refunds
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -372,7 +372,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiPaginationResultPayoutRefund> GetPayoutRefundsAsync (string appId, int? bankAccountId, int? payoutId, int? page = null, int? limit = null, List<int?> storeIds = null);
 
         /// <summary>
-        /// Get list of payout&#39;s refunds
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -387,10 +387,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiPaginationResultPayoutRefund)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPayoutRefund>> GetPayoutRefundsAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, int? page = null, int? limit = null, List<int?> storeIds = null);
         /// <summary>
-        /// Get list of payout summaries
+        /// 
         /// </summary>
         /// <remarks>
-        /// BETA - this endpoint is under development, do not use it in your production system
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -402,10 +402,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultPayoutSummary> GetPayoutSummariesAsync (string appId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
 
         /// <summary>
-        /// Get list of payout summaries
+        /// 
         /// </summary>
         /// <remarks>
-        /// BETA - this endpoint is under development, do not use it in your production system
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -416,10 +416,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultPayoutSummary)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultPayoutSummary>> GetPayoutSummariesAsyncWithHttpInfo (string appId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
         /// <summary>
-        /// Get list of payouts
+        /// 
         /// </summary>
         /// <remarks>
-        /// BETA - this endpoint is under development, do not use it in your production system
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -433,10 +433,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiPaginationResultPayout> GetPayoutsAsync (string appId, DateTime? startDate = null, DateTime? endDate = null, int? page = null, int? limit = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
 
         /// <summary>
-        /// Get list of payouts
+        /// 
         /// </summary>
         /// <remarks>
-        /// BETA - this endpoint is under development, do not use it in your production system
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -549,7 +549,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Payout details broken down by Store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -563,7 +563,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Payout details broken down by Store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -636,7 +636,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Payout details broken down by Store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -651,7 +651,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Payout details broken down by Store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -724,7 +724,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payout&#39;s chargebacks 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -741,7 +741,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payout&#39;s chargebacks 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -820,7 +820,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payout&#39;s chargebacks 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -838,7 +838,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payout&#39;s chargebacks 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -917,7 +917,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payout&#39;s orders 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -934,7 +934,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payout&#39;s orders 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1013,7 +1013,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payout&#39;s orders 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1031,7 +1031,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payout&#39;s orders 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1110,7 +1110,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payout&#39;s other charges 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1127,7 +1127,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payout&#39;s other charges 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1206,7 +1206,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payout&#39;s other charges 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1224,7 +1224,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payout&#39;s other charges 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1303,7 +1303,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payout&#39;s refunds 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1320,7 +1320,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payout&#39;s refunds 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1399,7 +1399,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payout&#39;s refunds 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1417,7 +1417,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payout&#39;s refunds 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1496,7 +1496,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payout summaries BETA - this endpoint is under development, do not use it in your production system
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1512,7 +1512,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payout summaries BETA - this endpoint is under development, do not use it in your production system
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1583,7 +1583,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payout summaries BETA - this endpoint is under development, do not use it in your production system
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1600,7 +1600,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payout summaries BETA - this endpoint is under development, do not use it in your production system
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1671,7 +1671,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payouts BETA - this endpoint is under development, do not use it in your production system
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1689,7 +1689,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payouts BETA - this endpoint is under development, do not use it in your production system
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1764,7 +1764,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payouts BETA - this endpoint is under development, do not use it in your production system
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1783,7 +1783,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of payouts BETA - this endpoint is under development, do not use it in your production system
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>

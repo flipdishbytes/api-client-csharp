@@ -25,185 +25,185 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Cancel a stuart job
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">Stuart job identifier</param>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Object</returns>
         Object StuartCancelJob (int? jobId, int? storeId);
 
         /// <summary>
-        /// Cancel a stuart job
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">Stuart job identifier</param>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> StuartCancelJobWithHttpInfo (int? jobId, int? storeId);
         /// <summary>
-        /// Get start job details
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">Stuart job identifier</param>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiResultJobResponse</returns>
         RestApiResultJobResponse StuartGetJob (int? jobId, int? storeId);
 
         /// <summary>
-        /// Get start job details
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">Stuart job identifier</param>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultJobResponse</returns>
         ApiResponse<RestApiResultJobResponse> StuartGetJobWithHttpInfo (int? jobId, int? storeId);
         /// <summary>
-        /// Get stuart settings for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiResultStuartSettings</returns>
         RestApiResultStuartSettings StuartGetStuartSettings (int? storeId);
 
         /// <summary>
-        /// Get stuart settings for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultStuartSettings</returns>
         ApiResponse<RestApiResultStuartSettings> StuartGetStuartSettingsWithHttpInfo (int? storeId);
         /// <summary>
-        /// Set stuart settings for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Identifier</param>
-        /// <param name="stuartSettings">Stuart settings model</param>
+        /// <param name="storeId"></param>
+        /// <param name="stuartSettings"></param>
         /// <returns>Object</returns>
         Object StuartPostStuartSettings (int? storeId, StuartSettings stuartSettings);
 
         /// <summary>
-        /// Set stuart settings for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Identifier</param>
-        /// <param name="stuartSettings">Stuart settings model</param>
+        /// <param name="storeId"></param>
+        /// <param name="stuartSettings"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> StuartPostStuartSettingsWithHttpInfo (int? storeId, StuartSettings stuartSettings);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Cancel a stuart job
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">Stuart job identifier</param>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> StuartCancelJobAsync (int? jobId, int? storeId);
 
         /// <summary>
-        /// Cancel a stuart job
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">Stuart job identifier</param>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> StuartCancelJobAsyncWithHttpInfo (int? jobId, int? storeId);
         /// <summary>
-        /// Get start job details
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">Stuart job identifier</param>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiResultJobResponse</returns>
         System.Threading.Tasks.Task<RestApiResultJobResponse> StuartGetJobAsync (int? jobId, int? storeId);
 
         /// <summary>
-        /// Get start job details
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">Stuart job identifier</param>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultJobResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultJobResponse>> StuartGetJobAsyncWithHttpInfo (int? jobId, int? storeId);
         /// <summary>
-        /// Get stuart settings for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiResultStuartSettings</returns>
         System.Threading.Tasks.Task<RestApiResultStuartSettings> StuartGetStuartSettingsAsync (int? storeId);
 
         /// <summary>
-        /// Get stuart settings for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultStuartSettings)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStuartSettings>> StuartGetStuartSettingsAsyncWithHttpInfo (int? storeId);
         /// <summary>
-        /// Set stuart settings for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Identifier</param>
-        /// <param name="stuartSettings">Stuart settings model</param>
+        /// <param name="storeId"></param>
+        /// <param name="stuartSettings"></param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> StuartPostStuartSettingsAsync (int? storeId, StuartSettings stuartSettings);
 
         /// <summary>
-        /// Set stuart settings for a store
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Identifier</param>
-        /// <param name="stuartSettings">Stuart settings model</param>
+        /// <param name="storeId"></param>
+        /// <param name="stuartSettings"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> StuartPostStuartSettingsAsyncWithHttpInfo (int? storeId, StuartSettings stuartSettings);
         #endregion Asynchronous Operations
@@ -307,11 +307,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Cancel a stuart job 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">Stuart job identifier</param>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Object</returns>
         public Object StuartCancelJob (int? jobId, int? storeId)
         {
@@ -320,11 +320,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Cancel a stuart job 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">Stuart job identifier</param>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > StuartCancelJobWithHttpInfo (int? jobId, int? storeId)
         {
@@ -388,11 +388,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Cancel a stuart job 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">Stuart job identifier</param>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> StuartCancelJobAsync (int? jobId, int? storeId)
         {
@@ -402,11 +402,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Cancel a stuart job 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">Stuart job identifier</param>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> StuartCancelJobAsyncWithHttpInfo (int? jobId, int? storeId)
         {
@@ -470,11 +470,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get start job details 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">Stuart job identifier</param>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiResultJobResponse</returns>
         public RestApiResultJobResponse StuartGetJob (int? jobId, int? storeId)
         {
@@ -483,11 +483,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get start job details 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">Stuart job identifier</param>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultJobResponse</returns>
         public ApiResponse< RestApiResultJobResponse > StuartGetJobWithHttpInfo (int? jobId, int? storeId)
         {
@@ -551,11 +551,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get start job details 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">Stuart job identifier</param>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiResultJobResponse</returns>
         public async System.Threading.Tasks.Task<RestApiResultJobResponse> StuartGetJobAsync (int? jobId, int? storeId)
         {
@@ -565,11 +565,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get start job details 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">Stuart job identifier</param>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="jobId"></param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultJobResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultJobResponse>> StuartGetJobAsyncWithHttpInfo (int? jobId, int? storeId)
         {
@@ -633,10 +633,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get stuart settings for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>RestApiResultStuartSettings</returns>
         public RestApiResultStuartSettings StuartGetStuartSettings (int? storeId)
         {
@@ -645,10 +645,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get stuart settings for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultStuartSettings</returns>
         public ApiResponse< RestApiResultStuartSettings > StuartGetStuartSettingsWithHttpInfo (int? storeId)
         {
@@ -708,10 +708,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get stuart settings for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of RestApiResultStuartSettings</returns>
         public async System.Threading.Tasks.Task<RestApiResultStuartSettings> StuartGetStuartSettingsAsync (int? storeId)
         {
@@ -721,10 +721,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get stuart settings for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Identifier</param>
+        /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultStuartSettings)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStuartSettings>> StuartGetStuartSettingsAsyncWithHttpInfo (int? storeId)
         {
@@ -784,11 +784,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set stuart settings for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Identifier</param>
-        /// <param name="stuartSettings">Stuart settings model</param>
+        /// <param name="storeId"></param>
+        /// <param name="stuartSettings"></param>
         /// <returns>Object</returns>
         public Object StuartPostStuartSettings (int? storeId, StuartSettings stuartSettings)
         {
@@ -797,11 +797,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set stuart settings for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Identifier</param>
-        /// <param name="stuartSettings">Stuart settings model</param>
+        /// <param name="storeId"></param>
+        /// <param name="stuartSettings"></param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > StuartPostStuartSettingsWithHttpInfo (int? storeId, StuartSettings stuartSettings)
         {
@@ -877,11 +877,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set stuart settings for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Identifier</param>
-        /// <param name="stuartSettings">Stuart settings model</param>
+        /// <param name="storeId"></param>
+        /// <param name="stuartSettings"></param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> StuartPostStuartSettingsAsync (int? storeId, StuartSettings stuartSettings)
         {
@@ -891,11 +891,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set stuart settings for a store 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId">Store Identifier</param>
-        /// <param name="stuartSettings">Stuart settings model</param>
+        /// <param name="storeId"></param>
+        /// <param name="stuartSettings"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> StuartPostStuartSettingsAsyncWithHttpInfo (int? storeId, StuartSettings stuartSettings)
         {

@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**InitializeBankAccountConnectedAccount**](StripeCustomConnectAdminApi.md#initializebankaccountconnectedaccount) | **POST** /api/v1.0/customconnect/initialize-bank-account | Create a new Bank Account and Stripe connected account
+[**InitializeBankAccountConnectedAccount**](StripeCustomConnectAdminApi.md#initializebankaccountconnectedaccount) | **POST** /api/v1.0/customconnect/initialize-bank-account | 
 
 
 <a name="initializebankaccountconnectedaccount"></a>
 # **InitializeBankAccountConnectedAccount**
 > RestApiResultBankAccountDetail InitializeBankAccountConnectedAccount (List<int?> accounts)
 
-Create a new Bank Account and Stripe connected account
+
 
 ### Example
 ```csharp
@@ -31,11 +31,10 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new StripeCustomConnectAdminApi();
-            var accounts = ;  // List<int?> | Accounts to be initialized in stripe
+            var accounts = ;  // List<int?> | 
 
             try
             {
-                // Create a new Bank Account and Stripe connected account
                 RestApiResultBankAccountDetail result = apiInstance.InitializeBankAccountConnectedAccount(accounts);
                 Debug.WriteLine(result);
             }
@@ -52,7 +51,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accounts** | **List&lt;int?&gt;**| Accounts to be initialized in stripe | 
+ **accounts** | **List&lt;int?&gt;**|  | 
 
 ### Return type
 

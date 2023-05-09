@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetSSOEndpoint**](LookerSingleSignOnApi.md#getssoendpoint) | **GET** /api/v1.0/{appId}/looker/sso | Get the generic single sign on embed URL for Looker dashboards
+[**GetSSOEndpoint**](LookerSingleSignOnApi.md#getssoendpoint) | **GET** /api/v1.0/{appId}/looker/sso | 
 
 
 <a name="getssoendpoint"></a>
 # **GetSSOEndpoint**
 > DashboardEmbed GetSSOEndpoint (string appId, string embedPath, string filters = null)
 
-Get the generic single sign on embed URL for Looker dashboards
+
 
 ### Example
 ```csharp
@@ -31,13 +31,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LookerSingleSignOnApi();
-            var appId = appId_example;  // string | AppNameId
-            var embedPath = embedPath_example;  // string | Embed URL of the dashboard
-            var filters = filters_example;  // string | Filters that will be passed to the dashboard (optional) 
+            var appId = appId_example;  // string | 
+            var embedPath = embedPath_example;  // string | 
+            var filters = filters_example;  // string |  (optional) 
 
             try
             {
-                // Get the generic single sign on embed URL for Looker dashboards
                 DashboardEmbed result = apiInstance.GetSSOEndpoint(appId, embedPath, filters);
                 Debug.WriteLine(result);
             }
@@ -54,9 +53,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**| AppNameId | 
- **embedPath** | **string**| Embed URL of the dashboard | 
- **filters** | **string**| Filters that will be passed to the dashboard | [optional] 
+ **appId** | **string**|  | 
+ **embedPath** | **string**|  | 
+ **filters** | **string**|  | [optional] 
 
 ### Return type
 

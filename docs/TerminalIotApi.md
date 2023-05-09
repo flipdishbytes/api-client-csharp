@@ -4,16 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetTerminalIotConnection**](TerminalIotApi.md#getterminaliotconnection) | **POST** /api/v1.0/terminaliot/connect | Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
+[**GetTerminalIotConnection**](TerminalIotApi.md#getterminaliotconnection) | **POST** /api/v1.0/terminaliot/connect | 
 
 
 <a name="getterminaliotconnection"></a>
 # **GetTerminalIotConnection**
 > RestApiResultKioskIotConnectionParameters GetTerminalIotConnection ()
 
-Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -36,7 +34,6 @@ namespace Example
 
             try
             {
-                // Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
                 RestApiResultKioskIotConnectionParameters result = apiInstance.GetTerminalIotConnection();
                 Debug.WriteLine(result);
             }

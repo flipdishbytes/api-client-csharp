@@ -25,7 +25,7 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -36,7 +36,7 @@ namespace Flipdish.Api
         Object AppStoreConfigurationsAppStoreHandleOauthResponseCode (string appStoreAppId);
 
         /// <summary>
-        /// Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -46,181 +46,181 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> AppStoreConfigurationsAppStoreHandleOauthResponseCodeWithHttpInfo (string appStoreAppId);
         /// <summary>
-        /// Create App store app configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] This adds an Application to a Whitelabel that can later be configured to specific stores
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>RestApiResultAppStoreAppConfiguration</returns>
         RestApiResultAppStoreAppConfiguration CreateAppStoreConfig (string appId, string appStoreAppId);
 
         /// <summary>
-        /// Create App store app configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] This adds an Application to a Whitelabel that can later be configured to specific stores
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>ApiResponse of RestApiResultAppStoreAppConfiguration</returns>
         ApiResponse<RestApiResultAppStoreAppConfiguration> CreateAppStoreConfigWithHttpInfo (string appId, string appStoreAppId);
         /// <summary>
-        /// Delete App store app configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
         /// <returns>RestApiStringResult</returns>
         RestApiStringResult DeleteAppStoreConfig (string appId, string appStoreAppId, string configId);
 
         /// <summary>
-        /// Delete App store app configuration
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
-        /// <returns>ApiResponse of RestApiStringResult</returns>
-        ApiResponse<RestApiStringResult> DeleteAppStoreConfigWithHttpInfo (string appId, string appStoreAppId, string configId);
-        /// <summary>
-        /// Execute configuration action on a configuration item (eg. handle button press)
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="appStoreAppId">AppStore App Id</param>
-        /// <param name="configId">AppStore App configuration Id</param>
-        /// <param name="executeConfigurationActionRequest">Action request details</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        ApiResponse<RestApiStringResult> DeleteAppStoreConfigWithHttpInfo (string appId, string appStoreAppId, string configId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
+        /// <param name="executeConfigurationActionRequest"></param>
         /// <returns>ExecuteConfigurationActionResult</returns>
         ExecuteConfigurationActionResult ExecuteConfigurationAction (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest);
 
         /// <summary>
-        /// Execute configuration action on a configuration item (eg. handle button press)
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="appStoreAppId">AppStore App Id</param>
-        /// <param name="configId">AppStore App configuration Id</param>
-        /// <param name="executeConfigurationActionRequest">Action request details</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
+        /// <param name="executeConfigurationActionRequest"></param>
         /// <returns>ApiResponse of ExecuteConfigurationActionResult</returns>
         ApiResponse<ExecuteConfigurationActionResult> ExecuteConfigurationActionWithHttpInfo (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest);
         /// <summary>
-        /// Get App store app configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
         /// <returns>AppStoreAppConfiguration</returns>
         AppStoreAppConfiguration GetAppStoreConfig (string appId, string appStoreAppId, string configId);
 
         /// <summary>
-        /// Get App store app configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
         /// <returns>ApiResponse of AppStoreAppConfiguration</returns>
         ApiResponse<AppStoreAppConfiguration> GetAppStoreConfigWithHttpInfo (string appId, string appStoreAppId, string configId);
         /// <summary>
-        /// Get list of App store app configurations for one App store app
+        /// 
         /// </summary>
         /// <remarks>
-        /// [ALPHA - this endpoint is not ready to be consumed]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>RestApiArrayResultAppStoreAppConfigurationSummary</returns>
         RestApiArrayResultAppStoreAppConfigurationSummary GetConfiguredAppSingleApp (string appId, string appStoreAppId);
 
         /// <summary>
-        /// Get list of App store app configurations for one App store app
+        /// 
         /// </summary>
         /// <remarks>
-        /// [ALPHA - this endpoint is not ready to be consumed]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>ApiResponse of RestApiArrayResultAppStoreAppConfigurationSummary</returns>
         ApiResponse<RestApiArrayResultAppStoreAppConfigurationSummary> GetConfiguredAppSingleAppWithHttpInfo (string appId, string appStoreAppId);
         /// <summary>
-        /// Get list of App store apps which have been configured
+        /// 
         /// </summary>
         /// <remarks>
-        /// [ALPHA - this endpoint is not ready to be consumed]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiArrayResultAppStoreAppConfigurationHeader</returns>
         RestApiArrayResultAppStoreAppConfigurationHeader GetConfiguredApps (string appId);
 
         /// <summary>
-        /// Get list of App store apps which have been configured
+        /// 
         /// </summary>
         /// <remarks>
-        /// [ALPHA - this endpoint is not ready to be consumed]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiArrayResultAppStoreAppConfigurationHeader</returns>
         ApiResponse<RestApiArrayResultAppStoreAppConfigurationHeader> GetConfiguredAppsWithHttpInfo (string appId);
         /// <summary>
-        /// Update App store app configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
-        /// <param name="updateAppStoreAppConfiguration">Update App store app configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
+        /// <param name="updateAppStoreAppConfiguration"></param>
         /// <returns></returns>
         void UpdateAppStoreConfig (string appId, string appStoreAppId, string configId, UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration);
 
         /// <summary>
-        /// Update App store app configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
-        /// <param name="updateAppStoreAppConfiguration">Update App store app configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
+        /// <param name="updateAppStoreAppConfiguration"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateAppStoreConfigWithHttpInfo (string appId, string appStoreAppId, string configId, UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration);
         /// <summary>
-        /// Update AppStore App Configuration values, specified settings only
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -231,10 +231,10 @@ namespace Flipdish.Api
         void UpdateAppStoreConfigSettingValues (string appId, string appStoreAppId, string configId, UpdateAppStoreAppConfigurationValuesBatch updateAppStoreAppConfigurationValues);
 
         /// <summary>
-        /// Update AppStore App Configuration values, specified settings only
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -246,7 +246,7 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -257,7 +257,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<Object> AppStoreConfigurationsAppStoreHandleOauthResponseCodeAsync (string appStoreAppId);
 
         /// <summary>
-        /// Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -267,181 +267,181 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AppStoreConfigurationsAppStoreHandleOauthResponseCodeAsyncWithHttpInfo (string appStoreAppId);
         /// <summary>
-        /// Create App store app configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] This adds an Application to a Whitelabel that can later be configured to specific stores
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>Task of RestApiResultAppStoreAppConfiguration</returns>
         System.Threading.Tasks.Task<RestApiResultAppStoreAppConfiguration> CreateAppStoreConfigAsync (string appId, string appStoreAppId);
 
         /// <summary>
-        /// Create App store app configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system] This adds an Application to a Whitelabel that can later be configured to specific stores
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>Task of ApiResponse (RestApiResultAppStoreAppConfiguration)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreAppConfiguration>> CreateAppStoreConfigAsyncWithHttpInfo (string appId, string appStoreAppId);
         /// <summary>
-        /// Delete App store app configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
         /// <returns>Task of RestApiStringResult</returns>
         System.Threading.Tasks.Task<RestApiStringResult> DeleteAppStoreConfigAsync (string appId, string appStoreAppId, string configId);
 
         /// <summary>
-        /// Delete App store app configuration
-        /// </summary>
-        /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
-        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> DeleteAppStoreConfigAsyncWithHttpInfo (string appId, string appStoreAppId, string configId);
-        /// <summary>
-        /// Execute configuration action on a configuration item (eg. handle button press)
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="appStoreAppId">AppStore App Id</param>
-        /// <param name="configId">AppStore App configuration Id</param>
-        /// <param name="executeConfigurationActionRequest">Action request details</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> DeleteAppStoreConfigAsyncWithHttpInfo (string appId, string appStoreAppId, string configId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
+        /// <param name="executeConfigurationActionRequest"></param>
         /// <returns>Task of ExecuteConfigurationActionResult</returns>
         System.Threading.Tasks.Task<ExecuteConfigurationActionResult> ExecuteConfigurationActionAsync (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest);
 
         /// <summary>
-        /// Execute configuration action on a configuration item (eg. handle button press)
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="appStoreAppId">AppStore App Id</param>
-        /// <param name="configId">AppStore App configuration Id</param>
-        /// <param name="executeConfigurationActionRequest">Action request details</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
+        /// <param name="executeConfigurationActionRequest"></param>
         /// <returns>Task of ApiResponse (ExecuteConfigurationActionResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExecuteConfigurationActionResult>> ExecuteConfigurationActionAsyncWithHttpInfo (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest);
         /// <summary>
-        /// Get App store app configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
         /// <returns>Task of AppStoreAppConfiguration</returns>
         System.Threading.Tasks.Task<AppStoreAppConfiguration> GetAppStoreConfigAsync (string appId, string appStoreAppId, string configId);
 
         /// <summary>
-        /// Get App store app configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
         /// <returns>Task of ApiResponse (AppStoreAppConfiguration)</returns>
         System.Threading.Tasks.Task<ApiResponse<AppStoreAppConfiguration>> GetAppStoreConfigAsyncWithHttpInfo (string appId, string appStoreAppId, string configId);
         /// <summary>
-        /// Get list of App store app configurations for one App store app
+        /// 
         /// </summary>
         /// <remarks>
-        /// [ALPHA - this endpoint is not ready to be consumed]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>Task of RestApiArrayResultAppStoreAppConfigurationSummary</returns>
         System.Threading.Tasks.Task<RestApiArrayResultAppStoreAppConfigurationSummary> GetConfiguredAppSingleAppAsync (string appId, string appStoreAppId);
 
         /// <summary>
-        /// Get list of App store app configurations for one App store app
+        /// 
         /// </summary>
         /// <remarks>
-        /// [ALPHA - this endpoint is not ready to be consumed]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultAppStoreAppConfigurationSummary)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultAppStoreAppConfigurationSummary>> GetConfiguredAppSingleAppAsyncWithHttpInfo (string appId, string appStoreAppId);
         /// <summary>
-        /// Get list of App store apps which have been configured
+        /// 
         /// </summary>
         /// <remarks>
-        /// [ALPHA - this endpoint is not ready to be consumed]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiArrayResultAppStoreAppConfigurationHeader</returns>
         System.Threading.Tasks.Task<RestApiArrayResultAppStoreAppConfigurationHeader> GetConfiguredAppsAsync (string appId);
 
         /// <summary>
-        /// Get list of App store apps which have been configured
+        /// 
         /// </summary>
         /// <remarks>
-        /// [ALPHA - this endpoint is not ready to be consumed]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultAppStoreAppConfigurationHeader)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultAppStoreAppConfigurationHeader>> GetConfiguredAppsAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// Update App store app configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
-        /// <param name="updateAppStoreAppConfiguration">Update App store app configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
+        /// <param name="updateAppStoreAppConfiguration"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UpdateAppStoreConfigAsync (string appId, string appStoreAppId, string configId, UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration);
 
         /// <summary>
-        /// Update App store app configuration
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
-        /// <param name="updateAppStoreAppConfiguration">Update App store app configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
+        /// <param name="updateAppStoreAppConfiguration"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAppStoreConfigAsyncWithHttpInfo (string appId, string appStoreAppId, string configId, UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration);
         /// <summary>
-        /// Update AppStore App Configuration values, specified settings only
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -452,10 +452,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task UpdateAppStoreConfigSettingValuesAsync (string appId, string appStoreAppId, string configId, UpdateAppStoreAppConfigurationValuesBatch updateAppStoreAppConfigurationValues);
 
         /// <summary>
-        /// Update AppStore App Configuration values, specified settings only
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -565,7 +565,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId"></param>
@@ -577,7 +577,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId"></param>
@@ -640,7 +640,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId"></param>
@@ -653,7 +653,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId"></param>
@@ -716,11 +716,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create App store app configuration [BETA - this endpoint is under development, do not use it in your production system] This adds an Application to a Whitelabel that can later be configured to specific stores
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>RestApiResultAppStoreAppConfiguration</returns>
         public RestApiResultAppStoreAppConfiguration CreateAppStoreConfig (string appId, string appStoreAppId)
         {
@@ -729,11 +729,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create App store app configuration [BETA - this endpoint is under development, do not use it in your production system] This adds an Application to a Whitelabel that can later be configured to specific stores
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>ApiResponse of RestApiResultAppStoreAppConfiguration</returns>
         public ApiResponse< RestApiResultAppStoreAppConfiguration > CreateAppStoreConfigWithHttpInfo (string appId, string appStoreAppId)
         {
@@ -797,11 +797,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create App store app configuration [BETA - this endpoint is under development, do not use it in your production system] This adds an Application to a Whitelabel that can later be configured to specific stores
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>Task of RestApiResultAppStoreAppConfiguration</returns>
         public async System.Threading.Tasks.Task<RestApiResultAppStoreAppConfiguration> CreateAppStoreConfigAsync (string appId, string appStoreAppId)
         {
@@ -811,11 +811,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create App store app configuration [BETA - this endpoint is under development, do not use it in your production system] This adds an Application to a Whitelabel that can later be configured to specific stores
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>Task of ApiResponse (RestApiResultAppStoreAppConfiguration)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreAppConfiguration>> CreateAppStoreConfigAsyncWithHttpInfo (string appId, string appStoreAppId)
         {
@@ -879,12 +879,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete App store app configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
         /// <returns>RestApiStringResult</returns>
         public RestApiStringResult DeleteAppStoreConfig (string appId, string appStoreAppId, string configId)
         {
@@ -893,12 +893,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete App store app configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
         public ApiResponse< RestApiStringResult > DeleteAppStoreConfigWithHttpInfo (string appId, string appStoreAppId, string configId)
         {
@@ -966,12 +966,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete App store app configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
         /// <returns>Task of RestApiStringResult</returns>
         public async System.Threading.Tasks.Task<RestApiStringResult> DeleteAppStoreConfigAsync (string appId, string appStoreAppId, string configId)
         {
@@ -981,12 +981,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete App store app configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> DeleteAppStoreConfigAsyncWithHttpInfo (string appId, string appStoreAppId, string configId)
         {
@@ -1054,13 +1054,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Execute configuration action on a configuration item (eg. handle button press) 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="appStoreAppId">AppStore App Id</param>
-        /// <param name="configId">AppStore App configuration Id</param>
-        /// <param name="executeConfigurationActionRequest">Action request details</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
+        /// <param name="executeConfigurationActionRequest"></param>
         /// <returns>ExecuteConfigurationActionResult</returns>
         public ExecuteConfigurationActionResult ExecuteConfigurationAction (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest)
         {
@@ -1069,13 +1069,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Execute configuration action on a configuration item (eg. handle button press) 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="appStoreAppId">AppStore App Id</param>
-        /// <param name="configId">AppStore App configuration Id</param>
-        /// <param name="executeConfigurationActionRequest">Action request details</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
+        /// <param name="executeConfigurationActionRequest"></param>
         /// <returns>ApiResponse of ExecuteConfigurationActionResult</returns>
         public ApiResponse< ExecuteConfigurationActionResult > ExecuteConfigurationActionWithHttpInfo (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest)
         {
@@ -1159,13 +1159,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Execute configuration action on a configuration item (eg. handle button press) 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="appStoreAppId">AppStore App Id</param>
-        /// <param name="configId">AppStore App configuration Id</param>
-        /// <param name="executeConfigurationActionRequest">Action request details</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
+        /// <param name="executeConfigurationActionRequest"></param>
         /// <returns>Task of ExecuteConfigurationActionResult</returns>
         public async System.Threading.Tasks.Task<ExecuteConfigurationActionResult> ExecuteConfigurationActionAsync (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest)
         {
@@ -1175,13 +1175,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Execute configuration action on a configuration item (eg. handle button press) 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App Id</param>
-        /// <param name="appStoreAppId">AppStore App Id</param>
-        /// <param name="configId">AppStore App configuration Id</param>
-        /// <param name="executeConfigurationActionRequest">Action request details</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
+        /// <param name="executeConfigurationActionRequest"></param>
         /// <returns>Task of ApiResponse (ExecuteConfigurationActionResult)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ExecuteConfigurationActionResult>> ExecuteConfigurationActionAsyncWithHttpInfo (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest)
         {
@@ -1265,12 +1265,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get App store app configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
         /// <returns>AppStoreAppConfiguration</returns>
         public AppStoreAppConfiguration GetAppStoreConfig (string appId, string appStoreAppId, string configId)
         {
@@ -1279,12 +1279,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get App store app configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
         /// <returns>ApiResponse of AppStoreAppConfiguration</returns>
         public ApiResponse< AppStoreAppConfiguration > GetAppStoreConfigWithHttpInfo (string appId, string appStoreAppId, string configId)
         {
@@ -1352,12 +1352,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get App store app configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
         /// <returns>Task of AppStoreAppConfiguration</returns>
         public async System.Threading.Tasks.Task<AppStoreAppConfiguration> GetAppStoreConfigAsync (string appId, string appStoreAppId, string configId)
         {
@@ -1367,12 +1367,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get App store app configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
         /// <returns>Task of ApiResponse (AppStoreAppConfiguration)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AppStoreAppConfiguration>> GetAppStoreConfigAsyncWithHttpInfo (string appId, string appStoreAppId, string configId)
         {
@@ -1440,11 +1440,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of App store app configurations for one App store app [ALPHA - this endpoint is not ready to be consumed]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>RestApiArrayResultAppStoreAppConfigurationSummary</returns>
         public RestApiArrayResultAppStoreAppConfigurationSummary GetConfiguredAppSingleApp (string appId, string appStoreAppId)
         {
@@ -1453,11 +1453,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of App store app configurations for one App store app [ALPHA - this endpoint is not ready to be consumed]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>ApiResponse of RestApiArrayResultAppStoreAppConfigurationSummary</returns>
         public ApiResponse< RestApiArrayResultAppStoreAppConfigurationSummary > GetConfiguredAppSingleAppWithHttpInfo (string appId, string appStoreAppId)
         {
@@ -1521,11 +1521,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of App store app configurations for one App store app [ALPHA - this endpoint is not ready to be consumed]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>Task of RestApiArrayResultAppStoreAppConfigurationSummary</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultAppStoreAppConfigurationSummary> GetConfiguredAppSingleAppAsync (string appId, string appStoreAppId)
         {
@@ -1535,11 +1535,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of App store app configurations for one App store app [ALPHA - this endpoint is not ready to be consumed]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultAppStoreAppConfigurationSummary)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultAppStoreAppConfigurationSummary>> GetConfiguredAppSingleAppAsyncWithHttpInfo (string appId, string appStoreAppId)
         {
@@ -1603,10 +1603,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of App store apps which have been configured [ALPHA - this endpoint is not ready to be consumed]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>RestApiArrayResultAppStoreAppConfigurationHeader</returns>
         public RestApiArrayResultAppStoreAppConfigurationHeader GetConfiguredApps (string appId)
         {
@@ -1615,10 +1615,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of App store apps which have been configured [ALPHA - this endpoint is not ready to be consumed]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiArrayResultAppStoreAppConfigurationHeader</returns>
         public ApiResponse< RestApiArrayResultAppStoreAppConfigurationHeader > GetConfiguredAppsWithHttpInfo (string appId)
         {
@@ -1678,10 +1678,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of App store apps which have been configured [ALPHA - this endpoint is not ready to be consumed]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiArrayResultAppStoreAppConfigurationHeader</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultAppStoreAppConfigurationHeader> GetConfiguredAppsAsync (string appId)
         {
@@ -1691,10 +1691,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get list of App store apps which have been configured [ALPHA - this endpoint is not ready to be consumed]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
+        /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultAppStoreAppConfigurationHeader)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultAppStoreAppConfigurationHeader>> GetConfiguredAppsAsyncWithHttpInfo (string appId)
         {
@@ -1754,13 +1754,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update App store app configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
-        /// <param name="updateAppStoreAppConfiguration">Update App store app configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
+        /// <param name="updateAppStoreAppConfiguration"></param>
         /// <returns></returns>
         public void UpdateAppStoreConfig (string appId, string appStoreAppId, string configId, UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration)
         {
@@ -1768,13 +1768,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update App store app configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
-        /// <param name="updateAppStoreAppConfiguration">Update App store app configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
+        /// <param name="updateAppStoreAppConfiguration"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> UpdateAppStoreConfigWithHttpInfo (string appId, string appStoreAppId, string configId, UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration)
         {
@@ -1858,13 +1858,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update App store app configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
-        /// <param name="updateAppStoreAppConfiguration">Update App store app configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
+        /// <param name="updateAppStoreAppConfiguration"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UpdateAppStoreConfigAsync (string appId, string appStoreAppId, string configId, UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration)
         {
@@ -1873,13 +1873,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update App store app configuration [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId">App id</param>
-        /// <param name="appStoreAppId">App store app id</param>
-        /// <param name="configId">App store app configuration id</param>
-        /// <param name="updateAppStoreAppConfiguration">Update App store app configuration</param>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="configId"></param>
+        /// <param name="updateAppStoreAppConfiguration"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAppStoreConfigAsyncWithHttpInfo (string appId, string appStoreAppId, string configId, UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration)
         {
@@ -1963,7 +1963,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update AppStore App Configuration values, specified settings only [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1977,7 +1977,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update AppStore App Configuration values, specified settings only [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2067,7 +2067,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update AppStore App Configuration values, specified settings only [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -2082,7 +2082,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update AppStore App Configuration values, specified settings only [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
