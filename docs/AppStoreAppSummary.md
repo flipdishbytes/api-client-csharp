@@ -3,9 +3,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **string** | Unique App store app id | [optional] 
+**Id** | **string** | Unique App store app id | 
 **VerificationStatus** | **string** | Application verification status | 
 **Logo** | **string** | Logo | [optional] 
+**Internal** | **bool?** | Internal | 
 **Name** | **string** | Name | 
 **Description** | **string** | Description | 
 **IsEnabled** | **bool?** | Is application enabled | [optional] 

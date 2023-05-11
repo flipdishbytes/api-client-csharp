@@ -54,7 +54,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>Configuration type</value>
         [DataMember(Name="ConfigurationType", EmitDefaultValue=false)]
-        public ConfigurationTypeEnum? ConfigurationType { get; set; }
+        public ConfigurationTypeEnum ConfigurationType { get; set; }
         /// <summary>
         /// Store selector type
         /// </summary>
@@ -87,7 +87,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>Store selector type</value>
         [DataMember(Name="StoreSelectorType", EmitDefaultValue=false)]
-        public StoreSelectorTypeEnum? StoreSelectorType { get; set; }
+        public StoreSelectorTypeEnum StoreSelectorType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="AppStoreAppConfigurationSummary" /> class.
         /// </summary>
@@ -100,14 +100,15 @@ namespace Flipdish.Model
         /// <param name="appId">App Id (required).</param>
         /// <param name="isEnabled">Is enabled (required).</param>
         /// <param name="stores">List of stores (required).</param>
-        /// <param name="configurationType">Configuration type.</param>
-        /// <param name="storeSelectorType">Store selector type.</param>
+        /// <param name="configurationType">Configuration type (required).</param>
+        /// <param name="storeSelectorType">Store selector type (required).</param>
+        /// <param name="_internal">Internal (required).</param>
         /// <param name="appStoreAppId">Unique App store app id (required).</param>
         /// <param name="name">Name of Appstore app (required).</param>
         /// <param name="description">Description (required).</param>
         /// <param name="logo">Logo.</param>
         /// <param name="developerName">Developer name.</param>
-        public AppStoreAppConfigurationSummary(string id = default(string), string appId = default(string), bool? isEnabled = default(bool?), List<ConfiguredStore> stores = default(List<ConfiguredStore>), ConfigurationTypeEnum? configurationType = default(ConfigurationTypeEnum?), StoreSelectorTypeEnum? storeSelectorType = default(StoreSelectorTypeEnum?), string appStoreAppId = default(string), string name = default(string), string description = default(string), string logo = default(string), string developerName = default(string))
+        public AppStoreAppConfigurationSummary(string id = default(string), string appId = default(string), bool? isEnabled = default(bool?), List<ConfiguredStore> stores = default(List<ConfiguredStore>), ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), bool? _internal = default(bool?), string appStoreAppId = default(string), string name = default(string), string description = default(string), string logo = default(string), string developerName = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -145,6 +146,33 @@ namespace Flipdish.Model
             {
                 this.Stores = stores;
             }
+            // to ensure "configurationType" is required (not null)
+            if (configurationType == null)
+            {
+                throw new InvalidDataException("configurationType is a required property for AppStoreAppConfigurationSummary and cannot be null");
+            }
+            else
+            {
+                this.ConfigurationType = configurationType;
+            }
+            // to ensure "storeSelectorType" is required (not null)
+            if (storeSelectorType == null)
+            {
+                throw new InvalidDataException("storeSelectorType is a required property for AppStoreAppConfigurationSummary and cannot be null");
+            }
+            else
+            {
+                this.StoreSelectorType = storeSelectorType;
+            }
+            // to ensure "_internal" is required (not null)
+            if (_internal == null)
+            {
+                throw new InvalidDataException("_internal is a required property for AppStoreAppConfigurationSummary and cannot be null");
+            }
+            else
+            {
+                this.Internal = _internal;
+            }
             // to ensure "appStoreAppId" is required (not null)
             if (appStoreAppId == null)
             {
@@ -172,8 +200,6 @@ namespace Flipdish.Model
             {
                 this.Description = description;
             }
-            this.ConfigurationType = configurationType;
-            this.StoreSelectorType = storeSelectorType;
             this.Logo = logo;
             this.DeveloperName = developerName;
         }
@@ -207,6 +233,13 @@ namespace Flipdish.Model
         public List<ConfiguredStore> Stores { get; set; }
 
 
+
+        /// <summary>
+        /// Internal
+        /// </summary>
+        /// <value>Internal</value>
+        [DataMember(Name="Internal", EmitDefaultValue=false)]
+        public bool? Internal { get; set; }
 
         /// <summary>
         /// Unique App store app id
@@ -257,6 +290,7 @@ namespace Flipdish.Model
             sb.Append("  Stores: ").Append(Stores).Append("\n");
             sb.Append("  ConfigurationType: ").Append(ConfigurationType).Append("\n");
             sb.Append("  StoreSelectorType: ").Append(StoreSelectorType).Append("\n");
+            sb.Append("  Internal: ").Append(Internal).Append("\n");
             sb.Append("  AppStoreAppId: ").Append(AppStoreAppId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -327,6 +361,11 @@ namespace Flipdish.Model
                     this.StoreSelectorType.Equals(input.StoreSelectorType))
                 ) && 
                 (
+                    this.Internal == input.Internal ||
+                    (this.Internal != null &&
+                    this.Internal.Equals(input.Internal))
+                ) && 
+                (
                     this.AppStoreAppId == input.AppStoreAppId ||
                     (this.AppStoreAppId != null &&
                     this.AppStoreAppId.Equals(input.AppStoreAppId))
@@ -374,6 +413,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ConfigurationType.GetHashCode();
                 if (this.StoreSelectorType != null)
                     hashCode = hashCode * 59 + this.StoreSelectorType.GetHashCode();
+                if (this.Internal != null)
+                    hashCode = hashCode * 59 + this.Internal.GetHashCode();
                 if (this.AppStoreAppId != null)
                     hashCode = hashCode * 59 + this.AppStoreAppId.GetHashCode();
                 if (this.Name != null)

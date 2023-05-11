@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **string** | Unique App store app id | 
+**Internal** | **bool?** | Internal | 
 **VerificationStatus** | **string** | Application verification status | 
 **Logo** | **string** | Logo | [optional] 
 **OAuthAppId** | **string** | OAuth App identifier | 

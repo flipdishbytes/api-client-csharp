@@ -243,17 +243,27 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AppStoreAppSummary" /> class.
         /// </summary>
-        /// <param name="id">Unique App store app id.</param>
+        /// <param name="id">Unique App store app id (required).</param>
         /// <param name="verificationStatus">Application verification status (required).</param>
         /// <param name="logo">Logo.</param>
+        /// <param name="_internal">Internal (required).</param>
         /// <param name="name">Name (required).</param>
         /// <param name="description">Description (required).</param>
         /// <param name="isEnabled">Is application enabled.</param>
         /// <param name="categories">Categories (required).</param>
         /// <param name="countries">Countries (required).</param>
         /// <param name="developerName">Developer Name.</param>
-        public AppStoreAppSummary(string id = default(string), VerificationStatusEnum verificationStatus = default(VerificationStatusEnum), string logo = default(string), string name = default(string), string description = default(string), bool? isEnabled = default(bool?), List<CategoriesEnum> categories = default(List<CategoriesEnum>), List<CountriesEnum> countries = default(List<CountriesEnum>), string developerName = default(string))
+        public AppStoreAppSummary(string id = default(string), VerificationStatusEnum verificationStatus = default(VerificationStatusEnum), string logo = default(string), bool? _internal = default(bool?), string name = default(string), string description = default(string), bool? isEnabled = default(bool?), List<CategoriesEnum> categories = default(List<CategoriesEnum>), List<CountriesEnum> countries = default(List<CountriesEnum>), string developerName = default(string))
         {
+            // to ensure "id" is required (not null)
+            if (id == null)
+            {
+                throw new InvalidDataException("id is a required property for AppStoreAppSummary and cannot be null");
+            }
+            else
+            {
+                this.Id = id;
+            }
             // to ensure "verificationStatus" is required (not null)
             if (verificationStatus == null)
             {
@@ -262,6 +272,15 @@ namespace Flipdish.Model
             else
             {
                 this.VerificationStatus = verificationStatus;
+            }
+            // to ensure "_internal" is required (not null)
+            if (_internal == null)
+            {
+                throw new InvalidDataException("_internal is a required property for AppStoreAppSummary and cannot be null");
+            }
+            else
+            {
+                this.Internal = _internal;
             }
             // to ensure "name" is required (not null)
             if (name == null)
@@ -299,7 +318,6 @@ namespace Flipdish.Model
             {
                 this.Countries = countries;
             }
-            this.Id = id;
             this.Logo = logo;
             this.IsEnabled = isEnabled;
             this.DeveloperName = developerName;
@@ -319,6 +337,13 @@ namespace Flipdish.Model
         /// <value>Logo</value>
         [DataMember(Name="Logo", EmitDefaultValue=false)]
         public string Logo { get; set; }
+
+        /// <summary>
+        /// Internal
+        /// </summary>
+        /// <value>Internal</value>
+        [DataMember(Name="Internal", EmitDefaultValue=false)]
+        public bool? Internal { get; set; }
 
         /// <summary>
         /// Name
@@ -361,6 +386,7 @@ namespace Flipdish.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  VerificationStatus: ").Append(VerificationStatus).Append("\n");
             sb.Append("  Logo: ").Append(Logo).Append("\n");
+            sb.Append("  Internal: ").Append(Internal).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
@@ -417,6 +443,11 @@ namespace Flipdish.Model
                     this.Logo.Equals(input.Logo))
                 ) && 
                 (
+                    this.Internal == input.Internal ||
+                    (this.Internal != null &&
+                    this.Internal.Equals(input.Internal))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -463,6 +494,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.VerificationStatus.GetHashCode();
                 if (this.Logo != null)
                     hashCode = hashCode * 59 + this.Logo.GetHashCode();
+                if (this.Internal != null)
+                    hashCode = hashCode * 59 + this.Internal.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Description != null)
