@@ -396,6 +396,7 @@ namespace Flipdish.Model
         /// <param name="verificationStatus">Application verification status (required).</param>
         /// <param name="logo">Logo.</param>
         /// <param name="oAuthAppId">OAuth App identifier (required).</param>
+        /// <param name="_internal">Internal (required).</param>
         /// <param name="details">Details (required).</param>
         /// <param name="configurationType">Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt; (required).</param>
         /// <param name="storeSelectorType">Store selector type (required).</param>
@@ -412,7 +413,7 @@ namespace Flipdish.Model
         /// <param name="categories">Categories (required).</param>
         /// <param name="countries">Countries (required).</param>
         /// <param name="developerName">Developer Name.</param>
-        public AppStoreAppConfiguration(string id = default(string), string appId = default(string), string appStoreAppId = default(string), bool? isEnabled = default(bool?), List<int?> storeIds = default(List<int?>), List<Setting> settings = default(List<Setting>), VerificationStatusEnum verificationStatus = default(VerificationStatusEnum), string logo = default(string), string oAuthAppId = default(string), string details = default(string), ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), List<FieldGroup> fieldGroups = default(List<FieldGroup>), string setupInstructions = default(string), string externalSetupLink = default(string), TeammateAppAccessLevelEnum? teammateAppAccessLevel = default(TeammateAppAccessLevelEnum?), PermissionsTypeEnum permissionsType = default(PermissionsTypeEnum), AppStoreAppSupportInfo support = default(AppStoreAppSupportInfo), string externalFunctionActionUrl = default(string), string externalFunctionSignatureKey = default(string), string name = default(string), string description = default(string), List<CategoriesEnum> categories = default(List<CategoriesEnum>), List<CountriesEnum> countries = default(List<CountriesEnum>), string developerName = default(string))
+        public AppStoreAppConfiguration(string id = default(string), string appId = default(string), string appStoreAppId = default(string), bool? isEnabled = default(bool?), List<int?> storeIds = default(List<int?>), List<Setting> settings = default(List<Setting>), VerificationStatusEnum verificationStatus = default(VerificationStatusEnum), string logo = default(string), string oAuthAppId = default(string), bool? _internal = default(bool?), string details = default(string), ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), List<FieldGroup> fieldGroups = default(List<FieldGroup>), string setupInstructions = default(string), string externalSetupLink = default(string), TeammateAppAccessLevelEnum? teammateAppAccessLevel = default(TeammateAppAccessLevelEnum?), PermissionsTypeEnum permissionsType = default(PermissionsTypeEnum), AppStoreAppSupportInfo support = default(AppStoreAppSupportInfo), string externalFunctionActionUrl = default(string), string externalFunctionSignatureKey = default(string), string name = default(string), string description = default(string), List<CategoriesEnum> categories = default(List<CategoriesEnum>), List<CountriesEnum> countries = default(List<CountriesEnum>), string developerName = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -467,6 +468,15 @@ namespace Flipdish.Model
             else
             {
                 this.OAuthAppId = oAuthAppId;
+            }
+            // to ensure "_internal" is required (not null)
+            if (_internal == null)
+            {
+                throw new InvalidDataException("_internal is a required property for AppStoreAppConfiguration and cannot be null");
+            }
+            else
+            {
+                this.Internal = _internal;
             }
             // to ensure "details" is required (not null)
             if (details == null)
@@ -611,6 +621,13 @@ namespace Flipdish.Model
         public string OAuthAppId { get; set; }
 
         /// <summary>
+        /// Internal
+        /// </summary>
+        /// <value>Internal</value>
+        [DataMember(Name="Internal", EmitDefaultValue=false)]
+        public bool? Internal { get; set; }
+
+        /// <summary>
         /// Details
         /// </summary>
         /// <value>Details</value>
@@ -703,6 +720,7 @@ namespace Flipdish.Model
             sb.Append("  VerificationStatus: ").Append(VerificationStatus).Append("\n");
             sb.Append("  Logo: ").Append(Logo).Append("\n");
             sb.Append("  OAuthAppId: ").Append(OAuthAppId).Append("\n");
+            sb.Append("  Internal: ").Append(Internal).Append("\n");
             sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("  ConfigurationType: ").Append(ConfigurationType).Append("\n");
             sb.Append("  StoreSelectorType: ").Append(StoreSelectorType).Append("\n");
@@ -797,6 +815,11 @@ namespace Flipdish.Model
                     this.OAuthAppId == input.OAuthAppId ||
                     (this.OAuthAppId != null &&
                     this.OAuthAppId.Equals(input.OAuthAppId))
+                ) && 
+                (
+                    this.Internal == input.Internal ||
+                    (this.Internal != null &&
+                    this.Internal.Equals(input.Internal))
                 ) && 
                 (
                     this.Details == input.Details ||
@@ -907,6 +930,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Logo.GetHashCode();
                 if (this.OAuthAppId != null)
                     hashCode = hashCode * 59 + this.OAuthAppId.GetHashCode();
+                if (this.Internal != null)
+                    hashCode = hashCode * 59 + this.Internal.GetHashCode();
                 if (this.Details != null)
                     hashCode = hashCode * 59 + this.Details.GetHashCode();
                 if (this.ConfigurationType != null)
