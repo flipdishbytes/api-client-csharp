@@ -32,8 +32,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateDriverToken"></param>
-        /// <returns></returns>
-        void AddDriverNotificationToken (UpdateDriverNotificationToken updateDriverToken);
+        /// <returns>Object</returns>
+        Object DriversAddDriverNotificationToken (UpdateDriverNotificationToken updateDriverToken);
 
         /// <summary>
         /// 
@@ -43,8 +43,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateDriverToken"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> AddDriverNotificationTokenWithHttpInfo (UpdateDriverNotificationToken updateDriverToken);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DriversAddDriverNotificationTokenWithHttpInfo (UpdateDriverNotificationToken updateDriverToken);
         /// <summary>
         /// 
         /// </summary>
@@ -52,8 +52,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void DeleteDriverProfileImage ();
+        /// <returns>Object</returns>
+        Object DriversDeleteDriverProfileImage ();
 
         /// <summary>
         /// 
@@ -62,8 +62,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteDriverProfileImageWithHttpInfo ();
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DriversDeleteDriverProfileImageWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -72,8 +72,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="driverLoginModel"></param>
-        /// <returns></returns>
-        void DriverLogin (DriverLoginModel driverLoginModel);
+        /// <returns>Object</returns>
+        Object DriversDriverLogin (DriverLoginModel driverLoginModel);
 
         /// <summary>
         /// 
@@ -83,8 +83,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="driverLoginModel"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DriverLoginWithHttpInfo (DriverLoginModel driverLoginModel);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DriversDriverLoginWithHttpInfo (DriverLoginModel driverLoginModel);
         /// <summary>
         /// 
         /// </summary>
@@ -93,8 +93,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="driverRequestLoginPinModel"></param>
-        /// <returns></returns>
-        void DriverRequestLoginCodeSms (DriverRequestLoginPinModel driverRequestLoginPinModel);
+        /// <returns>Object</returns>
+        Object DriversDriverRequestLoginCodeSms (DriverRequestLoginPinModel driverRequestLoginPinModel);
 
         /// <summary>
         /// 
@@ -104,8 +104,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="driverRequestLoginPinModel"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DriverRequestLoginCodeSmsWithHttpInfo (DriverRequestLoginPinModel driverRequestLoginPinModel);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DriversDriverRequestLoginCodeSmsWithHttpInfo (DriverRequestLoginPinModel driverRequestLoginPinModel);
         /// <summary>
         /// 
         /// </summary>
@@ -113,8 +113,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>RestApiResultDriver</returns>
-        RestApiResultDriver GetDriverProfile ();
+        /// <returns>Object</returns>
+        Object DriversGetDriverProfile ();
 
         /// <summary>
         /// 
@@ -123,8 +123,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of RestApiResultDriver</returns>
-        ApiResponse<RestApiResultDriver> GetDriverProfileWithHttpInfo ();
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DriversGetDriverProfileWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -132,8 +132,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>RestApiArrayResultDriverStore</returns>
-        RestApiArrayResultDriverStore GetStoresForDriver ();
+        /// <returns>Object</returns>
+        Object DriversGetStoresForDriver ();
 
         /// <summary>
         /// 
@@ -142,8 +142,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of RestApiArrayResultDriverStore</returns>
-        ApiResponse<RestApiArrayResultDriverStore> GetStoresForDriverWithHttpInfo ();
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DriversGetStoresForDriverWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -152,8 +152,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="removeDriverToken"></param>
-        /// <returns></returns>
-        void RemoveDriverNotificationToken (UpdateDriverNotificationToken removeDriverToken);
+        /// <returns>Object</returns>
+        Object DriversRemoveDriverNotificationToken (UpdateDriverNotificationToken removeDriverToken);
 
         /// <summary>
         /// 
@@ -163,8 +163,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="removeDriverToken"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RemoveDriverNotificationTokenWithHttpInfo (UpdateDriverNotificationToken removeDriverToken);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DriversRemoveDriverNotificationTokenWithHttpInfo (UpdateDriverNotificationToken removeDriverToken);
         /// <summary>
         /// 
         /// </summary>
@@ -174,8 +174,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="presence"></param>
-        /// <returns></returns>
-        void SetDriverPresenceForStore (int? storeId, string presence);
+        /// <returns>Object</returns>
+        Object DriversSetDriverPresenceForStore (int? storeId, string presence);
 
         /// <summary>
         /// 
@@ -186,8 +186,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="presence"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> SetDriverPresenceForStoreWithHttpInfo (int? storeId, string presence);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DriversSetDriverPresenceForStoreWithHttpInfo (int? storeId, string presence);
         /// <summary>
         /// 
         /// </summary>
@@ -195,8 +195,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>RestApiStringResult</returns>
-        RestApiStringResult SetDriverProfileImage ();
+        /// <returns>Object</returns>
+        Object DriversSetDriverProfileImage ();
 
         /// <summary>
         /// 
@@ -205,8 +205,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of RestApiStringResult</returns>
-        ApiResponse<RestApiStringResult> SetDriverProfileImageWithHttpInfo ();
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DriversSetDriverProfileImageWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -216,8 +216,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
         /// <param name="deliveryTrackingStatus"></param>
-        /// <returns>RestApiStringResult</returns>
-        RestApiStringResult UpdateDeliveryTrackingStatus (int? orderId, string deliveryTrackingStatus);
+        /// <returns>Object</returns>
+        Object DriversUpdateDeliveryTrackingStatus (int? orderId, string deliveryTrackingStatus);
 
         /// <summary>
         /// 
@@ -228,8 +228,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
         /// <param name="deliveryTrackingStatus"></param>
-        /// <returns>ApiResponse of RestApiStringResult</returns>
-        ApiResponse<RestApiStringResult> UpdateDeliveryTrackingStatusWithHttpInfo (int? orderId, string deliveryTrackingStatus);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DriversUpdateDeliveryTrackingStatusWithHttpInfo (int? orderId, string deliveryTrackingStatus);
         /// <summary>
         /// 
         /// </summary>
@@ -238,8 +238,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateDriverProfile"></param>
-        /// <returns></returns>
-        void UpdateDriverProfile (UpdateDriverProfileModel updateDriverProfile);
+        /// <returns>Object</returns>
+        Object DriversUpdateDriverProfile (UpdateDriverProfileModel updateDriverProfile);
 
         /// <summary>
         /// 
@@ -249,8 +249,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateDriverProfile"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateDriverProfileWithHttpInfo (UpdateDriverProfileModel updateDriverProfile);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DriversUpdateDriverProfileWithHttpInfo (UpdateDriverProfileModel updateDriverProfile);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -261,8 +261,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateDriverToken"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task AddDriverNotificationTokenAsync (UpdateDriverNotificationToken updateDriverToken);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DriversAddDriverNotificationTokenAsync (UpdateDriverNotificationToken updateDriverToken);
 
         /// <summary>
         /// 
@@ -272,8 +272,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateDriverToken"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AddDriverNotificationTokenAsyncWithHttpInfo (UpdateDriverNotificationToken updateDriverToken);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DriversAddDriverNotificationTokenAsyncWithHttpInfo (UpdateDriverNotificationToken updateDriverToken);
         /// <summary>
         /// 
         /// </summary>
@@ -281,8 +281,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteDriverProfileImageAsync ();
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DriversDeleteDriverProfileImageAsync ();
 
         /// <summary>
         /// 
@@ -291,8 +291,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDriverProfileImageAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DriversDeleteDriverProfileImageAsyncWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -301,8 +301,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="driverLoginModel"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DriverLoginAsync (DriverLoginModel driverLoginModel);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DriversDriverLoginAsync (DriverLoginModel driverLoginModel);
 
         /// <summary>
         /// 
@@ -312,8 +312,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="driverLoginModel"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DriverLoginAsyncWithHttpInfo (DriverLoginModel driverLoginModel);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DriversDriverLoginAsyncWithHttpInfo (DriverLoginModel driverLoginModel);
         /// <summary>
         /// 
         /// </summary>
@@ -322,8 +322,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="driverRequestLoginPinModel"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DriverRequestLoginCodeSmsAsync (DriverRequestLoginPinModel driverRequestLoginPinModel);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DriversDriverRequestLoginCodeSmsAsync (DriverRequestLoginPinModel driverRequestLoginPinModel);
 
         /// <summary>
         /// 
@@ -333,8 +333,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="driverRequestLoginPinModel"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DriverRequestLoginCodeSmsAsyncWithHttpInfo (DriverRequestLoginPinModel driverRequestLoginPinModel);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DriversDriverRequestLoginCodeSmsAsyncWithHttpInfo (DriverRequestLoginPinModel driverRequestLoginPinModel);
         /// <summary>
         /// 
         /// </summary>
@@ -342,8 +342,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of RestApiResultDriver</returns>
-        System.Threading.Tasks.Task<RestApiResultDriver> GetDriverProfileAsync ();
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DriversGetDriverProfileAsync ();
 
         /// <summary>
         /// 
@@ -352,8 +352,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (RestApiResultDriver)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultDriver>> GetDriverProfileAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DriversGetDriverProfileAsyncWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -361,8 +361,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of RestApiArrayResultDriverStore</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultDriverStore> GetStoresForDriverAsync ();
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DriversGetStoresForDriverAsync ();
 
         /// <summary>
         /// 
@@ -371,8 +371,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (RestApiArrayResultDriverStore)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultDriverStore>> GetStoresForDriverAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DriversGetStoresForDriverAsyncWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -381,8 +381,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="removeDriverToken"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task RemoveDriverNotificationTokenAsync (UpdateDriverNotificationToken removeDriverToken);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DriversRemoveDriverNotificationTokenAsync (UpdateDriverNotificationToken removeDriverToken);
 
         /// <summary>
         /// 
@@ -392,8 +392,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="removeDriverToken"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RemoveDriverNotificationTokenAsyncWithHttpInfo (UpdateDriverNotificationToken removeDriverToken);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DriversRemoveDriverNotificationTokenAsyncWithHttpInfo (UpdateDriverNotificationToken removeDriverToken);
         /// <summary>
         /// 
         /// </summary>
@@ -403,8 +403,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="presence"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task SetDriverPresenceForStoreAsync (int? storeId, string presence);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DriversSetDriverPresenceForStoreAsync (int? storeId, string presence);
 
         /// <summary>
         /// 
@@ -415,8 +415,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="presence"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SetDriverPresenceForStoreAsyncWithHttpInfo (int? storeId, string presence);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DriversSetDriverPresenceForStoreAsyncWithHttpInfo (int? storeId, string presence);
         /// <summary>
         /// 
         /// </summary>
@@ -424,8 +424,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of RestApiStringResult</returns>
-        System.Threading.Tasks.Task<RestApiStringResult> SetDriverProfileImageAsync ();
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DriversSetDriverProfileImageAsync ();
 
         /// <summary>
         /// 
@@ -434,8 +434,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> SetDriverProfileImageAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DriversSetDriverProfileImageAsyncWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -445,8 +445,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
         /// <param name="deliveryTrackingStatus"></param>
-        /// <returns>Task of RestApiStringResult</returns>
-        System.Threading.Tasks.Task<RestApiStringResult> UpdateDeliveryTrackingStatusAsync (int? orderId, string deliveryTrackingStatus);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DriversUpdateDeliveryTrackingStatusAsync (int? orderId, string deliveryTrackingStatus);
 
         /// <summary>
         /// 
@@ -457,8 +457,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
         /// <param name="deliveryTrackingStatus"></param>
-        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> UpdateDeliveryTrackingStatusAsyncWithHttpInfo (int? orderId, string deliveryTrackingStatus);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DriversUpdateDeliveryTrackingStatusAsyncWithHttpInfo (int? orderId, string deliveryTrackingStatus);
         /// <summary>
         /// 
         /// </summary>
@@ -467,8 +467,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateDriverProfile"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateDriverProfileAsync (UpdateDriverProfileModel updateDriverProfile);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DriversUpdateDriverProfileAsync (UpdateDriverProfileModel updateDriverProfile);
 
         /// <summary>
         /// 
@@ -478,8 +478,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateDriverProfile"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateDriverProfileAsyncWithHttpInfo (UpdateDriverProfileModel updateDriverProfile);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DriversUpdateDriverProfileAsyncWithHttpInfo (UpdateDriverProfileModel updateDriverProfile);
         #endregion Asynchronous Operations
     }
 
@@ -585,10 +585,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateDriverToken"></param>
-        /// <returns></returns>
-        public void AddDriverNotificationToken (UpdateDriverNotificationToken updateDriverToken)
+        /// <returns>Object</returns>
+        public Object DriversAddDriverNotificationToken (UpdateDriverNotificationToken updateDriverToken)
         {
-             AddDriverNotificationTokenWithHttpInfo(updateDriverToken);
+             ApiResponse<Object> localVarResponse = DriversAddDriverNotificationTokenWithHttpInfo(updateDriverToken);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -596,12 +597,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateDriverToken"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> AddDriverNotificationTokenWithHttpInfo (UpdateDriverNotificationToken updateDriverToken)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DriversAddDriverNotificationTokenWithHttpInfo (UpdateDriverNotificationToken updateDriverToken)
         {
             // verify the required parameter 'updateDriverToken' is set
             if (updateDriverToken == null)
-                throw new ApiException(400, "Missing required parameter 'updateDriverToken' when calling DriversApi->AddDriverNotificationToken");
+                throw new ApiException(400, "Missing required parameter 'updateDriverToken' when calling DriversApi->DriversAddDriverNotificationToken");
 
             var localVarPath = "./api/v1.0/drivers/token";
             var localVarPathParams = new Dictionary<String, String>();
@@ -657,13 +658,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddDriverNotificationToken", localVarResponse);
+                Exception exception = ExceptionFactory("DriversAddDriverNotificationToken", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -671,10 +672,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateDriverToken"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task AddDriverNotificationTokenAsync (UpdateDriverNotificationToken updateDriverToken)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DriversAddDriverNotificationTokenAsync (UpdateDriverNotificationToken updateDriverToken)
         {
-             await AddDriverNotificationTokenAsyncWithHttpInfo(updateDriverToken);
+             ApiResponse<Object> localVarResponse = await DriversAddDriverNotificationTokenAsyncWithHttpInfo(updateDriverToken);
+             return localVarResponse.Data;
 
         }
 
@@ -683,12 +685,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateDriverToken"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> AddDriverNotificationTokenAsyncWithHttpInfo (UpdateDriverNotificationToken updateDriverToken)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DriversAddDriverNotificationTokenAsyncWithHttpInfo (UpdateDriverNotificationToken updateDriverToken)
         {
             // verify the required parameter 'updateDriverToken' is set
             if (updateDriverToken == null)
-                throw new ApiException(400, "Missing required parameter 'updateDriverToken' when calling DriversApi->AddDriverNotificationToken");
+                throw new ApiException(400, "Missing required parameter 'updateDriverToken' when calling DriversApi->DriversAddDriverNotificationToken");
 
             var localVarPath = "./api/v1.0/drivers/token";
             var localVarPathParams = new Dictionary<String, String>();
@@ -744,31 +746,32 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddDriverNotificationToken", localVarResponse);
+                Exception exception = ExceptionFactory("DriversAddDriverNotificationToken", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void DeleteDriverProfileImage ()
+        /// <returns>Object</returns>
+        public Object DriversDeleteDriverProfileImage ()
         {
-             DeleteDriverProfileImageWithHttpInfo();
+             ApiResponse<Object> localVarResponse = DriversDeleteDriverProfileImageWithHttpInfo();
+             return localVarResponse.Data;
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteDriverProfileImageWithHttpInfo ()
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DriversDeleteDriverProfileImageWithHttpInfo ()
         {
 
             var localVarPath = "./api/v1.0/drivers/profile/image";
@@ -812,23 +815,24 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DeleteDriverProfileImage", localVarResponse);
+                Exception exception = ExceptionFactory("DriversDeleteDriverProfileImage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteDriverProfileImageAsync ()
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DriversDeleteDriverProfileImageAsync ()
         {
-             await DeleteDriverProfileImageAsyncWithHttpInfo();
+             ApiResponse<Object> localVarResponse = await DriversDeleteDriverProfileImageAsyncWithHttpInfo();
+             return localVarResponse.Data;
 
         }
 
@@ -836,8 +840,8 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDriverProfileImageAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DriversDeleteDriverProfileImageAsyncWithHttpInfo ()
         {
 
             var localVarPath = "./api/v1.0/drivers/profile/image";
@@ -881,13 +885,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DeleteDriverProfileImage", localVarResponse);
+                Exception exception = ExceptionFactory("DriversDeleteDriverProfileImage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -895,10 +899,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="driverLoginModel"></param>
-        /// <returns></returns>
-        public void DriverLogin (DriverLoginModel driverLoginModel)
+        /// <returns>Object</returns>
+        public Object DriversDriverLogin (DriverLoginModel driverLoginModel)
         {
-             DriverLoginWithHttpInfo(driverLoginModel);
+             ApiResponse<Object> localVarResponse = DriversDriverLoginWithHttpInfo(driverLoginModel);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -906,12 +911,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="driverLoginModel"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DriverLoginWithHttpInfo (DriverLoginModel driverLoginModel)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DriversDriverLoginWithHttpInfo (DriverLoginModel driverLoginModel)
         {
             // verify the required parameter 'driverLoginModel' is set
             if (driverLoginModel == null)
-                throw new ApiException(400, "Missing required parameter 'driverLoginModel' when calling DriversApi->DriverLogin");
+                throw new ApiException(400, "Missing required parameter 'driverLoginModel' when calling DriversApi->DriversDriverLogin");
 
             var localVarPath = "./api/v1.0/drivers/login";
             var localVarPathParams = new Dictionary<String, String>();
@@ -967,13 +972,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DriverLogin", localVarResponse);
+                Exception exception = ExceptionFactory("DriversDriverLogin", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -981,10 +986,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="driverLoginModel"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DriverLoginAsync (DriverLoginModel driverLoginModel)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DriversDriverLoginAsync (DriverLoginModel driverLoginModel)
         {
-             await DriverLoginAsyncWithHttpInfo(driverLoginModel);
+             ApiResponse<Object> localVarResponse = await DriversDriverLoginAsyncWithHttpInfo(driverLoginModel);
+             return localVarResponse.Data;
 
         }
 
@@ -993,12 +999,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="driverLoginModel"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DriverLoginAsyncWithHttpInfo (DriverLoginModel driverLoginModel)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DriversDriverLoginAsyncWithHttpInfo (DriverLoginModel driverLoginModel)
         {
             // verify the required parameter 'driverLoginModel' is set
             if (driverLoginModel == null)
-                throw new ApiException(400, "Missing required parameter 'driverLoginModel' when calling DriversApi->DriverLogin");
+                throw new ApiException(400, "Missing required parameter 'driverLoginModel' when calling DriversApi->DriversDriverLogin");
 
             var localVarPath = "./api/v1.0/drivers/login";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1054,13 +1060,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DriverLogin", localVarResponse);
+                Exception exception = ExceptionFactory("DriversDriverLogin", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1068,10 +1074,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="driverRequestLoginPinModel"></param>
-        /// <returns></returns>
-        public void DriverRequestLoginCodeSms (DriverRequestLoginPinModel driverRequestLoginPinModel)
+        /// <returns>Object</returns>
+        public Object DriversDriverRequestLoginCodeSms (DriverRequestLoginPinModel driverRequestLoginPinModel)
         {
-             DriverRequestLoginCodeSmsWithHttpInfo(driverRequestLoginPinModel);
+             ApiResponse<Object> localVarResponse = DriversDriverRequestLoginCodeSmsWithHttpInfo(driverRequestLoginPinModel);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -1079,12 +1086,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="driverRequestLoginPinModel"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DriverRequestLoginCodeSmsWithHttpInfo (DriverRequestLoginPinModel driverRequestLoginPinModel)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DriversDriverRequestLoginCodeSmsWithHttpInfo (DriverRequestLoginPinModel driverRequestLoginPinModel)
         {
             // verify the required parameter 'driverRequestLoginPinModel' is set
             if (driverRequestLoginPinModel == null)
-                throw new ApiException(400, "Missing required parameter 'driverRequestLoginPinModel' when calling DriversApi->DriverRequestLoginCodeSms");
+                throw new ApiException(400, "Missing required parameter 'driverRequestLoginPinModel' when calling DriversApi->DriversDriverRequestLoginCodeSms");
 
             var localVarPath = "./api/v1.0/drivers/pin";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1140,13 +1147,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DriverRequestLoginCodeSms", localVarResponse);
+                Exception exception = ExceptionFactory("DriversDriverRequestLoginCodeSms", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1154,10 +1161,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="driverRequestLoginPinModel"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DriverRequestLoginCodeSmsAsync (DriverRequestLoginPinModel driverRequestLoginPinModel)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DriversDriverRequestLoginCodeSmsAsync (DriverRequestLoginPinModel driverRequestLoginPinModel)
         {
-             await DriverRequestLoginCodeSmsAsyncWithHttpInfo(driverRequestLoginPinModel);
+             ApiResponse<Object> localVarResponse = await DriversDriverRequestLoginCodeSmsAsyncWithHttpInfo(driverRequestLoginPinModel);
+             return localVarResponse.Data;
 
         }
 
@@ -1166,12 +1174,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="driverRequestLoginPinModel"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DriverRequestLoginCodeSmsAsyncWithHttpInfo (DriverRequestLoginPinModel driverRequestLoginPinModel)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DriversDriverRequestLoginCodeSmsAsyncWithHttpInfo (DriverRequestLoginPinModel driverRequestLoginPinModel)
         {
             // verify the required parameter 'driverRequestLoginPinModel' is set
             if (driverRequestLoginPinModel == null)
-                throw new ApiException(400, "Missing required parameter 'driverRequestLoginPinModel' when calling DriversApi->DriverRequestLoginCodeSms");
+                throw new ApiException(400, "Missing required parameter 'driverRequestLoginPinModel' when calling DriversApi->DriversDriverRequestLoginCodeSms");
 
             var localVarPath = "./api/v1.0/drivers/pin";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1227,23 +1235,23 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DriverRequestLoginCodeSms", localVarResponse);
+                Exception exception = ExceptionFactory("DriversDriverRequestLoginCodeSms", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>RestApiResultDriver</returns>
-        public RestApiResultDriver GetDriverProfile ()
+        /// <returns>Object</returns>
+        public Object DriversGetDriverProfile ()
         {
-             ApiResponse<RestApiResultDriver> localVarResponse = GetDriverProfileWithHttpInfo();
+             ApiResponse<Object> localVarResponse = DriversGetDriverProfileWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -1251,8 +1259,8 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of RestApiResultDriver</returns>
-        public ApiResponse< RestApiResultDriver > GetDriverProfileWithHttpInfo ()
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DriversGetDriverProfileWithHttpInfo ()
         {
 
             var localVarPath = "./api/v1.0/drivers/profile";
@@ -1296,23 +1304,23 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetDriverProfile", localVarResponse);
+                Exception exception = ExceptionFactory("DriversGetDriverProfile", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultDriver>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiResultDriver) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultDriver)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of RestApiResultDriver</returns>
-        public async System.Threading.Tasks.Task<RestApiResultDriver> GetDriverProfileAsync ()
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DriversGetDriverProfileAsync ()
         {
-             ApiResponse<RestApiResultDriver> localVarResponse = await GetDriverProfileAsyncWithHttpInfo();
+             ApiResponse<Object> localVarResponse = await DriversGetDriverProfileAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -1321,8 +1329,8 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (RestApiResultDriver)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultDriver>> GetDriverProfileAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DriversGetDriverProfileAsyncWithHttpInfo ()
         {
 
             var localVarPath = "./api/v1.0/drivers/profile";
@@ -1366,23 +1374,23 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetDriverProfile", localVarResponse);
+                Exception exception = ExceptionFactory("DriversGetDriverProfile", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultDriver>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiResultDriver) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultDriver)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>RestApiArrayResultDriverStore</returns>
-        public RestApiArrayResultDriverStore GetStoresForDriver ()
+        /// <returns>Object</returns>
+        public Object DriversGetStoresForDriver ()
         {
-             ApiResponse<RestApiArrayResultDriverStore> localVarResponse = GetStoresForDriverWithHttpInfo();
+             ApiResponse<Object> localVarResponse = DriversGetStoresForDriverWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -1390,8 +1398,8 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of RestApiArrayResultDriverStore</returns>
-        public ApiResponse< RestApiArrayResultDriverStore > GetStoresForDriverWithHttpInfo ()
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DriversGetStoresForDriverWithHttpInfo ()
         {
 
             var localVarPath = "./api/v1.0/drivers/assignedstores";
@@ -1435,23 +1443,23 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetStoresForDriver", localVarResponse);
+                Exception exception = ExceptionFactory("DriversGetStoresForDriver", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultDriverStore>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiArrayResultDriverStore) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultDriverStore)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of RestApiArrayResultDriverStore</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultDriverStore> GetStoresForDriverAsync ()
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DriversGetStoresForDriverAsync ()
         {
-             ApiResponse<RestApiArrayResultDriverStore> localVarResponse = await GetStoresForDriverAsyncWithHttpInfo();
+             ApiResponse<Object> localVarResponse = await DriversGetStoresForDriverAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -1460,8 +1468,8 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (RestApiArrayResultDriverStore)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultDriverStore>> GetStoresForDriverAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DriversGetStoresForDriverAsyncWithHttpInfo ()
         {
 
             var localVarPath = "./api/v1.0/drivers/assignedstores";
@@ -1505,13 +1513,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetStoresForDriver", localVarResponse);
+                Exception exception = ExceptionFactory("DriversGetStoresForDriver", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultDriverStore>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiArrayResultDriverStore) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultDriverStore)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1519,10 +1527,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="removeDriverToken"></param>
-        /// <returns></returns>
-        public void RemoveDriverNotificationToken (UpdateDriverNotificationToken removeDriverToken)
+        /// <returns>Object</returns>
+        public Object DriversRemoveDriverNotificationToken (UpdateDriverNotificationToken removeDriverToken)
         {
-             RemoveDriverNotificationTokenWithHttpInfo(removeDriverToken);
+             ApiResponse<Object> localVarResponse = DriversRemoveDriverNotificationTokenWithHttpInfo(removeDriverToken);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -1530,12 +1539,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="removeDriverToken"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> RemoveDriverNotificationTokenWithHttpInfo (UpdateDriverNotificationToken removeDriverToken)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DriversRemoveDriverNotificationTokenWithHttpInfo (UpdateDriverNotificationToken removeDriverToken)
         {
             // verify the required parameter 'removeDriverToken' is set
             if (removeDriverToken == null)
-                throw new ApiException(400, "Missing required parameter 'removeDriverToken' when calling DriversApi->RemoveDriverNotificationToken");
+                throw new ApiException(400, "Missing required parameter 'removeDriverToken' when calling DriversApi->DriversRemoveDriverNotificationToken");
 
             var localVarPath = "./api/v1.0/drivers/token";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1591,13 +1600,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("RemoveDriverNotificationToken", localVarResponse);
+                Exception exception = ExceptionFactory("DriversRemoveDriverNotificationToken", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1605,10 +1614,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="removeDriverToken"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task RemoveDriverNotificationTokenAsync (UpdateDriverNotificationToken removeDriverToken)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DriversRemoveDriverNotificationTokenAsync (UpdateDriverNotificationToken removeDriverToken)
         {
-             await RemoveDriverNotificationTokenAsyncWithHttpInfo(removeDriverToken);
+             ApiResponse<Object> localVarResponse = await DriversRemoveDriverNotificationTokenAsyncWithHttpInfo(removeDriverToken);
+             return localVarResponse.Data;
 
         }
 
@@ -1617,12 +1627,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="removeDriverToken"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> RemoveDriverNotificationTokenAsyncWithHttpInfo (UpdateDriverNotificationToken removeDriverToken)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DriversRemoveDriverNotificationTokenAsyncWithHttpInfo (UpdateDriverNotificationToken removeDriverToken)
         {
             // verify the required parameter 'removeDriverToken' is set
             if (removeDriverToken == null)
-                throw new ApiException(400, "Missing required parameter 'removeDriverToken' when calling DriversApi->RemoveDriverNotificationToken");
+                throw new ApiException(400, "Missing required parameter 'removeDriverToken' when calling DriversApi->DriversRemoveDriverNotificationToken");
 
             var localVarPath = "./api/v1.0/drivers/token";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1678,13 +1688,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("RemoveDriverNotificationToken", localVarResponse);
+                Exception exception = ExceptionFactory("DriversRemoveDriverNotificationToken", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1693,10 +1703,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="presence"></param>
-        /// <returns></returns>
-        public void SetDriverPresenceForStore (int? storeId, string presence)
+        /// <returns>Object</returns>
+        public Object DriversSetDriverPresenceForStore (int? storeId, string presence)
         {
-             SetDriverPresenceForStoreWithHttpInfo(storeId, presence);
+             ApiResponse<Object> localVarResponse = DriversSetDriverPresenceForStoreWithHttpInfo(storeId, presence);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -1705,15 +1716,15 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="presence"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> SetDriverPresenceForStoreWithHttpInfo (int? storeId, string presence)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DriversSetDriverPresenceForStoreWithHttpInfo (int? storeId, string presence)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling DriversApi->SetDriverPresenceForStore");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling DriversApi->DriversSetDriverPresenceForStore");
             // verify the required parameter 'presence' is set
             if (presence == null)
-                throw new ApiException(400, "Missing required parameter 'presence' when calling DriversApi->SetDriverPresenceForStore");
+                throw new ApiException(400, "Missing required parameter 'presence' when calling DriversApi->DriversSetDriverPresenceForStore");
 
             var localVarPath = "./api/v1.0/drivers/stores/{storeId}/presence/{presence}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1758,13 +1769,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SetDriverPresenceForStore", localVarResponse);
+                Exception exception = ExceptionFactory("DriversSetDriverPresenceForStore", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1773,10 +1784,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="presence"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task SetDriverPresenceForStoreAsync (int? storeId, string presence)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DriversSetDriverPresenceForStoreAsync (int? storeId, string presence)
         {
-             await SetDriverPresenceForStoreAsyncWithHttpInfo(storeId, presence);
+             ApiResponse<Object> localVarResponse = await DriversSetDriverPresenceForStoreAsyncWithHttpInfo(storeId, presence);
+             return localVarResponse.Data;
 
         }
 
@@ -1786,15 +1798,15 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="presence"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetDriverPresenceForStoreAsyncWithHttpInfo (int? storeId, string presence)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DriversSetDriverPresenceForStoreAsyncWithHttpInfo (int? storeId, string presence)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling DriversApi->SetDriverPresenceForStore");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling DriversApi->DriversSetDriverPresenceForStore");
             // verify the required parameter 'presence' is set
             if (presence == null)
-                throw new ApiException(400, "Missing required parameter 'presence' when calling DriversApi->SetDriverPresenceForStore");
+                throw new ApiException(400, "Missing required parameter 'presence' when calling DriversApi->DriversSetDriverPresenceForStore");
 
             var localVarPath = "./api/v1.0/drivers/stores/{storeId}/presence/{presence}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1839,23 +1851,23 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SetDriverPresenceForStore", localVarResponse);
+                Exception exception = ExceptionFactory("DriversSetDriverPresenceForStore", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>RestApiStringResult</returns>
-        public RestApiStringResult SetDriverProfileImage ()
+        /// <returns>Object</returns>
+        public Object DriversSetDriverProfileImage ()
         {
-             ApiResponse<RestApiStringResult> localVarResponse = SetDriverProfileImageWithHttpInfo();
+             ApiResponse<Object> localVarResponse = DriversSetDriverProfileImageWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -1863,8 +1875,8 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of RestApiStringResult</returns>
-        public ApiResponse< RestApiStringResult > SetDriverProfileImageWithHttpInfo ()
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DriversSetDriverProfileImageWithHttpInfo ()
         {
 
             var localVarPath = "./api/v1.0/drivers/profile/image";
@@ -1908,23 +1920,23 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SetDriverProfileImage", localVarResponse);
+                Exception exception = ExceptionFactory("DriversSetDriverProfileImage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of RestApiStringResult</returns>
-        public async System.Threading.Tasks.Task<RestApiStringResult> SetDriverProfileImageAsync ()
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DriversSetDriverProfileImageAsync ()
         {
-             ApiResponse<RestApiStringResult> localVarResponse = await SetDriverProfileImageAsyncWithHttpInfo();
+             ApiResponse<Object> localVarResponse = await DriversSetDriverProfileImageAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -1933,8 +1945,8 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> SetDriverProfileImageAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DriversSetDriverProfileImageAsyncWithHttpInfo ()
         {
 
             var localVarPath = "./api/v1.0/drivers/profile/image";
@@ -1978,13 +1990,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SetDriverProfileImage", localVarResponse);
+                Exception exception = ExceptionFactory("DriversSetDriverProfileImage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1993,10 +2005,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
         /// <param name="deliveryTrackingStatus"></param>
-        /// <returns>RestApiStringResult</returns>
-        public RestApiStringResult UpdateDeliveryTrackingStatus (int? orderId, string deliveryTrackingStatus)
+        /// <returns>Object</returns>
+        public Object DriversUpdateDeliveryTrackingStatus (int? orderId, string deliveryTrackingStatus)
         {
-             ApiResponse<RestApiStringResult> localVarResponse = UpdateDeliveryTrackingStatusWithHttpInfo(orderId, deliveryTrackingStatus);
+             ApiResponse<Object> localVarResponse = DriversUpdateDeliveryTrackingStatusWithHttpInfo(orderId, deliveryTrackingStatus);
              return localVarResponse.Data;
         }
 
@@ -2006,15 +2018,15 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
         /// <param name="deliveryTrackingStatus"></param>
-        /// <returns>ApiResponse of RestApiStringResult</returns>
-        public ApiResponse< RestApiStringResult > UpdateDeliveryTrackingStatusWithHttpInfo (int? orderId, string deliveryTrackingStatus)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DriversUpdateDeliveryTrackingStatusWithHttpInfo (int? orderId, string deliveryTrackingStatus)
         {
             // verify the required parameter 'orderId' is set
             if (orderId == null)
-                throw new ApiException(400, "Missing required parameter 'orderId' when calling DriversApi->UpdateDeliveryTrackingStatus");
+                throw new ApiException(400, "Missing required parameter 'orderId' when calling DriversApi->DriversUpdateDeliveryTrackingStatus");
             // verify the required parameter 'deliveryTrackingStatus' is set
             if (deliveryTrackingStatus == null)
-                throw new ApiException(400, "Missing required parameter 'deliveryTrackingStatus' when calling DriversApi->UpdateDeliveryTrackingStatus");
+                throw new ApiException(400, "Missing required parameter 'deliveryTrackingStatus' when calling DriversApi->DriversUpdateDeliveryTrackingStatus");
 
             var localVarPath = "./api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2059,13 +2071,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UpdateDeliveryTrackingStatus", localVarResponse);
+                Exception exception = ExceptionFactory("DriversUpdateDeliveryTrackingStatus", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -2074,10 +2086,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
         /// <param name="deliveryTrackingStatus"></param>
-        /// <returns>Task of RestApiStringResult</returns>
-        public async System.Threading.Tasks.Task<RestApiStringResult> UpdateDeliveryTrackingStatusAsync (int? orderId, string deliveryTrackingStatus)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DriversUpdateDeliveryTrackingStatusAsync (int? orderId, string deliveryTrackingStatus)
         {
-             ApiResponse<RestApiStringResult> localVarResponse = await UpdateDeliveryTrackingStatusAsyncWithHttpInfo(orderId, deliveryTrackingStatus);
+             ApiResponse<Object> localVarResponse = await DriversUpdateDeliveryTrackingStatusAsyncWithHttpInfo(orderId, deliveryTrackingStatus);
              return localVarResponse.Data;
 
         }
@@ -2088,15 +2100,15 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderId"></param>
         /// <param name="deliveryTrackingStatus"></param>
-        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> UpdateDeliveryTrackingStatusAsyncWithHttpInfo (int? orderId, string deliveryTrackingStatus)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DriversUpdateDeliveryTrackingStatusAsyncWithHttpInfo (int? orderId, string deliveryTrackingStatus)
         {
             // verify the required parameter 'orderId' is set
             if (orderId == null)
-                throw new ApiException(400, "Missing required parameter 'orderId' when calling DriversApi->UpdateDeliveryTrackingStatus");
+                throw new ApiException(400, "Missing required parameter 'orderId' when calling DriversApi->DriversUpdateDeliveryTrackingStatus");
             // verify the required parameter 'deliveryTrackingStatus' is set
             if (deliveryTrackingStatus == null)
-                throw new ApiException(400, "Missing required parameter 'deliveryTrackingStatus' when calling DriversApi->UpdateDeliveryTrackingStatus");
+                throw new ApiException(400, "Missing required parameter 'deliveryTrackingStatus' when calling DriversApi->DriversUpdateDeliveryTrackingStatus");
 
             var localVarPath = "./api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2141,13 +2153,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UpdateDeliveryTrackingStatus", localVarResponse);
+                Exception exception = ExceptionFactory("DriversUpdateDeliveryTrackingStatus", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -2155,10 +2167,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateDriverProfile"></param>
-        /// <returns></returns>
-        public void UpdateDriverProfile (UpdateDriverProfileModel updateDriverProfile)
+        /// <returns>Object</returns>
+        public Object DriversUpdateDriverProfile (UpdateDriverProfileModel updateDriverProfile)
         {
-             UpdateDriverProfileWithHttpInfo(updateDriverProfile);
+             ApiResponse<Object> localVarResponse = DriversUpdateDriverProfileWithHttpInfo(updateDriverProfile);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -2166,12 +2179,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateDriverProfile"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateDriverProfileWithHttpInfo (UpdateDriverProfileModel updateDriverProfile)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DriversUpdateDriverProfileWithHttpInfo (UpdateDriverProfileModel updateDriverProfile)
         {
             // verify the required parameter 'updateDriverProfile' is set
             if (updateDriverProfile == null)
-                throw new ApiException(400, "Missing required parameter 'updateDriverProfile' when calling DriversApi->UpdateDriverProfile");
+                throw new ApiException(400, "Missing required parameter 'updateDriverProfile' when calling DriversApi->DriversUpdateDriverProfile");
 
             var localVarPath = "./api/v1.0/drivers/profile";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2227,13 +2240,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UpdateDriverProfile", localVarResponse);
+                Exception exception = ExceptionFactory("DriversUpdateDriverProfile", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -2241,10 +2254,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateDriverProfile"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateDriverProfileAsync (UpdateDriverProfileModel updateDriverProfile)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DriversUpdateDriverProfileAsync (UpdateDriverProfileModel updateDriverProfile)
         {
-             await UpdateDriverProfileAsyncWithHttpInfo(updateDriverProfile);
+             ApiResponse<Object> localVarResponse = await DriversUpdateDriverProfileAsyncWithHttpInfo(updateDriverProfile);
+             return localVarResponse.Data;
 
         }
 
@@ -2253,12 +2267,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateDriverProfile"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateDriverProfileAsyncWithHttpInfo (UpdateDriverProfileModel updateDriverProfile)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DriversUpdateDriverProfileAsyncWithHttpInfo (UpdateDriverProfileModel updateDriverProfile)
         {
             // verify the required parameter 'updateDriverProfile' is set
             if (updateDriverProfile == null)
-                throw new ApiException(400, "Missing required parameter 'updateDriverProfile' when calling DriversApi->UpdateDriverProfile");
+                throw new ApiException(400, "Missing required parameter 'updateDriverProfile' when calling DriversApi->DriversUpdateDriverProfile");
 
             var localVarPath = "./api/v1.0/drivers/profile";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2314,13 +2328,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UpdateDriverProfile", localVarResponse);
+                Exception exception = ExceptionFactory("DriversUpdateDriverProfile", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
     }
