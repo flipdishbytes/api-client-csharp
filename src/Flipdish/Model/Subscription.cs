@@ -788,6 +788,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="products">Products (required).</param>
         /// <param name="upcomingInvoiceItems">Upcoming invoice items.</param>
+        /// <param name="upcomingInvoiceDiscounts">Upcoming invoice discounts.</param>
         /// <param name="subscriptionId">The subscription identifier (required).</param>
         /// <param name="name">name (required).</param>
         /// <param name="status">Status (required).</param>
@@ -797,7 +798,7 @@ namespace Flipdish.Model
         /// <param name="user">User (required).</param>
         /// <param name="defaultPaymentDescription">Default payment description.</param>
         /// <param name="cancellationDate">Cancellation Date.</param>
-        public Subscription(List<SubscriptionProduct> products = default(List<SubscriptionProduct>), List<InvoiceItem> upcomingInvoiceItems = default(List<InvoiceItem>), string subscriptionId = default(string), string name = default(string), StatusEnum status = default(StatusEnum), CurrencyEnum currency = default(CurrencyEnum), double? nextInvoiceAmount = default(double?), DateTime? nextInvoiceBillingDate = default(DateTime?), string user = default(string), string defaultPaymentDescription = default(string), DateTime? cancellationDate = default(DateTime?))
+        public Subscription(List<SubscriptionProduct> products = default(List<SubscriptionProduct>), List<InvoiceItem> upcomingInvoiceItems = default(List<InvoiceItem>), List<InvoiceDiscount> upcomingInvoiceDiscounts = default(List<InvoiceDiscount>), string subscriptionId = default(string), string name = default(string), StatusEnum status = default(StatusEnum), CurrencyEnum currency = default(CurrencyEnum), double? nextInvoiceAmount = default(double?), DateTime? nextInvoiceBillingDate = default(DateTime?), string user = default(string), string defaultPaymentDescription = default(string), DateTime? cancellationDate = default(DateTime?))
         {
             // to ensure "products" is required (not null)
             if (products == null)
@@ -854,6 +855,7 @@ namespace Flipdish.Model
                 this.User = user;
             }
             this.UpcomingInvoiceItems = upcomingInvoiceItems;
+            this.UpcomingInvoiceDiscounts = upcomingInvoiceDiscounts;
             this.NextInvoiceAmount = nextInvoiceAmount;
             this.NextInvoiceBillingDate = nextInvoiceBillingDate;
             this.DefaultPaymentDescription = defaultPaymentDescription;
@@ -873,6 +875,13 @@ namespace Flipdish.Model
         /// <value>Upcoming invoice items</value>
         [DataMember(Name="UpcomingInvoiceItems", EmitDefaultValue=false)]
         public List<InvoiceItem> UpcomingInvoiceItems { get; set; }
+
+        /// <summary>
+        /// Upcoming invoice discounts
+        /// </summary>
+        /// <value>Upcoming invoice discounts</value>
+        [DataMember(Name="UpcomingInvoiceDiscounts", EmitDefaultValue=false)]
+        public List<InvoiceDiscount> UpcomingInvoiceDiscounts { get; set; }
 
         /// <summary>
         /// The subscription identifier
@@ -934,6 +943,7 @@ namespace Flipdish.Model
             sb.Append("class Subscription {\n");
             sb.Append("  Products: ").Append(Products).Append("\n");
             sb.Append("  UpcomingInvoiceItems: ").Append(UpcomingInvoiceItems).Append("\n");
+            sb.Append("  UpcomingInvoiceDiscounts: ").Append(UpcomingInvoiceDiscounts).Append("\n");
             sb.Append("  SubscriptionId: ").Append(SubscriptionId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
@@ -986,6 +996,11 @@ namespace Flipdish.Model
                     this.UpcomingInvoiceItems == input.UpcomingInvoiceItems ||
                     this.UpcomingInvoiceItems != null &&
                     this.UpcomingInvoiceItems.SequenceEqual(input.UpcomingInvoiceItems)
+                ) && 
+                (
+                    this.UpcomingInvoiceDiscounts == input.UpcomingInvoiceDiscounts ||
+                    this.UpcomingInvoiceDiscounts != null &&
+                    this.UpcomingInvoiceDiscounts.SequenceEqual(input.UpcomingInvoiceDiscounts)
                 ) && 
                 (
                     this.SubscriptionId == input.SubscriptionId ||
@@ -1047,6 +1062,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Products.GetHashCode();
                 if (this.UpcomingInvoiceItems != null)
                     hashCode = hashCode * 59 + this.UpcomingInvoiceItems.GetHashCode();
+                if (this.UpcomingInvoiceDiscounts != null)
+                    hashCode = hashCode * 59 + this.UpcomingInvoiceDiscounts.GetHashCode();
                 if (this.SubscriptionId != null)
                     hashCode = hashCode * 59 + this.SubscriptionId.GetHashCode();
                 if (this.Name != null)
