@@ -514,7 +514,7 @@ Name | Type | Description  | Notes
 
 <a name="setapphostname"></a>
 # **SetAppHostname**
-> RestApiStringResult SetAppHostname (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null)
+> RestApiStringResult SetAppHostname (string appId, string hostname, bool? isEmbed = null)
 
 
 
@@ -539,11 +539,10 @@ namespace Example
             var appId = appId_example;  // string | 
             var hostname = hostname_example;  // string | 
             var isEmbed = true;  // bool? |  (optional) 
-            var isNextGenWeb = true;  // bool? |  (optional) 
 
             try
             {
-                RestApiStringResult result = apiInstance.SetAppHostname(appId, hostname, isEmbed, isNextGenWeb);
+                RestApiStringResult result = apiInstance.SetAppHostname(appId, hostname, isEmbed);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -562,7 +561,6 @@ Name | Type | Description  | Notes
  **appId** | **string**|  | 
  **hostname** | **string**|  | 
  **isEmbed** | **bool?**|  | [optional] 
- **isNextGenWeb** | **bool?**|  | [optional] 
 
 ### Return type
 

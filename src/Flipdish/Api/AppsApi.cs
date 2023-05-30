@@ -208,9 +208,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="hostname"></param>
         /// <param name="isEmbed"> (optional)</param>
-        /// <param name="isNextGenWeb"> (optional)</param>
         /// <returns>RestApiStringResult</returns>
-        RestApiStringResult SetAppHostname (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null);
+        RestApiStringResult SetAppHostname (string appId, string hostname, bool? isEmbed = null);
 
         /// <summary>
         /// 
@@ -222,9 +221,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="hostname"></param>
         /// <param name="isEmbed"> (optional)</param>
-        /// <param name="isNextGenWeb"> (optional)</param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
-        ApiResponse<RestApiStringResult> SetAppHostnameWithHttpInfo (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null);
+        ApiResponse<RestApiStringResult> SetAppHostnameWithHttpInfo (string appId, string hostname, bool? isEmbed = null);
         /// <summary>
         /// 
         /// </summary>
@@ -530,9 +528,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="hostname"></param>
         /// <param name="isEmbed"> (optional)</param>
-        /// <param name="isNextGenWeb"> (optional)</param>
         /// <returns>Task of RestApiStringResult</returns>
-        System.Threading.Tasks.Task<RestApiStringResult> SetAppHostnameAsync (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null);
+        System.Threading.Tasks.Task<RestApiStringResult> SetAppHostnameAsync (string appId, string hostname, bool? isEmbed = null);
 
         /// <summary>
         /// 
@@ -544,9 +541,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="hostname"></param>
         /// <param name="isEmbed"> (optional)</param>
-        /// <param name="isNextGenWeb"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> SetAppHostnameAsyncWithHttpInfo (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> SetAppHostnameAsyncWithHttpInfo (string appId, string hostname, bool? isEmbed = null);
         /// <summary>
         /// 
         /// </summary>
@@ -2023,11 +2019,10 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="hostname"></param>
         /// <param name="isEmbed"> (optional)</param>
-        /// <param name="isNextGenWeb"> (optional)</param>
         /// <returns>RestApiStringResult</returns>
-        public RestApiStringResult SetAppHostname (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null)
+        public RestApiStringResult SetAppHostname (string appId, string hostname, bool? isEmbed = null)
         {
-             ApiResponse<RestApiStringResult> localVarResponse = SetAppHostnameWithHttpInfo(appId, hostname, isEmbed, isNextGenWeb);
+             ApiResponse<RestApiStringResult> localVarResponse = SetAppHostnameWithHttpInfo(appId, hostname, isEmbed);
              return localVarResponse.Data;
         }
 
@@ -2038,9 +2033,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="hostname"></param>
         /// <param name="isEmbed"> (optional)</param>
-        /// <param name="isNextGenWeb"> (optional)</param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
-        public ApiResponse< RestApiStringResult > SetAppHostnameWithHttpInfo (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null)
+        public ApiResponse< RestApiStringResult > SetAppHostnameWithHttpInfo (string appId, string hostname, bool? isEmbed = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -2076,7 +2070,6 @@ namespace Flipdish.Api
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (hostname != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "hostname", hostname)); // query parameter
             if (isEmbed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "isEmbed", isEmbed)); // query parameter
-            if (isNextGenWeb != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "isNextGenWeb", isNextGenWeb)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -2110,11 +2103,10 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="hostname"></param>
         /// <param name="isEmbed"> (optional)</param>
-        /// <param name="isNextGenWeb"> (optional)</param>
         /// <returns>Task of RestApiStringResult</returns>
-        public async System.Threading.Tasks.Task<RestApiStringResult> SetAppHostnameAsync (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null)
+        public async System.Threading.Tasks.Task<RestApiStringResult> SetAppHostnameAsync (string appId, string hostname, bool? isEmbed = null)
         {
-             ApiResponse<RestApiStringResult> localVarResponse = await SetAppHostnameAsyncWithHttpInfo(appId, hostname, isEmbed, isNextGenWeb);
+             ApiResponse<RestApiStringResult> localVarResponse = await SetAppHostnameAsyncWithHttpInfo(appId, hostname, isEmbed);
              return localVarResponse.Data;
 
         }
@@ -2126,9 +2118,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="hostname"></param>
         /// <param name="isEmbed"> (optional)</param>
-        /// <param name="isNextGenWeb"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> SetAppHostnameAsyncWithHttpInfo (string appId, string hostname, bool? isEmbed = null, bool? isNextGenWeb = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> SetAppHostnameAsyncWithHttpInfo (string appId, string hostname, bool? isEmbed = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -2164,7 +2155,6 @@ namespace Flipdish.Api
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (hostname != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "hostname", hostname)); // query parameter
             if (isEmbed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "isEmbed", isEmbed)); // query parameter
-            if (isNextGenWeb != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "isNextGenWeb", isNextGenWeb)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
