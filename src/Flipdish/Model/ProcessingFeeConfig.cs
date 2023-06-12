@@ -88,7 +88,13 @@ namespace Flipdish.Model
             /// Enum PayGreen for value: PayGreen
             /// </summary>
             [EnumMember(Value = "PayGreen")]
-            PayGreen = 9
+            PayGreen = 9,
+            
+            /// <summary>
+            /// Enum GoogleWalletToken for value: GoogleWalletToken
+            /// </summary>
+            [EnumMember(Value = "GoogleWalletToken")]
+            GoogleWalletToken = 10
         }
 
         /// <summary>
