@@ -1230,6 +1230,7 @@ Class | Method | HTTP request | Description
  - [Model.TelemetrySeriesResult](docs/TelemetrySeriesResult.md)
  - [Model.TipConfiguration](docs/TipConfiguration.md)
  - [Model.UnRegisterCardReaderRequest](docs/UnRegisterCardReaderRequest.md)
+ - [Model.UpcomingInvoice](docs/UpcomingInvoice.md)
  - [Model.UpdateAppStoreApp](docs/UpdateAppStoreApp.md)
  - [Model.UpdateAppStoreAppConfiguration](docs/UpdateAppStoreAppConfiguration.md)
  - [Model.UpdateAppStoreAppConfigurationValuesBatch](docs/UpdateAppStoreAppConfigurationValuesBatch.md)

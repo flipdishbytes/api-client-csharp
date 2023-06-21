@@ -786,16 +786,16 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SubscriptionSummary" /> class.
         /// </summary>
+        /// <param name="nextInvoiceAmount">Next invoice amount.</param>
+        /// <param name="nextInvoiceBillingDate">Next invoice billing date.</param>
         /// <param name="subscriptionId">The subscription identifier (required).</param>
         /// <param name="name">name (required).</param>
         /// <param name="status">Status (required).</param>
         /// <param name="currency">Currency (required).</param>
-        /// <param name="nextInvoiceAmount">Next invoice amount.</param>
-        /// <param name="nextInvoiceBillingDate">Next invoice billing date.</param>
         /// <param name="user">User (required).</param>
         /// <param name="defaultPaymentDescription">Default payment description.</param>
         /// <param name="cancellationDate">Cancellation Date.</param>
-        public SubscriptionSummary(string subscriptionId = default(string), string name = default(string), StatusEnum status = default(StatusEnum), CurrencyEnum currency = default(CurrencyEnum), double? nextInvoiceAmount = default(double?), DateTime? nextInvoiceBillingDate = default(DateTime?), string user = default(string), string defaultPaymentDescription = default(string), DateTime? cancellationDate = default(DateTime?))
+        public SubscriptionSummary(double? nextInvoiceAmount = default(double?), DateTime? nextInvoiceBillingDate = default(DateTime?), string subscriptionId = default(string), string name = default(string), StatusEnum status = default(StatusEnum), CurrencyEnum currency = default(CurrencyEnum), string user = default(string), string defaultPaymentDescription = default(string), DateTime? cancellationDate = default(DateTime?))
         {
             // to ensure "subscriptionId" is required (not null)
             if (subscriptionId == null)
@@ -849,6 +849,20 @@ namespace Flipdish.Model
         }
         
         /// <summary>
+        /// Next invoice amount
+        /// </summary>
+        /// <value>Next invoice amount</value>
+        [DataMember(Name="NextInvoiceAmount", EmitDefaultValue=false)]
+        public double? NextInvoiceAmount { get; set; }
+
+        /// <summary>
+        /// Next invoice billing date
+        /// </summary>
+        /// <value>Next invoice billing date</value>
+        [DataMember(Name="NextInvoiceBillingDate", EmitDefaultValue=false)]
+        public DateTime? NextInvoiceBillingDate { get; set; }
+
+        /// <summary>
         /// The subscription identifier
         /// </summary>
         /// <value>The subscription identifier</value>
@@ -862,20 +876,6 @@ namespace Flipdish.Model
         public string Name { get; set; }
 
 
-
-        /// <summary>
-        /// Next invoice amount
-        /// </summary>
-        /// <value>Next invoice amount</value>
-        [DataMember(Name="NextInvoiceAmount", EmitDefaultValue=false)]
-        public double? NextInvoiceAmount { get; set; }
-
-        /// <summary>
-        /// Next invoice billing date
-        /// </summary>
-        /// <value>Next invoice billing date</value>
-        [DataMember(Name="NextInvoiceBillingDate", EmitDefaultValue=false)]
-        public DateTime? NextInvoiceBillingDate { get; set; }
 
         /// <summary>
         /// User
@@ -906,12 +906,12 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SubscriptionSummary {\n");
+            sb.Append("  NextInvoiceAmount: ").Append(NextInvoiceAmount).Append("\n");
+            sb.Append("  NextInvoiceBillingDate: ").Append(NextInvoiceBillingDate).Append("\n");
             sb.Append("  SubscriptionId: ").Append(SubscriptionId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
-            sb.Append("  NextInvoiceAmount: ").Append(NextInvoiceAmount).Append("\n");
-            sb.Append("  NextInvoiceBillingDate: ").Append(NextInvoiceBillingDate).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  DefaultPaymentDescription: ").Append(DefaultPaymentDescription).Append("\n");
             sb.Append("  CancellationDate: ").Append(CancellationDate).Append("\n");
@@ -950,6 +950,16 @@ namespace Flipdish.Model
 
             return 
                 (
+                    this.NextInvoiceAmount == input.NextInvoiceAmount ||
+                    (this.NextInvoiceAmount != null &&
+                    this.NextInvoiceAmount.Equals(input.NextInvoiceAmount))
+                ) && 
+                (
+                    this.NextInvoiceBillingDate == input.NextInvoiceBillingDate ||
+                    (this.NextInvoiceBillingDate != null &&
+                    this.NextInvoiceBillingDate.Equals(input.NextInvoiceBillingDate))
+                ) && 
+                (
                     this.SubscriptionId == input.SubscriptionId ||
                     (this.SubscriptionId != null &&
                     this.SubscriptionId.Equals(input.SubscriptionId))
@@ -968,16 +978,6 @@ namespace Flipdish.Model
                     this.Currency == input.Currency ||
                     (this.Currency != null &&
                     this.Currency.Equals(input.Currency))
-                ) && 
-                (
-                    this.NextInvoiceAmount == input.NextInvoiceAmount ||
-                    (this.NextInvoiceAmount != null &&
-                    this.NextInvoiceAmount.Equals(input.NextInvoiceAmount))
-                ) && 
-                (
-                    this.NextInvoiceBillingDate == input.NextInvoiceBillingDate ||
-                    (this.NextInvoiceBillingDate != null &&
-                    this.NextInvoiceBillingDate.Equals(input.NextInvoiceBillingDate))
                 ) && 
                 (
                     this.User == input.User ||
@@ -1005,6 +1005,10 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.NextInvoiceAmount != null)
+                    hashCode = hashCode * 59 + this.NextInvoiceAmount.GetHashCode();
+                if (this.NextInvoiceBillingDate != null)
+                    hashCode = hashCode * 59 + this.NextInvoiceBillingDate.GetHashCode();
                 if (this.SubscriptionId != null)
                     hashCode = hashCode * 59 + this.SubscriptionId.GetHashCode();
                 if (this.Name != null)
@@ -1013,10 +1017,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Status.GetHashCode();
                 if (this.Currency != null)
                     hashCode = hashCode * 59 + this.Currency.GetHashCode();
-                if (this.NextInvoiceAmount != null)
-                    hashCode = hashCode * 59 + this.NextInvoiceAmount.GetHashCode();
-                if (this.NextInvoiceBillingDate != null)
-                    hashCode = hashCode * 59 + this.NextInvoiceBillingDate.GetHashCode();
                 if (this.User != null)
                     hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.DefaultPaymentDescription != null)
