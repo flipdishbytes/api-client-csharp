@@ -275,6 +275,29 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
+        /// <param name="appStoreName"></param>
+        /// <returns></returns>
+        void SetAppStoreName (string appId, string appStoreName);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreName"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> SetAppStoreNameWithHttpInfo (string appId, string appStoreName);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <param name="complianceType"></param>
         /// <returns>RestApiResultAppCompliance</returns>
         RestApiResultAppCompliance SetCompliance (string appId, string complianceType);
@@ -631,6 +654,29 @@ namespace Flipdish.Api
         /// <param name="languages"></param>
         /// <returns>Task of ApiResponse (RestApiResultApp)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultApp>> SetAppLanguagesAsyncWithHttpInfo (string appId, List<Language> languages);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreName"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task SetAppStoreNameAsync (string appId, string appStoreName);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreName"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> SetAppStoreNameAsyncWithHttpInfo (string appId, string appStoreName);
         /// <summary>
         /// 
         /// </summary>
@@ -2605,6 +2651,191 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultApp>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultApp)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreName"></param>
+        /// <returns></returns>
+        public void SetAppStoreName (string appId, string appStoreName)
+        {
+             SetAppStoreNameWithHttpInfo(appId, appStoreName);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreName"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> SetAppStoreNameWithHttpInfo (string appId, string appStoreName)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->SetAppStoreName");
+            // verify the required parameter 'appStoreName' is set
+            if (appStoreName == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreName' when calling AppsApi->SetAppStoreName");
+
+            var localVarPath = "./api/v1.0/apps/{appId}/appstorename";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (appStoreName != null && appStoreName.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(appStoreName); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = appStoreName; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetAppStoreName", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreName"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task SetAppStoreNameAsync (string appId, string appStoreName)
+        {
+             await SetAppStoreNameAsyncWithHttpInfo(appId, appStoreName);
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreName"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetAppStoreNameAsyncWithHttpInfo (string appId, string appStoreName)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->SetAppStoreName");
+            // verify the required parameter 'appStoreName' is set
+            if (appStoreName == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreName' when calling AppsApi->SetAppStoreName");
+
+            var localVarPath = "./api/v1.0/apps/{appId}/appstorename";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (appStoreName != null && appStoreName.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(appStoreName); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = appStoreName; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetAppStoreName", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>

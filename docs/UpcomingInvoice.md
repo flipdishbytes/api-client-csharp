@@ -5,10 +5,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Amount** | **double?** | Amount | [optional] 
 **NextBillingDate** | **DateTime?** | Next billing date | [optional] 
-**Subtotal** | **long?** | Subtotal | 
-**TotalExcludingTax** | **long?** | Total excluding tax | [optional] 
-**AmountDue** | **long?** | Amount due | 
-**Tax** | **long?** | Tax | 
+**Subtotal** | **double?** | Subtotal | 
+**TotalExcludingTax** | **double?** | Total excluding tax | [optional] 
+**AmountDue** | **double?** | Amount due | 
+**Tax** | **double?** | Tax | 
 **Items** | [**List&lt;InvoiceItem&gt;**](InvoiceItem.md) | Items | [optional] 
 **Discounts** | [**List&lt;InvoiceDiscount&gt;**](InvoiceDiscount.md) | Discounts | [optional] 
 

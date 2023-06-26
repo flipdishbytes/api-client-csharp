@@ -44,7 +44,7 @@ namespace Flipdish.Model
         /// <param name="tax">Tax (required).</param>
         /// <param name="items">Items.</param>
         /// <param name="discounts">Discounts.</param>
-        public UpcomingInvoice(double? amount = default(double?), DateTime? nextBillingDate = default(DateTime?), long? subtotal = default(long?), long? totalExcludingTax = default(long?), long? amountDue = default(long?), long? tax = default(long?), List<InvoiceItem> items = default(List<InvoiceItem>), List<InvoiceDiscount> discounts = default(List<InvoiceDiscount>))
+        public UpcomingInvoice(double? amount = default(double?), DateTime? nextBillingDate = default(DateTime?), double? subtotal = default(double?), double? totalExcludingTax = default(double?), double? amountDue = default(double?), double? tax = default(double?), List<InvoiceItem> items = default(List<InvoiceItem>), List<InvoiceDiscount> discounts = default(List<InvoiceDiscount>))
         {
             // to ensure "subtotal" is required (not null)
             if (subtotal == null)
@@ -99,28 +99,28 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>Subtotal</value>
         [DataMember(Name="Subtotal", EmitDefaultValue=false)]
-        public long? Subtotal { get; set; }
+        public double? Subtotal { get; set; }
 
         /// <summary>
         /// Total excluding tax
         /// </summary>
         /// <value>Total excluding tax</value>
         [DataMember(Name="TotalExcludingTax", EmitDefaultValue=false)]
-        public long? TotalExcludingTax { get; set; }
+        public double? TotalExcludingTax { get; set; }
 
         /// <summary>
         /// Amount due
         /// </summary>
         /// <value>Amount due</value>
         [DataMember(Name="AmountDue", EmitDefaultValue=false)]
-        public long? AmountDue { get; set; }
+        public double? AmountDue { get; set; }
 
         /// <summary>
         /// Tax
         /// </summary>
         /// <value>Tax</value>
         [DataMember(Name="Tax", EmitDefaultValue=false)]
-        public long? Tax { get; set; }
+        public double? Tax { get; set; }
 
         /// <summary>
         /// Items

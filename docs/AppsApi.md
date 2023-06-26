@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**SetAppConfig**](AppsApi.md#setappconfig) | **POST** /api/v1.0/apps/{appId}/config | 
 [**SetAppHostname**](AppsApi.md#setapphostname) | **POST** /api/v1.0/apps/{appId}/hostname | 
 [**SetAppLanguages**](AppsApi.md#setapplanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | 
+[**SetAppStoreName**](AppsApi.md#setappstorename) | **POST** /api/v1.0/apps/{appId}/appstorename | 
 [**SetCompliance**](AppsApi.md#setcompliance) | **POST** /api/v1.0/apps/{appId}/compliance | 
 [**SetPanaceaVanityUrl**](AppsApi.md#setpanaceavanityurl) | **POST** /api/v1.0/apps/{appId}/panacea/url | 
 [**SetSalesforceReferences**](AppsApi.md#setsalesforcereferences) | **POST** /api/v1.0/apps/{appId}/salesforcereferences | 
@@ -691,6 +692,68 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultApp**](RestApiResultApp.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="setappstorename"></a>
+# **SetAppStoreName**
+> void SetAppStoreName (string appId, string appStoreName)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class SetAppStoreNameExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AppsApi();
+            var appId = appId_example;  // string | 
+            var appStoreName = appStoreName_example;  // string | 
+
+            try
+            {
+                apiInstance.SetAppStoreName(appId, appStoreName);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AppsApi.SetAppStoreName: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **appStoreName** | **string**|  | 
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
