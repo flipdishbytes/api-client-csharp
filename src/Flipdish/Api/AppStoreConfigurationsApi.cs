@@ -176,6 +176,29 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>RestApiResultAppStoreAppConfigurationsWithSubscriptions</returns>
+        RestApiResultAppStoreAppConfigurationsWithSubscriptions GetConfiguredAppWithSubscriptionsSingleApp (string appId, string appStoreAppId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>ApiResponse of RestApiResultAppStoreAppConfigurationsWithSubscriptions</returns>
+        ApiResponse<RestApiResultAppStoreAppConfigurationsWithSubscriptions> GetConfiguredAppWithSubscriptionsSingleAppWithHttpInfo (string appId, string appStoreAppId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <returns>RestApiArrayResultAppStoreAppConfigurationHeader</returns>
         RestApiArrayResultAppStoreAppConfigurationHeader GetConfiguredApps (string appId);
 
@@ -389,6 +412,29 @@ namespace Flipdish.Api
         /// <param name="appStoreAppId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultAppStoreAppConfigurationSummary)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultAppStoreAppConfigurationSummary>> GetConfiguredAppSingleAppAsyncWithHttpInfo (string appId, string appStoreAppId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Task of RestApiResultAppStoreAppConfigurationsWithSubscriptions</returns>
+        System.Threading.Tasks.Task<RestApiResultAppStoreAppConfigurationsWithSubscriptions> GetConfiguredAppWithSubscriptionsSingleAppAsync (string appId, string appStoreAppId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultAppStoreAppConfigurationsWithSubscriptions)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreAppConfigurationsWithSubscriptions>> GetConfiguredAppWithSubscriptionsSingleAppAsyncWithHttpInfo (string appId, string appStoreAppId);
         /// <summary>
         /// 
         /// </summary>
@@ -1600,6 +1646,169 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiArrayResultAppStoreAppConfigurationSummary>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultAppStoreAppConfigurationSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultAppStoreAppConfigurationSummary)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>RestApiResultAppStoreAppConfigurationsWithSubscriptions</returns>
+        public RestApiResultAppStoreAppConfigurationsWithSubscriptions GetConfiguredAppWithSubscriptionsSingleApp (string appId, string appStoreAppId)
+        {
+             ApiResponse<RestApiResultAppStoreAppConfigurationsWithSubscriptions> localVarResponse = GetConfiguredAppWithSubscriptionsSingleAppWithHttpInfo(appId, appStoreAppId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>ApiResponse of RestApiResultAppStoreAppConfigurationsWithSubscriptions</returns>
+        public ApiResponse< RestApiResultAppStoreAppConfigurationsWithSubscriptions > GetConfiguredAppWithSubscriptionsSingleAppWithHttpInfo (string appId, string appStoreAppId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppStoreConfigurationsApi->GetConfiguredAppWithSubscriptionsSingleApp");
+            // verify the required parameter 'appStoreAppId' is set
+            if (appStoreAppId == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreConfigurationsApi->GetConfiguredAppWithSubscriptionsSingleApp");
+
+            var localVarPath = "./api/v1.0/{appId}/appstore/apps_subscriptions/{appStoreAppId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetConfiguredAppWithSubscriptionsSingleApp", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultAppStoreAppConfigurationsWithSubscriptions>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultAppStoreAppConfigurationsWithSubscriptions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreAppConfigurationsWithSubscriptions)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Task of RestApiResultAppStoreAppConfigurationsWithSubscriptions</returns>
+        public async System.Threading.Tasks.Task<RestApiResultAppStoreAppConfigurationsWithSubscriptions> GetConfiguredAppWithSubscriptionsSingleAppAsync (string appId, string appStoreAppId)
+        {
+             ApiResponse<RestApiResultAppStoreAppConfigurationsWithSubscriptions> localVarResponse = await GetConfiguredAppWithSubscriptionsSingleAppAsyncWithHttpInfo(appId, appStoreAppId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultAppStoreAppConfigurationsWithSubscriptions)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreAppConfigurationsWithSubscriptions>> GetConfiguredAppWithSubscriptionsSingleAppAsyncWithHttpInfo (string appId, string appStoreAppId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppStoreConfigurationsApi->GetConfiguredAppWithSubscriptionsSingleApp");
+            // verify the required parameter 'appStoreAppId' is set
+            if (appStoreAppId == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreConfigurationsApi->GetConfiguredAppWithSubscriptionsSingleApp");
+
+            var localVarPath = "./api/v1.0/{appId}/appstore/apps_subscriptions/{appStoreAppId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetConfiguredAppWithSubscriptionsSingleApp", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultAppStoreAppConfigurationsWithSubscriptions>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultAppStoreAppConfigurationsWithSubscriptions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreAppConfigurationsWithSubscriptions)));
         }
 
         /// <summary>
