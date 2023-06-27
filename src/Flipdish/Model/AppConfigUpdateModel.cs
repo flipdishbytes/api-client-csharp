@@ -67,14 +67,16 @@ namespace Flipdish.Model
         /// <param name="name">App name.   This is used in various places on the Apple App Store, Google Play Store, mobile apps and websites..</param>
         /// <param name="hostName">HostName on which the web-ordering system is allowed to be hosted or that a Flipdish website is hosted on..</param>
         /// <param name="mainColor">Main color of the web / Android / iOS applications.</param>
+        /// <param name="kioskPrimaryColour">Primary colour used on the Kiosk.</param>
         /// <param name="applicationCategory">Application Category.</param>
         /// <param name="isPanaceaEnabled">Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain..</param>
         /// <param name="cookieConsentPromptEnabled">Cookie Consent Prompt Enabled.</param>
-        public AppConfigUpdateModel(string name = default(string), string hostName = default(string), string mainColor = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?), bool? isPanaceaEnabled = default(bool?), bool? cookieConsentPromptEnabled = default(bool?))
+        public AppConfigUpdateModel(string name = default(string), string hostName = default(string), string mainColor = default(string), string kioskPrimaryColour = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?), bool? isPanaceaEnabled = default(bool?), bool? cookieConsentPromptEnabled = default(bool?))
         {
             this.Name = name;
             this.HostName = hostName;
             this.MainColor = mainColor;
+            this.KioskPrimaryColour = kioskPrimaryColour;
             this.ApplicationCategory = applicationCategory;
             this.IsPanaceaEnabled = isPanaceaEnabled;
             this.CookieConsentPromptEnabled = cookieConsentPromptEnabled;
@@ -100,6 +102,13 @@ namespace Flipdish.Model
         /// <value>Main color of the web / Android / iOS applications</value>
         [DataMember(Name="MainColor", EmitDefaultValue=false)]
         public string MainColor { get; set; }
+
+        /// <summary>
+        /// Primary colour used on the Kiosk
+        /// </summary>
+        /// <value>Primary colour used on the Kiosk</value>
+        [DataMember(Name="KioskPrimaryColour", EmitDefaultValue=false)]
+        public string KioskPrimaryColour { get; set; }
 
 
         /// <summary>
@@ -127,6 +136,7 @@ namespace Flipdish.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  HostName: ").Append(HostName).Append("\n");
             sb.Append("  MainColor: ").Append(MainColor).Append("\n");
+            sb.Append("  KioskPrimaryColour: ").Append(KioskPrimaryColour).Append("\n");
             sb.Append("  ApplicationCategory: ").Append(ApplicationCategory).Append("\n");
             sb.Append("  IsPanaceaEnabled: ").Append(IsPanaceaEnabled).Append("\n");
             sb.Append("  CookieConsentPromptEnabled: ").Append(CookieConsentPromptEnabled).Append("\n");
@@ -180,6 +190,11 @@ namespace Flipdish.Model
                     this.MainColor.Equals(input.MainColor))
                 ) && 
                 (
+                    this.KioskPrimaryColour == input.KioskPrimaryColour ||
+                    (this.KioskPrimaryColour != null &&
+                    this.KioskPrimaryColour.Equals(input.KioskPrimaryColour))
+                ) && 
+                (
                     this.ApplicationCategory == input.ApplicationCategory ||
                     (this.ApplicationCategory != null &&
                     this.ApplicationCategory.Equals(input.ApplicationCategory))
@@ -211,6 +226,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.HostName.GetHashCode();
                 if (this.MainColor != null)
                     hashCode = hashCode * 59 + this.MainColor.GetHashCode();
+                if (this.KioskPrimaryColour != null)
+                    hashCode = hashCode * 59 + this.KioskPrimaryColour.GetHashCode();
                 if (this.ApplicationCategory != null)
                     hashCode = hashCode * 59 + this.ApplicationCategory.GetHashCode();
                 if (this.IsPanaceaEnabled != null)
