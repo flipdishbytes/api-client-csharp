@@ -105,6 +105,29 @@ namespace Flipdish.Api
         /// <param name="oauthAppId"></param>
         /// <param name="appStoreAppId"></param>
         /// <returns></returns>
+        void GetAppExternalProduct (string oauthAppId, string appStoreAppId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetAppExternalProductWithHttpInfo (string oauthAppId, string appStoreAppId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns></returns>
         void GetExternalFunctionSigningKey (string oauthAppId, string appStoreAppId);
 
         /// <summary>
@@ -143,6 +166,31 @@ namespace Flipdish.Api
         /// <param name="appStoreApp"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateAppStoreAppWithHttpInfo (string oauthAppId, string appStoreAppId, UpdateAppStoreApp appStoreApp);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="appStoreAppExternalProduct"></param>
+        /// <returns></returns>
+        void UpdateExternalProduct (string oauthAppId, string appStoreAppId, UpdateAppStoreAppExternalProduct appStoreAppExternalProduct);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="appStoreAppExternalProduct"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> UpdateExternalProductWithHttpInfo (string oauthAppId, string appStoreAppId, UpdateAppStoreAppExternalProduct appStoreAppExternalProduct);
         /// <summary>
         /// 
         /// </summary>
@@ -251,6 +299,29 @@ namespace Flipdish.Api
         /// <param name="oauthAppId"></param>
         /// <param name="appStoreAppId"></param>
         /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetAppExternalProductAsync (string oauthAppId, string appStoreAppId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetAppExternalProductAsyncWithHttpInfo (string oauthAppId, string appStoreAppId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Task of void</returns>
         System.Threading.Tasks.Task GetExternalFunctionSigningKeyAsync (string oauthAppId, string appStoreAppId);
 
         /// <summary>
@@ -289,6 +360,31 @@ namespace Flipdish.Api
         /// <param name="appStoreApp"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateAppStoreAppAsyncWithHttpInfo (string oauthAppId, string appStoreAppId, UpdateAppStoreApp appStoreApp);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="appStoreAppExternalProduct"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task UpdateExternalProductAsync (string oauthAppId, string appStoreAppId, UpdateAppStoreAppExternalProduct appStoreAppExternalProduct);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="appStoreAppExternalProduct"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateExternalProductAsyncWithHttpInfo (string oauthAppId, string appStoreAppId, UpdateAppStoreAppExternalProduct appStoreAppExternalProduct);
         /// <summary>
         /// 
         /// </summary>
@@ -944,6 +1040,167 @@ namespace Flipdish.Api
         /// <param name="oauthAppId"></param>
         /// <param name="appStoreAppId"></param>
         /// <returns></returns>
+        public void GetAppExternalProduct (string oauthAppId, string appStoreAppId)
+        {
+             GetAppExternalProductWithHttpInfo(oauthAppId, appStoreAppId);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> GetAppExternalProductWithHttpInfo (string oauthAppId, string appStoreAppId)
+        {
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling AppStoreDeveloperApi->GetAppExternalProduct");
+            // verify the required parameter 'appStoreAppId' is set
+            if (appStoreAppId == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreDeveloperApi->GetAppExternalProduct");
+
+            var localVarPath = "./api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_product";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAppExternalProduct", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task GetAppExternalProductAsync (string oauthAppId, string appStoreAppId)
+        {
+             await GetAppExternalProductAsyncWithHttpInfo(oauthAppId, appStoreAppId);
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetAppExternalProductAsyncWithHttpInfo (string oauthAppId, string appStoreAppId)
+        {
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling AppStoreDeveloperApi->GetAppExternalProduct");
+            // verify the required parameter 'appStoreAppId' is set
+            if (appStoreAppId == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreDeveloperApi->GetAppExternalProduct");
+
+            var localVarPath = "./api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_product";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAppExternalProduct", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns></returns>
         public void GetExternalFunctionSigningKey (string oauthAppId, string appStoreAppId)
         {
              GetExternalFunctionSigningKeyWithHttpInfo(oauthAppId, appStoreAppId);
@@ -1287,6 +1544,203 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("UpdateAppStoreApp", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="appStoreAppExternalProduct"></param>
+        /// <returns></returns>
+        public void UpdateExternalProduct (string oauthAppId, string appStoreAppId, UpdateAppStoreAppExternalProduct appStoreAppExternalProduct)
+        {
+             UpdateExternalProductWithHttpInfo(oauthAppId, appStoreAppId, appStoreAppExternalProduct);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="appStoreAppExternalProduct"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> UpdateExternalProductWithHttpInfo (string oauthAppId, string appStoreAppId, UpdateAppStoreAppExternalProduct appStoreAppExternalProduct)
+        {
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling AppStoreDeveloperApi->UpdateExternalProduct");
+            // verify the required parameter 'appStoreAppId' is set
+            if (appStoreAppId == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreDeveloperApi->UpdateExternalProduct");
+            // verify the required parameter 'appStoreAppExternalProduct' is set
+            if (appStoreAppExternalProduct == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreAppExternalProduct' when calling AppStoreDeveloperApi->UpdateExternalProduct");
+
+            var localVarPath = "./api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_product";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
+            if (appStoreAppExternalProduct != null && appStoreAppExternalProduct.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(appStoreAppExternalProduct); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = appStoreAppExternalProduct; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateExternalProduct", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="appStoreAppExternalProduct"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task UpdateExternalProductAsync (string oauthAppId, string appStoreAppId, UpdateAppStoreAppExternalProduct appStoreAppExternalProduct)
+        {
+             await UpdateExternalProductAsyncWithHttpInfo(oauthAppId, appStoreAppId, appStoreAppExternalProduct);
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oauthAppId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="appStoreAppExternalProduct"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateExternalProductAsyncWithHttpInfo (string oauthAppId, string appStoreAppId, UpdateAppStoreAppExternalProduct appStoreAppExternalProduct)
+        {
+            // verify the required parameter 'oauthAppId' is set
+            if (oauthAppId == null)
+                throw new ApiException(400, "Missing required parameter 'oauthAppId' when calling AppStoreDeveloperApi->UpdateExternalProduct");
+            // verify the required parameter 'appStoreAppId' is set
+            if (appStoreAppId == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreDeveloperApi->UpdateExternalProduct");
+            // verify the required parameter 'appStoreAppExternalProduct' is set
+            if (appStoreAppExternalProduct == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreAppExternalProduct' when calling AppStoreDeveloperApi->UpdateExternalProduct");
+
+            var localVarPath = "./api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_product";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (oauthAppId != null) localVarPathParams.Add("oauthAppId", this.Configuration.ApiClient.ParameterToString(oauthAppId)); // path parameter
+            if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
+            if (appStoreAppExternalProduct != null && appStoreAppExternalProduct.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(appStoreAppExternalProduct); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = appStoreAppExternalProduct; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateExternalProduct", localVarResponse);
                 if (exception != null) throw exception;
             }
 

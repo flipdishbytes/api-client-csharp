@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **Support** | [**AppStoreAppSupportInfo**](AppStoreAppSupportInfo.md) | Support information | [optional] 
 **ExternalFunctionActionUrl** | **string** | Action URL for external functions, used for handling Portal configuration action buttons | [optional] 
 **ExternalFunctionSignatureKey** | **string** | Signing key for external function action calls | [optional] 
+**IsPaid** | **bool?** | Is Paid | [optional] 
 **Name** | **string** | Name | 
 **Description** | **string** | Description | 
 **IsEnabled** | **bool?** | Is application enabled | [optional] 

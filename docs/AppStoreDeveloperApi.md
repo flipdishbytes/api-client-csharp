@@ -7,8 +7,10 @@ Method | HTTP request | Description
 [**AppVerificationUpdate**](AppStoreDeveloperApi.md#appverificationupdate) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification | 
 [**CreateAppStoreApp**](AppStoreDeveloperApi.md#createappstoreapp) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps | 
 [**DeleteAppStoreApp**](AppStoreDeveloperApi.md#deleteappstoreapp) | **DELETE** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | 
+[**GetAppExternalProduct**](AppStoreDeveloperApi.md#getappexternalproduct) | **GET** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_product | 
 [**GetExternalFunctionSigningKey**](AppStoreDeveloperApi.md#getexternalfunctionsigningkey) | **GET** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_function_signing_key | 
 [**UpdateAppStoreApp**](AppStoreDeveloperApi.md#updateappstoreapp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | 
+[**UpdateExternalProduct**](AppStoreDeveloperApi.md#updateexternalproduct) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_product | 
 [**UploadAppStoreAppLogo**](AppStoreDeveloperApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | 
 
 
@@ -202,6 +204,68 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getappexternalproduct"></a>
+# **GetAppExternalProduct**
+> void GetAppExternalProduct (string oauthAppId, string appStoreAppId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetAppExternalProductExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AppStoreDeveloperApi();
+            var oauthAppId = oauthAppId_example;  // string | 
+            var appStoreAppId = appStoreAppId_example;  // string | 
+
+            try
+            {
+                apiInstance.GetAppExternalProduct(oauthAppId, appStoreAppId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AppStoreDeveloperApi.GetAppExternalProduct: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **oauthAppId** | **string**|  | 
+ **appStoreAppId** | **string**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getexternalfunctionsigningkey"></a>
 # **GetExternalFunctionSigningKey**
 > void GetExternalFunctionSigningKey (string oauthAppId, string appStoreAppId)
@@ -312,6 +376,70 @@ Name | Type | Description  | Notes
  **oauthAppId** | **string**|  | 
  **appStoreAppId** | **string**|  | 
  **appStoreApp** | [**UpdateAppStoreApp**](UpdateAppStoreApp.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="updateexternalproduct"></a>
+# **UpdateExternalProduct**
+> void UpdateExternalProduct (string oauthAppId, string appStoreAppId, UpdateAppStoreAppExternalProduct appStoreAppExternalProduct)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UpdateExternalProductExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AppStoreDeveloperApi();
+            var oauthAppId = oauthAppId_example;  // string | 
+            var appStoreAppId = appStoreAppId_example;  // string | 
+            var appStoreAppExternalProduct = new UpdateAppStoreAppExternalProduct(); // UpdateAppStoreAppExternalProduct | 
+
+            try
+            {
+                apiInstance.UpdateExternalProduct(oauthAppId, appStoreAppId, appStoreAppExternalProduct);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AppStoreDeveloperApi.UpdateExternalProduct: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **oauthAppId** | **string**|  | 
+ **appStoreAppId** | **string**|  | 
+ **appStoreAppExternalProduct** | [**UpdateAppStoreAppExternalProduct**](UpdateAppStoreAppExternalProduct.md)|  | 
 
 ### Return type
 
