@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**ChangePassword**](AccountsApi.md#changepassword) | **PUT** /api/v1.0/accounts/password | 
 [**ChangePasswordWithPin**](AccountsApi.md#changepasswordwithpin) | **PUT** /api/v1.0/accounts/password/pin | 
 [**CreateAccount**](AccountsApi.md#createaccount) | **POST** /api/v1.0/accounts | 
+[**CreateBasicAccount**](AccountsApi.md#createbasicaccount) | **POST** /api/v1.0/accounts/basic-account | 
 [**GetAccountDetails**](AccountsApi.md#getaccountdetails) | **GET** /api/v1.0/accounts | 
 [**GetLocalisedTimeZones**](AccountsApi.md#getlocalisedtimezones) | **GET** /api/v1.0/accounts/timezones | 
 [**Login**](AccountsApi.md#login) | **POST** /api/v1.0/accounts/login | 
@@ -253,6 +254,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="createbasicaccount"></a>
+# **CreateBasicAccount**
+> string CreateBasicAccount (CreateBasicAccountModel basicAccountModel)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class CreateBasicAccountExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AccountsApi();
+            var basicAccountModel = new CreateBasicAccountModel(); // CreateBasicAccountModel | 
+
+            try
+            {
+                string result = apiInstance.CreateBasicAccount(basicAccountModel);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AccountsApi.CreateBasicAccount: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **basicAccountModel** | [**CreateBasicAccountModel**](CreateBasicAccountModel.md)|  | 
+
+### Return type
+
+**string**
 
 ### Authorization
 
