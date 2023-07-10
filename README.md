@@ -213,6 +213,9 @@ Class | Method | HTTP request | Description
 *ChannelsApi* | [**UnassignStoreFromChannel**](docs/ChannelsApi.md#unassignstorefromchannel) | **DELETE** /api/v1.0/{appId}/channels/unassign-store | 
 *ChannelsStoreMappingApi* | [**ChannelsGetStoreChannelStoreMapping**](docs/ChannelsStoreMappingApi.md#channelsgetstorechannelstoremapping) | **GET** /api/v1.0/{appId}/channels/storemappings | 
 *ChannelsStoreMappingApi* | [**ChannelsSetStoreChannelStoreMapping**](docs/ChannelsStoreMappingApi.md#channelssetstorechannelstoremapping) | **POST** /api/v1.0/{appId}/channels/storemappings | 
+*ClientsApi* | [**GetClient**](docs/ClientsApi.md#getclient) | **GET** /api/v1.0/clients/{clientId} | 
+*ClientsApi* | [**SetSalesForceContactId**](docs/ClientsApi.md#setsalesforcecontactid) | **POST** /api/v1.0/clients/{clientId}/salesforcecontactid | 
+*ClientsApi* | [**SetStripeCustomerId**](docs/ClientsApi.md#setstripecustomerid) | **POST** /api/v1.0/clients/{clientId}/stripecustomerid | 
 *ContentSecurityPolicyApi* | [**ContentSecurityPolicyReport**](docs/ContentSecurityPolicyApi.md#contentsecuritypolicyreport) | **POST** /api/v1.0/csp/report | 
 *CrossSellApi* | [**GetCrossSellMenuItems**](docs/CrossSellApi.md#getcrosssellmenuitems) | **GET** /api/v1.0/{appId}/crossSell/menuItems | 
 *CustomersApi* | [**GetCustomerById**](docs/CustomersApi.md#getcustomerbyid) | **GET** /api/v1.0/{appId}/customers/{customerId} | 
