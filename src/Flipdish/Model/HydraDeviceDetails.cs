@@ -98,7 +98,8 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="HydraDeviceDetails" /> class.
         /// </summary>
         /// <param name="hydraConfigId">Flipdish internal device identifier.</param>
-        /// <param name="deviceId">Device Id or Serial Number.</param>
+        /// <param name="deviceId">Device Id.</param>
+        /// <param name="serialNumber">Serial Number.</param>
         /// <param name="deviceType">Type of the device.</param>
         /// <param name="status">Status of the device.</param>
         /// <param name="deviceName">Device Name.</param>
@@ -108,10 +109,11 @@ namespace Flipdish.Model
         /// <param name="buildNumber">Build number of the device.</param>
         /// <param name="gitSha">SHA of the commit.</param>
         /// <param name="gitBranch">Build branch.</param>
-        public HydraDeviceDetails(int? hydraConfigId = default(int?), string deviceId = default(string), DeviceTypeEnum? deviceType = default(DeviceTypeEnum?), StatusEnum? status = default(StatusEnum?), string deviceName = default(string), List<HydraStoreData> storeNames = default(List<HydraStoreData>), DateTime? lastPollUtc = default(DateTime?), string version = default(string), string buildNumber = default(string), string gitSha = default(string), string gitBranch = default(string))
+        public HydraDeviceDetails(int? hydraConfigId = default(int?), string deviceId = default(string), string serialNumber = default(string), DeviceTypeEnum? deviceType = default(DeviceTypeEnum?), StatusEnum? status = default(StatusEnum?), string deviceName = default(string), List<HydraStoreData> storeNames = default(List<HydraStoreData>), DateTime? lastPollUtc = default(DateTime?), string version = default(string), string buildNumber = default(string), string gitSha = default(string), string gitBranch = default(string))
         {
             this.HydraConfigId = hydraConfigId;
             this.DeviceId = deviceId;
+            this.SerialNumber = serialNumber;
             this.DeviceType = deviceType;
             this.Status = status;
             this.DeviceName = deviceName;
@@ -131,11 +133,18 @@ namespace Flipdish.Model
         public int? HydraConfigId { get; set; }
 
         /// <summary>
-        /// Device Id or Serial Number
+        /// Device Id
         /// </summary>
-        /// <value>Device Id or Serial Number</value>
+        /// <value>Device Id</value>
         [DataMember(Name="DeviceId", EmitDefaultValue=false)]
         public string DeviceId { get; set; }
+
+        /// <summary>
+        /// Serial Number
+        /// </summary>
+        /// <value>Serial Number</value>
+        [DataMember(Name="SerialNumber", EmitDefaultValue=false)]
+        public string SerialNumber { get; set; }
 
 
 
@@ -198,6 +207,7 @@ namespace Flipdish.Model
             sb.Append("class HydraDeviceDetails {\n");
             sb.Append("  HydraConfigId: ").Append(HydraConfigId).Append("\n");
             sb.Append("  DeviceId: ").Append(DeviceId).Append("\n");
+            sb.Append("  SerialNumber: ").Append(SerialNumber).Append("\n");
             sb.Append("  DeviceType: ").Append(DeviceType).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  DeviceName: ").Append(DeviceName).Append("\n");
@@ -250,6 +260,11 @@ namespace Flipdish.Model
                     this.DeviceId == input.DeviceId ||
                     (this.DeviceId != null &&
                     this.DeviceId.Equals(input.DeviceId))
+                ) && 
+                (
+                    this.SerialNumber == input.SerialNumber ||
+                    (this.SerialNumber != null &&
+                    this.SerialNumber.Equals(input.SerialNumber))
                 ) && 
                 (
                     this.DeviceType == input.DeviceType ||
@@ -311,6 +326,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.HydraConfigId.GetHashCode();
                 if (this.DeviceId != null)
                     hashCode = hashCode * 59 + this.DeviceId.GetHashCode();
+                if (this.SerialNumber != null)
+                    hashCode = hashCode * 59 + this.SerialNumber.GetHashCode();
                 if (this.DeviceType != null)
                     hashCode = hashCode * 59 + this.DeviceType.GetHashCode();
                 if (this.Status != null)
