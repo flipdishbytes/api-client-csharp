@@ -423,6 +423,7 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**GetOrderById**](docs/OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | 
 *OrdersApi* | [**GetOrders**](docs/OrdersApi.md#getorders) | **GET** /api/v1.0/orders | 
 *OrdersApi* | [**GetOrdersSummary**](docs/OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | 
+*OrdersApi* | [**GetReadyToProcess**](docs/OrdersApi.md#getreadytoprocess) | **GET** /api/v1.0/{appId}/orders/ready_to_process | 
 *OrdersApi* | [**RefundOrder**](docs/OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | 
 *OrdersApi* | [**RejectOrder**](docs/OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | 
 *OrdersApi* | [**SearchFulfillmentStatuses**](docs/OrdersApi.md#searchfulfillmentstatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | 
@@ -880,8 +881,10 @@ Class | Method | HTTP request | Description
  - [Model.OrderItem](docs/OrderItem.md)
  - [Model.OrderItemDm](docs/OrderItemDm.md)
  - [Model.OrderItemOption](docs/OrderItemOption.md)
+ - [Model.OrderList](docs/OrderList.md)
  - [Model.OrderPaymentInformation](docs/OrderPaymentInformation.md)
  - [Model.OrderRatingUpdatedEvent](docs/OrderRatingUpdatedEvent.md)
+ - [Model.OrderReference](docs/OrderReference.md)
  - [Model.OrderRefundedEvent](docs/OrderRefundedEvent.md)
  - [Model.OrderRejectedEvent](docs/OrderRejectedEvent.md)
  - [Model.OrderSummary](docs/OrderSummary.md)

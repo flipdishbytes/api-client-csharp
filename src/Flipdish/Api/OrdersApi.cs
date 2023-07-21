@@ -231,6 +231,29 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>OrderList</returns>
+        OrderList GetReadyToProcess (string appId, List<int?> storeId = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>ApiResponse of OrderList</returns>
+        ApiResponse<OrderList> GetReadyToProcessWithHttpInfo (string appId, List<int?> storeId = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="refundObject"></param>
         /// <returns></returns>
@@ -541,6 +564,29 @@ namespace Flipdish.Api
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultOrderSummary)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrderSummary>> GetOrdersSummaryAsyncWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>Task of OrderList</returns>
+        System.Threading.Tasks.Task<OrderList> GetReadyToProcessAsync (string appId, List<int?> storeId = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>Task of ApiResponse (OrderList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OrderList>> GetReadyToProcessAsyncWithHttpInfo (string appId, List<int?> storeId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -2078,6 +2124,163 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiPaginationResultOrderSummary>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultOrderSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultOrderSummary)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>OrderList</returns>
+        public OrderList GetReadyToProcess (string appId, List<int?> storeId = null)
+        {
+             ApiResponse<OrderList> localVarResponse = GetReadyToProcessWithHttpInfo(appId, storeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>ApiResponse of OrderList</returns>
+        public ApiResponse< OrderList > GetReadyToProcessWithHttpInfo (string appId, List<int?> storeId = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OrdersApi->GetReadyToProcess");
+
+            var localVarPath = "./api/v1.0/{appId}/orders/ready_to_process";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeId", storeId)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetReadyToProcess", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<OrderList>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (OrderList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrderList)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>Task of OrderList</returns>
+        public async System.Threading.Tasks.Task<OrderList> GetReadyToProcessAsync (string appId, List<int?> storeId = null)
+        {
+             ApiResponse<OrderList> localVarResponse = await GetReadyToProcessAsyncWithHttpInfo(appId, storeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>Task of ApiResponse (OrderList)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OrderList>> GetReadyToProcessAsyncWithHttpInfo (string appId, List<int?> storeId = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OrdersApi->GetReadyToProcess");
+
+            var localVarPath = "./api/v1.0/{appId}/orders/ready_to_process";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeId", storeId)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetReadyToProcess", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<OrderList>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (OrderList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrderList)));
         }
 
         /// <summary>

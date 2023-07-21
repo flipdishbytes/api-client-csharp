@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**GetOrderById**](OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | 
 [**GetOrders**](OrdersApi.md#getorders) | **GET** /api/v1.0/orders | 
 [**GetOrdersSummary**](OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | 
+[**GetReadyToProcess**](OrdersApi.md#getreadytoprocess) | **GET** /api/v1.0/{appId}/orders/ready_to_process | 
 [**RefundOrder**](OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | 
 [**RejectOrder**](OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | 
 [**SearchFulfillmentStatuses**](OrdersApi.md#searchfulfillmentstatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | 
@@ -525,6 +526,69 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiPaginationResultOrderSummary**](RestApiPaginationResultOrderSummary.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getreadytoprocess"></a>
+# **GetReadyToProcess**
+> OrderList GetReadyToProcess (string appId, List<int?> storeId = null)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetReadyToProcessExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OrdersApi();
+            var appId = appId_example;  // string | 
+            var storeId = new List<int?>(); // List<int?> |  (optional) 
+
+            try
+            {
+                OrderList result = apiInstance.GetReadyToProcess(appId, storeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrdersApi.GetReadyToProcess: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **storeId** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
+
+### Return type
+
+[**OrderList**](OrderList.md)
 
 ### Authorization
 
