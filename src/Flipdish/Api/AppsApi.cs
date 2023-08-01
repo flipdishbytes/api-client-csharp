@@ -203,6 +203,27 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whitelabelId"></param>
+        /// <returns>AppLookup</returns>
+        AppLookup LookupByWhitelabelId (int? whitelabelId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whitelabelId"></param>
+        /// <returns>ApiResponse of AppLookup</returns>
+        ApiResponse<AppLookup> LookupByWhitelabelIdWithHttpInfo (int? whitelabelId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="appConfigUpdate"></param>
         /// <returns>RestApiResultApp</returns>
@@ -583,6 +604,27 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> IsPanaceaVanityUrlAvailableAsyncWithHttpInfo (string vanityUrl, string appId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whitelabelId"></param>
+        /// <returns>Task of AppLookup</returns>
+        System.Threading.Tasks.Task<AppLookup> LookupByWhitelabelIdAsync (int? whitelabelId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whitelabelId"></param>
+        /// <returns>Task of ApiResponse (AppLookup)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AppLookup>> LookupByWhitelabelIdAsyncWithHttpInfo (int? whitelabelId);
         /// <summary>
         /// 
         /// </summary>
@@ -2108,6 +2150,157 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiStringResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whitelabelId"></param>
+        /// <returns>AppLookup</returns>
+        public AppLookup LookupByWhitelabelId (int? whitelabelId)
+        {
+             ApiResponse<AppLookup> localVarResponse = LookupByWhitelabelIdWithHttpInfo(whitelabelId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whitelabelId"></param>
+        /// <returns>ApiResponse of AppLookup</returns>
+        public ApiResponse< AppLookup > LookupByWhitelabelIdWithHttpInfo (int? whitelabelId)
+        {
+            // verify the required parameter 'whitelabelId' is set
+            if (whitelabelId == null)
+                throw new ApiException(400, "Missing required parameter 'whitelabelId' when calling AppsApi->LookupByWhitelabelId");
+
+            var localVarPath = "./api/v1.0/apps/{whitelabelId}/lookup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (whitelabelId != null) localVarPathParams.Add("whitelabelId", this.Configuration.ApiClient.ParameterToString(whitelabelId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("LookupByWhitelabelId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AppLookup>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (AppLookup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppLookup)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whitelabelId"></param>
+        /// <returns>Task of AppLookup</returns>
+        public async System.Threading.Tasks.Task<AppLookup> LookupByWhitelabelIdAsync (int? whitelabelId)
+        {
+             ApiResponse<AppLookup> localVarResponse = await LookupByWhitelabelIdAsyncWithHttpInfo(whitelabelId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whitelabelId"></param>
+        /// <returns>Task of ApiResponse (AppLookup)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AppLookup>> LookupByWhitelabelIdAsyncWithHttpInfo (int? whitelabelId)
+        {
+            // verify the required parameter 'whitelabelId' is set
+            if (whitelabelId == null)
+                throw new ApiException(400, "Missing required parameter 'whitelabelId' when calling AppsApi->LookupByWhitelabelId");
+
+            var localVarPath = "./api/v1.0/apps/{whitelabelId}/lookup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (whitelabelId != null) localVarPathParams.Add("whitelabelId", this.Configuration.ApiClient.ParameterToString(whitelabelId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("LookupByWhitelabelId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AppLookup>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (AppLookup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppLookup)));
         }
 
         /// <summary>
