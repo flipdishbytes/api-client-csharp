@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**GetEMVTerminalDetails**](HydraApi.md#getemvterminaldetails) | **GET** /api/v1.0/{appId}/hydra/emvterminal | 
 [**GetEmvOrderState**](HydraApi.md#getemvorderstate) | **GET** /api/v1.0/{appId}/hydra/emvorderstate/{orderId} | 
 [**GetKioskCashPaymentSettings**](HydraApi.md#getkioskcashpaymentsettings) | **GET** /api/v1.0/{appId}/kioskcashsettings/{deviceId} | 
+[**GetKioskSettings**](HydraApi.md#getkiosksettings) | **GET** /api/v1.0/{appId}/kiosksettings/{deviceId} | 
 [**GetRegistration**](HydraApi.md#getregistration) | **GET** /api/v1.0/hydra/registration | 
 [**GetSettings**](HydraApi.md#getsettings) | **GET** /api/v1.0/hydra/settings | 
 [**HydraCreateEmv**](HydraApi.md#hydracreateemv) | **POST** /api/v1.0/{appId}/emvterminals | 
@@ -25,6 +26,7 @@ Method | HTTP request | Description
 [**UnAssign**](HydraApi.md#unassign) | **DELETE** /api/v1.0/{appId}/hydra/{deviceId}/registration | 
 [**UnassignEmv**](HydraApi.md#unassignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId} | 
 [**UpdateKioskCashVisibilitySettings**](HydraApi.md#updatekioskcashvisibilitysettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | 
+[**UpdateKioskSettings**](HydraApi.md#updatekiosksettings) | **POST** /api/v1.0/{appId}/kiosksettings/{deviceId} | 
 
 
 <a name="assignemv"></a>
@@ -661,6 +663,69 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiArrayResultKioskCashPaymentSettings**](RestApiArrayResultKioskCashPaymentSettings.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getkiosksettings"></a>
+# **GetKioskSettings**
+> RestApiResultKioskSettings GetKioskSettings (string appId, string deviceId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetKioskSettingsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new HydraApi();
+            var appId = appId_example;  // string | 
+            var deviceId = deviceId_example;  // string | 
+
+            try
+            {
+                RestApiResultKioskSettings result = apiInstance.GetKioskSettings(appId, deviceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling HydraApi.GetKioskSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **deviceId** | **string**|  | 
+
+### Return type
+
+[**RestApiResultKioskSettings**](RestApiResultKioskSettings.md)
 
 ### Authorization
 
@@ -1350,6 +1415,70 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="updatekiosksettings"></a>
+# **UpdateKioskSettings**
+> void UpdateKioskSettings (string appId, string deviceId, KioskSettings settings)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UpdateKioskSettingsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new HydraApi();
+            var appId = appId_example;  // string | 
+            var deviceId = deviceId_example;  // string | 
+            var settings = new KioskSettings(); // KioskSettings | 
+
+            try
+            {
+                apiInstance.UpdateKioskSettings(appId, deviceId, settings);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling HydraApi.UpdateKioskSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **deviceId** | **string**|  | 
+ **settings** | [**KioskSettings**](KioskSettings.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

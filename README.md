@@ -280,6 +280,7 @@ Class | Method | HTTP request | Description
 *HydraApi* | [**GetEMVTerminalDetails**](docs/HydraApi.md#getemvterminaldetails) | **GET** /api/v1.0/{appId}/hydra/emvterminal | 
 *HydraApi* | [**GetEmvOrderState**](docs/HydraApi.md#getemvorderstate) | **GET** /api/v1.0/{appId}/hydra/emvorderstate/{orderId} | 
 *HydraApi* | [**GetKioskCashPaymentSettings**](docs/HydraApi.md#getkioskcashpaymentsettings) | **GET** /api/v1.0/{appId}/kioskcashsettings/{deviceId} | 
+*HydraApi* | [**GetKioskSettings**](docs/HydraApi.md#getkiosksettings) | **GET** /api/v1.0/{appId}/kiosksettings/{deviceId} | 
 *HydraApi* | [**GetRegistration**](docs/HydraApi.md#getregistration) | **GET** /api/v1.0/hydra/registration | 
 *HydraApi* | [**GetSettings**](docs/HydraApi.md#getsettings) | **GET** /api/v1.0/hydra/settings | 
 *HydraApi* | [**HydraCreateEmv**](docs/HydraApi.md#hydracreateemv) | **POST** /api/v1.0/{appId}/emvterminals | 
@@ -291,6 +292,7 @@ Class | Method | HTTP request | Description
 *HydraApi* | [**UnAssign**](docs/HydraApi.md#unassign) | **DELETE** /api/v1.0/{appId}/hydra/{deviceId}/registration | 
 *HydraApi* | [**UnassignEmv**](docs/HydraApi.md#unassignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId} | 
 *HydraApi* | [**UpdateKioskCashVisibilitySettings**](docs/HydraApi.md#updatekioskcashvisibilitysettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | 
+*HydraApi* | [**UpdateKioskSettings**](docs/HydraApi.md#updatekiosksettings) | **POST** /api/v1.0/{appId}/kiosksettings/{deviceId} | 
 *IntercomApi* | [**UserHash**](docs/IntercomApi.md#userhash) | **GET** /api/v1.0/intercom/userHash | 
 *InvoicesApi* | [**GetInvoices**](docs/InvoicesApi.md#getinvoices) | **GET** /api/v1.0/{appId}/invoices | 
 *KioskIotApi* | [**GetKioskIotConnection**](docs/KioskIotApi.md#getkioskiotconnection) | **POST** /api/v1.0/kioskiot/connect | 
@@ -772,6 +774,7 @@ Class | Method | HTTP request | Description
  - [Model.KioskCashPaymentSettings](docs/KioskCashPaymentSettings.md)
  - [Model.KioskCashSetting](docs/KioskCashSetting.md)
  - [Model.KioskIotConnectionParameters](docs/KioskIotConnectionParameters.md)
+ - [Model.KioskSettings](docs/KioskSettings.md)
  - [Model.KioskStoreSettings](docs/KioskStoreSettings.md)
  - [Model.KioskTerminalActionStateChangedEvent](docs/KioskTerminalActionStateChangedEvent.md)
  - [Model.Language](docs/Language.md)
@@ -1078,6 +1081,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultJobResponse](docs/RestApiResultJobResponse.md)
  - [Model.RestApiResultKioskCashSetting](docs/RestApiResultKioskCashSetting.md)
  - [Model.RestApiResultKioskIotConnectionParameters](docs/RestApiResultKioskIotConnectionParameters.md)
+ - [Model.RestApiResultKioskSettings](docs/RestApiResultKioskSettings.md)
  - [Model.RestApiResultKioskStoreSettings](docs/RestApiResultKioskStoreSettings.md)
  - [Model.RestApiResultLightspeedSettings](docs/RestApiResultLightspeedSettings.md)
  - [Model.RestApiResultLocationArea](docs/RestApiResultLocationArea.md)
