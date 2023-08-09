@@ -44,6 +44,8 @@ Name | Type | Description | Notes
 **FixedFeeDelivery** | **double?** | Gets or sets the fixed fee for delivery orders. | [optional] 
 **PercentFeeCardPosTransaction** | **double?** | Gets or sets the percent fee for POS transactions. | [optional] 
 **FixedFeeCardPosTransaction** | **double?** | Gets or sets the fixed fee for POS transactions. | [optional] 
+**PercentFeeOrderWithGoogle** | **double?** | Additional percentage fee charged on orders submitted through Order With Google | [optional] 
+**FixedFeeOrderWithGoogle** | **double?** | Additional fixed fee charged on orders submitted through Order With Google | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
