@@ -109,7 +109,6 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuSectionItem" /> class.
         /// </summary>
-        /// <param name="menuItemId">Menu item identifier. This ID may change at any time. Use &#x60;PublicId&#x60; if you need a permanent reference to the item..</param>
         /// <param name="actualPrice">Actual price - the minimum price possible when all required option set items prices are included..</param>
         /// <param name="menuItemOptionSets">Menu item option sets.</param>
         /// <param name="dailySpecialHours">Daily special hours.</param>
@@ -130,9 +129,9 @@ namespace Flipdish.Model
         /// <param name="disableVouchers">If true, then vouchers won&#39;t be applied for this item.</param>
         /// <param name="imageName">Image url.</param>
         /// <param name="imageUrl">Image url.</param>
-        public MenuSectionItem(int? menuItemId = default(int?), double? actualPrice = default(double?), List<MenuItemOptionSet> menuItemOptionSets = default(List<MenuItemOptionSet>), List<BusinessHoursPeriod> dailySpecialHours = default(List<BusinessHoursPeriod>), Guid? publicId = default(Guid?), string taxRateName = default(string), int? taxRateId = default(int?), double? taxValue = default(double?), List<CreateMetadata> metadata = default(List<CreateMetadata>), string catalogItemId = default(string), string name = default(string), string description = default(string), SpicinessRatingEnum? spicinessRating = default(SpicinessRatingEnum?), double? price = default(double?), int? displayOrder = default(int?), bool? alcohol = default(bool?), bool? isAvailable = default(bool?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), bool? disableVouchers = default(bool?), string imageName = default(string), string imageUrl = default(string))
+        /// <param name="menuItemId">Menu Item Id.</param>
+        public MenuSectionItem(double? actualPrice = default(double?), List<MenuItemOptionSet> menuItemOptionSets = default(List<MenuItemOptionSet>), List<BusinessHoursPeriod> dailySpecialHours = default(List<BusinessHoursPeriod>), Guid? publicId = default(Guid?), string taxRateName = default(string), int? taxRateId = default(int?), double? taxValue = default(double?), List<CreateMetadata> metadata = default(List<CreateMetadata>), string catalogItemId = default(string), string name = default(string), string description = default(string), SpicinessRatingEnum? spicinessRating = default(SpicinessRatingEnum?), double? price = default(double?), int? displayOrder = default(int?), bool? alcohol = default(bool?), bool? isAvailable = default(bool?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), bool? disableVouchers = default(bool?), string imageName = default(string), string imageUrl = default(string), int? menuItemId = default(int?))
         {
-            this.MenuItemId = menuItemId;
             this.ActualPrice = actualPrice;
             this.MenuItemOptionSets = menuItemOptionSets;
             this.DailySpecialHours = dailySpecialHours;
@@ -153,15 +152,9 @@ namespace Flipdish.Model
             this.DisableVouchers = disableVouchers;
             this.ImageName = imageName;
             this.ImageUrl = imageUrl;
+            this.MenuItemId = menuItemId;
         }
         
-        /// <summary>
-        /// Menu item identifier. This ID may change at any time. Use &#x60;PublicId&#x60; if you need a permanent reference to the item.
-        /// </summary>
-        /// <value>Menu item identifier. This ID may change at any time. Use &#x60;PublicId&#x60; if you need a permanent reference to the item.</value>
-        [DataMember(Name="MenuItemId", EmitDefaultValue=false)]
-        public int? MenuItemId { get; set; }
-
         /// <summary>
         /// Actual price - the minimum price possible when all required option set items prices are included.
         /// </summary>
@@ -291,6 +284,13 @@ namespace Flipdish.Model
         public string ImageUrl { get; set; }
 
         /// <summary>
+        /// Menu Item Id
+        /// </summary>
+        /// <value>Menu Item Id</value>
+        [DataMember(Name="MenuItemId", EmitDefaultValue=false)]
+        public int? MenuItemId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -298,7 +298,6 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MenuSectionItem {\n");
-            sb.Append("  MenuItemId: ").Append(MenuItemId).Append("\n");
             sb.Append("  ActualPrice: ").Append(ActualPrice).Append("\n");
             sb.Append("  MenuItemOptionSets: ").Append(MenuItemOptionSets).Append("\n");
             sb.Append("  DailySpecialHours: ").Append(DailySpecialHours).Append("\n");
@@ -319,6 +318,7 @@ namespace Flipdish.Model
             sb.Append("  DisableVouchers: ").Append(DisableVouchers).Append("\n");
             sb.Append("  ImageName: ").Append(ImageName).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
+            sb.Append("  MenuItemId: ").Append(MenuItemId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -353,11 +353,6 @@ namespace Flipdish.Model
                 return false;
 
             return 
-                (
-                    this.MenuItemId == input.MenuItemId ||
-                    (this.MenuItemId != null &&
-                    this.MenuItemId.Equals(input.MenuItemId))
-                ) && 
                 (
                     this.ActualPrice == input.ActualPrice ||
                     (this.ActualPrice != null &&
@@ -457,6 +452,11 @@ namespace Flipdish.Model
                     this.ImageUrl == input.ImageUrl ||
                     (this.ImageUrl != null &&
                     this.ImageUrl.Equals(input.ImageUrl))
+                ) && 
+                (
+                    this.MenuItemId == input.MenuItemId ||
+                    (this.MenuItemId != null &&
+                    this.MenuItemId.Equals(input.MenuItemId))
                 );
         }
 
@@ -469,8 +469,6 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.MenuItemId != null)
-                    hashCode = hashCode * 59 + this.MenuItemId.GetHashCode();
                 if (this.ActualPrice != null)
                     hashCode = hashCode * 59 + this.ActualPrice.GetHashCode();
                 if (this.MenuItemOptionSets != null)
@@ -511,6 +509,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ImageName.GetHashCode();
                 if (this.ImageUrl != null)
                     hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
+                if (this.MenuItemId != null)
+                    hashCode = hashCode * 59 + this.MenuItemId.GetHashCode();
                 return hashCode;
             }
         }

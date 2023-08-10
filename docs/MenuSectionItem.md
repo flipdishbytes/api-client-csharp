@@ -3,7 +3,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MenuItemId** | **int?** | Menu item identifier. This ID may change at any time. Use &#x60;PublicId&#x60; if you need a permanent reference to the item. | [optional] 
 **ActualPrice** | **double?** | Actual price - the minimum price possible when all required option set items prices are included. | [optional] 
 **MenuItemOptionSets** | [**List&lt;MenuItemOptionSet&gt;**](MenuItemOptionSet.md) | Menu item option sets | [optional] 
 **DailySpecialHours** | [**List&lt;BusinessHoursPeriod&gt;**](BusinessHoursPeriod.md) | Daily special hours | [optional] 
@@ -24,6 +23,7 @@ Name | Type | Description | Notes
 **DisableVouchers** | **bool?** | If true, then vouchers won&#39;t be applied for this item | [optional] 
 **ImageName** | **string** | Image url | [optional] 
 **ImageUrl** | **string** | Image url | [optional] 
+**MenuItemId** | **int?** | Menu Item Id | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
