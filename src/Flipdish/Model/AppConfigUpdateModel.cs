@@ -70,8 +70,9 @@ namespace Flipdish.Model
         /// <param name="kioskPrimaryColour">Primary colour used on the Kiosk.</param>
         /// <param name="applicationCategory">Application Category.</param>
         /// <param name="isPanaceaEnabled">Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain..</param>
+        /// <param name="panaceaVanityUrl">In case of IsPanaceaEnabled is true, the app can be accessed via https://my.flipdish.com/{PanaceaVanityUrl}.</param>
         /// <param name="cookieConsentPromptEnabled">Cookie Consent Prompt Enabled.</param>
-        public AppConfigUpdateModel(string name = default(string), string hostName = default(string), string mainColor = default(string), string kioskPrimaryColour = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?), bool? isPanaceaEnabled = default(bool?), bool? cookieConsentPromptEnabled = default(bool?))
+        public AppConfigUpdateModel(string name = default(string), string hostName = default(string), string mainColor = default(string), string kioskPrimaryColour = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?), bool? isPanaceaEnabled = default(bool?), string panaceaVanityUrl = default(string), bool? cookieConsentPromptEnabled = default(bool?))
         {
             this.Name = name;
             this.HostName = hostName;
@@ -79,6 +80,7 @@ namespace Flipdish.Model
             this.KioskPrimaryColour = kioskPrimaryColour;
             this.ApplicationCategory = applicationCategory;
             this.IsPanaceaEnabled = isPanaceaEnabled;
+            this.PanaceaVanityUrl = panaceaVanityUrl;
             this.CookieConsentPromptEnabled = cookieConsentPromptEnabled;
         }
         
@@ -119,6 +121,13 @@ namespace Flipdish.Model
         public bool? IsPanaceaEnabled { get; set; }
 
         /// <summary>
+        /// In case of IsPanaceaEnabled is true, the app can be accessed via https://my.flipdish.com/{PanaceaVanityUrl}
+        /// </summary>
+        /// <value>In case of IsPanaceaEnabled is true, the app can be accessed via https://my.flipdish.com/{PanaceaVanityUrl}</value>
+        [DataMember(Name="PanaceaVanityUrl", EmitDefaultValue=false)]
+        public string PanaceaVanityUrl { get; set; }
+
+        /// <summary>
         /// Cookie Consent Prompt Enabled
         /// </summary>
         /// <value>Cookie Consent Prompt Enabled</value>
@@ -139,6 +148,7 @@ namespace Flipdish.Model
             sb.Append("  KioskPrimaryColour: ").Append(KioskPrimaryColour).Append("\n");
             sb.Append("  ApplicationCategory: ").Append(ApplicationCategory).Append("\n");
             sb.Append("  IsPanaceaEnabled: ").Append(IsPanaceaEnabled).Append("\n");
+            sb.Append("  PanaceaVanityUrl: ").Append(PanaceaVanityUrl).Append("\n");
             sb.Append("  CookieConsentPromptEnabled: ").Append(CookieConsentPromptEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -205,6 +215,11 @@ namespace Flipdish.Model
                     this.IsPanaceaEnabled.Equals(input.IsPanaceaEnabled))
                 ) && 
                 (
+                    this.PanaceaVanityUrl == input.PanaceaVanityUrl ||
+                    (this.PanaceaVanityUrl != null &&
+                    this.PanaceaVanityUrl.Equals(input.PanaceaVanityUrl))
+                ) && 
+                (
                     this.CookieConsentPromptEnabled == input.CookieConsentPromptEnabled ||
                     (this.CookieConsentPromptEnabled != null &&
                     this.CookieConsentPromptEnabled.Equals(input.CookieConsentPromptEnabled))
@@ -232,6 +247,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ApplicationCategory.GetHashCode();
                 if (this.IsPanaceaEnabled != null)
                     hashCode = hashCode * 59 + this.IsPanaceaEnabled.GetHashCode();
+                if (this.PanaceaVanityUrl != null)
+                    hashCode = hashCode * 59 + this.PanaceaVanityUrl.GetHashCode();
                 if (this.CookieConsentPromptEnabled != null)
                     hashCode = hashCode * 59 + this.CookieConsentPromptEnabled.GetHashCode();
                 return hashCode;
