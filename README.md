@@ -297,9 +297,6 @@ Class | Method | HTTP request | Description
 *InvoicesApi* | [**GetInvoices**](docs/InvoicesApi.md#getinvoices) | **GET** /api/v1.0/{appId}/invoices | 
 *KioskIotApi* | [**GetKioskIotConnection**](docs/KioskIotApi.md#getkioskiotconnection) | **POST** /api/v1.0/kioskiot/connect | 
 *KioskIotApi* | [**QueryTelemetrySeries**](docs/KioskIotApi.md#querytelemetryseries) | **POST** /api/v1.0/{appId}/kioskiot/timeseries/query | 
-*KioskStoreSettingsApi* | [**GetAllKioskSettingsForStore**](docs/KioskStoreSettingsApi.md#getallkiosksettingsforstore) | **GET** /api/v1.0/{appId}/kiosksettings/store/{storeId} | 
-*KioskStoreSettingsApi* | [**GetAllStoreSettingsForKioskHydra**](docs/KioskStoreSettingsApi.md#getallstoresettingsforkioskhydra) | **GET** /api/v1.0/kioskstoresettings | 
-*KioskStoreSettingsApi* | [**UpdateCashSettingForKiosk**](docs/KioskStoreSettingsApi.md#updatecashsettingforkiosk) | **POST** /api/v1.0/{appId}/kiosksettings/cash | 
 *LightspeedApi* | [**LightspeedGenerateMenu**](docs/LightspeedApi.md#lightspeedgeneratemenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
 *LightspeedApi* | [**LightspeedGetStoreSettings**](docs/LightspeedApi.md#lightspeedgetstoresettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
 *LightspeedApi* | [**LightspeedSaveStoreSettings**](docs/LightspeedApi.md#lightspeedsavestoresettings) | **POST** /api/v1.0/lightspeed/{storeId}/settings | 
@@ -772,10 +769,8 @@ Class | Method | HTTP request | Description
  - [Model.KioskBluetoothTerminalUpdatedEvent](docs/KioskBluetoothTerminalUpdatedEvent.md)
  - [Model.KioskBluetoothUnpairingModeEvent](docs/KioskBluetoothUnpairingModeEvent.md)
  - [Model.KioskCashPaymentSettings](docs/KioskCashPaymentSettings.md)
- - [Model.KioskCashSetting](docs/KioskCashSetting.md)
  - [Model.KioskIotConnectionParameters](docs/KioskIotConnectionParameters.md)
  - [Model.KioskSettings](docs/KioskSettings.md)
- - [Model.KioskStoreSettings](docs/KioskStoreSettings.md)
  - [Model.KioskTerminalActionStateChangedEvent](docs/KioskTerminalActionStateChangedEvent.md)
  - [Model.Language](docs/Language.md)
  - [Model.LastPaymentError](docs/LastPaymentError.md)
@@ -1079,10 +1074,8 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultIndexPageBase](docs/RestApiResultIndexPageBase.md)
  - [Model.RestApiResultIntercomUserHash](docs/RestApiResultIntercomUserHash.md)
  - [Model.RestApiResultJobResponse](docs/RestApiResultJobResponse.md)
- - [Model.RestApiResultKioskCashSetting](docs/RestApiResultKioskCashSetting.md)
  - [Model.RestApiResultKioskIotConnectionParameters](docs/RestApiResultKioskIotConnectionParameters.md)
  - [Model.RestApiResultKioskSettings](docs/RestApiResultKioskSettings.md)
- - [Model.RestApiResultKioskStoreSettings](docs/RestApiResultKioskStoreSettings.md)
  - [Model.RestApiResultLightspeedSettings](docs/RestApiResultLightspeedSettings.md)
  - [Model.RestApiResultLocationArea](docs/RestApiResultLocationArea.md)
  - [Model.RestApiResultLocationAreaLocation](docs/RestApiResultLocationAreaLocation.md)
@@ -1132,7 +1125,6 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultStoreEndOfDayReport](docs/RestApiResultStoreEndOfDayReport.md)
  - [Model.RestApiResultStoreGroup](docs/RestApiResultStoreGroup.md)
  - [Model.RestApiResultStoreGroupBase](docs/RestApiResultStoreGroupBase.md)
- - [Model.RestApiResultStoreKioskSettings](docs/RestApiResultStoreKioskSettings.md)
  - [Model.RestApiResultStoreOrderCapacityConfig](docs/RestApiResultStoreOrderCapacityConfig.md)
  - [Model.RestApiResultStripeConnectedAccount](docs/RestApiResultStripeConnectedAccount.md)
  - [Model.RestApiResultStripeTerminalConnectionToken](docs/RestApiResultStripeTerminalConnectionToken.md)
@@ -1201,9 +1193,7 @@ Class | Method | HTTP request | Description
  - [Model.StoreHeader](docs/StoreHeader.md)
  - [Model.StoreItemHeader](docs/StoreItemHeader.md)
  - [Model.StoreKioskSetting](docs/StoreKioskSetting.md)
- - [Model.StoreKioskSettingModel](docs/StoreKioskSettingModel.md)
  - [Model.StoreKioskSettingUpdatedEvent](docs/StoreKioskSettingUpdatedEvent.md)
- - [Model.StoreKioskSettings](docs/StoreKioskSettings.md)
  - [Model.StoreListItem](docs/StoreListItem.md)
  - [Model.StoreLogoCreatedEvent](docs/StoreLogoCreatedEvent.md)
  - [Model.StoreLogoDeletedEvent](docs/StoreLogoDeletedEvent.md)
