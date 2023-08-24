@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**AttachStoreToTerminal**](HydraApi.md#attachstoretoterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId} | 
 [**CancelEmvPayment**](HydraApi.md#cancelemvpayment) | **POST** /api/v1.0/{appId}/hydra/cancelemvpayment/{orderId} | 
 [**DetachStoreFromTerminal**](HydraApi.md#detachstorefromterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId} | 
+[**GetAblyToken**](HydraApi.md#getablytoken) | **GET** /api/v1.0/hydra/ably_token | 
 [**GetAttachedDevice**](HydraApi.md#getattacheddevice) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/{deviceId} | 
 [**GetAttachedDevices**](HydraApi.md#getattacheddevices) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/list | 
 [**GetEMVTerminalDetails**](HydraApi.md#getemvterminaldetails) | **GET** /api/v1.0/{appId}/hydra/emvterminal | 
@@ -338,6 +339,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultHydraStatus**](RestApiResultHydraStatus.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getablytoken"></a>
+# **GetAblyToken**
+> void GetAblyToken ()
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetAblyTokenExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new HydraApi();
+
+            try
+            {
+                apiInstance.GetAblyToken();
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling HydraApi.GetAblyToken: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

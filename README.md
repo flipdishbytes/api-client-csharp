@@ -275,6 +275,7 @@ Class | Method | HTTP request | Description
 *HydraApi* | [**AttachStoreToTerminal**](docs/HydraApi.md#attachstoretoterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId} | 
 *HydraApi* | [**CancelEmvPayment**](docs/HydraApi.md#cancelemvpayment) | **POST** /api/v1.0/{appId}/hydra/cancelemvpayment/{orderId} | 
 *HydraApi* | [**DetachStoreFromTerminal**](docs/HydraApi.md#detachstorefromterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId} | 
+*HydraApi* | [**GetAblyToken**](docs/HydraApi.md#getablytoken) | **GET** /api/v1.0/hydra/ably_token | 
 *HydraApi* | [**GetAttachedDevice**](docs/HydraApi.md#getattacheddevice) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/{deviceId} | 
 *HydraApi* | [**GetAttachedDevices**](docs/HydraApi.md#getattacheddevices) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/list | 
 *HydraApi* | [**GetEMVTerminalDetails**](docs/HydraApi.md#getemvterminaldetails) | **GET** /api/v1.0/{appId}/hydra/emvterminal | 
