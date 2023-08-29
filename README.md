@@ -379,6 +379,12 @@ Class | Method | HTTP request | Description
 *MenusApi* | [**UpdateMenu**](docs/MenusApi.md#updatemenu) | **POST** /api/v1.0/menus/{menuId} | Update menu
 *MenusApi* | [**UploadMenuImage**](docs/MenusApi.md#uploadmenuimage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
 *MenusApi* | [**UploadNewMenuForApp**](docs/MenusApi.md#uploadnewmenuforapp) | **POST** /api/v1.0/{appId}/menus/xlsx | Create a new menu from xlsx file.
+*MenusNutritionInfoApi* | [**AddOrUpdateMenuItemNutritionInfo**](docs/MenusNutritionInfoApi.md#addorupdatemenuitemnutritioninfo) | **POST** /api/v1.0/menus/{menuId}/menuItem/{publicId}/nutrition | Add or update menuitem nutrition info by menu item's publicId
+*MenusNutritionInfoApi* | [**AddOrUpdateMenuItemOptionSetItemNutritionInfo**](docs/MenusNutritionInfoApi.md#addorupdatemenuitemoptionsetitemnutritioninfo) | **POST** /api/v1.0/menus/{menuId}/menuItemOption/{publicId}/nutrition | Add or update menuitem optionsetitem nutrition info its publicId
+*MenusNutritionInfoApi* | [**AddOrUpdateMenuNutritionInfoByMenuId**](docs/MenusNutritionInfoApi.md#addorupdatemenunutritioninfobymenuid) | **POST** /api/v1.0/menus/{menuId}/nutrition | Add or update menu nutrition by identifier
+*MenusNutritionInfoApi* | [**DeleteMenuNutritionInfoByMenuId**](docs/MenusNutritionInfoApi.md#deletemenunutritioninfobymenuid) | **DELETE** /api/v1.0/menus/{menuId}/nutrition | Delete menu nutrition information by menuId
+*MenusNutritionInfoApi* | [**GetAllergens**](docs/MenusNutritionInfoApi.md#getallergens) | **GET** /api/v1.0/{appId}/menus/nutrition/allergens | Get allergens
+*MenusNutritionInfoApi* | [**GetMenuNutritionInfoByMenuId**](docs/MenusNutritionInfoApi.md#getmenunutritioninfobymenuid) | **GET** /api/v1.0/menus/{menuId}/nutrition | Get menu nutrition by menuId
 *MetafieldDefinitionsApi* | [**CreateMetafieldDefinition**](docs/MetafieldDefinitionsApi.md#createmetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | 
 *MetafieldDefinitionsApi* | [**GetMetafieldDefinitionByKey**](docs/MetafieldDefinitionsApi.md#getmetafielddefinitionbykey) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | 
 *MetafieldDefinitionsApi* | [**GetMetafieldDefinitions**](docs/MetafieldDefinitionsApi.md#getmetafielddefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | 
@@ -566,6 +572,7 @@ Class | Method | HTTP request | Description
  - [Model.AddressFormDisplayFormat](docs/AddressFormDisplayFormat.md)
  - [Model.AddressFormResponse](docs/AddressFormResponse.md)
  - [Model.AllMetadataResult](docs/AllMetadataResult.md)
+ - [Model.Allergen](docs/Allergen.md)
  - [Model.AnalyticsClientEvent](docs/AnalyticsClientEvent.md)
  - [Model.ApmCurrencyDataPoint](docs/ApmCurrencyDataPoint.md)
  - [Model.ApmDataPoint](docs/ApmDataPoint.md)
@@ -750,6 +757,7 @@ Class | Method | HTTP request | Description
  - [Model.InvoiceDiscount](docs/InvoiceDiscount.md)
  - [Model.InvoiceItem](docs/InvoiceItem.md)
  - [Model.InvoicePeriod](docs/InvoicePeriod.md)
+ - [Model.ItemNutritionInfoAddUpdateModel](docs/ItemNutritionInfoAddUpdateModel.md)
  - [Model.JobAddress](docs/JobAddress.md)
  - [Model.JobCancellation](docs/JobCancellation.md)
  - [Model.JobContact](docs/JobContact.md)
@@ -818,6 +826,7 @@ Class | Method | HTTP request | Description
  - [Model.MenuItemOptionSetItemDeletedEvent](docs/MenuItemOptionSetItemDeletedEvent.md)
  - [Model.MenuItemOptionSetItemUpdatedEvent](docs/MenuItemOptionSetItemUpdatedEvent.md)
  - [Model.MenuItemOptionSetUpdatedEvent](docs/MenuItemOptionSetUpdatedEvent.md)
+ - [Model.MenuNutritionInfoHeader](docs/MenuNutritionInfoHeader.md)
  - [Model.MenuObjectDisplayOrders](docs/MenuObjectDisplayOrders.md)
  - [Model.MenuSection](docs/MenuSection.md)
  - [Model.MenuSectionAvailability](docs/MenuSectionAvailability.md)
@@ -850,6 +859,11 @@ Class | Method | HTTP request | Description
  - [Model.MobileAppsSubmissionUpdatedEvent](docs/MobileAppsSubmissionUpdatedEvent.md)
  - [Model.ModelBase](docs/ModelBase.md)
  - [Model.NextStatusWithOrderType](docs/NextStatusWithOrderType.md)
+ - [Model.NutritionInfo](docs/NutritionInfo.md)
+ - [Model.NutritionInfoItemAddUpdateLabelModel](docs/NutritionInfoItemAddUpdateLabelModel.md)
+ - [Model.NutritionInfoLabel](docs/NutritionInfoLabel.md)
+ - [Model.NutritionInfoMenuItem](docs/NutritionInfoMenuItem.md)
+ - [Model.NutritionInfoMenuOptionSetItem](docs/NutritionInfoMenuOptionSetItem.md)
  - [Model.OAuthApp](docs/OAuthApp.md)
  - [Model.OAuthTokenModel](docs/OAuthTokenModel.md)
  - [Model.OauthClientRedirectUri](docs/OauthClientRedirectUri.md)
@@ -948,6 +962,7 @@ Class | Method | HTTP request | Description
  - [Model.RequestPasswordResetPinResponse](docs/RequestPasswordResetPinResponse.md)
  - [Model.Response](docs/Response.md)
  - [Model.RestApiArrayResultAllMetadataResult](docs/RestApiArrayResultAllMetadataResult.md)
+ - [Model.RestApiArrayResultAllergen](docs/RestApiArrayResultAllergen.md)
  - [Model.RestApiArrayResultApmCurrencyDataPoint](docs/RestApiArrayResultApmCurrencyDataPoint.md)
  - [Model.RestApiArrayResultApmDataPoint](docs/RestApiArrayResultApmDataPoint.md)
  - [Model.RestApiArrayResultApmHourlyDataPoint](docs/RestApiArrayResultApmHourlyDataPoint.md)
@@ -1086,6 +1101,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultMenu](docs/RestApiResultMenu.md)
  - [Model.RestApiResultMenuItemOptionSet](docs/RestApiResultMenuItemOptionSet.md)
  - [Model.RestApiResultMenuItemOptionSetItem](docs/RestApiResultMenuItemOptionSetItem.md)
+ - [Model.RestApiResultMenuNutritionInfoHeader](docs/RestApiResultMenuNutritionInfoHeader.md)
  - [Model.RestApiResultMenuSection](docs/RestApiResultMenuSection.md)
  - [Model.RestApiResultMenuSectionAvailability](docs/RestApiResultMenuSectionAvailability.md)
  - [Model.RestApiResultMenuSectionItem](docs/RestApiResultMenuSectionItem.md)
@@ -1096,6 +1112,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultMobileAppsSubmissionDetails](docs/RestApiResultMobileAppsSubmissionDetails.md)
  - [Model.RestApiResultMobileAppsSubmissionStatus](docs/RestApiResultMobileAppsSubmissionStatus.md)
  - [Model.RestApiResultModelBase](docs/RestApiResultModelBase.md)
+ - [Model.RestApiResultNutritionInfo](docs/RestApiResultNutritionInfo.md)
  - [Model.RestApiResultOAuthApp](docs/RestApiResultOAuthApp.md)
  - [Model.RestApiResultOauthClientRedirectUri](docs/RestApiResultOauthClientRedirectUri.md)
  - [Model.RestApiResultOktaPortalFeatureFlag](docs/RestApiResultOktaPortalFeatureFlag.md)
