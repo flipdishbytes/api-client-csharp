@@ -219,6 +219,7 @@ Class | Method | HTTP request | Description
 *ClientsApi* | [**SetStripeCustomerId**](docs/ClientsApi.md#setstripecustomerid) | **POST** /api/v1.0/clients/{clientId}/stripecustomerid | 
 *ContentSecurityPolicyApi* | [**ContentSecurityPolicyReport**](docs/ContentSecurityPolicyApi.md#contentsecuritypolicyreport) | **POST** /api/v1.0/csp/report | 
 *CrossSellApi* | [**GetCrossSellMenuItems**](docs/CrossSellApi.md#getcrosssellmenuitems) | **GET** /api/v1.0/{appId}/crossSell/menuItems | 
+*CustomersApi* | [**CustomersGetOptOutMarketingLink**](docs/CustomersApi.md#customersgetoptoutmarketinglink) | **POST** /api/v1.0/{appId}/customers/{customerId}/opt-out-link | 
 *CustomersApi* | [**GetCustomerById**](docs/CustomersApi.md#getcustomerbyid) | **GET** /api/v1.0/{appId}/customers/{customerId} | 
 *CustomersApi* | [**UpdateCustomerById**](docs/CustomersApi.md#updatecustomerbyid) | **POST** /api/v1.0/{appId}/customers/{customerId} | 
 *DeliveryZoneApi* | [**AddDeliveryZone**](docs/DeliveryZoneApi.md#adddeliveryzone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones | 
