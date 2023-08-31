@@ -170,12 +170,14 @@ namespace Flipdish.Model
         /// <param name="stripeId">Stripe connected account id.</param>
         /// <param name="cardPaymentStatus">Current status of the Card Payment capability of the account.</param>
         /// <param name="payoutScheduleInterval">Payouts Schedule Interval.</param>
-        public StripeConnectedAccountInfo(AccountStatusEnum? accountStatus = default(AccountStatusEnum?), string stripeId = default(string), CardPaymentStatusEnum? cardPaymentStatus = default(CardPaymentStatusEnum?), PayoutScheduleIntervalEnum? payoutScheduleInterval = default(PayoutScheduleIntervalEnum?))
+        /// <param name="payoutsPaused">Flag indicating if payouts are paused.</param>
+        public StripeConnectedAccountInfo(AccountStatusEnum? accountStatus = default(AccountStatusEnum?), string stripeId = default(string), CardPaymentStatusEnum? cardPaymentStatus = default(CardPaymentStatusEnum?), PayoutScheduleIntervalEnum? payoutScheduleInterval = default(PayoutScheduleIntervalEnum?), bool? payoutsPaused = default(bool?))
         {
             this.AccountStatus = accountStatus;
             this.StripeId = stripeId;
             this.CardPaymentStatus = cardPaymentStatus;
             this.PayoutScheduleInterval = payoutScheduleInterval;
+            this.PayoutsPaused = payoutsPaused;
         }
         
 
@@ -189,6 +191,13 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// Flag indicating if payouts are paused
+        /// </summary>
+        /// <value>Flag indicating if payouts are paused</value>
+        [DataMember(Name="PayoutsPaused", EmitDefaultValue=false)]
+        public bool? PayoutsPaused { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -200,6 +209,7 @@ namespace Flipdish.Model
             sb.Append("  StripeId: ").Append(StripeId).Append("\n");
             sb.Append("  CardPaymentStatus: ").Append(CardPaymentStatus).Append("\n");
             sb.Append("  PayoutScheduleInterval: ").Append(PayoutScheduleInterval).Append("\n");
+            sb.Append("  PayoutsPaused: ").Append(PayoutsPaused).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -253,6 +263,11 @@ namespace Flipdish.Model
                     this.PayoutScheduleInterval == input.PayoutScheduleInterval ||
                     (this.PayoutScheduleInterval != null &&
                     this.PayoutScheduleInterval.Equals(input.PayoutScheduleInterval))
+                ) && 
+                (
+                    this.PayoutsPaused == input.PayoutsPaused ||
+                    (this.PayoutsPaused != null &&
+                    this.PayoutsPaused.Equals(input.PayoutsPaused))
                 );
         }
 
@@ -273,6 +288,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CardPaymentStatus.GetHashCode();
                 if (this.PayoutScheduleInterval != null)
                     hashCode = hashCode * 59 + this.PayoutScheduleInterval.GetHashCode();
+                if (this.PayoutsPaused != null)
+                    hashCode = hashCode * 59 + this.PayoutsPaused.GetHashCode();
                 return hashCode;
             }
         }
