@@ -34,17 +34,19 @@ namespace Flipdish.Model
         /// <param name="eventName">The event name.</param>
         /// <param name="description">Description.</param>
         /// <param name="orderAcceptedTime">Order Accepted Time.</param>
+        /// <param name="user">User who has accepted the order.</param>
         /// <param name="order">Order.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
         /// <param name="ipAddress">Ip Address.</param>
-        public OrderAcceptedEvent(string eventName = default(string), string description = default(string), DateTime? orderAcceptedTime = default(DateTime?), Order order = default(Order), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
+        public OrderAcceptedEvent(string eventName = default(string), string description = default(string), DateTime? orderAcceptedTime = default(DateTime?), UserEventInfo user = default(UserEventInfo), Order order = default(Order), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
         {
             this.EventName = eventName;
             this.Description = description;
             this.OrderAcceptedTime = orderAcceptedTime;
+            this.User = user;
             this.Order = order;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
@@ -73,6 +75,13 @@ namespace Flipdish.Model
         /// <value>Order Accepted Time</value>
         [DataMember(Name="OrderAcceptedTime", EmitDefaultValue=false)]
         public DateTime? OrderAcceptedTime { get; set; }
+
+        /// <summary>
+        /// User who has accepted the order
+        /// </summary>
+        /// <value>User who has accepted the order</value>
+        [DataMember(Name="User", EmitDefaultValue=false)]
+        public UserEventInfo User { get; set; }
 
         /// <summary>
         /// Order
@@ -127,6 +136,7 @@ namespace Flipdish.Model
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  OrderAcceptedTime: ").Append(OrderAcceptedTime).Append("\n");
+            sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
@@ -183,6 +193,11 @@ namespace Flipdish.Model
                     this.OrderAcceptedTime.Equals(input.OrderAcceptedTime))
                 ) && 
                 (
+                    this.User == input.User ||
+                    (this.User != null &&
+                    this.User.Equals(input.User))
+                ) && 
+                (
                     this.Order == input.Order ||
                     (this.Order != null &&
                     this.Order.Equals(input.Order))
@@ -229,6 +244,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.OrderAcceptedTime != null)
                     hashCode = hashCode * 59 + this.OrderAcceptedTime.GetHashCode();
+                if (this.User != null)
+                    hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.Order != null)
                     hashCode = hashCode * 59 + this.Order.GetHashCode();
                 if (this.FlipdishEventId != null)

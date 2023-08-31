@@ -35,18 +35,20 @@ namespace Flipdish.Model
         /// <param name="description">Description.</param>
         /// <param name="orderRejectedTime">Order Rejected Time.</param>
         /// <param name="reason">Reason for Rejection.</param>
+        /// <param name="user">User who has rejected the order.</param>
         /// <param name="order">Order.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
         /// <param name="ipAddress">Ip Address.</param>
-        public OrderRejectedEvent(string eventName = default(string), string description = default(string), DateTime? orderRejectedTime = default(DateTime?), string reason = default(string), Order order = default(Order), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
+        public OrderRejectedEvent(string eventName = default(string), string description = default(string), DateTime? orderRejectedTime = default(DateTime?), string reason = default(string), UserEventInfo user = default(UserEventInfo), Order order = default(Order), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
         {
             this.EventName = eventName;
             this.Description = description;
             this.OrderRejectedTime = orderRejectedTime;
             this.Reason = reason;
+            this.User = user;
             this.Order = order;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
@@ -82,6 +84,13 @@ namespace Flipdish.Model
         /// <value>Reason for Rejection</value>
         [DataMember(Name="Reason", EmitDefaultValue=false)]
         public string Reason { get; set; }
+
+        /// <summary>
+        /// User who has rejected the order
+        /// </summary>
+        /// <value>User who has rejected the order</value>
+        [DataMember(Name="User", EmitDefaultValue=false)]
+        public UserEventInfo User { get; set; }
 
         /// <summary>
         /// Order
@@ -137,6 +146,7 @@ namespace Flipdish.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  OrderRejectedTime: ").Append(OrderRejectedTime).Append("\n");
             sb.Append("  Reason: ").Append(Reason).Append("\n");
+            sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
@@ -198,6 +208,11 @@ namespace Flipdish.Model
                     this.Reason.Equals(input.Reason))
                 ) && 
                 (
+                    this.User == input.User ||
+                    (this.User != null &&
+                    this.User.Equals(input.User))
+                ) && 
+                (
                     this.Order == input.Order ||
                     (this.Order != null &&
                     this.Order.Equals(input.Order))
@@ -246,6 +261,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OrderRejectedTime.GetHashCode();
                 if (this.Reason != null)
                     hashCode = hashCode * 59 + this.Reason.GetHashCode();
+                if (this.User != null)
+                    hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.Order != null)
                     hashCode = hashCode * 59 + this.Order.GetHashCode();
                 if (this.FlipdishEventId != null)

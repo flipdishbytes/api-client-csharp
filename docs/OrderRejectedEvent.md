@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Description** | **string** | Description | [optional] 
 **OrderRejectedTime** | **DateTime?** | Order Rejected Time | [optional] 
 **Reason** | **string** | Reason for Rejection | [optional] 
+**User** | [**UserEventInfo**](UserEventInfo.md) | User who has rejected the order | [optional] 
 **Order** | [**Order**](Order.md) | Order | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 
 **CreateTime** | **DateTime?** | The time of creation of the event | [optional] 

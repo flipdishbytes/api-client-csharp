@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **EventName** | **string** | The event name | [optional] 
 **Description** | **string** | Description | [optional] 
 **OrderAcceptedTime** | **DateTime?** | Order Accepted Time | [optional] 
+**User** | [**UserEventInfo**](UserEventInfo.md) | User who has accepted the order | [optional] 
 **Order** | [**Order**](Order.md) | Order | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 
 **CreateTime** | **DateTime?** | The time of creation of the event | [optional] 
