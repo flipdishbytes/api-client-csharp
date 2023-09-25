@@ -33,11 +33,13 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="legacyOrderDm">legacyOrderDm.</param>
         /// <param name="phoneNumber">phoneNumber.</param>
+        /// <param name="customerName">customerName.</param>
         /// <param name="deliveryLocation">deliveryLocation.</param>
-        public CreateOrderRequest(OrderDm legacyOrderDm = default(OrderDm), string phoneNumber = default(string), DeliveryLocation deliveryLocation = default(DeliveryLocation))
+        public CreateOrderRequest(OrderDm legacyOrderDm = default(OrderDm), string phoneNumber = default(string), string customerName = default(string), DeliveryLocation deliveryLocation = default(DeliveryLocation))
         {
             this.LegacyOrderDm = legacyOrderDm;
             this.PhoneNumber = phoneNumber;
+            this.CustomerName = customerName;
             this.DeliveryLocation = deliveryLocation;
         }
         
@@ -52,6 +54,12 @@ namespace Flipdish.Model
         /// </summary>
         [DataMember(Name="PhoneNumber", EmitDefaultValue=false)]
         public string PhoneNumber { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CustomerName
+        /// </summary>
+        [DataMember(Name="CustomerName", EmitDefaultValue=false)]
+        public string CustomerName { get; set; }
 
         /// <summary>
         /// Gets or Sets DeliveryLocation
@@ -69,6 +77,7 @@ namespace Flipdish.Model
             sb.Append("class CreateOrderRequest {\n");
             sb.Append("  LegacyOrderDm: ").Append(LegacyOrderDm).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
+            sb.Append("  CustomerName: ").Append(CustomerName).Append("\n");
             sb.Append("  DeliveryLocation: ").Append(DeliveryLocation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -115,6 +124,11 @@ namespace Flipdish.Model
                     this.PhoneNumber.Equals(input.PhoneNumber))
                 ) && 
                 (
+                    this.CustomerName == input.CustomerName ||
+                    (this.CustomerName != null &&
+                    this.CustomerName.Equals(input.CustomerName))
+                ) && 
+                (
                     this.DeliveryLocation == input.DeliveryLocation ||
                     (this.DeliveryLocation != null &&
                     this.DeliveryLocation.Equals(input.DeliveryLocation))
@@ -134,6 +148,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.LegacyOrderDm.GetHashCode();
                 if (this.PhoneNumber != null)
                     hashCode = hashCode * 59 + this.PhoneNumber.GetHashCode();
+                if (this.CustomerName != null)
+                    hashCode = hashCode * 59 + this.CustomerName.GetHashCode();
                 if (this.DeliveryLocation != null)
                     hashCode = hashCode * 59 + this.DeliveryLocation.GetHashCode();
                 return hashCode;
