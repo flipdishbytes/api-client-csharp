@@ -798,8 +798,9 @@ namespace Flipdish.Model
         /// <param name="currency">Currency (required).</param>
         /// <param name="user">User (required).</param>
         /// <param name="defaultPaymentDescription">Default payment description.</param>
-        /// <param name="cancellationDate">Cancellation Date.</param>
-        public Subscription(List<SubscriptionProduct> products = default(List<SubscriptionProduct>), double? nextInvoiceAmount = default(double?), DateTime? nextInvoiceBillingDate = default(DateTime?), List<InvoiceItem> upcomingInvoiceItems = default(List<InvoiceItem>), List<InvoiceDiscount> upcomingInvoiceDiscounts = default(List<InvoiceDiscount>), UpcomingInvoice upcomingInvoice = default(UpcomingInvoice), string subscriptionId = default(string), string name = default(string), StatusEnum status = default(StatusEnum), CurrencyEnum currency = default(CurrencyEnum), string user = default(string), string defaultPaymentDescription = default(string), DateTime? cancellationDate = default(DateTime?))
+        /// <param name="cancellationRequestDate">Cancellation Date.</param>
+        /// <param name="cancellationDate">Cancel Date.</param>
+        public Subscription(List<SubscriptionProduct> products = default(List<SubscriptionProduct>), double? nextInvoiceAmount = default(double?), DateTime? nextInvoiceBillingDate = default(DateTime?), List<InvoiceItem> upcomingInvoiceItems = default(List<InvoiceItem>), List<InvoiceDiscount> upcomingInvoiceDiscounts = default(List<InvoiceDiscount>), UpcomingInvoice upcomingInvoice = default(UpcomingInvoice), string subscriptionId = default(string), string name = default(string), StatusEnum status = default(StatusEnum), CurrencyEnum currency = default(CurrencyEnum), string user = default(string), string defaultPaymentDescription = default(string), DateTime? cancellationRequestDate = default(DateTime?), DateTime? cancellationDate = default(DateTime?))
         {
             // to ensure "products" is required (not null)
             if (products == null)
@@ -861,6 +862,7 @@ namespace Flipdish.Model
             this.UpcomingInvoiceDiscounts = upcomingInvoiceDiscounts;
             this.UpcomingInvoice = upcomingInvoice;
             this.DefaultPaymentDescription = defaultPaymentDescription;
+            this.CancellationRequestDate = cancellationRequestDate;
             this.CancellationDate = cancellationDate;
         }
         
@@ -939,6 +941,13 @@ namespace Flipdish.Model
         /// Cancellation Date
         /// </summary>
         /// <value>Cancellation Date</value>
+        [DataMember(Name="CancellationRequestDate", EmitDefaultValue=false)]
+        public DateTime? CancellationRequestDate { get; set; }
+
+        /// <summary>
+        /// Cancel Date
+        /// </summary>
+        /// <value>Cancel Date</value>
         [DataMember(Name="CancellationDate", EmitDefaultValue=false)]
         public DateTime? CancellationDate { get; set; }
 
@@ -962,6 +971,7 @@ namespace Flipdish.Model
             sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  DefaultPaymentDescription: ").Append(DefaultPaymentDescription).Append("\n");
+            sb.Append("  CancellationRequestDate: ").Append(CancellationRequestDate).Append("\n");
             sb.Append("  CancellationDate: ").Append(CancellationDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -1058,6 +1068,11 @@ namespace Flipdish.Model
                     this.DefaultPaymentDescription.Equals(input.DefaultPaymentDescription))
                 ) && 
                 (
+                    this.CancellationRequestDate == input.CancellationRequestDate ||
+                    (this.CancellationRequestDate != null &&
+                    this.CancellationRequestDate.Equals(input.CancellationRequestDate))
+                ) && 
+                (
                     this.CancellationDate == input.CancellationDate ||
                     (this.CancellationDate != null &&
                     this.CancellationDate.Equals(input.CancellationDate))
@@ -1097,6 +1112,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.DefaultPaymentDescription != null)
                     hashCode = hashCode * 59 + this.DefaultPaymentDescription.GetHashCode();
+                if (this.CancellationRequestDate != null)
+                    hashCode = hashCode * 59 + this.CancellationRequestDate.GetHashCode();
                 if (this.CancellationDate != null)
                     hashCode = hashCode * 59 + this.CancellationDate.GetHashCode();
                 return hashCode;

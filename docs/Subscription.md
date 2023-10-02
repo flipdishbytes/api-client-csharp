@@ -15,7 +15,8 @@ Name | Type | Description | Notes
 **Currency** | **string** | Currency | 
 **User** | **string** | User | 
 **DefaultPaymentDescription** | **string** | Default payment description | [optional] 
-**CancellationDate** | **DateTime?** | Cancellation Date | [optional] 
+**CancellationRequestDate** | **DateTime?** | Cancellation Date | [optional] 
+**CancellationDate** | **DateTime?** | Cancel Date | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
