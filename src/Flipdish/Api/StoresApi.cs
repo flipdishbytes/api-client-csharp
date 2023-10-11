@@ -467,6 +467,27 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <returns>OrderLeadTimes</returns>
+        OrderLeadTimes GetStoreLeadTimes (int? storeId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <returns>ApiResponse of OrderLeadTimes</returns>
+        ApiResponse<OrderLeadTimes> GetStoreLeadTimesWithHttpInfo (int? storeId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="storeId"></param>
         /// <returns>RestApiArrayResultStoreStatistics</returns>
@@ -656,6 +677,29 @@ namespace Flipdish.Api
         /// <param name="enabled"></param>
         /// <returns>ApiResponse of RestApiArrayResultRestApiDefaultResponse</returns>
         ApiResponse<RestApiArrayResultRestApiDefaultResponse> SetPreOrdeEnabledWithHttpInfo (int? storeId, string deliveryType, bool? enabled);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="leadTime"></param>
+        /// <returns>OrderLeadTimes</returns>
+        OrderLeadTimes SetStoreLeadTimes (int? storeId, LeadTime leadTime);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="leadTime"></param>
+        /// <returns>ApiResponse of OrderLeadTimes</returns>
+        ApiResponse<OrderLeadTimes> SetStoreLeadTimesWithHttpInfo (int? storeId, LeadTime leadTime);
         /// <summary>
         /// 
         /// </summary>
@@ -1241,6 +1285,27 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <returns>Task of OrderLeadTimes</returns>
+        System.Threading.Tasks.Task<OrderLeadTimes> GetStoreLeadTimesAsync (int? storeId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <returns>Task of ApiResponse (OrderLeadTimes)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OrderLeadTimes>> GetStoreLeadTimesAsyncWithHttpInfo (int? storeId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="storeId"></param>
         /// <returns>Task of RestApiArrayResultStoreStatistics</returns>
@@ -1430,6 +1495,29 @@ namespace Flipdish.Api
         /// <param name="enabled"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultRestApiDefaultResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRestApiDefaultResponse>> SetPreOrdeEnabledAsyncWithHttpInfo (int? storeId, string deliveryType, bool? enabled);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="leadTime"></param>
+        /// <returns>Task of OrderLeadTimes</returns>
+        System.Threading.Tasks.Task<OrderLeadTimes> SetStoreLeadTimesAsync (int? storeId, LeadTime leadTime);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="leadTime"></param>
+        /// <returns>Task of ApiResponse (OrderLeadTimes)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OrderLeadTimes>> SetStoreLeadTimesAsyncWithHttpInfo (int? storeId, LeadTime leadTime);
         /// <summary>
         /// 
         /// </summary>
@@ -4730,6 +4818,157 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <returns>OrderLeadTimes</returns>
+        public OrderLeadTimes GetStoreLeadTimes (int? storeId)
+        {
+             ApiResponse<OrderLeadTimes> localVarResponse = GetStoreLeadTimesWithHttpInfo(storeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <returns>ApiResponse of OrderLeadTimes</returns>
+        public ApiResponse< OrderLeadTimes > GetStoreLeadTimesWithHttpInfo (int? storeId)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->GetStoreLeadTimes");
+
+            var localVarPath = "./api/v1.0/stores/{storeId}/leadTimes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStoreLeadTimes", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<OrderLeadTimes>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (OrderLeadTimes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrderLeadTimes)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <returns>Task of OrderLeadTimes</returns>
+        public async System.Threading.Tasks.Task<OrderLeadTimes> GetStoreLeadTimesAsync (int? storeId)
+        {
+             ApiResponse<OrderLeadTimes> localVarResponse = await GetStoreLeadTimesAsyncWithHttpInfo(storeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <returns>Task of ApiResponse (OrderLeadTimes)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OrderLeadTimes>> GetStoreLeadTimesAsyncWithHttpInfo (int? storeId)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->GetStoreLeadTimes");
+
+            var localVarPath = "./api/v1.0/stores/{storeId}/leadTimes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStoreLeadTimes", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<OrderLeadTimes>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (OrderLeadTimes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrderLeadTimes)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="storeId"></param>
         /// <returns>RestApiArrayResultStoreStatistics</returns>
@@ -6068,6 +6307,193 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiArrayResultRestApiDefaultResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultRestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultRestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="leadTime"></param>
+        /// <returns>OrderLeadTimes</returns>
+        public OrderLeadTimes SetStoreLeadTimes (int? storeId, LeadTime leadTime)
+        {
+             ApiResponse<OrderLeadTimes> localVarResponse = SetStoreLeadTimesWithHttpInfo(storeId, leadTime);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="leadTime"></param>
+        /// <returns>ApiResponse of OrderLeadTimes</returns>
+        public ApiResponse< OrderLeadTimes > SetStoreLeadTimesWithHttpInfo (int? storeId, LeadTime leadTime)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->SetStoreLeadTimes");
+            // verify the required parameter 'leadTime' is set
+            if (leadTime == null)
+                throw new ApiException(400, "Missing required parameter 'leadTime' when calling StoresApi->SetStoreLeadTimes");
+
+            var localVarPath = "./api/v1.0/stores/{storeId}/leadTimes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (leadTime != null && leadTime.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(leadTime); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = leadTime; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetStoreLeadTimes", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<OrderLeadTimes>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (OrderLeadTimes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrderLeadTimes)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="leadTime"></param>
+        /// <returns>Task of OrderLeadTimes</returns>
+        public async System.Threading.Tasks.Task<OrderLeadTimes> SetStoreLeadTimesAsync (int? storeId, LeadTime leadTime)
+        {
+             ApiResponse<OrderLeadTimes> localVarResponse = await SetStoreLeadTimesAsyncWithHttpInfo(storeId, leadTime);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="leadTime"></param>
+        /// <returns>Task of ApiResponse (OrderLeadTimes)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OrderLeadTimes>> SetStoreLeadTimesAsyncWithHttpInfo (int? storeId, LeadTime leadTime)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->SetStoreLeadTimes");
+            // verify the required parameter 'leadTime' is set
+            if (leadTime == null)
+                throw new ApiException(400, "Missing required parameter 'leadTime' when calling StoresApi->SetStoreLeadTimes");
+
+            var localVarPath = "./api/v1.0/stores/{storeId}/leadTimes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (leadTime != null && leadTime.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(leadTime); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = leadTime; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetStoreLeadTimes", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<OrderLeadTimes>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (OrderLeadTimes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrderLeadTimes)));
         }
 
         /// <summary>

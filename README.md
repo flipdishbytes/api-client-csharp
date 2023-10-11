@@ -495,6 +495,7 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**GetStoreById**](docs/StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | 
 *StoresApi* | [**GetStoreFeeConfig**](docs/StoresApi.md#getstorefeeconfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig | 
 *StoresApi* | [**GetStoreHeadersByAppId**](docs/StoresApi.md#getstoreheadersbyappid) | **GET** /api/v1.0/{appId}/stores/header | 
+*StoresApi* | [**GetStoreLeadTimes**](docs/StoresApi.md#getstoreleadtimes) | **GET** /api/v1.0/stores/{storeId}/leadTimes | 
 *StoresApi* | [**GetStoreNetSales**](docs/StoresApi.md#getstorenetsales) | **GET** /api/v1.0/{appId}/stores/stats | 
 *StoresApi* | [**GetStoreServiceCharge**](docs/StoresApi.md#getstoreservicecharge) | **GET** /api/v1.0/stores/{storeId}/servicecharge | 
 *StoresApi* | [**GetStores**](docs/StoresApi.md#getstores) | **GET** /api/v1.0/stores | 
@@ -503,6 +504,7 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**PublishStore**](docs/StoresApi.md#publishstore) | **POST** /api/v1.0/stores/{storeId}/publish | 
 *StoresApi* | [**SetBusinessHours**](docs/StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
 *StoresApi* | [**SetPreOrdeEnabled**](docs/StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
+*StoresApi* | [**SetStoreLeadTimes**](docs/StoresApi.md#setstoreleadtimes) | **POST** /api/v1.0/stores/{storeId}/leadTimes | 
 *StoresApi* | [**UnpublishStore**](docs/StoresApi.md#unpublishstore) | **POST** /api/v1.0/stores/{storeId}/unpublish | 
 *StoresApi* | [**UpdatePreOrderConfig**](docs/StoresApi.md#updatepreorderconfig) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | 
 *StoresApi* | [**UpdateStore**](docs/StoresApi.md#updatestore) | **POST** /api/v1.0/stores/{storeId} | 
@@ -785,6 +787,7 @@ Class | Method | HTTP request | Description
  - [Model.KioskTerminalActionStateChangedEvent](docs/KioskTerminalActionStateChangedEvent.md)
  - [Model.Language](docs/Language.md)
  - [Model.LastPaymentError](docs/LastPaymentError.md)
+ - [Model.LeadTime](docs/LeadTime.md)
  - [Model.LightspeedSettings](docs/LightspeedSettings.md)
  - [Model.LineItem](docs/LineItem.md)
  - [Model.LineItemOption](docs/LineItemOption.md)
@@ -898,6 +901,7 @@ Class | Method | HTTP request | Description
  - [Model.OrderItem](docs/OrderItem.md)
  - [Model.OrderItemDm](docs/OrderItemDm.md)
  - [Model.OrderItemOption](docs/OrderItemOption.md)
+ - [Model.OrderLeadTimes](docs/OrderLeadTimes.md)
  - [Model.OrderList](docs/OrderList.md)
  - [Model.OrderPaymentInformation](docs/OrderPaymentInformation.md)
  - [Model.OrderRatingUpdatedEvent](docs/OrderRatingUpdatedEvent.md)
