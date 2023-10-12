@@ -351,6 +351,17 @@ Class | Method | HTTP request | Description
 *MenuSectionsApi* | [**MenuSectionsSetItemDisplayOrders**](docs/MenuSectionsApi.md#menusectionssetitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitemdisplayorders | Re-arrange Items within a Section
 *MenuSectionsApi* | [**UpdateMenuSection**](docs/MenuSectionsApi.md#updatemenusection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Update menu section
 *MenuSectionsApi* | [**UploadMenuSectionImage**](docs/MenuSectionsApi.md#uploadmenusectionimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Upload menu section image
+*MenuZonesApi* | [**AddMenuZone**](docs/MenuZonesApi.md#addmenuzone) | **POST** /api/v1.0/menus/{menuId}/zones | 
+*MenuZonesApi* | [**DeleteMenuZone**](docs/MenuZonesApi.md#deletemenuzone) | **DELETE** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | 
+*MenuZonesApi* | [**FlipMenuZones**](docs/MenuZonesApi.md#flipmenuzones) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/flip/{menuZoneI2} | 
+*MenuZonesApi* | [**GetMenuZone**](docs/MenuZonesApi.md#getmenuzone) | **GET** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | 
+*MenuZonesApi* | [**GetMenuZonesForMenu**](docs/MenuZonesApi.md#getmenuzonesformenu) | **GET** /api/v1.0/menus/{menuId}/zones | 
+*MenuZonesApi* | [**SetMenuSectionMenuZone**](docs/MenuZonesApi.md#setmenusectionmenuzone) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/description | 
+*MenuZonesApi* | [**SetMenuSectionMenuZone_0**](docs/MenuZonesApi.md#setmenusectionmenuzone_0) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/section/{menuSectionId} | 
+*MenuZonesApi* | [**SetMenuZoneName**](docs/MenuZonesApi.md#setmenuzonename) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/name/{menuZoneName} | 
+*MenuZonesApi* | [**UpdateMenuZone**](docs/MenuZonesApi.md#updatemenuzone) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | 
+*MenuZonesApi* | [**UploadMenuZoneImage**](docs/MenuZonesApi.md#uploadmenuzoneimage) | **POST** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/image | 
+*MenuZonesApi* | [**UploadMenuZoneImage_0**](docs/MenuZonesApi.md#uploadmenuzoneimage_0) | **DELETE** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/image | 
 *MenusApi* | [**CreateDraftMenuFromExistingMenu**](docs/MenusApi.md#createdraftmenufromexistingmenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | [PRIVATE API]Clone a menu, (without attaching stores)
 *MenusApi* | [**CreateNewMenuForApp**](docs/MenusApi.md#createnewmenuforapp) | **POST** /api/v1.0/{appId}/menus | Create a new menu. If request body is empty, the system will create a menu with default items.
 *MenusApi* | [**DeleteMenu**](docs/MenusApi.md#deletemenu) | **DELETE** /api/v1.0/menus/{menuId} | [PRIVATE API]Mark a Menu as Deleted
@@ -741,6 +752,7 @@ Class | Method | HTTP request | Description
  - [Model.GroupedCoordinates](docs/GroupedCoordinates.md)
  - [Model.HomeAction](docs/HomeAction.md)
  - [Model.HomeStatistics](docs/HomeStatistics.md)
+ - [Model.HttpPostedFileBase](docs/HttpPostedFileBase.md)
  - [Model.HttpRequestAndResponseLog](docs/HttpRequestAndResponseLog.md)
  - [Model.HydraAssignedEvent](docs/HydraAssignedEvent.md)
  - [Model.HydraConfig](docs/HydraConfig.md)
@@ -851,6 +863,7 @@ Class | Method | HTTP request | Description
  - [Model.MenuTaxRate](docs/MenuTaxRate.md)
  - [Model.MenuUpdatedEvent](docs/MenuUpdatedEvent.md)
  - [Model.MenuUploadedEvent](docs/MenuUploadedEvent.md)
+ - [Model.MenuZone](docs/MenuZone.md)
  - [Model.Metadata](docs/Metadata.md)
  - [Model.Metafield](docs/Metafield.md)
  - [Model.MetafieldDefinition](docs/MetafieldDefinition.md)
@@ -998,6 +1011,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultMenuStoreNames](docs/RestApiArrayResultMenuStoreNames.md)
  - [Model.RestApiArrayResultMenuSummary](docs/RestApiArrayResultMenuSummary.md)
  - [Model.RestApiArrayResultMenuTaxDetails](docs/RestApiArrayResultMenuTaxDetails.md)
+ - [Model.RestApiArrayResultMenuZone](docs/RestApiArrayResultMenuZone.md)
  - [Model.RestApiArrayResultMetadata](docs/RestApiArrayResultMetadata.md)
  - [Model.RestApiArrayResultMobileAppsStatistics](docs/RestApiArrayResultMobileAppsStatistics.md)
  - [Model.RestApiArrayResultOAuthApp](docs/RestApiArrayResultOAuthApp.md)
@@ -1111,6 +1125,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultMenuSection](docs/RestApiResultMenuSection.md)
  - [Model.RestApiResultMenuSectionAvailability](docs/RestApiResultMenuSectionAvailability.md)
  - [Model.RestApiResultMenuSectionItem](docs/RestApiResultMenuSectionItem.md)
+ - [Model.RestApiResultMenuZone](docs/RestApiResultMenuZone.md)
  - [Model.RestApiResultMetadata](docs/RestApiResultMetadata.md)
  - [Model.RestApiResultMetafieldDefinition](docs/RestApiResultMetafieldDefinition.md)
  - [Model.RestApiResultMobileAppsImage](docs/RestApiResultMobileAppsImage.md)
@@ -1238,6 +1253,7 @@ Class | Method | HTTP request | Description
  - [Model.StoreUnpublishedEvent](docs/StoreUnpublishedEvent.md)
  - [Model.StoreUpdatedEvent](docs/StoreUpdatedEvent.md)
  - [Model.StoreValidationConfig](docs/StoreValidationConfig.md)
+ - [Model.Stream](docs/Stream.md)
  - [Model.StripeAccountLinkRequest](docs/StripeAccountLinkRequest.md)
  - [Model.StripeConnectedAccount](docs/StripeConnectedAccount.md)
  - [Model.StripeConnectedAccountInfo](docs/StripeConnectedAccountInfo.md)
