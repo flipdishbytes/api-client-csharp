@@ -34,16 +34,20 @@ namespace Flipdish.Model
         /// <param name="eventName">The event name.</param>
         /// <param name="description">Description.</param>
         /// <param name="order">Order.</param>
+        /// <param name="deliveryIntegrationName">Delivery integration name.</param>
+        /// <param name="deliveryErrorMessage">Delivery error message (optional).</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
         /// <param name="ipAddress">Ip Address.</param>
-        public OrderDeliveryTrackingStatusUpdatedEvent(string eventName = default(string), string description = default(string), Order order = default(Order), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
+        public OrderDeliveryTrackingStatusUpdatedEvent(string eventName = default(string), string description = default(string), Order order = default(Order), string deliveryIntegrationName = default(string), string deliveryErrorMessage = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
         {
             this.EventName = eventName;
             this.Description = description;
             this.Order = order;
+            this.DeliveryIntegrationName = deliveryIntegrationName;
+            this.DeliveryErrorMessage = deliveryErrorMessage;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
             this.Position = position;
@@ -71,6 +75,20 @@ namespace Flipdish.Model
         /// <value>Order</value>
         [DataMember(Name="Order", EmitDefaultValue=false)]
         public Order Order { get; set; }
+
+        /// <summary>
+        /// Delivery integration name
+        /// </summary>
+        /// <value>Delivery integration name</value>
+        [DataMember(Name="DeliveryIntegrationName", EmitDefaultValue=false)]
+        public string DeliveryIntegrationName { get; set; }
+
+        /// <summary>
+        /// Delivery error message (optional)
+        /// </summary>
+        /// <value>Delivery error message (optional)</value>
+        [DataMember(Name="DeliveryErrorMessage", EmitDefaultValue=false)]
+        public string DeliveryErrorMessage { get; set; }
 
         /// <summary>
         /// The identitfier of the event
@@ -118,6 +136,8 @@ namespace Flipdish.Model
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
+            sb.Append("  DeliveryIntegrationName: ").Append(DeliveryIntegrationName).Append("\n");
+            sb.Append("  DeliveryErrorMessage: ").Append(DeliveryErrorMessage).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -173,6 +193,16 @@ namespace Flipdish.Model
                     this.Order.Equals(input.Order))
                 ) && 
                 (
+                    this.DeliveryIntegrationName == input.DeliveryIntegrationName ||
+                    (this.DeliveryIntegrationName != null &&
+                    this.DeliveryIntegrationName.Equals(input.DeliveryIntegrationName))
+                ) && 
+                (
+                    this.DeliveryErrorMessage == input.DeliveryErrorMessage ||
+                    (this.DeliveryErrorMessage != null &&
+                    this.DeliveryErrorMessage.Equals(input.DeliveryErrorMessage))
+                ) && 
+                (
                     this.FlipdishEventId == input.FlipdishEventId ||
                     (this.FlipdishEventId != null &&
                     this.FlipdishEventId.Equals(input.FlipdishEventId))
@@ -214,6 +244,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.Order != null)
                     hashCode = hashCode * 59 + this.Order.GetHashCode();
+                if (this.DeliveryIntegrationName != null)
+                    hashCode = hashCode * 59 + this.DeliveryIntegrationName.GetHashCode();
+                if (this.DeliveryErrorMessage != null)
+                    hashCode = hashCode * 59 + this.DeliveryErrorMessage.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)

@@ -420,6 +420,27 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
+        /// <returns>RestApiArrayResultStoreDeliveryZoneFeeConfig</returns>
+        RestApiArrayResultStoreDeliveryZoneFeeConfig GetStoreDeliveryFeeConfig (int? storeId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <returns>ApiResponse of RestApiArrayResultStoreDeliveryZoneFeeConfig</returns>
+        ApiResponse<RestApiArrayResultStoreDeliveryZoneFeeConfig> GetStoreDeliveryFeeConfigWithHttpInfo (int? storeId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
         /// <returns>StoreFeeConfig</returns>
         StoreFeeConfig GetStoreFeeConfig (int? storeId);
 
@@ -627,6 +648,29 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PublishStoreWithHttpInfo (int? storeId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="configs"></param>
+        /// <returns></returns>
+        void PutStoreDeliveryFeeConfig (int? storeId, List<StoreDeliveryZoneFeeConfig> configs);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="configs"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PutStoreDeliveryFeeConfigWithHttpInfo (int? storeId, List<StoreDeliveryZoneFeeConfig> configs);
         /// <summary>
         /// 
         /// </summary>
@@ -1238,6 +1282,27 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
+        /// <returns>Task of RestApiArrayResultStoreDeliveryZoneFeeConfig</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultStoreDeliveryZoneFeeConfig> GetStoreDeliveryFeeConfigAsync (int? storeId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultStoreDeliveryZoneFeeConfig)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreDeliveryZoneFeeConfig>> GetStoreDeliveryFeeConfigAsyncWithHttpInfo (int? storeId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
         /// <returns>Task of StoreFeeConfig</returns>
         System.Threading.Tasks.Task<StoreFeeConfig> GetStoreFeeConfigAsync (int? storeId);
 
@@ -1445,6 +1510,29 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PublishStoreAsyncWithHttpInfo (int? storeId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="configs"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PutStoreDeliveryFeeConfigAsync (int? storeId, List<StoreDeliveryZoneFeeConfig> configs);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="configs"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutStoreDeliveryFeeConfigAsyncWithHttpInfo (int? storeId, List<StoreDeliveryZoneFeeConfig> configs);
         /// <summary>
         /// 
         /// </summary>
@@ -4499,6 +4587,157 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
+        /// <returns>RestApiArrayResultStoreDeliveryZoneFeeConfig</returns>
+        public RestApiArrayResultStoreDeliveryZoneFeeConfig GetStoreDeliveryFeeConfig (int? storeId)
+        {
+             ApiResponse<RestApiArrayResultStoreDeliveryZoneFeeConfig> localVarResponse = GetStoreDeliveryFeeConfigWithHttpInfo(storeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <returns>ApiResponse of RestApiArrayResultStoreDeliveryZoneFeeConfig</returns>
+        public ApiResponse< RestApiArrayResultStoreDeliveryZoneFeeConfig > GetStoreDeliveryFeeConfigWithHttpInfo (int? storeId)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->GetStoreDeliveryFeeConfig");
+
+            var localVarPath = "./api/v1.0/stores/{storeId}/feeConfig/deliveryZones";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStoreDeliveryFeeConfig", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultStoreDeliveryZoneFeeConfig>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiArrayResultStoreDeliveryZoneFeeConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultStoreDeliveryZoneFeeConfig)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <returns>Task of RestApiArrayResultStoreDeliveryZoneFeeConfig</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultStoreDeliveryZoneFeeConfig> GetStoreDeliveryFeeConfigAsync (int? storeId)
+        {
+             ApiResponse<RestApiArrayResultStoreDeliveryZoneFeeConfig> localVarResponse = await GetStoreDeliveryFeeConfigAsyncWithHttpInfo(storeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultStoreDeliveryZoneFeeConfig)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultStoreDeliveryZoneFeeConfig>> GetStoreDeliveryFeeConfigAsyncWithHttpInfo (int? storeId)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->GetStoreDeliveryFeeConfig");
+
+            var localVarPath = "./api/v1.0/stores/{storeId}/feeConfig/deliveryZones";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStoreDeliveryFeeConfig", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultStoreDeliveryZoneFeeConfig>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiArrayResultStoreDeliveryZoneFeeConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultStoreDeliveryZoneFeeConfig)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
         /// <returns>StoreFeeConfig</returns>
         public StoreFeeConfig GetStoreFeeConfig (int? storeId)
         {
@@ -5927,6 +6166,191 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("PublishStore", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="configs"></param>
+        /// <returns></returns>
+        public void PutStoreDeliveryFeeConfig (int? storeId, List<StoreDeliveryZoneFeeConfig> configs)
+        {
+             PutStoreDeliveryFeeConfigWithHttpInfo(storeId, configs);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="configs"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PutStoreDeliveryFeeConfigWithHttpInfo (int? storeId, List<StoreDeliveryZoneFeeConfig> configs)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->PutStoreDeliveryFeeConfig");
+            // verify the required parameter 'configs' is set
+            if (configs == null)
+                throw new ApiException(400, "Missing required parameter 'configs' when calling StoresApi->PutStoreDeliveryFeeConfig");
+
+            var localVarPath = "./api/v1.0/stores/{storeId}/feeConfig/deliveryZones";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (configs != null && configs.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(configs); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = configs; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutStoreDeliveryFeeConfig", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="configs"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PutStoreDeliveryFeeConfigAsync (int? storeId, List<StoreDeliveryZoneFeeConfig> configs)
+        {
+             await PutStoreDeliveryFeeConfigAsyncWithHttpInfo(storeId, configs);
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="configs"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutStoreDeliveryFeeConfigAsyncWithHttpInfo (int? storeId, List<StoreDeliveryZoneFeeConfig> configs)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->PutStoreDeliveryFeeConfig");
+            // verify the required parameter 'configs' is set
+            if (configs == null)
+                throw new ApiException(400, "Missing required parameter 'configs' when calling StoresApi->PutStoreDeliveryFeeConfig");
+
+            var localVarPath = "./api/v1.0/stores/{storeId}/feeConfig/deliveryZones";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (configs != null && configs.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(configs); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = configs; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutStoreDeliveryFeeConfig", localVarResponse);
                 if (exception != null) throw exception;
             }
 

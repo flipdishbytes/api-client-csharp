@@ -20,6 +20,7 @@ Method | HTTP request | Description
 [**GetProcessingFeeConfigsByStoreId**](StoresApi.md#getprocessingfeeconfigsbystoreid) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | 
 [**GetProcessingFeeConfigsByStoreIdAndPaymentAccountType**](StoresApi.md#getprocessingfeeconfigsbystoreidandpaymentaccounttype) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | 
 [**GetStoreById**](StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | 
+[**GetStoreDeliveryFeeConfig**](StoresApi.md#getstoredeliveryfeeconfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig/deliveryZones | 
 [**GetStoreFeeConfig**](StoresApi.md#getstorefeeconfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig | 
 [**GetStoreHeadersByAppId**](StoresApi.md#getstoreheadersbyappid) | **GET** /api/v1.0/{appId}/stores/header | 
 [**GetStoreLeadTimes**](StoresApi.md#getstoreleadtimes) | **GET** /api/v1.0/stores/{storeId}/leadTimes | 
@@ -29,6 +30,7 @@ Method | HTTP request | Description
 [**GetStoresByAppId**](StoresApi.md#getstoresbyappid) | **GET** /api/v1.0/{appId}/stores | 
 [**GetStoresByStoreIdWithValidations**](StoresApi.md#getstoresbystoreidwithvalidations) | **GET** /api/v1.0/{appId}/storevalidation/kiosk | 
 [**PublishStore**](StoresApi.md#publishstore) | **POST** /api/v1.0/stores/{storeId}/publish | 
+[**PutStoreDeliveryFeeConfig**](StoresApi.md#putstoredeliveryfeeconfig) | **PUT** /api/v1.0/stores/{storeId}/feeConfig/deliveryZones | 
 [**SetBusinessHours**](StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
 [**SetPreOrdeEnabled**](StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
 [**SetStoreLeadTimes**](StoresApi.md#setstoreleadtimes) | **POST** /api/v1.0/stores/{storeId}/leadTimes | 
@@ -1067,6 +1069,67 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getstoredeliveryfeeconfig"></a>
+# **GetStoreDeliveryFeeConfig**
+> RestApiArrayResultStoreDeliveryZoneFeeConfig GetStoreDeliveryFeeConfig (int? storeId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetStoreDeliveryFeeConfigExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var storeId = 56;  // int? | 
+
+            try
+            {
+                RestApiArrayResultStoreDeliveryZoneFeeConfig result = apiInstance.GetStoreDeliveryFeeConfig(storeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.GetStoreDeliveryFeeConfig: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **int?**|  | 
+
+### Return type
+
+[**RestApiArrayResultStoreDeliveryZoneFeeConfig**](RestApiArrayResultStoreDeliveryZoneFeeConfig.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getstorefeeconfig"></a>
 # **GetStoreFeeConfig**
 > StoreFeeConfig GetStoreFeeConfig (int? storeId)
@@ -1637,6 +1700,68 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="putstoredeliveryfeeconfig"></a>
+# **PutStoreDeliveryFeeConfig**
+> void PutStoreDeliveryFeeConfig (int? storeId, List<StoreDeliveryZoneFeeConfig> configs)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class PutStoreDeliveryFeeConfigExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var storeId = 56;  // int? | 
+            var configs = new List<StoreDeliveryZoneFeeConfig>(); // List<StoreDeliveryZoneFeeConfig> | 
+
+            try
+            {
+                apiInstance.PutStoreDeliveryFeeConfig(storeId, configs);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.PutStoreDeliveryFeeConfig: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **int?**|  | 
+ **configs** | [**List&lt;StoreDeliveryZoneFeeConfig&gt;**](StoreDeliveryZoneFeeConfig.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

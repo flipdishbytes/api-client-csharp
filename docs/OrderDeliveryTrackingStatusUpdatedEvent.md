@@ -6,6 +6,8 @@ Name | Type | Description | Notes
 **EventName** | **string** | The event name | [optional] 
 **Description** | **string** | Description | [optional] 
 **Order** | [**Order**](Order.md) | Order | [optional] 
+**DeliveryIntegrationName** | **string** | Delivery integration name | [optional] 
+**DeliveryErrorMessage** | **string** | Delivery error message (optional) | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 
 **CreateTime** | **DateTime?** | The time of creation of the event | [optional] 
 **Position** | **int?** | Position | [optional] 
