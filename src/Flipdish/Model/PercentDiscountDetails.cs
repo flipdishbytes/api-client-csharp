@@ -32,9 +32,11 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="PercentDiscountDetails" /> class.
         /// </summary>
         /// <param name="percentageDiscount">Percentage discount.</param>
-        public PercentDiscountDetails(int? percentageDiscount = default(int?))
+        /// <param name="maxDiscountAmount">The maximum amount that the percentage discount value can be.  If not set then there is no maximum.  If set to e.g. 20 euro, and the percentage discount is 25%, and the order total is 100 euro, then the discount will be 20 euro (not 25 euro)..</param>
+        public PercentDiscountDetails(int? percentageDiscount = default(int?), double? maxDiscountAmount = default(double?))
         {
             this.PercentageDiscount = percentageDiscount;
+            this.MaxDiscountAmount = maxDiscountAmount;
         }
         
         /// <summary>
@@ -45,6 +47,13 @@ namespace Flipdish.Model
         public int? PercentageDiscount { get; set; }
 
         /// <summary>
+        /// The maximum amount that the percentage discount value can be.  If not set then there is no maximum.  If set to e.g. 20 euro, and the percentage discount is 25%, and the order total is 100 euro, then the discount will be 20 euro (not 25 euro).
+        /// </summary>
+        /// <value>The maximum amount that the percentage discount value can be.  If not set then there is no maximum.  If set to e.g. 20 euro, and the percentage discount is 25%, and the order total is 100 euro, then the discount will be 20 euro (not 25 euro).</value>
+        [DataMember(Name="MaxDiscountAmount", EmitDefaultValue=false)]
+        public double? MaxDiscountAmount { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -53,6 +62,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class PercentDiscountDetails {\n");
             sb.Append("  PercentageDiscount: ").Append(PercentageDiscount).Append("\n");
+            sb.Append("  MaxDiscountAmount: ").Append(MaxDiscountAmount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,6 +101,11 @@ namespace Flipdish.Model
                     this.PercentageDiscount == input.PercentageDiscount ||
                     (this.PercentageDiscount != null &&
                     this.PercentageDiscount.Equals(input.PercentageDiscount))
+                ) && 
+                (
+                    this.MaxDiscountAmount == input.MaxDiscountAmount ||
+                    (this.MaxDiscountAmount != null &&
+                    this.MaxDiscountAmount.Equals(input.MaxDiscountAmount))
                 );
         }
 
@@ -105,6 +120,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.PercentageDiscount != null)
                     hashCode = hashCode * 59 + this.PercentageDiscount.GetHashCode();
+                if (this.MaxDiscountAmount != null)
+                    hashCode = hashCode * 59 + this.MaxDiscountAmount.GetHashCode();
                 return hashCode;
             }
         }
