@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 
 <a name="updatevoucher"></a>
 # **UpdateVoucher**
-> RestApiResultVoucherWithStats UpdateVoucher (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null)
+> RestApiResultVoucherWithStats UpdateVoucher (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null, double? maxDiscountAmount = null)
 
 
 
@@ -305,10 +305,11 @@ namespace Example
             var percentValue = 56;  // int? |  (optional) 
             var lumpValue = 1.2;  // double? |  (optional) 
             var freeItemId = 56;  // int? |  (optional) 
+            var maxDiscountAmount = 1.2;  // double? |  (optional) 
 
             try
             {
-                RestApiResultVoucherWithStats result = apiInstance.UpdateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId);
+                RestApiResultVoucherWithStats result = apiInstance.UpdateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId, maxDiscountAmount);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -330,6 +331,7 @@ Name | Type | Description  | Notes
  **percentValue** | **int?**|  | [optional] 
  **lumpValue** | **double?**|  | [optional] 
  **freeItemId** | **int?**|  | [optional] 
+ **maxDiscountAmount** | **double?**|  | [optional] 
 
 ### Return type
 
