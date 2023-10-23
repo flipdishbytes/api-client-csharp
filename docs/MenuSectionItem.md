@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **TaxRateName** | **string** | Tax rate name | [optional] 
 **TaxRateId** | **int?** | TaxRate | [optional] 
 **TaxValue** | **double?** | TaxValue - the tax associated with this item, based on TaxRate / TaxType and Currency (currency determines decimal point precision) | [optional] 
+**ExcludeFromVoucherDiscounting** | **bool?** | If true, the item is excluded from voucher discount calculations | [optional] 
 **Metadata** | [**List&lt;CreateMetadata&gt;**](CreateMetadata.md) | List of metadata | [optional] 
 **CatalogItemId** | **string** | Catalog item Id when the Item is associated to a Product | [optional] 
 **Name** | **string** | Menu item name (like \&quot;Korma\&quot;) | [optional] 

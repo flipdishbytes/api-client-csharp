@@ -116,6 +116,7 @@ namespace Flipdish.Model
         /// <param name="taxRateName">Tax rate name.</param>
         /// <param name="taxRateId">TaxRate.</param>
         /// <param name="taxValue">TaxValue - the tax associated with this item, based on TaxRate / TaxType and Currency (currency determines decimal point precision).</param>
+        /// <param name="excludeFromVoucherDiscounting">If true, the item is excluded from voucher discount calculations.</param>
         /// <param name="metadata">List of metadata.</param>
         /// <param name="catalogItemId">Catalog item Id when the Item is associated to a Product.</param>
         /// <param name="name">Menu item name (like \&quot;Korma\&quot;).</param>
@@ -130,7 +131,7 @@ namespace Flipdish.Model
         /// <param name="imageName">Image url.</param>
         /// <param name="imageUrl">Image url.</param>
         /// <param name="menuItemId">Menu Item Id.</param>
-        public MenuSectionItem(double? actualPrice = default(double?), List<MenuItemOptionSet> menuItemOptionSets = default(List<MenuItemOptionSet>), List<BusinessHoursPeriod> dailySpecialHours = default(List<BusinessHoursPeriod>), Guid? publicId = default(Guid?), string taxRateName = default(string), int? taxRateId = default(int?), double? taxValue = default(double?), List<CreateMetadata> metadata = default(List<CreateMetadata>), string catalogItemId = default(string), string name = default(string), string description = default(string), SpicinessRatingEnum? spicinessRating = default(SpicinessRatingEnum?), double? price = default(double?), int? displayOrder = default(int?), bool? alcohol = default(bool?), bool? isAvailable = default(bool?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), bool? disableVouchers = default(bool?), string imageName = default(string), string imageUrl = default(string), int? menuItemId = default(int?))
+        public MenuSectionItem(double? actualPrice = default(double?), List<MenuItemOptionSet> menuItemOptionSets = default(List<MenuItemOptionSet>), List<BusinessHoursPeriod> dailySpecialHours = default(List<BusinessHoursPeriod>), Guid? publicId = default(Guid?), string taxRateName = default(string), int? taxRateId = default(int?), double? taxValue = default(double?), bool? excludeFromVoucherDiscounting = default(bool?), List<CreateMetadata> metadata = default(List<CreateMetadata>), string catalogItemId = default(string), string name = default(string), string description = default(string), SpicinessRatingEnum? spicinessRating = default(SpicinessRatingEnum?), double? price = default(double?), int? displayOrder = default(int?), bool? alcohol = default(bool?), bool? isAvailable = default(bool?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), bool? disableVouchers = default(bool?), string imageName = default(string), string imageUrl = default(string), int? menuItemId = default(int?))
         {
             this.ActualPrice = actualPrice;
             this.MenuItemOptionSets = menuItemOptionSets;
@@ -139,6 +140,7 @@ namespace Flipdish.Model
             this.TaxRateName = taxRateName;
             this.TaxRateId = taxRateId;
             this.TaxValue = taxValue;
+            this.ExcludeFromVoucherDiscounting = excludeFromVoucherDiscounting;
             this.Metadata = metadata;
             this.CatalogItemId = catalogItemId;
             this.Name = name;
@@ -203,6 +205,13 @@ namespace Flipdish.Model
         /// <value>TaxValue - the tax associated with this item, based on TaxRate / TaxType and Currency (currency determines decimal point precision)</value>
         [DataMember(Name="TaxValue", EmitDefaultValue=false)]
         public double? TaxValue { get; set; }
+
+        /// <summary>
+        /// If true, the item is excluded from voucher discount calculations
+        /// </summary>
+        /// <value>If true, the item is excluded from voucher discount calculations</value>
+        [DataMember(Name="ExcludeFromVoucherDiscounting", EmitDefaultValue=false)]
+        public bool? ExcludeFromVoucherDiscounting { get; set; }
 
         /// <summary>
         /// List of metadata
@@ -305,6 +314,7 @@ namespace Flipdish.Model
             sb.Append("  TaxRateName: ").Append(TaxRateName).Append("\n");
             sb.Append("  TaxRateId: ").Append(TaxRateId).Append("\n");
             sb.Append("  TaxValue: ").Append(TaxValue).Append("\n");
+            sb.Append("  ExcludeFromVoucherDiscounting: ").Append(ExcludeFromVoucherDiscounting).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  CatalogItemId: ").Append(CatalogItemId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -387,6 +397,11 @@ namespace Flipdish.Model
                     this.TaxValue == input.TaxValue ||
                     (this.TaxValue != null &&
                     this.TaxValue.Equals(input.TaxValue))
+                ) && 
+                (
+                    this.ExcludeFromVoucherDiscounting == input.ExcludeFromVoucherDiscounting ||
+                    (this.ExcludeFromVoucherDiscounting != null &&
+                    this.ExcludeFromVoucherDiscounting.Equals(input.ExcludeFromVoucherDiscounting))
                 ) && 
                 (
                     this.Metadata == input.Metadata ||
@@ -483,6 +498,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.TaxRateId.GetHashCode();
                 if (this.TaxValue != null)
                     hashCode = hashCode * 59 + this.TaxValue.GetHashCode();
+                if (this.ExcludeFromVoucherDiscounting != null)
+                    hashCode = hashCode * 59 + this.ExcludeFromVoucherDiscounting.GetHashCode();
                 if (this.Metadata != null)
                     hashCode = hashCode * 59 + this.Metadata.GetHashCode();
                 if (this.CatalogItemId != null)
