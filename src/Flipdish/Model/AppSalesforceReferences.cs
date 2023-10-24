@@ -32,9 +32,11 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="AppSalesforceReferences" /> class.
         /// </summary>
         /// <param name="opportunityId">Salesforce opportunity id.</param>
-        public AppSalesforceReferences(string opportunityId = default(string))
+        /// <param name="accountId">Salesforce account id.</param>
+        public AppSalesforceReferences(string opportunityId = default(string), string accountId = default(string))
         {
             this.OpportunityId = opportunityId;
+            this.AccountId = accountId;
         }
         
         /// <summary>
@@ -45,6 +47,13 @@ namespace Flipdish.Model
         public string OpportunityId { get; set; }
 
         /// <summary>
+        /// Salesforce account id
+        /// </summary>
+        /// <value>Salesforce account id</value>
+        [DataMember(Name="AccountId", EmitDefaultValue=false)]
+        public string AccountId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -53,6 +62,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class AppSalesforceReferences {\n");
             sb.Append("  OpportunityId: ").Append(OpportunityId).Append("\n");
+            sb.Append("  AccountId: ").Append(AccountId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,6 +101,11 @@ namespace Flipdish.Model
                     this.OpportunityId == input.OpportunityId ||
                     (this.OpportunityId != null &&
                     this.OpportunityId.Equals(input.OpportunityId))
+                ) && 
+                (
+                    this.AccountId == input.AccountId ||
+                    (this.AccountId != null &&
+                    this.AccountId.Equals(input.AccountId))
                 );
         }
 
@@ -105,6 +120,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.OpportunityId != null)
                     hashCode = hashCode * 59 + this.OpportunityId.GetHashCode();
+                if (this.AccountId != null)
+                    hashCode = hashCode * 59 + this.AccountId.GetHashCode();
                 return hashCode;
             }
         }

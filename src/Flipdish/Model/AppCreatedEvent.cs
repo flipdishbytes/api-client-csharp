@@ -36,20 +36,20 @@ namespace Flipdish.Model
         /// <param name="appName">App Name.</param>
         /// <param name="countryId">Country Id.</param>
         /// <param name="user">User information.</param>
-        /// <param name="opportunityId">SalesForce Opportunity Id.</param>
+        /// <param name="accountId">Salesforce Account Id.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
         /// <param name="ipAddress">Ip Address.</param>
-        public AppCreatedEvent(string eventName = default(string), string description = default(string), string appName = default(string), string countryId = default(string), UserEventInfo user = default(UserEventInfo), string opportunityId = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
+        public AppCreatedEvent(string eventName = default(string), string description = default(string), string appName = default(string), string countryId = default(string), UserEventInfo user = default(UserEventInfo), string accountId = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
         {
             this.EventName = eventName;
             this.Description = description;
             this.AppName = appName;
             this.CountryId = countryId;
             this.User = user;
-            this.OpportunityId = opportunityId;
+            this.AccountId = accountId;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
             this.Position = position;
@@ -93,11 +93,11 @@ namespace Flipdish.Model
         public UserEventInfo User { get; set; }
 
         /// <summary>
-        /// SalesForce Opportunity Id
+        /// Salesforce Account Id
         /// </summary>
-        /// <value>SalesForce Opportunity Id</value>
-        [DataMember(Name="OpportunityId", EmitDefaultValue=false)]
-        public string OpportunityId { get; set; }
+        /// <value>Salesforce Account Id</value>
+        [DataMember(Name="AccountId", EmitDefaultValue=false)]
+        public string AccountId { get; set; }
 
         /// <summary>
         /// The identitfier of the event
@@ -147,7 +147,7 @@ namespace Flipdish.Model
             sb.Append("  AppName: ").Append(AppName).Append("\n");
             sb.Append("  CountryId: ").Append(CountryId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
-            sb.Append("  OpportunityId: ").Append(OpportunityId).Append("\n");
+            sb.Append("  AccountId: ").Append(AccountId).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -213,9 +213,9 @@ namespace Flipdish.Model
                     this.User.Equals(input.User))
                 ) && 
                 (
-                    this.OpportunityId == input.OpportunityId ||
-                    (this.OpportunityId != null &&
-                    this.OpportunityId.Equals(input.OpportunityId))
+                    this.AccountId == input.AccountId ||
+                    (this.AccountId != null &&
+                    this.AccountId.Equals(input.AccountId))
                 ) && 
                 (
                     this.FlipdishEventId == input.FlipdishEventId ||
@@ -263,8 +263,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CountryId.GetHashCode();
                 if (this.User != null)
                     hashCode = hashCode * 59 + this.User.GetHashCode();
-                if (this.OpportunityId != null)
-                    hashCode = hashCode * 59 + this.OpportunityId.GetHashCode();
+                if (this.AccountId != null)
+                    hashCode = hashCode * 59 + this.AccountId.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)
