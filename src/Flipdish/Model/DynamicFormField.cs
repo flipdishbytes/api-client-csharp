@@ -38,7 +38,8 @@ namespace Flipdish.Model
         /// <param name="mapping">mapping.</param>
         /// <param name="modifiers">modifiers.</param>
         /// <param name="value">value.</param>
-        public DynamicFormField(string identifier = default(string), string label = default(string), string placeholder = default(string), DynamicFormRules rules = default(DynamicFormRules), Dictionary<string, string> mapping = default(Dictionary<string, string>), List<string> modifiers = default(List<string>), Object value = default(Object))
+        /// <param name="scopes">scopes.</param>
+        public DynamicFormField(string identifier = default(string), string label = default(string), string placeholder = default(string), DynamicFormRules rules = default(DynamicFormRules), Dictionary<string, string> mapping = default(Dictionary<string, string>), List<string> modifiers = default(List<string>), Object value = default(Object), string scopes = default(string))
         {
             this.Identifier = identifier;
             this.Label = label;
@@ -47,6 +48,7 @@ namespace Flipdish.Model
             this.Mapping = mapping;
             this.Modifiers = modifiers;
             this.Value = value;
+            this.Scopes = scopes;
         }
         
         /// <summary>
@@ -92,6 +94,12 @@ namespace Flipdish.Model
         public Object Value { get; set; }
 
         /// <summary>
+        /// Gets or Sets Scopes
+        /// </summary>
+        [DataMember(Name="Scopes", EmitDefaultValue=false)]
+        public string Scopes { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -106,6 +114,7 @@ namespace Flipdish.Model
             sb.Append("  Mapping: ").Append(Mapping).Append("\n");
             sb.Append("  Modifiers: ").Append(Modifiers).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  Scopes: ").Append(Scopes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -174,6 +183,11 @@ namespace Flipdish.Model
                     this.Value == input.Value ||
                     (this.Value != null &&
                     this.Value.Equals(input.Value))
+                ) && 
+                (
+                    this.Scopes == input.Scopes ||
+                    (this.Scopes != null &&
+                    this.Scopes.Equals(input.Scopes))
                 );
         }
 
@@ -200,6 +214,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Modifiers.GetHashCode();
                 if (this.Value != null)
                     hashCode = hashCode * 59 + this.Value.GetHashCode();
+                if (this.Scopes != null)
+                    hashCode = hashCode * 59 + this.Scopes.GetHashCode();
                 return hashCode;
             }
         }
