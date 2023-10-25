@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 
 <a name="getallergens"></a>
 # **GetAllergens**
-> RestApiArrayResultAllergen GetAllergens (string appId)
+> RestApiArrayResultAllergen GetAllergens (string appId, string languageId)
 
 Get allergens
 
@@ -293,11 +293,12 @@ namespace Example
 
             var apiInstance = new MenusNutritionInfoApi();
             var appId = appId_example;  // string | 
+            var languageId = languageId_example;  // string | 
 
             try
             {
                 // Get allergens
-                RestApiArrayResultAllergen result = apiInstance.GetAllergens(appId);
+                RestApiArrayResultAllergen result = apiInstance.GetAllergens(appId, languageId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -314,6 +315,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
+ **languageId** | **string**|  | 
 
 ### Return type
 
