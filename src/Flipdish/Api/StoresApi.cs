@@ -489,8 +489,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>OrderLeadTimes</returns>
-        OrderLeadTimes GetStoreLeadTimes (int? storeId);
+        /// <returns>RestApiResultOrderLeadTimes</returns>
+        RestApiResultOrderLeadTimes GetStoreLeadTimes (int? storeId);
 
         /// <summary>
         /// 
@@ -500,8 +500,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>ApiResponse of OrderLeadTimes</returns>
-        ApiResponse<OrderLeadTimes> GetStoreLeadTimesWithHttpInfo (int? storeId);
+        /// <returns>ApiResponse of RestApiResultOrderLeadTimes</returns>
+        ApiResponse<RestApiResultOrderLeadTimes> GetStoreLeadTimesWithHttpInfo (int? storeId);
         /// <summary>
         /// 
         /// </summary>
@@ -730,8 +730,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="leadTime"></param>
-        /// <returns>OrderLeadTimes</returns>
-        OrderLeadTimes SetStoreLeadTimes (int? storeId, LeadTime leadTime);
+        /// <returns>RestApiResultOrderLeadTimes</returns>
+        RestApiResultOrderLeadTimes SetStoreLeadTimes (int? storeId, LeadTime leadTime);
 
         /// <summary>
         /// 
@@ -742,8 +742,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="leadTime"></param>
-        /// <returns>ApiResponse of OrderLeadTimes</returns>
-        ApiResponse<OrderLeadTimes> SetStoreLeadTimesWithHttpInfo (int? storeId, LeadTime leadTime);
+        /// <returns>ApiResponse of RestApiResultOrderLeadTimes</returns>
+        ApiResponse<RestApiResultOrderLeadTimes> SetStoreLeadTimesWithHttpInfo (int? storeId, LeadTime leadTime);
         /// <summary>
         /// 
         /// </summary>
@@ -1351,8 +1351,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>Task of OrderLeadTimes</returns>
-        System.Threading.Tasks.Task<OrderLeadTimes> GetStoreLeadTimesAsync (int? storeId);
+        /// <returns>Task of RestApiResultOrderLeadTimes</returns>
+        System.Threading.Tasks.Task<RestApiResultOrderLeadTimes> GetStoreLeadTimesAsync (int? storeId);
 
         /// <summary>
         /// 
@@ -1362,8 +1362,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>Task of ApiResponse (OrderLeadTimes)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderLeadTimes>> GetStoreLeadTimesAsyncWithHttpInfo (int? storeId);
+        /// <returns>Task of ApiResponse (RestApiResultOrderLeadTimes)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderLeadTimes>> GetStoreLeadTimesAsyncWithHttpInfo (int? storeId);
         /// <summary>
         /// 
         /// </summary>
@@ -1592,8 +1592,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="leadTime"></param>
-        /// <returns>Task of OrderLeadTimes</returns>
-        System.Threading.Tasks.Task<OrderLeadTimes> SetStoreLeadTimesAsync (int? storeId, LeadTime leadTime);
+        /// <returns>Task of RestApiResultOrderLeadTimes</returns>
+        System.Threading.Tasks.Task<RestApiResultOrderLeadTimes> SetStoreLeadTimesAsync (int? storeId, LeadTime leadTime);
 
         /// <summary>
         /// 
@@ -1604,8 +1604,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="leadTime"></param>
-        /// <returns>Task of ApiResponse (OrderLeadTimes)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderLeadTimes>> SetStoreLeadTimesAsyncWithHttpInfo (int? storeId, LeadTime leadTime);
+        /// <returns>Task of ApiResponse (RestApiResultOrderLeadTimes)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderLeadTimes>> SetStoreLeadTimesAsyncWithHttpInfo (int? storeId, LeadTime leadTime);
         /// <summary>
         /// 
         /// </summary>
@@ -5058,10 +5058,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>OrderLeadTimes</returns>
-        public OrderLeadTimes GetStoreLeadTimes (int? storeId)
+        /// <returns>RestApiResultOrderLeadTimes</returns>
+        public RestApiResultOrderLeadTimes GetStoreLeadTimes (int? storeId)
         {
-             ApiResponse<OrderLeadTimes> localVarResponse = GetStoreLeadTimesWithHttpInfo(storeId);
+             ApiResponse<RestApiResultOrderLeadTimes> localVarResponse = GetStoreLeadTimesWithHttpInfo(storeId);
              return localVarResponse.Data;
         }
 
@@ -5070,8 +5070,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>ApiResponse of OrderLeadTimes</returns>
-        public ApiResponse< OrderLeadTimes > GetStoreLeadTimesWithHttpInfo (int? storeId)
+        /// <returns>ApiResponse of RestApiResultOrderLeadTimes</returns>
+        public ApiResponse< RestApiResultOrderLeadTimes > GetStoreLeadTimesWithHttpInfo (int? storeId)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -5123,9 +5123,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<OrderLeadTimes>(localVarStatusCode,
+            return new ApiResponse<RestApiResultOrderLeadTimes>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (OrderLeadTimes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrderLeadTimes)));
+                (RestApiResultOrderLeadTimes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOrderLeadTimes)));
         }
 
         /// <summary>
@@ -5133,10 +5133,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>Task of OrderLeadTimes</returns>
-        public async System.Threading.Tasks.Task<OrderLeadTimes> GetStoreLeadTimesAsync (int? storeId)
+        /// <returns>Task of RestApiResultOrderLeadTimes</returns>
+        public async System.Threading.Tasks.Task<RestApiResultOrderLeadTimes> GetStoreLeadTimesAsync (int? storeId)
         {
-             ApiResponse<OrderLeadTimes> localVarResponse = await GetStoreLeadTimesAsyncWithHttpInfo(storeId);
+             ApiResponse<RestApiResultOrderLeadTimes> localVarResponse = await GetStoreLeadTimesAsyncWithHttpInfo(storeId);
              return localVarResponse.Data;
 
         }
@@ -5146,8 +5146,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>Task of ApiResponse (OrderLeadTimes)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrderLeadTimes>> GetStoreLeadTimesAsyncWithHttpInfo (int? storeId)
+        /// <returns>Task of ApiResponse (RestApiResultOrderLeadTimes)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderLeadTimes>> GetStoreLeadTimesAsyncWithHttpInfo (int? storeId)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -5199,9 +5199,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<OrderLeadTimes>(localVarStatusCode,
+            return new ApiResponse<RestApiResultOrderLeadTimes>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (OrderLeadTimes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrderLeadTimes)));
+                (RestApiResultOrderLeadTimes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOrderLeadTimes)));
         }
 
         /// <summary>
@@ -6739,10 +6739,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="leadTime"></param>
-        /// <returns>OrderLeadTimes</returns>
-        public OrderLeadTimes SetStoreLeadTimes (int? storeId, LeadTime leadTime)
+        /// <returns>RestApiResultOrderLeadTimes</returns>
+        public RestApiResultOrderLeadTimes SetStoreLeadTimes (int? storeId, LeadTime leadTime)
         {
-             ApiResponse<OrderLeadTimes> localVarResponse = SetStoreLeadTimesWithHttpInfo(storeId, leadTime);
+             ApiResponse<RestApiResultOrderLeadTimes> localVarResponse = SetStoreLeadTimesWithHttpInfo(storeId, leadTime);
              return localVarResponse.Data;
         }
 
@@ -6752,8 +6752,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="leadTime"></param>
-        /// <returns>ApiResponse of OrderLeadTimes</returns>
-        public ApiResponse< OrderLeadTimes > SetStoreLeadTimesWithHttpInfo (int? storeId, LeadTime leadTime)
+        /// <returns>ApiResponse of RestApiResultOrderLeadTimes</returns>
+        public ApiResponse< RestApiResultOrderLeadTimes > SetStoreLeadTimesWithHttpInfo (int? storeId, LeadTime leadTime)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -6821,9 +6821,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<OrderLeadTimes>(localVarStatusCode,
+            return new ApiResponse<RestApiResultOrderLeadTimes>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (OrderLeadTimes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrderLeadTimes)));
+                (RestApiResultOrderLeadTimes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOrderLeadTimes)));
         }
 
         /// <summary>
@@ -6832,10 +6832,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="leadTime"></param>
-        /// <returns>Task of OrderLeadTimes</returns>
-        public async System.Threading.Tasks.Task<OrderLeadTimes> SetStoreLeadTimesAsync (int? storeId, LeadTime leadTime)
+        /// <returns>Task of RestApiResultOrderLeadTimes</returns>
+        public async System.Threading.Tasks.Task<RestApiResultOrderLeadTimes> SetStoreLeadTimesAsync (int? storeId, LeadTime leadTime)
         {
-             ApiResponse<OrderLeadTimes> localVarResponse = await SetStoreLeadTimesAsyncWithHttpInfo(storeId, leadTime);
+             ApiResponse<RestApiResultOrderLeadTimes> localVarResponse = await SetStoreLeadTimesAsyncWithHttpInfo(storeId, leadTime);
              return localVarResponse.Data;
 
         }
@@ -6846,8 +6846,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="leadTime"></param>
-        /// <returns>Task of ApiResponse (OrderLeadTimes)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrderLeadTimes>> SetStoreLeadTimesAsyncWithHttpInfo (int? storeId, LeadTime leadTime)
+        /// <returns>Task of ApiResponse (RestApiResultOrderLeadTimes)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderLeadTimes>> SetStoreLeadTimesAsyncWithHttpInfo (int? storeId, LeadTime leadTime)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -6915,9 +6915,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<OrderLeadTimes>(localVarStatusCode,
+            return new ApiResponse<RestApiResultOrderLeadTimes>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (OrderLeadTimes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrderLeadTimes)));
+                (RestApiResultOrderLeadTimes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOrderLeadTimes)));
         }
 
         /// <summary>

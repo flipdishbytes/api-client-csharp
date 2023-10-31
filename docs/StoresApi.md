@@ -1260,7 +1260,7 @@ Name | Type | Description  | Notes
 
 <a name="getstoreleadtimes"></a>
 # **GetStoreLeadTimes**
-> OrderLeadTimes GetStoreLeadTimes (int? storeId)
+> RestApiResultOrderLeadTimes GetStoreLeadTimes (int? storeId)
 
 
 
@@ -1286,7 +1286,7 @@ namespace Example
 
             try
             {
-                OrderLeadTimes result = apiInstance.GetStoreLeadTimes(storeId);
+                RestApiResultOrderLeadTimes result = apiInstance.GetStoreLeadTimes(storeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1306,7 +1306,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrderLeadTimes**](OrderLeadTimes.md)
+[**RestApiResultOrderLeadTimes**](RestApiResultOrderLeadTimes.md)
 
 ### Authorization
 
@@ -1898,7 +1898,7 @@ Name | Type | Description  | Notes
 
 <a name="setstoreleadtimes"></a>
 # **SetStoreLeadTimes**
-> OrderLeadTimes SetStoreLeadTimes (int? storeId, LeadTime leadTime)
+> RestApiResultOrderLeadTimes SetStoreLeadTimes (int? storeId, LeadTime leadTime)
 
 
 
@@ -1925,7 +1925,7 @@ namespace Example
 
             try
             {
-                OrderLeadTimes result = apiInstance.SetStoreLeadTimes(storeId, leadTime);
+                RestApiResultOrderLeadTimes result = apiInstance.SetStoreLeadTimes(storeId, leadTime);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1946,7 +1946,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrderLeadTimes**](OrderLeadTimes.md)
+[**RestApiResultOrderLeadTimes**](RestApiResultOrderLeadTimes.md)
 
 ### Authorization
 

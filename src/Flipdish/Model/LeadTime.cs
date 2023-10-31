@@ -36,8 +36,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LeadTime" /> class.
         /// </summary>
-        /// <param name="dispatchType">dispatchType (required).</param>
-        /// <param name="leadTimeMinutes">leadTimeMinutes (required).</param>
+        /// <param name="dispatchType">There are two valid values for this field - &#x60;collection&#x60; and &#x60;delivery&#x60;. (required).</param>
+        /// <param name="leadTimeMinutes">This must be a positive integer. (required).</param>
         public LeadTime(string dispatchType = default(string), int? leadTimeMinutes = default(int?))
         {
             // to ensure "dispatchType" is required (not null)
@@ -61,14 +61,16 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets DispatchType
+        /// There are two valid values for this field - &#x60;collection&#x60; and &#x60;delivery&#x60;.
         /// </summary>
+        /// <value>There are two valid values for this field - &#x60;collection&#x60; and &#x60;delivery&#x60;.</value>
         [DataMember(Name="DispatchType", EmitDefaultValue=false)]
         public string DispatchType { get; set; }
 
         /// <summary>
-        /// Gets or Sets LeadTimeMinutes
+        /// This must be a positive integer.
         /// </summary>
+        /// <value>This must be a positive integer.</value>
         [DataMember(Name="LeadTimeMinutes", EmitDefaultValue=false)]
         public int? LeadTimeMinutes { get; set; }
 
