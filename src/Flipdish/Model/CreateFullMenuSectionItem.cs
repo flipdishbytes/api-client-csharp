@@ -124,7 +124,8 @@ namespace Flipdish.Model
         /// <param name="imageName">Image url.</param>
         /// <param name="imageUrl">Image url.</param>
         /// <param name="menuItemId">Menu Item Id.</param>
-        public CreateFullMenuSectionItem(List<CreateFullMenuItemOptionSet> menuItemOptionSets = default(List<CreateFullMenuItemOptionSet>), List<CreateMetadata> metadata = default(List<CreateMetadata>), string taxRateName = default(string), string name = default(string), string description = default(string), SpicinessRatingEnum? spicinessRating = default(SpicinessRatingEnum?), double? price = default(double?), int? displayOrder = default(int?), bool? alcohol = default(bool?), bool? isAvailable = default(bool?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), bool? disableVouchers = default(bool?), string imageName = default(string), string imageUrl = default(string), int? menuItemId = default(int?))
+        /// <param name="excludeFromVoucherDiscounting">If true, the item is excluded from voucher discount calculations.</param>
+        public CreateFullMenuSectionItem(List<CreateFullMenuItemOptionSet> menuItemOptionSets = default(List<CreateFullMenuItemOptionSet>), List<CreateMetadata> metadata = default(List<CreateMetadata>), string taxRateName = default(string), string name = default(string), string description = default(string), SpicinessRatingEnum? spicinessRating = default(SpicinessRatingEnum?), double? price = default(double?), int? displayOrder = default(int?), bool? alcohol = default(bool?), bool? isAvailable = default(bool?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), bool? disableVouchers = default(bool?), string imageName = default(string), string imageUrl = default(string), int? menuItemId = default(int?), bool? excludeFromVoucherDiscounting = default(bool?))
         {
             this.MenuItemOptionSets = menuItemOptionSets;
             this.Metadata = metadata;
@@ -141,6 +142,7 @@ namespace Flipdish.Model
             this.ImageName = imageName;
             this.ImageUrl = imageUrl;
             this.MenuItemId = menuItemId;
+            this.ExcludeFromVoucherDiscounting = excludeFromVoucherDiscounting;
         }
         
         /// <summary>
@@ -237,6 +239,13 @@ namespace Flipdish.Model
         public int? MenuItemId { get; set; }
 
         /// <summary>
+        /// If true, the item is excluded from voucher discount calculations
+        /// </summary>
+        /// <value>If true, the item is excluded from voucher discount calculations</value>
+        [DataMember(Name="ExcludeFromVoucherDiscounting", EmitDefaultValue=false)]
+        public bool? ExcludeFromVoucherDiscounting { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -259,6 +268,7 @@ namespace Flipdish.Model
             sb.Append("  ImageName: ").Append(ImageName).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  MenuItemId: ").Append(MenuItemId).Append("\n");
+            sb.Append("  ExcludeFromVoucherDiscounting: ").Append(ExcludeFromVoucherDiscounting).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -367,6 +377,11 @@ namespace Flipdish.Model
                     this.MenuItemId == input.MenuItemId ||
                     (this.MenuItemId != null &&
                     this.MenuItemId.Equals(input.MenuItemId))
+                ) && 
+                (
+                    this.ExcludeFromVoucherDiscounting == input.ExcludeFromVoucherDiscounting ||
+                    (this.ExcludeFromVoucherDiscounting != null &&
+                    this.ExcludeFromVoucherDiscounting.Equals(input.ExcludeFromVoucherDiscounting))
                 );
         }
 
@@ -409,6 +424,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
                 if (this.MenuItemId != null)
                     hashCode = hashCode * 59 + this.MenuItemId.GetHashCode();
+                if (this.ExcludeFromVoucherDiscounting != null)
+                    hashCode = hashCode * 59 + this.ExcludeFromVoucherDiscounting.GetHashCode();
                 return hashCode;
             }
         }
