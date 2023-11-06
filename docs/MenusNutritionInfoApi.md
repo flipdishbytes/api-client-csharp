@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 
 <a name="getallergens"></a>
 # **GetAllergens**
-> RestApiArrayResultAllergen GetAllergens (string appId, string languageId)
+> RestApiArrayResultAllergen GetAllergens (string appId, string languageId = null)
 
 Get allergens
 
@@ -293,7 +293,7 @@ namespace Example
 
             var apiInstance = new MenusNutritionInfoApi();
             var appId = appId_example;  // string | 
-            var languageId = languageId_example;  // string | 
+            var languageId = languageId_example;  // string |  (optional) 
 
             try
             {
@@ -315,7 +315,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **languageId** | **string**|  | 
+ **languageId** | **string**|  | [optional] 
 
 ### Return type
 

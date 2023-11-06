@@ -124,9 +124,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="languageId"></param>
+        /// <param name="languageId"> (optional)</param>
         /// <returns>RestApiArrayResultAllergen</returns>
-        RestApiArrayResultAllergen GetAllergens (string appId, string languageId);
+        RestApiArrayResultAllergen GetAllergens (string appId, string languageId = null);
 
         /// <summary>
         /// Get allergens
@@ -136,9 +136,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="languageId"></param>
+        /// <param name="languageId"> (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultAllergen</returns>
-        ApiResponse<RestApiArrayResultAllergen> GetAllergensWithHttpInfo (string appId, string languageId);
+        ApiResponse<RestApiArrayResultAllergen> GetAllergensWithHttpInfo (string appId, string languageId = null);
         /// <summary>
         /// Get menu nutrition by menuId
         /// </summary>
@@ -262,9 +262,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="languageId"></param>
+        /// <param name="languageId"> (optional)</param>
         /// <returns>Task of RestApiArrayResultAllergen</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultAllergen> GetAllergensAsync (string appId, string languageId);
+        System.Threading.Tasks.Task<RestApiArrayResultAllergen> GetAllergensAsync (string appId, string languageId = null);
 
         /// <summary>
         /// Get allergens
@@ -274,9 +274,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="languageId"></param>
+        /// <param name="languageId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultAllergen)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultAllergen>> GetAllergensAsyncWithHttpInfo (string appId, string languageId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultAllergen>> GetAllergensAsyncWithHttpInfo (string appId, string languageId = null);
         /// <summary>
         /// Get menu nutrition by menuId
         /// </summary>
@@ -1103,9 +1103,9 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="languageId"></param>
+        /// <param name="languageId"> (optional)</param>
         /// <returns>RestApiArrayResultAllergen</returns>
-        public RestApiArrayResultAllergen GetAllergens (string appId, string languageId)
+        public RestApiArrayResultAllergen GetAllergens (string appId, string languageId = null)
         {
              ApiResponse<RestApiArrayResultAllergen> localVarResponse = GetAllergensWithHttpInfo(appId, languageId);
              return localVarResponse.Data;
@@ -1116,16 +1116,13 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="languageId"></param>
+        /// <param name="languageId"> (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultAllergen</returns>
-        public ApiResponse< RestApiArrayResultAllergen > GetAllergensWithHttpInfo (string appId, string languageId)
+        public ApiResponse< RestApiArrayResultAllergen > GetAllergensWithHttpInfo (string appId, string languageId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling MenusNutritionInfoApi->GetAllergens");
-            // verify the required parameter 'languageId' is set
-            if (languageId == null)
-                throw new ApiException(400, "Missing required parameter 'languageId' when calling MenusNutritionInfoApi->GetAllergens");
 
             var localVarPath = "./api/v1.0/{appId}/menus/nutrition/allergens";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1184,9 +1181,9 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="languageId"></param>
+        /// <param name="languageId"> (optional)</param>
         /// <returns>Task of RestApiArrayResultAllergen</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultAllergen> GetAllergensAsync (string appId, string languageId)
+        public async System.Threading.Tasks.Task<RestApiArrayResultAllergen> GetAllergensAsync (string appId, string languageId = null)
         {
              ApiResponse<RestApiArrayResultAllergen> localVarResponse = await GetAllergensAsyncWithHttpInfo(appId, languageId);
              return localVarResponse.Data;
@@ -1198,16 +1195,13 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="languageId"></param>
+        /// <param name="languageId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultAllergen)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultAllergen>> GetAllergensAsyncWithHttpInfo (string appId, string languageId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultAllergen>> GetAllergensAsyncWithHttpInfo (string appId, string languageId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling MenusNutritionInfoApi->GetAllergens");
-            // verify the required parameter 'languageId' is set
-            if (languageId == null)
-                throw new ApiException(400, "Missing required parameter 'languageId' when calling MenusNutritionInfoApi->GetAllergens");
 
             var localVarPath = "./api/v1.0/{appId}/menus/nutrition/allergens";
             var localVarPathParams = new Dictionary<String, String>();
