@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **VoucherType** | **string** | Voucher Type | [optional] 
-**AddItemDetails** | [**AddItemDetails**](AddItemDetails.md) | Add item details | [optional] 
+**Promotion** | [**CreatePromotion**](CreatePromotion.md) | Create Promotion details | [optional] 
 **CreditNoteDetails** | [**CreditNoteDetails**](CreditNoteDetails.md) | Credit note details | [optional] 
 **LumpDiscountDetails** | [**LumpDiscountDetails**](LumpDiscountDetails.md) | Lump discount details | [optional] 
 **PercentDiscountDetails** | [**PercentDiscountDetails**](PercentDiscountDetails.md) | Percent discount details | [optional] 

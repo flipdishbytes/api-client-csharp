@@ -1,23 +1,11 @@
-# Flipdish.Model.VoucherWithStats
+# Flipdish.Model.UpdateVoucher
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TotalUsed** | **int?** | Total times the voucher was used | [optional] 
-**TotalCustomers** | **int?** | Total amount of customers who used this voucher | [optional] 
-**TotalAmountFromOrders** | **double?** | Total amount of money from orders | [optional] 
-**TotalDiscounted** | **double?** | Total amount of money given away | [optional] 
-**AverageOrderSize** | **double?** | Average Order Size | [optional] 
-**VoucherId** | **int?** | Voucher Id | [optional] 
-**Status** | **string** | Voucher Status | [optional] 
-**VoucherType** | **string** | Voucher Type | [optional] 
-**VoucherSubType** | **string** | Voucher Sub Type | [optional] 
-**Currency** | **string** | Currency of the voucher | [optional] 
-**StoreNames** | **List&lt;string&gt;** | Stores that this voucher applies to | [optional] 
-**PromotionDetails** | [**PromotionDetails**](PromotionDetails.md) | Promotion details | [optional] 
-**CreditNoteDetails** | [**CreditNoteDetails**](CreditNoteDetails.md) | Credit note details | [optional] 
-**LumpDiscountDetails** | [**LumpDiscountDetails**](LumpDiscountDetails.md) | Lump discount details | [optional] 
-**PercentDiscountDetails** | [**PercentDiscountDetails**](PercentDiscountDetails.md) | Percent discount details | [optional] 
+**PromotionId** | **int?** | Promotion ID to update | [optional] 
+**PromotionName** | **string** | The updated name of the promotion | [optional] 
+**PromotionAwardMenuItemPublicIds** | **List&lt;Guid?&gt;** | The updated menu items that the promotion awards | [optional] 
 **Code** | **string** | Voucher Code | [optional] 
 **Description** | **string** | Voucher Description (Visible on printout) | [optional] 
 **Stores** | **List&lt;int?&gt;** | Stores that this voucher applies to | [optional] 

@@ -876,7 +876,7 @@ namespace Flipdish.Model
         /// <param name="voucherSubType">Voucher Sub Type.</param>
         /// <param name="currency">Currency of the voucher.</param>
         /// <param name="storeNames">Stores that this voucher applies to.</param>
-        /// <param name="addItemDetails">Add item details.</param>
+        /// <param name="promotionDetails">Promotion details.</param>
         /// <param name="creditNoteDetails">Credit note details.</param>
         /// <param name="lumpDiscountDetails">Lump discount details.</param>
         /// <param name="percentDiscountDetails">Percent discount details.</param>
@@ -897,7 +897,7 @@ namespace Flipdish.Model
         /// <param name="isValidOnlyOnce">Valid only once, by any customer (once used cannot be used again by any other customer).</param>
         /// <param name="startDate">Voucher Starts On (Time in UTC).</param>
         /// <param name="expiryDate">Voucher Expires On (Time in UTC).</param>
-        public VoucherWithStats(int? totalUsed = default(int?), int? totalCustomers = default(int?), double? totalAmountFromOrders = default(double?), double? totalDiscounted = default(double?), double? averageOrderSize = default(double?), int? voucherId = default(int?), StatusEnum? status = default(StatusEnum?), VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), List<string> storeNames = default(List<string>), AddItemDetails addItemDetails = default(AddItemDetails), CreditNoteDetails creditNoteDetails = default(CreditNoteDetails), LumpDiscountDetails lumpDiscountDetails = default(LumpDiscountDetails), PercentDiscountDetails percentDiscountDetails = default(PercentDiscountDetails), string code = default(string), string description = default(string), List<int?> stores = default(List<int?>), double? validOnOrdersOver = default(double?), bool? takesPriority = default(bool?), bool? isEnabled = default(bool?), bool? isAutomaticallyApplied = default(bool?), bool? includeDeliveryFee = default(bool?), bool? isValidForDeliveryOrders = default(bool?), bool? isValidForPickupOrders = default(bool?), bool? isValidForOrdersPayedOnline = default(bool?), bool? isValidForOrdersPayedByCash = default(bool?), bool? isValidForFirstOrderOnly = default(bool?), bool? isValidOncePerCustomer = default(bool?), bool? isValidOnlyOnce = default(bool?), DateTime? startDate = default(DateTime?), DateTime? expiryDate = default(DateTime?))
+        public VoucherWithStats(int? totalUsed = default(int?), int? totalCustomers = default(int?), double? totalAmountFromOrders = default(double?), double? totalDiscounted = default(double?), double? averageOrderSize = default(double?), int? voucherId = default(int?), StatusEnum? status = default(StatusEnum?), VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), List<string> storeNames = default(List<string>), PromotionDetails promotionDetails = default(PromotionDetails), CreditNoteDetails creditNoteDetails = default(CreditNoteDetails), LumpDiscountDetails lumpDiscountDetails = default(LumpDiscountDetails), PercentDiscountDetails percentDiscountDetails = default(PercentDiscountDetails), string code = default(string), string description = default(string), List<int?> stores = default(List<int?>), double? validOnOrdersOver = default(double?), bool? takesPriority = default(bool?), bool? isEnabled = default(bool?), bool? isAutomaticallyApplied = default(bool?), bool? includeDeliveryFee = default(bool?), bool? isValidForDeliveryOrders = default(bool?), bool? isValidForPickupOrders = default(bool?), bool? isValidForOrdersPayedOnline = default(bool?), bool? isValidForOrdersPayedByCash = default(bool?), bool? isValidForFirstOrderOnly = default(bool?), bool? isValidOncePerCustomer = default(bool?), bool? isValidOnlyOnce = default(bool?), DateTime? startDate = default(DateTime?), DateTime? expiryDate = default(DateTime?))
         {
             this.TotalUsed = totalUsed;
             this.TotalCustomers = totalCustomers;
@@ -910,7 +910,7 @@ namespace Flipdish.Model
             this.VoucherSubType = voucherSubType;
             this.Currency = currency;
             this.StoreNames = storeNames;
-            this.AddItemDetails = addItemDetails;
+            this.PromotionDetails = promotionDetails;
             this.CreditNoteDetails = creditNoteDetails;
             this.LumpDiscountDetails = lumpDiscountDetails;
             this.PercentDiscountDetails = percentDiscountDetails;
@@ -987,11 +987,11 @@ namespace Flipdish.Model
         public List<string> StoreNames { get; set; }
 
         /// <summary>
-        /// Add item details
+        /// Promotion details
         /// </summary>
-        /// <value>Add item details</value>
-        [DataMember(Name="AddItemDetails", EmitDefaultValue=false)]
-        public AddItemDetails AddItemDetails { get; set; }
+        /// <value>Promotion details</value>
+        [DataMember(Name="PromotionDetails", EmitDefaultValue=false)]
+        public PromotionDetails PromotionDetails { get; set; }
 
         /// <summary>
         /// Credit note details
@@ -1152,7 +1152,7 @@ namespace Flipdish.Model
             sb.Append("  VoucherSubType: ").Append(VoucherSubType).Append("\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("  StoreNames: ").Append(StoreNames).Append("\n");
-            sb.Append("  AddItemDetails: ").Append(AddItemDetails).Append("\n");
+            sb.Append("  PromotionDetails: ").Append(PromotionDetails).Append("\n");
             sb.Append("  CreditNoteDetails: ").Append(CreditNoteDetails).Append("\n");
             sb.Append("  LumpDiscountDetails: ").Append(LumpDiscountDetails).Append("\n");
             sb.Append("  PercentDiscountDetails: ").Append(PercentDiscountDetails).Append("\n");
@@ -1263,9 +1263,9 @@ namespace Flipdish.Model
                     this.StoreNames.SequenceEqual(input.StoreNames)
                 ) && 
                 (
-                    this.AddItemDetails == input.AddItemDetails ||
-                    (this.AddItemDetails != null &&
-                    this.AddItemDetails.Equals(input.AddItemDetails))
+                    this.PromotionDetails == input.PromotionDetails ||
+                    (this.PromotionDetails != null &&
+                    this.PromotionDetails.Equals(input.PromotionDetails))
                 ) && 
                 (
                     this.CreditNoteDetails == input.CreditNoteDetails ||
@@ -1400,8 +1400,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Currency.GetHashCode();
                 if (this.StoreNames != null)
                     hashCode = hashCode * 59 + this.StoreNames.GetHashCode();
-                if (this.AddItemDetails != null)
-                    hashCode = hashCode * 59 + this.AddItemDetails.GetHashCode();
+                if (this.PromotionDetails != null)
+                    hashCode = hashCode * 59 + this.PromotionDetails.GetHashCode();
                 if (this.CreditNoteDetails != null)
                     hashCode = hashCode * 59 + this.CreditNoteDetails.GetHashCode();
                 if (this.LumpDiscountDetails != null)

@@ -140,10 +140,9 @@ namespace Flipdish.Api
         /// <param name="storeId"> (optional)</param>
         /// <param name="percentValue"> (optional)</param>
         /// <param name="lumpValue"> (optional)</param>
-        /// <param name="freeItemId"> (optional)</param>
         /// <param name="maxDiscountAmount"> (optional)</param>
         /// <returns>RestApiResultVoucherWithStats</returns>
-        RestApiResultVoucherWithStats UpdateVoucher (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null, double? maxDiscountAmount = null);
+        RestApiResultVoucherWithStats UpdateVoucher (int? voucherId, UpdateVoucher voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, double? maxDiscountAmount = null);
 
         /// <summary>
         /// 
@@ -157,10 +156,9 @@ namespace Flipdish.Api
         /// <param name="storeId"> (optional)</param>
         /// <param name="percentValue"> (optional)</param>
         /// <param name="lumpValue"> (optional)</param>
-        /// <param name="freeItemId"> (optional)</param>
         /// <param name="maxDiscountAmount"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultVoucherWithStats</returns>
-        ApiResponse<RestApiResultVoucherWithStats> UpdateVoucherWithHttpInfo (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null, double? maxDiscountAmount = null);
+        ApiResponse<RestApiResultVoucherWithStats> UpdateVoucherWithHttpInfo (int? voucherId, UpdateVoucher voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, double? maxDiscountAmount = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -279,10 +277,9 @@ namespace Flipdish.Api
         /// <param name="storeId"> (optional)</param>
         /// <param name="percentValue"> (optional)</param>
         /// <param name="lumpValue"> (optional)</param>
-        /// <param name="freeItemId"> (optional)</param>
         /// <param name="maxDiscountAmount"> (optional)</param>
         /// <returns>Task of RestApiResultVoucherWithStats</returns>
-        System.Threading.Tasks.Task<RestApiResultVoucherWithStats> UpdateVoucherAsync (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null, double? maxDiscountAmount = null);
+        System.Threading.Tasks.Task<RestApiResultVoucherWithStats> UpdateVoucherAsync (int? voucherId, UpdateVoucher voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, double? maxDiscountAmount = null);
 
         /// <summary>
         /// 
@@ -296,10 +293,9 @@ namespace Flipdish.Api
         /// <param name="storeId"> (optional)</param>
         /// <param name="percentValue"> (optional)</param>
         /// <param name="lumpValue"> (optional)</param>
-        /// <param name="freeItemId"> (optional)</param>
         /// <param name="maxDiscountAmount"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultVoucherWithStats)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> UpdateVoucherAsyncWithHttpInfo (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null, double? maxDiscountAmount = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> UpdateVoucherAsyncWithHttpInfo (int? voucherId, UpdateVoucher voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, double? maxDiscountAmount = null);
         #endregion Asynchronous Operations
     }
 
@@ -1109,12 +1105,11 @@ namespace Flipdish.Api
         /// <param name="storeId"> (optional)</param>
         /// <param name="percentValue"> (optional)</param>
         /// <param name="lumpValue"> (optional)</param>
-        /// <param name="freeItemId"> (optional)</param>
         /// <param name="maxDiscountAmount"> (optional)</param>
         /// <returns>RestApiResultVoucherWithStats</returns>
-        public RestApiResultVoucherWithStats UpdateVoucher (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null, double? maxDiscountAmount = null)
+        public RestApiResultVoucherWithStats UpdateVoucher (int? voucherId, UpdateVoucher voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, double? maxDiscountAmount = null)
         {
-             ApiResponse<RestApiResultVoucherWithStats> localVarResponse = UpdateVoucherWithHttpInfo(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId, maxDiscountAmount);
+             ApiResponse<RestApiResultVoucherWithStats> localVarResponse = UpdateVoucherWithHttpInfo(voucherId, voucher, storeId, percentValue, lumpValue, maxDiscountAmount);
              return localVarResponse.Data;
         }
 
@@ -1127,10 +1122,9 @@ namespace Flipdish.Api
         /// <param name="storeId"> (optional)</param>
         /// <param name="percentValue"> (optional)</param>
         /// <param name="lumpValue"> (optional)</param>
-        /// <param name="freeItemId"> (optional)</param>
         /// <param name="maxDiscountAmount"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultVoucherWithStats</returns>
-        public ApiResponse< RestApiResultVoucherWithStats > UpdateVoucherWithHttpInfo (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null, double? maxDiscountAmount = null)
+        public ApiResponse< RestApiResultVoucherWithStats > UpdateVoucherWithHttpInfo (int? voucherId, UpdateVoucher voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, double? maxDiscountAmount = null)
         {
             // verify the required parameter 'voucherId' is set
             if (voucherId == null)
@@ -1172,7 +1166,6 @@ namespace Flipdish.Api
             if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeId", storeId)); // query parameter
             if (percentValue != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "percentValue", percentValue)); // query parameter
             if (lumpValue != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "lumpValue", lumpValue)); // query parameter
-            if (freeItemId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "freeItemId", freeItemId)); // query parameter
             if (maxDiscountAmount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "maxDiscountAmount", maxDiscountAmount)); // query parameter
             if (voucher != null && voucher.GetType() != typeof(byte[]))
             {
@@ -1217,12 +1210,11 @@ namespace Flipdish.Api
         /// <param name="storeId"> (optional)</param>
         /// <param name="percentValue"> (optional)</param>
         /// <param name="lumpValue"> (optional)</param>
-        /// <param name="freeItemId"> (optional)</param>
         /// <param name="maxDiscountAmount"> (optional)</param>
         /// <returns>Task of RestApiResultVoucherWithStats</returns>
-        public async System.Threading.Tasks.Task<RestApiResultVoucherWithStats> UpdateVoucherAsync (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null, double? maxDiscountAmount = null)
+        public async System.Threading.Tasks.Task<RestApiResultVoucherWithStats> UpdateVoucherAsync (int? voucherId, UpdateVoucher voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, double? maxDiscountAmount = null)
         {
-             ApiResponse<RestApiResultVoucherWithStats> localVarResponse = await UpdateVoucherAsyncWithHttpInfo(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId, maxDiscountAmount);
+             ApiResponse<RestApiResultVoucherWithStats> localVarResponse = await UpdateVoucherAsyncWithHttpInfo(voucherId, voucher, storeId, percentValue, lumpValue, maxDiscountAmount);
              return localVarResponse.Data;
 
         }
@@ -1236,10 +1228,9 @@ namespace Flipdish.Api
         /// <param name="storeId"> (optional)</param>
         /// <param name="percentValue"> (optional)</param>
         /// <param name="lumpValue"> (optional)</param>
-        /// <param name="freeItemId"> (optional)</param>
         /// <param name="maxDiscountAmount"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultVoucherWithStats)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> UpdateVoucherAsyncWithHttpInfo (int? voucherId, VoucherBase voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, int? freeItemId = null, double? maxDiscountAmount = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> UpdateVoucherAsyncWithHttpInfo (int? voucherId, UpdateVoucher voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, double? maxDiscountAmount = null)
         {
             // verify the required parameter 'voucherId' is set
             if (voucherId == null)
@@ -1281,7 +1272,6 @@ namespace Flipdish.Api
             if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeId", storeId)); // query parameter
             if (percentValue != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "percentValue", percentValue)); // query parameter
             if (lumpValue != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "lumpValue", lumpValue)); // query parameter
-            if (freeItemId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "freeItemId", freeItemId)); // query parameter
             if (maxDiscountAmount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "maxDiscountAmount", maxDiscountAmount)); // query parameter
             if (voucher != null && voucher.GetType() != typeof(byte[]))
             {

@@ -23,58 +23,17 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Create Voucher
+    /// Update Voucher
     /// </summary>
     [DataContract]
-    public partial class CreateVoucher :  IEquatable<CreateVoucher>
+    public partial class UpdateVoucher :  IEquatable<UpdateVoucher>
     {
         /// <summary>
-        /// Voucher Type
+        /// Initializes a new instance of the <see cref="UpdateVoucher" /> class.
         /// </summary>
-        /// <value>Voucher Type</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum VoucherTypeEnum
-        {
-            
-            /// <summary>
-            /// Enum PercentageDiscount for value: PercentageDiscount
-            /// </summary>
-            [EnumMember(Value = "PercentageDiscount")]
-            PercentageDiscount = 1,
-            
-            /// <summary>
-            /// Enum LumpDiscount for value: LumpDiscount
-            /// </summary>
-            [EnumMember(Value = "LumpDiscount")]
-            LumpDiscount = 2,
-            
-            /// <summary>
-            /// Enum AddItem for value: AddItem
-            /// </summary>
-            [EnumMember(Value = "AddItem")]
-            AddItem = 3,
-            
-            /// <summary>
-            /// Enum CreditNote for value: CreditNote
-            /// </summary>
-            [EnumMember(Value = "CreditNote")]
-            CreditNote = 4
-        }
-
-        /// <summary>
-        /// Voucher Type
-        /// </summary>
-        /// <value>Voucher Type</value>
-        [DataMember(Name="VoucherType", EmitDefaultValue=false)]
-        public VoucherTypeEnum? VoucherType { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CreateVoucher" /> class.
-        /// </summary>
-        /// <param name="voucherType">Voucher Type.</param>
-        /// <param name="promotion">Create Promotion details.</param>
-        /// <param name="creditNoteDetails">Credit note details.</param>
-        /// <param name="lumpDiscountDetails">Lump discount details.</param>
-        /// <param name="percentDiscountDetails">Percent discount details.</param>
+        /// <param name="promotionId">Promotion ID to update.</param>
+        /// <param name="promotionName">The updated name of the promotion.</param>
+        /// <param name="promotionAwardMenuItemPublicIds">The updated menu items that the promotion awards.</param>
         /// <param name="code">Voucher Code.</param>
         /// <param name="description">Voucher Description (Visible on printout).</param>
         /// <param name="stores">Stores that this voucher applies to.</param>
@@ -92,13 +51,11 @@ namespace Flipdish.Model
         /// <param name="isValidOnlyOnce">Valid only once, by any customer (once used cannot be used again by any other customer).</param>
         /// <param name="startDate">Voucher Starts On (Time in UTC).</param>
         /// <param name="expiryDate">Voucher Expires On (Time in UTC).</param>
-        public CreateVoucher(VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), CreatePromotion promotion = default(CreatePromotion), CreditNoteDetails creditNoteDetails = default(CreditNoteDetails), LumpDiscountDetails lumpDiscountDetails = default(LumpDiscountDetails), PercentDiscountDetails percentDiscountDetails = default(PercentDiscountDetails), string code = default(string), string description = default(string), List<int?> stores = default(List<int?>), double? validOnOrdersOver = default(double?), bool? takesPriority = default(bool?), bool? isEnabled = default(bool?), bool? isAutomaticallyApplied = default(bool?), bool? includeDeliveryFee = default(bool?), bool? isValidForDeliveryOrders = default(bool?), bool? isValidForPickupOrders = default(bool?), bool? isValidForOrdersPayedOnline = default(bool?), bool? isValidForOrdersPayedByCash = default(bool?), bool? isValidForFirstOrderOnly = default(bool?), bool? isValidOncePerCustomer = default(bool?), bool? isValidOnlyOnce = default(bool?), DateTime? startDate = default(DateTime?), DateTime? expiryDate = default(DateTime?))
+        public UpdateVoucher(int? promotionId = default(int?), string promotionName = default(string), List<Guid?> promotionAwardMenuItemPublicIds = default(List<Guid?>), string code = default(string), string description = default(string), List<int?> stores = default(List<int?>), double? validOnOrdersOver = default(double?), bool? takesPriority = default(bool?), bool? isEnabled = default(bool?), bool? isAutomaticallyApplied = default(bool?), bool? includeDeliveryFee = default(bool?), bool? isValidForDeliveryOrders = default(bool?), bool? isValidForPickupOrders = default(bool?), bool? isValidForOrdersPayedOnline = default(bool?), bool? isValidForOrdersPayedByCash = default(bool?), bool? isValidForFirstOrderOnly = default(bool?), bool? isValidOncePerCustomer = default(bool?), bool? isValidOnlyOnce = default(bool?), DateTime? startDate = default(DateTime?), DateTime? expiryDate = default(DateTime?))
         {
-            this.VoucherType = voucherType;
-            this.Promotion = promotion;
-            this.CreditNoteDetails = creditNoteDetails;
-            this.LumpDiscountDetails = lumpDiscountDetails;
-            this.PercentDiscountDetails = percentDiscountDetails;
+            this.PromotionId = promotionId;
+            this.PromotionName = promotionName;
+            this.PromotionAwardMenuItemPublicIds = promotionAwardMenuItemPublicIds;
             this.Code = code;
             this.Description = description;
             this.Stores = stores;
@@ -118,34 +75,26 @@ namespace Flipdish.Model
             this.ExpiryDate = expiryDate;
         }
         
+        /// <summary>
+        /// Promotion ID to update
+        /// </summary>
+        /// <value>Promotion ID to update</value>
+        [DataMember(Name="PromotionId", EmitDefaultValue=false)]
+        public int? PromotionId { get; set; }
 
         /// <summary>
-        /// Create Promotion details
+        /// The updated name of the promotion
         /// </summary>
-        /// <value>Create Promotion details</value>
-        [DataMember(Name="Promotion", EmitDefaultValue=false)]
-        public CreatePromotion Promotion { get; set; }
+        /// <value>The updated name of the promotion</value>
+        [DataMember(Name="PromotionName", EmitDefaultValue=false)]
+        public string PromotionName { get; set; }
 
         /// <summary>
-        /// Credit note details
+        /// The updated menu items that the promotion awards
         /// </summary>
-        /// <value>Credit note details</value>
-        [DataMember(Name="CreditNoteDetails", EmitDefaultValue=false)]
-        public CreditNoteDetails CreditNoteDetails { get; set; }
-
-        /// <summary>
-        /// Lump discount details
-        /// </summary>
-        /// <value>Lump discount details</value>
-        [DataMember(Name="LumpDiscountDetails", EmitDefaultValue=false)]
-        public LumpDiscountDetails LumpDiscountDetails { get; set; }
-
-        /// <summary>
-        /// Percent discount details
-        /// </summary>
-        /// <value>Percent discount details</value>
-        [DataMember(Name="PercentDiscountDetails", EmitDefaultValue=false)]
-        public PercentDiscountDetails PercentDiscountDetails { get; set; }
+        /// <value>The updated menu items that the promotion awards</value>
+        [DataMember(Name="PromotionAwardMenuItemPublicIds", EmitDefaultValue=false)]
+        public List<Guid?> PromotionAwardMenuItemPublicIds { get; set; }
 
         /// <summary>
         /// Voucher Code
@@ -273,12 +222,10 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CreateVoucher {\n");
-            sb.Append("  VoucherType: ").Append(VoucherType).Append("\n");
-            sb.Append("  Promotion: ").Append(Promotion).Append("\n");
-            sb.Append("  CreditNoteDetails: ").Append(CreditNoteDetails).Append("\n");
-            sb.Append("  LumpDiscountDetails: ").Append(LumpDiscountDetails).Append("\n");
-            sb.Append("  PercentDiscountDetails: ").Append(PercentDiscountDetails).Append("\n");
+            sb.Append("class UpdateVoucher {\n");
+            sb.Append("  PromotionId: ").Append(PromotionId).Append("\n");
+            sb.Append("  PromotionName: ").Append(PromotionName).Append("\n");
+            sb.Append("  PromotionAwardMenuItemPublicIds: ").Append(PromotionAwardMenuItemPublicIds).Append("\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Stores: ").Append(Stores).Append("\n");
@@ -316,44 +263,34 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CreateVoucher);
+            return this.Equals(input as UpdateVoucher);
         }
 
         /// <summary>
-        /// Returns true if CreateVoucher instances are equal
+        /// Returns true if UpdateVoucher instances are equal
         /// </summary>
-        /// <param name="input">Instance of CreateVoucher to be compared</param>
+        /// <param name="input">Instance of UpdateVoucher to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CreateVoucher input)
+        public bool Equals(UpdateVoucher input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.VoucherType == input.VoucherType ||
-                    (this.VoucherType != null &&
-                    this.VoucherType.Equals(input.VoucherType))
+                    this.PromotionId == input.PromotionId ||
+                    (this.PromotionId != null &&
+                    this.PromotionId.Equals(input.PromotionId))
                 ) && 
                 (
-                    this.Promotion == input.Promotion ||
-                    (this.Promotion != null &&
-                    this.Promotion.Equals(input.Promotion))
+                    this.PromotionName == input.PromotionName ||
+                    (this.PromotionName != null &&
+                    this.PromotionName.Equals(input.PromotionName))
                 ) && 
                 (
-                    this.CreditNoteDetails == input.CreditNoteDetails ||
-                    (this.CreditNoteDetails != null &&
-                    this.CreditNoteDetails.Equals(input.CreditNoteDetails))
-                ) && 
-                (
-                    this.LumpDiscountDetails == input.LumpDiscountDetails ||
-                    (this.LumpDiscountDetails != null &&
-                    this.LumpDiscountDetails.Equals(input.LumpDiscountDetails))
-                ) && 
-                (
-                    this.PercentDiscountDetails == input.PercentDiscountDetails ||
-                    (this.PercentDiscountDetails != null &&
-                    this.PercentDiscountDetails.Equals(input.PercentDiscountDetails))
+                    this.PromotionAwardMenuItemPublicIds == input.PromotionAwardMenuItemPublicIds ||
+                    this.PromotionAwardMenuItemPublicIds != null &&
+                    this.PromotionAwardMenuItemPublicIds.SequenceEqual(input.PromotionAwardMenuItemPublicIds)
                 ) && 
                 (
                     this.Code == input.Code ||
@@ -451,16 +388,12 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.VoucherType != null)
-                    hashCode = hashCode * 59 + this.VoucherType.GetHashCode();
-                if (this.Promotion != null)
-                    hashCode = hashCode * 59 + this.Promotion.GetHashCode();
-                if (this.CreditNoteDetails != null)
-                    hashCode = hashCode * 59 + this.CreditNoteDetails.GetHashCode();
-                if (this.LumpDiscountDetails != null)
-                    hashCode = hashCode * 59 + this.LumpDiscountDetails.GetHashCode();
-                if (this.PercentDiscountDetails != null)
-                    hashCode = hashCode * 59 + this.PercentDiscountDetails.GetHashCode();
+                if (this.PromotionId != null)
+                    hashCode = hashCode * 59 + this.PromotionId.GetHashCode();
+                if (this.PromotionName != null)
+                    hashCode = hashCode * 59 + this.PromotionName.GetHashCode();
+                if (this.PromotionAwardMenuItemPublicIds != null)
+                    hashCode = hashCode * 59 + this.PromotionAwardMenuItemPublicIds.GetHashCode();
                 if (this.Code != null)
                     hashCode = hashCode * 59 + this.Code.GetHashCode();
                 if (this.Description != null)
