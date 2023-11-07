@@ -52,6 +52,7 @@ Name | Type | Description | Notes
 **DriverId** | **int?** | Assigned driver identifier | [optional] 
 **TotalTax** | **double?** | Total tax applied to order | [optional] 
 **OrderTrackingCode** | **string** | Unique, 6 character long alpha numeric code for tracking. | [optional] 
+**DeliveryFeeAreaId** | **int?** | Delivery area identifier | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
