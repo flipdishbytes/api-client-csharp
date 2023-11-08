@@ -54,8 +54,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="storeId"></param>
+        /// <param name="milestoneId"> (optional)</param>
         /// <returns>Object</returns>
-        Object OnboardingGetOnboardingItems (string appId, int? storeId);
+        Object OnboardingGetOnboardingItems (string appId, int? storeId, int? milestoneId = null);
 
         /// <summary>
         /// 
@@ -66,8 +67,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="storeId"></param>
+        /// <param name="milestoneId"> (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> OnboardingGetOnboardingItemsWithHttpInfo (string appId, int? storeId);
+        ApiResponse<Object> OnboardingGetOnboardingItemsWithHttpInfo (string appId, int? storeId, int? milestoneId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -150,8 +152,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="storeId"></param>
+        /// <param name="milestoneId"> (optional)</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> OnboardingGetOnboardingItemsAsync (string appId, int? storeId);
+        System.Threading.Tasks.Task<Object> OnboardingGetOnboardingItemsAsync (string appId, int? storeId, int? milestoneId = null);
 
         /// <summary>
         /// 
@@ -162,8 +165,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="storeId"></param>
+        /// <param name="milestoneId"> (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingGetOnboardingItemsAsyncWithHttpInfo (string appId, int? storeId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingGetOnboardingItemsAsyncWithHttpInfo (string appId, int? storeId, int? milestoneId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -471,10 +475,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="storeId"></param>
+        /// <param name="milestoneId"> (optional)</param>
         /// <returns>Object</returns>
-        public Object OnboardingGetOnboardingItems (string appId, int? storeId)
+        public Object OnboardingGetOnboardingItems (string appId, int? storeId, int? milestoneId = null)
         {
-             ApiResponse<Object> localVarResponse = OnboardingGetOnboardingItemsWithHttpInfo(appId, storeId);
+             ApiResponse<Object> localVarResponse = OnboardingGetOnboardingItemsWithHttpInfo(appId, storeId, milestoneId);
              return localVarResponse.Data;
         }
 
@@ -484,8 +489,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="storeId"></param>
+        /// <param name="milestoneId"> (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > OnboardingGetOnboardingItemsWithHttpInfo (string appId, int? storeId)
+        public ApiResponse< Object > OnboardingGetOnboardingItemsWithHttpInfo (string appId, int? storeId, int? milestoneId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -520,6 +526,7 @@ namespace Flipdish.Api
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (milestoneId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "milestoneId", milestoneId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -552,10 +559,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="storeId"></param>
+        /// <param name="milestoneId"> (optional)</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> OnboardingGetOnboardingItemsAsync (string appId, int? storeId)
+        public async System.Threading.Tasks.Task<Object> OnboardingGetOnboardingItemsAsync (string appId, int? storeId, int? milestoneId = null)
         {
-             ApiResponse<Object> localVarResponse = await OnboardingGetOnboardingItemsAsyncWithHttpInfo(appId, storeId);
+             ApiResponse<Object> localVarResponse = await OnboardingGetOnboardingItemsAsyncWithHttpInfo(appId, storeId, milestoneId);
              return localVarResponse.Data;
 
         }
@@ -566,8 +574,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="storeId"></param>
+        /// <param name="milestoneId"> (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingGetOnboardingItemsAsyncWithHttpInfo (string appId, int? storeId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingGetOnboardingItemsAsyncWithHttpInfo (string appId, int? storeId, int? milestoneId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -602,6 +611,7 @@ namespace Flipdish.Api
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (milestoneId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "milestoneId", milestoneId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required

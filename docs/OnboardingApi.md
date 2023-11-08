@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 <a name="onboardinggetonboardingitems"></a>
 # **OnboardingGetOnboardingItems**
-> Object OnboardingGetOnboardingItems (string appId, int? storeId)
+> Object OnboardingGetOnboardingItems (string appId, int? storeId, int? milestoneId = null)
 
 
 
@@ -97,10 +97,11 @@ namespace Example
             var apiInstance = new OnboardingApi();
             var appId = appId_example;  // string | 
             var storeId = 56;  // int? | 
+            var milestoneId = 56;  // int? |  (optional) 
 
             try
             {
-                Object result = apiInstance.OnboardingGetOnboardingItems(appId, storeId);
+                Object result = apiInstance.OnboardingGetOnboardingItems(appId, storeId, milestoneId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -118,6 +119,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
  **storeId** | **int?**|  | 
+ **milestoneId** | **int?**|  | [optional] 
 
 ### Return type
 
