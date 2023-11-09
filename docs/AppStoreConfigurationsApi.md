@@ -465,7 +465,7 @@ Name | Type | Description  | Notes
 
 <a name="getconfiguredapps"></a>
 # **GetConfiguredApps**
-> RestApiArrayResultAppStoreAppConfigurationHeader GetConfiguredApps (string appId)
+> RestApiArrayResultAppStoreAppSummary GetConfiguredApps (string appId)
 
 
 
@@ -491,7 +491,7 @@ namespace Example
 
             try
             {
-                RestApiArrayResultAppStoreAppConfigurationHeader result = apiInstance.GetConfiguredApps(appId);
+                RestApiArrayResultAppStoreAppSummary result = apiInstance.GetConfiguredApps(appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -511,7 +511,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiArrayResultAppStoreAppConfigurationHeader**](RestApiArrayResultAppStoreAppConfigurationHeader.md)
+[**RestApiArrayResultAppStoreAppSummary**](RestApiArrayResultAppStoreAppSummary.md)
 
 ### Authorization
 

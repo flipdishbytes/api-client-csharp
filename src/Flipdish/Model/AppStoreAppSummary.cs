@@ -330,13 +330,6 @@ namespace Flipdish.Model
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
-        /// <summary>
-        /// Same as Id for compatibility on portal.  Will be removed once portal is updated to read the Id field
-        /// </summary>
-        /// <value>Same as Id for compatibility on portal.  Will be removed once portal is updated to read the Id field</value>
-        [DataMember(Name="AppStoreAppId", EmitDefaultValue=false)]
-        public string AppStoreAppId { get; private set; }
-
 
         /// <summary>
         /// Logo
@@ -391,7 +384,6 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class AppStoreAppSummary {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  AppStoreAppId: ").Append(AppStoreAppId).Append("\n");
             sb.Append("  VerificationStatus: ").Append(VerificationStatus).Append("\n");
             sb.Append("  Logo: ").Append(Logo).Append("\n");
             sb.Append("  Internal: ").Append(Internal).Append("\n");
@@ -439,11 +431,6 @@ namespace Flipdish.Model
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
-                ) && 
-                (
-                    this.AppStoreAppId == input.AppStoreAppId ||
-                    (this.AppStoreAppId != null &&
-                    this.AppStoreAppId.Equals(input.AppStoreAppId))
                 ) && 
                 (
                     this.VerificationStatus == input.VerificationStatus ||
@@ -503,8 +490,6 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
-                if (this.AppStoreAppId != null)
-                    hashCode = hashCode * 59 + this.AppStoreAppId.GetHashCode();
                 if (this.VerificationStatus != null)
                     hashCode = hashCode * 59 + this.VerificationStatus.GetHashCode();
                 if (this.Logo != null)

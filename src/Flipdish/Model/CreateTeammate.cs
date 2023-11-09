@@ -91,10 +91,16 @@ namespace Flipdish.Model
             FinanceManger = 9,
             
             /// <summary>
+            /// Enum Onboarding for value: Onboarding
+            /// </summary>
+            [EnumMember(Value = "Onboarding")]
+            Onboarding = 10,
+            
+            /// <summary>
             /// Enum Support for value: Support
             /// </summary>
             [EnumMember(Value = "Support")]
-            Support = 10
+            Support = 11
         }
 
         /// <summary>
