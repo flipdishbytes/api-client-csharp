@@ -398,6 +398,10 @@ Class | Method | HTTP request | Description
 *MenusNutritionInfoApi* | [**DeleteMenuNutritionInfoByMenuId**](docs/MenusNutritionInfoApi.md#deletemenunutritioninfobymenuid) | **DELETE** /api/v1.0/menus/{menuId}/nutrition | Delete menu nutrition information by menuId
 *MenusNutritionInfoApi* | [**GetAllergens**](docs/MenusNutritionInfoApi.md#getallergens) | **GET** /api/v1.0/{appId}/menus/nutrition/allergens | Get allergens
 *MenusNutritionInfoApi* | [**GetMenuNutritionInfoByMenuId**](docs/MenusNutritionInfoApi.md#getmenunutritioninfobymenuid) | **GET** /api/v1.0/menus/{menuId}/nutrition | Get menu nutrition by menuId
+*MenusNutritionInfoV2Api* | [**AddOrUpdateMenuItemNutritionInfoV2**](docs/MenusNutritionInfoV2Api.md#addorupdatemenuitemnutritioninfov2) | **POST** /api/v1.0/{appId}/menus/{menuId}/menuItem/{publicId}/nutritionv2 | Add or update menuitem nutrition info by menu item's publicId
+*MenusNutritionInfoV2Api* | [**AddOrUpdateMenuItemOptionSetItemNutritionInfoV2**](docs/MenusNutritionInfoV2Api.md#addorupdatemenuitemoptionsetitemnutritioninfov2) | **POST** /api/v1.0/{appId}/menus/{menuId}/menuItemOption/{publicId}/nutritionv2 | Add or update menuitem option set item's nutrition info by its publicId
+*MenusNutritionInfoV2Api* | [**GetAllergensV2**](docs/MenusNutritionInfoV2Api.md#getallergensv2) | **GET** /api/v1.0/{appId}/menus/nutritionv2/allergens | Get allergens
+*MenusNutritionInfoV2Api* | [**GetMenuNutritionInfoV2ByMenuId**](docs/MenusNutritionInfoV2Api.md#getmenunutritioninfov2bymenuid) | **GET** /api/v1.0/{appId}/menus/{menuId}/nutritionv2 | Get menu nutrition by menuId
 *MetafieldDefinitionsApi* | [**CreateMetafieldDefinition**](docs/MetafieldDefinitionsApi.md#createmetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | 
 *MetafieldDefinitionsApi* | [**GetMetafieldDefinitionByKey**](docs/MetafieldDefinitionsApi.md#getmetafielddefinitionbykey) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | 
 *MetafieldDefinitionsApi* | [**GetMetafieldDefinitions**](docs/MetafieldDefinitionsApi.md#getmetafielddefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | 
@@ -775,6 +779,7 @@ Class | Method | HTTP request | Description
  - [Model.InvoiceItem](docs/InvoiceItem.md)
  - [Model.InvoicePeriod](docs/InvoicePeriod.md)
  - [Model.ItemNutritionInfoAddUpdateModel](docs/ItemNutritionInfoAddUpdateModel.md)
+ - [Model.ItemNutritionInfoV2AddUpdateModel](docs/ItemNutritionInfoV2AddUpdateModel.md)
  - [Model.JobAddress](docs/JobAddress.md)
  - [Model.JobCancellation](docs/JobCancellation.md)
  - [Model.JobContact](docs/JobContact.md)
@@ -883,6 +888,9 @@ Class | Method | HTTP request | Description
  - [Model.NutritionInfoLabel](docs/NutritionInfoLabel.md)
  - [Model.NutritionInfoMenuItem](docs/NutritionInfoMenuItem.md)
  - [Model.NutritionInfoMenuOptionSetItem](docs/NutritionInfoMenuOptionSetItem.md)
+ - [Model.NutritionInfoV2](docs/NutritionInfoV2.md)
+ - [Model.NutritionInfoV2Allergen](docs/NutritionInfoV2Allergen.md)
+ - [Model.NutritionInfoV2Item](docs/NutritionInfoV2Item.md)
  - [Model.OAuthApp](docs/OAuthApp.md)
  - [Model.OAuthTokenModel](docs/OAuthTokenModel.md)
  - [Model.OauthClientRedirectUri](docs/OauthClientRedirectUri.md)
@@ -1138,6 +1146,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultMobileAppsSubmissionStatus](docs/RestApiResultMobileAppsSubmissionStatus.md)
  - [Model.RestApiResultModelBase](docs/RestApiResultModelBase.md)
  - [Model.RestApiResultNutritionInfo](docs/RestApiResultNutritionInfo.md)
+ - [Model.RestApiResultNutritionInfoV2](docs/RestApiResultNutritionInfoV2.md)
  - [Model.RestApiResultOAuthApp](docs/RestApiResultOAuthApp.md)
  - [Model.RestApiResultOauthClientRedirectUri](docs/RestApiResultOauthClientRedirectUri.md)
  - [Model.RestApiResultOktaPortalFeatureFlag](docs/RestApiResultOktaPortalFeatureFlag.md)
