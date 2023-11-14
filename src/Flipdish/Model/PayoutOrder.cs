@@ -762,9 +762,10 @@ namespace Flipdish.Model
         /// <param name="tips">Order tips amount.</param>
         /// <param name="voucher">Order voucher amount.</param>
         /// <param name="flatFeeExcludingVat">Order flat fee amount excluding VAT.</param>
-        /// <param name="flatFeeExcludingVAT">flatFeeExcludingVAT.</param>
+        /// <param name="flatFeeExcludingVAT">Order flat fee amount excluding VAT.</param>
+        /// <param name="flatFeeIncludingVat">Order flat fee amount including VAT.</param>
         /// <param name="percentageFeeExcludingVat">Order percentage fee excluding VAT.</param>
-        /// <param name="percentageFeeExcludingVAT">percentageFeeExcludingVAT.</param>
+        /// <param name="percentageFeeExcludingVAT">Order percentage fee excluding VAT.</param>
         /// <param name="vat">Order VAT amount.</param>
         /// <param name="totalFees">Total order fees amount.</param>
         /// <param name="cashFeeChargedToCustomer">Cash fee charged to customer.</param>
@@ -772,7 +773,7 @@ namespace Flipdish.Model
         /// <param name="storeId">Store id.</param>
         /// <param name="serviceChargeAmount">Order ServiceChargeAmount amount.</param>
         /// <param name="serviceChargePercentage">Order ServiceChargePercentage amount.</param>
-        public PayoutOrder(int? orderId = default(int?), int? payoutId = default(int?), DateTime? orderDate = default(DateTime?), OrderTypeEnum? orderType = default(OrderTypeEnum?), OrderCurrencyEnum? orderCurrency = default(OrderCurrencyEnum?), double? sales = default(double?), double? salesTax = default(double?), double? deliveryCharges = default(double?), double? tips = default(double?), double? voucher = default(double?), double? flatFeeExcludingVat = default(double?), double? flatFeeExcludingVAT = default(double?), double? percentageFeeExcludingVat = default(double?), double? percentageFeeExcludingVAT = default(double?), double? vat = default(double?), double? totalFees = default(double?), double? cashFeeChargedToCustomer = default(double?), double? netSales = default(double?), int? storeId = default(int?), double? serviceChargeAmount = default(double?), double? serviceChargePercentage = default(double?))
+        public PayoutOrder(int? orderId = default(int?), int? payoutId = default(int?), DateTime? orderDate = default(DateTime?), OrderTypeEnum? orderType = default(OrderTypeEnum?), OrderCurrencyEnum? orderCurrency = default(OrderCurrencyEnum?), double? sales = default(double?), double? salesTax = default(double?), double? deliveryCharges = default(double?), double? tips = default(double?), double? voucher = default(double?), double? flatFeeExcludingVat = default(double?), double? flatFeeExcludingVAT = default(double?), double? flatFeeIncludingVat = default(double?), double? percentageFeeExcludingVat = default(double?), double? percentageFeeExcludingVAT = default(double?), double? vat = default(double?), double? totalFees = default(double?), double? cashFeeChargedToCustomer = default(double?), double? netSales = default(double?), int? storeId = default(int?), double? serviceChargeAmount = default(double?), double? serviceChargePercentage = default(double?))
         {
             this.OrderId = orderId;
             this.PayoutId = payoutId;
@@ -786,6 +787,7 @@ namespace Flipdish.Model
             this.Voucher = voucher;
             this.FlatFeeExcludingVat = flatFeeExcludingVat;
             this.FlatFeeExcludingVAT = flatFeeExcludingVAT;
+            this.FlatFeeIncludingVat = flatFeeIncludingVat;
             this.PercentageFeeExcludingVat = percentageFeeExcludingVat;
             this.PercentageFeeExcludingVAT = percentageFeeExcludingVAT;
             this.Vat = vat;
@@ -863,10 +865,18 @@ namespace Flipdish.Model
         public double? FlatFeeExcludingVat { get; set; }
 
         /// <summary>
-        /// Gets or Sets FlatFeeExcludingVAT
+        /// Order flat fee amount excluding VAT
         /// </summary>
+        /// <value>Order flat fee amount excluding VAT</value>
         [DataMember(Name="FlatFeeExcludingVAT", EmitDefaultValue=false)]
         public double? FlatFeeExcludingVAT { get; set; }
+
+        /// <summary>
+        /// Order flat fee amount including VAT
+        /// </summary>
+        /// <value>Order flat fee amount including VAT</value>
+        [DataMember(Name="FlatFeeIncludingVat", EmitDefaultValue=false)]
+        public double? FlatFeeIncludingVat { get; set; }
 
         /// <summary>
         /// Order percentage fee excluding VAT
@@ -876,8 +886,9 @@ namespace Flipdish.Model
         public double? PercentageFeeExcludingVat { get; set; }
 
         /// <summary>
-        /// Gets or Sets PercentageFeeExcludingVAT
+        /// Order percentage fee excluding VAT
         /// </summary>
+        /// <value>Order percentage fee excluding VAT</value>
         [DataMember(Name="PercentageFeeExcludingVAT", EmitDefaultValue=false)]
         public double? PercentageFeeExcludingVAT { get; set; }
 
@@ -950,6 +961,7 @@ namespace Flipdish.Model
             sb.Append("  Voucher: ").Append(Voucher).Append("\n");
             sb.Append("  FlatFeeExcludingVat: ").Append(FlatFeeExcludingVat).Append("\n");
             sb.Append("  FlatFeeExcludingVAT: ").Append(FlatFeeExcludingVAT).Append("\n");
+            sb.Append("  FlatFeeIncludingVat: ").Append(FlatFeeIncludingVat).Append("\n");
             sb.Append("  PercentageFeeExcludingVat: ").Append(PercentageFeeExcludingVat).Append("\n");
             sb.Append("  PercentageFeeExcludingVAT: ").Append(PercentageFeeExcludingVAT).Append("\n");
             sb.Append("  Vat: ").Append(Vat).Append("\n");
@@ -1054,6 +1066,11 @@ namespace Flipdish.Model
                     this.FlatFeeExcludingVAT.Equals(input.FlatFeeExcludingVAT))
                 ) && 
                 (
+                    this.FlatFeeIncludingVat == input.FlatFeeIncludingVat ||
+                    (this.FlatFeeIncludingVat != null &&
+                    this.FlatFeeIncludingVat.Equals(input.FlatFeeIncludingVat))
+                ) && 
+                (
                     this.PercentageFeeExcludingVat == input.PercentageFeeExcludingVat ||
                     (this.PercentageFeeExcludingVat != null &&
                     this.PercentageFeeExcludingVat.Equals(input.PercentageFeeExcludingVat))
@@ -1133,6 +1150,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.FlatFeeExcludingVat.GetHashCode();
                 if (this.FlatFeeExcludingVAT != null)
                     hashCode = hashCode * 59 + this.FlatFeeExcludingVAT.GetHashCode();
+                if (this.FlatFeeIncludingVat != null)
+                    hashCode = hashCode * 59 + this.FlatFeeIncludingVat.GetHashCode();
                 if (this.PercentageFeeExcludingVat != null)
                     hashCode = hashCode * 59 + this.PercentageFeeExcludingVat.GetHashCode();
                 if (this.PercentageFeeExcludingVAT != null)
