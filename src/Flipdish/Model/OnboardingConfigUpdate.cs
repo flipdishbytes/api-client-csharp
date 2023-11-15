@@ -32,7 +32,7 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="OnboardingConfigUpdate" /> class.
         /// </summary>
         /// <param name="isEnabled">Gets or sets whether onboarding is enabled.</param>
-        /// <param name="isWelcomeScreenEnabled">isWelcomeScreenEnabled.</param>
+        /// <param name="isWelcomeScreenEnabled">Gets or sets whether welcome screen is enabled.</param>
         public OnboardingConfigUpdate(bool? isEnabled = default(bool?), bool? isWelcomeScreenEnabled = default(bool?))
         {
             this.IsEnabled = isEnabled;
@@ -47,8 +47,9 @@ namespace Flipdish.Model
         public bool? IsEnabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsWelcomeScreenEnabled
+        /// Gets or sets whether welcome screen is enabled
         /// </summary>
+        /// <value>Gets or sets whether welcome screen is enabled</value>
         [DataMember(Name="IsWelcomeScreenEnabled", EmitDefaultValue=false)]
         public bool? IsWelcomeScreenEnabled { get; set; }
 
