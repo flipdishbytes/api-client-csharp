@@ -863,6 +863,57 @@ namespace Flipdish.Model
         [DataMember(Name="Currency", EmitDefaultValue=false)]
         public CurrencyEnum? Currency { get; set; }
         /// <summary>
+        /// Defines ChannelRestrictions
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ChannelRestrictionsEnum
+        {
+            
+            /// <summary>
+            /// Enum Ios for value: Ios
+            /// </summary>
+            [EnumMember(Value = "Ios")]
+            Ios = 1,
+            
+            /// <summary>
+            /// Enum Android for value: Android
+            /// </summary>
+            [EnumMember(Value = "Android")]
+            Android = 2,
+            
+            /// <summary>
+            /// Enum Web for value: Web
+            /// </summary>
+            [EnumMember(Value = "Web")]
+            Web = 3,
+            
+            /// <summary>
+            /// Enum Kiosk for value: Kiosk
+            /// </summary>
+            [EnumMember(Value = "Kiosk")]
+            Kiosk = 4,
+            
+            /// <summary>
+            /// Enum Pos for value: Pos
+            /// </summary>
+            [EnumMember(Value = "Pos")]
+            Pos = 5,
+            
+            /// <summary>
+            /// Enum Google for value: Google
+            /// </summary>
+            [EnumMember(Value = "Google")]
+            Google = 6
+        }
+
+
+        /// <summary>
+        /// Limit the channels this voucher can be used on
+        /// </summary>
+        /// <value>Limit the channels this voucher can be used on</value>
+        [DataMember(Name="ChannelRestrictions", EmitDefaultValue=false)]
+        public List<ChannelRestrictionsEnum> ChannelRestrictions { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="VoucherWithStats" /> class.
         /// </summary>
         /// <param name="totalUsed">Total times the voucher was used.</param>
@@ -897,7 +948,8 @@ namespace Flipdish.Model
         /// <param name="isValidOnlyOnce">Valid only once, by any customer (once used cannot be used again by any other customer).</param>
         /// <param name="startDate">Voucher Starts On (Time in UTC).</param>
         /// <param name="expiryDate">Voucher Expires On (Time in UTC).</param>
-        public VoucherWithStats(int? totalUsed = default(int?), int? totalCustomers = default(int?), double? totalAmountFromOrders = default(double?), double? totalDiscounted = default(double?), double? averageOrderSize = default(double?), int? voucherId = default(int?), StatusEnum? status = default(StatusEnum?), VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), List<string> storeNames = default(List<string>), PromotionDetails promotionDetails = default(PromotionDetails), CreditNoteDetails creditNoteDetails = default(CreditNoteDetails), LumpDiscountDetails lumpDiscountDetails = default(LumpDiscountDetails), PercentDiscountDetails percentDiscountDetails = default(PercentDiscountDetails), string code = default(string), string description = default(string), List<int?> stores = default(List<int?>), double? validOnOrdersOver = default(double?), bool? takesPriority = default(bool?), bool? isEnabled = default(bool?), bool? isAutomaticallyApplied = default(bool?), bool? includeDeliveryFee = default(bool?), bool? isValidForDeliveryOrders = default(bool?), bool? isValidForPickupOrders = default(bool?), bool? isValidForOrdersPayedOnline = default(bool?), bool? isValidForOrdersPayedByCash = default(bool?), bool? isValidForFirstOrderOnly = default(bool?), bool? isValidOncePerCustomer = default(bool?), bool? isValidOnlyOnce = default(bool?), DateTime? startDate = default(DateTime?), DateTime? expiryDate = default(DateTime?))
+        /// <param name="channelRestrictions">Limit the channels this voucher can be used on.</param>
+        public VoucherWithStats(int? totalUsed = default(int?), int? totalCustomers = default(int?), double? totalAmountFromOrders = default(double?), double? totalDiscounted = default(double?), double? averageOrderSize = default(double?), int? voucherId = default(int?), StatusEnum? status = default(StatusEnum?), VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), List<string> storeNames = default(List<string>), PromotionDetails promotionDetails = default(PromotionDetails), CreditNoteDetails creditNoteDetails = default(CreditNoteDetails), LumpDiscountDetails lumpDiscountDetails = default(LumpDiscountDetails), PercentDiscountDetails percentDiscountDetails = default(PercentDiscountDetails), string code = default(string), string description = default(string), List<int?> stores = default(List<int?>), double? validOnOrdersOver = default(double?), bool? takesPriority = default(bool?), bool? isEnabled = default(bool?), bool? isAutomaticallyApplied = default(bool?), bool? includeDeliveryFee = default(bool?), bool? isValidForDeliveryOrders = default(bool?), bool? isValidForPickupOrders = default(bool?), bool? isValidForOrdersPayedOnline = default(bool?), bool? isValidForOrdersPayedByCash = default(bool?), bool? isValidForFirstOrderOnly = default(bool?), bool? isValidOncePerCustomer = default(bool?), bool? isValidOnlyOnce = default(bool?), DateTime? startDate = default(DateTime?), DateTime? expiryDate = default(DateTime?), List<ChannelRestrictionsEnum> channelRestrictions = default(List<ChannelRestrictionsEnum>))
         {
             this.TotalUsed = totalUsed;
             this.TotalCustomers = totalCustomers;
@@ -931,6 +983,7 @@ namespace Flipdish.Model
             this.IsValidOnlyOnce = isValidOnlyOnce;
             this.StartDate = startDate;
             this.ExpiryDate = expiryDate;
+            this.ChannelRestrictions = channelRestrictions;
         }
         
         /// <summary>
@@ -1133,6 +1186,7 @@ namespace Flipdish.Model
         [DataMember(Name="ExpiryDate", EmitDefaultValue=false)]
         public DateTime? ExpiryDate { get; set; }
 
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1173,6 +1227,7 @@ namespace Flipdish.Model
             sb.Append("  IsValidOnlyOnce: ").Append(IsValidOnlyOnce).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  ExpiryDate: ").Append(ExpiryDate).Append("\n");
+            sb.Append("  ChannelRestrictions: ").Append(ChannelRestrictions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1366,6 +1421,11 @@ namespace Flipdish.Model
                     this.ExpiryDate == input.ExpiryDate ||
                     (this.ExpiryDate != null &&
                     this.ExpiryDate.Equals(input.ExpiryDate))
+                ) && 
+                (
+                    this.ChannelRestrictions == input.ChannelRestrictions ||
+                    this.ChannelRestrictions != null &&
+                    this.ChannelRestrictions.SequenceEqual(input.ChannelRestrictions)
                 );
         }
 
@@ -1442,6 +1502,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StartDate.GetHashCode();
                 if (this.ExpiryDate != null)
                     hashCode = hashCode * 59 + this.ExpiryDate.GetHashCode();
+                if (this.ChannelRestrictions != null)
+                    hashCode = hashCode * 59 + this.ChannelRestrictions.GetHashCode();
                 return hashCode;
             }
         }
