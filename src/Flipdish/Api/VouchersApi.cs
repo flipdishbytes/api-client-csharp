@@ -108,8 +108,9 @@ namespace Flipdish.Api
         /// <param name="typeSearch"> (optional)</param>
         /// <param name="subTypeSearch"> (optional)</param>
         /// <param name="storeIds"> (optional)</param>
+        /// <param name="channelRestrictions"> (optional)</param>
         /// <returns>RestApiPaginationResultVoucherSummary</returns>
-        RestApiPaginationResultVoucherSummary GetVouchers (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null);
+        RestApiPaginationResultVoucherSummary GetVouchers (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null, List<string> channelRestrictions = null);
 
         /// <summary>
         /// 
@@ -126,8 +127,9 @@ namespace Flipdish.Api
         /// <param name="typeSearch"> (optional)</param>
         /// <param name="subTypeSearch"> (optional)</param>
         /// <param name="storeIds"> (optional)</param>
+        /// <param name="channelRestrictions"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultVoucherSummary</returns>
-        ApiResponse<RestApiPaginationResultVoucherSummary> GetVouchersWithHttpInfo (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null);
+        ApiResponse<RestApiPaginationResultVoucherSummary> GetVouchersWithHttpInfo (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null, List<string> channelRestrictions = null);
         /// <summary>
         /// 
         /// </summary>
@@ -245,8 +247,9 @@ namespace Flipdish.Api
         /// <param name="typeSearch"> (optional)</param>
         /// <param name="subTypeSearch"> (optional)</param>
         /// <param name="storeIds"> (optional)</param>
+        /// <param name="channelRestrictions"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultVoucherSummary</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultVoucherSummary> GetVouchersAsync (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null);
+        System.Threading.Tasks.Task<RestApiPaginationResultVoucherSummary> GetVouchersAsync (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null, List<string> channelRestrictions = null);
 
         /// <summary>
         /// 
@@ -263,8 +266,9 @@ namespace Flipdish.Api
         /// <param name="typeSearch"> (optional)</param>
         /// <param name="subTypeSearch"> (optional)</param>
         /// <param name="storeIds"> (optional)</param>
+        /// <param name="channelRestrictions"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultVoucherSummary)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultVoucherSummary>> GetVouchersAsyncWithHttpInfo (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultVoucherSummary>> GetVouchersAsyncWithHttpInfo (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null, List<string> channelRestrictions = null);
         /// <summary>
         /// 
         /// </summary>
@@ -915,10 +919,11 @@ namespace Flipdish.Api
         /// <param name="typeSearch"> (optional)</param>
         /// <param name="subTypeSearch"> (optional)</param>
         /// <param name="storeIds"> (optional)</param>
+        /// <param name="channelRestrictions"> (optional)</param>
         /// <returns>RestApiPaginationResultVoucherSummary</returns>
-        public RestApiPaginationResultVoucherSummary GetVouchers (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null)
+        public RestApiPaginationResultVoucherSummary GetVouchers (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null, List<string> channelRestrictions = null)
         {
-             ApiResponse<RestApiPaginationResultVoucherSummary> localVarResponse = GetVouchersWithHttpInfo(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds);
+             ApiResponse<RestApiPaginationResultVoucherSummary> localVarResponse = GetVouchersWithHttpInfo(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds, channelRestrictions);
              return localVarResponse.Data;
         }
 
@@ -934,8 +939,9 @@ namespace Flipdish.Api
         /// <param name="typeSearch"> (optional)</param>
         /// <param name="subTypeSearch"> (optional)</param>
         /// <param name="storeIds"> (optional)</param>
+        /// <param name="channelRestrictions"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultVoucherSummary</returns>
-        public ApiResponse< RestApiPaginationResultVoucherSummary > GetVouchersWithHttpInfo (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null)
+        public ApiResponse< RestApiPaginationResultVoucherSummary > GetVouchersWithHttpInfo (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null, List<string> channelRestrictions = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -973,6 +979,7 @@ namespace Flipdish.Api
             if (typeSearch != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "typeSearch", typeSearch)); // query parameter
             if (subTypeSearch != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "subTypeSearch", subTypeSearch)); // query parameter
             if (storeIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeIds", storeIds)); // query parameter
+            if (channelRestrictions != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "channelRestrictions", channelRestrictions)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1011,10 +1018,11 @@ namespace Flipdish.Api
         /// <param name="typeSearch"> (optional)</param>
         /// <param name="subTypeSearch"> (optional)</param>
         /// <param name="storeIds"> (optional)</param>
+        /// <param name="channelRestrictions"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultVoucherSummary</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultVoucherSummary> GetVouchersAsync (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null)
+        public async System.Threading.Tasks.Task<RestApiPaginationResultVoucherSummary> GetVouchersAsync (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null, List<string> channelRestrictions = null)
         {
-             ApiResponse<RestApiPaginationResultVoucherSummary> localVarResponse = await GetVouchersAsyncWithHttpInfo(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds);
+             ApiResponse<RestApiPaginationResultVoucherSummary> localVarResponse = await GetVouchersAsyncWithHttpInfo(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds, channelRestrictions);
              return localVarResponse.Data;
 
         }
@@ -1031,8 +1039,9 @@ namespace Flipdish.Api
         /// <param name="typeSearch"> (optional)</param>
         /// <param name="subTypeSearch"> (optional)</param>
         /// <param name="storeIds"> (optional)</param>
+        /// <param name="channelRestrictions"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultVoucherSummary)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultVoucherSummary>> GetVouchersAsyncWithHttpInfo (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultVoucherSummary>> GetVouchersAsyncWithHttpInfo (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null, List<string> channelRestrictions = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1070,6 +1079,7 @@ namespace Flipdish.Api
             if (typeSearch != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "typeSearch", typeSearch)); // query parameter
             if (subTypeSearch != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "subTypeSearch", subTypeSearch)); // query parameter
             if (storeIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeIds", storeIds)); // query parameter
+            if (channelRestrictions != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "channelRestrictions", channelRestrictions)); // query parameter
 
             // authentication (oauth2) required
             // oauth required

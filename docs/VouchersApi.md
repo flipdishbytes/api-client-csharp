@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 
 <a name="getvouchers"></a>
 # **GetVouchers**
-> RestApiPaginationResultVoucherSummary GetVouchers (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null)
+> RestApiPaginationResultVoucherSummary GetVouchers (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null, List<string> channelRestrictions = null)
 
 
 
@@ -232,10 +232,11 @@ namespace Example
             var typeSearch = typeSearch_example;  // List<string> |  (optional) 
             var subTypeSearch = subTypeSearch_example;  // List<string> |  (optional) 
             var storeIds = new List<int?>(); // List<int?> |  (optional) 
+            var channelRestrictions = channelRestrictions_example;  // List<string> |  (optional) 
 
             try
             {
-                RestApiPaginationResultVoucherSummary result = apiInstance.GetVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds);
+                RestApiPaginationResultVoucherSummary result = apiInstance.GetVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds, channelRestrictions);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -259,6 +260,7 @@ Name | Type | Description  | Notes
  **typeSearch** | **List&lt;string&gt;**|  | [optional] 
  **subTypeSearch** | **List&lt;string&gt;**|  | [optional] 
  **storeIds** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
+ **channelRestrictions** | **List&lt;string&gt;**|  | [optional] 
 
 ### Return type
 

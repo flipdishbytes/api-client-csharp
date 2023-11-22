@@ -34,6 +34,7 @@ namespace Flipdish.Model
         /// <param name="campaignId">Id of campaign.</param>
         /// <param name="statistics">Statistics of campaign.</param>
         /// <param name="stores">Stores this campaign applies to with campaign start time in Utc.</param>
+        /// <param name="publicId">Permanent reference to the item..</param>
         /// <param name="ordersBeforeReceivingVoucher">Number of orders customer needs to make, before receiving voucher.</param>
         /// <param name="percentDiscountAmount">Discount amount in percents.</param>
         /// <param name="roundingStrategy">Controls how the loyalty voucher&#39;s amount is rounded.</param>
@@ -44,11 +45,12 @@ namespace Flipdish.Model
         /// <param name="includeExistingOrders">Campaign will apply to existing orders.</param>
         /// <param name="isEnabled">Is campaign enabled.</param>
         /// <param name="storeIds">Ids of stores this campaign applies to.</param>
-        public LoyaltyCampaign(int? campaignId = default(int?), CampaignStatistics statistics = default(CampaignStatistics), List<StoreCampaignStartTime> stores = default(List<StoreCampaignStartTime>), int? ordersBeforeReceivingVoucher = default(int?), int? percentDiscountAmount = default(int?), int? roundingStrategy = default(int?), bool? shouldIncludeOrdersWithLoyaltyVoucher = default(bool?), int? voucherValidPeriodDays = default(int?), bool? includeDeliveryFee = default(bool?), bool? autoApplyResultingVouchers = default(bool?), bool? includeExistingOrders = default(bool?), bool? isEnabled = default(bool?), List<int?> storeIds = default(List<int?>))
+        public LoyaltyCampaign(int? campaignId = default(int?), CampaignStatistics statistics = default(CampaignStatistics), List<StoreCampaignStartTime> stores = default(List<StoreCampaignStartTime>), Guid? publicId = default(Guid?), int? ordersBeforeReceivingVoucher = default(int?), int? percentDiscountAmount = default(int?), int? roundingStrategy = default(int?), bool? shouldIncludeOrdersWithLoyaltyVoucher = default(bool?), int? voucherValidPeriodDays = default(int?), bool? includeDeliveryFee = default(bool?), bool? autoApplyResultingVouchers = default(bool?), bool? includeExistingOrders = default(bool?), bool? isEnabled = default(bool?), List<int?> storeIds = default(List<int?>))
         {
             this.CampaignId = campaignId;
             this.Statistics = statistics;
             this.Stores = stores;
+            this.PublicId = publicId;
             this.OrdersBeforeReceivingVoucher = ordersBeforeReceivingVoucher;
             this.PercentDiscountAmount = percentDiscountAmount;
             this.RoundingStrategy = roundingStrategy;
@@ -81,6 +83,13 @@ namespace Flipdish.Model
         /// <value>Stores this campaign applies to with campaign start time in Utc</value>
         [DataMember(Name="Stores", EmitDefaultValue=false)]
         public List<StoreCampaignStartTime> Stores { get; set; }
+
+        /// <summary>
+        /// Permanent reference to the item.
+        /// </summary>
+        /// <value>Permanent reference to the item.</value>
+        [DataMember(Name="PublicId", EmitDefaultValue=false)]
+        public Guid? PublicId { get; set; }
 
         /// <summary>
         /// Number of orders customer needs to make, before receiving voucher
@@ -163,6 +172,7 @@ namespace Flipdish.Model
             sb.Append("  CampaignId: ").Append(CampaignId).Append("\n");
             sb.Append("  Statistics: ").Append(Statistics).Append("\n");
             sb.Append("  Stores: ").Append(Stores).Append("\n");
+            sb.Append("  PublicId: ").Append(PublicId).Append("\n");
             sb.Append("  OrdersBeforeReceivingVoucher: ").Append(OrdersBeforeReceivingVoucher).Append("\n");
             sb.Append("  PercentDiscountAmount: ").Append(PercentDiscountAmount).Append("\n");
             sb.Append("  RoundingStrategy: ").Append(RoundingStrategy).Append("\n");
@@ -221,6 +231,11 @@ namespace Flipdish.Model
                     this.Stores == input.Stores ||
                     this.Stores != null &&
                     this.Stores.SequenceEqual(input.Stores)
+                ) && 
+                (
+                    this.PublicId == input.PublicId ||
+                    (this.PublicId != null &&
+                    this.PublicId.Equals(input.PublicId))
                 ) && 
                 (
                     this.OrdersBeforeReceivingVoucher == input.OrdersBeforeReceivingVoucher ||
@@ -289,6 +304,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Statistics.GetHashCode();
                 if (this.Stores != null)
                     hashCode = hashCode * 59 + this.Stores.GetHashCode();
+                if (this.PublicId != null)
+                    hashCode = hashCode * 59 + this.PublicId.GetHashCode();
                 if (this.OrdersBeforeReceivingVoucher != null)
                     hashCode = hashCode * 59 + this.OrdersBeforeReceivingVoucher.GetHashCode();
                 if (this.PercentDiscountAmount != null)
