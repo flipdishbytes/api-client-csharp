@@ -40,7 +40,9 @@ namespace Flipdish.Model
         /// <param name="posSalesRefundedFees">Fees on refunds for POS sales.</param>
         /// <param name="salesFeesVat">VAT on sales fees.</param>
         /// <param name="totalFees">Total fees.</param>
-        public FlipdishFeesDetails(double? onlineSalesFees = default(double?), double? cashSalesFees = default(double?), double? posSalesFees = default(double?), double? totalSalesFees = default(double?), double? onlineSalesRefundedFees = default(double?), double? cashSalesRefundedFees = default(double?), double? posSalesRefundedFees = default(double?), double? salesFeesVat = default(double?), double? totalFees = default(double?))
+        /// <param name="deliveryFees">Delivery fees.</param>
+        /// <param name="tipFees">Tip fees.</param>
+        public FlipdishFeesDetails(double? onlineSalesFees = default(double?), double? cashSalesFees = default(double?), double? posSalesFees = default(double?), double? totalSalesFees = default(double?), double? onlineSalesRefundedFees = default(double?), double? cashSalesRefundedFees = default(double?), double? posSalesRefundedFees = default(double?), double? salesFeesVat = default(double?), double? totalFees = default(double?), double? deliveryFees = default(double?), double? tipFees = default(double?))
         {
             this.OnlineSalesFees = onlineSalesFees;
             this.CashSalesFees = cashSalesFees;
@@ -51,6 +53,8 @@ namespace Flipdish.Model
             this.PosSalesRefundedFees = posSalesRefundedFees;
             this.SalesFeesVat = salesFeesVat;
             this.TotalFees = totalFees;
+            this.DeliveryFees = deliveryFees;
+            this.TipFees = tipFees;
         }
         
         /// <summary>
@@ -117,6 +121,20 @@ namespace Flipdish.Model
         public double? TotalFees { get; set; }
 
         /// <summary>
+        /// Delivery fees
+        /// </summary>
+        /// <value>Delivery fees</value>
+        [DataMember(Name="DeliveryFees", EmitDefaultValue=false)]
+        public double? DeliveryFees { get; set; }
+
+        /// <summary>
+        /// Tip fees
+        /// </summary>
+        /// <value>Tip fees</value>
+        [DataMember(Name="TipFees", EmitDefaultValue=false)]
+        public double? TipFees { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -133,6 +151,8 @@ namespace Flipdish.Model
             sb.Append("  PosSalesRefundedFees: ").Append(PosSalesRefundedFees).Append("\n");
             sb.Append("  SalesFeesVat: ").Append(SalesFeesVat).Append("\n");
             sb.Append("  TotalFees: ").Append(TotalFees).Append("\n");
+            sb.Append("  DeliveryFees: ").Append(DeliveryFees).Append("\n");
+            sb.Append("  TipFees: ").Append(TipFees).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -211,6 +231,16 @@ namespace Flipdish.Model
                     this.TotalFees == input.TotalFees ||
                     (this.TotalFees != null &&
                     this.TotalFees.Equals(input.TotalFees))
+                ) && 
+                (
+                    this.DeliveryFees == input.DeliveryFees ||
+                    (this.DeliveryFees != null &&
+                    this.DeliveryFees.Equals(input.DeliveryFees))
+                ) && 
+                (
+                    this.TipFees == input.TipFees ||
+                    (this.TipFees != null &&
+                    this.TipFees.Equals(input.TipFees))
                 );
         }
 
@@ -241,6 +271,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.SalesFeesVat.GetHashCode();
                 if (this.TotalFees != null)
                     hashCode = hashCode * 59 + this.TotalFees.GetHashCode();
+                if (this.DeliveryFees != null)
+                    hashCode = hashCode * 59 + this.DeliveryFees.GetHashCode();
+                if (this.TipFees != null)
+                    hashCode = hashCode * 59 + this.TipFees.GetHashCode();
                 return hashCode;
             }
         }

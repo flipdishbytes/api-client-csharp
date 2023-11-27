@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **PosSalesRefundedFees** | **double?** | Fees on refunds for POS sales | [optional] 
 **SalesFeesVat** | **double?** | VAT on sales fees | [optional] 
 **TotalFees** | **double?** | Total fees | [optional] 
+**DeliveryFees** | **double?** | Delivery fees | [optional] 
+**TipFees** | **double?** | Tip fees | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
