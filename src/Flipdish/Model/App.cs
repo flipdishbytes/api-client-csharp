@@ -1017,46 +1017,64 @@ namespace Flipdish.Model
             UpdateAppStoreAppConfigurationSettings = 150,
             
             /// <summary>
+            /// Enum CreateAppStoreSubscription for value: CreateAppStoreSubscription
+            /// </summary>
+            [EnumMember(Value = "CreateAppStoreSubscription")]
+            CreateAppStoreSubscription = 151,
+            
+            /// <summary>
+            /// Enum UpdateAppStoreSubscription for value: UpdateAppStoreSubscription
+            /// </summary>
+            [EnumMember(Value = "UpdateAppStoreSubscription")]
+            UpdateAppStoreSubscription = 152,
+            
+            /// <summary>
+            /// Enum DeleteAppStoreSubscription for value: DeleteAppStoreSubscription
+            /// </summary>
+            [EnumMember(Value = "DeleteAppStoreSubscription")]
+            DeleteAppStoreSubscription = 153,
+            
+            /// <summary>
             /// Enum ViewSalesChannels for value: ViewSalesChannels
             /// </summary>
             [EnumMember(Value = "ViewSalesChannels")]
-            ViewSalesChannels = 151,
+            ViewSalesChannels = 154,
             
             /// <summary>
             /// Enum EditSalesChannels for value: EditSalesChannels
             /// </summary>
             [EnumMember(Value = "EditSalesChannels")]
-            EditSalesChannels = 152,
+            EditSalesChannels = 155,
             
             /// <summary>
             /// Enum ViewPayGreenWhiteLabelConfiguration for value: ViewPayGreenWhiteLabelConfiguration
             /// </summary>
             [EnumMember(Value = "ViewPayGreenWhiteLabelConfiguration")]
-            ViewPayGreenWhiteLabelConfiguration = 153,
+            ViewPayGreenWhiteLabelConfiguration = 156,
             
             /// <summary>
             /// Enum CreatePayGreenWhiteLabelConfiguration for value: CreatePayGreenWhiteLabelConfiguration
             /// </summary>
             [EnumMember(Value = "CreatePayGreenWhiteLabelConfiguration")]
-            CreatePayGreenWhiteLabelConfiguration = 154,
+            CreatePayGreenWhiteLabelConfiguration = 157,
             
             /// <summary>
             /// Enum UpdatePayGreenWhiteLabelConfiguration for value: UpdatePayGreenWhiteLabelConfiguration
             /// </summary>
             [EnumMember(Value = "UpdatePayGreenWhiteLabelConfiguration")]
-            UpdatePayGreenWhiteLabelConfiguration = 155,
+            UpdatePayGreenWhiteLabelConfiguration = 158,
             
             /// <summary>
             /// Enum UpdatePayGreenStoreConfiguration for value: UpdatePayGreenStoreConfiguration
             /// </summary>
             [EnumMember(Value = "UpdatePayGreenStoreConfiguration")]
-            UpdatePayGreenStoreConfiguration = 156,
+            UpdatePayGreenStoreConfiguration = 159,
             
             /// <summary>
             /// Enum ViewSubscriptions for value: ViewSubscriptions
             /// </summary>
             [EnumMember(Value = "ViewSubscriptions")]
-            ViewSubscriptions = 157
+            ViewSubscriptions = 160
         }
 
 

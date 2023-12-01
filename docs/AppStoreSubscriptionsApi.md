@@ -1,0 +1,208 @@
+# Flipdish.Api.AppStoreSubscriptionsApi
+
+All URIs are relative to *https://api.flipdish.co*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**CreateAppStoreSubscription**](AppStoreSubscriptionsApi.md#createappstoresubscription) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
+[**DeleteAppSubscription**](AppStoreSubscriptionsApi.md#deleteappsubscription) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/{subscriptionId} | 
+[**UpdateAppStoreSubscription**](AppStoreSubscriptionsApi.md#updateappstoresubscription) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/{subscriptionId} | 
+
+
+<a name="createappstoresubscription"></a>
+# **CreateAppStoreSubscription**
+> RestApiResultAppStoreSubscriptionJobResponse CreateAppStoreSubscription (string appId, string appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class CreateAppStoreSubscriptionExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AppStoreSubscriptionsApi();
+            var appId = appId_example;  // string | 
+            var appStoreAppId = appStoreAppId_example;  // string | 
+            var addAppStoreSubscriptionRequest = new AddAppStoreSubscriptionRequest(); // AddAppStoreSubscriptionRequest | 
+
+            try
+            {
+                RestApiResultAppStoreSubscriptionJobResponse result = apiInstance.CreateAppStoreSubscription(appId, appStoreAppId, addAppStoreSubscriptionRequest);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AppStoreSubscriptionsApi.CreateAppStoreSubscription: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **appStoreAppId** | **string**|  | 
+ **addAppStoreSubscriptionRequest** | [**AddAppStoreSubscriptionRequest**](AddAppStoreSubscriptionRequest.md)|  | 
+
+### Return type
+
+[**RestApiResultAppStoreSubscriptionJobResponse**](RestApiResultAppStoreSubscriptionJobResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deleteappsubscription"></a>
+# **DeleteAppSubscription**
+> RestApiStringResult DeleteAppSubscription (string appId, string appStoreAppId, string subscriptionId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class DeleteAppSubscriptionExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AppStoreSubscriptionsApi();
+            var appId = appId_example;  // string | 
+            var appStoreAppId = appStoreAppId_example;  // string | 
+            var subscriptionId = subscriptionId_example;  // string | 
+
+            try
+            {
+                RestApiStringResult result = apiInstance.DeleteAppSubscription(appId, appStoreAppId, subscriptionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AppStoreSubscriptionsApi.DeleteAppSubscription: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **appStoreAppId** | **string**|  | 
+ **subscriptionId** | **string**|  | 
+
+### Return type
+
+[**RestApiStringResult**](RestApiStringResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="updateappstoresubscription"></a>
+# **UpdateAppStoreSubscription**
+> RestApiResultAppStoreSubscriptionJobResponse UpdateAppStoreSubscription (string appId, string appStoreAppId, string subscriptionId, UpdateAppStoreSubscriptionRequest updateAppStoreSubscriptionRequest)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UpdateAppStoreSubscriptionExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AppStoreSubscriptionsApi();
+            var appId = appId_example;  // string | 
+            var appStoreAppId = appStoreAppId_example;  // string | 
+            var subscriptionId = subscriptionId_example;  // string | 
+            var updateAppStoreSubscriptionRequest = new UpdateAppStoreSubscriptionRequest(); // UpdateAppStoreSubscriptionRequest | 
+
+            try
+            {
+                RestApiResultAppStoreSubscriptionJobResponse result = apiInstance.UpdateAppStoreSubscription(appId, appStoreAppId, subscriptionId, updateAppStoreSubscriptionRequest);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AppStoreSubscriptionsApi.UpdateAppStoreSubscription: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **appStoreAppId** | **string**|  | 
+ **subscriptionId** | **string**|  | 
+ **updateAppStoreSubscriptionRequest** | [**UpdateAppStoreSubscriptionRequest**](UpdateAppStoreSubscriptionRequest.md)|  | 
+
+### Return type
+
+[**RestApiResultAppStoreSubscriptionJobResponse**](RestApiResultAppStoreSubscriptionJobResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
