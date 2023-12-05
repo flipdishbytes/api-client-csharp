@@ -4,14 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAppStoreSubscription**](AppStoreSubscriptionsApi.md#createappstoresubscription) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
+[**CreateAppStoreSubscription**](AppStoreSubscriptionsApi.md#createappstoresubscription) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
+[**CreateAppStoreSubscription_0**](AppStoreSubscriptionsApi.md#createappstoresubscription_0) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
 [**DeleteAppSubscription**](AppStoreSubscriptionsApi.md#deleteappsubscription) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/{subscriptionId} | 
 [**UpdateAppStoreSubscription**](AppStoreSubscriptionsApi.md#updateappstoresubscription) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/{subscriptionId} | 
 
 
 <a name="createappstoresubscription"></a>
 # **CreateAppStoreSubscription**
-> RestApiResultAppStoreSubscriptionJobResponse CreateAppStoreSubscription (string appId, string appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest)
+> RestApiArrayResultAppStoreSubscriptionItem CreateAppStoreSubscription (string appId, string appStoreAppId)
 
 
 
@@ -35,16 +36,79 @@ namespace Example
             var apiInstance = new AppStoreSubscriptionsApi();
             var appId = appId_example;  // string | 
             var appStoreAppId = appStoreAppId_example;  // string | 
-            var addAppStoreSubscriptionRequest = new AddAppStoreSubscriptionRequest(); // AddAppStoreSubscriptionRequest | 
 
             try
             {
-                RestApiResultAppStoreSubscriptionJobResponse result = apiInstance.CreateAppStoreSubscription(appId, appStoreAppId, addAppStoreSubscriptionRequest);
+                RestApiArrayResultAppStoreSubscriptionItem result = apiInstance.CreateAppStoreSubscription(appId, appStoreAppId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
                 Debug.Print("Exception when calling AppStoreSubscriptionsApi.CreateAppStoreSubscription: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **appStoreAppId** | **string**|  | 
+
+### Return type
+
+[**RestApiArrayResultAppStoreSubscriptionItem**](RestApiArrayResultAppStoreSubscriptionItem.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="createappstoresubscription_0"></a>
+# **CreateAppStoreSubscription_0**
+> RestApiResultAppStoreSubscriptionJobResponse CreateAppStoreSubscription_0 (string appId, string appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class CreateAppStoreSubscription_0Example
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AppStoreSubscriptionsApi();
+            var appId = appId_example;  // string | 
+            var appStoreAppId = appStoreAppId_example;  // string | 
+            var addAppStoreSubscriptionRequest = new AddAppStoreSubscriptionRequest(); // AddAppStoreSubscriptionRequest | 
+
+            try
+            {
+                RestApiResultAppStoreSubscriptionJobResponse result = apiInstance.CreateAppStoreSubscription_0(appId, appStoreAppId, addAppStoreSubscriptionRequest);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AppStoreSubscriptionsApi.CreateAppStoreSubscription_0: " + e.Message );
             }
         }
     }
