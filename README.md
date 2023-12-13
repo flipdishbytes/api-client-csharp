@@ -127,6 +127,7 @@ Class | Method | HTTP request | Description
 *AppStoreSubscriptionsApi* | [**CreateAppStoreSubscription**](docs/AppStoreSubscriptionsApi.md#createappstoresubscription) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
 *AppStoreSubscriptionsApi* | [**CreateAppStoreSubscription_0**](docs/AppStoreSubscriptionsApi.md#createappstoresubscription_0) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
 *AppStoreSubscriptionsApi* | [**DeleteAppSubscription**](docs/AppStoreSubscriptionsApi.md#deleteappsubscription) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/{subscriptionId} | 
+*AppStoreSubscriptionsApi* | [**GetAppStoreSubscriptionChangeJobStatus**](docs/AppStoreSubscriptionsApi.md#getappstoresubscriptionchangejobstatus) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/jobs/{jobId} | 
 *AppStoreSubscriptionsApi* | [**UpdateAppStoreSubscription**](docs/AppStoreSubscriptionsApi.md#updateappstoresubscription) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/{subscriptionId} | 
 *AppsApi* | [**GetApp**](docs/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | 
 *AppsApi* | [**GetAppHostnameStatus**](docs/AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
@@ -623,6 +624,7 @@ Class | Method | HTTP request | Description
  - [Model.AppStoreConfigCreatedEvent](docs/AppStoreConfigCreatedEvent.md)
  - [Model.AppStoreConfigDeletedEvent](docs/AppStoreConfigDeletedEvent.md)
  - [Model.AppStoreConfigUpdatedEvent](docs/AppStoreConfigUpdatedEvent.md)
+ - [Model.AppStoreSubscriptionChangeJobStatusResponse](docs/AppStoreSubscriptionChangeJobStatusResponse.md)
  - [Model.AppStoreSubscriptionItem](docs/AppStoreSubscriptionItem.md)
  - [Model.AppStoreSubscriptionJobResponse](docs/AppStoreSubscriptionJobResponse.md)
  - [Model.AppUpdatedEvent](docs/AppUpdatedEvent.md)
@@ -1105,6 +1107,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultAppStoreApp](docs/RestApiResultAppStoreApp.md)
  - [Model.RestApiResultAppStoreAppConfiguration](docs/RestApiResultAppStoreAppConfiguration.md)
  - [Model.RestApiResultAppStoreAppConfigurationsWithSubscriptions](docs/RestApiResultAppStoreAppConfigurationsWithSubscriptions.md)
+ - [Model.RestApiResultAppStoreSubscriptionChangeJobStatusResponse](docs/RestApiResultAppStoreSubscriptionChangeJobStatusResponse.md)
  - [Model.RestApiResultAppStoreSubscriptionJobResponse](docs/RestApiResultAppStoreSubscriptionJobResponse.md)
  - [Model.RestApiResultAssignedBankAccount](docs/RestApiResultAssignedBankAccount.md)
  - [Model.RestApiResultBankAccountDetail](docs/RestApiResultBankAccountDetail.md)

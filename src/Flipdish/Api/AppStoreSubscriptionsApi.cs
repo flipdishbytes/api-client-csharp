@@ -106,6 +106,31 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
+        /// <param name="jobId"></param>
+        /// <returns>RestApiResultAppStoreSubscriptionChangeJobStatusResponse</returns>
+        RestApiResultAppStoreSubscriptionChangeJobStatusResponse GetAppStoreSubscriptionChangeJobStatus (string appId, string appStoreAppId, string jobId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="jobId"></param>
+        /// <returns>ApiResponse of RestApiResultAppStoreSubscriptionChangeJobStatusResponse</returns>
+        ApiResponse<RestApiResultAppStoreSubscriptionChangeJobStatusResponse> GetAppStoreSubscriptionChangeJobStatusWithHttpInfo (string appId, string appStoreAppId, string jobId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <param name="subscriptionId"></param>
         /// <param name="updateAppStoreSubscriptionRequest"></param>
         /// <returns>RestApiResultAppStoreSubscriptionJobResponse</returns>
@@ -199,6 +224,31 @@ namespace Flipdish.Api
         /// <param name="subscriptionId"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> DeleteAppSubscriptionAsyncWithHttpInfo (string appId, string appStoreAppId, string subscriptionId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="jobId"></param>
+        /// <returns>Task of RestApiResultAppStoreSubscriptionChangeJobStatusResponse</returns>
+        System.Threading.Tasks.Task<RestApiResultAppStoreSubscriptionChangeJobStatusResponse> GetAppStoreSubscriptionChangeJobStatusAsync (string appId, string appStoreAppId, string jobId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="jobId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultAppStoreSubscriptionChangeJobStatusResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreSubscriptionChangeJobStatusResponse>> GetAppStoreSubscriptionChangeJobStatusAsyncWithHttpInfo (string appId, string appStoreAppId, string jobId);
         /// <summary>
         /// 
         /// </summary>
@@ -861,6 +911,181 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiStringResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="jobId"></param>
+        /// <returns>RestApiResultAppStoreSubscriptionChangeJobStatusResponse</returns>
+        public RestApiResultAppStoreSubscriptionChangeJobStatusResponse GetAppStoreSubscriptionChangeJobStatus (string appId, string appStoreAppId, string jobId)
+        {
+             ApiResponse<RestApiResultAppStoreSubscriptionChangeJobStatusResponse> localVarResponse = GetAppStoreSubscriptionChangeJobStatusWithHttpInfo(appId, appStoreAppId, jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="jobId"></param>
+        /// <returns>ApiResponse of RestApiResultAppStoreSubscriptionChangeJobStatusResponse</returns>
+        public ApiResponse< RestApiResultAppStoreSubscriptionChangeJobStatusResponse > GetAppStoreSubscriptionChangeJobStatusWithHttpInfo (string appId, string appStoreAppId, string jobId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppStoreSubscriptionsApi->GetAppStoreSubscriptionChangeJobStatus");
+            // verify the required parameter 'appStoreAppId' is set
+            if (appStoreAppId == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreSubscriptionsApi->GetAppStoreSubscriptionChangeJobStatus");
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling AppStoreSubscriptionsApi->GetAppStoreSubscriptionChangeJobStatus");
+
+            var localVarPath = "./api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAppStoreSubscriptionChangeJobStatus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultAppStoreSubscriptionChangeJobStatusResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultAppStoreSubscriptionChangeJobStatusResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreSubscriptionChangeJobStatusResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="jobId"></param>
+        /// <returns>Task of RestApiResultAppStoreSubscriptionChangeJobStatusResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiResultAppStoreSubscriptionChangeJobStatusResponse> GetAppStoreSubscriptionChangeJobStatusAsync (string appId, string appStoreAppId, string jobId)
+        {
+             ApiResponse<RestApiResultAppStoreSubscriptionChangeJobStatusResponse> localVarResponse = await GetAppStoreSubscriptionChangeJobStatusAsyncWithHttpInfo(appId, appStoreAppId, jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <param name="jobId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultAppStoreSubscriptionChangeJobStatusResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreSubscriptionChangeJobStatusResponse>> GetAppStoreSubscriptionChangeJobStatusAsyncWithHttpInfo (string appId, string appStoreAppId, string jobId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppStoreSubscriptionsApi->GetAppStoreSubscriptionChangeJobStatus");
+            // verify the required parameter 'appStoreAppId' is set
+            if (appStoreAppId == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreSubscriptionsApi->GetAppStoreSubscriptionChangeJobStatus");
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling AppStoreSubscriptionsApi->GetAppStoreSubscriptionChangeJobStatus");
+
+            var localVarPath = "./api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAppStoreSubscriptionChangeJobStatus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultAppStoreSubscriptionChangeJobStatusResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultAppStoreSubscriptionChangeJobStatusResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreSubscriptionChangeJobStatusResponse)));
         }
 
         /// <summary>
