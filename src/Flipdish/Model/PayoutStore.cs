@@ -41,7 +41,8 @@ namespace Flipdish.Model
         /// <param name="otherCharges">Breakdown of other charges.</param>
         /// <param name="balance">Period opening and closing balance.</param>
         /// <param name="posRevenue">Breakdown of POS charges.</param>
-        public PayoutStore(int? storeId = default(int?), string storeName = default(string), double? amount = default(double?), RevenueDetail revenue = default(RevenueDetail), RevenueAdjustmentsDetails revenueAdjustments = default(RevenueAdjustmentsDetails), FlipdishFeesDetails flipdishFees = default(FlipdishFeesDetails), ChargebackDetails chargebacks = default(ChargebackDetails), OtherChargesDetails otherCharges = default(OtherChargesDetails), BalanceDetails balance = default(BalanceDetails), PosRevenueDetails posRevenue = default(PosRevenueDetails))
+        /// <param name="thirdPartyFees">Third party integration fees.</param>
+        public PayoutStore(int? storeId = default(int?), string storeName = default(string), double? amount = default(double?), RevenueDetail revenue = default(RevenueDetail), RevenueAdjustmentsDetails revenueAdjustments = default(RevenueAdjustmentsDetails), FlipdishFeesDetails flipdishFees = default(FlipdishFeesDetails), ChargebackDetails chargebacks = default(ChargebackDetails), OtherChargesDetails otherCharges = default(OtherChargesDetails), BalanceDetails balance = default(BalanceDetails), PosRevenueDetails posRevenue = default(PosRevenueDetails), ThirdPartyFeesDetails thirdPartyFees = default(ThirdPartyFeesDetails))
         {
             this.StoreId = storeId;
             this.StoreName = storeName;
@@ -53,6 +54,7 @@ namespace Flipdish.Model
             this.OtherCharges = otherCharges;
             this.Balance = balance;
             this.PosRevenue = posRevenue;
+            this.ThirdPartyFees = thirdPartyFees;
         }
         
         /// <summary>
@@ -133,6 +135,13 @@ namespace Flipdish.Model
         public PosRevenueDetails PosRevenue { get; set; }
 
         /// <summary>
+        /// Third party integration fees
+        /// </summary>
+        /// <value>Third party integration fees</value>
+        [DataMember(Name="ThirdPartyFees", EmitDefaultValue=false)]
+        public ThirdPartyFeesDetails ThirdPartyFees { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -151,6 +160,7 @@ namespace Flipdish.Model
             sb.Append("  OtherCharges: ").Append(OtherCharges).Append("\n");
             sb.Append("  Balance: ").Append(Balance).Append("\n");
             sb.Append("  PosRevenue: ").Append(PosRevenue).Append("\n");
+            sb.Append("  ThirdPartyFees: ").Append(ThirdPartyFees).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -239,6 +249,11 @@ namespace Flipdish.Model
                     this.PosRevenue == input.PosRevenue ||
                     (this.PosRevenue != null &&
                     this.PosRevenue.Equals(input.PosRevenue))
+                ) && 
+                (
+                    this.ThirdPartyFees == input.ThirdPartyFees ||
+                    (this.ThirdPartyFees != null &&
+                    this.ThirdPartyFees.Equals(input.ThirdPartyFees))
                 );
         }
 
@@ -273,6 +288,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Balance.GetHashCode();
                 if (this.PosRevenue != null)
                     hashCode = hashCode * 59 + this.PosRevenue.GetHashCode();
+                if (this.ThirdPartyFees != null)
+                    hashCode = hashCode * 59 + this.ThirdPartyFees.GetHashCode();
                 return hashCode;
             }
         }

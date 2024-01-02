@@ -834,7 +834,10 @@ namespace Flipdish.Model
         /// <param name="openingBalance">Payout opening balance.</param>
         /// <param name="closingBalance">Payout closing balance.</param>
         /// <param name="payGreenSalesAmount">Amount of sales through PayGreen (restaurant vouchers).</param>
-        public Payout(int? payoutId = default(int?), int? payeeBankAccountId = default(int?), string accountName = default(string), PayoutStatusEnum? payoutStatus = default(PayoutStatusEnum?), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?), PayoutTypeEnum? payoutType = default(PayoutTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), DateTime? cutoffDate = default(DateTime?), double? onlineSalesAmount = default(double?), double? onlineSalesDeliveryCharges = default(double?), double? onlineSalesTips = default(double?), double? onlineSalesServiceCharges = default(double?), double? onlineSalesRefundedFees = default(double?), double? onlineSalesFees = default(double?), double? posSalesFees = default(double?), double? onlineSalesRefundedAmount = default(double?), double? posSalesRefundedAmount = default(double?), double? onlineSalesTax = default(double?), double? totalOnlineRevenue = default(double?), double? cashSalesFees = default(double?), double? cashSalesRefundedFees = default(double?), double? customerCashFees = default(double?), double? salesFeesVat = default(double?), double? totalFees = default(double?), double? totalOnlineRevenueAdjustments = default(double?), double? chargebackAmount = default(double?), double? posSalesChargebackAmount = default(double?), double? chargebackRefundedFees = default(double?), double? totalChargebackCost = default(double?), double? totalOtherCharges = default(double?), double? openingBalance = default(double?), double? closingBalance = default(double?), double? payGreenSalesAmount = default(double?))
+        /// <param name="deliveryIntegrationFee">Third party integration delivery fee.</param>
+        /// <param name="deliveryIntegrationTipFee">Third party integration delivery tip fee.</param>
+        /// <param name="totalThirdPartyFees">Total third party integration fees.</param>
+        public Payout(int? payoutId = default(int?), int? payeeBankAccountId = default(int?), string accountName = default(string), PayoutStatusEnum? payoutStatus = default(PayoutStatusEnum?), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?), PayoutTypeEnum? payoutType = default(PayoutTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), DateTime? cutoffDate = default(DateTime?), double? onlineSalesAmount = default(double?), double? onlineSalesDeliveryCharges = default(double?), double? onlineSalesTips = default(double?), double? onlineSalesServiceCharges = default(double?), double? onlineSalesRefundedFees = default(double?), double? onlineSalesFees = default(double?), double? posSalesFees = default(double?), double? onlineSalesRefundedAmount = default(double?), double? posSalesRefundedAmount = default(double?), double? onlineSalesTax = default(double?), double? totalOnlineRevenue = default(double?), double? cashSalesFees = default(double?), double? cashSalesRefundedFees = default(double?), double? customerCashFees = default(double?), double? salesFeesVat = default(double?), double? totalFees = default(double?), double? totalOnlineRevenueAdjustments = default(double?), double? chargebackAmount = default(double?), double? posSalesChargebackAmount = default(double?), double? chargebackRefundedFees = default(double?), double? totalChargebackCost = default(double?), double? totalOtherCharges = default(double?), double? openingBalance = default(double?), double? closingBalance = default(double?), double? payGreenSalesAmount = default(double?), double? deliveryIntegrationFee = default(double?), double? deliveryIntegrationTipFee = default(double?), double? totalThirdPartyFees = default(double?))
         {
             this.PayoutId = payoutId;
             this.PayeeBankAccountId = payeeBankAccountId;
@@ -874,6 +877,9 @@ namespace Flipdish.Model
             this.OpeningBalance = openingBalance;
             this.ClosingBalance = closingBalance;
             this.PayGreenSalesAmount = payGreenSalesAmount;
+            this.DeliveryIntegrationFee = deliveryIntegrationFee;
+            this.DeliveryIntegrationTipFee = deliveryIntegrationTipFee;
+            this.TotalThirdPartyFees = totalThirdPartyFees;
         }
         
         /// <summary>
@@ -1125,6 +1131,27 @@ namespace Flipdish.Model
         public double? PayGreenSalesAmount { get; set; }
 
         /// <summary>
+        /// Third party integration delivery fee
+        /// </summary>
+        /// <value>Third party integration delivery fee</value>
+        [DataMember(Name="DeliveryIntegrationFee", EmitDefaultValue=false)]
+        public double? DeliveryIntegrationFee { get; set; }
+
+        /// <summary>
+        /// Third party integration delivery tip fee
+        /// </summary>
+        /// <value>Third party integration delivery tip fee</value>
+        [DataMember(Name="DeliveryIntegrationTipFee", EmitDefaultValue=false)]
+        public double? DeliveryIntegrationTipFee { get; set; }
+
+        /// <summary>
+        /// Total third party integration fees
+        /// </summary>
+        /// <value>Total third party integration fees</value>
+        [DataMember(Name="TotalThirdPartyFees", EmitDefaultValue=false)]
+        public double? TotalThirdPartyFees { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -1170,6 +1197,9 @@ namespace Flipdish.Model
             sb.Append("  OpeningBalance: ").Append(OpeningBalance).Append("\n");
             sb.Append("  ClosingBalance: ").Append(ClosingBalance).Append("\n");
             sb.Append("  PayGreenSalesAmount: ").Append(PayGreenSalesAmount).Append("\n");
+            sb.Append("  DeliveryIntegrationFee: ").Append(DeliveryIntegrationFee).Append("\n");
+            sb.Append("  DeliveryIntegrationTipFee: ").Append(DeliveryIntegrationTipFee).Append("\n");
+            sb.Append("  TotalThirdPartyFees: ").Append(TotalThirdPartyFees).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1393,6 +1423,21 @@ namespace Flipdish.Model
                     this.PayGreenSalesAmount == input.PayGreenSalesAmount ||
                     (this.PayGreenSalesAmount != null &&
                     this.PayGreenSalesAmount.Equals(input.PayGreenSalesAmount))
+                ) && 
+                (
+                    this.DeliveryIntegrationFee == input.DeliveryIntegrationFee ||
+                    (this.DeliveryIntegrationFee != null &&
+                    this.DeliveryIntegrationFee.Equals(input.DeliveryIntegrationFee))
+                ) && 
+                (
+                    this.DeliveryIntegrationTipFee == input.DeliveryIntegrationTipFee ||
+                    (this.DeliveryIntegrationTipFee != null &&
+                    this.DeliveryIntegrationTipFee.Equals(input.DeliveryIntegrationTipFee))
+                ) && 
+                (
+                    this.TotalThirdPartyFees == input.TotalThirdPartyFees ||
+                    (this.TotalThirdPartyFees != null &&
+                    this.TotalThirdPartyFees.Equals(input.TotalThirdPartyFees))
                 );
         }
 
@@ -1481,6 +1526,12 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ClosingBalance.GetHashCode();
                 if (this.PayGreenSalesAmount != null)
                     hashCode = hashCode * 59 + this.PayGreenSalesAmount.GetHashCode();
+                if (this.DeliveryIntegrationFee != null)
+                    hashCode = hashCode * 59 + this.DeliveryIntegrationFee.GetHashCode();
+                if (this.DeliveryIntegrationTipFee != null)
+                    hashCode = hashCode * 59 + this.DeliveryIntegrationTipFee.GetHashCode();
+                if (this.TotalThirdPartyFees != null)
+                    hashCode = hashCode * 59 + this.TotalThirdPartyFees.GetHashCode();
                 return hashCode;
             }
         }

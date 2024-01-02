@@ -1308,6 +1308,7 @@ Class | Method | HTTP request | Description
  - [Model.TelemetrySeriesProperty](docs/TelemetrySeriesProperty.md)
  - [Model.TelemetrySeriesQueryParameters](docs/TelemetrySeriesQueryParameters.md)
  - [Model.TelemetrySeriesResult](docs/TelemetrySeriesResult.md)
+ - [Model.ThirdPartyFeesDetails](docs/ThirdPartyFeesDetails.md)
  - [Model.TipConfiguration](docs/TipConfiguration.md)
  - [Model.UnRegisterCardReaderRequest](docs/UnRegisterCardReaderRequest.md)
  - [Model.UpcomingInvoice](docs/UpcomingInvoice.md)
