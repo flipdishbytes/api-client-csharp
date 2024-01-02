@@ -816,8 +816,6 @@ namespace Flipdish.Model
         /// <param name="onlineSalesRefundedFees">Payout online sales refunded fees.</param>
         /// <param name="onlineSalesFees">Payout online sales fees.</param>
         /// <param name="posSalesFees">Payout online sales fees.</param>
-        /// <param name="deliveryFees">Delivery fees.</param>
-        /// <param name="tipFees">Tip fees.</param>
         /// <param name="onlineSalesRefundedAmount">Payout online sales refunded amount.</param>
         /// <param name="posSalesRefundedAmount">POS Payout online sales refunded amount.</param>
         /// <param name="onlineSalesTax">Payout online sales tax.</param>
@@ -836,7 +834,7 @@ namespace Flipdish.Model
         /// <param name="openingBalance">Payout opening balance.</param>
         /// <param name="closingBalance">Payout closing balance.</param>
         /// <param name="payGreenSalesAmount">Amount of sales through PayGreen (restaurant vouchers).</param>
-        public Payout(int? payoutId = default(int?), int? payeeBankAccountId = default(int?), string accountName = default(string), PayoutStatusEnum? payoutStatus = default(PayoutStatusEnum?), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?), PayoutTypeEnum? payoutType = default(PayoutTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), DateTime? cutoffDate = default(DateTime?), double? onlineSalesAmount = default(double?), double? onlineSalesDeliveryCharges = default(double?), double? onlineSalesTips = default(double?), double? onlineSalesServiceCharges = default(double?), double? onlineSalesRefundedFees = default(double?), double? onlineSalesFees = default(double?), double? posSalesFees = default(double?), double? deliveryFees = default(double?), double? tipFees = default(double?), double? onlineSalesRefundedAmount = default(double?), double? posSalesRefundedAmount = default(double?), double? onlineSalesTax = default(double?), double? totalOnlineRevenue = default(double?), double? cashSalesFees = default(double?), double? cashSalesRefundedFees = default(double?), double? customerCashFees = default(double?), double? salesFeesVat = default(double?), double? totalFees = default(double?), double? totalOnlineRevenueAdjustments = default(double?), double? chargebackAmount = default(double?), double? posSalesChargebackAmount = default(double?), double? chargebackRefundedFees = default(double?), double? totalChargebackCost = default(double?), double? totalOtherCharges = default(double?), double? openingBalance = default(double?), double? closingBalance = default(double?), double? payGreenSalesAmount = default(double?))
+        public Payout(int? payoutId = default(int?), int? payeeBankAccountId = default(int?), string accountName = default(string), PayoutStatusEnum? payoutStatus = default(PayoutStatusEnum?), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?), PayoutTypeEnum? payoutType = default(PayoutTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), DateTime? cutoffDate = default(DateTime?), double? onlineSalesAmount = default(double?), double? onlineSalesDeliveryCharges = default(double?), double? onlineSalesTips = default(double?), double? onlineSalesServiceCharges = default(double?), double? onlineSalesRefundedFees = default(double?), double? onlineSalesFees = default(double?), double? posSalesFees = default(double?), double? onlineSalesRefundedAmount = default(double?), double? posSalesRefundedAmount = default(double?), double? onlineSalesTax = default(double?), double? totalOnlineRevenue = default(double?), double? cashSalesFees = default(double?), double? cashSalesRefundedFees = default(double?), double? customerCashFees = default(double?), double? salesFeesVat = default(double?), double? totalFees = default(double?), double? totalOnlineRevenueAdjustments = default(double?), double? chargebackAmount = default(double?), double? posSalesChargebackAmount = default(double?), double? chargebackRefundedFees = default(double?), double? totalChargebackCost = default(double?), double? totalOtherCharges = default(double?), double? openingBalance = default(double?), double? closingBalance = default(double?), double? payGreenSalesAmount = default(double?))
         {
             this.PayoutId = payoutId;
             this.PayeeBankAccountId = payeeBankAccountId;
@@ -858,8 +856,6 @@ namespace Flipdish.Model
             this.OnlineSalesRefundedFees = onlineSalesRefundedFees;
             this.OnlineSalesFees = onlineSalesFees;
             this.PosSalesFees = posSalesFees;
-            this.DeliveryFees = deliveryFees;
-            this.TipFees = tipFees;
             this.OnlineSalesRefundedAmount = onlineSalesRefundedAmount;
             this.PosSalesRefundedAmount = posSalesRefundedAmount;
             this.OnlineSalesTax = onlineSalesTax;
@@ -1001,20 +997,6 @@ namespace Flipdish.Model
         /// <value>Payout online sales fees</value>
         [DataMember(Name="PosSalesFees", EmitDefaultValue=false)]
         public double? PosSalesFees { get; set; }
-
-        /// <summary>
-        /// Delivery fees
-        /// </summary>
-        /// <value>Delivery fees</value>
-        [DataMember(Name="DeliveryFees", EmitDefaultValue=false)]
-        public double? DeliveryFees { get; set; }
-
-        /// <summary>
-        /// Tip fees
-        /// </summary>
-        /// <value>Tip fees</value>
-        [DataMember(Name="TipFees", EmitDefaultValue=false)]
-        public double? TipFees { get; set; }
 
         /// <summary>
         /// Payout online sales refunded amount
@@ -1170,8 +1152,6 @@ namespace Flipdish.Model
             sb.Append("  OnlineSalesRefundedFees: ").Append(OnlineSalesRefundedFees).Append("\n");
             sb.Append("  OnlineSalesFees: ").Append(OnlineSalesFees).Append("\n");
             sb.Append("  PosSalesFees: ").Append(PosSalesFees).Append("\n");
-            sb.Append("  DeliveryFees: ").Append(DeliveryFees).Append("\n");
-            sb.Append("  TipFees: ").Append(TipFees).Append("\n");
             sb.Append("  OnlineSalesRefundedAmount: ").Append(OnlineSalesRefundedAmount).Append("\n");
             sb.Append("  PosSalesRefundedAmount: ").Append(PosSalesRefundedAmount).Append("\n");
             sb.Append("  OnlineSalesTax: ").Append(OnlineSalesTax).Append("\n");
@@ -1325,16 +1305,6 @@ namespace Flipdish.Model
                     this.PosSalesFees.Equals(input.PosSalesFees))
                 ) && 
                 (
-                    this.DeliveryFees == input.DeliveryFees ||
-                    (this.DeliveryFees != null &&
-                    this.DeliveryFees.Equals(input.DeliveryFees))
-                ) && 
-                (
-                    this.TipFees == input.TipFees ||
-                    (this.TipFees != null &&
-                    this.TipFees.Equals(input.TipFees))
-                ) && 
-                (
                     this.OnlineSalesRefundedAmount == input.OnlineSalesRefundedAmount ||
                     (this.OnlineSalesRefundedAmount != null &&
                     this.OnlineSalesRefundedAmount.Equals(input.OnlineSalesRefundedAmount))
@@ -1475,10 +1445,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OnlineSalesFees.GetHashCode();
                 if (this.PosSalesFees != null)
                     hashCode = hashCode * 59 + this.PosSalesFees.GetHashCode();
-                if (this.DeliveryFees != null)
-                    hashCode = hashCode * 59 + this.DeliveryFees.GetHashCode();
-                if (this.TipFees != null)
-                    hashCode = hashCode * 59 + this.TipFees.GetHashCode();
                 if (this.OnlineSalesRefundedAmount != null)
                     hashCode = hashCode * 59 + this.OnlineSalesRefundedAmount.GetHashCode();
                 if (this.PosSalesRefundedAmount != null)
