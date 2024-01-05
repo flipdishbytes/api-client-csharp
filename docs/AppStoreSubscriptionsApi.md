@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteappsubscription"></a>
 # **DeleteAppSubscription**
-> RestApiStringResult DeleteAppSubscription (string appId, string appStoreAppId, string subscriptionId)
+> RestApiResultAppStoreSubscriptionJobResponse DeleteAppSubscription (string appId, string appStoreAppId, string subscriptionId)
 
 
 
@@ -169,7 +169,7 @@ namespace Example
 
             try
             {
-                RestApiStringResult result = apiInstance.DeleteAppSubscription(appId, appStoreAppId, subscriptionId);
+                RestApiResultAppStoreSubscriptionJobResponse result = apiInstance.DeleteAppSubscription(appId, appStoreAppId, subscriptionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiStringResult**](RestApiStringResult.md)
+[**RestApiResultAppStoreSubscriptionJobResponse**](RestApiResultAppStoreSubscriptionJobResponse.md)
 
 ### Authorization
 

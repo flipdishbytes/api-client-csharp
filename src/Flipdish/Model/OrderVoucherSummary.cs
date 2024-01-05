@@ -127,14 +127,16 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderVoucherSummary" /> class.
         /// </summary>
+        /// <param name="voucherId">Voucher ID.</param>
         /// <param name="name">Voucher name.</param>
         /// <param name="description">Voucher description.</param>
         /// <param name="code">Voucher code.</param>
         /// <param name="amount">Voucher amount.</param>
         /// <param name="type">Voucher type.</param>
         /// <param name="subType">Voucher sub type.</param>
-        public OrderVoucherSummary(string name = default(string), string description = default(string), string code = default(string), double? amount = default(double?), TypeEnum? type = default(TypeEnum?), SubTypeEnum? subType = default(SubTypeEnum?))
+        public OrderVoucherSummary(int? voucherId = default(int?), string name = default(string), string description = default(string), string code = default(string), double? amount = default(double?), TypeEnum? type = default(TypeEnum?), SubTypeEnum? subType = default(SubTypeEnum?))
         {
+            this.VoucherId = voucherId;
             this.Name = name;
             this.Description = description;
             this.Code = code;
@@ -143,6 +145,13 @@ namespace Flipdish.Model
             this.SubType = subType;
         }
         
+        /// <summary>
+        /// Voucher ID
+        /// </summary>
+        /// <value>Voucher ID</value>
+        [DataMember(Name="VoucherId", EmitDefaultValue=false)]
+        public int? VoucherId { get; set; }
+
         /// <summary>
         /// Voucher name
         /// </summary>
@@ -181,6 +190,7 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OrderVoucherSummary {\n");
+            sb.Append("  VoucherId: ").Append(VoucherId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
@@ -222,6 +232,11 @@ namespace Flipdish.Model
 
             return 
                 (
+                    this.VoucherId == input.VoucherId ||
+                    (this.VoucherId != null &&
+                    this.VoucherId.Equals(input.VoucherId))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -262,6 +277,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.VoucherId != null)
+                    hashCode = hashCode * 59 + this.VoucherId.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Description != null)

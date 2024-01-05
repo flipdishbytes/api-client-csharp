@@ -82,8 +82,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
         /// <param name="subscriptionId"></param>
-        /// <returns>RestApiStringResult</returns>
-        RestApiStringResult DeleteAppSubscription (string appId, string appStoreAppId, string subscriptionId);
+        /// <returns>RestApiResultAppStoreSubscriptionJobResponse</returns>
+        RestApiResultAppStoreSubscriptionJobResponse DeleteAppSubscription (string appId, string appStoreAppId, string subscriptionId);
 
         /// <summary>
         /// 
@@ -95,8 +95,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
         /// <param name="subscriptionId"></param>
-        /// <returns>ApiResponse of RestApiStringResult</returns>
-        ApiResponse<RestApiStringResult> DeleteAppSubscriptionWithHttpInfo (string appId, string appStoreAppId, string subscriptionId);
+        /// <returns>ApiResponse of RestApiResultAppStoreSubscriptionJobResponse</returns>
+        ApiResponse<RestApiResultAppStoreSubscriptionJobResponse> DeleteAppSubscriptionWithHttpInfo (string appId, string appStoreAppId, string subscriptionId);
         /// <summary>
         /// 
         /// </summary>
@@ -209,8 +209,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
         /// <param name="subscriptionId"></param>
-        /// <returns>Task of RestApiStringResult</returns>
-        System.Threading.Tasks.Task<RestApiStringResult> DeleteAppSubscriptionAsync (string appId, string appStoreAppId, string subscriptionId);
+        /// <returns>Task of RestApiResultAppStoreSubscriptionJobResponse</returns>
+        System.Threading.Tasks.Task<RestApiResultAppStoreSubscriptionJobResponse> DeleteAppSubscriptionAsync (string appId, string appStoreAppId, string subscriptionId);
 
         /// <summary>
         /// 
@@ -222,8 +222,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
         /// <param name="subscriptionId"></param>
-        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> DeleteAppSubscriptionAsyncWithHttpInfo (string appId, string appStoreAppId, string subscriptionId);
+        /// <returns>Task of ApiResponse (RestApiResultAppStoreSubscriptionJobResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreSubscriptionJobResponse>> DeleteAppSubscriptionAsyncWithHttpInfo (string appId, string appStoreAppId, string subscriptionId);
         /// <summary>
         /// 
         /// </summary>
@@ -745,10 +745,10 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
         /// <param name="subscriptionId"></param>
-        /// <returns>RestApiStringResult</returns>
-        public RestApiStringResult DeleteAppSubscription (string appId, string appStoreAppId, string subscriptionId)
+        /// <returns>RestApiResultAppStoreSubscriptionJobResponse</returns>
+        public RestApiResultAppStoreSubscriptionJobResponse DeleteAppSubscription (string appId, string appStoreAppId, string subscriptionId)
         {
-             ApiResponse<RestApiStringResult> localVarResponse = DeleteAppSubscriptionWithHttpInfo(appId, appStoreAppId, subscriptionId);
+             ApiResponse<RestApiResultAppStoreSubscriptionJobResponse> localVarResponse = DeleteAppSubscriptionWithHttpInfo(appId, appStoreAppId, subscriptionId);
              return localVarResponse.Data;
         }
 
@@ -759,8 +759,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
         /// <param name="subscriptionId"></param>
-        /// <returns>ApiResponse of RestApiStringResult</returns>
-        public ApiResponse< RestApiStringResult > DeleteAppSubscriptionWithHttpInfo (string appId, string appStoreAppId, string subscriptionId)
+        /// <returns>ApiResponse of RestApiResultAppStoreSubscriptionJobResponse</returns>
+        public ApiResponse< RestApiResultAppStoreSubscriptionJobResponse > DeleteAppSubscriptionWithHttpInfo (string appId, string appStoreAppId, string subscriptionId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -820,9 +820,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
+            return new ApiResponse<RestApiResultAppStoreSubscriptionJobResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
+                (RestApiResultAppStoreSubscriptionJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreSubscriptionJobResponse)));
         }
 
         /// <summary>
@@ -832,10 +832,10 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
         /// <param name="subscriptionId"></param>
-        /// <returns>Task of RestApiStringResult</returns>
-        public async System.Threading.Tasks.Task<RestApiStringResult> DeleteAppSubscriptionAsync (string appId, string appStoreAppId, string subscriptionId)
+        /// <returns>Task of RestApiResultAppStoreSubscriptionJobResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiResultAppStoreSubscriptionJobResponse> DeleteAppSubscriptionAsync (string appId, string appStoreAppId, string subscriptionId)
         {
-             ApiResponse<RestApiStringResult> localVarResponse = await DeleteAppSubscriptionAsyncWithHttpInfo(appId, appStoreAppId, subscriptionId);
+             ApiResponse<RestApiResultAppStoreSubscriptionJobResponse> localVarResponse = await DeleteAppSubscriptionAsyncWithHttpInfo(appId, appStoreAppId, subscriptionId);
              return localVarResponse.Data;
 
         }
@@ -847,8 +847,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
         /// <param name="subscriptionId"></param>
-        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> DeleteAppSubscriptionAsyncWithHttpInfo (string appId, string appStoreAppId, string subscriptionId)
+        /// <returns>Task of ApiResponse (RestApiResultAppStoreSubscriptionJobResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreSubscriptionJobResponse>> DeleteAppSubscriptionAsyncWithHttpInfo (string appId, string appStoreAppId, string subscriptionId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -908,9 +908,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
+            return new ApiResponse<RestApiResultAppStoreSubscriptionJobResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
+                (RestApiResultAppStoreSubscriptionJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreSubscriptionJobResponse)));
         }
 
         /// <summary>

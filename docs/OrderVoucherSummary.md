@@ -3,6 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**VoucherId** | **int?** | Voucher ID | [optional] 
 **Name** | **string** | Voucher name | [optional] 
 **Description** | **string** | Voucher description | [optional] 
 **Code** | **string** | Voucher code | [optional] 
