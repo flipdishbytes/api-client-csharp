@@ -33,10 +33,12 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="subscription">Subscription information for the AppId for the AppStoreApp.</param>
         /// <param name="configurations">Configurations for the AppId for the AppStoreApp.</param>
-        public AppStoreAppConfigurationsWithSubscriptions(AppStoreAppSubscriptionSummary subscription = default(AppStoreAppSubscriptionSummary), List<AppStoreAppConfigurationSummary> configurations = default(List<AppStoreAppConfigurationSummary>))
+        /// <param name="prices">Prices.</param>
+        public AppStoreAppConfigurationsWithSubscriptions(AppStoreAppSubscriptionSummary subscription = default(AppStoreAppSubscriptionSummary), List<AppStoreAppConfigurationSummary> configurations = default(List<AppStoreAppConfigurationSummary>), List<SubscriptionProductPriceInfo> prices = default(List<SubscriptionProductPriceInfo>))
         {
             this.Subscription = subscription;
             this.Configurations = configurations;
+            this.Prices = prices;
         }
         
         /// <summary>
@@ -54,6 +56,13 @@ namespace Flipdish.Model
         public List<AppStoreAppConfigurationSummary> Configurations { get; set; }
 
         /// <summary>
+        /// Prices
+        /// </summary>
+        /// <value>Prices</value>
+        [DataMember(Name="Prices", EmitDefaultValue=false)]
+        public List<SubscriptionProductPriceInfo> Prices { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -63,6 +72,7 @@ namespace Flipdish.Model
             sb.Append("class AppStoreAppConfigurationsWithSubscriptions {\n");
             sb.Append("  Subscription: ").Append(Subscription).Append("\n");
             sb.Append("  Configurations: ").Append(Configurations).Append("\n");
+            sb.Append("  Prices: ").Append(Prices).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -106,6 +116,11 @@ namespace Flipdish.Model
                     this.Configurations == input.Configurations ||
                     this.Configurations != null &&
                     this.Configurations.SequenceEqual(input.Configurations)
+                ) && 
+                (
+                    this.Prices == input.Prices ||
+                    this.Prices != null &&
+                    this.Prices.SequenceEqual(input.Prices)
                 );
         }
 
@@ -122,6 +137,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Subscription.GetHashCode();
                 if (this.Configurations != null)
                     hashCode = hashCode * 59 + this.Configurations.GetHashCode();
+                if (this.Prices != null)
+                    hashCode = hashCode * 59 + this.Prices.GetHashCode();
                 return hashCode;
             }
         }
