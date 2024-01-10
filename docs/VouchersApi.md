@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**GetVoucherStatsById**](VouchersApi.md#getvoucherstatsbyid) | **GET** /api/v1.0/vouchers/stats/{voucherId} | 
 [**GetVouchers**](VouchersApi.md#getvouchers) | **GET** /api/v1.0/{appId}/vouchers/summaries | 
 [**UpdateVoucher**](VouchersApi.md#updatevoucher) | **POST** /api/v1.0/vouchers/{voucherId} | 
+[**UpdateVoucherUsage**](VouchersApi.md#updatevoucherusage) | **POST** /api/v1.0/{appId}/vouchers/{voucherId}/usage | 
 
 
 <a name="createvoucher"></a>
@@ -336,6 +337,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultVoucherWithStats**](RestApiResultVoucherWithStats.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="updatevoucherusage"></a>
+# **UpdateVoucherUsage**
+> void UpdateVoucherUsage (string appId, int? voucherId, UpdateVoucherUsage voucherUsage)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UpdateVoucherUsageExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new VouchersApi();
+            var appId = appId_example;  // string | 
+            var voucherId = 56;  // int? | 
+            var voucherUsage = new UpdateVoucherUsage(); // UpdateVoucherUsage | 
+
+            try
+            {
+                apiInstance.UpdateVoucherUsage(appId, voucherId, voucherUsage);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling VouchersApi.UpdateVoucherUsage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **voucherId** | **int?**|  | 
+ **voucherUsage** | [**UpdateVoucherUsage**](UpdateVoucherUsage.md)|  | 
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

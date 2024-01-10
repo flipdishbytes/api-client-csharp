@@ -161,6 +161,31 @@ namespace Flipdish.Api
         /// <param name="maxDiscountAmount"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultVoucherWithStats</returns>
         ApiResponse<RestApiResultVoucherWithStats> UpdateVoucherWithHttpInfo (int? voucherId, UpdateVoucher voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, double? maxDiscountAmount = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="voucherId"></param>
+        /// <param name="voucherUsage"></param>
+        /// <returns></returns>
+        void UpdateVoucherUsage (string appId, int? voucherId, UpdateVoucherUsage voucherUsage);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="voucherId"></param>
+        /// <param name="voucherUsage"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> UpdateVoucherUsageWithHttpInfo (string appId, int? voucherId, UpdateVoucherUsage voucherUsage);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -300,6 +325,31 @@ namespace Flipdish.Api
         /// <param name="maxDiscountAmount"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultVoucherWithStats)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultVoucherWithStats>> UpdateVoucherAsyncWithHttpInfo (int? voucherId, UpdateVoucher voucher, List<int?> storeId = null, int? percentValue = null, double? lumpValue = null, double? maxDiscountAmount = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="voucherId"></param>
+        /// <param name="voucherUsage"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task UpdateVoucherUsageAsync (string appId, int? voucherId, UpdateVoucherUsage voucherUsage);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="voucherId"></param>
+        /// <param name="voucherUsage"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateVoucherUsageAsyncWithHttpInfo (string appId, int? voucherId, UpdateVoucherUsage voucherUsage);
         #endregion Asynchronous Operations
     }
 
@@ -1315,6 +1365,203 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultVoucherWithStats>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultVoucherWithStats) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultVoucherWithStats)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="voucherId"></param>
+        /// <param name="voucherUsage"></param>
+        /// <returns></returns>
+        public void UpdateVoucherUsage (string appId, int? voucherId, UpdateVoucherUsage voucherUsage)
+        {
+             UpdateVoucherUsageWithHttpInfo(appId, voucherId, voucherUsage);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="voucherId"></param>
+        /// <param name="voucherUsage"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> UpdateVoucherUsageWithHttpInfo (string appId, int? voucherId, UpdateVoucherUsage voucherUsage)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling VouchersApi->UpdateVoucherUsage");
+            // verify the required parameter 'voucherId' is set
+            if (voucherId == null)
+                throw new ApiException(400, "Missing required parameter 'voucherId' when calling VouchersApi->UpdateVoucherUsage");
+            // verify the required parameter 'voucherUsage' is set
+            if (voucherUsage == null)
+                throw new ApiException(400, "Missing required parameter 'voucherUsage' when calling VouchersApi->UpdateVoucherUsage");
+
+            var localVarPath = "./api/v1.0/{appId}/vouchers/{voucherId}/usage";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (voucherId != null) localVarPathParams.Add("voucherId", this.Configuration.ApiClient.ParameterToString(voucherId)); // path parameter
+            if (voucherUsage != null && voucherUsage.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(voucherUsage); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = voucherUsage; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateVoucherUsage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="voucherId"></param>
+        /// <param name="voucherUsage"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task UpdateVoucherUsageAsync (string appId, int? voucherId, UpdateVoucherUsage voucherUsage)
+        {
+             await UpdateVoucherUsageAsyncWithHttpInfo(appId, voucherId, voucherUsage);
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="voucherId"></param>
+        /// <param name="voucherUsage"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateVoucherUsageAsyncWithHttpInfo (string appId, int? voucherId, UpdateVoucherUsage voucherUsage)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling VouchersApi->UpdateVoucherUsage");
+            // verify the required parameter 'voucherId' is set
+            if (voucherId == null)
+                throw new ApiException(400, "Missing required parameter 'voucherId' when calling VouchersApi->UpdateVoucherUsage");
+            // verify the required parameter 'voucherUsage' is set
+            if (voucherUsage == null)
+                throw new ApiException(400, "Missing required parameter 'voucherUsage' when calling VouchersApi->UpdateVoucherUsage");
+
+            var localVarPath = "./api/v1.0/{appId}/vouchers/{voucherId}/usage";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (voucherId != null) localVarPathParams.Add("voucherId", this.Configuration.ApiClient.ParameterToString(voucherId)); // path parameter
+            if (voucherUsage != null && voucherUsage.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(voucherUsage); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = voucherUsage; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateVoucherUsage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
         }
 
     }
