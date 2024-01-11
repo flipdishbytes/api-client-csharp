@@ -33,10 +33,12 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="paymentToken">paymentToken.</param>
         /// <param name="phoneNumber">phoneNumber.</param>
-        public SubmitOrderRequest(string paymentToken = default(string), string phoneNumber = default(string))
+        /// <param name="chefNote">chefNote.</param>
+        public SubmitOrderRequest(string paymentToken = default(string), string phoneNumber = default(string), string chefNote = default(string))
         {
             this.PaymentToken = paymentToken;
             this.PhoneNumber = phoneNumber;
+            this.ChefNote = chefNote;
         }
         
         /// <summary>
@@ -52,6 +54,12 @@ namespace Flipdish.Model
         public string PhoneNumber { get; set; }
 
         /// <summary>
+        /// Gets or Sets ChefNote
+        /// </summary>
+        [DataMember(Name="ChefNote", EmitDefaultValue=false)]
+        public string ChefNote { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -61,6 +69,7 @@ namespace Flipdish.Model
             sb.Append("class SubmitOrderRequest {\n");
             sb.Append("  PaymentToken: ").Append(PaymentToken).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
+            sb.Append("  ChefNote: ").Append(ChefNote).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -104,6 +113,11 @@ namespace Flipdish.Model
                     this.PhoneNumber == input.PhoneNumber ||
                     (this.PhoneNumber != null &&
                     this.PhoneNumber.Equals(input.PhoneNumber))
+                ) && 
+                (
+                    this.ChefNote == input.ChefNote ||
+                    (this.ChefNote != null &&
+                    this.ChefNote.Equals(input.ChefNote))
                 );
         }
 
@@ -120,6 +134,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PaymentToken.GetHashCode();
                 if (this.PhoneNumber != null)
                     hashCode = hashCode * 59 + this.PhoneNumber.GetHashCode();
+                if (this.ChefNote != null)
+                    hashCode = hashCode * 59 + this.ChefNote.GetHashCode();
                 return hashCode;
             }
         }

@@ -33,32 +33,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
-        /// <returns>RestApiArrayResultAppStoreSubscriptionItem</returns>
-        RestApiArrayResultAppStoreSubscriptionItem CreateAppStoreSubscription (string appId, string appStoreAppId);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="appStoreAppId"></param>
-        /// <returns>ApiResponse of RestApiArrayResultAppStoreSubscriptionItem</returns>
-        ApiResponse<RestApiArrayResultAppStoreSubscriptionItem> CreateAppStoreSubscriptionWithHttpInfo (string appId, string appStoreAppId);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="appStoreAppId"></param>
         /// <param name="addAppStoreSubscriptionRequest"></param>
         /// <returns>RestApiResultAppStoreSubscriptionJobResponse</returns>
-        RestApiResultAppStoreSubscriptionJobResponse CreateAppStoreSubscription_0 (string appId, string appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest);
+        RestApiResultAppStoreSubscriptionJobResponse CreateAppStoreSubscription (string appId, string appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest);
 
         /// <summary>
         /// 
@@ -71,7 +48,7 @@ namespace Flipdish.Api
         /// <param name="appStoreAppId"></param>
         /// <param name="addAppStoreSubscriptionRequest"></param>
         /// <returns>ApiResponse of RestApiResultAppStoreSubscriptionJobResponse</returns>
-        ApiResponse<RestApiResultAppStoreSubscriptionJobResponse> CreateAppStoreSubscription_0WithHttpInfo (string appId, string appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest);
+        ApiResponse<RestApiResultAppStoreSubscriptionJobResponse> CreateAppStoreSubscriptionWithHttpInfo (string appId, string appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest);
         /// <summary>
         /// 
         /// </summary>
@@ -131,6 +108,29 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
+        /// <returns>RestApiArrayResultAppStoreSubscriptionItem</returns>
+        RestApiArrayResultAppStoreSubscriptionItem GetAppStoreSubscriptions (string appId, string appStoreAppId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>ApiResponse of RestApiArrayResultAppStoreSubscriptionItem</returns>
+        ApiResponse<RestApiArrayResultAppStoreSubscriptionItem> GetAppStoreSubscriptionsWithHttpInfo (string appId, string appStoreAppId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
         /// <param name="subscriptionId"></param>
         /// <param name="updateAppStoreSubscriptionRequest"></param>
         /// <returns>RestApiResultAppStoreSubscriptionJobResponse</returns>
@@ -160,32 +160,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
-        /// <returns>Task of RestApiArrayResultAppStoreSubscriptionItem</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultAppStoreSubscriptionItem> CreateAppStoreSubscriptionAsync (string appId, string appStoreAppId);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="appStoreAppId"></param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultAppStoreSubscriptionItem)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultAppStoreSubscriptionItem>> CreateAppStoreSubscriptionAsyncWithHttpInfo (string appId, string appStoreAppId);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="appStoreAppId"></param>
         /// <param name="addAppStoreSubscriptionRequest"></param>
         /// <returns>Task of RestApiResultAppStoreSubscriptionJobResponse</returns>
-        System.Threading.Tasks.Task<RestApiResultAppStoreSubscriptionJobResponse> CreateAppStoreSubscription_0Async (string appId, string appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest);
+        System.Threading.Tasks.Task<RestApiResultAppStoreSubscriptionJobResponse> CreateAppStoreSubscriptionAsync (string appId, string appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest);
 
         /// <summary>
         /// 
@@ -198,7 +175,7 @@ namespace Flipdish.Api
         /// <param name="appStoreAppId"></param>
         /// <param name="addAppStoreSubscriptionRequest"></param>
         /// <returns>Task of ApiResponse (RestApiResultAppStoreSubscriptionJobResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreSubscriptionJobResponse>> CreateAppStoreSubscription_0AsyncWithHttpInfo (string appId, string appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreSubscriptionJobResponse>> CreateAppStoreSubscriptionAsyncWithHttpInfo (string appId, string appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest);
         /// <summary>
         /// 
         /// </summary>
@@ -249,6 +226,29 @@ namespace Flipdish.Api
         /// <param name="jobId"></param>
         /// <returns>Task of ApiResponse (RestApiResultAppStoreSubscriptionChangeJobStatusResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreSubscriptionChangeJobStatusResponse>> GetAppStoreSubscriptionChangeJobStatusAsyncWithHttpInfo (string appId, string appStoreAppId, string jobId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Task of RestApiArrayResultAppStoreSubscriptionItem</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultAppStoreSubscriptionItem> GetAppStoreSubscriptionsAsync (string appId, string appStoreAppId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultAppStoreSubscriptionItem)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultAppStoreSubscriptionItem>> GetAppStoreSubscriptionsAsyncWithHttpInfo (string appId, string appStoreAppId);
         /// <summary>
         /// 
         /// </summary>
@@ -382,174 +382,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
-        /// <returns>RestApiArrayResultAppStoreSubscriptionItem</returns>
-        public RestApiArrayResultAppStoreSubscriptionItem CreateAppStoreSubscription (string appId, string appStoreAppId)
-        {
-             ApiResponse<RestApiArrayResultAppStoreSubscriptionItem> localVarResponse = CreateAppStoreSubscriptionWithHttpInfo(appId, appStoreAppId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="appStoreAppId"></param>
-        /// <returns>ApiResponse of RestApiArrayResultAppStoreSubscriptionItem</returns>
-        public ApiResponse< RestApiArrayResultAppStoreSubscriptionItem > CreateAppStoreSubscriptionWithHttpInfo (string appId, string appStoreAppId)
-        {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling AppStoreSubscriptionsApi->CreateAppStoreSubscription");
-            // verify the required parameter 'appStoreAppId' is set
-            if (appStoreAppId == null)
-                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreSubscriptionsApi->CreateAppStoreSubscription");
-
-            var localVarPath = "./api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("CreateAppStoreSubscription", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RestApiArrayResultAppStoreSubscriptionItem>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiArrayResultAppStoreSubscriptionItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultAppStoreSubscriptionItem)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="appStoreAppId"></param>
-        /// <returns>Task of RestApiArrayResultAppStoreSubscriptionItem</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultAppStoreSubscriptionItem> CreateAppStoreSubscriptionAsync (string appId, string appStoreAppId)
-        {
-             ApiResponse<RestApiArrayResultAppStoreSubscriptionItem> localVarResponse = await CreateAppStoreSubscriptionAsyncWithHttpInfo(appId, appStoreAppId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="appStoreAppId"></param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultAppStoreSubscriptionItem)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultAppStoreSubscriptionItem>> CreateAppStoreSubscriptionAsyncWithHttpInfo (string appId, string appStoreAppId)
-        {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling AppStoreSubscriptionsApi->CreateAppStoreSubscription");
-            // verify the required parameter 'appStoreAppId' is set
-            if (appStoreAppId == null)
-                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreSubscriptionsApi->CreateAppStoreSubscription");
-
-            var localVarPath = "./api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("CreateAppStoreSubscription", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RestApiArrayResultAppStoreSubscriptionItem>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiArrayResultAppStoreSubscriptionItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultAppStoreSubscriptionItem)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="appStoreAppId"></param>
         /// <param name="addAppStoreSubscriptionRequest"></param>
         /// <returns>RestApiResultAppStoreSubscriptionJobResponse</returns>
-        public RestApiResultAppStoreSubscriptionJobResponse CreateAppStoreSubscription_0 (string appId, string appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest)
+        public RestApiResultAppStoreSubscriptionJobResponse CreateAppStoreSubscription (string appId, string appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest)
         {
-             ApiResponse<RestApiResultAppStoreSubscriptionJobResponse> localVarResponse = CreateAppStoreSubscription_0WithHttpInfo(appId, appStoreAppId, addAppStoreSubscriptionRequest);
+             ApiResponse<RestApiResultAppStoreSubscriptionJobResponse> localVarResponse = CreateAppStoreSubscriptionWithHttpInfo(appId, appStoreAppId, addAppStoreSubscriptionRequest);
              return localVarResponse.Data;
         }
 
@@ -561,17 +398,17 @@ namespace Flipdish.Api
         /// <param name="appStoreAppId"></param>
         /// <param name="addAppStoreSubscriptionRequest"></param>
         /// <returns>ApiResponse of RestApiResultAppStoreSubscriptionJobResponse</returns>
-        public ApiResponse< RestApiResultAppStoreSubscriptionJobResponse > CreateAppStoreSubscription_0WithHttpInfo (string appId, string appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest)
+        public ApiResponse< RestApiResultAppStoreSubscriptionJobResponse > CreateAppStoreSubscriptionWithHttpInfo (string appId, string appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling AppStoreSubscriptionsApi->CreateAppStoreSubscription_0");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppStoreSubscriptionsApi->CreateAppStoreSubscription");
             // verify the required parameter 'appStoreAppId' is set
             if (appStoreAppId == null)
-                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreSubscriptionsApi->CreateAppStoreSubscription_0");
+                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreSubscriptionsApi->CreateAppStoreSubscription");
             // verify the required parameter 'addAppStoreSubscriptionRequest' is set
             if (addAppStoreSubscriptionRequest == null)
-                throw new ApiException(400, "Missing required parameter 'addAppStoreSubscriptionRequest' when calling AppStoreSubscriptionsApi->CreateAppStoreSubscription_0");
+                throw new ApiException(400, "Missing required parameter 'addAppStoreSubscriptionRequest' when calling AppStoreSubscriptionsApi->CreateAppStoreSubscription");
 
             var localVarPath = "./api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -629,7 +466,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CreateAppStoreSubscription_0", localVarResponse);
+                Exception exception = ExceptionFactory("CreateAppStoreSubscription", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -646,9 +483,9 @@ namespace Flipdish.Api
         /// <param name="appStoreAppId"></param>
         /// <param name="addAppStoreSubscriptionRequest"></param>
         /// <returns>Task of RestApiResultAppStoreSubscriptionJobResponse</returns>
-        public async System.Threading.Tasks.Task<RestApiResultAppStoreSubscriptionJobResponse> CreateAppStoreSubscription_0Async (string appId, string appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest)
+        public async System.Threading.Tasks.Task<RestApiResultAppStoreSubscriptionJobResponse> CreateAppStoreSubscriptionAsync (string appId, string appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest)
         {
-             ApiResponse<RestApiResultAppStoreSubscriptionJobResponse> localVarResponse = await CreateAppStoreSubscription_0AsyncWithHttpInfo(appId, appStoreAppId, addAppStoreSubscriptionRequest);
+             ApiResponse<RestApiResultAppStoreSubscriptionJobResponse> localVarResponse = await CreateAppStoreSubscriptionAsyncWithHttpInfo(appId, appStoreAppId, addAppStoreSubscriptionRequest);
              return localVarResponse.Data;
 
         }
@@ -661,17 +498,17 @@ namespace Flipdish.Api
         /// <param name="appStoreAppId"></param>
         /// <param name="addAppStoreSubscriptionRequest"></param>
         /// <returns>Task of ApiResponse (RestApiResultAppStoreSubscriptionJobResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreSubscriptionJobResponse>> CreateAppStoreSubscription_0AsyncWithHttpInfo (string appId, string appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreSubscriptionJobResponse>> CreateAppStoreSubscriptionAsyncWithHttpInfo (string appId, string appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling AppStoreSubscriptionsApi->CreateAppStoreSubscription_0");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppStoreSubscriptionsApi->CreateAppStoreSubscription");
             // verify the required parameter 'appStoreAppId' is set
             if (appStoreAppId == null)
-                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreSubscriptionsApi->CreateAppStoreSubscription_0");
+                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreSubscriptionsApi->CreateAppStoreSubscription");
             // verify the required parameter 'addAppStoreSubscriptionRequest' is set
             if (addAppStoreSubscriptionRequest == null)
-                throw new ApiException(400, "Missing required parameter 'addAppStoreSubscriptionRequest' when calling AppStoreSubscriptionsApi->CreateAppStoreSubscription_0");
+                throw new ApiException(400, "Missing required parameter 'addAppStoreSubscriptionRequest' when calling AppStoreSubscriptionsApi->CreateAppStoreSubscription");
 
             var localVarPath = "./api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -729,7 +566,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CreateAppStoreSubscription_0", localVarResponse);
+                Exception exception = ExceptionFactory("CreateAppStoreSubscription", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1086,6 +923,169 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultAppStoreSubscriptionChangeJobStatusResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAppStoreSubscriptionChangeJobStatusResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreSubscriptionChangeJobStatusResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>RestApiArrayResultAppStoreSubscriptionItem</returns>
+        public RestApiArrayResultAppStoreSubscriptionItem GetAppStoreSubscriptions (string appId, string appStoreAppId)
+        {
+             ApiResponse<RestApiArrayResultAppStoreSubscriptionItem> localVarResponse = GetAppStoreSubscriptionsWithHttpInfo(appId, appStoreAppId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>ApiResponse of RestApiArrayResultAppStoreSubscriptionItem</returns>
+        public ApiResponse< RestApiArrayResultAppStoreSubscriptionItem > GetAppStoreSubscriptionsWithHttpInfo (string appId, string appStoreAppId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppStoreSubscriptionsApi->GetAppStoreSubscriptions");
+            // verify the required parameter 'appStoreAppId' is set
+            if (appStoreAppId == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreSubscriptionsApi->GetAppStoreSubscriptions");
+
+            var localVarPath = "./api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAppStoreSubscriptions", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultAppStoreSubscriptionItem>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiArrayResultAppStoreSubscriptionItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultAppStoreSubscriptionItem)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Task of RestApiArrayResultAppStoreSubscriptionItem</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultAppStoreSubscriptionItem> GetAppStoreSubscriptionsAsync (string appId, string appStoreAppId)
+        {
+             ApiResponse<RestApiArrayResultAppStoreSubscriptionItem> localVarResponse = await GetAppStoreSubscriptionsAsyncWithHttpInfo(appId, appStoreAppId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreAppId"></param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultAppStoreSubscriptionItem)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultAppStoreSubscriptionItem>> GetAppStoreSubscriptionsAsyncWithHttpInfo (string appId, string appStoreAppId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppStoreSubscriptionsApi->GetAppStoreSubscriptions");
+            // verify the required parameter 'appStoreAppId' is set
+            if (appStoreAppId == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreAppId' when calling AppStoreSubscriptionsApi->GetAppStoreSubscriptions");
+
+            var localVarPath = "./api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAppStoreSubscriptions", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultAppStoreSubscriptionItem>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiArrayResultAppStoreSubscriptionItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultAppStoreSubscriptionItem)));
         }
 
         /// <summary>

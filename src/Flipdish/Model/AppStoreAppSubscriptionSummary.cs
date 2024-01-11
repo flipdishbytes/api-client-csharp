@@ -33,10 +33,12 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="totalSubscriptions">Total subscriptions (per the AppId subscription setup).</param>
         /// <param name="usedSubscriptions">Number of subscriptions configured and enabled.</param>
-        public AppStoreAppSubscriptionSummary(int? totalSubscriptions = default(int?), int? usedSubscriptions = default(int?))
+        /// <param name="subscriptionAccountIsSetupForClient">Is client setup for subscriptions.</param>
+        public AppStoreAppSubscriptionSummary(int? totalSubscriptions = default(int?), int? usedSubscriptions = default(int?), bool? subscriptionAccountIsSetupForClient = default(bool?))
         {
             this.TotalSubscriptions = totalSubscriptions;
             this.UsedSubscriptions = usedSubscriptions;
+            this.SubscriptionAccountIsSetupForClient = subscriptionAccountIsSetupForClient;
         }
         
         /// <summary>
@@ -54,6 +56,13 @@ namespace Flipdish.Model
         public int? UsedSubscriptions { get; set; }
 
         /// <summary>
+        /// Is client setup for subscriptions
+        /// </summary>
+        /// <value>Is client setup for subscriptions</value>
+        [DataMember(Name="SubscriptionAccountIsSetupForClient", EmitDefaultValue=false)]
+        public bool? SubscriptionAccountIsSetupForClient { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -63,6 +72,7 @@ namespace Flipdish.Model
             sb.Append("class AppStoreAppSubscriptionSummary {\n");
             sb.Append("  TotalSubscriptions: ").Append(TotalSubscriptions).Append("\n");
             sb.Append("  UsedSubscriptions: ").Append(UsedSubscriptions).Append("\n");
+            sb.Append("  SubscriptionAccountIsSetupForClient: ").Append(SubscriptionAccountIsSetupForClient).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -106,6 +116,11 @@ namespace Flipdish.Model
                     this.UsedSubscriptions == input.UsedSubscriptions ||
                     (this.UsedSubscriptions != null &&
                     this.UsedSubscriptions.Equals(input.UsedSubscriptions))
+                ) && 
+                (
+                    this.SubscriptionAccountIsSetupForClient == input.SubscriptionAccountIsSetupForClient ||
+                    (this.SubscriptionAccountIsSetupForClient != null &&
+                    this.SubscriptionAccountIsSetupForClient.Equals(input.SubscriptionAccountIsSetupForClient))
                 );
         }
 
@@ -122,6 +137,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.TotalSubscriptions.GetHashCode();
                 if (this.UsedSubscriptions != null)
                     hashCode = hashCode * 59 + this.UsedSubscriptions.GetHashCode();
+                if (this.SubscriptionAccountIsSetupForClient != null)
+                    hashCode = hashCode * 59 + this.SubscriptionAccountIsSetupForClient.GetHashCode();
                 return hashCode;
             }
         }

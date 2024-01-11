@@ -124,10 +124,10 @@ Class | Method | HTTP request | Description
 *AppStoreDeveloperApi* | [**UpdateAppStoreApp**](docs/AppStoreDeveloperApi.md#updateappstoreapp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | 
 *AppStoreDeveloperApi* | [**UpdateExternalProduct**](docs/AppStoreDeveloperApi.md#updateexternalproduct) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_product | 
 *AppStoreDeveloperApi* | [**UploadAppStoreAppLogo**](docs/AppStoreDeveloperApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | 
-*AppStoreSubscriptionsApi* | [**CreateAppStoreSubscription**](docs/AppStoreSubscriptionsApi.md#createappstoresubscription) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
-*AppStoreSubscriptionsApi* | [**CreateAppStoreSubscription_0**](docs/AppStoreSubscriptionsApi.md#createappstoresubscription_0) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
+*AppStoreSubscriptionsApi* | [**CreateAppStoreSubscription**](docs/AppStoreSubscriptionsApi.md#createappstoresubscription) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
 *AppStoreSubscriptionsApi* | [**DeleteAppSubscription**](docs/AppStoreSubscriptionsApi.md#deleteappsubscription) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/{subscriptionId} | 
 *AppStoreSubscriptionsApi* | [**GetAppStoreSubscriptionChangeJobStatus**](docs/AppStoreSubscriptionsApi.md#getappstoresubscriptionchangejobstatus) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/jobs/{jobId} | 
+*AppStoreSubscriptionsApi* | [**GetAppStoreSubscriptions**](docs/AppStoreSubscriptionsApi.md#getappstoresubscriptions) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
 *AppStoreSubscriptionsApi* | [**UpdateAppStoreSubscription**](docs/AppStoreSubscriptionsApi.md#updateappstoresubscription) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/{subscriptionId} | 
 *AppsApi* | [**GetApp**](docs/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | 
 *AppsApi* | [**GetAppHostnameStatus**](docs/AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
