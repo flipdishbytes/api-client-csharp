@@ -34,11 +34,13 @@ namespace Flipdish.Model
         /// <param name="totalSubscriptions">Total subscriptions (per the AppId subscription setup).</param>
         /// <param name="usedSubscriptions">Number of subscriptions configured and enabled.</param>
         /// <param name="subscriptionAccountIsSetupForClient">Is client setup for subscriptions.</param>
-        public AppStoreAppSubscriptionSummary(int? totalSubscriptions = default(int?), int? usedSubscriptions = default(int?), bool? subscriptionAccountIsSetupForClient = default(bool?))
+        /// <param name="subscriptionAccounts">Available accounts for subscriptions (only if requesting user has enough permissions to see the list, otherwise empty list or null).</param>
+        public AppStoreAppSubscriptionSummary(int? totalSubscriptions = default(int?), int? usedSubscriptions = default(int?), bool? subscriptionAccountIsSetupForClient = default(bool?), List<AppStoreAppSubscriptionAccount> subscriptionAccounts = default(List<AppStoreAppSubscriptionAccount>))
         {
             this.TotalSubscriptions = totalSubscriptions;
             this.UsedSubscriptions = usedSubscriptions;
             this.SubscriptionAccountIsSetupForClient = subscriptionAccountIsSetupForClient;
+            this.SubscriptionAccounts = subscriptionAccounts;
         }
         
         /// <summary>
@@ -63,6 +65,13 @@ namespace Flipdish.Model
         public bool? SubscriptionAccountIsSetupForClient { get; set; }
 
         /// <summary>
+        /// Available accounts for subscriptions (only if requesting user has enough permissions to see the list, otherwise empty list or null)
+        /// </summary>
+        /// <value>Available accounts for subscriptions (only if requesting user has enough permissions to see the list, otherwise empty list or null)</value>
+        [DataMember(Name="SubscriptionAccounts", EmitDefaultValue=false)]
+        public List<AppStoreAppSubscriptionAccount> SubscriptionAccounts { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -73,6 +82,7 @@ namespace Flipdish.Model
             sb.Append("  TotalSubscriptions: ").Append(TotalSubscriptions).Append("\n");
             sb.Append("  UsedSubscriptions: ").Append(UsedSubscriptions).Append("\n");
             sb.Append("  SubscriptionAccountIsSetupForClient: ").Append(SubscriptionAccountIsSetupForClient).Append("\n");
+            sb.Append("  SubscriptionAccounts: ").Append(SubscriptionAccounts).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,6 +131,11 @@ namespace Flipdish.Model
                     this.SubscriptionAccountIsSetupForClient == input.SubscriptionAccountIsSetupForClient ||
                     (this.SubscriptionAccountIsSetupForClient != null &&
                     this.SubscriptionAccountIsSetupForClient.Equals(input.SubscriptionAccountIsSetupForClient))
+                ) && 
+                (
+                    this.SubscriptionAccounts == input.SubscriptionAccounts ||
+                    this.SubscriptionAccounts != null &&
+                    this.SubscriptionAccounts.SequenceEqual(input.SubscriptionAccounts)
                 );
         }
 
@@ -139,6 +154,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.UsedSubscriptions.GetHashCode();
                 if (this.SubscriptionAccountIsSetupForClient != null)
                     hashCode = hashCode * 59 + this.SubscriptionAccountIsSetupForClient.GetHashCode();
+                if (this.SubscriptionAccounts != null)
+                    hashCode = hashCode * 59 + this.SubscriptionAccounts.GetHashCode();
                 return hashCode;
             }
         }

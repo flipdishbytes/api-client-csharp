@@ -1,10 +1,9 @@
-# Flipdish.Model.AddAppStoreSubscriptionRequest
+# Flipdish.Model.AppStoreAppSubscriptionAccount
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StoreIds** | **List&lt;int?&gt;** | Store ids to update | [optional] 
-**SubscriptionAccountEmail** | **string** | Email (for subscription setup) - optional, only required for admin access | [optional] 
+**Email** | **string** | Email of the account user | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

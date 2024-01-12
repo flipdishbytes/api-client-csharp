@@ -32,9 +32,11 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="AddAppStoreSubscriptionRequest" /> class.
         /// </summary>
         /// <param name="storeIds">Store ids to update.</param>
-        public AddAppStoreSubscriptionRequest(List<int?> storeIds = default(List<int?>))
+        /// <param name="subscriptionAccountEmail">Email (for subscription setup) - optional, only required for admin access.</param>
+        public AddAppStoreSubscriptionRequest(List<int?> storeIds = default(List<int?>), string subscriptionAccountEmail = default(string))
         {
             this.StoreIds = storeIds;
+            this.SubscriptionAccountEmail = subscriptionAccountEmail;
         }
         
         /// <summary>
@@ -45,6 +47,13 @@ namespace Flipdish.Model
         public List<int?> StoreIds { get; set; }
 
         /// <summary>
+        /// Email (for subscription setup) - optional, only required for admin access
+        /// </summary>
+        /// <value>Email (for subscription setup) - optional, only required for admin access</value>
+        [DataMember(Name="SubscriptionAccountEmail", EmitDefaultValue=false)]
+        public string SubscriptionAccountEmail { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -53,6 +62,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class AddAppStoreSubscriptionRequest {\n");
             sb.Append("  StoreIds: ").Append(StoreIds).Append("\n");
+            sb.Append("  SubscriptionAccountEmail: ").Append(SubscriptionAccountEmail).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,6 +101,11 @@ namespace Flipdish.Model
                     this.StoreIds == input.StoreIds ||
                     this.StoreIds != null &&
                     this.StoreIds.SequenceEqual(input.StoreIds)
+                ) && 
+                (
+                    this.SubscriptionAccountEmail == input.SubscriptionAccountEmail ||
+                    (this.SubscriptionAccountEmail != null &&
+                    this.SubscriptionAccountEmail.Equals(input.SubscriptionAccountEmail))
                 );
         }
 
@@ -105,6 +120,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.StoreIds != null)
                     hashCode = hashCode * 59 + this.StoreIds.GetHashCode();
+                if (this.SubscriptionAccountEmail != null)
+                    hashCode = hashCode * 59 + this.SubscriptionAccountEmail.GetHashCode();
                 return hashCode;
             }
         }

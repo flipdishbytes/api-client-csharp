@@ -619,6 +619,7 @@ Class | Method | HTTP request | Description
  - [Model.AppStoreAppConfiguration](docs/AppStoreAppConfiguration.md)
  - [Model.AppStoreAppConfigurationSummary](docs/AppStoreAppConfigurationSummary.md)
  - [Model.AppStoreAppConfigurationsWithSubscriptions](docs/AppStoreAppConfigurationsWithSubscriptions.md)
+ - [Model.AppStoreAppSubscriptionAccount](docs/AppStoreAppSubscriptionAccount.md)
  - [Model.AppStoreAppSubscriptionSummary](docs/AppStoreAppSubscriptionSummary.md)
  - [Model.AppStoreAppSummary](docs/AppStoreAppSummary.md)
  - [Model.AppStoreAppSupportInfo](docs/AppStoreAppSupportInfo.md)
