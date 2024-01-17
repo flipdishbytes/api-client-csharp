@@ -4,7 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AllergenId** | **string** | A unique identifier for the allergen | [optional] 
-**Name** | **string** | English Name of the allergen | [optional] 
 **LocalizedName** | **string** | Localized name of the allergen | [optional] 
 **IconUrl** | **string** | Url to the icon for the allergen | [optional] 
 

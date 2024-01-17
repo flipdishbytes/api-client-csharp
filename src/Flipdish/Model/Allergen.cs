@@ -32,13 +32,11 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="Allergen" /> class.
         /// </summary>
         /// <param name="allergenId">A unique identifier for the allergen.</param>
-        /// <param name="name">English Name of the allergen.</param>
         /// <param name="localizedName">Localized name of the allergen.</param>
         /// <param name="iconUrl">Url to the icon for the allergen.</param>
-        public Allergen(string allergenId = default(string), string name = default(string), string localizedName = default(string), string iconUrl = default(string))
+        public Allergen(string allergenId = default(string), string localizedName = default(string), string iconUrl = default(string))
         {
             this.AllergenId = allergenId;
-            this.Name = name;
             this.LocalizedName = localizedName;
             this.IconUrl = iconUrl;
         }
@@ -49,13 +47,6 @@ namespace Flipdish.Model
         /// <value>A unique identifier for the allergen</value>
         [DataMember(Name="AllergenId", EmitDefaultValue=false)]
         public string AllergenId { get; set; }
-
-        /// <summary>
-        /// English Name of the allergen
-        /// </summary>
-        /// <value>English Name of the allergen</value>
-        [DataMember(Name="Name", EmitDefaultValue=false)]
-        public string Name { get; set; }
 
         /// <summary>
         /// Localized name of the allergen
@@ -80,7 +71,6 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class Allergen {\n");
             sb.Append("  AllergenId: ").Append(AllergenId).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  LocalizedName: ").Append(LocalizedName).Append("\n");
             sb.Append("  IconUrl: ").Append(IconUrl).Append("\n");
             sb.Append("}\n");
@@ -123,11 +113,6 @@ namespace Flipdish.Model
                     this.AllergenId.Equals(input.AllergenId))
                 ) && 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
-                ) && 
-                (
                     this.LocalizedName == input.LocalizedName ||
                     (this.LocalizedName != null &&
                     this.LocalizedName.Equals(input.LocalizedName))
@@ -150,8 +135,6 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.AllergenId != null)
                     hashCode = hashCode * 59 + this.AllergenId.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.LocalizedName != null)
                     hashCode = hashCode * 59 + this.LocalizedName.GetHashCode();
                 if (this.IconUrl != null)
