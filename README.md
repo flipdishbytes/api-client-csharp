@@ -454,6 +454,7 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**GetOrderById**](docs/OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | 
 *OrdersApi* | [**GetOrders**](docs/OrdersApi.md#getorders) | **GET** /api/v1.0/orders | 
 *OrdersApi* | [**GetOrdersSummary**](docs/OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | 
+*OrdersApi* | [**GetOrdersSummaryNew**](docs/OrdersApi.md#getorderssummarynew) | **GET** /api/v1.0/{appId}/orders/summariesNew | 
 *OrdersApi* | [**GetReadyToProcess**](docs/OrdersApi.md#getreadytoprocess) | **GET** /api/v1.0/{appId}/orders/ready_to_process | 
 *OrdersApi* | [**RefundOrder**](docs/OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | 
 *OrdersApi* | [**RejectOrder**](docs/OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | 

@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**GetOrderById**](OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | 
 [**GetOrders**](OrdersApi.md#getorders) | **GET** /api/v1.0/orders | 
 [**GetOrdersSummary**](OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | 
+[**GetOrdersSummaryNew**](OrdersApi.md#getorderssummarynew) | **GET** /api/v1.0/{appId}/orders/summariesNew | 
 [**GetReadyToProcess**](OrdersApi.md#getreadytoprocess) | **GET** /api/v1.0/{appId}/orders/ready_to_process | 
 [**RefundOrder**](OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | 
 [**RejectOrder**](OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | 
@@ -459,7 +460,7 @@ Name | Type | Description  | Notes
 
 <a name="getorderssummary"></a>
 # **GetOrdersSummary**
-> RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null)
+> RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null, bool? logSql = null)
 
 
 
@@ -492,10 +493,11 @@ namespace Example
             var orderIds = new List<int?>(); // List<int?> |  (optional) 
             var from = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
             var to = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+            var logSql = true;  // bool? |  (optional) 
 
             try
             {
-                RestApiPaginationResultOrderSummary result = apiInstance.GetOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to);
+                RestApiPaginationResultOrderSummary result = apiInstance.GetOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to, logSql);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -522,6 +524,90 @@ Name | Type | Description  | Notes
  **orderIds** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
  **from** | **DateTime?**|  | [optional] 
  **to** | **DateTime?**|  | [optional] 
+ **logSql** | **bool?**|  | [optional] 
+
+### Return type
+
+[**RestApiPaginationResultOrderSummary**](RestApiPaginationResultOrderSummary.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getorderssummarynew"></a>
+# **GetOrdersSummaryNew**
+> RestApiPaginationResultOrderSummary GetOrdersSummaryNew (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null, bool? logSql = null)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetOrdersSummaryNewExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OrdersApi();
+            var appId = appId_example;  // string | 
+            var searchQuery = searchQuery_example;  // string |  (optional) 
+            var physicalRestaurantId = new List<int?>(); // List<int?> |  (optional) 
+            var state = state_example;  // List<string> |  (optional) 
+            var page = 56;  // int? |  (optional) 
+            var limit = 56;  // int? |  (optional) 
+            var orderByRequestedForTime = true;  // bool? |  (optional) 
+            var channels = channels_example;  // List<string> |  (optional) 
+            var orderIds = new List<int?>(); // List<int?> |  (optional) 
+            var from = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+            var to = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+            var logSql = true;  // bool? |  (optional) 
+
+            try
+            {
+                RestApiPaginationResultOrderSummary result = apiInstance.GetOrdersSummaryNew(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to, logSql);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrdersApi.GetOrdersSummaryNew: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **searchQuery** | **string**|  | [optional] 
+ **physicalRestaurantId** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
+ **state** | **List&lt;string&gt;**|  | [optional] 
+ **page** | **int?**|  | [optional] 
+ **limit** | **int?**|  | [optional] 
+ **orderByRequestedForTime** | **bool?**|  | [optional] 
+ **channels** | **List&lt;string&gt;**|  | [optional] 
+ **orderIds** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
+ **from** | **DateTime?**|  | [optional] 
+ **to** | **DateTime?**|  | [optional] 
+ **logSql** | **bool?**|  | [optional] 
 
 ### Return type
 

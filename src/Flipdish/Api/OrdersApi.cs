@@ -201,8 +201,9 @@ namespace Flipdish.Api
         /// <param name="orderIds"> (optional)</param>
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
+        /// <param name="logSql"> (optional)</param>
         /// <returns>RestApiPaginationResultOrderSummary</returns>
-        RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null);
+        RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null, bool? logSql = null);
 
         /// <summary>
         /// 
@@ -222,8 +223,52 @@ namespace Flipdish.Api
         /// <param name="orderIds"> (optional)</param>
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
+        /// <param name="logSql"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultOrderSummary</returns>
-        ApiResponse<RestApiPaginationResultOrderSummary> GetOrdersSummaryWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null);
+        ApiResponse<RestApiPaginationResultOrderSummary> GetOrdersSummaryWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null, bool? logSql = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="orderByRequestedForTime"> (optional)</param>
+        /// <param name="channels"> (optional)</param>
+        /// <param name="orderIds"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
+        /// <param name="logSql"> (optional)</param>
+        /// <returns>RestApiPaginationResultOrderSummary</returns>
+        RestApiPaginationResultOrderSummary GetOrdersSummaryNew (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null, bool? logSql = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="orderByRequestedForTime"> (optional)</param>
+        /// <param name="channels"> (optional)</param>
+        /// <param name="orderIds"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
+        /// <param name="logSql"> (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultOrderSummary</returns>
+        ApiResponse<RestApiPaginationResultOrderSummary> GetOrdersSummaryNewWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null, bool? logSql = null);
         /// <summary>
         /// 
         /// </summary>
@@ -541,8 +586,9 @@ namespace Flipdish.Api
         /// <param name="orderIds"> (optional)</param>
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
+        /// <param name="logSql"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultOrderSummary</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultOrderSummary> GetOrdersSummaryAsync (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null);
+        System.Threading.Tasks.Task<RestApiPaginationResultOrderSummary> GetOrdersSummaryAsync (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null, bool? logSql = null);
 
         /// <summary>
         /// 
@@ -562,8 +608,52 @@ namespace Flipdish.Api
         /// <param name="orderIds"> (optional)</param>
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
+        /// <param name="logSql"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultOrderSummary)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrderSummary>> GetOrdersSummaryAsyncWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrderSummary>> GetOrdersSummaryAsyncWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null, bool? logSql = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="orderByRequestedForTime"> (optional)</param>
+        /// <param name="channels"> (optional)</param>
+        /// <param name="orderIds"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
+        /// <param name="logSql"> (optional)</param>
+        /// <returns>Task of RestApiPaginationResultOrderSummary</returns>
+        System.Threading.Tasks.Task<RestApiPaginationResultOrderSummary> GetOrdersSummaryNewAsync (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null, bool? logSql = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="orderByRequestedForTime"> (optional)</param>
+        /// <param name="channels"> (optional)</param>
+        /// <param name="orderIds"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
+        /// <param name="logSql"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultOrderSummary)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrderSummary>> GetOrdersSummaryNewAsyncWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null, bool? logSql = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1930,10 +2020,11 @@ namespace Flipdish.Api
         /// <param name="orderIds"> (optional)</param>
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
+        /// <param name="logSql"> (optional)</param>
         /// <returns>RestApiPaginationResultOrderSummary</returns>
-        public RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null)
+        public RestApiPaginationResultOrderSummary GetOrdersSummary (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null, bool? logSql = null)
         {
-             ApiResponse<RestApiPaginationResultOrderSummary> localVarResponse = GetOrdersSummaryWithHttpInfo(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to);
+             ApiResponse<RestApiPaginationResultOrderSummary> localVarResponse = GetOrdersSummaryWithHttpInfo(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to, logSql);
              return localVarResponse.Data;
         }
 
@@ -1952,8 +2043,9 @@ namespace Flipdish.Api
         /// <param name="orderIds"> (optional)</param>
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
+        /// <param name="logSql"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultOrderSummary</returns>
-        public ApiResponse< RestApiPaginationResultOrderSummary > GetOrdersSummaryWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null)
+        public ApiResponse< RestApiPaginationResultOrderSummary > GetOrdersSummaryWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null, bool? logSql = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1994,6 +2086,7 @@ namespace Flipdish.Api
             if (orderIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "orderIds", orderIds)); // query parameter
             if (from != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "from", from)); // query parameter
             if (to != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "to", to)); // query parameter
+            if (logSql != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "logSql", logSql)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -2035,10 +2128,11 @@ namespace Flipdish.Api
         /// <param name="orderIds"> (optional)</param>
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
+        /// <param name="logSql"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultOrderSummary</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultOrderSummary> GetOrdersSummaryAsync (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null)
+        public async System.Threading.Tasks.Task<RestApiPaginationResultOrderSummary> GetOrdersSummaryAsync (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null, bool? logSql = null)
         {
-             ApiResponse<RestApiPaginationResultOrderSummary> localVarResponse = await GetOrdersSummaryAsyncWithHttpInfo(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to);
+             ApiResponse<RestApiPaginationResultOrderSummary> localVarResponse = await GetOrdersSummaryAsyncWithHttpInfo(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to, logSql);
              return localVarResponse.Data;
 
         }
@@ -2058,8 +2152,9 @@ namespace Flipdish.Api
         /// <param name="orderIds"> (optional)</param>
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
+        /// <param name="logSql"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultOrderSummary)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrderSummary>> GetOrdersSummaryAsyncWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrderSummary>> GetOrdersSummaryAsyncWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null, bool? logSql = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -2100,6 +2195,7 @@ namespace Flipdish.Api
             if (orderIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "orderIds", orderIds)); // query parameter
             if (from != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "from", from)); // query parameter
             if (to != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "to", to)); // query parameter
+            if (logSql != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "logSql", logSql)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -2118,6 +2214,223 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("GetOrdersSummary", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiPaginationResultOrderSummary>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiPaginationResultOrderSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultOrderSummary)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="orderByRequestedForTime"> (optional)</param>
+        /// <param name="channels"> (optional)</param>
+        /// <param name="orderIds"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
+        /// <param name="logSql"> (optional)</param>
+        /// <returns>RestApiPaginationResultOrderSummary</returns>
+        public RestApiPaginationResultOrderSummary GetOrdersSummaryNew (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null, bool? logSql = null)
+        {
+             ApiResponse<RestApiPaginationResultOrderSummary> localVarResponse = GetOrdersSummaryNewWithHttpInfo(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to, logSql);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="orderByRequestedForTime"> (optional)</param>
+        /// <param name="channels"> (optional)</param>
+        /// <param name="orderIds"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
+        /// <param name="logSql"> (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultOrderSummary</returns>
+        public ApiResponse< RestApiPaginationResultOrderSummary > GetOrdersSummaryNewWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null, bool? logSql = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OrdersApi->GetOrdersSummaryNew");
+
+            var localVarPath = "./api/v1.0/{appId}/orders/summariesNew";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (searchQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "searchQuery", searchQuery)); // query parameter
+            if (physicalRestaurantId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "physicalRestaurantId", physicalRestaurantId)); // query parameter
+            if (state != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "state", state)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (orderByRequestedForTime != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderByRequestedForTime", orderByRequestedForTime)); // query parameter
+            if (channels != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "channels", channels)); // query parameter
+            if (orderIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "orderIds", orderIds)); // query parameter
+            if (from != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "from", from)); // query parameter
+            if (to != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "to", to)); // query parameter
+            if (logSql != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "logSql", logSql)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOrdersSummaryNew", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiPaginationResultOrderSummary>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiPaginationResultOrderSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultOrderSummary)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="orderByRequestedForTime"> (optional)</param>
+        /// <param name="channels"> (optional)</param>
+        /// <param name="orderIds"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
+        /// <param name="logSql"> (optional)</param>
+        /// <returns>Task of RestApiPaginationResultOrderSummary</returns>
+        public async System.Threading.Tasks.Task<RestApiPaginationResultOrderSummary> GetOrdersSummaryNewAsync (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null, bool? logSql = null)
+        {
+             ApiResponse<RestApiPaginationResultOrderSummary> localVarResponse = await GetOrdersSummaryNewAsyncWithHttpInfo(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to, logSql);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="searchQuery"> (optional)</param>
+        /// <param name="physicalRestaurantId"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="orderByRequestedForTime"> (optional)</param>
+        /// <param name="channels"> (optional)</param>
+        /// <param name="orderIds"> (optional)</param>
+        /// <param name="from"> (optional)</param>
+        /// <param name="to"> (optional)</param>
+        /// <param name="logSql"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultOrderSummary)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultOrderSummary>> GetOrdersSummaryNewAsyncWithHttpInfo (string appId, string searchQuery = null, List<int?> physicalRestaurantId = null, List<string> state = null, int? page = null, int? limit = null, bool? orderByRequestedForTime = null, List<string> channels = null, List<int?> orderIds = null, DateTime? from = null, DateTime? to = null, bool? logSql = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OrdersApi->GetOrdersSummaryNew");
+
+            var localVarPath = "./api/v1.0/{appId}/orders/summariesNew";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (searchQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "searchQuery", searchQuery)); // query parameter
+            if (physicalRestaurantId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "physicalRestaurantId", physicalRestaurantId)); // query parameter
+            if (state != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "state", state)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (orderByRequestedForTime != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderByRequestedForTime", orderByRequestedForTime)); // query parameter
+            if (channels != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "channels", channels)); // query parameter
+            if (orderIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "orderIds", orderIds)); // query parameter
+            if (from != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "from", from)); // query parameter
+            if (to != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "to", to)); // query parameter
+            if (logSql != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "logSql", logSql)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetOrdersSummaryNew", localVarResponse);
                 if (exception != null) throw exception;
             }
 
