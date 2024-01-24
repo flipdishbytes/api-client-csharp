@@ -845,6 +845,7 @@ Class | Method | HTTP request | Description
  - [Model.MappedLocation](docs/MappedLocation.md)
  - [Model.MaskedPhoneNumber](docs/MaskedPhoneNumber.md)
  - [Model.Menu](docs/Menu.md)
+ - [Model.MenuAsyncCreationCompletedEvent](docs/MenuAsyncCreationCompletedEvent.md)
  - [Model.MenuBase](docs/MenuBase.md)
  - [Model.MenuBulkEditEvent](docs/MenuBulkEditEvent.md)
  - [Model.MenuCatalogItem](docs/MenuCatalogItem.md)
