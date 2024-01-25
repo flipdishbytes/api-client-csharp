@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **RequestedDeliveryOrPickupTimeUtc** | **DateTime?** |  | [optional] 
 **TipAmount** | **double?** |  | [optional] 
 **DeliveryLocationId** | **int?** |  | [optional] 
+**VoucherCode** | **string** |  | [optional] 
 **OrderItemVms** | [**List&lt;OrderItemDm&gt;**](OrderItemDm.md) |  | [optional] 
 **VirtualRestaurantId** | **int?** |  | [optional] 
 **PhysicalRestaurantId** | **int?** |  | [optional] 

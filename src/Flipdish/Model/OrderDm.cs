@@ -164,6 +164,7 @@ namespace Flipdish.Model
         /// <param name="requestedDeliveryOrPickupTimeUtc">requestedDeliveryOrPickupTimeUtc.</param>
         /// <param name="tipAmount">tipAmount.</param>
         /// <param name="deliveryLocationId">deliveryLocationId.</param>
+        /// <param name="voucherCode">voucherCode.</param>
         /// <param name="orderItemVms">orderItemVms.</param>
         /// <param name="virtualRestaurantId">virtualRestaurantId.</param>
         /// <param name="physicalRestaurantId">physicalRestaurantId.</param>
@@ -175,12 +176,13 @@ namespace Flipdish.Model
         /// <param name="isAsapOrder">isAsapOrder.</param>
         /// <param name="menuId">menuId.</param>
         /// <param name="menuVersion">menuVersion.</param>
-        public OrderDm(CoordinatesDm userLocation = default(CoordinatesDm), DateTime? requestedDeliveryOrPickupTimeUtc = default(DateTime?), double? tipAmount = default(double?), int? deliveryLocationId = default(int?), List<OrderItemDm> orderItemVms = default(List<OrderItemDm>), int? virtualRestaurantId = default(int?), int? physicalRestaurantId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), int? pickupLocationId = default(int?), TableServiceCatagoryEnum? tableServiceCatagory = default(TableServiceCatagoryEnum?), int? paymentAccountId = default(int?), bool? isAsapOrder = default(bool?), int? menuId = default(int?), int? menuVersion = default(int?))
+        public OrderDm(CoordinatesDm userLocation = default(CoordinatesDm), DateTime? requestedDeliveryOrPickupTimeUtc = default(DateTime?), double? tipAmount = default(double?), int? deliveryLocationId = default(int?), string voucherCode = default(string), List<OrderItemDm> orderItemVms = default(List<OrderItemDm>), int? virtualRestaurantId = default(int?), int? physicalRestaurantId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), int? pickupLocationId = default(int?), TableServiceCatagoryEnum? tableServiceCatagory = default(TableServiceCatagoryEnum?), int? paymentAccountId = default(int?), bool? isAsapOrder = default(bool?), int? menuId = default(int?), int? menuVersion = default(int?))
         {
             this.UserLocation = userLocation;
             this.RequestedDeliveryOrPickupTimeUtc = requestedDeliveryOrPickupTimeUtc;
             this.TipAmount = tipAmount;
             this.DeliveryLocationId = deliveryLocationId;
+            this.VoucherCode = voucherCode;
             this.OrderItemVms = orderItemVms;
             this.VirtualRestaurantId = virtualRestaurantId;
             this.PhysicalRestaurantId = physicalRestaurantId;
@@ -217,6 +219,12 @@ namespace Flipdish.Model
         /// </summary>
         [DataMember(Name="DeliveryLocationId", EmitDefaultValue=false)]
         public int? DeliveryLocationId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets VoucherCode
+        /// </summary>
+        [DataMember(Name="VoucherCode", EmitDefaultValue=false)]
+        public string VoucherCode { get; set; }
 
         /// <summary>
         /// Gets or Sets OrderItemVms
@@ -287,6 +295,7 @@ namespace Flipdish.Model
             sb.Append("  RequestedDeliveryOrPickupTimeUtc: ").Append(RequestedDeliveryOrPickupTimeUtc).Append("\n");
             sb.Append("  TipAmount: ").Append(TipAmount).Append("\n");
             sb.Append("  DeliveryLocationId: ").Append(DeliveryLocationId).Append("\n");
+            sb.Append("  VoucherCode: ").Append(VoucherCode).Append("\n");
             sb.Append("  OrderItemVms: ").Append(OrderItemVms).Append("\n");
             sb.Append("  VirtualRestaurantId: ").Append(VirtualRestaurantId).Append("\n");
             sb.Append("  PhysicalRestaurantId: ").Append(PhysicalRestaurantId).Append("\n");
@@ -352,6 +361,11 @@ namespace Flipdish.Model
                     this.DeliveryLocationId == input.DeliveryLocationId ||
                     (this.DeliveryLocationId != null &&
                     this.DeliveryLocationId.Equals(input.DeliveryLocationId))
+                ) && 
+                (
+                    this.VoucherCode == input.VoucherCode ||
+                    (this.VoucherCode != null &&
+                    this.VoucherCode.Equals(input.VoucherCode))
                 ) && 
                 (
                     this.OrderItemVms == input.OrderItemVms ||
@@ -432,6 +446,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.TipAmount.GetHashCode();
                 if (this.DeliveryLocationId != null)
                     hashCode = hashCode * 59 + this.DeliveryLocationId.GetHashCode();
+                if (this.VoucherCode != null)
+                    hashCode = hashCode * 59 + this.VoucherCode.GetHashCode();
                 if (this.OrderItemVms != null)
                     hashCode = hashCode * 59 + this.OrderItemVms.GetHashCode();
                 if (this.VirtualRestaurantId != null)
