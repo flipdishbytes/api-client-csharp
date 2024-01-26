@@ -113,6 +113,7 @@ namespace Flipdish.Model
         /// <param name="description">Description (like \&quot;A lovely dish from the east\&quot;).</param>
         /// <param name="spicinessRating">Spiciness rating.</param>
         /// <param name="price">Price - this is only used when there is no master option set and should be set to 0 if a master option set exists..</param>
+        /// <param name="depositReturnFee">An optional fee that can be added to the price of the item..</param>
         /// <param name="displayOrder">Display order.</param>
         /// <param name="alcohol">To be set true if the item or an option of the item contains an alcoholic drink..</param>
         /// <param name="isAvailable">True if we accept orders for this item still.</param>
@@ -122,12 +123,13 @@ namespace Flipdish.Model
         /// <param name="imageUrl">Image url.</param>
         /// <param name="menuItemId">Menu Item Id.</param>
         /// <param name="excludeFromVoucherDiscounting">If true, the item is excluded from voucher discount calculations.</param>
-        public MenuSectionItemBase(string name = default(string), string description = default(string), SpicinessRatingEnum? spicinessRating = default(SpicinessRatingEnum?), double? price = default(double?), int? displayOrder = default(int?), bool? alcohol = default(bool?), bool? isAvailable = default(bool?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), bool? disableVouchers = default(bool?), string imageName = default(string), string imageUrl = default(string), int? menuItemId = default(int?), bool? excludeFromVoucherDiscounting = default(bool?))
+        public MenuSectionItemBase(string name = default(string), string description = default(string), SpicinessRatingEnum? spicinessRating = default(SpicinessRatingEnum?), double? price = default(double?), double? depositReturnFee = default(double?), int? displayOrder = default(int?), bool? alcohol = default(bool?), bool? isAvailable = default(bool?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), bool? disableVouchers = default(bool?), string imageName = default(string), string imageUrl = default(string), int? menuItemId = default(int?), bool? excludeFromVoucherDiscounting = default(bool?))
         {
             this.Name = name;
             this.Description = description;
             this.SpicinessRating = spicinessRating;
             this.Price = price;
+            this.DepositReturnFee = depositReturnFee;
             this.DisplayOrder = displayOrder;
             this.Alcohol = alcohol;
             this.IsAvailable = isAvailable;
@@ -160,6 +162,13 @@ namespace Flipdish.Model
         /// <value>Price - this is only used when there is no master option set and should be set to 0 if a master option set exists.</value>
         [DataMember(Name="Price", EmitDefaultValue=false)]
         public double? Price { get; set; }
+
+        /// <summary>
+        /// An optional fee that can be added to the price of the item.
+        /// </summary>
+        /// <value>An optional fee that can be added to the price of the item.</value>
+        [DataMember(Name="DepositReturnFee", EmitDefaultValue=false)]
+        public double? DepositReturnFee { get; set; }
 
         /// <summary>
         /// Display order
@@ -230,6 +239,7 @@ namespace Flipdish.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  SpicinessRating: ").Append(SpicinessRating).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
+            sb.Append("  DepositReturnFee: ").Append(DepositReturnFee).Append("\n");
             sb.Append("  DisplayOrder: ").Append(DisplayOrder).Append("\n");
             sb.Append("  Alcohol: ").Append(Alcohol).Append("\n");
             sb.Append("  IsAvailable: ").Append(IsAvailable).Append("\n");
@@ -292,6 +302,11 @@ namespace Flipdish.Model
                     this.Price == input.Price ||
                     (this.Price != null &&
                     this.Price.Equals(input.Price))
+                ) && 
+                (
+                    this.DepositReturnFee == input.DepositReturnFee ||
+                    (this.DepositReturnFee != null &&
+                    this.DepositReturnFee.Equals(input.DepositReturnFee))
                 ) && 
                 (
                     this.DisplayOrder == input.DisplayOrder ||
@@ -357,6 +372,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.SpicinessRating.GetHashCode();
                 if (this.Price != null)
                     hashCode = hashCode * 59 + this.Price.GetHashCode();
+                if (this.DepositReturnFee != null)
+                    hashCode = hashCode * 59 + this.DepositReturnFee.GetHashCode();
                 if (this.DisplayOrder != null)
                     hashCode = hashCode * 59 + this.DisplayOrder.GetHashCode();
                 if (this.Alcohol != null)

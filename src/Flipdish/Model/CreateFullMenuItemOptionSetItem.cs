@@ -76,11 +76,12 @@ namespace Flipdish.Model
         /// <param name="nextMenuItemOptionSetId">if null, next option set is next. if -1, this is the final option set.</param>
         /// <param name="name">Name.</param>
         /// <param name="price">Price.</param>
+        /// <param name="depositReturnFee">An optional fee that can be added to the price of the item..</param>
         /// <param name="isAvailable">Is available.</param>
         /// <param name="displayOrder">Display order. Displayed in ascending order..</param>
         /// <param name="cellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
         /// <param name="imageUrl">Image url.</param>
-        public CreateFullMenuItemOptionSetItem(int? menuItemOptionSetItemId = default(int?), List<CreateMetadata> metadata = default(List<CreateMetadata>), string taxRateName = default(string), int? nextMenuItemOptionSetId = default(int?), string name = default(string), double? price = default(double?), bool? isAvailable = default(bool?), int? displayOrder = default(int?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), string imageUrl = default(string))
+        public CreateFullMenuItemOptionSetItem(int? menuItemOptionSetItemId = default(int?), List<CreateMetadata> metadata = default(List<CreateMetadata>), string taxRateName = default(string), int? nextMenuItemOptionSetId = default(int?), string name = default(string), double? price = default(double?), double? depositReturnFee = default(double?), bool? isAvailable = default(bool?), int? displayOrder = default(int?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), string imageUrl = default(string))
         {
             this.MenuItemOptionSetItemId = menuItemOptionSetItemId;
             this.Metadata = metadata;
@@ -88,6 +89,7 @@ namespace Flipdish.Model
             this.NextMenuItemOptionSetId = nextMenuItemOptionSetId;
             this.Name = name;
             this.Price = price;
+            this.DepositReturnFee = depositReturnFee;
             this.IsAvailable = isAvailable;
             this.DisplayOrder = displayOrder;
             this.CellLayoutType = cellLayoutType;
@@ -137,6 +139,13 @@ namespace Flipdish.Model
         public double? Price { get; set; }
 
         /// <summary>
+        /// An optional fee that can be added to the price of the item.
+        /// </summary>
+        /// <value>An optional fee that can be added to the price of the item.</value>
+        [DataMember(Name="DepositReturnFee", EmitDefaultValue=false)]
+        public double? DepositReturnFee { get; set; }
+
+        /// <summary>
         /// Is available
         /// </summary>
         /// <value>Is available</value>
@@ -172,6 +181,7 @@ namespace Flipdish.Model
             sb.Append("  NextMenuItemOptionSetId: ").Append(NextMenuItemOptionSetId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
+            sb.Append("  DepositReturnFee: ").Append(DepositReturnFee).Append("\n");
             sb.Append("  IsAvailable: ").Append(IsAvailable).Append("\n");
             sb.Append("  DisplayOrder: ").Append(DisplayOrder).Append("\n");
             sb.Append("  CellLayoutType: ").Append(CellLayoutType).Append("\n");
@@ -241,6 +251,11 @@ namespace Flipdish.Model
                     this.Price.Equals(input.Price))
                 ) && 
                 (
+                    this.DepositReturnFee == input.DepositReturnFee ||
+                    (this.DepositReturnFee != null &&
+                    this.DepositReturnFee.Equals(input.DepositReturnFee))
+                ) && 
+                (
                     this.IsAvailable == input.IsAvailable ||
                     (this.IsAvailable != null &&
                     this.IsAvailable.Equals(input.IsAvailable))
@@ -283,6 +298,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Price != null)
                     hashCode = hashCode * 59 + this.Price.GetHashCode();
+                if (this.DepositReturnFee != null)
+                    hashCode = hashCode * 59 + this.DepositReturnFee.GetHashCode();
                 if (this.IsAvailable != null)
                     hashCode = hashCode * 59 + this.IsAvailable.GetHashCode();
                 if (this.DisplayOrder != null)
