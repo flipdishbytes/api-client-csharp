@@ -33,13 +33,15 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="customerId">Id of the customer.</param>
         /// <param name="registrationDate">Customer registration date.</param>
+        /// <param name="phoneNumber">Phone Number in international format.</param>
         /// <param name="cashOrdersEnabled">Customer can place cash orders.</param>
         /// <param name="cardOrdersEnabled">Customer can place card orders.</param>
         /// <param name="marketingEnabled">Customer can receive marketing.</param>
-        public Customer(int? customerId = default(int?), DateTime? registrationDate = default(DateTime?), bool? cashOrdersEnabled = default(bool?), bool? cardOrdersEnabled = default(bool?), bool? marketingEnabled = default(bool?))
+        public Customer(int? customerId = default(int?), DateTime? registrationDate = default(DateTime?), string phoneNumber = default(string), bool? cashOrdersEnabled = default(bool?), bool? cardOrdersEnabled = default(bool?), bool? marketingEnabled = default(bool?))
         {
             this.CustomerId = customerId;
             this.RegistrationDate = registrationDate;
+            this.PhoneNumber = phoneNumber;
             this.CashOrdersEnabled = cashOrdersEnabled;
             this.CardOrdersEnabled = cardOrdersEnabled;
             this.MarketingEnabled = marketingEnabled;
@@ -58,6 +60,13 @@ namespace Flipdish.Model
         /// <value>Customer registration date</value>
         [DataMember(Name="RegistrationDate", EmitDefaultValue=false)]
         public DateTime? RegistrationDate { get; set; }
+
+        /// <summary>
+        /// Phone Number in international format
+        /// </summary>
+        /// <value>Phone Number in international format</value>
+        [DataMember(Name="PhoneNumber", EmitDefaultValue=false)]
+        public string PhoneNumber { get; set; }
 
         /// <summary>
         /// Customer can place cash orders
@@ -90,6 +99,7 @@ namespace Flipdish.Model
             sb.Append("class Customer {\n");
             sb.Append("  CustomerId: ").Append(CustomerId).Append("\n");
             sb.Append("  RegistrationDate: ").Append(RegistrationDate).Append("\n");
+            sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  CashOrdersEnabled: ").Append(CashOrdersEnabled).Append("\n");
             sb.Append("  CardOrdersEnabled: ").Append(CardOrdersEnabled).Append("\n");
             sb.Append("  MarketingEnabled: ").Append(MarketingEnabled).Append("\n");
@@ -138,6 +148,11 @@ namespace Flipdish.Model
                     this.RegistrationDate.Equals(input.RegistrationDate))
                 ) && 
                 (
+                    this.PhoneNumber == input.PhoneNumber ||
+                    (this.PhoneNumber != null &&
+                    this.PhoneNumber.Equals(input.PhoneNumber))
+                ) && 
+                (
                     this.CashOrdersEnabled == input.CashOrdersEnabled ||
                     (this.CashOrdersEnabled != null &&
                     this.CashOrdersEnabled.Equals(input.CashOrdersEnabled))
@@ -167,6 +182,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CustomerId.GetHashCode();
                 if (this.RegistrationDate != null)
                     hashCode = hashCode * 59 + this.RegistrationDate.GetHashCode();
+                if (this.PhoneNumber != null)
+                    hashCode = hashCode * 59 + this.PhoneNumber.GetHashCode();
                 if (this.CashOrdersEnabled != null)
                     hashCode = hashCode * 59 + this.CashOrdersEnabled.GetHashCode();
                 if (this.CardOrdersEnabled != null)
