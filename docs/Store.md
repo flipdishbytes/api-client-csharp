@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **PreOrderPickupEnabled** | **bool?** | Is PerOrder Enabled for Pickup | [optional] 
 **LogoUrl** | **string** | Url for logo image | [optional] 
 **FraudPreventionStrategy** | **string** | Fraud Prevention Strategy | [optional] 
+**AppIds** | **List&lt;string&gt;** | Store&#39;s app ids | [optional] 
 **PhoneNumber** | **string** | Phone number | [optional] 
 **AlwaysAppearOpen** | **bool?** | True if the store always appears open | [optional] 
 **PreOrderEnabled** | **bool?** | True if the store accepts pre-orders | [optional] 
