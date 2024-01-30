@@ -43,7 +43,8 @@ namespace Flipdish.Model
         /// <param name="menuItemId">Menu item identifier.</param>
         /// <param name="menuItemDisplayOrder">Menu item display order.</param>
         /// <param name="isAvailable">Is available.</param>
-        public OrderItem(List<OrderItemOption> orderItemOptions = default(List<OrderItemOption>), Dictionary<string, string> metadata = default(Dictionary<string, string>), Guid? menuItemPublicId = default(Guid?), string menuSectionName = default(string), int? menuSectionDisplayOrder = default(int?), string name = default(string), string description = default(string), double? price = default(double?), double? priceIncludingOptionSetItems = default(double?), int? menuItemId = default(int?), int? menuItemDisplayOrder = default(int?), bool? isAvailable = default(bool?))
+        /// <param name="depositReturnFee">Deposit return fee.</param>
+        public OrderItem(List<OrderItemOption> orderItemOptions = default(List<OrderItemOption>), Dictionary<string, string> metadata = default(Dictionary<string, string>), Guid? menuItemPublicId = default(Guid?), string menuSectionName = default(string), int? menuSectionDisplayOrder = default(int?), string name = default(string), string description = default(string), double? price = default(double?), double? priceIncludingOptionSetItems = default(double?), int? menuItemId = default(int?), int? menuItemDisplayOrder = default(int?), bool? isAvailable = default(bool?), double? depositReturnFee = default(double?))
         {
             this.OrderItemOptions = orderItemOptions;
             this.Metadata = metadata;
@@ -57,6 +58,7 @@ namespace Flipdish.Model
             this.MenuItemId = menuItemId;
             this.MenuItemDisplayOrder = menuItemDisplayOrder;
             this.IsAvailable = isAvailable;
+            this.DepositReturnFee = depositReturnFee;
         }
         
         /// <summary>
@@ -144,6 +146,13 @@ namespace Flipdish.Model
         public bool? IsAvailable { get; set; }
 
         /// <summary>
+        /// Deposit return fee
+        /// </summary>
+        /// <value>Deposit return fee</value>
+        [DataMember(Name="DepositReturnFee", EmitDefaultValue=false)]
+        public double? DepositReturnFee { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -163,6 +172,7 @@ namespace Flipdish.Model
             sb.Append("  MenuItemId: ").Append(MenuItemId).Append("\n");
             sb.Append("  MenuItemDisplayOrder: ").Append(MenuItemDisplayOrder).Append("\n");
             sb.Append("  IsAvailable: ").Append(IsAvailable).Append("\n");
+            sb.Append("  DepositReturnFee: ").Append(DepositReturnFee).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -256,6 +266,11 @@ namespace Flipdish.Model
                     this.IsAvailable == input.IsAvailable ||
                     (this.IsAvailable != null &&
                     this.IsAvailable.Equals(input.IsAvailable))
+                ) && 
+                (
+                    this.DepositReturnFee == input.DepositReturnFee ||
+                    (this.DepositReturnFee != null &&
+                    this.DepositReturnFee.Equals(input.DepositReturnFee))
                 );
         }
 
@@ -292,6 +307,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.MenuItemDisplayOrder.GetHashCode();
                 if (this.IsAvailable != null)
                     hashCode = hashCode * 59 + this.IsAvailable.GetHashCode();
+                if (this.DepositReturnFee != null)
+                    hashCode = hashCode * 59 + this.DepositReturnFee.GetHashCode();
                 return hashCode;
             }
         }

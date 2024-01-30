@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **MenuItemId** | **int?** | Menu item identifier | [optional] 
 **MenuItemDisplayOrder** | **int?** | Menu item display order | [optional] 
 **IsAvailable** | **bool?** | Is available | [optional] 
+**DepositReturnFee** | **double?** | Deposit return fee | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

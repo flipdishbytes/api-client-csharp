@@ -668,6 +668,7 @@ Class | Method | HTTP request | Description
  - [Model.ChangePasswordModel](docs/ChangePasswordModel.md)
  - [Model.Channel](docs/Channel.md)
  - [Model.ChannelStoreMapping](docs/ChannelStoreMapping.md)
+ - [Model.ChannelStoresUpdatedEvent](docs/ChannelStoresUpdatedEvent.md)
  - [Model.ChargebackDetails](docs/ChargebackDetails.md)
  - [Model.ClientDevice](docs/ClientDevice.md)
  - [Model.ClientDeviceAssignEnrolledDevice](docs/ClientDeviceAssignEnrolledDevice.md)
