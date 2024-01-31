@@ -5,8 +5,8 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateDraftMenuFromExistingMenu**](MenusApi.md#createdraftmenufromexistingmenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | [PRIVATE API]Clone a menu, (without attaching stores)
-[**CreateNewMenuAsync**](MenusApi.md#createnewmenuasync) | **POST** /api/v1.0/{appId}/menus/async | Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
-[**CreateNewMenuForApp**](MenusApi.md#createnewmenuforapp) | **POST** /api/v1.0/{appId}/menus | Create a new menu. If request body is empty, the system will create a menu with default items.
+[**CreateNewMenuAsync**](MenusApi.md#createnewmenuasync) | **POST** /api/v1.0/{appId}/menus/async | Create a new menu asynchronously
+[**CreateNewMenuForApp**](MenusApi.md#createnewmenuforapp) | **POST** /api/v1.0/{appId}/menus | Create a new menu
 [**DeleteMenu**](MenusApi.md#deletemenu) | **DELETE** /api/v1.0/menus/{menuId} | [PRIVATE API]Mark a Menu as Deleted
 [**DeleteMenuImage**](MenusApi.md#deletemenuimage) | **DELETE** /api/v1.0/menus/{menuId}/image | Delete menu image
 [**DeleteMenuItemMetadata**](MenusApi.md#deletemenuitemmetadata) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Delete menu item metadata
@@ -105,7 +105,9 @@ Name | Type | Description  | Notes
 # **CreateNewMenuAsync**
 > Object CreateNewMenuAsync (string appId, CreateFullMenu menu)
 
-Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
+Create a new menu asynchronously
+
+You must listen to the webhook menu.async_creation.completed to know when the menu is ready
 
 ### Example
 ```csharp
@@ -130,7 +132,7 @@ namespace Example
 
             try
             {
-                // Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
+                // Create a new menu asynchronously
                 Object result = apiInstance.CreateNewMenuAsync(appId, menu);
                 Debug.WriteLine(result);
             }
@@ -169,7 +171,9 @@ Name | Type | Description  | Notes
 # **CreateNewMenuForApp**
 > int? CreateNewMenuForApp (string appId, CreateFullMenu menu)
 
-Create a new menu. If request body is empty, the system will create a menu with default items.
+Create a new menu
+
+[DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
 
 ### Example
 ```csharp
@@ -190,11 +194,11 @@ namespace Example
 
             var apiInstance = new MenusApi();
             var appId = appId_example;  // string | App identifier
-            var menu = new CreateFullMenu(); // CreateFullMenu | Menu
+            var menu = new CreateFullMenu(); // CreateFullMenu | Menu. If empty the system will create a menu with default items
 
             try
             {
-                // Create a new menu. If request body is empty, the system will create a menu with default items.
+                // Create a new menu
                 int? result = apiInstance.CreateNewMenuForApp(appId, menu);
                 Debug.WriteLine(result);
             }
@@ -212,7 +216,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**| App identifier | 
- **menu** | [**CreateFullMenu**](CreateFullMenu.md)| Menu | 
+ **menu** | [**CreateFullMenu**](CreateFullMenu.md)| Menu. If empty the system will create a menu with default items | 
 
 ### Return type
 

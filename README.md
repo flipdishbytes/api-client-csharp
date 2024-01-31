@@ -369,8 +369,8 @@ Class | Method | HTTP request | Description
 *MenuZonesApi* | [**UpdateMenuZone**](docs/MenuZonesApi.md#updatemenuzone) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | Updates a menu zone.
 *MenuZonesApi* | [**UploadMenuZoneImage**](docs/MenuZonesApi.md#uploadmenuzoneimage) | **POST** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/image | Uploads an image for a menu zone.
 *MenusApi* | [**CreateDraftMenuFromExistingMenu**](docs/MenusApi.md#createdraftmenufromexistingmenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | [PRIVATE API]Clone a menu, (without attaching stores)
-*MenusApi* | [**CreateNewMenuAsync**](docs/MenusApi.md#createnewmenuasync) | **POST** /api/v1.0/{appId}/menus/async | Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
-*MenusApi* | [**CreateNewMenuForApp**](docs/MenusApi.md#createnewmenuforapp) | **POST** /api/v1.0/{appId}/menus | Create a new menu. If request body is empty, the system will create a menu with default items.
+*MenusApi* | [**CreateNewMenuAsync**](docs/MenusApi.md#createnewmenuasync) | **POST** /api/v1.0/{appId}/menus/async | Create a new menu asynchronously
+*MenusApi* | [**CreateNewMenuForApp**](docs/MenusApi.md#createnewmenuforapp) | **POST** /api/v1.0/{appId}/menus | Create a new menu
 *MenusApi* | [**DeleteMenu**](docs/MenusApi.md#deletemenu) | **DELETE** /api/v1.0/menus/{menuId} | [PRIVATE API]Mark a Menu as Deleted
 *MenusApi* | [**DeleteMenuImage**](docs/MenusApi.md#deletemenuimage) | **DELETE** /api/v1.0/menus/{menuId}/image | Delete menu image
 *MenusApi* | [**DeleteMenuItemMetadata**](docs/MenusApi.md#deletemenuitemmetadata) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Delete menu item metadata

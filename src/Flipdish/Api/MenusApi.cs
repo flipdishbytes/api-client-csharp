@@ -48,10 +48,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultMenu</returns>
         ApiResponse<RestApiResultMenu> CreateDraftMenuFromExistingMenuWithHttpInfo (int? menuId, string newName);
         /// <summary>
-        /// Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
+        /// Create a new menu asynchronously
         /// </summary>
         /// <remarks>
-        /// 
+        /// You must listen to the webhook menu.async_creation.completed to know when the menu is ready
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
@@ -60,10 +60,10 @@ namespace Flipdish.Api
         Object CreateNewMenuAsync (string appId, CreateFullMenu menu);
 
         /// <summary>
-        /// Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
+        /// Create a new menu asynchronously
         /// </summary>
         /// <remarks>
-        /// 
+        /// You must listen to the webhook menu.async_creation.completed to know when the menu is ready
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
@@ -71,26 +71,26 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> CreateNewMenuAsyncWithHttpInfo (string appId, CreateFullMenu menu);
         /// <summary>
-        /// Create a new menu. If request body is empty, the system will create a menu with default items.
+        /// Create a new menu
         /// </summary>
         /// <remarks>
-        /// 
+        /// [DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App identifier</param>
-        /// <param name="menu">Menu</param>
+        /// <param name="menu">Menu. If empty the system will create a menu with default items</param>
         /// <returns>int?</returns>
         int? CreateNewMenuForApp (string appId, CreateFullMenu menu);
 
         /// <summary>
-        /// Create a new menu. If request body is empty, the system will create a menu with default items.
+        /// Create a new menu
         /// </summary>
         /// <remarks>
-        /// 
+        /// [DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App identifier</param>
-        /// <param name="menu">Menu</param>
+        /// <param name="menu">Menu. If empty the system will create a menu with default items</param>
         /// <returns>ApiResponse of int?</returns>
         ApiResponse<int?> CreateNewMenuForAppWithHttpInfo (string appId, CreateFullMenu menu);
         /// <summary>
@@ -769,10 +769,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultMenu)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultMenu>> CreateDraftMenuFromExistingMenuAsyncWithHttpInfo (int? menuId, string newName);
         /// <summary>
-        /// Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
+        /// Create a new menu asynchronously
         /// </summary>
         /// <remarks>
-        /// 
+        /// You must listen to the webhook menu.async_creation.completed to know when the menu is ready
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
@@ -781,10 +781,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<Object> CreateNewMenuAsyncAsync (string appId, CreateFullMenu menu);
 
         /// <summary>
-        /// Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
+        /// Create a new menu asynchronously
         /// </summary>
         /// <remarks>
-        /// 
+        /// You must listen to the webhook menu.async_creation.completed to know when the menu is ready
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
@@ -792,26 +792,26 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CreateNewMenuAsyncAsyncWithHttpInfo (string appId, CreateFullMenu menu);
         /// <summary>
-        /// Create a new menu. If request body is empty, the system will create a menu with default items.
+        /// Create a new menu
         /// </summary>
         /// <remarks>
-        /// 
+        /// [DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App identifier</param>
-        /// <param name="menu">Menu</param>
+        /// <param name="menu">Menu. If empty the system will create a menu with default items</param>
         /// <returns>Task of int?</returns>
         System.Threading.Tasks.Task<int?> CreateNewMenuForAppAsync (string appId, CreateFullMenu menu);
 
         /// <summary>
-        /// Create a new menu. If request body is empty, the system will create a menu with default items.
+        /// Create a new menu
         /// </summary>
         /// <remarks>
-        /// 
+        /// [DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App identifier</param>
-        /// <param name="menu">Menu</param>
+        /// <param name="menu">Menu. If empty the system will create a menu with default items</param>
         /// <returns>Task of ApiResponse (int?)</returns>
         System.Threading.Tasks.Task<ApiResponse<int?>> CreateNewMenuForAppAsyncWithHttpInfo (string appId, CreateFullMenu menu);
         /// <summary>
@@ -1728,7 +1728,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready. 
+        /// Create a new menu asynchronously You must listen to the webhook menu.async_creation.completed to know when the menu is ready
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
@@ -1741,7 +1741,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready. 
+        /// Create a new menu asynchronously You must listen to the webhook menu.async_creation.completed to know when the menu is ready
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
@@ -1821,7 +1821,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready. 
+        /// Create a new menu asynchronously You must listen to the webhook menu.async_creation.completed to know when the menu is ready
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
@@ -1835,7 +1835,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready. 
+        /// Create a new menu asynchronously You must listen to the webhook menu.async_creation.completed to know when the menu is ready
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
@@ -1915,11 +1915,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new menu. If request body is empty, the system will create a menu with default items. 
+        /// Create a new menu [DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App identifier</param>
-        /// <param name="menu">Menu</param>
+        /// <param name="menu">Menu. If empty the system will create a menu with default items</param>
         /// <returns>int?</returns>
         public int? CreateNewMenuForApp (string appId, CreateFullMenu menu)
         {
@@ -1928,11 +1928,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new menu. If request body is empty, the system will create a menu with default items. 
+        /// Create a new menu [DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App identifier</param>
-        /// <param name="menu">Menu</param>
+        /// <param name="menu">Menu. If empty the system will create a menu with default items</param>
         /// <returns>ApiResponse of int?</returns>
         public ApiResponse< int? > CreateNewMenuForAppWithHttpInfo (string appId, CreateFullMenu menu)
         {
@@ -2008,11 +2008,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new menu. If request body is empty, the system will create a menu with default items. 
+        /// Create a new menu [DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App identifier</param>
-        /// <param name="menu">Menu</param>
+        /// <param name="menu">Menu. If empty the system will create a menu with default items</param>
         /// <returns>Task of int?</returns>
         public async System.Threading.Tasks.Task<int?> CreateNewMenuForAppAsync (string appId, CreateFullMenu menu)
         {
@@ -2022,11 +2022,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a new menu. If request body is empty, the system will create a menu with default items. 
+        /// Create a new menu [DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App identifier</param>
-        /// <param name="menu">Menu</param>
+        /// <param name="menu">Menu. If empty the system will create a menu with default items</param>
         /// <returns>Task of ApiResponse (int?)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<int?>> CreateNewMenuForAppAsyncWithHttpInfo (string appId, CreateFullMenu menu)
         {
