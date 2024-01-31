@@ -32,9 +32,11 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="PreviousOrderItemOption" /> class.
         /// </summary>
         /// <param name="name">name.</param>
-        public PreviousOrderItemOption(string name = default(string))
+        /// <param name="depositReturnFee">depositReturnFee.</param>
+        public PreviousOrderItemOption(string name = default(string), double? depositReturnFee = default(double?))
         {
             this.Name = name;
+            this.DepositReturnFee = depositReturnFee;
         }
         
         /// <summary>
@@ -42,6 +44,12 @@ namespace Flipdish.Model
         /// </summary>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DepositReturnFee
+        /// </summary>
+        [DataMember(Name="DepositReturnFee", EmitDefaultValue=false)]
+        public double? DepositReturnFee { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,6 +60,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class PreviousOrderItemOption {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  DepositReturnFee: ").Append(DepositReturnFee).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -90,6 +99,11 @@ namespace Flipdish.Model
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.DepositReturnFee == input.DepositReturnFee ||
+                    (this.DepositReturnFee != null &&
+                    this.DepositReturnFee.Equals(input.DepositReturnFee))
                 );
         }
 
@@ -104,6 +118,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.DepositReturnFee != null)
+                    hashCode = hashCode * 59 + this.DepositReturnFee.GetHashCode();
                 return hashCode;
             }
         }

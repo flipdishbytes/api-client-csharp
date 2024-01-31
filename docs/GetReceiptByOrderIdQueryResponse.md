@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PreviousOrder** | [**PreviousOrder**](PreviousOrder.md) |  | [optional] 
+**DepositReturnFeesSummary** | [**List&lt;DepositReturnFeesSummary&gt;**](DepositReturnFeesSummary.md) |  | [optional] 
 **TsRequestedForLocal** | **DateTime?** |  | [optional] 
 **TsOrderPlacedLocal** | **DateTime?** |  | [optional] 
 **LogoUrl** | **string** |  | [optional] 

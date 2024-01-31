@@ -32,15 +32,17 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="GetReceiptByOrderIdQueryResponse" /> class.
         /// </summary>
         /// <param name="previousOrder">previousOrder.</param>
+        /// <param name="depositReturnFeesSummary">depositReturnFeesSummary.</param>
         /// <param name="tsRequestedForLocal">tsRequestedForLocal.</param>
         /// <param name="tsOrderPlacedLocal">tsOrderPlacedLocal.</param>
         /// <param name="logoUrl">logoUrl.</param>
         /// <param name="address">address.</param>
         /// <param name="vatNumber">vatNumber.</param>
         /// <param name="paymentMethodDescription">paymentMethodDescription.</param>
-        public GetReceiptByOrderIdQueryResponse(PreviousOrder previousOrder = default(PreviousOrder), DateTime? tsRequestedForLocal = default(DateTime?), DateTime? tsOrderPlacedLocal = default(DateTime?), string logoUrl = default(string), string address = default(string), string vatNumber = default(string), string paymentMethodDescription = default(string))
+        public GetReceiptByOrderIdQueryResponse(PreviousOrder previousOrder = default(PreviousOrder), List<DepositReturnFeesSummary> depositReturnFeesSummary = default(List<DepositReturnFeesSummary>), DateTime? tsRequestedForLocal = default(DateTime?), DateTime? tsOrderPlacedLocal = default(DateTime?), string logoUrl = default(string), string address = default(string), string vatNumber = default(string), string paymentMethodDescription = default(string))
         {
             this.PreviousOrder = previousOrder;
+            this.DepositReturnFeesSummary = depositReturnFeesSummary;
             this.TsRequestedForLocal = tsRequestedForLocal;
             this.TsOrderPlacedLocal = tsOrderPlacedLocal;
             this.LogoUrl = logoUrl;
@@ -54,6 +56,12 @@ namespace Flipdish.Model
         /// </summary>
         [DataMember(Name="PreviousOrder", EmitDefaultValue=false)]
         public PreviousOrder PreviousOrder { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DepositReturnFeesSummary
+        /// </summary>
+        [DataMember(Name="DepositReturnFeesSummary", EmitDefaultValue=false)]
+        public List<DepositReturnFeesSummary> DepositReturnFeesSummary { get; set; }
 
         /// <summary>
         /// Gets or Sets TsRequestedForLocal
@@ -100,6 +108,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class GetReceiptByOrderIdQueryResponse {\n");
             sb.Append("  PreviousOrder: ").Append(PreviousOrder).Append("\n");
+            sb.Append("  DepositReturnFeesSummary: ").Append(DepositReturnFeesSummary).Append("\n");
             sb.Append("  TsRequestedForLocal: ").Append(TsRequestedForLocal).Append("\n");
             sb.Append("  TsOrderPlacedLocal: ").Append(TsOrderPlacedLocal).Append("\n");
             sb.Append("  LogoUrl: ").Append(LogoUrl).Append("\n");
@@ -146,6 +155,11 @@ namespace Flipdish.Model
                     this.PreviousOrder.Equals(input.PreviousOrder))
                 ) && 
                 (
+                    this.DepositReturnFeesSummary == input.DepositReturnFeesSummary ||
+                    this.DepositReturnFeesSummary != null &&
+                    this.DepositReturnFeesSummary.SequenceEqual(input.DepositReturnFeesSummary)
+                ) && 
+                (
                     this.TsRequestedForLocal == input.TsRequestedForLocal ||
                     (this.TsRequestedForLocal != null &&
                     this.TsRequestedForLocal.Equals(input.TsRequestedForLocal))
@@ -188,6 +202,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.PreviousOrder != null)
                     hashCode = hashCode * 59 + this.PreviousOrder.GetHashCode();
+                if (this.DepositReturnFeesSummary != null)
+                    hashCode = hashCode * 59 + this.DepositReturnFeesSummary.GetHashCode();
                 if (this.TsRequestedForLocal != null)
                     hashCode = hashCode * 59 + this.TsRequestedForLocal.GetHashCode();
                 if (this.TsOrderPlacedLocal != null)

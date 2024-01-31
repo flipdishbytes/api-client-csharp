@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **MenuSectionName** | **string** |  | [optional] 
 **Name** | **string** |  | [optional] 
 **PriceIncludingOptionSetItems** | **double?** |  | [optional] 
+**DepositReturnFee** | **double?** |  | [optional] 
 **TaxAmount** | **double?** |  | [optional] 
 **PreviousOrderItemOptions** | [**List&lt;PreviousOrderItemOption&gt;**](PreviousOrderItemOption.md) |  | [optional] 
 

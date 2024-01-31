@@ -729,6 +729,7 @@ Class | Method | HTTP request | Description
  - [Model.DeliveryZoneCreatedEvent](docs/DeliveryZoneCreatedEvent.md)
  - [Model.DeliveryZoneDeletedEvent](docs/DeliveryZoneDeletedEvent.md)
  - [Model.DeliveryZoneUpdatedEvent](docs/DeliveryZoneUpdatedEvent.md)
+ - [Model.DepositReturnFeesSummary](docs/DepositReturnFeesSummary.md)
  - [Model.DeviceSettings](docs/DeviceSettings.md)
  - [Model.DnsRecordInformation](docs/DnsRecordInformation.md)
  - [Model.DnsVerifiedEvent](docs/DnsVerifiedEvent.md)

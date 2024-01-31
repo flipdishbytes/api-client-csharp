@@ -35,14 +35,16 @@ namespace Flipdish.Model
         /// <param name="menuSectionName">menuSectionName.</param>
         /// <param name="name">name.</param>
         /// <param name="priceIncludingOptionSetItems">priceIncludingOptionSetItems.</param>
+        /// <param name="depositReturnFee">depositReturnFee.</param>
         /// <param name="taxAmount">taxAmount.</param>
         /// <param name="previousOrderItemOptions">previousOrderItemOptions.</param>
-        public PreviousOrderItem(int? menuSectionDisplayOrder = default(int?), string menuSectionName = default(string), string name = default(string), double? priceIncludingOptionSetItems = default(double?), double? taxAmount = default(double?), List<PreviousOrderItemOption> previousOrderItemOptions = default(List<PreviousOrderItemOption>))
+        public PreviousOrderItem(int? menuSectionDisplayOrder = default(int?), string menuSectionName = default(string), string name = default(string), double? priceIncludingOptionSetItems = default(double?), double? depositReturnFee = default(double?), double? taxAmount = default(double?), List<PreviousOrderItemOption> previousOrderItemOptions = default(List<PreviousOrderItemOption>))
         {
             this.MenuSectionDisplayOrder = menuSectionDisplayOrder;
             this.MenuSectionName = menuSectionName;
             this.Name = name;
             this.PriceIncludingOptionSetItems = priceIncludingOptionSetItems;
+            this.DepositReturnFee = depositReturnFee;
             this.TaxAmount = taxAmount;
             this.PreviousOrderItemOptions = previousOrderItemOptions;
         }
@@ -72,6 +74,12 @@ namespace Flipdish.Model
         public double? PriceIncludingOptionSetItems { get; set; }
 
         /// <summary>
+        /// Gets or Sets DepositReturnFee
+        /// </summary>
+        [DataMember(Name="DepositReturnFee", EmitDefaultValue=false)]
+        public double? DepositReturnFee { get; set; }
+
+        /// <summary>
         /// Gets or Sets TaxAmount
         /// </summary>
         [DataMember(Name="TaxAmount", EmitDefaultValue=false)]
@@ -95,6 +103,7 @@ namespace Flipdish.Model
             sb.Append("  MenuSectionName: ").Append(MenuSectionName).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  PriceIncludingOptionSetItems: ").Append(PriceIncludingOptionSetItems).Append("\n");
+            sb.Append("  DepositReturnFee: ").Append(DepositReturnFee).Append("\n");
             sb.Append("  TaxAmount: ").Append(TaxAmount).Append("\n");
             sb.Append("  PreviousOrderItemOptions: ").Append(PreviousOrderItemOptions).Append("\n");
             sb.Append("}\n");
@@ -152,6 +161,11 @@ namespace Flipdish.Model
                     this.PriceIncludingOptionSetItems.Equals(input.PriceIncludingOptionSetItems))
                 ) && 
                 (
+                    this.DepositReturnFee == input.DepositReturnFee ||
+                    (this.DepositReturnFee != null &&
+                    this.DepositReturnFee.Equals(input.DepositReturnFee))
+                ) && 
+                (
                     this.TaxAmount == input.TaxAmount ||
                     (this.TaxAmount != null &&
                     this.TaxAmount.Equals(input.TaxAmount))
@@ -180,6 +194,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.PriceIncludingOptionSetItems != null)
                     hashCode = hashCode * 59 + this.PriceIncludingOptionSetItems.GetHashCode();
+                if (this.DepositReturnFee != null)
+                    hashCode = hashCode * 59 + this.DepositReturnFee.GetHashCode();
                 if (this.TaxAmount != null)
                     hashCode = hashCode * 59 + this.TaxAmount.GetHashCode();
                 if (this.PreviousOrderItemOptions != null)
