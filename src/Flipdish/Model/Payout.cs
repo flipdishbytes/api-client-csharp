@@ -837,7 +837,10 @@ namespace Flipdish.Model
         /// <param name="deliveryIntegrationFee">Third party integration delivery fee.</param>
         /// <param name="deliveryIntegrationTipFee">Third party integration delivery tip fee.</param>
         /// <param name="totalThirdPartyFees">Total third party integration fees.</param>
-        public Payout(int? payoutId = default(int?), int? payeeBankAccountId = default(int?), string accountName = default(string), PayoutStatusEnum? payoutStatus = default(PayoutStatusEnum?), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?), PayoutTypeEnum? payoutType = default(PayoutTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), DateTime? cutoffDate = default(DateTime?), double? onlineSalesAmount = default(double?), double? onlineSalesDeliveryCharges = default(double?), double? onlineSalesTips = default(double?), double? onlineSalesServiceCharges = default(double?), double? onlineSalesRefundedFees = default(double?), double? onlineSalesFees = default(double?), double? posSalesFees = default(double?), double? onlineSalesRefundedAmount = default(double?), double? posSalesRefundedAmount = default(double?), double? onlineSalesTax = default(double?), double? totalOnlineRevenue = default(double?), double? cashSalesFees = default(double?), double? cashSalesRefundedFees = default(double?), double? customerCashFees = default(double?), double? salesFeesVat = default(double?), double? totalFees = default(double?), double? totalOnlineRevenueAdjustments = default(double?), double? chargebackAmount = default(double?), double? posSalesChargebackAmount = default(double?), double? chargebackRefundedFees = default(double?), double? totalChargebackCost = default(double?), double? totalOtherCharges = default(double?), double? openingBalance = default(double?), double? closingBalance = default(double?), double? payGreenSalesAmount = default(double?), double? deliveryIntegrationFee = default(double?), double? deliveryIntegrationTipFee = default(double?), double? totalThirdPartyFees = default(double?))
+        /// <param name="posSalesAmount">POS sales amount.</param>
+        /// <param name="posSalesTax">POS sales tax.</param>
+        /// <param name="tipsOnPosSales">Tips on POS sales.</param>
+        public Payout(int? payoutId = default(int?), int? payeeBankAccountId = default(int?), string accountName = default(string), PayoutStatusEnum? payoutStatus = default(PayoutStatusEnum?), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?), PayoutTypeEnum? payoutType = default(PayoutTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), DateTime? cutoffDate = default(DateTime?), double? onlineSalesAmount = default(double?), double? onlineSalesDeliveryCharges = default(double?), double? onlineSalesTips = default(double?), double? onlineSalesServiceCharges = default(double?), double? onlineSalesRefundedFees = default(double?), double? onlineSalesFees = default(double?), double? posSalesFees = default(double?), double? onlineSalesRefundedAmount = default(double?), double? posSalesRefundedAmount = default(double?), double? onlineSalesTax = default(double?), double? totalOnlineRevenue = default(double?), double? cashSalesFees = default(double?), double? cashSalesRefundedFees = default(double?), double? customerCashFees = default(double?), double? salesFeesVat = default(double?), double? totalFees = default(double?), double? totalOnlineRevenueAdjustments = default(double?), double? chargebackAmount = default(double?), double? posSalesChargebackAmount = default(double?), double? chargebackRefundedFees = default(double?), double? totalChargebackCost = default(double?), double? totalOtherCharges = default(double?), double? openingBalance = default(double?), double? closingBalance = default(double?), double? payGreenSalesAmount = default(double?), double? deliveryIntegrationFee = default(double?), double? deliveryIntegrationTipFee = default(double?), double? totalThirdPartyFees = default(double?), double? posSalesAmount = default(double?), double? posSalesTax = default(double?), double? tipsOnPosSales = default(double?))
         {
             this.PayoutId = payoutId;
             this.PayeeBankAccountId = payeeBankAccountId;
@@ -880,6 +883,9 @@ namespace Flipdish.Model
             this.DeliveryIntegrationFee = deliveryIntegrationFee;
             this.DeliveryIntegrationTipFee = deliveryIntegrationTipFee;
             this.TotalThirdPartyFees = totalThirdPartyFees;
+            this.PosSalesAmount = posSalesAmount;
+            this.PosSalesTax = posSalesTax;
+            this.TipsOnPosSales = tipsOnPosSales;
         }
         
         /// <summary>
@@ -1152,6 +1158,27 @@ namespace Flipdish.Model
         public double? TotalThirdPartyFees { get; set; }
 
         /// <summary>
+        /// POS sales amount
+        /// </summary>
+        /// <value>POS sales amount</value>
+        [DataMember(Name="PosSalesAmount", EmitDefaultValue=false)]
+        public double? PosSalesAmount { get; set; }
+
+        /// <summary>
+        /// POS sales tax
+        /// </summary>
+        /// <value>POS sales tax</value>
+        [DataMember(Name="PosSalesTax", EmitDefaultValue=false)]
+        public double? PosSalesTax { get; set; }
+
+        /// <summary>
+        /// Tips on POS sales
+        /// </summary>
+        /// <value>Tips on POS sales</value>
+        [DataMember(Name="TipsOnPosSales", EmitDefaultValue=false)]
+        public double? TipsOnPosSales { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -1200,6 +1227,9 @@ namespace Flipdish.Model
             sb.Append("  DeliveryIntegrationFee: ").Append(DeliveryIntegrationFee).Append("\n");
             sb.Append("  DeliveryIntegrationTipFee: ").Append(DeliveryIntegrationTipFee).Append("\n");
             sb.Append("  TotalThirdPartyFees: ").Append(TotalThirdPartyFees).Append("\n");
+            sb.Append("  PosSalesAmount: ").Append(PosSalesAmount).Append("\n");
+            sb.Append("  PosSalesTax: ").Append(PosSalesTax).Append("\n");
+            sb.Append("  TipsOnPosSales: ").Append(TipsOnPosSales).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1438,6 +1468,21 @@ namespace Flipdish.Model
                     this.TotalThirdPartyFees == input.TotalThirdPartyFees ||
                     (this.TotalThirdPartyFees != null &&
                     this.TotalThirdPartyFees.Equals(input.TotalThirdPartyFees))
+                ) && 
+                (
+                    this.PosSalesAmount == input.PosSalesAmount ||
+                    (this.PosSalesAmount != null &&
+                    this.PosSalesAmount.Equals(input.PosSalesAmount))
+                ) && 
+                (
+                    this.PosSalesTax == input.PosSalesTax ||
+                    (this.PosSalesTax != null &&
+                    this.PosSalesTax.Equals(input.PosSalesTax))
+                ) && 
+                (
+                    this.TipsOnPosSales == input.TipsOnPosSales ||
+                    (this.TipsOnPosSales != null &&
+                    this.TipsOnPosSales.Equals(input.TipsOnPosSales))
                 );
         }
 
@@ -1532,6 +1577,12 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.DeliveryIntegrationTipFee.GetHashCode();
                 if (this.TotalThirdPartyFees != null)
                     hashCode = hashCode * 59 + this.TotalThirdPartyFees.GetHashCode();
+                if (this.PosSalesAmount != null)
+                    hashCode = hashCode * 59 + this.PosSalesAmount.GetHashCode();
+                if (this.PosSalesTax != null)
+                    hashCode = hashCode * 59 + this.PosSalesTax.GetHashCode();
+                if (this.TipsOnPosSales != null)
+                    hashCode = hashCode * 59 + this.TipsOnPosSales.GetHashCode();
                 return hashCode;
             }
         }

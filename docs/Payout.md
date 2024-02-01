@@ -44,6 +44,9 @@ Name | Type | Description | Notes
 **DeliveryIntegrationFee** | **double?** | Third party integration delivery fee | [optional] 
 **DeliveryIntegrationTipFee** | **double?** | Third party integration delivery tip fee | [optional] 
 **TotalThirdPartyFees** | **double?** | Total third party integration fees | [optional] 
+**PosSalesAmount** | **double?** | POS sales amount | [optional] 
+**PosSalesTax** | **double?** | POS sales tax | [optional] 
+**TipsOnPosSales** | **double?** | Tips on POS sales | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
