@@ -78,6 +78,29 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
+        /// <param name="campaignPublicId"></param>
+        /// <returns>RestApiArrayResultLoyaltyCampaign</returns>
+        RestApiArrayResultLoyaltyCampaign FetchLoyaltyCampaignByPublicId (string appId, Guid? campaignPublicId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="campaignPublicId"></param>
+        /// <returns>ApiResponse of RestApiArrayResultLoyaltyCampaign</returns>
+        ApiResponse<RestApiArrayResultLoyaltyCampaign> FetchLoyaltyCampaignByPublicIdWithHttpInfo (string appId, Guid? campaignPublicId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <returns>RestApiArrayResultLoyaltyCampaign</returns>
         RestApiArrayResultLoyaltyCampaign GetLoyaltyCampaignsForApp (string appId);
 
@@ -302,6 +325,29 @@ namespace Flipdish.Api
         /// <param name="campaign"></param>
         /// <returns>Task of ApiResponse (RestApiResultRetentionCampaign)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultRetentionCampaign>> CreateRetentionCampaignAsyncWithHttpInfo (string appId, RetentionCampaignBase campaign);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="campaignPublicId"></param>
+        /// <returns>Task of RestApiArrayResultLoyaltyCampaign</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultLoyaltyCampaign> FetchLoyaltyCampaignByPublicIdAsync (string appId, Guid? campaignPublicId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="campaignPublicId"></param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultLoyaltyCampaign)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultLoyaltyCampaign>> FetchLoyaltyCampaignByPublicIdAsyncWithHttpInfo (string appId, Guid? campaignPublicId);
         /// <summary>
         /// 
         /// </summary>
@@ -958,6 +1004,169 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultRetentionCampaign>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultRetentionCampaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultRetentionCampaign)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="campaignPublicId"></param>
+        /// <returns>RestApiArrayResultLoyaltyCampaign</returns>
+        public RestApiArrayResultLoyaltyCampaign FetchLoyaltyCampaignByPublicId (string appId, Guid? campaignPublicId)
+        {
+             ApiResponse<RestApiArrayResultLoyaltyCampaign> localVarResponse = FetchLoyaltyCampaignByPublicIdWithHttpInfo(appId, campaignPublicId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="campaignPublicId"></param>
+        /// <returns>ApiResponse of RestApiArrayResultLoyaltyCampaign</returns>
+        public ApiResponse< RestApiArrayResultLoyaltyCampaign > FetchLoyaltyCampaignByPublicIdWithHttpInfo (string appId, Guid? campaignPublicId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CampaignsApi->FetchLoyaltyCampaignByPublicId");
+            // verify the required parameter 'campaignPublicId' is set
+            if (campaignPublicId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignPublicId' when calling CampaignsApi->FetchLoyaltyCampaignByPublicId");
+
+            var localVarPath = "./api/v1.0/{appId}/campaigns/loyalty/publicId/{campaignPublicId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (campaignPublicId != null) localVarPathParams.Add("campaignPublicId", this.Configuration.ApiClient.ParameterToString(campaignPublicId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FetchLoyaltyCampaignByPublicId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultLoyaltyCampaign>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiArrayResultLoyaltyCampaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultLoyaltyCampaign)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="campaignPublicId"></param>
+        /// <returns>Task of RestApiArrayResultLoyaltyCampaign</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultLoyaltyCampaign> FetchLoyaltyCampaignByPublicIdAsync (string appId, Guid? campaignPublicId)
+        {
+             ApiResponse<RestApiArrayResultLoyaltyCampaign> localVarResponse = await FetchLoyaltyCampaignByPublicIdAsyncWithHttpInfo(appId, campaignPublicId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="campaignPublicId"></param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultLoyaltyCampaign)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultLoyaltyCampaign>> FetchLoyaltyCampaignByPublicIdAsyncWithHttpInfo (string appId, Guid? campaignPublicId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CampaignsApi->FetchLoyaltyCampaignByPublicId");
+            // verify the required parameter 'campaignPublicId' is set
+            if (campaignPublicId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignPublicId' when calling CampaignsApi->FetchLoyaltyCampaignByPublicId");
+
+            var localVarPath = "./api/v1.0/{appId}/campaigns/loyalty/publicId/{campaignPublicId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (campaignPublicId != null) localVarPathParams.Add("campaignPublicId", this.Configuration.ApiClient.ParameterToString(campaignPublicId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FetchLoyaltyCampaignByPublicId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultLoyaltyCampaign>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiArrayResultLoyaltyCampaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultLoyaltyCampaign)));
         }
 
         /// <summary>

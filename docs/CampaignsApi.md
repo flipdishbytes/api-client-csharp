@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateLoyaltyCampaign**](CampaignsApi.md#createloyaltycampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty | 
 [**CreateRetentionCampaign**](CampaignsApi.md#createretentioncampaign) | **POST** /api/v1.0/{appId}/campaigns/retention | 
+[**FetchLoyaltyCampaignByPublicId**](CampaignsApi.md#fetchloyaltycampaignbypublicid) | **GET** /api/v1.0/{appId}/campaigns/loyalty/publicId/{campaignPublicId} | 
 [**GetLoyaltyCampaignsForApp**](CampaignsApi.md#getloyaltycampaignsforapp) | **GET** /api/v1.0/{appId}/campaigns/loyalty | 
 [**GetLoyaltyCampaignsForStore**](CampaignsApi.md#getloyaltycampaignsforstore) | **GET** /api/v1.0/{appId}/campaigns/loyalty/{storeId} | 
 [**GetRetentionCampaignsForApp**](CampaignsApi.md#getretentioncampaignsforapp) | **GET** /api/v1.0/{appId}/campaigns/retention | 
@@ -138,6 +139,69 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="fetchloyaltycampaignbypublicid"></a>
+# **FetchLoyaltyCampaignByPublicId**
+> RestApiArrayResultLoyaltyCampaign FetchLoyaltyCampaignByPublicId (string appId, Guid? campaignPublicId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class FetchLoyaltyCampaignByPublicIdExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new CampaignsApi();
+            var appId = appId_example;  // string | 
+            var campaignPublicId = new Guid?(); // Guid? | 
+
+            try
+            {
+                RestApiArrayResultLoyaltyCampaign result = apiInstance.FetchLoyaltyCampaignByPublicId(appId, campaignPublicId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CampaignsApi.FetchLoyaltyCampaignByPublicId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **campaignPublicId** | [**Guid?**](Guid?.md)|  | 
+
+### Return type
+
+[**RestApiArrayResultLoyaltyCampaign**](RestApiArrayResultLoyaltyCampaign.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
