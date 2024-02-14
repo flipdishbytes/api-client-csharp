@@ -127,8 +127,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oauthAppId"></param>
         /// <param name="appStoreAppId"></param>
-        /// <returns></returns>
-        void GetExternalFunctionSigningKey (string oauthAppId, string appStoreAppId);
+        /// <returns>RestApiErrorResult</returns>
+        RestApiErrorResult GetExternalFunctionSigningKey (string oauthAppId, string appStoreAppId);
 
         /// <summary>
         /// 
@@ -139,8 +139,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oauthAppId"></param>
         /// <param name="appStoreAppId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetExternalFunctionSigningKeyWithHttpInfo (string oauthAppId, string appStoreAppId);
+        /// <returns>ApiResponse of RestApiErrorResult</returns>
+        ApiResponse<RestApiErrorResult> GetExternalFunctionSigningKeyWithHttpInfo (string oauthAppId, string appStoreAppId);
         /// <summary>
         /// 
         /// </summary>
@@ -321,8 +321,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oauthAppId"></param>
         /// <param name="appStoreAppId"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetExternalFunctionSigningKeyAsync (string oauthAppId, string appStoreAppId);
+        /// <returns>Task of RestApiErrorResult</returns>
+        System.Threading.Tasks.Task<RestApiErrorResult> GetExternalFunctionSigningKeyAsync (string oauthAppId, string appStoreAppId);
 
         /// <summary>
         /// 
@@ -333,8 +333,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oauthAppId"></param>
         /// <param name="appStoreAppId"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetExternalFunctionSigningKeyAsyncWithHttpInfo (string oauthAppId, string appStoreAppId);
+        /// <returns>Task of ApiResponse (RestApiErrorResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiErrorResult>> GetExternalFunctionSigningKeyAsyncWithHttpInfo (string oauthAppId, string appStoreAppId);
         /// <summary>
         /// 
         /// </summary>
@@ -1200,10 +1200,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oauthAppId"></param>
         /// <param name="appStoreAppId"></param>
-        /// <returns></returns>
-        public void GetExternalFunctionSigningKey (string oauthAppId, string appStoreAppId)
+        /// <returns>RestApiErrorResult</returns>
+        public RestApiErrorResult GetExternalFunctionSigningKey (string oauthAppId, string appStoreAppId)
         {
-             GetExternalFunctionSigningKeyWithHttpInfo(oauthAppId, appStoreAppId);
+             ApiResponse<RestApiErrorResult> localVarResponse = GetExternalFunctionSigningKeyWithHttpInfo(oauthAppId, appStoreAppId);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -1212,8 +1213,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oauthAppId"></param>
         /// <param name="appStoreAppId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetExternalFunctionSigningKeyWithHttpInfo (string oauthAppId, string appStoreAppId)
+        /// <returns>ApiResponse of RestApiErrorResult</returns>
+        public ApiResponse< RestApiErrorResult > GetExternalFunctionSigningKeyWithHttpInfo (string oauthAppId, string appStoreAppId)
         {
             // verify the required parameter 'oauthAppId' is set
             if (oauthAppId == null)
@@ -1269,9 +1270,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<RestApiErrorResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (RestApiErrorResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiErrorResult)));
         }
 
         /// <summary>
@@ -1280,10 +1281,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oauthAppId"></param>
         /// <param name="appStoreAppId"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetExternalFunctionSigningKeyAsync (string oauthAppId, string appStoreAppId)
+        /// <returns>Task of RestApiErrorResult</returns>
+        public async System.Threading.Tasks.Task<RestApiErrorResult> GetExternalFunctionSigningKeyAsync (string oauthAppId, string appStoreAppId)
         {
-             await GetExternalFunctionSigningKeyAsyncWithHttpInfo(oauthAppId, appStoreAppId);
+             ApiResponse<RestApiErrorResult> localVarResponse = await GetExternalFunctionSigningKeyAsyncWithHttpInfo(oauthAppId, appStoreAppId);
+             return localVarResponse.Data;
 
         }
 
@@ -1293,8 +1295,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oauthAppId"></param>
         /// <param name="appStoreAppId"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetExternalFunctionSigningKeyAsyncWithHttpInfo (string oauthAppId, string appStoreAppId)
+        /// <returns>Task of ApiResponse (RestApiErrorResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiErrorResult>> GetExternalFunctionSigningKeyAsyncWithHttpInfo (string oauthAppId, string appStoreAppId)
         {
             // verify the required parameter 'oauthAppId' is set
             if (oauthAppId == null)
@@ -1350,9 +1352,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<RestApiErrorResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (RestApiErrorResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiErrorResult)));
         }
 
         /// <summary>

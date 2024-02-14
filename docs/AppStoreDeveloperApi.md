@@ -268,7 +268,7 @@ void (empty response body)
 
 <a name="getexternalfunctionsigningkey"></a>
 # **GetExternalFunctionSigningKey**
-> void GetExternalFunctionSigningKey (string oauthAppId, string appStoreAppId)
+> RestApiErrorResult GetExternalFunctionSigningKey (string oauthAppId, string appStoreAppId)
 
 
 
@@ -295,7 +295,8 @@ namespace Example
 
             try
             {
-                apiInstance.GetExternalFunctionSigningKey(oauthAppId, appStoreAppId);
+                RestApiErrorResult result = apiInstance.GetExternalFunctionSigningKey(oauthAppId, appStoreAppId);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -315,7 +316,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**RestApiErrorResult**](RestApiErrorResult.md)
 
 ### Authorization
 

@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 <a name="executeconfigurationaction"></a>
 # **ExecuteConfigurationAction**
-> ExecuteConfigurationActionResult ExecuteConfigurationAction (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest)
+> RestApiResultExecuteConfigurationActionResult ExecuteConfigurationAction (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest)
 
 
 
@@ -236,7 +236,7 @@ namespace Example
 
             try
             {
-                ExecuteConfigurationActionResult result = apiInstance.ExecuteConfigurationAction(appId, appStoreAppId, configId, executeConfigurationActionRequest);
+                RestApiResultExecuteConfigurationActionResult result = apiInstance.ExecuteConfigurationAction(appId, appStoreAppId, configId, executeConfigurationActionRequest);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ExecuteConfigurationActionResult**](ExecuteConfigurationActionResult.md)
+[**RestApiResultExecuteConfigurationActionResult**](RestApiResultExecuteConfigurationActionResult.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ Name | Type | Description  | Notes
 
 <a name="getappstoreconfig"></a>
 # **GetAppStoreConfig**
-> AppStoreAppConfiguration GetAppStoreConfig (string appId, string appStoreAppId, string configId)
+> RestApiResultAppStoreAppConfiguration GetAppStoreConfig (string appId, string appStoreAppId, string configId)
 
 
 
@@ -302,7 +302,7 @@ namespace Example
 
             try
             {
-                AppStoreAppConfiguration result = apiInstance.GetAppStoreConfig(appId, appStoreAppId, configId);
+                RestApiResultAppStoreAppConfiguration result = apiInstance.GetAppStoreConfig(appId, appStoreAppId, configId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AppStoreAppConfiguration**](AppStoreAppConfiguration.md)
+[**RestApiResultAppStoreAppConfiguration**](RestApiResultAppStoreAppConfiguration.md)
 
 ### Authorization
 

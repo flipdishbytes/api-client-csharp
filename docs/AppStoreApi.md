@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getappstoreapp"></a>
 # **GetAppStoreApp**
-> AppStoreApp GetAppStoreApp (string appStoreAppId)
+> RestApiResultAppStoreApp GetAppStoreApp (string appStoreAppId)
 
 
 
@@ -36,7 +36,7 @@ namespace Example
 
             try
             {
-                AppStoreApp result = apiInstance.GetAppStoreApp(appStoreAppId);
+                RestApiResultAppStoreApp result = apiInstance.GetAppStoreApp(appStoreAppId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AppStoreApp**](AppStoreApp.md)
+[**RestApiResultAppStoreApp**](RestApiResultAppStoreApp.md)
 
 ### Authorization
 

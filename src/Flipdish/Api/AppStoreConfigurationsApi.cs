@@ -104,8 +104,8 @@ namespace Flipdish.Api
         /// <param name="appStoreAppId"></param>
         /// <param name="configId"></param>
         /// <param name="executeConfigurationActionRequest"></param>
-        /// <returns>ExecuteConfigurationActionResult</returns>
-        ExecuteConfigurationActionResult ExecuteConfigurationAction (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest);
+        /// <returns>RestApiResultExecuteConfigurationActionResult</returns>
+        RestApiResultExecuteConfigurationActionResult ExecuteConfigurationAction (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest);
 
         /// <summary>
         /// 
@@ -118,8 +118,8 @@ namespace Flipdish.Api
         /// <param name="appStoreAppId"></param>
         /// <param name="configId"></param>
         /// <param name="executeConfigurationActionRequest"></param>
-        /// <returns>ApiResponse of ExecuteConfigurationActionResult</returns>
-        ApiResponse<ExecuteConfigurationActionResult> ExecuteConfigurationActionWithHttpInfo (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest);
+        /// <returns>ApiResponse of RestApiResultExecuteConfigurationActionResult</returns>
+        ApiResponse<RestApiResultExecuteConfigurationActionResult> ExecuteConfigurationActionWithHttpInfo (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest);
         /// <summary>
         /// 
         /// </summary>
@@ -130,8 +130,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
         /// <param name="configId"></param>
-        /// <returns>AppStoreAppConfiguration</returns>
-        AppStoreAppConfiguration GetAppStoreConfig (string appId, string appStoreAppId, string configId);
+        /// <returns>RestApiResultAppStoreAppConfiguration</returns>
+        RestApiResultAppStoreAppConfiguration GetAppStoreConfig (string appId, string appStoreAppId, string configId);
 
         /// <summary>
         /// 
@@ -143,8 +143,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
         /// <param name="configId"></param>
-        /// <returns>ApiResponse of AppStoreAppConfiguration</returns>
-        ApiResponse<AppStoreAppConfiguration> GetAppStoreConfigWithHttpInfo (string appId, string appStoreAppId, string configId);
+        /// <returns>ApiResponse of RestApiResultAppStoreAppConfiguration</returns>
+        ApiResponse<RestApiResultAppStoreAppConfiguration> GetAppStoreConfigWithHttpInfo (string appId, string appStoreAppId, string configId);
         /// <summary>
         /// 
         /// </summary>
@@ -348,8 +348,8 @@ namespace Flipdish.Api
         /// <param name="appStoreAppId"></param>
         /// <param name="configId"></param>
         /// <param name="executeConfigurationActionRequest"></param>
-        /// <returns>Task of ExecuteConfigurationActionResult</returns>
-        System.Threading.Tasks.Task<ExecuteConfigurationActionResult> ExecuteConfigurationActionAsync (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest);
+        /// <returns>Task of RestApiResultExecuteConfigurationActionResult</returns>
+        System.Threading.Tasks.Task<RestApiResultExecuteConfigurationActionResult> ExecuteConfigurationActionAsync (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest);
 
         /// <summary>
         /// 
@@ -362,8 +362,8 @@ namespace Flipdish.Api
         /// <param name="appStoreAppId"></param>
         /// <param name="configId"></param>
         /// <param name="executeConfigurationActionRequest"></param>
-        /// <returns>Task of ApiResponse (ExecuteConfigurationActionResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExecuteConfigurationActionResult>> ExecuteConfigurationActionAsyncWithHttpInfo (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest);
+        /// <returns>Task of ApiResponse (RestApiResultExecuteConfigurationActionResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultExecuteConfigurationActionResult>> ExecuteConfigurationActionAsyncWithHttpInfo (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest);
         /// <summary>
         /// 
         /// </summary>
@@ -374,8 +374,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
         /// <param name="configId"></param>
-        /// <returns>Task of AppStoreAppConfiguration</returns>
-        System.Threading.Tasks.Task<AppStoreAppConfiguration> GetAppStoreConfigAsync (string appId, string appStoreAppId, string configId);
+        /// <returns>Task of RestApiResultAppStoreAppConfiguration</returns>
+        System.Threading.Tasks.Task<RestApiResultAppStoreAppConfiguration> GetAppStoreConfigAsync (string appId, string appStoreAppId, string configId);
 
         /// <summary>
         /// 
@@ -387,8 +387,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
         /// <param name="configId"></param>
-        /// <returns>Task of ApiResponse (AppStoreAppConfiguration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AppStoreAppConfiguration>> GetAppStoreConfigAsyncWithHttpInfo (string appId, string appStoreAppId, string configId);
+        /// <returns>Task of ApiResponse (RestApiResultAppStoreAppConfiguration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreAppConfiguration>> GetAppStoreConfigAsyncWithHttpInfo (string appId, string appStoreAppId, string configId);
         /// <summary>
         /// 
         /// </summary>
@@ -1107,10 +1107,10 @@ namespace Flipdish.Api
         /// <param name="appStoreAppId"></param>
         /// <param name="configId"></param>
         /// <param name="executeConfigurationActionRequest"></param>
-        /// <returns>ExecuteConfigurationActionResult</returns>
-        public ExecuteConfigurationActionResult ExecuteConfigurationAction (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest)
+        /// <returns>RestApiResultExecuteConfigurationActionResult</returns>
+        public RestApiResultExecuteConfigurationActionResult ExecuteConfigurationAction (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest)
         {
-             ApiResponse<ExecuteConfigurationActionResult> localVarResponse = ExecuteConfigurationActionWithHttpInfo(appId, appStoreAppId, configId, executeConfigurationActionRequest);
+             ApiResponse<RestApiResultExecuteConfigurationActionResult> localVarResponse = ExecuteConfigurationActionWithHttpInfo(appId, appStoreAppId, configId, executeConfigurationActionRequest);
              return localVarResponse.Data;
         }
 
@@ -1122,8 +1122,8 @@ namespace Flipdish.Api
         /// <param name="appStoreAppId"></param>
         /// <param name="configId"></param>
         /// <param name="executeConfigurationActionRequest"></param>
-        /// <returns>ApiResponse of ExecuteConfigurationActionResult</returns>
-        public ApiResponse< ExecuteConfigurationActionResult > ExecuteConfigurationActionWithHttpInfo (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest)
+        /// <returns>ApiResponse of RestApiResultExecuteConfigurationActionResult</returns>
+        public ApiResponse< RestApiResultExecuteConfigurationActionResult > ExecuteConfigurationActionWithHttpInfo (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1199,9 +1199,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ExecuteConfigurationActionResult>(localVarStatusCode,
+            return new ApiResponse<RestApiResultExecuteConfigurationActionResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (ExecuteConfigurationActionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExecuteConfigurationActionResult)));
+                (RestApiResultExecuteConfigurationActionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultExecuteConfigurationActionResult)));
         }
 
         /// <summary>
@@ -1212,10 +1212,10 @@ namespace Flipdish.Api
         /// <param name="appStoreAppId"></param>
         /// <param name="configId"></param>
         /// <param name="executeConfigurationActionRequest"></param>
-        /// <returns>Task of ExecuteConfigurationActionResult</returns>
-        public async System.Threading.Tasks.Task<ExecuteConfigurationActionResult> ExecuteConfigurationActionAsync (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest)
+        /// <returns>Task of RestApiResultExecuteConfigurationActionResult</returns>
+        public async System.Threading.Tasks.Task<RestApiResultExecuteConfigurationActionResult> ExecuteConfigurationActionAsync (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest)
         {
-             ApiResponse<ExecuteConfigurationActionResult> localVarResponse = await ExecuteConfigurationActionAsyncWithHttpInfo(appId, appStoreAppId, configId, executeConfigurationActionRequest);
+             ApiResponse<RestApiResultExecuteConfigurationActionResult> localVarResponse = await ExecuteConfigurationActionAsyncWithHttpInfo(appId, appStoreAppId, configId, executeConfigurationActionRequest);
              return localVarResponse.Data;
 
         }
@@ -1228,8 +1228,8 @@ namespace Flipdish.Api
         /// <param name="appStoreAppId"></param>
         /// <param name="configId"></param>
         /// <param name="executeConfigurationActionRequest"></param>
-        /// <returns>Task of ApiResponse (ExecuteConfigurationActionResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExecuteConfigurationActionResult>> ExecuteConfigurationActionAsyncWithHttpInfo (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest)
+        /// <returns>Task of ApiResponse (RestApiResultExecuteConfigurationActionResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultExecuteConfigurationActionResult>> ExecuteConfigurationActionAsyncWithHttpInfo (string appId, string appStoreAppId, string configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1305,9 +1305,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ExecuteConfigurationActionResult>(localVarStatusCode,
+            return new ApiResponse<RestApiResultExecuteConfigurationActionResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (ExecuteConfigurationActionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExecuteConfigurationActionResult)));
+                (RestApiResultExecuteConfigurationActionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultExecuteConfigurationActionResult)));
         }
 
         /// <summary>
@@ -1317,10 +1317,10 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
         /// <param name="configId"></param>
-        /// <returns>AppStoreAppConfiguration</returns>
-        public AppStoreAppConfiguration GetAppStoreConfig (string appId, string appStoreAppId, string configId)
+        /// <returns>RestApiResultAppStoreAppConfiguration</returns>
+        public RestApiResultAppStoreAppConfiguration GetAppStoreConfig (string appId, string appStoreAppId, string configId)
         {
-             ApiResponse<AppStoreAppConfiguration> localVarResponse = GetAppStoreConfigWithHttpInfo(appId, appStoreAppId, configId);
+             ApiResponse<RestApiResultAppStoreAppConfiguration> localVarResponse = GetAppStoreConfigWithHttpInfo(appId, appStoreAppId, configId);
              return localVarResponse.Data;
         }
 
@@ -1331,8 +1331,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
         /// <param name="configId"></param>
-        /// <returns>ApiResponse of AppStoreAppConfiguration</returns>
-        public ApiResponse< AppStoreAppConfiguration > GetAppStoreConfigWithHttpInfo (string appId, string appStoreAppId, string configId)
+        /// <returns>ApiResponse of RestApiResultAppStoreAppConfiguration</returns>
+        public ApiResponse< RestApiResultAppStoreAppConfiguration > GetAppStoreConfigWithHttpInfo (string appId, string appStoreAppId, string configId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1392,9 +1392,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<AppStoreAppConfiguration>(localVarStatusCode,
+            return new ApiResponse<RestApiResultAppStoreAppConfiguration>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (AppStoreAppConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppStoreAppConfiguration)));
+                (RestApiResultAppStoreAppConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreAppConfiguration)));
         }
 
         /// <summary>
@@ -1404,10 +1404,10 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
         /// <param name="configId"></param>
-        /// <returns>Task of AppStoreAppConfiguration</returns>
-        public async System.Threading.Tasks.Task<AppStoreAppConfiguration> GetAppStoreConfigAsync (string appId, string appStoreAppId, string configId)
+        /// <returns>Task of RestApiResultAppStoreAppConfiguration</returns>
+        public async System.Threading.Tasks.Task<RestApiResultAppStoreAppConfiguration> GetAppStoreConfigAsync (string appId, string appStoreAppId, string configId)
         {
-             ApiResponse<AppStoreAppConfiguration> localVarResponse = await GetAppStoreConfigAsyncWithHttpInfo(appId, appStoreAppId, configId);
+             ApiResponse<RestApiResultAppStoreAppConfiguration> localVarResponse = await GetAppStoreConfigAsyncWithHttpInfo(appId, appStoreAppId, configId);
              return localVarResponse.Data;
 
         }
@@ -1419,8 +1419,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="appStoreAppId"></param>
         /// <param name="configId"></param>
-        /// <returns>Task of ApiResponse (AppStoreAppConfiguration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AppStoreAppConfiguration>> GetAppStoreConfigAsyncWithHttpInfo (string appId, string appStoreAppId, string configId)
+        /// <returns>Task of ApiResponse (RestApiResultAppStoreAppConfiguration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreAppConfiguration>> GetAppStoreConfigAsyncWithHttpInfo (string appId, string appStoreAppId, string configId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1480,9 +1480,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<AppStoreAppConfiguration>(localVarStatusCode,
+            return new ApiResponse<RestApiResultAppStoreAppConfiguration>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (AppStoreAppConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppStoreAppConfiguration)));
+                (RestApiResultAppStoreAppConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreAppConfiguration)));
         }
 
         /// <summary>

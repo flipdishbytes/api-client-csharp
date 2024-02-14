@@ -32,8 +32,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId"></param>
-        /// <returns>AppStoreApp</returns>
-        AppStoreApp GetAppStoreApp (string appStoreAppId);
+        /// <returns>RestApiResultAppStoreApp</returns>
+        RestApiResultAppStoreApp GetAppStoreApp (string appStoreAppId);
 
         /// <summary>
         /// 
@@ -43,8 +43,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId"></param>
-        /// <returns>ApiResponse of AppStoreApp</returns>
-        ApiResponse<AppStoreApp> GetAppStoreAppWithHttpInfo (string appStoreAppId);
+        /// <returns>ApiResponse of RestApiResultAppStoreApp</returns>
+        ApiResponse<RestApiResultAppStoreApp> GetAppStoreAppWithHttpInfo (string appStoreAppId);
         /// <summary>
         /// 
         /// </summary>
@@ -82,8 +82,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId"></param>
-        /// <returns>Task of AppStoreApp</returns>
-        System.Threading.Tasks.Task<AppStoreApp> GetAppStoreAppAsync (string appStoreAppId);
+        /// <returns>Task of RestApiResultAppStoreApp</returns>
+        System.Threading.Tasks.Task<RestApiResultAppStoreApp> GetAppStoreAppAsync (string appStoreAppId);
 
         /// <summary>
         /// 
@@ -93,8 +93,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId"></param>
-        /// <returns>Task of ApiResponse (AppStoreApp)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AppStoreApp>> GetAppStoreAppAsyncWithHttpInfo (string appStoreAppId);
+        /// <returns>Task of ApiResponse (RestApiResultAppStoreApp)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreApp>> GetAppStoreAppAsyncWithHttpInfo (string appStoreAppId);
         /// <summary>
         /// 
         /// </summary>
@@ -227,10 +227,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId"></param>
-        /// <returns>AppStoreApp</returns>
-        public AppStoreApp GetAppStoreApp (string appStoreAppId)
+        /// <returns>RestApiResultAppStoreApp</returns>
+        public RestApiResultAppStoreApp GetAppStoreApp (string appStoreAppId)
         {
-             ApiResponse<AppStoreApp> localVarResponse = GetAppStoreAppWithHttpInfo(appStoreAppId);
+             ApiResponse<RestApiResultAppStoreApp> localVarResponse = GetAppStoreAppWithHttpInfo(appStoreAppId);
              return localVarResponse.Data;
         }
 
@@ -239,8 +239,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId"></param>
-        /// <returns>ApiResponse of AppStoreApp</returns>
-        public ApiResponse< AppStoreApp > GetAppStoreAppWithHttpInfo (string appStoreAppId)
+        /// <returns>ApiResponse of RestApiResultAppStoreApp</returns>
+        public ApiResponse< RestApiResultAppStoreApp > GetAppStoreAppWithHttpInfo (string appStoreAppId)
         {
             // verify the required parameter 'appStoreAppId' is set
             if (appStoreAppId == null)
@@ -292,9 +292,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<AppStoreApp>(localVarStatusCode,
+            return new ApiResponse<RestApiResultAppStoreApp>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (AppStoreApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppStoreApp)));
+                (RestApiResultAppStoreApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreApp)));
         }
 
         /// <summary>
@@ -302,10 +302,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId"></param>
-        /// <returns>Task of AppStoreApp</returns>
-        public async System.Threading.Tasks.Task<AppStoreApp> GetAppStoreAppAsync (string appStoreAppId)
+        /// <returns>Task of RestApiResultAppStoreApp</returns>
+        public async System.Threading.Tasks.Task<RestApiResultAppStoreApp> GetAppStoreAppAsync (string appStoreAppId)
         {
-             ApiResponse<AppStoreApp> localVarResponse = await GetAppStoreAppAsyncWithHttpInfo(appStoreAppId);
+             ApiResponse<RestApiResultAppStoreApp> localVarResponse = await GetAppStoreAppAsyncWithHttpInfo(appStoreAppId);
              return localVarResponse.Data;
 
         }
@@ -315,8 +315,8 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId"></param>
-        /// <returns>Task of ApiResponse (AppStoreApp)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AppStoreApp>> GetAppStoreAppAsyncWithHttpInfo (string appStoreAppId)
+        /// <returns>Task of ApiResponse (RestApiResultAppStoreApp)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreApp>> GetAppStoreAppAsyncWithHttpInfo (string appStoreAppId)
         {
             // verify the required parameter 'appStoreAppId' is set
             if (appStoreAppId == null)
@@ -368,9 +368,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<AppStoreApp>(localVarStatusCode,
+            return new ApiResponse<RestApiResultAppStoreApp>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (AppStoreApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppStoreApp)));
+                (RestApiResultAppStoreApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreApp)));
         }
 
         /// <summary>
