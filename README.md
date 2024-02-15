@@ -1260,6 +1260,7 @@ Class | Method | HTTP request | Description
  - [Model.StoreDataPoint](docs/StoreDataPoint.md)
  - [Model.StoreDeletedEvent](docs/StoreDeletedEvent.md)
  - [Model.StoreDeliveryZoneFeeConfig](docs/StoreDeliveryZoneFeeConfig.md)
+ - [Model.StoreDeliveryZoneFeeConfigUpdateRequest](docs/StoreDeliveryZoneFeeConfigUpdateRequest.md)
  - [Model.StoreEndOfDayReport](docs/StoreEndOfDayReport.md)
  - [Model.StoreFeeConfig](docs/StoreFeeConfig.md)
  - [Model.StoreFeeConfigUpdatedEvent](docs/StoreFeeConfigUpdatedEvent.md)

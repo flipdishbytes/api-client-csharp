@@ -656,9 +656,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <param name="configs"></param>
+        /// <param name="feeConfigUpdateRequest"></param>
         /// <returns></returns>
-        void PutStoreDeliveryFeeConfig (int? storeId, List<StoreDeliveryZoneFeeConfig> configs);
+        void PutStoreDeliveryFeeConfig (int? storeId, StoreDeliveryZoneFeeConfigUpdateRequest feeConfigUpdateRequest);
 
         /// <summary>
         /// 
@@ -668,9 +668,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <param name="configs"></param>
+        /// <param name="feeConfigUpdateRequest"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PutStoreDeliveryFeeConfigWithHttpInfo (int? storeId, List<StoreDeliveryZoneFeeConfig> configs);
+        ApiResponse<Object> PutStoreDeliveryFeeConfigWithHttpInfo (int? storeId, StoreDeliveryZoneFeeConfigUpdateRequest feeConfigUpdateRequest);
         /// <summary>
         /// 
         /// </summary>
@@ -1518,9 +1518,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <param name="configs"></param>
+        /// <param name="feeConfigUpdateRequest"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PutStoreDeliveryFeeConfigAsync (int? storeId, List<StoreDeliveryZoneFeeConfig> configs);
+        System.Threading.Tasks.Task PutStoreDeliveryFeeConfigAsync (int? storeId, StoreDeliveryZoneFeeConfigUpdateRequest feeConfigUpdateRequest);
 
         /// <summary>
         /// 
@@ -1530,9 +1530,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <param name="configs"></param>
+        /// <param name="feeConfigUpdateRequest"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PutStoreDeliveryFeeConfigAsyncWithHttpInfo (int? storeId, List<StoreDeliveryZoneFeeConfig> configs);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutStoreDeliveryFeeConfigAsyncWithHttpInfo (int? storeId, StoreDeliveryZoneFeeConfigUpdateRequest feeConfigUpdateRequest);
         /// <summary>
         /// 
         /// </summary>
@@ -6179,11 +6179,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <param name="configs"></param>
+        /// <param name="feeConfigUpdateRequest"></param>
         /// <returns></returns>
-        public void PutStoreDeliveryFeeConfig (int? storeId, List<StoreDeliveryZoneFeeConfig> configs)
+        public void PutStoreDeliveryFeeConfig (int? storeId, StoreDeliveryZoneFeeConfigUpdateRequest feeConfigUpdateRequest)
         {
-             PutStoreDeliveryFeeConfigWithHttpInfo(storeId, configs);
+             PutStoreDeliveryFeeConfigWithHttpInfo(storeId, feeConfigUpdateRequest);
         }
 
         /// <summary>
@@ -6191,16 +6191,16 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <param name="configs"></param>
+        /// <param name="feeConfigUpdateRequest"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PutStoreDeliveryFeeConfigWithHttpInfo (int? storeId, List<StoreDeliveryZoneFeeConfig> configs)
+        public ApiResponse<Object> PutStoreDeliveryFeeConfigWithHttpInfo (int? storeId, StoreDeliveryZoneFeeConfigUpdateRequest feeConfigUpdateRequest)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->PutStoreDeliveryFeeConfig");
-            // verify the required parameter 'configs' is set
-            if (configs == null)
-                throw new ApiException(400, "Missing required parameter 'configs' when calling StoresApi->PutStoreDeliveryFeeConfig");
+            // verify the required parameter 'feeConfigUpdateRequest' is set
+            if (feeConfigUpdateRequest == null)
+                throw new ApiException(400, "Missing required parameter 'feeConfigUpdateRequest' when calling StoresApi->PutStoreDeliveryFeeConfig");
 
             var localVarPath = "./api/v1.0/stores/{storeId}/feeConfig/deliveryZones";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6232,13 +6232,13 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
-            if (configs != null && configs.GetType() != typeof(byte[]))
+            if (feeConfigUpdateRequest != null && feeConfigUpdateRequest.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(configs); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(feeConfigUpdateRequest); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = configs; // byte array
+                localVarPostBody = feeConfigUpdateRequest; // byte array
             }
 
             // authentication (oauth2) required
@@ -6271,11 +6271,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <param name="configs"></param>
+        /// <param name="feeConfigUpdateRequest"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PutStoreDeliveryFeeConfigAsync (int? storeId, List<StoreDeliveryZoneFeeConfig> configs)
+        public async System.Threading.Tasks.Task PutStoreDeliveryFeeConfigAsync (int? storeId, StoreDeliveryZoneFeeConfigUpdateRequest feeConfigUpdateRequest)
         {
-             await PutStoreDeliveryFeeConfigAsyncWithHttpInfo(storeId, configs);
+             await PutStoreDeliveryFeeConfigAsyncWithHttpInfo(storeId, feeConfigUpdateRequest);
 
         }
 
@@ -6284,16 +6284,16 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <param name="configs"></param>
+        /// <param name="feeConfigUpdateRequest"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutStoreDeliveryFeeConfigAsyncWithHttpInfo (int? storeId, List<StoreDeliveryZoneFeeConfig> configs)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutStoreDeliveryFeeConfigAsyncWithHttpInfo (int? storeId, StoreDeliveryZoneFeeConfigUpdateRequest feeConfigUpdateRequest)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->PutStoreDeliveryFeeConfig");
-            // verify the required parameter 'configs' is set
-            if (configs == null)
-                throw new ApiException(400, "Missing required parameter 'configs' when calling StoresApi->PutStoreDeliveryFeeConfig");
+            // verify the required parameter 'feeConfigUpdateRequest' is set
+            if (feeConfigUpdateRequest == null)
+                throw new ApiException(400, "Missing required parameter 'feeConfigUpdateRequest' when calling StoresApi->PutStoreDeliveryFeeConfig");
 
             var localVarPath = "./api/v1.0/stores/{storeId}/feeConfig/deliveryZones";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6325,13 +6325,13 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
-            if (configs != null && configs.GetType() != typeof(byte[]))
+            if (feeConfigUpdateRequest != null && feeConfigUpdateRequest.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(configs); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(feeConfigUpdateRequest); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = configs; // byte array
+                localVarPostBody = feeConfigUpdateRequest; // byte array
             }
 
             // authentication (oauth2) required

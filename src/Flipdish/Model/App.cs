@@ -567,526 +567,532 @@ namespace Flipdish.Model
             EditServiceChargeConfigurations = 75,
             
             /// <summary>
+            /// Enum EditStoreDeliveryZoneFees for value: EditStoreDeliveryZoneFees
+            /// </summary>
+            [EnumMember(Value = "EditStoreDeliveryZoneFees")]
+            EditStoreDeliveryZoneFees = 76,
+            
+            /// <summary>
             /// Enum ViewHydraConfig for value: ViewHydraConfig
             /// </summary>
             [EnumMember(Value = "ViewHydraConfig")]
-            ViewHydraConfig = 76,
+            ViewHydraConfig = 77,
             
             /// <summary>
             /// Enum UpdateHydraConfigManage for value: UpdateHydraConfigManage
             /// </summary>
             [EnumMember(Value = "UpdateHydraConfigManage")]
-            UpdateHydraConfigManage = 77,
+            UpdateHydraConfigManage = 78,
             
             /// <summary>
             /// Enum InitiateBluetoothPairingMode for value: InitiateBluetoothPairingMode
             /// </summary>
             [EnumMember(Value = "InitiateBluetoothPairingMode")]
-            InitiateBluetoothPairingMode = 78,
+            InitiateBluetoothPairingMode = 79,
             
             /// <summary>
             /// Enum DeleteTerminal for value: DeleteTerminal
             /// </summary>
             [EnumMember(Value = "DeleteTerminal")]
-            DeleteTerminal = 79,
+            DeleteTerminal = 80,
             
             /// <summary>
             /// Enum ViewKioskTelemetry for value: ViewKioskTelemetry
             /// </summary>
             [EnumMember(Value = "ViewKioskTelemetry")]
-            ViewKioskTelemetry = 80,
+            ViewKioskTelemetry = 81,
             
             /// <summary>
             /// Enum ViewCustomers for value: ViewCustomers
             /// </summary>
             [EnumMember(Value = "ViewCustomers")]
-            ViewCustomers = 81,
+            ViewCustomers = 82,
             
             /// <summary>
             /// Enum EditCustomers for value: EditCustomers
             /// </summary>
             [EnumMember(Value = "EditCustomers")]
-            EditCustomers = 82,
+            EditCustomers = 83,
             
             /// <summary>
             /// Enum CreateCustomers for value: CreateCustomers
             /// </summary>
             [EnumMember(Value = "CreateCustomers")]
-            CreateCustomers = 83,
+            CreateCustomers = 84,
             
             /// <summary>
             /// Enum CreateCatalogElements for value: CreateCatalogElements
             /// </summary>
             [EnumMember(Value = "CreateCatalogElements")]
-            CreateCatalogElements = 84,
+            CreateCatalogElements = 85,
             
             /// <summary>
             /// Enum UpdateCatalogElements for value: UpdateCatalogElements
             /// </summary>
             [EnumMember(Value = "UpdateCatalogElements")]
-            UpdateCatalogElements = 85,
+            UpdateCatalogElements = 86,
             
             /// <summary>
             /// Enum ViewCatalogElements for value: ViewCatalogElements
             /// </summary>
             [EnumMember(Value = "ViewCatalogElements")]
-            ViewCatalogElements = 86,
+            ViewCatalogElements = 87,
             
             /// <summary>
             /// Enum DeleteCatalogElements for value: DeleteCatalogElements
             /// </summary>
             [EnumMember(Value = "DeleteCatalogElements")]
-            DeleteCatalogElements = 87,
+            DeleteCatalogElements = 88,
             
             /// <summary>
             /// Enum ViewMetafieldDefinitions for value: ViewMetafieldDefinitions
             /// </summary>
             [EnumMember(Value = "ViewMetafieldDefinitions")]
-            ViewMetafieldDefinitions = 88,
+            ViewMetafieldDefinitions = 89,
             
             /// <summary>
             /// Enum CreateMetafieldDefinitions for value: CreateMetafieldDefinitions
             /// </summary>
             [EnumMember(Value = "CreateMetafieldDefinitions")]
-            CreateMetafieldDefinitions = 89,
+            CreateMetafieldDefinitions = 90,
             
             /// <summary>
             /// Enum UpdateMetafieldDefinitions for value: UpdateMetafieldDefinitions
             /// </summary>
             [EnumMember(Value = "UpdateMetafieldDefinitions")]
-            UpdateMetafieldDefinitions = 90,
+            UpdateMetafieldDefinitions = 91,
             
             /// <summary>
             /// Enum DeleteMetafieldDefinitions for value: DeleteMetafieldDefinitions
             /// </summary>
             [EnumMember(Value = "DeleteMetafieldDefinitions")]
-            DeleteMetafieldDefinitions = 91,
+            DeleteMetafieldDefinitions = 92,
             
             /// <summary>
             /// Enum UpdateMetafields for value: UpdateMetafields
             /// </summary>
             [EnumMember(Value = "UpdateMetafields")]
-            UpdateMetafields = 92,
+            UpdateMetafields = 93,
             
             /// <summary>
             /// Enum ViewCatalogMenuChanges for value: ViewCatalogMenuChanges
             /// </summary>
             [EnumMember(Value = "ViewCatalogMenuChanges")]
-            ViewCatalogMenuChanges = 93,
+            ViewCatalogMenuChanges = 94,
             
             /// <summary>
             /// Enum PublishCatalogMenuChanges for value: PublishCatalogMenuChanges
             /// </summary>
             [EnumMember(Value = "PublishCatalogMenuChanges")]
-            PublishCatalogMenuChanges = 94,
+            PublishCatalogMenuChanges = 95,
             
             /// <summary>
             /// Enum ViewAppStatistics for value: ViewAppStatistics
             /// </summary>
             [EnumMember(Value = "ViewAppStatistics")]
-            ViewAppStatistics = 95,
+            ViewAppStatistics = 96,
             
             /// <summary>
             /// Enum ViewApmStatistics for value: ViewApmStatistics
             /// </summary>
             [EnumMember(Value = "ViewApmStatistics")]
-            ViewApmStatistics = 96,
+            ViewApmStatistics = 97,
             
             /// <summary>
             /// Enum ViewCampaignsStatistics for value: ViewCampaignsStatistics
             /// </summary>
             [EnumMember(Value = "ViewCampaignsStatistics")]
-            ViewCampaignsStatistics = 97,
+            ViewCampaignsStatistics = 98,
             
             /// <summary>
             /// Enum ViewCustomerStatistics for value: ViewCustomerStatistics
             /// </summary>
             [EnumMember(Value = "ViewCustomerStatistics")]
-            ViewCustomerStatistics = 98,
+            ViewCustomerStatistics = 99,
             
             /// <summary>
             /// Enum ViewLiveStatistics for value: ViewLiveStatistics
             /// </summary>
             [EnumMember(Value = "ViewLiveStatistics")]
-            ViewLiveStatistics = 99,
+            ViewLiveStatistics = 100,
             
             /// <summary>
             /// Enum ViewOrderStatistics for value: ViewOrderStatistics
             /// </summary>
             [EnumMember(Value = "ViewOrderStatistics")]
-            ViewOrderStatistics = 100,
+            ViewOrderStatistics = 101,
             
             /// <summary>
             /// Enum ViewSalesStatistics for value: ViewSalesStatistics
             /// </summary>
             [EnumMember(Value = "ViewSalesStatistics")]
-            ViewSalesStatistics = 101,
+            ViewSalesStatistics = 102,
             
             /// <summary>
             /// Enum ViewSalesEndOfDayStatistics for value: ViewSalesEndOfDayStatistics
             /// </summary>
             [EnumMember(Value = "ViewSalesEndOfDayStatistics")]
-            ViewSalesEndOfDayStatistics = 102,
+            ViewSalesEndOfDayStatistics = 103,
             
             /// <summary>
             /// Enum ViewVouchersStatistics for value: ViewVouchersStatistics
             /// </summary>
             [EnumMember(Value = "ViewVouchersStatistics")]
-            ViewVouchersStatistics = 103,
+            ViewVouchersStatistics = 104,
             
             /// <summary>
             /// Enum DownloadCustomerCsvExport for value: DownloadCustomerCsvExport
             /// </summary>
             [EnumMember(Value = "DownloadCustomerCsvExport")]
-            DownloadCustomerCsvExport = 104,
+            DownloadCustomerCsvExport = 105,
             
             /// <summary>
             /// Enum ViewApmAuditLogs for value: ViewApmAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewApmAuditLogs")]
-            ViewApmAuditLogs = 105,
+            ViewApmAuditLogs = 106,
             
             /// <summary>
             /// Enum ViewStoreAuditLogs for value: ViewStoreAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewStoreAuditLogs")]
-            ViewStoreAuditLogs = 106,
+            ViewStoreAuditLogs = 107,
             
             /// <summary>
             /// Enum ViewMenuAuditLogs for value: ViewMenuAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewMenuAuditLogs")]
-            ViewMenuAuditLogs = 107,
+            ViewMenuAuditLogs = 108,
             
             /// <summary>
             /// Enum ViewBankAccountAuditLogs for value: ViewBankAccountAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewBankAccountAuditLogs")]
-            ViewBankAccountAuditLogs = 108,
+            ViewBankAccountAuditLogs = 109,
             
             /// <summary>
             /// Enum ViewFeeConfigurationsAuditLogs for value: ViewFeeConfigurationsAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewFeeConfigurationsAuditLogs")]
-            ViewFeeConfigurationsAuditLogs = 109,
+            ViewFeeConfigurationsAuditLogs = 110,
             
             /// <summary>
             /// Enum ViewOrdersAuditLogs for value: ViewOrdersAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewOrdersAuditLogs")]
-            ViewOrdersAuditLogs = 110,
+            ViewOrdersAuditLogs = 111,
             
             /// <summary>
             /// Enum ViewVouchersAuditLogs for value: ViewVouchersAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewVouchersAuditLogs")]
-            ViewVouchersAuditLogs = 111,
+            ViewVouchersAuditLogs = 112,
             
             /// <summary>
             /// Enum ViewUserEventsAuditLogs for value: ViewUserEventsAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewUserEventsAuditLogs")]
-            ViewUserEventsAuditLogs = 112,
+            ViewUserEventsAuditLogs = 113,
             
             /// <summary>
             /// Enum ViewCampaignsAuditLogs for value: ViewCampaignsAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewCampaignsAuditLogs")]
-            ViewCampaignsAuditLogs = 113,
+            ViewCampaignsAuditLogs = 114,
             
             /// <summary>
             /// Enum ViewTeammatesAuditLogs for value: ViewTeammatesAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewTeammatesAuditLogs")]
-            ViewTeammatesAuditLogs = 114,
+            ViewTeammatesAuditLogs = 115,
             
             /// <summary>
             /// Enum ViewAppAuditLogs for value: ViewAppAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewAppAuditLogs")]
-            ViewAppAuditLogs = 115,
+            ViewAppAuditLogs = 116,
             
             /// <summary>
             /// Enum ViewCustomerAuditLogs for value: ViewCustomerAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewCustomerAuditLogs")]
-            ViewCustomerAuditLogs = 116,
+            ViewCustomerAuditLogs = 117,
             
             /// <summary>
             /// Enum ViewPrinterAuditLogs for value: ViewPrinterAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewPrinterAuditLogs")]
-            ViewPrinterAuditLogs = 117,
+            ViewPrinterAuditLogs = 118,
             
             /// <summary>
             /// Enum ViewHydraAuditLogs for value: ViewHydraAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewHydraAuditLogs")]
-            ViewHydraAuditLogs = 118,
+            ViewHydraAuditLogs = 119,
             
             /// <summary>
             /// Enum ViewPushNotificationAuditLogs for value: ViewPushNotificationAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewPushNotificationAuditLogs")]
-            ViewPushNotificationAuditLogs = 119,
+            ViewPushNotificationAuditLogs = 120,
             
             /// <summary>
             /// Enum ViewStripeCustomConnectedAccountAuditLogs for value: ViewStripeCustomConnectedAccountAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewStripeCustomConnectedAccountAuditLogs")]
-            ViewStripeCustomConnectedAccountAuditLogs = 120,
+            ViewStripeCustomConnectedAccountAuditLogs = 121,
             
             /// <summary>
             /// Enum ViewKioskBluetoothDeviceAuditLogs for value: ViewKioskBluetoothDeviceAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewKioskBluetoothDeviceAuditLogs")]
-            ViewKioskBluetoothDeviceAuditLogs = 121,
+            ViewKioskBluetoothDeviceAuditLogs = 122,
             
             /// <summary>
             /// Enum ViewExternalAuditLogs for value: ViewExternalAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewExternalAuditLogs")]
-            ViewExternalAuditLogs = 122,
+            ViewExternalAuditLogs = 123,
             
             /// <summary>
             /// Enum CreateExternalAuditLogEvents for value: CreateExternalAuditLogEvents
             /// </summary>
             [EnumMember(Value = "CreateExternalAuditLogEvents")]
-            CreateExternalAuditLogEvents = 123,
+            CreateExternalAuditLogEvents = 124,
             
             /// <summary>
             /// Enum ViewCatalogAuditLogs for value: ViewCatalogAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewCatalogAuditLogs")]
-            ViewCatalogAuditLogs = 124,
+            ViewCatalogAuditLogs = 125,
             
             /// <summary>
             /// Enum ViewOrderFulfillmentAuditLogs for value: ViewOrderFulfillmentAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewOrderFulfillmentAuditLogs")]
-            ViewOrderFulfillmentAuditLogs = 125,
+            ViewOrderFulfillmentAuditLogs = 126,
             
             /// <summary>
             /// Enum ViewChannelAuditLogs for value: ViewChannelAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewChannelAuditLogs")]
-            ViewChannelAuditLogs = 126,
+            ViewChannelAuditLogs = 127,
             
             /// <summary>
             /// Enum SendPushNotificationToCustomer for value: SendPushNotificationToCustomer
             /// </summary>
             [EnumMember(Value = "SendPushNotificationToCustomer")]
-            SendPushNotificationToCustomer = 127,
+            SendPushNotificationToCustomer = 128,
             
             /// <summary>
             /// Enum InviteDriverToApp for value: InviteDriverToApp
             /// </summary>
             [EnumMember(Value = "InviteDriverToApp")]
-            InviteDriverToApp = 128,
+            InviteDriverToApp = 129,
             
             /// <summary>
             /// Enum GetDriverForApp for value: GetDriverForApp
             /// </summary>
             [EnumMember(Value = "GetDriverForApp")]
-            GetDriverForApp = 129,
+            GetDriverForApp = 130,
             
             /// <summary>
             /// Enum RemoveDriverFromApp for value: RemoveDriverFromApp
             /// </summary>
             [EnumMember(Value = "RemoveDriverFromApp")]
-            RemoveDriverFromApp = 130,
+            RemoveDriverFromApp = 131,
             
             /// <summary>
             /// Enum AssignDriverToOrder for value: AssignDriverToOrder
             /// </summary>
             [EnumMember(Value = "AssignDriverToOrder")]
-            AssignDriverToOrder = 131,
+            AssignDriverToOrder = 132,
             
             /// <summary>
             /// Enum UnassignDriverFromOrder for value: UnassignDriverFromOrder
             /// </summary>
             [EnumMember(Value = "UnassignDriverFromOrder")]
-            UnassignDriverFromOrder = 132,
+            UnassignDriverFromOrder = 133,
             
             /// <summary>
             /// Enum UpdateOrdersDeliveryTrackingStatus for value: UpdateOrdersDeliveryTrackingStatus
             /// </summary>
             [EnumMember(Value = "UpdateOrdersDeliveryTrackingStatus")]
-            UpdateOrdersDeliveryTrackingStatus = 133,
+            UpdateOrdersDeliveryTrackingStatus = 134,
             
             /// <summary>
             /// Enum UpdateOrderFulfillmentStatus for value: UpdateOrderFulfillmentStatus
             /// </summary>
             [EnumMember(Value = "UpdateOrderFulfillmentStatus")]
-            UpdateOrderFulfillmentStatus = 134,
+            UpdateOrderFulfillmentStatus = 135,
             
             /// <summary>
             /// Enum ViewFulfillmentStatesConfiguration for value: ViewFulfillmentStatesConfiguration
             /// </summary>
             [EnumMember(Value = "ViewFulfillmentStatesConfiguration")]
-            ViewFulfillmentStatesConfiguration = 135,
+            ViewFulfillmentStatesConfiguration = 136,
             
             /// <summary>
             /// Enum CreateFulfillmentStatesConfiguration for value: CreateFulfillmentStatesConfiguration
             /// </summary>
             [EnumMember(Value = "CreateFulfillmentStatesConfiguration")]
-            CreateFulfillmentStatesConfiguration = 136,
+            CreateFulfillmentStatesConfiguration = 137,
             
             /// <summary>
             /// Enum UpdateFulfillmentStatesConfiguration for value: UpdateFulfillmentStatesConfiguration
             /// </summary>
             [EnumMember(Value = "UpdateFulfillmentStatesConfiguration")]
-            UpdateFulfillmentStatesConfiguration = 137,
+            UpdateFulfillmentStatesConfiguration = 138,
             
             /// <summary>
             /// Enum DeleteFulfillmentStatesConfiguration for value: DeleteFulfillmentStatesConfiguration
             /// </summary>
             [EnumMember(Value = "DeleteFulfillmentStatesConfiguration")]
-            DeleteFulfillmentStatesConfiguration = 138,
+            DeleteFulfillmentStatesConfiguration = 139,
             
             /// <summary>
             /// Enum ViewPayouts for value: ViewPayouts
             /// </summary>
             [EnumMember(Value = "ViewPayouts")]
-            ViewPayouts = 139,
+            ViewPayouts = 140,
             
             /// <summary>
             /// Enum ViewChannels for value: ViewChannels
             /// </summary>
             [EnumMember(Value = "ViewChannels")]
-            ViewChannels = 140,
+            ViewChannels = 141,
             
             /// <summary>
             /// Enum ViewOnboarding for value: ViewOnboarding
             /// </summary>
             [EnumMember(Value = "ViewOnboarding")]
-            ViewOnboarding = 141,
+            ViewOnboarding = 142,
             
             /// <summary>
             /// Enum UpdateOnboarding for value: UpdateOnboarding
             /// </summary>
             [EnumMember(Value = "UpdateOnboarding")]
-            UpdateOnboarding = 142,
+            UpdateOnboarding = 143,
             
             /// <summary>
             /// Enum ViewClientDevices for value: ViewClientDevices
             /// </summary>
             [EnumMember(Value = "ViewClientDevices")]
-            ViewClientDevices = 143,
+            ViewClientDevices = 144,
             
             /// <summary>
             /// Enum UpdateClientDevices for value: UpdateClientDevices
             /// </summary>
             [EnumMember(Value = "UpdateClientDevices")]
-            UpdateClientDevices = 144,
+            UpdateClientDevices = 145,
             
             /// <summary>
             /// Enum EnrollClientDevices for value: EnrollClientDevices
             /// </summary>
             [EnumMember(Value = "EnrollClientDevices")]
-            EnrollClientDevices = 145,
+            EnrollClientDevices = 146,
             
             /// <summary>
             /// Enum AssignClientDevices for value: AssignClientDevices
             /// </summary>
             [EnumMember(Value = "AssignClientDevices")]
-            AssignClientDevices = 146,
+            AssignClientDevices = 147,
             
             /// <summary>
             /// Enum ViewClientAuditLogs for value: ViewClientAuditLogs
             /// </summary>
             [EnumMember(Value = "ViewClientAuditLogs")]
-            ViewClientAuditLogs = 147,
+            ViewClientAuditLogs = 148,
             
             /// <summary>
             /// Enum CreateAppStoreAppConfiguration for value: CreateAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "CreateAppStoreAppConfiguration")]
-            CreateAppStoreAppConfiguration = 148,
+            CreateAppStoreAppConfiguration = 149,
             
             /// <summary>
             /// Enum ViewAppStoreAppConfiguration for value: ViewAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "ViewAppStoreAppConfiguration")]
-            ViewAppStoreAppConfiguration = 149,
+            ViewAppStoreAppConfiguration = 150,
             
             /// <summary>
             /// Enum UpdateAppStoreAppConfiguration for value: UpdateAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "UpdateAppStoreAppConfiguration")]
-            UpdateAppStoreAppConfiguration = 150,
+            UpdateAppStoreAppConfiguration = 151,
             
             /// <summary>
             /// Enum DeleteAppStoreAppConfiguration for value: DeleteAppStoreAppConfiguration
             /// </summary>
             [EnumMember(Value = "DeleteAppStoreAppConfiguration")]
-            DeleteAppStoreAppConfiguration = 151,
+            DeleteAppStoreAppConfiguration = 152,
             
             /// <summary>
             /// Enum UpdateAppStoreAppConfigurationSettings for value: UpdateAppStoreAppConfigurationSettings
             /// </summary>
             [EnumMember(Value = "UpdateAppStoreAppConfigurationSettings")]
-            UpdateAppStoreAppConfigurationSettings = 152,
+            UpdateAppStoreAppConfigurationSettings = 153,
             
             /// <summary>
             /// Enum CreateAppStoreSubscription for value: CreateAppStoreSubscription
             /// </summary>
             [EnumMember(Value = "CreateAppStoreSubscription")]
-            CreateAppStoreSubscription = 153,
+            CreateAppStoreSubscription = 154,
             
             /// <summary>
             /// Enum UpdateAppStoreSubscription for value: UpdateAppStoreSubscription
             /// </summary>
             [EnumMember(Value = "UpdateAppStoreSubscription")]
-            UpdateAppStoreSubscription = 154,
+            UpdateAppStoreSubscription = 155,
             
             /// <summary>
             /// Enum DeleteAppStoreSubscription for value: DeleteAppStoreSubscription
             /// </summary>
             [EnumMember(Value = "DeleteAppStoreSubscription")]
-            DeleteAppStoreSubscription = 155,
+            DeleteAppStoreSubscription = 156,
             
             /// <summary>
             /// Enum ViewSalesChannels for value: ViewSalesChannels
             /// </summary>
             [EnumMember(Value = "ViewSalesChannels")]
-            ViewSalesChannels = 156,
+            ViewSalesChannels = 157,
             
             /// <summary>
             /// Enum EditSalesChannels for value: EditSalesChannels
             /// </summary>
             [EnumMember(Value = "EditSalesChannels")]
-            EditSalesChannels = 157,
+            EditSalesChannels = 158,
             
             /// <summary>
             /// Enum ViewPayGreenWhiteLabelConfiguration for value: ViewPayGreenWhiteLabelConfiguration
             /// </summary>
             [EnumMember(Value = "ViewPayGreenWhiteLabelConfiguration")]
-            ViewPayGreenWhiteLabelConfiguration = 158,
+            ViewPayGreenWhiteLabelConfiguration = 159,
             
             /// <summary>
             /// Enum CreatePayGreenWhiteLabelConfiguration for value: CreatePayGreenWhiteLabelConfiguration
             /// </summary>
             [EnumMember(Value = "CreatePayGreenWhiteLabelConfiguration")]
-            CreatePayGreenWhiteLabelConfiguration = 159,
+            CreatePayGreenWhiteLabelConfiguration = 160,
             
             /// <summary>
             /// Enum UpdatePayGreenWhiteLabelConfiguration for value: UpdatePayGreenWhiteLabelConfiguration
             /// </summary>
             [EnumMember(Value = "UpdatePayGreenWhiteLabelConfiguration")]
-            UpdatePayGreenWhiteLabelConfiguration = 160,
+            UpdatePayGreenWhiteLabelConfiguration = 161,
             
             /// <summary>
             /// Enum UpdatePayGreenStoreConfiguration for value: UpdatePayGreenStoreConfiguration
             /// </summary>
             [EnumMember(Value = "UpdatePayGreenStoreConfiguration")]
-            UpdatePayGreenStoreConfiguration = 161,
+            UpdatePayGreenStoreConfiguration = 162,
             
             /// <summary>
             /// Enum ViewSubscriptions for value: ViewSubscriptions
             /// </summary>
             [EnumMember(Value = "ViewSubscriptions")]
-            ViewSubscriptions = 162
+            ViewSubscriptions = 163
         }
 
 

@@ -1706,7 +1706,7 @@ void (empty response body)
 
 <a name="putstoredeliveryfeeconfig"></a>
 # **PutStoreDeliveryFeeConfig**
-> void PutStoreDeliveryFeeConfig (int? storeId, List<StoreDeliveryZoneFeeConfig> configs)
+> void PutStoreDeliveryFeeConfig (int? storeId, StoreDeliveryZoneFeeConfigUpdateRequest feeConfigUpdateRequest)
 
 
 
@@ -1729,11 +1729,11 @@ namespace Example
 
             var apiInstance = new StoresApi();
             var storeId = 56;  // int? | 
-            var configs = new List<StoreDeliveryZoneFeeConfig>(); // List<StoreDeliveryZoneFeeConfig> | 
+            var feeConfigUpdateRequest = new StoreDeliveryZoneFeeConfigUpdateRequest(); // StoreDeliveryZoneFeeConfigUpdateRequest | 
 
             try
             {
-                apiInstance.PutStoreDeliveryFeeConfig(storeId, configs);
+                apiInstance.PutStoreDeliveryFeeConfig(storeId, feeConfigUpdateRequest);
             }
             catch (Exception e)
             {
@@ -1749,7 +1749,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storeId** | **int?**|  | 
- **configs** | [**List&lt;StoreDeliveryZoneFeeConfig&gt;**](StoreDeliveryZoneFeeConfig.md)|  | 
+ **feeConfigUpdateRequest** | [**StoreDeliveryZoneFeeConfigUpdateRequest**](StoreDeliveryZoneFeeConfigUpdateRequest.md)|  | 
 
 ### Return type
 
