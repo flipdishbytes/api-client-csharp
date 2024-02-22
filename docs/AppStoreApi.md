@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getappstoreapp"></a>
 # **GetAppStoreApp**
-> RestApiResultAppStoreApp GetAppStoreApp (string appStoreAppId)
+> RestApiResultAppStoreApp GetAppStoreApp (string appStoreAppId, string appId = null)
 
 
 
@@ -33,10 +33,11 @@ namespace Example
 
             var apiInstance = new AppStoreApi();
             var appStoreAppId = appStoreAppId_example;  // string | 
+            var appId = appId_example;  // string |  (optional) 
 
             try
             {
-                RestApiResultAppStoreApp result = apiInstance.GetAppStoreApp(appStoreAppId);
+                RestApiResultAppStoreApp result = apiInstance.GetAppStoreApp(appStoreAppId, appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -53,6 +54,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appStoreAppId** | **string**|  | 
+ **appId** | **string**|  | [optional] 
 
 ### Return type
 

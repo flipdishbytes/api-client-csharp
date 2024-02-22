@@ -32,8 +32,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId"></param>
+        /// <param name="appId"> (optional)</param>
         /// <returns>RestApiResultAppStoreApp</returns>
-        RestApiResultAppStoreApp GetAppStoreApp (string appStoreAppId);
+        RestApiResultAppStoreApp GetAppStoreApp (string appStoreAppId, string appId = null);
 
         /// <summary>
         /// 
@@ -43,8 +44,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId"></param>
+        /// <param name="appId"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultAppStoreApp</returns>
-        ApiResponse<RestApiResultAppStoreApp> GetAppStoreAppWithHttpInfo (string appStoreAppId);
+        ApiResponse<RestApiResultAppStoreApp> GetAppStoreAppWithHttpInfo (string appStoreAppId, string appId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -82,8 +84,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId"></param>
+        /// <param name="appId"> (optional)</param>
         /// <returns>Task of RestApiResultAppStoreApp</returns>
-        System.Threading.Tasks.Task<RestApiResultAppStoreApp> GetAppStoreAppAsync (string appStoreAppId);
+        System.Threading.Tasks.Task<RestApiResultAppStoreApp> GetAppStoreAppAsync (string appStoreAppId, string appId = null);
 
         /// <summary>
         /// 
@@ -93,8 +96,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId"></param>
+        /// <param name="appId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultAppStoreApp)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreApp>> GetAppStoreAppAsyncWithHttpInfo (string appStoreAppId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreApp>> GetAppStoreAppAsyncWithHttpInfo (string appStoreAppId, string appId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -227,10 +231,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId"></param>
+        /// <param name="appId"> (optional)</param>
         /// <returns>RestApiResultAppStoreApp</returns>
-        public RestApiResultAppStoreApp GetAppStoreApp (string appStoreAppId)
+        public RestApiResultAppStoreApp GetAppStoreApp (string appStoreAppId, string appId = null)
         {
-             ApiResponse<RestApiResultAppStoreApp> localVarResponse = GetAppStoreAppWithHttpInfo(appStoreAppId);
+             ApiResponse<RestApiResultAppStoreApp> localVarResponse = GetAppStoreAppWithHttpInfo(appStoreAppId, appId);
              return localVarResponse.Data;
         }
 
@@ -239,8 +244,9 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId"></param>
+        /// <param name="appId"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultAppStoreApp</returns>
-        public ApiResponse< RestApiResultAppStoreApp > GetAppStoreAppWithHttpInfo (string appStoreAppId)
+        public ApiResponse< RestApiResultAppStoreApp > GetAppStoreAppWithHttpInfo (string appStoreAppId, string appId = null)
         {
             // verify the required parameter 'appStoreAppId' is set
             if (appStoreAppId == null)
@@ -271,6 +277,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
+            if (appId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "appId", appId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -302,10 +309,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId"></param>
+        /// <param name="appId"> (optional)</param>
         /// <returns>Task of RestApiResultAppStoreApp</returns>
-        public async System.Threading.Tasks.Task<RestApiResultAppStoreApp> GetAppStoreAppAsync (string appStoreAppId)
+        public async System.Threading.Tasks.Task<RestApiResultAppStoreApp> GetAppStoreAppAsync (string appStoreAppId, string appId = null)
         {
-             ApiResponse<RestApiResultAppStoreApp> localVarResponse = await GetAppStoreAppAsyncWithHttpInfo(appStoreAppId);
+             ApiResponse<RestApiResultAppStoreApp> localVarResponse = await GetAppStoreAppAsyncWithHttpInfo(appStoreAppId, appId);
              return localVarResponse.Data;
 
         }
@@ -315,8 +323,9 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appStoreAppId"></param>
+        /// <param name="appId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultAppStoreApp)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreApp>> GetAppStoreAppAsyncWithHttpInfo (string appStoreAppId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreApp>> GetAppStoreAppAsyncWithHttpInfo (string appStoreAppId, string appId = null)
         {
             // verify the required parameter 'appStoreAppId' is set
             if (appStoreAppId == null)
@@ -347,6 +356,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appStoreAppId != null) localVarPathParams.Add("appStoreAppId", this.Configuration.ApiClient.ParameterToString(appStoreAppId)); // path parameter
+            if (appId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "appId", appId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
