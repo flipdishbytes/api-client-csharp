@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Valid Value
+    /// ValidValue
     /// </summary>
     [DataContract]
     public partial class ValidValue :  IEquatable<ValidValue>
@@ -36,8 +36,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidValue" /> class.
         /// </summary>
-        /// <param name="code">Code (required).</param>
-        /// <param name="name">Name (required).</param>
+        /// <param name="code">code (required).</param>
+        /// <param name="name">name (required).</param>
         public ValidValue(string code = default(string), string name = default(string))
         {
             // to ensure "code" is required (not null)
@@ -61,16 +61,14 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Code
+        /// Gets or Sets Code
         /// </summary>
-        /// <value>Code</value>
         [DataMember(Name="Code", EmitDefaultValue=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// Name
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>Name</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 

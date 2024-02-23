@@ -29,9 +29,8 @@ namespace Flipdish.Model
     public partial class Field :  IEquatable<Field>
     {
         /// <summary>
-        /// Field Type
+        /// Defines FieldType
         /// </summary>
-        /// <value>Field Type</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum FieldTypeEnum
         {
@@ -98,9 +97,8 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Field Type
+        /// Gets or Sets FieldType
         /// </summary>
-        /// <value>Field Type</value>
         [DataMember(Name="FieldType", EmitDefaultValue=false)]
         public FieldTypeEnum FieldType { get; set; }
         /// <summary>
@@ -111,16 +109,16 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Field" /> class.
         /// </summary>
-        /// <param name="name">Name (required).</param>
-        /// <param name="description">Description (required).</param>
-        /// <param name="key">Key (required).</param>
-        /// <param name="tooltip">Tooltip.</param>
-        /// <param name="position">Position (required).</param>
-        /// <param name="defaultValue">Default Value.</param>
-        /// <param name="validValues">Valid Values  &lt;remarks&gt;Used typically for dropdown/select&lt;/remarks&gt;.</param>
-        /// <param name="validationRegex">Validation Regex.</param>
-        /// <param name="fieldType">Field Type (required).</param>
-        /// <param name="isFlipdishRestricted">Is this field only editable by Flipdish?.</param>
+        /// <param name="name">name (required).</param>
+        /// <param name="description">description (required).</param>
+        /// <param name="key">key (required).</param>
+        /// <param name="tooltip">tooltip.</param>
+        /// <param name="position">position (required).</param>
+        /// <param name="defaultValue">defaultValue.</param>
+        /// <param name="validValues">validValues.</param>
+        /// <param name="validationRegex">validationRegex.</param>
+        /// <param name="fieldType">fieldType (required).</param>
+        /// <param name="isFlipdishRestricted">isFlipdishRestricted.</param>
         public Field(string name = default(string), string description = default(string), string key = default(string), string tooltip = default(string), int? position = default(int?), string defaultValue = default(string), List<ValidValue> validValues = default(List<ValidValue>), string validationRegex = default(string), FieldTypeEnum fieldType = default(FieldTypeEnum), bool? isFlipdishRestricted = default(bool?))
         {
             // to ensure "name" is required (not null)
@@ -176,66 +174,57 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Name
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>Name</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Description
+        /// Gets or Sets Description
         /// </summary>
-        /// <value>Description</value>
         [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Key
+        /// Gets or Sets Key
         /// </summary>
-        /// <value>Key</value>
         [DataMember(Name="Key", EmitDefaultValue=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// Tooltip
+        /// Gets or Sets Tooltip
         /// </summary>
-        /// <value>Tooltip</value>
         [DataMember(Name="Tooltip", EmitDefaultValue=false)]
         public string Tooltip { get; set; }
 
         /// <summary>
-        /// Position
+        /// Gets or Sets Position
         /// </summary>
-        /// <value>Position</value>
         [DataMember(Name="Position", EmitDefaultValue=false)]
         public int? Position { get; set; }
 
         /// <summary>
-        /// Default Value
+        /// Gets or Sets DefaultValue
         /// </summary>
-        /// <value>Default Value</value>
         [DataMember(Name="DefaultValue", EmitDefaultValue=false)]
         public string DefaultValue { get; set; }
 
         /// <summary>
-        /// Valid Values  &lt;remarks&gt;Used typically for dropdown/select&lt;/remarks&gt;
+        /// Gets or Sets ValidValues
         /// </summary>
-        /// <value>Valid Values  &lt;remarks&gt;Used typically for dropdown/select&lt;/remarks&gt;</value>
         [DataMember(Name="ValidValues", EmitDefaultValue=false)]
         public List<ValidValue> ValidValues { get; set; }
 
         /// <summary>
-        /// Validation Regex
+        /// Gets or Sets ValidationRegex
         /// </summary>
-        /// <value>Validation Regex</value>
         [DataMember(Name="ValidationRegex", EmitDefaultValue=false)]
         public string ValidationRegex { get; set; }
 
 
         /// <summary>
-        /// Is this field only editable by Flipdish?
+        /// Gets or Sets IsFlipdishRestricted
         /// </summary>
-        /// <value>Is this field only editable by Flipdish?</value>
         [DataMember(Name="IsFlipdishRestricted", EmitDefaultValue=false)]
         public bool? IsFlipdishRestricted { get; set; }
 

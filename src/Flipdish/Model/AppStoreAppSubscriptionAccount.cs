@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Subscription account
+    /// AppStoreAppSubscriptionAccount
     /// </summary>
     [DataContract]
     public partial class AppStoreAppSubscriptionAccount :  IEquatable<AppStoreAppSubscriptionAccount>
@@ -31,16 +31,15 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AppStoreAppSubscriptionAccount" /> class.
         /// </summary>
-        /// <param name="email">Email of the account user.</param>
+        /// <param name="email">email.</param>
         public AppStoreAppSubscriptionAccount(string email = default(string))
         {
             this.Email = email;
         }
         
         /// <summary>
-        /// Email of the account user
+        /// Gets or Sets Email
         /// </summary>
-        /// <value>Email of the account user</value>
         [DataMember(Name="Email", EmitDefaultValue=false)]
         public string Email { get; set; }
 

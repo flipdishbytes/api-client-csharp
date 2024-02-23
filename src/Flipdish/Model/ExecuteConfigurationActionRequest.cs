@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Execute Configuration
+    /// ExecuteConfigurationActionRequest
     /// </summary>
     [DataContract]
     public partial class ExecuteConfigurationActionRequest :  IEquatable<ExecuteConfigurationActionRequest>
@@ -31,8 +31,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExecuteConfigurationActionRequest" /> class.
         /// </summary>
-        /// <param name="key">Key - of field triggering the action.</param>
-        /// <param name="action">Action for element.</param>
+        /// <param name="key">key.</param>
+        /// <param name="action">action.</param>
         public ExecuteConfigurationActionRequest(string key = default(string), string action = default(string))
         {
             this.Key = key;
@@ -40,16 +40,14 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Key - of field triggering the action
+        /// Gets or Sets Key
         /// </summary>
-        /// <value>Key - of field triggering the action</value>
         [DataMember(Name="Key", EmitDefaultValue=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// Action for element
+        /// Gets or Sets Action
         /// </summary>
-        /// <value>Action for element</value>
         [DataMember(Name="Action", EmitDefaultValue=false)]
         public string Action { get; set; }
 

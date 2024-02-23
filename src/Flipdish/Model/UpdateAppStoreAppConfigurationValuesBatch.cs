@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Update configuration values for the specified settings only
+    /// UpdateAppStoreAppConfigurationValuesBatch
     /// </summary>
     [DataContract]
     public partial class UpdateAppStoreAppConfigurationValuesBatch :  IEquatable<UpdateAppStoreAppConfigurationValuesBatch>
@@ -31,16 +31,15 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateAppStoreAppConfigurationValuesBatch" /> class.
         /// </summary>
-        /// <param name="settings">Settings to update.</param>
+        /// <param name="settings">settings.</param>
         public UpdateAppStoreAppConfigurationValuesBatch(List<Setting> settings = default(List<Setting>))
         {
             this.Settings = settings;
         }
         
         /// <summary>
-        /// Settings to update
+        /// Gets or Sets Settings
         /// </summary>
-        /// <value>Settings to update</value>
         [DataMember(Name="Settings", EmitDefaultValue=false)]
         public List<Setting> Settings { get; set; }
 

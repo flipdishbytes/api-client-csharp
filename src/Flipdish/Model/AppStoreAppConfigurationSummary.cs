@@ -23,15 +23,14 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// App store app configuration summary information
+    /// AppStoreAppConfigurationSummary
     /// </summary>
     [DataContract]
     public partial class AppStoreAppConfigurationSummary :  IEquatable<AppStoreAppConfigurationSummary>
     {
         /// <summary>
-        /// Configuration type
+        /// Defines ConfigurationType
         /// </summary>
-        /// <value>Configuration type</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum ConfigurationTypeEnum
         {
@@ -50,15 +49,13 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Configuration type
+        /// Gets or Sets ConfigurationType
         /// </summary>
-        /// <value>Configuration type</value>
         [DataMember(Name="ConfigurationType", EmitDefaultValue=false)]
         public ConfigurationTypeEnum ConfigurationType { get; set; }
         /// <summary>
-        /// Store selector type
+        /// Defines StoreSelectorType
         /// </summary>
-        /// <value>Store selector type</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StoreSelectorTypeEnum
         {
@@ -83,9 +80,8 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Store selector type
+        /// Gets or Sets StoreSelectorType
         /// </summary>
-        /// <value>Store selector type</value>
         [DataMember(Name="StoreSelectorType", EmitDefaultValue=false)]
         public StoreSelectorTypeEnum StoreSelectorType { get; set; }
         /// <summary>
@@ -96,18 +92,18 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AppStoreAppConfigurationSummary" /> class.
         /// </summary>
-        /// <param name="id">Unique App store app configuration id (required).</param>
-        /// <param name="appId">App Id (required).</param>
-        /// <param name="isEnabled">Is enabled (required).</param>
-        /// <param name="stores">List of stores (required).</param>
-        /// <param name="configurationType">Configuration type (required).</param>
-        /// <param name="storeSelectorType">Store selector type (required).</param>
-        /// <param name="_internal">Internal (required).</param>
-        /// <param name="appStoreAppId">Unique App store app id (required).</param>
-        /// <param name="name">Name of Appstore app (required).</param>
-        /// <param name="description">Description (required).</param>
-        /// <param name="logo">Logo.</param>
-        /// <param name="developerName">Developer name.</param>
+        /// <param name="id">id (required).</param>
+        /// <param name="appId">appId (required).</param>
+        /// <param name="isEnabled">isEnabled (required).</param>
+        /// <param name="stores">stores (required).</param>
+        /// <param name="configurationType">configurationType (required).</param>
+        /// <param name="storeSelectorType">storeSelectorType (required).</param>
+        /// <param name="_internal">_internal (required).</param>
+        /// <param name="appStoreAppId">appStoreAppId (required).</param>
+        /// <param name="name">name (required).</param>
+        /// <param name="description">description (required).</param>
+        /// <param name="logo">logo.</param>
+        /// <param name="developerName">developerName.</param>
         public AppStoreAppConfigurationSummary(string id = default(string), string appId = default(string), bool? isEnabled = default(bool?), List<ConfiguredStore> stores = default(List<ConfiguredStore>), ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), bool? _internal = default(bool?), string appStoreAppId = default(string), string name = default(string), string description = default(string), string logo = default(string), string developerName = default(string))
         {
             // to ensure "id" is required (not null)
@@ -205,74 +201,64 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Unique App store app configuration id
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>Unique App store app configuration id</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// App Id
+        /// Gets or Sets AppId
         /// </summary>
-        /// <value>App Id</value>
         [DataMember(Name="AppId", EmitDefaultValue=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// Is enabled
+        /// Gets or Sets IsEnabled
         /// </summary>
-        /// <value>Is enabled</value>
         [DataMember(Name="IsEnabled", EmitDefaultValue=false)]
         public bool? IsEnabled { get; set; }
 
         /// <summary>
-        /// List of stores
+        /// Gets or Sets Stores
         /// </summary>
-        /// <value>List of stores</value>
         [DataMember(Name="Stores", EmitDefaultValue=false)]
         public List<ConfiguredStore> Stores { get; set; }
 
 
 
         /// <summary>
-        /// Internal
+        /// Gets or Sets Internal
         /// </summary>
-        /// <value>Internal</value>
         [DataMember(Name="Internal", EmitDefaultValue=false)]
         public bool? Internal { get; set; }
 
         /// <summary>
-        /// Unique App store app id
+        /// Gets or Sets AppStoreAppId
         /// </summary>
-        /// <value>Unique App store app id</value>
         [DataMember(Name="AppStoreAppId", EmitDefaultValue=false)]
         public string AppStoreAppId { get; set; }
 
         /// <summary>
-        /// Name of Appstore app
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>Name of Appstore app</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Description
+        /// Gets or Sets Description
         /// </summary>
-        /// <value>Description</value>
         [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Logo
+        /// Gets or Sets Logo
         /// </summary>
-        /// <value>Logo</value>
         [DataMember(Name="Logo", EmitDefaultValue=false)]
         public string Logo { get; set; }
 
         /// <summary>
-        /// Developer name
+        /// Gets or Sets DeveloperName
         /// </summary>
-        /// <value>Developer name</value>
         [DataMember(Name="DeveloperName", EmitDefaultValue=false)]
         public string DeveloperName { get; set; }
 

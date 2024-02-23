@@ -23,15 +23,14 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// App store app summary information
+    /// AppStoreAppSummary
     /// </summary>
     [DataContract]
     public partial class AppStoreAppSummary :  IEquatable<AppStoreAppSummary>
     {
         /// <summary>
-        /// Application verification status
+        /// Defines VerificationStatus
         /// </summary>
-        /// <value>Application verification status</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum VerificationStatusEnum
         {
@@ -56,9 +55,8 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Application verification status
+        /// Gets or Sets VerificationStatus
         /// </summary>
-        /// <value>Application verification status</value>
         [DataMember(Name="VerificationStatus", EmitDefaultValue=false)]
         public VerificationStatusEnum VerificationStatus { get; set; }
         /// <summary>
@@ -113,9 +111,8 @@ namespace Flipdish.Model
 
 
         /// <summary>
-        /// Categories
+        /// Gets or Sets Categories
         /// </summary>
-        /// <value>Categories</value>
         [DataMember(Name="Categories", EmitDefaultValue=false)]
         public List<CategoriesEnum> Categories { get; set; }
         /// <summary>
@@ -230,9 +227,8 @@ namespace Flipdish.Model
 
 
         /// <summary>
-        /// Countries
+        /// Gets or Sets Countries
         /// </summary>
-        /// <value>Countries</value>
         [DataMember(Name="Countries", EmitDefaultValue=false)]
         public List<CountriesEnum> Countries { get; set; }
         /// <summary>
@@ -243,16 +239,16 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AppStoreAppSummary" /> class.
         /// </summary>
-        /// <param name="id">Unique App store app id (required).</param>
-        /// <param name="verificationStatus">Application verification status (required).</param>
-        /// <param name="logo">Logo.</param>
-        /// <param name="_internal">Internal (required).</param>
-        /// <param name="name">Name (required).</param>
-        /// <param name="description">Description (required).</param>
-        /// <param name="isEnabled">Is application enabled.</param>
-        /// <param name="categories">Categories (required).</param>
-        /// <param name="countries">Countries (required).</param>
-        /// <param name="developerName">Developer Name.</param>
+        /// <param name="id">id (required).</param>
+        /// <param name="verificationStatus">verificationStatus (required).</param>
+        /// <param name="logo">logo.</param>
+        /// <param name="_internal">_internal (required).</param>
+        /// <param name="name">name (required).</param>
+        /// <param name="description">description (required).</param>
+        /// <param name="isEnabled">isEnabled.</param>
+        /// <param name="categories">categories (required).</param>
+        /// <param name="countries">countries (required).</param>
+        /// <param name="developerName">developerName.</param>
         public AppStoreAppSummary(string id = default(string), VerificationStatusEnum verificationStatus = default(VerificationStatusEnum), string logo = default(string), bool? _internal = default(bool?), string name = default(string), string description = default(string), bool? isEnabled = default(bool?), List<CategoriesEnum> categories = default(List<CategoriesEnum>), List<CountriesEnum> countries = default(List<CountriesEnum>), string developerName = default(string))
         {
             // to ensure "id" is required (not null)
@@ -324,54 +320,47 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Unique App store app id
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>Unique App store app id</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
 
         /// <summary>
-        /// Logo
+        /// Gets or Sets Logo
         /// </summary>
-        /// <value>Logo</value>
         [DataMember(Name="Logo", EmitDefaultValue=false)]
         public string Logo { get; set; }
 
         /// <summary>
-        /// Internal
+        /// Gets or Sets Internal
         /// </summary>
-        /// <value>Internal</value>
         [DataMember(Name="Internal", EmitDefaultValue=false)]
         public bool? Internal { get; set; }
 
         /// <summary>
-        /// Name
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>Name</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Description
+        /// Gets or Sets Description
         /// </summary>
-        /// <value>Description</value>
         [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Is application enabled
+        /// Gets or Sets IsEnabled
         /// </summary>
-        /// <value>Is application enabled</value>
         [DataMember(Name="IsEnabled", EmitDefaultValue=false)]
         public bool? IsEnabled { get; set; }
 
 
 
         /// <summary>
-        /// Developer Name
+        /// Gets or Sets DeveloperName
         /// </summary>
-        /// <value>Developer Name</value>
         [DataMember(Name="DeveloperName", EmitDefaultValue=false)]
         public string DeveloperName { get; set; }
 

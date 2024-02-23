@@ -23,15 +23,14 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// App store app configurations
+    /// AppStoreAppConfiguration
     /// </summary>
     [DataContract]
     public partial class AppStoreAppConfiguration :  IEquatable<AppStoreAppConfiguration>
     {
         /// <summary>
-        /// Application verification status
+        /// Defines VerificationStatus
         /// </summary>
-        /// <value>Application verification status</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum VerificationStatusEnum
         {
@@ -56,15 +55,13 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Application verification status
+        /// Gets or Sets VerificationStatus
         /// </summary>
-        /// <value>Application verification status</value>
         [DataMember(Name="VerificationStatus", EmitDefaultValue=false)]
         public VerificationStatusEnum VerificationStatus { get; set; }
         /// <summary>
-        /// Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt;
+        /// Defines ConfigurationType
         /// </summary>
-        /// <value>Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt;</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum ConfigurationTypeEnum
         {
@@ -83,15 +80,13 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt;
+        /// Gets or Sets ConfigurationType
         /// </summary>
-        /// <value>Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt;</value>
         [DataMember(Name="ConfigurationType", EmitDefaultValue=false)]
         public ConfigurationTypeEnum ConfigurationType { get; set; }
         /// <summary>
-        /// Store selector type
+        /// Defines StoreSelectorType
         /// </summary>
-        /// <value>Store selector type</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StoreSelectorTypeEnum
         {
@@ -116,15 +111,13 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Store selector type
+        /// Gets or Sets StoreSelectorType
         /// </summary>
-        /// <value>Store selector type</value>
         [DataMember(Name="StoreSelectorType", EmitDefaultValue=false)]
         public StoreSelectorTypeEnum StoreSelectorType { get; set; }
         /// <summary>
-        /// Teammate app access level
+        /// Defines TeammateAppAccessLevel
         /// </summary>
-        /// <value>Teammate app access level</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TeammateAppAccessLevelEnum
         {
@@ -179,15 +172,13 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Teammate app access level
+        /// Gets or Sets TeammateAppAccessLevel
         /// </summary>
-        /// <value>Teammate app access level</value>
         [DataMember(Name="TeammateAppAccessLevel", EmitDefaultValue=false)]
         public TeammateAppAccessLevelEnum? TeammateAppAccessLevel { get; set; }
         /// <summary>
-        /// Permissions type
+        /// Defines PermissionsType
         /// </summary>
-        /// <value>Permissions type</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PermissionsTypeEnum
         {
@@ -200,9 +191,8 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Permissions type
+        /// Gets or Sets PermissionsType
         /// </summary>
-        /// <value>Permissions type</value>
         [DataMember(Name="PermissionsType", EmitDefaultValue=false)]
         public PermissionsTypeEnum PermissionsType { get; set; }
         /// <summary>
@@ -257,9 +247,8 @@ namespace Flipdish.Model
 
 
         /// <summary>
-        /// Categories
+        /// Gets or Sets Categories
         /// </summary>
-        /// <value>Categories</value>
         [DataMember(Name="Categories", EmitDefaultValue=false)]
         public List<CategoriesEnum> Categories { get; set; }
         /// <summary>
@@ -374,9 +363,8 @@ namespace Flipdish.Model
 
 
         /// <summary>
-        /// Countries
+        /// Gets or Sets Countries
         /// </summary>
-        /// <value>Countries</value>
         [DataMember(Name="Countries", EmitDefaultValue=false)]
         public List<CountriesEnum> Countries { get; set; }
         /// <summary>
@@ -387,33 +375,33 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AppStoreAppConfiguration" /> class.
         /// </summary>
-        /// <param name="id">Unique App store app configuration id (required).</param>
-        /// <param name="appId">App id (required).</param>
-        /// <param name="appStoreAppId">App store app id (required).</param>
-        /// <param name="isEnabled">Is enabled (required).</param>
-        /// <param name="storeIds">Stores id&#39;s.</param>
-        /// <param name="settings">Settings.</param>
-        /// <param name="verificationStatus">Application verification status (required).</param>
-        /// <param name="logo">Logo.</param>
-        /// <param name="oAuthAppId">OAuth App identifier (required).</param>
-        /// <param name="_internal">Internal (required).</param>
-        /// <param name="details">Details (required).</param>
-        /// <param name="configurationType">Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt; (required).</param>
-        /// <param name="storeSelectorType">Store selector type (required).</param>
-        /// <param name="fieldGroups">Field groups.</param>
-        /// <param name="setupInstructions">Setup instructions.</param>
-        /// <param name="externalSetupLink">External setup link.</param>
-        /// <param name="teammateAppAccessLevel">Teammate app access level.</param>
-        /// <param name="permissionsType">Permissions type (required).</param>
-        /// <param name="support">Support information.</param>
-        /// <param name="externalFunctionActionUrl">Action URL for external functions, used for handling Portal configuration action buttons.</param>
-        /// <param name="externalFunctionSignatureKey">Signing key for external function action calls.</param>
-        /// <param name="isPaid">Is Paid.</param>
-        /// <param name="name">Name (required).</param>
-        /// <param name="description">Description (required).</param>
-        /// <param name="categories">Categories (required).</param>
-        /// <param name="countries">Countries (required).</param>
-        /// <param name="developerName">Developer Name.</param>
+        /// <param name="id">id (required).</param>
+        /// <param name="appId">appId (required).</param>
+        /// <param name="appStoreAppId">appStoreAppId (required).</param>
+        /// <param name="isEnabled">isEnabled (required).</param>
+        /// <param name="storeIds">storeIds.</param>
+        /// <param name="settings">settings.</param>
+        /// <param name="verificationStatus">verificationStatus (required).</param>
+        /// <param name="logo">logo.</param>
+        /// <param name="oAuthAppId">oAuthAppId (required).</param>
+        /// <param name="_internal">_internal (required).</param>
+        /// <param name="details">details (required).</param>
+        /// <param name="configurationType">configurationType (required).</param>
+        /// <param name="storeSelectorType">storeSelectorType (required).</param>
+        /// <param name="fieldGroups">fieldGroups.</param>
+        /// <param name="setupInstructions">setupInstructions.</param>
+        /// <param name="externalSetupLink">externalSetupLink.</param>
+        /// <param name="teammateAppAccessLevel">teammateAppAccessLevel.</param>
+        /// <param name="permissionsType">permissionsType (required).</param>
+        /// <param name="support">support.</param>
+        /// <param name="externalFunctionActionUrl">externalFunctionActionUrl.</param>
+        /// <param name="externalFunctionSignatureKey">externalFunctionSignatureKey.</param>
+        /// <param name="isPaid">isPaid.</param>
+        /// <param name="name">name (required).</param>
+        /// <param name="description">description (required).</param>
+        /// <param name="categories">categories (required).</param>
+        /// <param name="countries">countries (required).</param>
+        /// <param name="developerName">developerName.</param>
         public AppStoreAppConfiguration(string id = default(string), string appId = default(string), string appStoreAppId = default(string), bool? isEnabled = default(bool?), List<int?> storeIds = default(List<int?>), List<Setting> settings = default(List<Setting>), VerificationStatusEnum verificationStatus = default(VerificationStatusEnum), string logo = default(string), string oAuthAppId = default(string), bool? _internal = default(bool?), string details = default(string), ConfigurationTypeEnum configurationType = default(ConfigurationTypeEnum), StoreSelectorTypeEnum storeSelectorType = default(StoreSelectorTypeEnum), List<FieldGroup> fieldGroups = default(List<FieldGroup>), string setupInstructions = default(string), string externalSetupLink = default(string), TeammateAppAccessLevelEnum? teammateAppAccessLevel = default(TeammateAppAccessLevelEnum?), PermissionsTypeEnum permissionsType = default(PermissionsTypeEnum), AppStoreAppSupportInfo support = default(AppStoreAppSupportInfo), string externalFunctionActionUrl = default(string), string externalFunctionSignatureKey = default(string), bool? isPaid = default(bool?), string name = default(string), string description = default(string), List<CategoriesEnum> categories = default(List<CategoriesEnum>), List<CountriesEnum> countries = default(List<CountriesEnum>), string developerName = default(string))
         {
             // to ensure "id" is required (not null)
@@ -566,149 +554,129 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Unique App store app configuration id
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>Unique App store app configuration id</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// App id
+        /// Gets or Sets AppId
         /// </summary>
-        /// <value>App id</value>
         [DataMember(Name="AppId", EmitDefaultValue=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// App store app id
+        /// Gets or Sets AppStoreAppId
         /// </summary>
-        /// <value>App store app id</value>
         [DataMember(Name="AppStoreAppId", EmitDefaultValue=false)]
         public string AppStoreAppId { get; set; }
 
         /// <summary>
-        /// Is enabled
+        /// Gets or Sets IsEnabled
         /// </summary>
-        /// <value>Is enabled</value>
         [DataMember(Name="IsEnabled", EmitDefaultValue=false)]
         public bool? IsEnabled { get; set; }
 
         /// <summary>
-        /// Stores id&#39;s
+        /// Gets or Sets StoreIds
         /// </summary>
-        /// <value>Stores id&#39;s</value>
         [DataMember(Name="StoreIds", EmitDefaultValue=false)]
         public List<int?> StoreIds { get; set; }
 
         /// <summary>
-        /// Settings
+        /// Gets or Sets Settings
         /// </summary>
-        /// <value>Settings</value>
         [DataMember(Name="Settings", EmitDefaultValue=false)]
         public List<Setting> Settings { get; set; }
 
 
         /// <summary>
-        /// Logo
+        /// Gets or Sets Logo
         /// </summary>
-        /// <value>Logo</value>
         [DataMember(Name="Logo", EmitDefaultValue=false)]
         public string Logo { get; set; }
 
         /// <summary>
-        /// OAuth App identifier
+        /// Gets or Sets OAuthAppId
         /// </summary>
-        /// <value>OAuth App identifier</value>
         [DataMember(Name="OAuthAppId", EmitDefaultValue=false)]
         public string OAuthAppId { get; set; }
 
         /// <summary>
-        /// Internal
+        /// Gets or Sets Internal
         /// </summary>
-        /// <value>Internal</value>
         [DataMember(Name="Internal", EmitDefaultValue=false)]
         public bool? Internal { get; set; }
 
         /// <summary>
-        /// Details
+        /// Gets or Sets Details
         /// </summary>
-        /// <value>Details</value>
         [DataMember(Name="Details", EmitDefaultValue=false)]
         public string Details { get; set; }
 
 
 
         /// <summary>
-        /// Field groups
+        /// Gets or Sets FieldGroups
         /// </summary>
-        /// <value>Field groups</value>
         [DataMember(Name="FieldGroups", EmitDefaultValue=false)]
         public List<FieldGroup> FieldGroups { get; set; }
 
         /// <summary>
-        /// Setup instructions
+        /// Gets or Sets SetupInstructions
         /// </summary>
-        /// <value>Setup instructions</value>
         [DataMember(Name="SetupInstructions", EmitDefaultValue=false)]
         public string SetupInstructions { get; set; }
 
         /// <summary>
-        /// External setup link
+        /// Gets or Sets ExternalSetupLink
         /// </summary>
-        /// <value>External setup link</value>
         [DataMember(Name="ExternalSetupLink", EmitDefaultValue=false)]
         public string ExternalSetupLink { get; set; }
 
 
 
         /// <summary>
-        /// Support information
+        /// Gets or Sets Support
         /// </summary>
-        /// <value>Support information</value>
         [DataMember(Name="Support", EmitDefaultValue=false)]
         public AppStoreAppSupportInfo Support { get; set; }
 
         /// <summary>
-        /// Action URL for external functions, used for handling Portal configuration action buttons
+        /// Gets or Sets ExternalFunctionActionUrl
         /// </summary>
-        /// <value>Action URL for external functions, used for handling Portal configuration action buttons</value>
         [DataMember(Name="ExternalFunctionActionUrl", EmitDefaultValue=false)]
         public string ExternalFunctionActionUrl { get; set; }
 
         /// <summary>
-        /// Signing key for external function action calls
+        /// Gets or Sets ExternalFunctionSignatureKey
         /// </summary>
-        /// <value>Signing key for external function action calls</value>
         [DataMember(Name="ExternalFunctionSignatureKey", EmitDefaultValue=false)]
         public string ExternalFunctionSignatureKey { get; set; }
 
         /// <summary>
-        /// Is Paid
+        /// Gets or Sets IsPaid
         /// </summary>
-        /// <value>Is Paid</value>
         [DataMember(Name="IsPaid", EmitDefaultValue=false)]
         public bool? IsPaid { get; set; }
 
         /// <summary>
-        /// Name
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>Name</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Description
+        /// Gets or Sets Description
         /// </summary>
-        /// <value>Description</value>
         [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
 
 
         /// <summary>
-        /// Developer Name
+        /// Gets or Sets DeveloperName
         /// </summary>
-        /// <value>Developer Name</value>
         [DataMember(Name="DeveloperName", EmitDefaultValue=false)]
         public string DeveloperName { get; set; }
 

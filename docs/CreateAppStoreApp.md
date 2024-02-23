@@ -3,24 +3,24 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Details** | **string** | Details | 
-**ConfigurationType** | **string** | Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt; | 
-**StoreSelectorType** | **string** | Store selector type | 
-**FieldGroups** | [**List&lt;FieldGroup&gt;**](FieldGroup.md) | Field groups | [optional] 
-**SetupInstructions** | **string** | Setup instructions | [optional] 
-**ExternalSetupLink** | **string** | External setup link | [optional] 
-**TeammateAppAccessLevel** | **string** | Teammate app access level | [optional] 
-**PermissionsType** | **string** | Permissions type | 
-**Support** | [**AppStoreAppSupportInfo**](AppStoreAppSupportInfo.md) | Support information | [optional] 
-**ExternalFunctionActionUrl** | **string** | Action URL for external functions, used for handling Portal configuration action buttons | [optional] 
-**ExternalFunctionSignatureKey** | **string** | Signing key for external function action calls | [optional] 
-**IsPaid** | **bool?** | Is Paid | [optional] 
-**Name** | **string** | Name | 
-**Description** | **string** | Description | 
-**IsEnabled** | **bool?** | Is application enabled | [optional] 
-**Categories** | **List&lt;string&gt;** | Categories | 
-**Countries** | **List&lt;string&gt;** | Countries | 
-**DeveloperName** | **string** | Developer Name | [optional] 
+**Details** | **string** |  | 
+**ConfigurationType** | **string** |  | 
+**StoreSelectorType** | **string** |  | 
+**FieldGroups** | [**List&lt;FieldGroup&gt;**](FieldGroup.md) |  | [optional] 
+**SetupInstructions** | **string** |  | [optional] 
+**ExternalSetupLink** | **string** |  | [optional] 
+**TeammateAppAccessLevel** | **string** |  | [optional] 
+**PermissionsType** | **string** |  | 
+**Support** | [**AppStoreAppSupportInfo**](AppStoreAppSupportInfo.md) |  | [optional] 
+**ExternalFunctionActionUrl** | **string** |  | [optional] 
+**ExternalFunctionSignatureKey** | **string** |  | [optional] 
+**IsPaid** | **bool?** |  | [optional] 
+**Name** | **string** |  | 
+**Description** | **string** |  | 
+**IsEnabled** | **bool?** |  | [optional] 
+**Categories** | **List&lt;string&gt;** |  | 
+**Countries** | **List&lt;string&gt;** |  | 
+**DeveloperName** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

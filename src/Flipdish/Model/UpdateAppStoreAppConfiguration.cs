@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Update App store app configuration
+    /// UpdateAppStoreAppConfiguration
     /// </summary>
     [DataContract]
     public partial class UpdateAppStoreAppConfiguration :  IEquatable<UpdateAppStoreAppConfiguration>
@@ -36,9 +36,9 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateAppStoreAppConfiguration" /> class.
         /// </summary>
-        /// <param name="isEnabled">Is enabled (required).</param>
-        /// <param name="storeIds">Stores id&#39;s.</param>
-        /// <param name="settings">Settings.</param>
+        /// <param name="isEnabled">isEnabled (required).</param>
+        /// <param name="storeIds">storeIds.</param>
+        /// <param name="settings">settings.</param>
         public UpdateAppStoreAppConfiguration(bool? isEnabled = default(bool?), List<int?> storeIds = default(List<int?>), List<Setting> settings = default(List<Setting>))
         {
             // to ensure "isEnabled" is required (not null)
@@ -55,23 +55,20 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Is enabled
+        /// Gets or Sets IsEnabled
         /// </summary>
-        /// <value>Is enabled</value>
         [DataMember(Name="IsEnabled", EmitDefaultValue=false)]
         public bool? IsEnabled { get; set; }
 
         /// <summary>
-        /// Stores id&#39;s
+        /// Gets or Sets StoreIds
         /// </summary>
-        /// <value>Stores id&#39;s</value>
         [DataMember(Name="StoreIds", EmitDefaultValue=false)]
         public List<int?> StoreIds { get; set; }
 
         /// <summary>
-        /// Settings
+        /// Gets or Sets Settings
         /// </summary>
-        /// <value>Settings</value>
         [DataMember(Name="Settings", EmitDefaultValue=false)]
         public List<Setting> Settings { get; set; }
 

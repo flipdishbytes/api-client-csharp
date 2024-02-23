@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Configured stores
+    /// ConfiguredStore
     /// </summary>
     [DataContract]
     public partial class ConfiguredStore :  IEquatable<ConfiguredStore>
@@ -31,8 +31,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConfiguredStore" /> class.
         /// </summary>
-        /// <param name="storeId">Store id.</param>
-        /// <param name="name">Name of store.</param>
+        /// <param name="storeId">storeId.</param>
+        /// <param name="name">name.</param>
         public ConfiguredStore(int? storeId = default(int?), string name = default(string))
         {
             this.StoreId = storeId;
@@ -40,16 +40,14 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Store id
+        /// Gets or Sets StoreId
         /// </summary>
-        /// <value>Store id</value>
         [DataMember(Name="StoreId", EmitDefaultValue=false)]
         public int? StoreId { get; set; }
 
         /// <summary>
-        /// Name of store
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>Name of store</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 

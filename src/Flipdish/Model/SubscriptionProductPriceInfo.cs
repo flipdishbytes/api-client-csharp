@@ -23,15 +23,14 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Price info
+    /// SubscriptionProductPriceInfo
     /// </summary>
     [DataContract]
     public partial class SubscriptionProductPriceInfo :  IEquatable<SubscriptionProductPriceInfo>
     {
         /// <summary>
-        /// Scope (eg. per store or per whitelabel)
+        /// Defines Scope
         /// </summary>
-        /// <value>Scope (eg. per store or per whitelabel)</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum ScopeEnum
         {
@@ -50,17 +49,16 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Scope (eg. per store or per whitelabel)
+        /// Gets or Sets Scope
         /// </summary>
-        /// <value>Scope (eg. per store or per whitelabel)</value>
         [DataMember(Name="Scope", EmitDefaultValue=false)]
         public ScopeEnum? Scope { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SubscriptionProductPriceInfo" /> class.
         /// </summary>
-        /// <param name="amount">Price amount.</param>
-        /// <param name="currency">Currency code.</param>
-        /// <param name="scope">Scope (eg. per store or per whitelabel).</param>
+        /// <param name="amount">amount.</param>
+        /// <param name="currency">currency.</param>
+        /// <param name="scope">scope.</param>
         public SubscriptionProductPriceInfo(double? amount = default(double?), string currency = default(string), ScopeEnum? scope = default(ScopeEnum?))
         {
             this.Amount = amount;
@@ -69,16 +67,14 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Price amount
+        /// Gets or Sets Amount
         /// </summary>
-        /// <value>Price amount</value>
         [DataMember(Name="Amount", EmitDefaultValue=false)]
         public double? Amount { get; set; }
 
         /// <summary>
-        /// Currency code
+        /// Gets or Sets Currency
         /// </summary>
-        /// <value>Currency code</value>
         [DataMember(Name="Currency", EmitDefaultValue=false)]
         public string Currency { get; set; }
 

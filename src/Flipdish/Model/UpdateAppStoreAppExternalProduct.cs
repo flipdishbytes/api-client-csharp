@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Update App store app external product id
+    /// UpdateAppStoreAppExternalProduct
     /// </summary>
     [DataContract]
     public partial class UpdateAppStoreAppExternalProduct :  IEquatable<UpdateAppStoreAppExternalProduct>
@@ -31,16 +31,15 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateAppStoreAppExternalProduct" /> class.
         /// </summary>
-        /// <param name="externalProductId">The external product id.</param>
+        /// <param name="externalProductId">externalProductId.</param>
         public UpdateAppStoreAppExternalProduct(string externalProductId = default(string))
         {
             this.ExternalProductId = externalProductId;
         }
         
         /// <summary>
-        /// The external product id
+        /// Gets or Sets ExternalProductId
         /// </summary>
-        /// <value>The external product id</value>
         [DataMember(Name="ExternalProductId", EmitDefaultValue=false)]
         public string ExternalProductId { get; set; }
 

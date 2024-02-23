@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Subscription change job can be longer running, this contains job information
+    /// AppStoreSubscriptionJobResponse
     /// </summary>
     [DataContract]
     public partial class AppStoreSubscriptionJobResponse :  IEquatable<AppStoreSubscriptionJobResponse>
@@ -31,16 +31,15 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AppStoreSubscriptionJobResponse" /> class.
         /// </summary>
-        /// <param name="subscriptionChangeJobId">Subscription change job id.</param>
+        /// <param name="subscriptionChangeJobId">subscriptionChangeJobId.</param>
         public AppStoreSubscriptionJobResponse(string subscriptionChangeJobId = default(string))
         {
             this.SubscriptionChangeJobId = subscriptionChangeJobId;
         }
         
         /// <summary>
-        /// Subscription change job id
+        /// Gets or Sets SubscriptionChangeJobId
         /// </summary>
-        /// <value>Subscription change job id</value>
         [DataMember(Name="SubscriptionChangeJobId", EmitDefaultValue=false)]
         public string SubscriptionChangeJobId { get; set; }
 

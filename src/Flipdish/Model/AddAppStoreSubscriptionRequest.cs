@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Add subscription
+    /// AddAppStoreSubscriptionRequest
     /// </summary>
     [DataContract]
     public partial class AddAppStoreSubscriptionRequest :  IEquatable<AddAppStoreSubscriptionRequest>
@@ -31,8 +31,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AddAppStoreSubscriptionRequest" /> class.
         /// </summary>
-        /// <param name="storeIds">Store ids to update.</param>
-        /// <param name="subscriptionAccountEmail">Email (for subscription setup) - optional, only required for admin access.</param>
+        /// <param name="storeIds">storeIds.</param>
+        /// <param name="subscriptionAccountEmail">subscriptionAccountEmail.</param>
         public AddAppStoreSubscriptionRequest(List<int?> storeIds = default(List<int?>), string subscriptionAccountEmail = default(string))
         {
             this.StoreIds = storeIds;
@@ -40,16 +40,14 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Store ids to update
+        /// Gets or Sets StoreIds
         /// </summary>
-        /// <value>Store ids to update</value>
         [DataMember(Name="StoreIds", EmitDefaultValue=false)]
         public List<int?> StoreIds { get; set; }
 
         /// <summary>
-        /// Email (for subscription setup) - optional, only required for admin access
+        /// Gets or Sets SubscriptionAccountEmail
         /// </summary>
-        /// <value>Email (for subscription setup) - optional, only required for admin access</value>
         [DataMember(Name="SubscriptionAccountEmail", EmitDefaultValue=false)]
         public string SubscriptionAccountEmail { get; set; }
 

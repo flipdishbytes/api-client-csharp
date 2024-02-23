@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Field group
+    /// FieldGroup
     /// </summary>
     [DataContract]
     public partial class FieldGroup :  IEquatable<FieldGroup>
@@ -36,11 +36,11 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FieldGroup" /> class.
         /// </summary>
-        /// <param name="name">Name (required).</param>
-        /// <param name="description">Description.</param>
-        /// <param name="tooltip">Tooltip  &lt;remarks&gt;Displays on text hover&lt;/remarks&gt;.</param>
-        /// <param name="position">Position  &lt;remarks&gt;Position order in the field groups to display&lt;/remarks&gt; (required).</param>
-        /// <param name="fields">Fields.</param>
+        /// <param name="name">name (required).</param>
+        /// <param name="description">description.</param>
+        /// <param name="tooltip">tooltip.</param>
+        /// <param name="position">position (required).</param>
+        /// <param name="fields">fields.</param>
         public FieldGroup(string name = default(string), string description = default(string), string tooltip = default(string), int? position = default(int?), List<Field> fields = default(List<Field>))
         {
             // to ensure "name" is required (not null)
@@ -67,37 +67,32 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Name
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>Name</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Description
+        /// Gets or Sets Description
         /// </summary>
-        /// <value>Description</value>
         [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Tooltip  &lt;remarks&gt;Displays on text hover&lt;/remarks&gt;
+        /// Gets or Sets Tooltip
         /// </summary>
-        /// <value>Tooltip  &lt;remarks&gt;Displays on text hover&lt;/remarks&gt;</value>
         [DataMember(Name="Tooltip", EmitDefaultValue=false)]
         public string Tooltip { get; set; }
 
         /// <summary>
-        /// Position  &lt;remarks&gt;Position order in the field groups to display&lt;/remarks&gt;
+        /// Gets or Sets Position
         /// </summary>
-        /// <value>Position  &lt;remarks&gt;Position order in the field groups to display&lt;/remarks&gt;</value>
         [DataMember(Name="Position", EmitDefaultValue=false)]
         public int? Position { get; set; }
 
         /// <summary>
-        /// Fields
+        /// Gets or Sets Fields
         /// </summary>
-        /// <value>Fields</value>
         [DataMember(Name="Fields", EmitDefaultValue=false)]
         public List<Field> Fields { get; set; }
 

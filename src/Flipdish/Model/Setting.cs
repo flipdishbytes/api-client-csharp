@@ -31,8 +31,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Setting" /> class.
         /// </summary>
-        /// <param name="key">Key.</param>
-        /// <param name="value">Value.</param>
+        /// <param name="key">key.</param>
+        /// <param name="value">value.</param>
         public Setting(string key = default(string), string value = default(string))
         {
             this.Key = key;
@@ -40,16 +40,14 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Key
+        /// Gets or Sets Key
         /// </summary>
-        /// <value>Key</value>
         [DataMember(Name="Key", EmitDefaultValue=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// Value
+        /// Gets or Sets Value
         /// </summary>
-        /// <value>Value</value>
         [DataMember(Name="Value", EmitDefaultValue=false)]
         public string Value { get; set; }
 

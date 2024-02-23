@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// App store configurations for a given AppId
+    /// AppStoreAppConfigurationsWithSubscriptions
     /// </summary>
     [DataContract]
     public partial class AppStoreAppConfigurationsWithSubscriptions :  IEquatable<AppStoreAppConfigurationsWithSubscriptions>
@@ -31,9 +31,9 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AppStoreAppConfigurationsWithSubscriptions" /> class.
         /// </summary>
-        /// <param name="subscription">Subscription information for the AppId for the AppStoreApp.</param>
-        /// <param name="configurations">Configurations for the AppId for the AppStoreApp.</param>
-        /// <param name="prices">Prices.</param>
+        /// <param name="subscription">subscription.</param>
+        /// <param name="configurations">configurations.</param>
+        /// <param name="prices">prices.</param>
         public AppStoreAppConfigurationsWithSubscriptions(AppStoreAppSubscriptionSummary subscription = default(AppStoreAppSubscriptionSummary), List<AppStoreAppConfigurationSummary> configurations = default(List<AppStoreAppConfigurationSummary>), List<SubscriptionProductPriceInfo> prices = default(List<SubscriptionProductPriceInfo>))
         {
             this.Subscription = subscription;
@@ -42,23 +42,20 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Subscription information for the AppId for the AppStoreApp
+        /// Gets or Sets Subscription
         /// </summary>
-        /// <value>Subscription information for the AppId for the AppStoreApp</value>
         [DataMember(Name="Subscription", EmitDefaultValue=false)]
         public AppStoreAppSubscriptionSummary Subscription { get; set; }
 
         /// <summary>
-        /// Configurations for the AppId for the AppStoreApp
+        /// Gets or Sets Configurations
         /// </summary>
-        /// <value>Configurations for the AppId for the AppStoreApp</value>
         [DataMember(Name="Configurations", EmitDefaultValue=false)]
         public List<AppStoreAppConfigurationSummary> Configurations { get; set; }
 
         /// <summary>
-        /// Prices
+        /// Gets or Sets Prices
         /// </summary>
-        /// <value>Prices</value>
         [DataMember(Name="Prices", EmitDefaultValue=false)]
         public List<SubscriptionProductPriceInfo> Prices { get; set; }
 

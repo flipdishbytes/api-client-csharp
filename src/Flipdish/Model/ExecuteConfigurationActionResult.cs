@@ -23,15 +23,14 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Result of configuration action execution
+    /// ExecuteConfigurationActionResult
     /// </summary>
     [DataContract]
     public partial class ExecuteConfigurationActionResult :  IEquatable<ExecuteConfigurationActionResult>
     {
         /// <summary>
-        /// Redirect target
+        /// Defines RedirectTarget
         /// </summary>
-        /// <value>Redirect target</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum RedirectTargetEnum
         {
@@ -56,18 +55,17 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Redirect target
+        /// Gets or Sets RedirectTarget
         /// </summary>
-        /// <value>Redirect target</value>
         [DataMember(Name="RedirectTarget", EmitDefaultValue=false)]
         public RedirectTargetEnum? RedirectTarget { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ExecuteConfigurationActionResult" /> class.
         /// </summary>
-        /// <param name="errorMessage">Error message to display to the user (if not empty).</param>
-        /// <param name="infoMessage">Information message to display to the user (if not empty).</param>
-        /// <param name="redirectUrl">Redirect user to URL (if not empty).</param>
-        /// <param name="redirectTarget">Redirect target.</param>
+        /// <param name="errorMessage">errorMessage.</param>
+        /// <param name="infoMessage">infoMessage.</param>
+        /// <param name="redirectUrl">redirectUrl.</param>
+        /// <param name="redirectTarget">redirectTarget.</param>
         public ExecuteConfigurationActionResult(string errorMessage = default(string), string infoMessage = default(string), string redirectUrl = default(string), RedirectTargetEnum? redirectTarget = default(RedirectTargetEnum?))
         {
             this.ErrorMessage = errorMessage;
@@ -77,23 +75,20 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Error message to display to the user (if not empty)
+        /// Gets or Sets ErrorMessage
         /// </summary>
-        /// <value>Error message to display to the user (if not empty)</value>
         [DataMember(Name="ErrorMessage", EmitDefaultValue=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// Information message to display to the user (if not empty)
+        /// Gets or Sets InfoMessage
         /// </summary>
-        /// <value>Information message to display to the user (if not empty)</value>
         [DataMember(Name="InfoMessage", EmitDefaultValue=false)]
         public string InfoMessage { get; set; }
 
         /// <summary>
-        /// Redirect user to URL (if not empty)
+        /// Gets or Sets RedirectUrl
         /// </summary>
-        /// <value>Redirect user to URL (if not empty)</value>
         [DataMember(Name="RedirectUrl", EmitDefaultValue=false)]
         public string RedirectUrl { get; set; }
 

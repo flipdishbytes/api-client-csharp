@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StoreIds** | **List&lt;int?&gt;** | Store ids to update | [optional] 
-**SubscriptionAccountEmail** | **string** | Email (for subscription setup) - optional, only required for admin access | [optional] 
+**StoreIds** | **List&lt;int?&gt;** |  | [optional] 
+**SubscriptionAccountEmail** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// App store subscription information
+    /// AppStoreAppSubscriptionSummary
     /// </summary>
     [DataContract]
     public partial class AppStoreAppSubscriptionSummary :  IEquatable<AppStoreAppSubscriptionSummary>
@@ -31,10 +31,10 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AppStoreAppSubscriptionSummary" /> class.
         /// </summary>
-        /// <param name="totalSubscriptions">Total subscriptions (per the AppId subscription setup).</param>
-        /// <param name="usedSubscriptions">Number of subscriptions configured and enabled.</param>
-        /// <param name="subscriptionAccountIsSetupForClient">Is client setup for subscriptions.</param>
-        /// <param name="subscriptionAccounts">Available accounts for subscriptions (only if requesting user has enough permissions to see the list, otherwise empty list or null).</param>
+        /// <param name="totalSubscriptions">totalSubscriptions.</param>
+        /// <param name="usedSubscriptions">usedSubscriptions.</param>
+        /// <param name="subscriptionAccountIsSetupForClient">subscriptionAccountIsSetupForClient.</param>
+        /// <param name="subscriptionAccounts">subscriptionAccounts.</param>
         public AppStoreAppSubscriptionSummary(int? totalSubscriptions = default(int?), int? usedSubscriptions = default(int?), bool? subscriptionAccountIsSetupForClient = default(bool?), List<AppStoreAppSubscriptionAccount> subscriptionAccounts = default(List<AppStoreAppSubscriptionAccount>))
         {
             this.TotalSubscriptions = totalSubscriptions;
@@ -44,30 +44,26 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Total subscriptions (per the AppId subscription setup)
+        /// Gets or Sets TotalSubscriptions
         /// </summary>
-        /// <value>Total subscriptions (per the AppId subscription setup)</value>
         [DataMember(Name="TotalSubscriptions", EmitDefaultValue=false)]
         public int? TotalSubscriptions { get; set; }
 
         /// <summary>
-        /// Number of subscriptions configured and enabled
+        /// Gets or Sets UsedSubscriptions
         /// </summary>
-        /// <value>Number of subscriptions configured and enabled</value>
         [DataMember(Name="UsedSubscriptions", EmitDefaultValue=false)]
         public int? UsedSubscriptions { get; set; }
 
         /// <summary>
-        /// Is client setup for subscriptions
+        /// Gets or Sets SubscriptionAccountIsSetupForClient
         /// </summary>
-        /// <value>Is client setup for subscriptions</value>
         [DataMember(Name="SubscriptionAccountIsSetupForClient", EmitDefaultValue=false)]
         public bool? SubscriptionAccountIsSetupForClient { get; set; }
 
         /// <summary>
-        /// Available accounts for subscriptions (only if requesting user has enough permissions to see the list, otherwise empty list or null)
+        /// Gets or Sets SubscriptionAccounts
         /// </summary>
-        /// <value>Available accounts for subscriptions (only if requesting user has enough permissions to see the list, otherwise empty list or null)</value>
         [DataMember(Name="SubscriptionAccounts", EmitDefaultValue=false)]
         public List<AppStoreAppSubscriptionAccount> SubscriptionAccounts { get; set; }
 

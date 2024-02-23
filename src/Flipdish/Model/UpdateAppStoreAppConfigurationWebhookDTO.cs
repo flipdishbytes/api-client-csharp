@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// App store app configuration webhook event
+    /// UpdateAppStoreAppConfigurationWebhookDTO
     /// </summary>
     [DataContract]
     public partial class UpdateAppStoreAppConfigurationWebhookDTO :  IEquatable<UpdateAppStoreAppConfigurationWebhookDTO>
@@ -36,10 +36,10 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateAppStoreAppConfigurationWebhookDTO" /> class.
         /// </summary>
-        /// <param name="id">Unique App store app configuration id (required).</param>
-        /// <param name="isEnabled">Is enabled (required).</param>
-        /// <param name="storeIds">Store id&#39;s.</param>
-        /// <param name="settings">Settings.</param>
+        /// <param name="id">id (required).</param>
+        /// <param name="isEnabled">isEnabled (required).</param>
+        /// <param name="storeIds">storeIds.</param>
+        /// <param name="settings">settings.</param>
         public UpdateAppStoreAppConfigurationWebhookDTO(string id = default(string), bool? isEnabled = default(bool?), List<int?> storeIds = default(List<int?>), List<Setting> settings = default(List<Setting>))
         {
             // to ensure "id" is required (not null)
@@ -65,30 +65,26 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Unique App store app configuration id
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>Unique App store app configuration id</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Is enabled
+        /// Gets or Sets IsEnabled
         /// </summary>
-        /// <value>Is enabled</value>
         [DataMember(Name="IsEnabled", EmitDefaultValue=false)]
         public bool? IsEnabled { get; set; }
 
         /// <summary>
-        /// Store id&#39;s
+        /// Gets or Sets StoreIds
         /// </summary>
-        /// <value>Store id&#39;s</value>
         [DataMember(Name="StoreIds", EmitDefaultValue=false)]
         public List<int?> StoreIds { get; set; }
 
         /// <summary>
-        /// Settings
+        /// Gets or Sets Settings
         /// </summary>
-        /// <value>Settings</value>
         [DataMember(Name="Settings", EmitDefaultValue=false)]
         public List<Setting> Settings { get; set; }
 

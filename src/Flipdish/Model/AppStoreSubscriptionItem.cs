@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Subscription list item
+    /// AppStoreSubscriptionItem
     /// </summary>
     [DataContract]
     public partial class AppStoreSubscriptionItem :  IEquatable<AppStoreSubscriptionItem>
@@ -31,12 +31,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AppStoreSubscriptionItem" /> class.
         /// </summary>
-        /// <param name="externalSubscriptionId">ExternalSubscriptionId.</param>
-        /// <param name="storeIds">StoreIds.</param>
-        /// <param name="userId">UserId.</param>
-        /// <param name="userEmail">UserEmail.</param>
-        /// <param name="status">Status.</param>
-        /// <param name="subscriptionChangeJobId">SubscriptionChangeJobId.</param>
+        /// <param name="externalSubscriptionId">externalSubscriptionId.</param>
+        /// <param name="storeIds">storeIds.</param>
+        /// <param name="userId">userId.</param>
+        /// <param name="userEmail">userEmail.</param>
+        /// <param name="status">status.</param>
+        /// <param name="subscriptionChangeJobId">subscriptionChangeJobId.</param>
         public AppStoreSubscriptionItem(string externalSubscriptionId = default(string), List<int?> storeIds = default(List<int?>), int? userId = default(int?), string userEmail = default(string), string status = default(string), string subscriptionChangeJobId = default(string))
         {
             this.ExternalSubscriptionId = externalSubscriptionId;
@@ -48,44 +48,38 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// ExternalSubscriptionId
+        /// Gets or Sets ExternalSubscriptionId
         /// </summary>
-        /// <value>ExternalSubscriptionId</value>
         [DataMember(Name="ExternalSubscriptionId", EmitDefaultValue=false)]
         public string ExternalSubscriptionId { get; set; }
 
         /// <summary>
-        /// StoreIds
+        /// Gets or Sets StoreIds
         /// </summary>
-        /// <value>StoreIds</value>
         [DataMember(Name="StoreIds", EmitDefaultValue=false)]
         public List<int?> StoreIds { get; set; }
 
         /// <summary>
-        /// UserId
+        /// Gets or Sets UserId
         /// </summary>
-        /// <value>UserId</value>
         [DataMember(Name="UserId", EmitDefaultValue=false)]
         public int? UserId { get; set; }
 
         /// <summary>
-        /// UserEmail
+        /// Gets or Sets UserEmail
         /// </summary>
-        /// <value>UserEmail</value>
         [DataMember(Name="UserEmail", EmitDefaultValue=false)]
         public string UserEmail { get; set; }
 
         /// <summary>
-        /// Status
+        /// Gets or Sets Status
         /// </summary>
-        /// <value>Status</value>
         [DataMember(Name="Status", EmitDefaultValue=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// SubscriptionChangeJobId
+        /// Gets or Sets SubscriptionChangeJobId
         /// </summary>
-        /// <value>SubscriptionChangeJobId</value>
         [DataMember(Name="SubscriptionChangeJobId", EmitDefaultValue=false)]
         public string SubscriptionChangeJobId { get; set; }
 

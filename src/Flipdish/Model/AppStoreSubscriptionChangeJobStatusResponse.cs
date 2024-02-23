@@ -23,15 +23,14 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Subscription change job can be longer running, this contains job information
+    /// AppStoreSubscriptionChangeJobStatusResponse
     /// </summary>
     [DataContract]
     public partial class AppStoreSubscriptionChangeJobStatusResponse :  IEquatable<AppStoreSubscriptionChangeJobStatusResponse>
     {
         /// <summary>
-        /// Job Status
+        /// Defines Status
         /// </summary>
-        /// <value>Job Status</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum
         {
@@ -62,17 +61,16 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Job Status
+        /// Gets or Sets Status
         /// </summary>
-        /// <value>Job Status</value>
         [DataMember(Name="Status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="AppStoreSubscriptionChangeJobStatusResponse" /> class.
         /// </summary>
-        /// <param name="subscriptionChangeJobId">Subscription change job id.</param>
-        /// <param name="status">Job Status.</param>
-        /// <param name="errorMessage">Error message (if any).</param>
+        /// <param name="subscriptionChangeJobId">subscriptionChangeJobId.</param>
+        /// <param name="status">status.</param>
+        /// <param name="errorMessage">errorMessage.</param>
         public AppStoreSubscriptionChangeJobStatusResponse(string subscriptionChangeJobId = default(string), StatusEnum? status = default(StatusEnum?), string errorMessage = default(string))
         {
             this.SubscriptionChangeJobId = subscriptionChangeJobId;
@@ -81,17 +79,15 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Subscription change job id
+        /// Gets or Sets SubscriptionChangeJobId
         /// </summary>
-        /// <value>Subscription change job id</value>
         [DataMember(Name="SubscriptionChangeJobId", EmitDefaultValue=false)]
         public string SubscriptionChangeJobId { get; set; }
 
 
         /// <summary>
-        /// Error message (if any)
+        /// Gets or Sets ErrorMessage
         /// </summary>
-        /// <value>Error message (if any)</value>
         [DataMember(Name="ErrorMessage", EmitDefaultValue=false)]
         public string ErrorMessage { get; set; }
 

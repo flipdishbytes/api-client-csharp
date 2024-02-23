@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// App store app support information
+    /// AppStoreAppSupportInfo
     /// </summary>
     [DataContract]
     public partial class AppStoreAppSupportInfo :  IEquatable<AppStoreAppSupportInfo>
@@ -31,12 +31,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AppStoreAppSupportInfo" /> class.
         /// </summary>
-        /// <param name="privacyPolicy">Privacy policy url.</param>
-        /// <param name="termsOfUse">Terms of use url.</param>
-        /// <param name="companyWebsite">Company website url.</param>
-        /// <param name="learnMore">Learn more url.</param>
-        /// <param name="installationMessage">Installation message.</param>
-        /// <param name="supportEmail">Support email.</param>
+        /// <param name="privacyPolicy">privacyPolicy.</param>
+        /// <param name="termsOfUse">termsOfUse.</param>
+        /// <param name="companyWebsite">companyWebsite.</param>
+        /// <param name="learnMore">learnMore.</param>
+        /// <param name="installationMessage">installationMessage.</param>
+        /// <param name="supportEmail">supportEmail.</param>
         public AppStoreAppSupportInfo(string privacyPolicy = default(string), string termsOfUse = default(string), string companyWebsite = default(string), string learnMore = default(string), string installationMessage = default(string), string supportEmail = default(string))
         {
             this.PrivacyPolicy = privacyPolicy;
@@ -48,44 +48,38 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Privacy policy url
+        /// Gets or Sets PrivacyPolicy
         /// </summary>
-        /// <value>Privacy policy url</value>
         [DataMember(Name="PrivacyPolicy", EmitDefaultValue=false)]
         public string PrivacyPolicy { get; set; }
 
         /// <summary>
-        /// Terms of use url
+        /// Gets or Sets TermsOfUse
         /// </summary>
-        /// <value>Terms of use url</value>
         [DataMember(Name="TermsOfUse", EmitDefaultValue=false)]
         public string TermsOfUse { get; set; }
 
         /// <summary>
-        /// Company website url
+        /// Gets or Sets CompanyWebsite
         /// </summary>
-        /// <value>Company website url</value>
         [DataMember(Name="CompanyWebsite", EmitDefaultValue=false)]
         public string CompanyWebsite { get; set; }
 
         /// <summary>
-        /// Learn more url
+        /// Gets or Sets LearnMore
         /// </summary>
-        /// <value>Learn more url</value>
         [DataMember(Name="LearnMore", EmitDefaultValue=false)]
         public string LearnMore { get; set; }
 
         /// <summary>
-        /// Installation message
+        /// Gets or Sets InstallationMessage
         /// </summary>
-        /// <value>Installation message</value>
         [DataMember(Name="InstallationMessage", EmitDefaultValue=false)]
         public string InstallationMessage { get; set; }
 
         /// <summary>
-        /// Support email
+        /// Gets or Sets SupportEmail
         /// </summary>
-        /// <value>Support email</value>
         [DataMember(Name="SupportEmail", EmitDefaultValue=false)]
         public string SupportEmail { get; set; }
 
