@@ -24,6 +24,8 @@ Name | Type | Description | Notes
 **StartDate** | **DateTime?** | Voucher Starts On (Time in UTC) | [optional] 
 **ExpiryDate** | **DateTime?** | Voucher Expires On (Time in UTC) | [optional] 
 **ChannelRestrictions** | **List&lt;string&gt;** | Limit the channels this voucher can be used on | [optional] 
+**VoucherSubType** | **string** | Voucher Subtype | [optional] 
+**CustomerId** | **int?** | Customer UserID | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

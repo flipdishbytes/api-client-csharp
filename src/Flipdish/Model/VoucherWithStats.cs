@@ -113,63 +113,6 @@ namespace Flipdish.Model
         [DataMember(Name="VoucherType", EmitDefaultValue=false)]
         public VoucherTypeEnum? VoucherType { get; set; }
         /// <summary>
-        /// Voucher Sub Type
-        /// </summary>
-        /// <value>Voucher Sub Type</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum VoucherSubTypeEnum
-        {
-            
-            /// <summary>
-            /// Enum None for value: None
-            /// </summary>
-            [EnumMember(Value = "None")]
-            None = 1,
-            
-            /// <summary>
-            /// Enum SignUp for value: SignUp
-            /// </summary>
-            [EnumMember(Value = "SignUp")]
-            SignUp = 2,
-            
-            /// <summary>
-            /// Enum Loyalty for value: Loyalty
-            /// </summary>
-            [EnumMember(Value = "Loyalty")]
-            Loyalty = 3,
-            
-            /// <summary>
-            /// Enum Loyalty25 for value: Loyalty25
-            /// </summary>
-            [EnumMember(Value = "Loyalty25")]
-            Loyalty25 = 4,
-            
-            /// <summary>
-            /// Enum Retention for value: Retention
-            /// </summary>
-            [EnumMember(Value = "Retention")]
-            Retention = 5,
-            
-            /// <summary>
-            /// Enum SecondaryRetention for value: SecondaryRetention
-            /// </summary>
-            [EnumMember(Value = "SecondaryRetention")]
-            SecondaryRetention = 6,
-            
-            /// <summary>
-            /// Enum Custom for value: Custom
-            /// </summary>
-            [EnumMember(Value = "Custom")]
-            Custom = 7
-        }
-
-        /// <summary>
-        /// Voucher Sub Type
-        /// </summary>
-        /// <value>Voucher Sub Type</value>
-        [DataMember(Name="VoucherSubType", EmitDefaultValue=false)]
-        public VoucherSubTypeEnum? VoucherSubType { get; set; }
-        /// <summary>
         /// Currency of the voucher
         /// </summary>
         /// <value>Currency of the voucher</value>
@@ -914,6 +857,63 @@ namespace Flipdish.Model
         [DataMember(Name="ChannelRestrictions", EmitDefaultValue=false)]
         public List<ChannelRestrictionsEnum> ChannelRestrictions { get; set; }
         /// <summary>
+        /// Voucher Subtype
+        /// </summary>
+        /// <value>Voucher Subtype</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum VoucherSubTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum None for value: None
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None = 1,
+            
+            /// <summary>
+            /// Enum SignUp for value: SignUp
+            /// </summary>
+            [EnumMember(Value = "SignUp")]
+            SignUp = 2,
+            
+            /// <summary>
+            /// Enum Loyalty for value: Loyalty
+            /// </summary>
+            [EnumMember(Value = "Loyalty")]
+            Loyalty = 3,
+            
+            /// <summary>
+            /// Enum Loyalty25 for value: Loyalty25
+            /// </summary>
+            [EnumMember(Value = "Loyalty25")]
+            Loyalty25 = 4,
+            
+            /// <summary>
+            /// Enum Retention for value: Retention
+            /// </summary>
+            [EnumMember(Value = "Retention")]
+            Retention = 5,
+            
+            /// <summary>
+            /// Enum SecondaryRetention for value: SecondaryRetention
+            /// </summary>
+            [EnumMember(Value = "SecondaryRetention")]
+            SecondaryRetention = 6,
+            
+            /// <summary>
+            /// Enum Custom for value: Custom
+            /// </summary>
+            [EnumMember(Value = "Custom")]
+            Custom = 7
+        }
+
+        /// <summary>
+        /// Voucher Subtype
+        /// </summary>
+        /// <value>Voucher Subtype</value>
+        [DataMember(Name="VoucherSubType", EmitDefaultValue=false)]
+        public VoucherSubTypeEnum? VoucherSubType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="VoucherWithStats" /> class.
         /// </summary>
         /// <param name="totalUsed">Total times the voucher was used.</param>
@@ -924,7 +924,6 @@ namespace Flipdish.Model
         /// <param name="voucherId">Voucher Id.</param>
         /// <param name="status">Voucher Status.</param>
         /// <param name="voucherType">Voucher Type.</param>
-        /// <param name="voucherSubType">Voucher Sub Type.</param>
         /// <param name="currency">Currency of the voucher.</param>
         /// <param name="storeNames">Stores that this voucher applies to.</param>
         /// <param name="promotionDetails">Promotion details.</param>
@@ -949,7 +948,9 @@ namespace Flipdish.Model
         /// <param name="startDate">Voucher Starts On (Time in UTC).</param>
         /// <param name="expiryDate">Voucher Expires On (Time in UTC).</param>
         /// <param name="channelRestrictions">Limit the channels this voucher can be used on.</param>
-        public VoucherWithStats(int? totalUsed = default(int?), int? totalCustomers = default(int?), double? totalAmountFromOrders = default(double?), double? totalDiscounted = default(double?), double? averageOrderSize = default(double?), int? voucherId = default(int?), StatusEnum? status = default(StatusEnum?), VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), List<string> storeNames = default(List<string>), PromotionDetails promotionDetails = default(PromotionDetails), CreditNoteDetails creditNoteDetails = default(CreditNoteDetails), LumpDiscountDetails lumpDiscountDetails = default(LumpDiscountDetails), PercentDiscountDetails percentDiscountDetails = default(PercentDiscountDetails), string code = default(string), string description = default(string), List<int?> stores = default(List<int?>), double? validOnOrdersOver = default(double?), bool? takesPriority = default(bool?), bool? isEnabled = default(bool?), bool? isAutomaticallyApplied = default(bool?), bool? includeDeliveryFee = default(bool?), bool? isValidForDeliveryOrders = default(bool?), bool? isValidForPickupOrders = default(bool?), bool? isValidForOrdersPayedOnline = default(bool?), bool? isValidForOrdersPayedByCash = default(bool?), bool? isValidForFirstOrderOnly = default(bool?), bool? isValidOncePerCustomer = default(bool?), bool? isValidOnlyOnce = default(bool?), DateTime? startDate = default(DateTime?), DateTime? expiryDate = default(DateTime?), List<ChannelRestrictionsEnum> channelRestrictions = default(List<ChannelRestrictionsEnum>))
+        /// <param name="voucherSubType">Voucher Subtype.</param>
+        /// <param name="customerId">Customer UserID.</param>
+        public VoucherWithStats(int? totalUsed = default(int?), int? totalCustomers = default(int?), double? totalAmountFromOrders = default(double?), double? totalDiscounted = default(double?), double? averageOrderSize = default(double?), int? voucherId = default(int?), StatusEnum? status = default(StatusEnum?), VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), List<string> storeNames = default(List<string>), PromotionDetails promotionDetails = default(PromotionDetails), CreditNoteDetails creditNoteDetails = default(CreditNoteDetails), LumpDiscountDetails lumpDiscountDetails = default(LumpDiscountDetails), PercentDiscountDetails percentDiscountDetails = default(PercentDiscountDetails), string code = default(string), string description = default(string), List<int?> stores = default(List<int?>), double? validOnOrdersOver = default(double?), bool? takesPriority = default(bool?), bool? isEnabled = default(bool?), bool? isAutomaticallyApplied = default(bool?), bool? includeDeliveryFee = default(bool?), bool? isValidForDeliveryOrders = default(bool?), bool? isValidForPickupOrders = default(bool?), bool? isValidForOrdersPayedOnline = default(bool?), bool? isValidForOrdersPayedByCash = default(bool?), bool? isValidForFirstOrderOnly = default(bool?), bool? isValidOncePerCustomer = default(bool?), bool? isValidOnlyOnce = default(bool?), DateTime? startDate = default(DateTime?), DateTime? expiryDate = default(DateTime?), List<ChannelRestrictionsEnum> channelRestrictions = default(List<ChannelRestrictionsEnum>), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), int? customerId = default(int?))
         {
             this.TotalUsed = totalUsed;
             this.TotalCustomers = totalCustomers;
@@ -959,7 +960,6 @@ namespace Flipdish.Model
             this.VoucherId = voucherId;
             this.Status = status;
             this.VoucherType = voucherType;
-            this.VoucherSubType = voucherSubType;
             this.Currency = currency;
             this.StoreNames = storeNames;
             this.PromotionDetails = promotionDetails;
@@ -984,6 +984,8 @@ namespace Flipdish.Model
             this.StartDate = startDate;
             this.ExpiryDate = expiryDate;
             this.ChannelRestrictions = channelRestrictions;
+            this.VoucherSubType = voucherSubType;
+            this.CustomerId = customerId;
         }
         
         /// <summary>
@@ -1027,7 +1029,6 @@ namespace Flipdish.Model
         /// <value>Voucher Id</value>
         [DataMember(Name="VoucherId", EmitDefaultValue=false)]
         public int? VoucherId { get; set; }
-
 
 
 
@@ -1187,6 +1188,14 @@ namespace Flipdish.Model
         public DateTime? ExpiryDate { get; set; }
 
 
+
+        /// <summary>
+        /// Customer UserID
+        /// </summary>
+        /// <value>Customer UserID</value>
+        [DataMember(Name="CustomerId", EmitDefaultValue=false)]
+        public int? CustomerId { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1203,7 +1212,6 @@ namespace Flipdish.Model
             sb.Append("  VoucherId: ").Append(VoucherId).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  VoucherType: ").Append(VoucherType).Append("\n");
-            sb.Append("  VoucherSubType: ").Append(VoucherSubType).Append("\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("  StoreNames: ").Append(StoreNames).Append("\n");
             sb.Append("  PromotionDetails: ").Append(PromotionDetails).Append("\n");
@@ -1228,6 +1236,8 @@ namespace Flipdish.Model
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  ExpiryDate: ").Append(ExpiryDate).Append("\n");
             sb.Append("  ChannelRestrictions: ").Append(ChannelRestrictions).Append("\n");
+            sb.Append("  VoucherSubType: ").Append(VoucherSubType).Append("\n");
+            sb.Append("  CustomerId: ").Append(CustomerId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1301,11 +1311,6 @@ namespace Flipdish.Model
                     this.VoucherType == input.VoucherType ||
                     (this.VoucherType != null &&
                     this.VoucherType.Equals(input.VoucherType))
-                ) && 
-                (
-                    this.VoucherSubType == input.VoucherSubType ||
-                    (this.VoucherSubType != null &&
-                    this.VoucherSubType.Equals(input.VoucherSubType))
                 ) && 
                 (
                     this.Currency == input.Currency ||
@@ -1426,6 +1431,16 @@ namespace Flipdish.Model
                     this.ChannelRestrictions == input.ChannelRestrictions ||
                     this.ChannelRestrictions != null &&
                     this.ChannelRestrictions.SequenceEqual(input.ChannelRestrictions)
+                ) && 
+                (
+                    this.VoucherSubType == input.VoucherSubType ||
+                    (this.VoucherSubType != null &&
+                    this.VoucherSubType.Equals(input.VoucherSubType))
+                ) && 
+                (
+                    this.CustomerId == input.CustomerId ||
+                    (this.CustomerId != null &&
+                    this.CustomerId.Equals(input.CustomerId))
                 );
         }
 
@@ -1454,8 +1469,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Status.GetHashCode();
                 if (this.VoucherType != null)
                     hashCode = hashCode * 59 + this.VoucherType.GetHashCode();
-                if (this.VoucherSubType != null)
-                    hashCode = hashCode * 59 + this.VoucherSubType.GetHashCode();
                 if (this.Currency != null)
                     hashCode = hashCode * 59 + this.Currency.GetHashCode();
                 if (this.StoreNames != null)
@@ -1504,6 +1517,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ExpiryDate.GetHashCode();
                 if (this.ChannelRestrictions != null)
                     hashCode = hashCode * 59 + this.ChannelRestrictions.GetHashCode();
+                if (this.VoucherSubType != null)
+                    hashCode = hashCode * 59 + this.VoucherSubType.GetHashCode();
+                if (this.CustomerId != null)
+                    hashCode = hashCode * 59 + this.CustomerId.GetHashCode();
                 return hashCode;
             }
         }

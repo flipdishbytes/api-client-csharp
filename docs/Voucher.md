@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 **VoucherId** | **int?** | Voucher Id | [optional] 
 **Status** | **string** | Voucher Status | [optional] 
 **VoucherType** | **string** | Voucher Type | [optional] 
-**VoucherSubType** | **string** | Voucher Sub Type | [optional] 
 **Currency** | **string** | Currency of the voucher | [optional] 
 **StoreNames** | **List&lt;string&gt;** | Stores that this voucher applies to | [optional] 
 **PromotionDetails** | [**PromotionDetails**](PromotionDetails.md) | Promotion details | [optional] 
@@ -31,6 +30,8 @@ Name | Type | Description | Notes
 **StartDate** | **DateTime?** | Voucher Starts On (Time in UTC) | [optional] 
 **ExpiryDate** | **DateTime?** | Voucher Expires On (Time in UTC) | [optional] 
 **ChannelRestrictions** | **List&lt;string&gt;** | Limit the channels this voucher can be used on | [optional] 
+**VoucherSubType** | **string** | Voucher Subtype | [optional] 
+**CustomerId** | **int?** | Customer UserID | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
