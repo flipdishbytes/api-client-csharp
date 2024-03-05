@@ -72,6 +72,29 @@ namespace Flipdish.Api
         /// <param name="storeId"> (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultSubscriptionSummary</returns>
         ApiResponse<RestApiArrayResultSubscriptionSummary> GetSubscriptionsForAppWithHttpInfo (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="email"> (optional)</param>
+        /// <returns>RestApiResultHasPaymentMethodResponse</returns>
+        RestApiResultHasPaymentMethodResponse HasCustomerGotPaymentMethodOnFile (string appId, string email = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="email"> (optional)</param>
+        /// <returns>ApiResponse of RestApiResultHasPaymentMethodResponse</returns>
+        ApiResponse<RestApiResultHasPaymentMethodResponse> HasCustomerGotPaymentMethodOnFileWithHttpInfo (string appId, string email = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -122,6 +145,29 @@ namespace Flipdish.Api
         /// <param name="storeId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultSubscriptionSummary)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultSubscriptionSummary>> GetSubscriptionsForAppAsyncWithHttpInfo (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="email"> (optional)</param>
+        /// <returns>Task of RestApiResultHasPaymentMethodResponse</returns>
+        System.Threading.Tasks.Task<RestApiResultHasPaymentMethodResponse> HasCustomerGotPaymentMethodOnFileAsync (string appId, string email = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="email"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiResultHasPaymentMethodResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultHasPaymentMethodResponse>> HasCustomerGotPaymentMethodOnFileAsyncWithHttpInfo (string appId, string email = null);
         #endregion Asynchronous Operations
     }
 
@@ -546,6 +592,163 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiArrayResultSubscriptionSummary>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultSubscriptionSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultSubscriptionSummary)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="email"> (optional)</param>
+        /// <returns>RestApiResultHasPaymentMethodResponse</returns>
+        public RestApiResultHasPaymentMethodResponse HasCustomerGotPaymentMethodOnFile (string appId, string email = null)
+        {
+             ApiResponse<RestApiResultHasPaymentMethodResponse> localVarResponse = HasCustomerGotPaymentMethodOnFileWithHttpInfo(appId, email);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="email"> (optional)</param>
+        /// <returns>ApiResponse of RestApiResultHasPaymentMethodResponse</returns>
+        public ApiResponse< RestApiResultHasPaymentMethodResponse > HasCustomerGotPaymentMethodOnFileWithHttpInfo (string appId, string email = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling SubscriptionsApi->HasCustomerGotPaymentMethodOnFile");
+
+            var localVarPath = "./api/v1.0/{appId}/subscriptions/hasPaymentMethod";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (email != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "email", email)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("HasCustomerGotPaymentMethodOnFile", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultHasPaymentMethodResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultHasPaymentMethodResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHasPaymentMethodResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="email"> (optional)</param>
+        /// <returns>Task of RestApiResultHasPaymentMethodResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiResultHasPaymentMethodResponse> HasCustomerGotPaymentMethodOnFileAsync (string appId, string email = null)
+        {
+             ApiResponse<RestApiResultHasPaymentMethodResponse> localVarResponse = await HasCustomerGotPaymentMethodOnFileAsyncWithHttpInfo(appId, email);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="email"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiResultHasPaymentMethodResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultHasPaymentMethodResponse>> HasCustomerGotPaymentMethodOnFileAsyncWithHttpInfo (string appId, string email = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling SubscriptionsApi->HasCustomerGotPaymentMethodOnFile");
+
+            var localVarPath = "./api/v1.0/{appId}/subscriptions/hasPaymentMethod";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (email != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "email", email)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("HasCustomerGotPaymentMethodOnFile", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultHasPaymentMethodResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultHasPaymentMethodResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultHasPaymentMethodResponse)));
         }
 
     }

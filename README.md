@@ -555,6 +555,7 @@ Class | Method | HTTP request | Description
 *StuartApi* | [**StuartPostStuartSettings**](docs/StuartApi.md#stuartpoststuartsettings) | **POST** /api/v1.0/stuart/settings/{storeId} | 
 *SubscriptionsApi* | [**GetSubscriptionById**](docs/SubscriptionsApi.md#getsubscriptionbyid) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId} | 
 *SubscriptionsApi* | [**GetSubscriptionsForApp**](docs/SubscriptionsApi.md#getsubscriptionsforapp) | **GET** /api/v1.0/{appId}/subscriptions | 
+*SubscriptionsApi* | [**HasCustomerGotPaymentMethodOnFile**](docs/SubscriptionsApi.md#hascustomergotpaymentmethodonfile) | **GET** /api/v1.0/{appId}/subscriptions/hasPaymentMethod | 
 *TeammatesApi* | [**CreateTeammate**](docs/TeammatesApi.md#createteammate) | **POST** /api/v1.0/{appId}/teammates | 
 *TeammatesApi* | [**DeleteTeammate**](docs/TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | 
 *TeammatesApi* | [**GetTeammateByAppIdAndTeammateId**](docs/TeammatesApi.md#getteammatebyappidandteammateid) | **GET** /api/v1.0/{appId}/teammates/{id} | 
@@ -776,6 +777,7 @@ Class | Method | HTTP request | Description
  - [Model.Group](docs/Group.md)
  - [Model.GroupReference](docs/GroupReference.md)
  - [Model.GroupedCoordinates](docs/GroupedCoordinates.md)
+ - [Model.HasPaymentMethodResponse](docs/HasPaymentMethodResponse.md)
  - [Model.HomeAction](docs/HomeAction.md)
  - [Model.HomeStatistics](docs/HomeStatistics.md)
  - [Model.HttpPostedFileBase](docs/HttpPostedFileBase.md)
@@ -1140,6 +1142,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultExecuteConfigurationActionResult](docs/RestApiResultExecuteConfigurationActionResult.md)
  - [Model.RestApiResultFulfillmentStatesConfiguration](docs/RestApiResultFulfillmentStatesConfiguration.md)
  - [Model.RestApiResultGroup](docs/RestApiResultGroup.md)
+ - [Model.RestApiResultHasPaymentMethodResponse](docs/RestApiResultHasPaymentMethodResponse.md)
  - [Model.RestApiResultHomeStatistics](docs/RestApiResultHomeStatistics.md)
  - [Model.RestApiResultHydraConfig](docs/RestApiResultHydraConfig.md)
  - [Model.RestApiResultHydraDeviceDetails](docs/RestApiResultHydraDeviceDetails.md)
