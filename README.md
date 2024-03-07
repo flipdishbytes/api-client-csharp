@@ -465,7 +465,9 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**UpdateFulfillmentState**](docs/OrdersApi.md#updatefulfillmentstate) | **POST** /api/v1.0/orders/{orderId}/fulfillment/state | 
 *PaymentIntentsApi* | [**GetPaymentIntent**](docs/PaymentIntentsApi.md#getpaymentintent) | **GET** /api/v1.0/payment_intents/{paymentIntentId} | 
 *PaymentsApi* | [**GetOrderPaymentInformation**](docs/PaymentsApi.md#getorderpaymentinformation) | **GET** /api/v1.0/payments/payment/{orderId}/refundable | 
-*PayoutReportsApi* | [**GetPayoutReport3**](docs/PayoutReportsApi.md#getpayoutreport3) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId} | 
+*PayoutReportsApi* | [**GetPayoutReport3Details**](docs/PayoutReportsApi.md#getpayoutreport3details) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/details | 
+*PayoutReportsApi* | [**GetPayoutReport3Orders**](docs/PayoutReportsApi.md#getpayoutreport3orders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/orders | 
+*PayoutReportsApi* | [**GetPayoutReport3Overview**](docs/PayoutReportsApi.md#getpayoutreport3overview) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/overview | 
 *PayoutsApi* | [**GetPayout**](docs/PayoutsApi.md#getpayout) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId} | 
 *PayoutsApi* | [**GetPayoutChargebacks**](docs/PayoutsApi.md#getpayoutchargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks | 
 *PayoutsApi* | [**GetPayoutOrders**](docs/PayoutsApi.md#getpayoutorders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders | 
@@ -971,6 +973,16 @@ Class | Method | HTTP request | Description
  - [Model.PayoutOrder](docs/PayoutOrder.md)
  - [Model.PayoutOtherCharge](docs/PayoutOtherCharge.md)
  - [Model.PayoutRefund](docs/PayoutRefund.md)
+ - [Model.PayoutReport3Details](docs/PayoutReport3Details.md)
+ - [Model.PayoutReport3DetailsAdjustments](docs/PayoutReport3DetailsAdjustments.md)
+ - [Model.PayoutReport3DetailsFlipdishFees](docs/PayoutReport3DetailsFlipdishFees.md)
+ - [Model.PayoutReport3DetailsRevenue](docs/PayoutReport3DetailsRevenue.md)
+ - [Model.PayoutReport3DetailsSalesLine](docs/PayoutReport3DetailsSalesLine.md)
+ - [Model.PayoutReport3DetailsSummary](docs/PayoutReport3DetailsSummary.md)
+ - [Model.PayoutReport3Overview](docs/PayoutReport3Overview.md)
+ - [Model.PayoutReport3OverviewHeader](docs/PayoutReport3OverviewHeader.md)
+ - [Model.PayoutReport3PayoutOrder](docs/PayoutReport3PayoutOrder.md)
+ - [Model.PayoutReport3Store](docs/PayoutReport3Store.md)
  - [Model.PayoutRequestIds](docs/PayoutRequestIds.md)
  - [Model.PayoutStore](docs/PayoutStore.md)
  - [Model.PayoutSummary](docs/PayoutSummary.md)
@@ -1096,6 +1108,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultPayoutOrder](docs/RestApiPaginationResultPayoutOrder.md)
  - [Model.RestApiPaginationResultPayoutOtherCharge](docs/RestApiPaginationResultPayoutOtherCharge.md)
  - [Model.RestApiPaginationResultPayoutRefund](docs/RestApiPaginationResultPayoutRefund.md)
+ - [Model.RestApiPaginationResultPayoutReport3PayoutOrder](docs/RestApiPaginationResultPayoutReport3PayoutOrder.md)
  - [Model.RestApiPaginationResultPendingMenuChanges](docs/RestApiPaginationResultPendingMenuChanges.md)
  - [Model.RestApiPaginationResultPhoneCall](docs/RestApiPaginationResultPhoneCall.md)
  - [Model.RestApiPaginationResultProduct](docs/RestApiPaginationResultProduct.md)
@@ -1191,6 +1204,8 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultPaymentIntent](docs/RestApiResultPaymentIntent.md)
  - [Model.RestApiResultPaymentTerminalDetails](docs/RestApiResultPaymentTerminalDetails.md)
  - [Model.RestApiResultPaymentTerminalTransactionDetails](docs/RestApiResultPaymentTerminalTransactionDetails.md)
+ - [Model.RestApiResultPayoutReport3Details](docs/RestApiResultPayoutReport3Details.md)
+ - [Model.RestApiResultPayoutReport3Overview](docs/RestApiResultPayoutReport3Overview.md)
  - [Model.RestApiResultPreOrderConfig](docs/RestApiResultPreOrderConfig.md)
  - [Model.RestApiResultProcessingFeeConfig](docs/RestApiResultProcessingFeeConfig.md)
  - [Model.RestApiResultProduct](docs/RestApiResultProduct.md)
