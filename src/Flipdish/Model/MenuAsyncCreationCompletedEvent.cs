@@ -35,17 +35,19 @@ namespace Flipdish.Model
         /// <param name="description">Description.</param>
         /// <param name="user">User who has created the menu.</param>
         /// <param name="menu">The menu.</param>
+        /// <param name="success">Flag indicating if the menu creation was successful.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
         /// <param name="ipAddress">Ip Address.</param>
-        public MenuAsyncCreationCompletedEvent(string eventName = default(string), string description = default(string), UserEventInfo user = default(UserEventInfo), Menu menu = default(Menu), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
+        public MenuAsyncCreationCompletedEvent(string eventName = default(string), string description = default(string), UserEventInfo user = default(UserEventInfo), Menu menu = default(Menu), bool? success = default(bool?), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
         {
             this.EventName = eventName;
             this.Description = description;
             this.User = user;
             this.Menu = menu;
+            this.Success = success;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
             this.Position = position;
@@ -80,6 +82,13 @@ namespace Flipdish.Model
         /// <value>The menu</value>
         [DataMember(Name="Menu", EmitDefaultValue=false)]
         public Menu Menu { get; set; }
+
+        /// <summary>
+        /// Flag indicating if the menu creation was successful
+        /// </summary>
+        /// <value>Flag indicating if the menu creation was successful</value>
+        [DataMember(Name="Success", EmitDefaultValue=false)]
+        public bool? Success { get; set; }
 
         /// <summary>
         /// The identitfier of the event
@@ -128,6 +137,7 @@ namespace Flipdish.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Menu: ").Append(Menu).Append("\n");
+            sb.Append("  Success: ").Append(Success).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -188,6 +198,11 @@ namespace Flipdish.Model
                     this.Menu.Equals(input.Menu))
                 ) && 
                 (
+                    this.Success == input.Success ||
+                    (this.Success != null &&
+                    this.Success.Equals(input.Success))
+                ) && 
+                (
                     this.FlipdishEventId == input.FlipdishEventId ||
                     (this.FlipdishEventId != null &&
                     this.FlipdishEventId.Equals(input.FlipdishEventId))
@@ -231,6 +246,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.Menu != null)
                     hashCode = hashCode * 59 + this.Menu.GetHashCode();
+                if (this.Success != null)
+                    hashCode = hashCode * 59 + this.Success.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)
