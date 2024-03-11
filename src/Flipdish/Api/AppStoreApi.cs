@@ -58,8 +58,9 @@ namespace Flipdish.Api
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <param name="excludeNotOwned"> (optional)</param>
+        /// <param name="showOnlyVerified"> (optional)</param>
         /// <returns>RestApiPaginationResultAppStoreAppSummary</returns>
-        RestApiPaginationResultAppStoreAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null);
+        RestApiPaginationResultAppStoreAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null, bool? showOnlyVerified = null);
 
         /// <summary>
         /// 
@@ -72,8 +73,9 @@ namespace Flipdish.Api
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <param name="excludeNotOwned"> (optional)</param>
+        /// <param name="showOnlyVerified"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultAppStoreAppSummary</returns>
-        ApiResponse<RestApiPaginationResultAppStoreAppSummary> GetAppStoreAppsWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null);
+        ApiResponse<RestApiPaginationResultAppStoreAppSummary> GetAppStoreAppsWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null, bool? showOnlyVerified = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -110,8 +112,9 @@ namespace Flipdish.Api
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <param name="excludeNotOwned"> (optional)</param>
+        /// <param name="showOnlyVerified"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultAppStoreAppSummary</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultAppStoreAppSummary> GetAppStoreAppsAsync (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null);
+        System.Threading.Tasks.Task<RestApiPaginationResultAppStoreAppSummary> GetAppStoreAppsAsync (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null, bool? showOnlyVerified = null);
 
         /// <summary>
         /// 
@@ -124,8 +127,9 @@ namespace Flipdish.Api
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <param name="excludeNotOwned"> (optional)</param>
+        /// <param name="showOnlyVerified"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultAppStoreAppSummary)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultAppStoreAppSummary>> GetAppStoreAppsAsyncWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultAppStoreAppSummary>> GetAppStoreAppsAsyncWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null, bool? showOnlyVerified = null);
         #endregion Asynchronous Operations
     }
 
@@ -391,10 +395,11 @@ namespace Flipdish.Api
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <param name="excludeNotOwned"> (optional)</param>
+        /// <param name="showOnlyVerified"> (optional)</param>
         /// <returns>RestApiPaginationResultAppStoreAppSummary</returns>
-        public RestApiPaginationResultAppStoreAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
+        public RestApiPaginationResultAppStoreAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null, bool? showOnlyVerified = null)
         {
-             ApiResponse<RestApiPaginationResultAppStoreAppSummary> localVarResponse = GetAppStoreAppsWithHttpInfo(search, page, limit, excludeNotOwned);
+             ApiResponse<RestApiPaginationResultAppStoreAppSummary> localVarResponse = GetAppStoreAppsWithHttpInfo(search, page, limit, excludeNotOwned, showOnlyVerified);
              return localVarResponse.Data;
         }
 
@@ -406,8 +411,9 @@ namespace Flipdish.Api
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <param name="excludeNotOwned"> (optional)</param>
+        /// <param name="showOnlyVerified"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultAppStoreAppSummary</returns>
-        public ApiResponse< RestApiPaginationResultAppStoreAppSummary > GetAppStoreAppsWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
+        public ApiResponse< RestApiPaginationResultAppStoreAppSummary > GetAppStoreAppsWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null, bool? showOnlyVerified = null)
         {
             // verify the required parameter 'search' is set
             if (search == null)
@@ -441,6 +447,7 @@ namespace Flipdish.Api
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
             if (excludeNotOwned != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "excludeNotOwned", excludeNotOwned)); // query parameter
+            if (showOnlyVerified != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "showOnlyVerified", showOnlyVerified)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -475,10 +482,11 @@ namespace Flipdish.Api
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <param name="excludeNotOwned"> (optional)</param>
+        /// <param name="showOnlyVerified"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultAppStoreAppSummary</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultAppStoreAppSummary> GetAppStoreAppsAsync (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
+        public async System.Threading.Tasks.Task<RestApiPaginationResultAppStoreAppSummary> GetAppStoreAppsAsync (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null, bool? showOnlyVerified = null)
         {
-             ApiResponse<RestApiPaginationResultAppStoreAppSummary> localVarResponse = await GetAppStoreAppsAsyncWithHttpInfo(search, page, limit, excludeNotOwned);
+             ApiResponse<RestApiPaginationResultAppStoreAppSummary> localVarResponse = await GetAppStoreAppsAsyncWithHttpInfo(search, page, limit, excludeNotOwned, showOnlyVerified);
              return localVarResponse.Data;
 
         }
@@ -491,8 +499,9 @@ namespace Flipdish.Api
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <param name="excludeNotOwned"> (optional)</param>
+        /// <param name="showOnlyVerified"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultAppStoreAppSummary)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultAppStoreAppSummary>> GetAppStoreAppsAsyncWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultAppStoreAppSummary>> GetAppStoreAppsAsyncWithHttpInfo (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null, bool? showOnlyVerified = null)
         {
             // verify the required parameter 'search' is set
             if (search == null)
@@ -526,6 +535,7 @@ namespace Flipdish.Api
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
             if (excludeNotOwned != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "excludeNotOwned", excludeNotOwned)); // query parameter
+            if (showOnlyVerified != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "showOnlyVerified", showOnlyVerified)); // query parameter
 
             // authentication (oauth2) required
             // oauth required

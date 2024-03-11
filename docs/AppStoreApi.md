@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 <a name="getappstoreapps"></a>
 # **GetAppStoreApps**
-> RestApiPaginationResultAppStoreAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null)
+> RestApiPaginationResultAppStoreAppSummary GetAppStoreApps (string search, int? page = null, int? limit = null, bool? excludeNotOwned = null, bool? showOnlyVerified = null)
 
 
 
@@ -99,10 +99,11 @@ namespace Example
             var page = 56;  // int? |  (optional) 
             var limit = 56;  // int? |  (optional) 
             var excludeNotOwned = true;  // bool? |  (optional) 
+            var showOnlyVerified = true;  // bool? |  (optional) 
 
             try
             {
-                RestApiPaginationResultAppStoreAppSummary result = apiInstance.GetAppStoreApps(search, page, limit, excludeNotOwned);
+                RestApiPaginationResultAppStoreAppSummary result = apiInstance.GetAppStoreApps(search, page, limit, excludeNotOwned, showOnlyVerified);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -122,6 +123,7 @@ Name | Type | Description  | Notes
  **page** | **int?**|  | [optional] 
  **limit** | **int?**|  | [optional] 
  **excludeNotOwned** | **bool?**|  | [optional] 
+ **showOnlyVerified** | **bool?**|  | [optional] 
 
 ### Return type
 
