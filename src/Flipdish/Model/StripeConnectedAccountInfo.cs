@@ -172,7 +172,8 @@ namespace Flipdish.Model
         /// <param name="payoutScheduleInterval">Payouts Schedule Interval.</param>
         /// <param name="payoutsEnabled">Payouts Enabled status.</param>
         /// <param name="payoutsPaused">Flag indicating if payouts are paused.</param>
-        public StripeConnectedAccountInfo(AccountStatusEnum? accountStatus = default(AccountStatusEnum?), string stripeId = default(string), CardPaymentStatusEnum? cardPaymentStatus = default(CardPaymentStatusEnum?), PayoutScheduleIntervalEnum? payoutScheduleInterval = default(PayoutScheduleIntervalEnum?), bool? payoutsEnabled = default(bool?), bool? payoutsPaused = default(bool?))
+        /// <param name="paymentsEnabled">Flag indicating if payments are enabled.</param>
+        public StripeConnectedAccountInfo(AccountStatusEnum? accountStatus = default(AccountStatusEnum?), string stripeId = default(string), CardPaymentStatusEnum? cardPaymentStatus = default(CardPaymentStatusEnum?), PayoutScheduleIntervalEnum? payoutScheduleInterval = default(PayoutScheduleIntervalEnum?), bool? payoutsEnabled = default(bool?), bool? payoutsPaused = default(bool?), bool? paymentsEnabled = default(bool?))
         {
             this.AccountStatus = accountStatus;
             this.StripeId = stripeId;
@@ -180,6 +181,7 @@ namespace Flipdish.Model
             this.PayoutScheduleInterval = payoutScheduleInterval;
             this.PayoutsEnabled = payoutsEnabled;
             this.PayoutsPaused = payoutsPaused;
+            this.PaymentsEnabled = paymentsEnabled;
         }
         
 
@@ -207,6 +209,13 @@ namespace Flipdish.Model
         public bool? PayoutsPaused { get; set; }
 
         /// <summary>
+        /// Flag indicating if payments are enabled
+        /// </summary>
+        /// <value>Flag indicating if payments are enabled</value>
+        [DataMember(Name="PaymentsEnabled", EmitDefaultValue=false)]
+        public bool? PaymentsEnabled { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -220,6 +229,7 @@ namespace Flipdish.Model
             sb.Append("  PayoutScheduleInterval: ").Append(PayoutScheduleInterval).Append("\n");
             sb.Append("  PayoutsEnabled: ").Append(PayoutsEnabled).Append("\n");
             sb.Append("  PayoutsPaused: ").Append(PayoutsPaused).Append("\n");
+            sb.Append("  PaymentsEnabled: ").Append(PaymentsEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -283,6 +293,11 @@ namespace Flipdish.Model
                     this.PayoutsPaused == input.PayoutsPaused ||
                     (this.PayoutsPaused != null &&
                     this.PayoutsPaused.Equals(input.PayoutsPaused))
+                ) && 
+                (
+                    this.PaymentsEnabled == input.PaymentsEnabled ||
+                    (this.PaymentsEnabled != null &&
+                    this.PaymentsEnabled.Equals(input.PaymentsEnabled))
                 );
         }
 
@@ -307,6 +322,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PayoutsEnabled.GetHashCode();
                 if (this.PayoutsPaused != null)
                     hashCode = hashCode * 59 + this.PayoutsPaused.GetHashCode();
+                if (this.PaymentsEnabled != null)
+                    hashCode = hashCode * 59 + this.PaymentsEnabled.GetHashCode();
                 return hashCode;
             }
         }
