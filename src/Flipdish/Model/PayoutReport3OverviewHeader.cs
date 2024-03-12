@@ -40,7 +40,8 @@ namespace Flipdish.Model
         /// <param name="periodEndTime">periodEndTime.</param>
         /// <param name="destinationBank">destinationBank.</param>
         /// <param name="destinationAccount">destinationAccount.</param>
-        public PayoutReport3OverviewHeader(int? payoutId = default(int?), int? bankAccountId = default(int?), string accountName = default(string), string payoutStatus = default(string), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string))
+        /// <param name="amount">amount.</param>
+        public PayoutReport3OverviewHeader(int? payoutId = default(int?), int? bankAccountId = default(int?), string accountName = default(string), string payoutStatus = default(string), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?))
         {
             this.PayoutId = payoutId;
             this.BankAccountId = bankAccountId;
@@ -51,6 +52,7 @@ namespace Flipdish.Model
             this.PeriodEndTime = periodEndTime;
             this.DestinationBank = destinationBank;
             this.DestinationAccount = destinationAccount;
+            this.Amount = amount;
         }
         
         /// <summary>
@@ -108,6 +110,12 @@ namespace Flipdish.Model
         public string DestinationAccount { get; set; }
 
         /// <summary>
+        /// Gets or Sets Amount
+        /// </summary>
+        [DataMember(Name="Amount", EmitDefaultValue=false)]
+        public double? Amount { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -124,6 +132,7 @@ namespace Flipdish.Model
             sb.Append("  PeriodEndTime: ").Append(PeriodEndTime).Append("\n");
             sb.Append("  DestinationBank: ").Append(DestinationBank).Append("\n");
             sb.Append("  DestinationAccount: ").Append(DestinationAccount).Append("\n");
+            sb.Append("  Amount: ").Append(Amount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -202,6 +211,11 @@ namespace Flipdish.Model
                     this.DestinationAccount == input.DestinationAccount ||
                     (this.DestinationAccount != null &&
                     this.DestinationAccount.Equals(input.DestinationAccount))
+                ) && 
+                (
+                    this.Amount == input.Amount ||
+                    (this.Amount != null &&
+                    this.Amount.Equals(input.Amount))
                 );
         }
 
@@ -232,6 +246,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.DestinationBank.GetHashCode();
                 if (this.DestinationAccount != null)
                     hashCode = hashCode * 59 + this.DestinationAccount.GetHashCode();
+                if (this.Amount != null)
+                    hashCode = hashCode * 59 + this.Amount.GetHashCode();
                 return hashCode;
             }
         }
