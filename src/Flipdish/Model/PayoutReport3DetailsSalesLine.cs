@@ -34,13 +34,11 @@ namespace Flipdish.Model
         /// <param name="online">online.</param>
         /// <param name="pos">pos.</param>
         /// <param name="other">other.</param>
-        /// <param name="total">total.</param>
-        public PayoutReport3DetailsSalesLine(double? online = default(double?), double? pos = default(double?), double? other = default(double?), double? total = default(double?))
+        public PayoutReport3DetailsSalesLine(double? online = default(double?), double? pos = default(double?), double? other = default(double?))
         {
             this.Online = online;
             this.Pos = pos;
             this.Other = other;
-            this.Total = total;
         }
         
         /// <summary>
@@ -65,7 +63,7 @@ namespace Flipdish.Model
         /// Gets or Sets Total
         /// </summary>
         [DataMember(Name="Total", EmitDefaultValue=false)]
-        public double? Total { get; set; }
+        public double? Total { get; private set; }
 
         /// <summary>
         /// Returns the string presentation of the object
