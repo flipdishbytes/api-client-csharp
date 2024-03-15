@@ -32,13 +32,15 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="PayoutReport3Details" /> class.
         /// </summary>
         /// <param name="amount">amount.</param>
+        /// <param name="currency">currency.</param>
         /// <param name="summary">summary.</param>
         /// <param name="revenue">revenue.</param>
         /// <param name="flipdishFees">flipdishFees.</param>
         /// <param name="adjustments">adjustments.</param>
-        public PayoutReport3Details(double? amount = default(double?), PayoutReport3DetailsSummary summary = default(PayoutReport3DetailsSummary), PayoutReport3DetailsRevenue revenue = default(PayoutReport3DetailsRevenue), PayoutReport3DetailsFlipdishFees flipdishFees = default(PayoutReport3DetailsFlipdishFees), PayoutReport3DetailsAdjustments adjustments = default(PayoutReport3DetailsAdjustments))
+        public PayoutReport3Details(double? amount = default(double?), string currency = default(string), PayoutReport3DetailsSummary summary = default(PayoutReport3DetailsSummary), PayoutReport3DetailsRevenue revenue = default(PayoutReport3DetailsRevenue), PayoutReport3DetailsFlipdishFees flipdishFees = default(PayoutReport3DetailsFlipdishFees), PayoutReport3DetailsAdjustments adjustments = default(PayoutReport3DetailsAdjustments))
         {
             this.Amount = amount;
+            this.Currency = currency;
             this.Summary = summary;
             this.Revenue = revenue;
             this.FlipdishFees = flipdishFees;
@@ -50,6 +52,12 @@ namespace Flipdish.Model
         /// </summary>
         [DataMember(Name="Amount", EmitDefaultValue=false)]
         public double? Amount { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Currency
+        /// </summary>
+        [DataMember(Name="Currency", EmitDefaultValue=false)]
+        public string Currency { get; set; }
 
         /// <summary>
         /// Gets or Sets Summary
@@ -84,6 +92,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class PayoutReport3Details {\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
+            sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("  Summary: ").Append(Summary).Append("\n");
             sb.Append("  Revenue: ").Append(Revenue).Append("\n");
             sb.Append("  FlipdishFees: ").Append(FlipdishFees).Append("\n");
@@ -128,6 +137,11 @@ namespace Flipdish.Model
                     this.Amount.Equals(input.Amount))
                 ) && 
                 (
+                    this.Currency == input.Currency ||
+                    (this.Currency != null &&
+                    this.Currency.Equals(input.Currency))
+                ) && 
+                (
                     this.Summary == input.Summary ||
                     (this.Summary != null &&
                     this.Summary.Equals(input.Summary))
@@ -160,6 +174,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.Amount != null)
                     hashCode = hashCode * 59 + this.Amount.GetHashCode();
+                if (this.Currency != null)
+                    hashCode = hashCode * 59 + this.Currency.GetHashCode();
                 if (this.Summary != null)
                     hashCode = hashCode * 59 + this.Summary.GetHashCode();
                 if (this.Revenue != null)

@@ -41,7 +41,8 @@ namespace Flipdish.Model
         /// <param name="destinationBank">destinationBank.</param>
         /// <param name="destinationAccount">destinationAccount.</param>
         /// <param name="amount">amount.</param>
-        public PayoutReport3OverviewHeader(int? payoutId = default(int?), int? bankAccountId = default(int?), string accountName = default(string), string payoutStatus = default(string), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?))
+        /// <param name="currency">currency.</param>
+        public PayoutReport3OverviewHeader(int? payoutId = default(int?), int? bankAccountId = default(int?), string accountName = default(string), string payoutStatus = default(string), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?), string currency = default(string))
         {
             this.PayoutId = payoutId;
             this.BankAccountId = bankAccountId;
@@ -53,6 +54,7 @@ namespace Flipdish.Model
             this.DestinationBank = destinationBank;
             this.DestinationAccount = destinationAccount;
             this.Amount = amount;
+            this.Currency = currency;
         }
         
         /// <summary>
@@ -116,6 +118,12 @@ namespace Flipdish.Model
         public double? Amount { get; set; }
 
         /// <summary>
+        /// Gets or Sets Currency
+        /// </summary>
+        [DataMember(Name="Currency", EmitDefaultValue=false)]
+        public string Currency { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -133,6 +141,7 @@ namespace Flipdish.Model
             sb.Append("  DestinationBank: ").Append(DestinationBank).Append("\n");
             sb.Append("  DestinationAccount: ").Append(DestinationAccount).Append("\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
+            sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -216,6 +225,11 @@ namespace Flipdish.Model
                     this.Amount == input.Amount ||
                     (this.Amount != null &&
                     this.Amount.Equals(input.Amount))
+                ) && 
+                (
+                    this.Currency == input.Currency ||
+                    (this.Currency != null &&
+                    this.Currency.Equals(input.Currency))
                 );
         }
 
@@ -248,6 +262,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.DestinationAccount.GetHashCode();
                 if (this.Amount != null)
                     hashCode = hashCode * 59 + this.Amount.GetHashCode();
+                if (this.Currency != null)
+                    hashCode = hashCode * 59 + this.Currency.GetHashCode();
                 return hashCode;
             }
         }
