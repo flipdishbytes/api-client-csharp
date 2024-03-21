@@ -168,7 +168,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> RemoveMenuItemOptionSetItemWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId);
         /// <summary>
-        /// [Private API] Set Tax Rate on OptionSetItem
+        /// Set Tax Rate on OptionSetItem
         /// </summary>
         /// <remarks>
         /// 
@@ -184,7 +184,7 @@ namespace Flipdish.Api
         void SetOptionSetItemTax (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, int? taxRateId);
 
         /// <summary>
-        /// [Private API] Set Tax Rate on OptionSetItem
+        /// Set Tax Rate on OptionSetItem
         /// </summary>
         /// <remarks>
         /// 
@@ -211,7 +211,7 @@ namespace Flipdish.Api
         /// <param name="optionSetId">Option set identifier</param>
         /// <param name="menuItemOptionSetItemId">Option set item identifier</param>
         /// <param name="menuItemOptionSetItem">Option set item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone. (optional)</param>
         /// <returns></returns>
         void UpdateMenuItemOptionSetItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, MenuItemOptionSetItemBase menuItemOptionSetItem, double? undoAfter = null);
 
@@ -228,7 +228,7 @@ namespace Flipdish.Api
         /// <param name="optionSetId">Option set identifier</param>
         /// <param name="menuItemOptionSetItemId">Option set item identifier</param>
         /// <param name="menuItemOptionSetItem">Option set item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateMenuItemOptionSetItemWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, MenuItemOptionSetItemBase menuItemOptionSetItem, double? undoAfter = null);
         /// <summary>
@@ -408,7 +408,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> RemoveMenuItemOptionSetItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId);
         /// <summary>
-        /// [Private API] Set Tax Rate on OptionSetItem
+        /// Set Tax Rate on OptionSetItem
         /// </summary>
         /// <remarks>
         /// 
@@ -424,7 +424,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task SetOptionSetItemTaxAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, int? taxRateId);
 
         /// <summary>
-        /// [Private API] Set Tax Rate on OptionSetItem
+        /// Set Tax Rate on OptionSetItem
         /// </summary>
         /// <remarks>
         /// 
@@ -451,7 +451,7 @@ namespace Flipdish.Api
         /// <param name="optionSetId">Option set identifier</param>
         /// <param name="menuItemOptionSetItemId">Option set item identifier</param>
         /// <param name="menuItemOptionSetItem">Option set item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone. (optional)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UpdateMenuItemOptionSetItemAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, MenuItemOptionSetItemBase menuItemOptionSetItem, double? undoAfter = null);
 
@@ -468,7 +468,7 @@ namespace Flipdish.Api
         /// <param name="optionSetId">Option set identifier</param>
         /// <param name="menuItemOptionSetItemId">Option set item identifier</param>
         /// <param name="menuItemOptionSetItem">Option set item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateMenuItemOptionSetItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, MenuItemOptionSetItemBase menuItemOptionSetItem, double? undoAfter = null);
         /// <summary>
@@ -1606,7 +1606,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private API] Set Tax Rate on OptionSetItem 
+        /// Set Tax Rate on OptionSetItem 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1622,7 +1622,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private API] Set Tax Rate on OptionSetItem 
+        /// Set Tax Rate on OptionSetItem 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1710,7 +1710,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private API] Set Tax Rate on OptionSetItem 
+        /// Set Tax Rate on OptionSetItem 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1727,7 +1727,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [Private API] Set Tax Rate on OptionSetItem 
+        /// Set Tax Rate on OptionSetItem 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1824,7 +1824,7 @@ namespace Flipdish.Api
         /// <param name="optionSetId">Option set identifier</param>
         /// <param name="menuItemOptionSetItemId">Option set item identifier</param>
         /// <param name="menuItemOptionSetItem">Option set item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone. (optional)</param>
         /// <returns></returns>
         public void UpdateMenuItemOptionSetItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, MenuItemOptionSetItemBase menuItemOptionSetItem, double? undoAfter = null)
         {
@@ -1841,7 +1841,7 @@ namespace Flipdish.Api
         /// <param name="optionSetId">Option set identifier</param>
         /// <param name="menuItemOptionSetItemId">Option set item identifier</param>
         /// <param name="menuItemOptionSetItem">Option set item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> UpdateMenuItemOptionSetItemWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, MenuItemOptionSetItemBase menuItemOptionSetItem, double? undoAfter = null)
         {
@@ -1943,7 +1943,7 @@ namespace Flipdish.Api
         /// <param name="optionSetId">Option set identifier</param>
         /// <param name="menuItemOptionSetItemId">Option set item identifier</param>
         /// <param name="menuItemOptionSetItem">Option set item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone. (optional)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UpdateMenuItemOptionSetItemAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, MenuItemOptionSetItemBase menuItemOptionSetItem, double? undoAfter = null)
         {
@@ -1961,7 +1961,7 @@ namespace Flipdish.Api
         /// <param name="optionSetId">Option set identifier</param>
         /// <param name="menuItemOptionSetItemId">Option set item identifier</param>
         /// <param name="menuItemOptionSetItem">Option set item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateMenuItemOptionSetItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, MenuItemOptionSetItemBase menuItemOptionSetItem, double? undoAfter = null)
         {

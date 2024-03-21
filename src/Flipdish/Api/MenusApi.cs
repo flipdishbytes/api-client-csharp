@@ -25,10 +25,10 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [PRIVATE API]Clone a menu, (without attaching stores)
+        /// [PRIVATE API] Clone a menu, (without attaching stores)
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -37,10 +37,10 @@ namespace Flipdish.Api
         RestApiResultMenu CreateDraftMenuFromExistingMenu (int? menuId, string newName);
 
         /// <summary>
-        /// [PRIVATE API]Clone a menu, (without attaching stores)
+        /// [PRIVATE API] Clone a menu, (without attaching stores)
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -94,10 +94,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of int?</returns>
         ApiResponse<int?> CreateNewMenuForAppWithHttpInfo (string appId, CreateFullMenu menu);
         /// <summary>
-        /// [PRIVATE API]Mark a Menu as Deleted
+        /// [PRIVATE API] Mark a Menu as Deleted
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu Identifier</param>
@@ -105,10 +105,10 @@ namespace Flipdish.Api
         void DeleteMenu (int? menuId);
 
         /// <summary>
-        /// [PRIVATE API]Mark a Menu as Deleted
+        /// [PRIVATE API] Mark a Menu as Deleted
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu Identifier</param>
@@ -242,8 +242,8 @@ namespace Flipdish.Api
         /// <param name="storeId">Store identifier</param>
         /// <param name="menuItemId">Menu item identifier</param>
         /// <param name="key">Metadata key</param>
-        /// <returns></returns>
-        void GetMenuItemMetadataByKey (int? menuId, int? storeId, int? menuItemId, string key);
+        /// <returns>RestApiResultMetadata</returns>
+        RestApiResultMetadata GetMenuItemMetadataByKey (int? menuId, int? storeId, int? menuItemId, string key);
 
         /// <summary>
         /// Get menu item metadata by key
@@ -256,8 +256,8 @@ namespace Flipdish.Api
         /// <param name="storeId">Store identifier</param>
         /// <param name="menuItemId">Menu item identifier</param>
         /// <param name="key">Metadata key</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetMenuItemMetadataByKeyWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key);
+        /// <returns>ApiResponse of RestApiResultMetadata</returns>
+        ApiResponse<RestApiResultMetadata> GetMenuItemMetadataByKeyWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key);
         /// <summary>
         /// Get menu item option set item metadata by key
         /// </summary>
@@ -284,31 +284,31 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultMetadata</returns>
         ApiResponse<RestApiResultMetadata> GetMenuItemOptionSetItemMetadataWithHttpInfo (int? menuId, int? storeId, int? optionSetItemId);
         /// <summary>
-        /// [PRIVATE API]Get Menus Name
+        /// [PRIVATE API] Get Menus Name
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <returns></returns>
-        void GetMenuName (int? menuId);
+        /// <returns>string</returns>
+        string GetMenuName (int? menuId);
 
         /// <summary>
-        /// [PRIVATE API]Get Menus Name
+        /// [PRIVATE API] Get Menus Name
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetMenuNameWithHttpInfo (int? menuId);
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> GetMenuNameWithHttpInfo (int? menuId);
         /// <summary>
-        /// [PRIVATE API]Get menus store names
+        /// [PRIVATE API] Get menus store names
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -316,20 +316,20 @@ namespace Flipdish.Api
         RestApiArrayResultMenuStoreNames GetMenuStoreNames (int? menuId);
 
         /// <summary>
-        /// [PRIVATE API]Get menus store names
+        /// [PRIVATE API] Get menus store names
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <returns>ApiResponse of RestApiArrayResultMenuStoreNames</returns>
         ApiResponse<RestApiArrayResultMenuStoreNames> GetMenuStoreNamesWithHttpInfo (int? menuId);
         /// <summary>
-        /// [PRIVATE API]Get menus tax details
+        /// [PRIVATE API] Get menus tax details
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -337,20 +337,20 @@ namespace Flipdish.Api
         RestApiArrayResultMenuTaxDetails GetMenuTaxDetails (int? menuId);
 
         /// <summary>
-        /// [PRIVATE API]Get menus tax details
+        /// [PRIVATE API] Get menus tax details
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <returns>ApiResponse of RestApiArrayResultMenuTaxDetails</returns>
         ApiResponse<RestApiArrayResultMenuTaxDetails> GetMenuTaxDetailsWithHttpInfo (int? menuId);
         /// <summary>
-        /// [PRIVATE API]Get menus by appId
+        /// [PRIVATE API] Get menus by appId
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Get Menus for this appId</param>
@@ -358,10 +358,10 @@ namespace Flipdish.Api
         RestApiArrayResultMenuSummary GetMenusByAppId (string appId);
 
         /// <summary>
-        /// [PRIVATE API]Get menus by appId
+        /// [PRIVATE API] Get menus by appId
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Get Menus for this appId</param>
@@ -371,7 +371,7 @@ namespace Flipdish.Api
         /// [PRIVATE API]Get a Menus Checkpoints
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -382,17 +382,17 @@ namespace Flipdish.Api
         /// [PRIVATE API]Get a Menus Checkpoints
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <returns>ApiResponse of RestApiArrayResultMenuCheckpoint</returns>
         ApiResponse<RestApiArrayResultMenuCheckpoint> GetMenusCheckpointsWithHttpInfo (int? menuId);
         /// <summary>
-        /// [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+        /// [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -401,10 +401,10 @@ namespace Flipdish.Api
         void MenusDeleteTaxRate (int? menuId, int? taxId);
 
         /// <summary>
-        /// [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+        /// [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -412,33 +412,33 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> MenusDeleteTaxRateWithHttpInfo (int? menuId, int? taxId);
         /// <summary>
-        /// 
+        /// Get bulk show/hide menu items and option set items
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
-        /// <param name="isAvailable"></param>
+        /// <param name="menuId">Menu id</param>
+        /// <param name="isAvailable">Is available flag</param>
         /// <returns>RestApiArrayResultMenuElementListResponse</returns>
         RestApiArrayResultMenuElementListResponse MenusGetMenuBulkShowHide (int? menuId, bool? isAvailable);
 
         /// <summary>
-        /// 
+        /// Get bulk show/hide menu items and option set items
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
-        /// <param name="isAvailable"></param>
+        /// <param name="menuId">Menu id</param>
+        /// <param name="isAvailable">Is available flag</param>
         /// <returns>ApiResponse of RestApiArrayResultMenuElementListResponse</returns>
         ApiResponse<RestApiArrayResultMenuElementListResponse> MenusGetMenuBulkShowHideWithHttpInfo (int? menuId, bool? isAvailable);
         /// <summary>
-        /// [PRIVATE API]Set if tax shows for a Menu
+        /// [PRIVATE API] Set if tax shows for a Menu
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -447,10 +447,10 @@ namespace Flipdish.Api
         void MenusSetDisplayOnMenuTax (int? menuId, bool? show);
 
         /// <summary>
-        /// [PRIVATE API]Set if tax shows for a Menu
+        /// [PRIVATE API] Set if tax shows for a Menu
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -458,10 +458,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> MenusSetDisplayOnMenuTaxWithHttpInfo (int? menuId, bool? show);
         /// <summary>
-        /// [PRIVATE API]Re-arrange Sections within a Menu
+        /// [PRIVATE API] Re-arrange Sections within a Menu
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -470,10 +470,10 @@ namespace Flipdish.Api
         void MenusSetItemDisplayOrders (int? menuId, MenuObjectDisplayOrders displayOrders);
 
         /// <summary>
-        /// [PRIVATE API]Re-arrange Sections within a Menu
+        /// [PRIVATE API] Re-arrange Sections within a Menu
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -481,35 +481,35 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> MenusSetItemDisplayOrdersWithHttpInfo (int? menuId, MenuObjectDisplayOrders displayOrders);
         /// <summary>
-        /// 
+        /// Bulk show/hide menu items or option set items
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
-        /// <param name="menuElements"></param>
-        /// <param name="isAvailable"></param>
+        /// <param name="menuId">Menu id</param>
+        /// <param name="menuElements">Elements to be show/hide</param>
+        /// <param name="isAvailable">Is available flag</param>
         /// <returns>RestApiArrayResultMenuElementEditResponse</returns>
         RestApiArrayResultMenuElementEditResponse MenusShowHideBulkItems (int? menuId, List<MenuElementHide> menuElements, bool? isAvailable);
 
         /// <summary>
-        /// 
+        /// Bulk show/hide menu items or option set items
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
-        /// <param name="menuElements"></param>
-        /// <param name="isAvailable"></param>
+        /// <param name="menuId">Menu id</param>
+        /// <param name="menuElements">Elements to be show/hide</param>
+        /// <param name="isAvailable">Is available flag</param>
         /// <returns>ApiResponse of RestApiArrayResultMenuElementEditResponse</returns>
         ApiResponse<RestApiArrayResultMenuElementEditResponse> MenusShowHideBulkItemsWithHttpInfo (int? menuId, List<MenuElementHide> menuElements, bool? isAvailable);
         /// <summary>
-        /// [PRIVATE API]Set the type of Tax on a Menu
+        /// [PRIVATE API] Set the type of Tax on a Menu
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -518,10 +518,10 @@ namespace Flipdish.Api
         void MenusUpdateTaxType (int? menuId, string type);
 
         /// <summary>
-        /// [PRIVATE API]Set the type of Tax on a Menu
+        /// [PRIVATE API] Set the type of Tax on a Menu
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -529,33 +529,33 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> MenusUpdateTaxTypeWithHttpInfo (int? menuId, string type);
         /// <summary>
-        /// [PRIVATE API]Add/Update a Tax Rate
+        /// [PRIVATE API] Add/Update a Tax Rate
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <param name="taxRate">Tax Rate to Add/Update</param>
+        /// <param name="taxRate">Tax rate to add/update</param>
         /// <returns>MenuTaxRate</returns>
         MenuTaxRate MenusUpsertTaxRate (int? menuId, MenuTaxRate taxRate);
 
         /// <summary>
-        /// [PRIVATE API]Add/Update a Tax Rate
+        /// [PRIVATE API] Add/Update a Tax Rate
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <param name="taxRate">Tax Rate to Add/Update</param>
+        /// <param name="taxRate">Tax rate to add/update</param>
         /// <returns>ApiResponse of MenuTaxRate</returns>
         ApiResponse<MenuTaxRate> MenusUpsertTaxRateWithHttpInfo (int? menuId, MenuTaxRate taxRate);
         /// <summary>
-        /// [PRIVATE API]Restore a Menu to a checkpoint
+        /// [PRIVATE API] Restore a Menu to a checkpoint
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -564,10 +564,10 @@ namespace Flipdish.Api
         void RestoreAMenuCheckpoint (int? menuId, int? checkpointId);
 
         /// <summary>
-        /// [PRIVATE API]Restore a Menu to a checkpoint
+        /// [PRIVATE API] Restore a Menu to a checkpoint
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -629,10 +629,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> SetMenuItemOptionSetItemMetadataWithHttpInfo (int? menuId, int? storeId, int? optionSetItemId, Metadata metadata);
         /// <summary>
-        /// [PRIVATE API]Lock/Unlock a Menu for Editing
+        /// [PRIVATE API] Lock/Unlock a Menu for Editing
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -641,10 +641,10 @@ namespace Flipdish.Api
         void SetMenuLock (int? menuId, bool? locked);
 
         /// <summary>
-        /// [PRIVATE API]Lock/Unlock a Menu for Editing
+        /// [PRIVATE API] Lock/Unlock a Menu for Editing
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -652,10 +652,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> SetMenuLockWithHttpInfo (int? menuId, bool? locked);
         /// <summary>
-        /// [PRIVATE API]Set Menus Name
+        /// [PRIVATE API] Set Menus Name
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -664,10 +664,10 @@ namespace Flipdish.Api
         void SetMenuName (int? menuId, string name);
 
         /// <summary>
-        /// [PRIVATE API]Set Menus Name
+        /// [PRIVATE API] Set Menus Name
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -682,7 +682,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <param name="menu">Menu (delta)</param>
+        /// <param name="menu">Full menu data</param>
         /// <returns></returns>
         void UpdateMenu (int? menuId, MenuBase menu);
 
@@ -694,7 +694,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <param name="menu">Menu (delta)</param>
+        /// <param name="menu">Full menu data</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateMenuWithHttpInfo (int? menuId, MenuBase menu);
         /// <summary>
@@ -746,10 +746,10 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// [PRIVATE API]Clone a menu, (without attaching stores)
+        /// [PRIVATE API] Clone a menu, (without attaching stores)
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -758,10 +758,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultMenu> CreateDraftMenuFromExistingMenuAsync (int? menuId, string newName);
 
         /// <summary>
-        /// [PRIVATE API]Clone a menu, (without attaching stores)
+        /// [PRIVATE API] Clone a menu, (without attaching stores)
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -815,10 +815,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (int?)</returns>
         System.Threading.Tasks.Task<ApiResponse<int?>> CreateNewMenuForAppAsyncWithHttpInfo (string appId, CreateFullMenu menu);
         /// <summary>
-        /// [PRIVATE API]Mark a Menu as Deleted
+        /// [PRIVATE API] Mark a Menu as Deleted
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu Identifier</param>
@@ -826,10 +826,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task DeleteMenuAsync (int? menuId);
 
         /// <summary>
-        /// [PRIVATE API]Mark a Menu as Deleted
+        /// [PRIVATE API] Mark a Menu as Deleted
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu Identifier</param>
@@ -963,8 +963,8 @@ namespace Flipdish.Api
         /// <param name="storeId">Store identifier</param>
         /// <param name="menuItemId">Menu item identifier</param>
         /// <param name="key">Metadata key</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetMenuItemMetadataByKeyAsync (int? menuId, int? storeId, int? menuItemId, string key);
+        /// <returns>Task of RestApiResultMetadata</returns>
+        System.Threading.Tasks.Task<RestApiResultMetadata> GetMenuItemMetadataByKeyAsync (int? menuId, int? storeId, int? menuItemId, string key);
 
         /// <summary>
         /// Get menu item metadata by key
@@ -977,8 +977,8 @@ namespace Flipdish.Api
         /// <param name="storeId">Store identifier</param>
         /// <param name="menuItemId">Menu item identifier</param>
         /// <param name="key">Metadata key</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetMenuItemMetadataByKeyAsyncWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key);
+        /// <returns>Task of ApiResponse (RestApiResultMetadata)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultMetadata>> GetMenuItemMetadataByKeyAsyncWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key);
         /// <summary>
         /// Get menu item option set item metadata by key
         /// </summary>
@@ -1005,31 +1005,31 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultMetadata)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultMetadata>> GetMenuItemOptionSetItemMetadataAsyncWithHttpInfo (int? menuId, int? storeId, int? optionSetItemId);
         /// <summary>
-        /// [PRIVATE API]Get Menus Name
+        /// [PRIVATE API] Get Menus Name
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetMenuNameAsync (int? menuId);
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> GetMenuNameAsync (int? menuId);
 
         /// <summary>
-        /// [PRIVATE API]Get Menus Name
+        /// [PRIVATE API] Get Menus Name
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetMenuNameAsyncWithHttpInfo (int? menuId);
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> GetMenuNameAsyncWithHttpInfo (int? menuId);
         /// <summary>
-        /// [PRIVATE API]Get menus store names
+        /// [PRIVATE API] Get menus store names
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1037,20 +1037,20 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultMenuStoreNames> GetMenuStoreNamesAsync (int? menuId);
 
         /// <summary>
-        /// [PRIVATE API]Get menus store names
+        /// [PRIVATE API] Get menus store names
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultMenuStoreNames)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuStoreNames>> GetMenuStoreNamesAsyncWithHttpInfo (int? menuId);
         /// <summary>
-        /// [PRIVATE API]Get menus tax details
+        /// [PRIVATE API] Get menus tax details
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1058,20 +1058,20 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultMenuTaxDetails> GetMenuTaxDetailsAsync (int? menuId);
 
         /// <summary>
-        /// [PRIVATE API]Get menus tax details
+        /// [PRIVATE API] Get menus tax details
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultMenuTaxDetails)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuTaxDetails>> GetMenuTaxDetailsAsyncWithHttpInfo (int? menuId);
         /// <summary>
-        /// [PRIVATE API]Get menus by appId
+        /// [PRIVATE API] Get menus by appId
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Get Menus for this appId</param>
@@ -1079,10 +1079,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultMenuSummary> GetMenusByAppIdAsync (string appId);
 
         /// <summary>
-        /// [PRIVATE API]Get menus by appId
+        /// [PRIVATE API] Get menus by appId
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Get Menus for this appId</param>
@@ -1092,7 +1092,7 @@ namespace Flipdish.Api
         /// [PRIVATE API]Get a Menus Checkpoints
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1103,17 +1103,17 @@ namespace Flipdish.Api
         /// [PRIVATE API]Get a Menus Checkpoints
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultMenuCheckpoint)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuCheckpoint>> GetMenusCheckpointsAsyncWithHttpInfo (int? menuId);
         /// <summary>
-        /// [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+        /// [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1122,10 +1122,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task MenusDeleteTaxRateAsync (int? menuId, int? taxId);
 
         /// <summary>
-        /// [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+        /// [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1133,33 +1133,33 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> MenusDeleteTaxRateAsyncWithHttpInfo (int? menuId, int? taxId);
         /// <summary>
-        /// 
+        /// Get bulk show/hide menu items and option set items
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
-        /// <param name="isAvailable"></param>
+        /// <param name="menuId">Menu id</param>
+        /// <param name="isAvailable">Is available flag</param>
         /// <returns>Task of RestApiArrayResultMenuElementListResponse</returns>
         System.Threading.Tasks.Task<RestApiArrayResultMenuElementListResponse> MenusGetMenuBulkShowHideAsync (int? menuId, bool? isAvailable);
 
         /// <summary>
-        /// 
+        /// Get bulk show/hide menu items and option set items
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
-        /// <param name="isAvailable"></param>
+        /// <param name="menuId">Menu id</param>
+        /// <param name="isAvailable">Is available flag</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultMenuElementListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuElementListResponse>> MenusGetMenuBulkShowHideAsyncWithHttpInfo (int? menuId, bool? isAvailable);
         /// <summary>
-        /// [PRIVATE API]Set if tax shows for a Menu
+        /// [PRIVATE API] Set if tax shows for a Menu
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1168,10 +1168,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task MenusSetDisplayOnMenuTaxAsync (int? menuId, bool? show);
 
         /// <summary>
-        /// [PRIVATE API]Set if tax shows for a Menu
+        /// [PRIVATE API] Set if tax shows for a Menu
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1179,10 +1179,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> MenusSetDisplayOnMenuTaxAsyncWithHttpInfo (int? menuId, bool? show);
         /// <summary>
-        /// [PRIVATE API]Re-arrange Sections within a Menu
+        /// [PRIVATE API] Re-arrange Sections within a Menu
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1191,10 +1191,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task MenusSetItemDisplayOrdersAsync (int? menuId, MenuObjectDisplayOrders displayOrders);
 
         /// <summary>
-        /// [PRIVATE API]Re-arrange Sections within a Menu
+        /// [PRIVATE API] Re-arrange Sections within a Menu
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1202,35 +1202,35 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> MenusSetItemDisplayOrdersAsyncWithHttpInfo (int? menuId, MenuObjectDisplayOrders displayOrders);
         /// <summary>
-        /// 
+        /// Bulk show/hide menu items or option set items
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
-        /// <param name="menuElements"></param>
-        /// <param name="isAvailable"></param>
+        /// <param name="menuId">Menu id</param>
+        /// <param name="menuElements">Elements to be show/hide</param>
+        /// <param name="isAvailable">Is available flag</param>
         /// <returns>Task of RestApiArrayResultMenuElementEditResponse</returns>
         System.Threading.Tasks.Task<RestApiArrayResultMenuElementEditResponse> MenusShowHideBulkItemsAsync (int? menuId, List<MenuElementHide> menuElements, bool? isAvailable);
 
         /// <summary>
-        /// 
+        /// Bulk show/hide menu items or option set items
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
-        /// <param name="menuElements"></param>
-        /// <param name="isAvailable"></param>
+        /// <param name="menuId">Menu id</param>
+        /// <param name="menuElements">Elements to be show/hide</param>
+        /// <param name="isAvailable">Is available flag</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultMenuElementEditResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuElementEditResponse>> MenusShowHideBulkItemsAsyncWithHttpInfo (int? menuId, List<MenuElementHide> menuElements, bool? isAvailable);
         /// <summary>
-        /// [PRIVATE API]Set the type of Tax on a Menu
+        /// [PRIVATE API] Set the type of Tax on a Menu
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1239,10 +1239,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task MenusUpdateTaxTypeAsync (int? menuId, string type);
 
         /// <summary>
-        /// [PRIVATE API]Set the type of Tax on a Menu
+        /// [PRIVATE API] Set the type of Tax on a Menu
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1250,33 +1250,33 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> MenusUpdateTaxTypeAsyncWithHttpInfo (int? menuId, string type);
         /// <summary>
-        /// [PRIVATE API]Add/Update a Tax Rate
+        /// [PRIVATE API] Add/Update a Tax Rate
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <param name="taxRate">Tax Rate to Add/Update</param>
+        /// <param name="taxRate">Tax rate to add/update</param>
         /// <returns>Task of MenuTaxRate</returns>
         System.Threading.Tasks.Task<MenuTaxRate> MenusUpsertTaxRateAsync (int? menuId, MenuTaxRate taxRate);
 
         /// <summary>
-        /// [PRIVATE API]Add/Update a Tax Rate
+        /// [PRIVATE API] Add/Update a Tax Rate
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <param name="taxRate">Tax Rate to Add/Update</param>
+        /// <param name="taxRate">Tax rate to add/update</param>
         /// <returns>Task of ApiResponse (MenuTaxRate)</returns>
         System.Threading.Tasks.Task<ApiResponse<MenuTaxRate>> MenusUpsertTaxRateAsyncWithHttpInfo (int? menuId, MenuTaxRate taxRate);
         /// <summary>
-        /// [PRIVATE API]Restore a Menu to a checkpoint
+        /// [PRIVATE API] Restore a Menu to a checkpoint
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1285,10 +1285,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task RestoreAMenuCheckpointAsync (int? menuId, int? checkpointId);
 
         /// <summary>
-        /// [PRIVATE API]Restore a Menu to a checkpoint
+        /// [PRIVATE API] Restore a Menu to a checkpoint
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1350,10 +1350,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> SetMenuItemOptionSetItemMetadataAsyncWithHttpInfo (int? menuId, int? storeId, int? optionSetItemId, Metadata metadata);
         /// <summary>
-        /// [PRIVATE API]Lock/Unlock a Menu for Editing
+        /// [PRIVATE API] Lock/Unlock a Menu for Editing
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1362,10 +1362,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task SetMenuLockAsync (int? menuId, bool? locked);
 
         /// <summary>
-        /// [PRIVATE API]Lock/Unlock a Menu for Editing
+        /// [PRIVATE API] Lock/Unlock a Menu for Editing
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1373,10 +1373,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> SetMenuLockAsyncWithHttpInfo (int? menuId, bool? locked);
         /// <summary>
-        /// [PRIVATE API]Set Menus Name
+        /// [PRIVATE API] Set Menus Name
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1385,10 +1385,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task SetMenuNameAsync (int? menuId, string name);
 
         /// <summary>
-        /// [PRIVATE API]Set Menus Name
+        /// [PRIVATE API] Set Menus Name
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1403,7 +1403,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <param name="menu">Menu (delta)</param>
+        /// <param name="menu">Full menu data</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UpdateMenuAsync (int? menuId, MenuBase menu);
 
@@ -1415,7 +1415,7 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <param name="menu">Menu (delta)</param>
+        /// <param name="menu">Full menu data</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateMenuAsyncWithHttpInfo (int? menuId, MenuBase menu);
         /// <summary>
@@ -1565,7 +1565,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Clone a menu, (without attaching stores) 
+        /// [PRIVATE API] Clone a menu, (without attaching stores) [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1578,7 +1578,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Clone a menu, (without attaching stores) 
+        /// [PRIVATE API] Clone a menu, (without attaching stores) [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1646,7 +1646,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Clone a menu, (without attaching stores) 
+        /// [PRIVATE API] Clone a menu, (without attaching stores) [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1660,7 +1660,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Clone a menu, (without attaching stores) 
+        /// [PRIVATE API] Clone a menu, (without attaching stores) [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -2102,7 +2102,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Mark a Menu as Deleted 
+        /// [PRIVATE API] Mark a Menu as Deleted [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu Identifier</param>
@@ -2113,7 +2113,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Mark a Menu as Deleted 
+        /// [PRIVATE API] Mark a Menu as Deleted [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu Identifier</param>
@@ -2176,7 +2176,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Mark a Menu as Deleted 
+        /// [PRIVATE API] Mark a Menu as Deleted [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu Identifier</param>
@@ -2188,7 +2188,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Mark a Menu as Deleted 
+        /// [PRIVATE API] Mark a Menu as Deleted [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu Identifier</param>
@@ -3081,10 +3081,11 @@ namespace Flipdish.Api
         /// <param name="storeId">Store identifier</param>
         /// <param name="menuItemId">Menu item identifier</param>
         /// <param name="key">Metadata key</param>
-        /// <returns></returns>
-        public void GetMenuItemMetadataByKey (int? menuId, int? storeId, int? menuItemId, string key)
+        /// <returns>RestApiResultMetadata</returns>
+        public RestApiResultMetadata GetMenuItemMetadataByKey (int? menuId, int? storeId, int? menuItemId, string key)
         {
-             GetMenuItemMetadataByKeyWithHttpInfo(menuId, storeId, menuItemId, key);
+             ApiResponse<RestApiResultMetadata> localVarResponse = GetMenuItemMetadataByKeyWithHttpInfo(menuId, storeId, menuItemId, key);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -3095,8 +3096,8 @@ namespace Flipdish.Api
         /// <param name="storeId">Store identifier</param>
         /// <param name="menuItemId">Menu item identifier</param>
         /// <param name="key">Metadata key</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetMenuItemMetadataByKeyWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key)
+        /// <returns>ApiResponse of RestApiResultMetadata</returns>
+        public ApiResponse< RestApiResultMetadata > GetMenuItemMetadataByKeyWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
@@ -3160,9 +3161,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<RestApiResultMetadata>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (RestApiResultMetadata) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMetadata)));
         }
 
         /// <summary>
@@ -3173,10 +3174,11 @@ namespace Flipdish.Api
         /// <param name="storeId">Store identifier</param>
         /// <param name="menuItemId">Menu item identifier</param>
         /// <param name="key">Metadata key</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetMenuItemMetadataByKeyAsync (int? menuId, int? storeId, int? menuItemId, string key)
+        /// <returns>Task of RestApiResultMetadata</returns>
+        public async System.Threading.Tasks.Task<RestApiResultMetadata> GetMenuItemMetadataByKeyAsync (int? menuId, int? storeId, int? menuItemId, string key)
         {
-             await GetMenuItemMetadataByKeyAsyncWithHttpInfo(menuId, storeId, menuItemId, key);
+             ApiResponse<RestApiResultMetadata> localVarResponse = await GetMenuItemMetadataByKeyAsyncWithHttpInfo(menuId, storeId, menuItemId, key);
+             return localVarResponse.Data;
 
         }
 
@@ -3188,8 +3190,8 @@ namespace Flipdish.Api
         /// <param name="storeId">Store identifier</param>
         /// <param name="menuItemId">Menu item identifier</param>
         /// <param name="key">Metadata key</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetMenuItemMetadataByKeyAsyncWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key)
+        /// <returns>Task of ApiResponse (RestApiResultMetadata)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultMetadata>> GetMenuItemMetadataByKeyAsyncWithHttpInfo (int? menuId, int? storeId, int? menuItemId, string key)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
@@ -3253,9 +3255,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<RestApiResultMetadata>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (RestApiResultMetadata) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultMetadata)));
         }
 
         /// <summary>
@@ -3434,23 +3436,24 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Get Menus Name 
+        /// [PRIVATE API] Get Menus Name [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <returns></returns>
-        public void GetMenuName (int? menuId)
+        /// <returns>string</returns>
+        public string GetMenuName (int? menuId)
         {
-             GetMenuNameWithHttpInfo(menuId);
+             ApiResponse<string> localVarResponse = GetMenuNameWithHttpInfo(menuId);
+             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// [PRIVATE API]Get Menus Name 
+        /// [PRIVATE API] Get Menus Name [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetMenuNameWithHttpInfo (int? menuId)
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > GetMenuNameWithHttpInfo (int? menuId)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
@@ -3502,30 +3505,31 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>
-        /// [PRIVATE API]Get Menus Name 
+        /// [PRIVATE API] Get Menus Name [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetMenuNameAsync (int? menuId)
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> GetMenuNameAsync (int? menuId)
         {
-             await GetMenuNameAsyncWithHttpInfo(menuId);
+             ApiResponse<string> localVarResponse = await GetMenuNameAsyncWithHttpInfo(menuId);
+             return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// [PRIVATE API]Get Menus Name 
+        /// [PRIVATE API] Get Menus Name [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetMenuNameAsyncWithHttpInfo (int? menuId)
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> GetMenuNameAsyncWithHttpInfo (int? menuId)
         {
             // verify the required parameter 'menuId' is set
             if (menuId == null)
@@ -3577,13 +3581,13 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>
-        /// [PRIVATE API]Get menus store names 
+        /// [PRIVATE API] Get menus store names [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -3595,7 +3599,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Get menus store names 
+        /// [PRIVATE API] Get menus store names [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -3658,7 +3662,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Get menus store names 
+        /// [PRIVATE API] Get menus store names [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -3671,7 +3675,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Get menus store names 
+        /// [PRIVATE API] Get menus store names [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -3734,7 +3738,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Get menus tax details 
+        /// [PRIVATE API] Get menus tax details [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -3746,7 +3750,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Get menus tax details 
+        /// [PRIVATE API] Get menus tax details [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -3809,7 +3813,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Get menus tax details 
+        /// [PRIVATE API] Get menus tax details [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -3822,7 +3826,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Get menus tax details 
+        /// [PRIVATE API] Get menus tax details [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -3885,7 +3889,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Get menus by appId 
+        /// [PRIVATE API] Get menus by appId [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Get Menus for this appId</param>
@@ -3897,7 +3901,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Get menus by appId 
+        /// [PRIVATE API] Get menus by appId [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Get Menus for this appId</param>
@@ -3960,7 +3964,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Get menus by appId 
+        /// [PRIVATE API] Get menus by appId [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Get Menus for this appId</param>
@@ -3973,7 +3977,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Get menus by appId 
+        /// [PRIVATE API] Get menus by appId [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Get Menus for this appId</param>
@@ -4036,7 +4040,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Get a Menus Checkpoints 
+        /// [PRIVATE API]Get a Menus Checkpoints [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -4048,7 +4052,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Get a Menus Checkpoints 
+        /// [PRIVATE API]Get a Menus Checkpoints [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -4111,7 +4115,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Get a Menus Checkpoints 
+        /// [PRIVATE API]Get a Menus Checkpoints [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -4124,7 +4128,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Get a Menus Checkpoints 
+        /// [PRIVATE API]Get a Menus Checkpoints [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -4187,7 +4191,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached 
+        /// [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -4199,7 +4203,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached 
+        /// [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -4267,7 +4271,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached 
+        /// [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -4280,7 +4284,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached 
+        /// [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -4348,11 +4352,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Get bulk show/hide menu items and option set items 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
-        /// <param name="isAvailable"></param>
+        /// <param name="menuId">Menu id</param>
+        /// <param name="isAvailable">Is available flag</param>
         /// <returns>RestApiArrayResultMenuElementListResponse</returns>
         public RestApiArrayResultMenuElementListResponse MenusGetMenuBulkShowHide (int? menuId, bool? isAvailable)
         {
@@ -4361,11 +4365,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Get bulk show/hide menu items and option set items 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
-        /// <param name="isAvailable"></param>
+        /// <param name="menuId">Menu id</param>
+        /// <param name="isAvailable">Is available flag</param>
         /// <returns>ApiResponse of RestApiArrayResultMenuElementListResponse</returns>
         public ApiResponse< RestApiArrayResultMenuElementListResponse > MenusGetMenuBulkShowHideWithHttpInfo (int? menuId, bool? isAvailable)
         {
@@ -4429,11 +4433,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Get bulk show/hide menu items and option set items 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
-        /// <param name="isAvailable"></param>
+        /// <param name="menuId">Menu id</param>
+        /// <param name="isAvailable">Is available flag</param>
         /// <returns>Task of RestApiArrayResultMenuElementListResponse</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultMenuElementListResponse> MenusGetMenuBulkShowHideAsync (int? menuId, bool? isAvailable)
         {
@@ -4443,11 +4447,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Get bulk show/hide menu items and option set items 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
-        /// <param name="isAvailable"></param>
+        /// <param name="menuId">Menu id</param>
+        /// <param name="isAvailable">Is available flag</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultMenuElementListResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuElementListResponse>> MenusGetMenuBulkShowHideAsyncWithHttpInfo (int? menuId, bool? isAvailable)
         {
@@ -4511,7 +4515,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Set if tax shows for a Menu 
+        /// [PRIVATE API] Set if tax shows for a Menu [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -4523,7 +4527,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Set if tax shows for a Menu 
+        /// [PRIVATE API] Set if tax shows for a Menu [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -4591,7 +4595,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Set if tax shows for a Menu 
+        /// [PRIVATE API] Set if tax shows for a Menu [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -4604,7 +4608,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Set if tax shows for a Menu 
+        /// [PRIVATE API] Set if tax shows for a Menu [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -4672,7 +4676,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Re-arrange Sections within a Menu 
+        /// [PRIVATE API] Re-arrange Sections within a Menu [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -4684,7 +4688,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Re-arrange Sections within a Menu 
+        /// [PRIVATE API] Re-arrange Sections within a Menu [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -4764,7 +4768,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Re-arrange Sections within a Menu 
+        /// [PRIVATE API] Re-arrange Sections within a Menu [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -4777,7 +4781,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Re-arrange Sections within a Menu 
+        /// [PRIVATE API] Re-arrange Sections within a Menu [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -4857,12 +4861,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Bulk show/hide menu items or option set items 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
-        /// <param name="menuElements"></param>
-        /// <param name="isAvailable"></param>
+        /// <param name="menuId">Menu id</param>
+        /// <param name="menuElements">Elements to be show/hide</param>
+        /// <param name="isAvailable">Is available flag</param>
         /// <returns>RestApiArrayResultMenuElementEditResponse</returns>
         public RestApiArrayResultMenuElementEditResponse MenusShowHideBulkItems (int? menuId, List<MenuElementHide> menuElements, bool? isAvailable)
         {
@@ -4871,12 +4875,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Bulk show/hide menu items or option set items 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
-        /// <param name="menuElements"></param>
-        /// <param name="isAvailable"></param>
+        /// <param name="menuId">Menu id</param>
+        /// <param name="menuElements">Elements to be show/hide</param>
+        /// <param name="isAvailable">Is available flag</param>
         /// <returns>ApiResponse of RestApiArrayResultMenuElementEditResponse</returns>
         public ApiResponse< RestApiArrayResultMenuElementEditResponse > MenusShowHideBulkItemsWithHttpInfo (int? menuId, List<MenuElementHide> menuElements, bool? isAvailable)
         {
@@ -4956,12 +4960,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Bulk show/hide menu items or option set items 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
-        /// <param name="menuElements"></param>
-        /// <param name="isAvailable"></param>
+        /// <param name="menuId">Menu id</param>
+        /// <param name="menuElements">Elements to be show/hide</param>
+        /// <param name="isAvailable">Is available flag</param>
         /// <returns>Task of RestApiArrayResultMenuElementEditResponse</returns>
         public async System.Threading.Tasks.Task<RestApiArrayResultMenuElementEditResponse> MenusShowHideBulkItemsAsync (int? menuId, List<MenuElementHide> menuElements, bool? isAvailable)
         {
@@ -4971,12 +4975,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Bulk show/hide menu items or option set items 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
-        /// <param name="menuElements"></param>
-        /// <param name="isAvailable"></param>
+        /// <param name="menuId">Menu id</param>
+        /// <param name="menuElements">Elements to be show/hide</param>
+        /// <param name="isAvailable">Is available flag</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultMenuElementEditResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuElementEditResponse>> MenusShowHideBulkItemsAsyncWithHttpInfo (int? menuId, List<MenuElementHide> menuElements, bool? isAvailable)
         {
@@ -5056,7 +5060,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Set the type of Tax on a Menu 
+        /// [PRIVATE API] Set the type of Tax on a Menu [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -5068,7 +5072,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Set the type of Tax on a Menu 
+        /// [PRIVATE API] Set the type of Tax on a Menu [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -5136,7 +5140,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Set the type of Tax on a Menu 
+        /// [PRIVATE API] Set the type of Tax on a Menu [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -5149,7 +5153,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Set the type of Tax on a Menu 
+        /// [PRIVATE API] Set the type of Tax on a Menu [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -5217,11 +5221,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Add/Update a Tax Rate 
+        /// [PRIVATE API] Add/Update a Tax Rate [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <param name="taxRate">Tax Rate to Add/Update</param>
+        /// <param name="taxRate">Tax rate to add/update</param>
         /// <returns>MenuTaxRate</returns>
         public MenuTaxRate MenusUpsertTaxRate (int? menuId, MenuTaxRate taxRate)
         {
@@ -5230,11 +5234,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Add/Update a Tax Rate 
+        /// [PRIVATE API] Add/Update a Tax Rate [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <param name="taxRate">Tax Rate to Add/Update</param>
+        /// <param name="taxRate">Tax rate to add/update</param>
         /// <returns>ApiResponse of MenuTaxRate</returns>
         public ApiResponse< MenuTaxRate > MenusUpsertTaxRateWithHttpInfo (int? menuId, MenuTaxRate taxRate)
         {
@@ -5310,11 +5314,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Add/Update a Tax Rate 
+        /// [PRIVATE API] Add/Update a Tax Rate [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <param name="taxRate">Tax Rate to Add/Update</param>
+        /// <param name="taxRate">Tax rate to add/update</param>
         /// <returns>Task of MenuTaxRate</returns>
         public async System.Threading.Tasks.Task<MenuTaxRate> MenusUpsertTaxRateAsync (int? menuId, MenuTaxRate taxRate)
         {
@@ -5324,11 +5328,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Add/Update a Tax Rate 
+        /// [PRIVATE API] Add/Update a Tax Rate [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <param name="taxRate">Tax Rate to Add/Update</param>
+        /// <param name="taxRate">Tax rate to add/update</param>
         /// <returns>Task of ApiResponse (MenuTaxRate)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<MenuTaxRate>> MenusUpsertTaxRateAsyncWithHttpInfo (int? menuId, MenuTaxRate taxRate)
         {
@@ -5404,7 +5408,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Restore a Menu to a checkpoint 
+        /// [PRIVATE API] Restore a Menu to a checkpoint [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -5416,7 +5420,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Restore a Menu to a checkpoint 
+        /// [PRIVATE API] Restore a Menu to a checkpoint [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -5484,7 +5488,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Restore a Menu to a checkpoint 
+        /// [PRIVATE API] Restore a Menu to a checkpoint [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -5497,7 +5501,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Restore a Menu to a checkpoint 
+        /// [PRIVATE API] Restore a Menu to a checkpoint [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -5983,7 +5987,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Lock/Unlock a Menu for Editing 
+        /// [PRIVATE API] Lock/Unlock a Menu for Editing [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -5995,7 +5999,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Lock/Unlock a Menu for Editing 
+        /// [PRIVATE API] Lock/Unlock a Menu for Editing [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -6075,7 +6079,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Lock/Unlock a Menu for Editing 
+        /// [PRIVATE API] Lock/Unlock a Menu for Editing [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -6088,7 +6092,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Lock/Unlock a Menu for Editing 
+        /// [PRIVATE API] Lock/Unlock a Menu for Editing [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -6168,7 +6172,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Set Menus Name 
+        /// [PRIVATE API] Set Menus Name [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -6180,7 +6184,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Set Menus Name 
+        /// [PRIVATE API] Set Menus Name [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -6260,7 +6264,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Set Menus Name 
+        /// [PRIVATE API] Set Menus Name [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -6273,7 +6277,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Set Menus Name 
+        /// [PRIVATE API] Set Menus Name [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -6357,7 +6361,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <param name="menu">Menu (delta)</param>
+        /// <param name="menu">Full menu data</param>
         /// <returns></returns>
         public void UpdateMenu (int? menuId, MenuBase menu)
         {
@@ -6369,7 +6373,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <param name="menu">Menu (delta)</param>
+        /// <param name="menu">Full menu data</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> UpdateMenuWithHttpInfo (int? menuId, MenuBase menu)
         {
@@ -6449,7 +6453,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <param name="menu">Menu (delta)</param>
+        /// <param name="menu">Full menu data</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UpdateMenuAsync (int? menuId, MenuBase menu)
         {
@@ -6462,7 +6466,7 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
-        /// <param name="menu">Menu (delta)</param>
+        /// <param name="menu">Full menu data</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateMenuAsyncWithHttpInfo (int? menuId, MenuBase menu)
         {

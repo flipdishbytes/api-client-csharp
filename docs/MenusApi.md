@@ -4,10 +4,10 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateDraftMenuFromExistingMenu**](MenusApi.md#createdraftmenufromexistingmenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | [PRIVATE API]Clone a menu, (without attaching stores)
+[**CreateDraftMenuFromExistingMenu**](MenusApi.md#createdraftmenufromexistingmenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | [PRIVATE API] Clone a menu, (without attaching stores)
 [**CreateNewMenuAsync**](MenusApi.md#createnewmenuasync) | **POST** /api/v1.0/{appId}/menus/async | Create a new menu asynchronously
 [**CreateNewMenuForApp**](MenusApi.md#createnewmenuforapp) | **POST** /api/v1.0/{appId}/menus | Create a new menu
-[**DeleteMenu**](MenusApi.md#deletemenu) | **DELETE** /api/v1.0/menus/{menuId} | [PRIVATE API]Mark a Menu as Deleted
+[**DeleteMenu**](MenusApi.md#deletemenu) | **DELETE** /api/v1.0/menus/{menuId} | [PRIVATE API] Mark a Menu as Deleted
 [**DeleteMenuImage**](MenusApi.md#deletemenuimage) | **DELETE** /api/v1.0/menus/{menuId}/image | Delete menu image
 [**DeleteMenuItemMetadata**](MenusApi.md#deletemenuitemmetadata) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Delete menu item metadata
 [**GetAllMenuMetadataByMenuIdAndStoreId**](MenusApi.md#getallmenumetadatabymenuidandstoreid) | **GET** /api/v1.0/menus/{menuId}/metadata/store/{storeId} | Get all menu metadata by menu ID and store ID
@@ -15,23 +15,23 @@ Method | HTTP request | Description
 [**GetMenuItemMetadata**](MenusApi.md#getmenuitemmetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Get menu item metadata
 [**GetMenuItemMetadataByKey**](MenusApi.md#getmenuitemmetadatabykey) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get menu item metadata by key
 [**GetMenuItemOptionSetItemMetadata**](MenusApi.md#getmenuitemoptionsetitemmetadata) | **GET** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Get menu item option set item metadata by key
-[**GetMenuName**](MenusApi.md#getmenuname) | **GET** /api/v1.0/menus/{menuId}/name | [PRIVATE API]Get Menus Name
-[**GetMenuStoreNames**](MenusApi.md#getmenustorenames) | **GET** /api/v1.0/menus/{menuId}/stores | [PRIVATE API]Get menus store names
-[**GetMenuTaxDetails**](MenusApi.md#getmenutaxdetails) | **GET** /api/v1.0/menus/{menuId}/tax | [PRIVATE API]Get menus tax details
-[**GetMenusByAppId**](MenusApi.md#getmenusbyappid) | **GET** /api/v1.0/{appId}/menus | [PRIVATE API]Get menus by appId
+[**GetMenuName**](MenusApi.md#getmenuname) | **GET** /api/v1.0/menus/{menuId}/name | [PRIVATE API] Get Menus Name
+[**GetMenuStoreNames**](MenusApi.md#getmenustorenames) | **GET** /api/v1.0/menus/{menuId}/stores | [PRIVATE API] Get menus store names
+[**GetMenuTaxDetails**](MenusApi.md#getmenutaxdetails) | **GET** /api/v1.0/menus/{menuId}/tax | [PRIVATE API] Get menus tax details
+[**GetMenusByAppId**](MenusApi.md#getmenusbyappid) | **GET** /api/v1.0/{appId}/menus | [PRIVATE API] Get menus by appId
 [**GetMenusCheckpoints**](MenusApi.md#getmenuscheckpoints) | **GET** /api/v1.0/menus/{menuId}/checkpoints | [PRIVATE API]Get a Menus Checkpoints
-[**MenusDeleteTaxRate**](MenusApi.md#menusdeletetaxrate) | **DELETE** /api/v1.0/menus/{menuId}/tax/{taxId} | [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
-[**MenusGetMenuBulkShowHide**](MenusApi.md#menusgetmenubulkshowhide) | **GET** /api/v1.0/menus/{menuId}/bulkshowhide/list | 
-[**MenusSetDisplayOnMenuTax**](MenusApi.md#menussetdisplayonmenutax) | **POST** /api/v1.0/menus/{menuId}/tax/show/{show} | [PRIVATE API]Set if tax shows for a Menu
-[**MenusSetItemDisplayOrders**](MenusApi.md#menussetitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sectiondisplayorders | [PRIVATE API]Re-arrange Sections within a Menu
-[**MenusShowHideBulkItems**](MenusApi.md#menusshowhidebulkitems) | **POST** /api/v1.0/menus/{menuId}/bulkshowhide | 
-[**MenusUpdateTaxType**](MenusApi.md#menusupdatetaxtype) | **POST** /api/v1.0/menus/{menuId}/tax/type/{type} | [PRIVATE API]Set the type of Tax on a Menu
-[**MenusUpsertTaxRate**](MenusApi.md#menusupserttaxrate) | **POST** /api/v1.0/menus/{menuId}/taxrate | [PRIVATE API]Add/Update a Tax Rate
-[**RestoreAMenuCheckpoint**](MenusApi.md#restoreamenucheckpoint) | **POST** /api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore | [PRIVATE API]Restore a Menu to a checkpoint
+[**MenusDeleteTaxRate**](MenusApi.md#menusdeletetaxrate) | **DELETE** /api/v1.0/menus/{menuId}/tax/{taxId} | [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+[**MenusGetMenuBulkShowHide**](MenusApi.md#menusgetmenubulkshowhide) | **GET** /api/v1.0/menus/{menuId}/bulkshowhide/list | Get bulk show/hide menu items and option set items
+[**MenusSetDisplayOnMenuTax**](MenusApi.md#menussetdisplayonmenutax) | **POST** /api/v1.0/menus/{menuId}/tax/show/{show} | [PRIVATE API] Set if tax shows for a Menu
+[**MenusSetItemDisplayOrders**](MenusApi.md#menussetitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sectiondisplayorders | [PRIVATE API] Re-arrange Sections within a Menu
+[**MenusShowHideBulkItems**](MenusApi.md#menusshowhidebulkitems) | **POST** /api/v1.0/menus/{menuId}/bulkshowhide | Bulk show/hide menu items or option set items
+[**MenusUpdateTaxType**](MenusApi.md#menusupdatetaxtype) | **POST** /api/v1.0/menus/{menuId}/tax/type/{type} | [PRIVATE API] Set the type of Tax on a Menu
+[**MenusUpsertTaxRate**](MenusApi.md#menusupserttaxrate) | **POST** /api/v1.0/menus/{menuId}/taxrate | [PRIVATE API] Add/Update a Tax Rate
+[**RestoreAMenuCheckpoint**](MenusApi.md#restoreamenucheckpoint) | **POST** /api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore | [PRIVATE API] Restore a Menu to a checkpoint
 [**SetMenuItemMetadata**](MenusApi.md#setmenuitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Update menu item metadata
 [**SetMenuItemOptionSetItemMetadata**](MenusApi.md#setmenuitemoptionsetitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Update menu item option set item metadata
-[**SetMenuLock**](MenusApi.md#setmenulock) | **POST** /api/v1.0/menus/{menuId}/lock | [PRIVATE API]Lock/Unlock a Menu for Editing
-[**SetMenuName**](MenusApi.md#setmenuname) | **POST** /api/v1.0/menus/{menuId}/name | [PRIVATE API]Set Menus Name
+[**SetMenuLock**](MenusApi.md#setmenulock) | **POST** /api/v1.0/menus/{menuId}/lock | [PRIVATE API] Lock/Unlock a Menu for Editing
+[**SetMenuName**](MenusApi.md#setmenuname) | **POST** /api/v1.0/menus/{menuId}/name | [PRIVATE API] Set Menus Name
 [**UpdateMenu**](MenusApi.md#updatemenu) | **POST** /api/v1.0/menus/{menuId} | Update menu
 [**UploadMenuImage**](MenusApi.md#uploadmenuimage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
 [**UploadNewMenuForApp**](MenusApi.md#uploadnewmenuforapp) | **POST** /api/v1.0/{appId}/menus/xlsx | Create a new menu from xlsx file.
@@ -41,7 +41,9 @@ Method | HTTP request | Description
 # **CreateDraftMenuFromExistingMenu**
 > RestApiResultMenu CreateDraftMenuFromExistingMenu (int? menuId, string newName)
 
-[PRIVATE API]Clone a menu, (without attaching stores)
+[PRIVATE API] Clone a menu, (without attaching stores)
+
+[PRIVATE API]
 
 ### Example
 ```csharp
@@ -66,7 +68,7 @@ namespace Example
 
             try
             {
-                // [PRIVATE API]Clone a menu, (without attaching stores)
+                // [PRIVATE API] Clone a menu, (without attaching stores)
                 RestApiResultMenu result = apiInstance.CreateDraftMenuFromExistingMenu(menuId, newName);
                 Debug.WriteLine(result);
             }
@@ -237,7 +239,9 @@ Name | Type | Description  | Notes
 # **DeleteMenu**
 > void DeleteMenu (int? menuId)
 
-[PRIVATE API]Mark a Menu as Deleted
+[PRIVATE API] Mark a Menu as Deleted
+
+[PRIVATE API]
 
 ### Example
 ```csharp
@@ -261,7 +265,7 @@ namespace Example
 
             try
             {
-                // [PRIVATE API]Mark a Menu as Deleted
+                // [PRIVATE API] Mark a Menu as Deleted
                 apiInstance.DeleteMenu(menuId);
             }
             catch (Exception e)
@@ -616,7 +620,7 @@ Name | Type | Description  | Notes
 
 <a name="getmenuitemmetadatabykey"></a>
 # **GetMenuItemMetadataByKey**
-> void GetMenuItemMetadataByKey (int? menuId, int? storeId, int? menuItemId, string key)
+> RestApiResultMetadata GetMenuItemMetadataByKey (int? menuId, int? storeId, int? menuItemId, string key)
 
 Get menu item metadata by key
 
@@ -646,7 +650,8 @@ namespace Example
             try
             {
                 // Get menu item metadata by key
-                apiInstance.GetMenuItemMetadataByKey(menuId, storeId, menuItemId, key);
+                RestApiResultMetadata result = apiInstance.GetMenuItemMetadataByKey(menuId, storeId, menuItemId, key);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -668,7 +673,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**RestApiResultMetadata**](RestApiResultMetadata.md)
 
 ### Authorization
 
@@ -749,9 +754,11 @@ Name | Type | Description  | Notes
 
 <a name="getmenuname"></a>
 # **GetMenuName**
-> void GetMenuName (int? menuId)
+> string GetMenuName (int? menuId)
 
-[PRIVATE API]Get Menus Name
+[PRIVATE API] Get Menus Name
+
+[PRIVATE API]
 
 ### Example
 ```csharp
@@ -775,8 +782,9 @@ namespace Example
 
             try
             {
-                // [PRIVATE API]Get Menus Name
-                apiInstance.GetMenuName(menuId);
+                // [PRIVATE API] Get Menus Name
+                string result = apiInstance.GetMenuName(menuId);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -795,7 +803,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**string**
 
 ### Authorization
 
@@ -812,7 +820,9 @@ void (empty response body)
 # **GetMenuStoreNames**
 > RestApiArrayResultMenuStoreNames GetMenuStoreNames (int? menuId)
 
-[PRIVATE API]Get menus store names
+[PRIVATE API] Get menus store names
+
+[PRIVATE API]
 
 ### Example
 ```csharp
@@ -836,7 +846,7 @@ namespace Example
 
             try
             {
-                // [PRIVATE API]Get menus store names
+                // [PRIVATE API] Get menus store names
                 RestApiArrayResultMenuStoreNames result = apiInstance.GetMenuStoreNames(menuId);
                 Debug.WriteLine(result);
             }
@@ -874,7 +884,9 @@ Name | Type | Description  | Notes
 # **GetMenuTaxDetails**
 > RestApiArrayResultMenuTaxDetails GetMenuTaxDetails (int? menuId)
 
-[PRIVATE API]Get menus tax details
+[PRIVATE API] Get menus tax details
+
+[PRIVATE API]
 
 ### Example
 ```csharp
@@ -898,7 +910,7 @@ namespace Example
 
             try
             {
-                // [PRIVATE API]Get menus tax details
+                // [PRIVATE API] Get menus tax details
                 RestApiArrayResultMenuTaxDetails result = apiInstance.GetMenuTaxDetails(menuId);
                 Debug.WriteLine(result);
             }
@@ -936,7 +948,9 @@ Name | Type | Description  | Notes
 # **GetMenusByAppId**
 > RestApiArrayResultMenuSummary GetMenusByAppId (string appId)
 
-[PRIVATE API]Get menus by appId
+[PRIVATE API] Get menus by appId
+
+[PRIVATE API]
 
 ### Example
 ```csharp
@@ -960,7 +974,7 @@ namespace Example
 
             try
             {
-                // [PRIVATE API]Get menus by appId
+                // [PRIVATE API] Get menus by appId
                 RestApiArrayResultMenuSummary result = apiInstance.GetMenusByAppId(appId);
                 Debug.WriteLine(result);
             }
@@ -999,6 +1013,8 @@ Name | Type | Description  | Notes
 > RestApiArrayResultMenuCheckpoint GetMenusCheckpoints (int? menuId)
 
 [PRIVATE API]Get a Menus Checkpoints
+
+[PRIVATE API]
 
 ### Example
 ```csharp
@@ -1060,7 +1076,9 @@ Name | Type | Description  | Notes
 # **MenusDeleteTaxRate**
 > void MenusDeleteTaxRate (int? menuId, int? taxId)
 
-[PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+[PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+
+[PRIVATE API]
 
 ### Example
 ```csharp
@@ -1085,7 +1103,7 @@ namespace Example
 
             try
             {
-                // [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+                // [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
                 apiInstance.MenusDeleteTaxRate(menuId, taxId);
             }
             catch (Exception e)
@@ -1123,7 +1141,7 @@ void (empty response body)
 # **MenusGetMenuBulkShowHide**
 > RestApiArrayResultMenuElementListResponse MenusGetMenuBulkShowHide (int? menuId, bool? isAvailable)
 
-
+Get bulk show/hide menu items and option set items
 
 ### Example
 ```csharp
@@ -1143,11 +1161,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | 
-            var isAvailable = true;  // bool? | 
+            var menuId = 56;  // int? | Menu id
+            var isAvailable = true;  // bool? | Is available flag
 
             try
             {
+                // Get bulk show/hide menu items and option set items
                 RestApiArrayResultMenuElementListResponse result = apiInstance.MenusGetMenuBulkShowHide(menuId, isAvailable);
                 Debug.WriteLine(result);
             }
@@ -1164,8 +1183,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
- **isAvailable** | **bool?**|  | 
+ **menuId** | **int?**| Menu id | 
+ **isAvailable** | **bool?**| Is available flag | 
 
 ### Return type
 
@@ -1186,7 +1205,9 @@ Name | Type | Description  | Notes
 # **MenusSetDisplayOnMenuTax**
 > void MenusSetDisplayOnMenuTax (int? menuId, bool? show)
 
-[PRIVATE API]Set if tax shows for a Menu
+[PRIVATE API] Set if tax shows for a Menu
+
+[PRIVATE API]
 
 ### Example
 ```csharp
@@ -1211,7 +1232,7 @@ namespace Example
 
             try
             {
-                // [PRIVATE API]Set if tax shows for a Menu
+                // [PRIVATE API] Set if tax shows for a Menu
                 apiInstance.MenusSetDisplayOnMenuTax(menuId, show);
             }
             catch (Exception e)
@@ -1249,7 +1270,9 @@ void (empty response body)
 # **MenusSetItemDisplayOrders**
 > void MenusSetItemDisplayOrders (int? menuId, MenuObjectDisplayOrders displayOrders)
 
-[PRIVATE API]Re-arrange Sections within a Menu
+[PRIVATE API] Re-arrange Sections within a Menu
+
+[PRIVATE API]
 
 ### Example
 ```csharp
@@ -1274,7 +1297,7 @@ namespace Example
 
             try
             {
-                // [PRIVATE API]Re-arrange Sections within a Menu
+                // [PRIVATE API] Re-arrange Sections within a Menu
                 apiInstance.MenusSetItemDisplayOrders(menuId, displayOrders);
             }
             catch (Exception e)
@@ -1312,7 +1335,7 @@ void (empty response body)
 # **MenusShowHideBulkItems**
 > RestApiArrayResultMenuElementEditResponse MenusShowHideBulkItems (int? menuId, List<MenuElementHide> menuElements, bool? isAvailable)
 
-
+Bulk show/hide menu items or option set items
 
 ### Example
 ```csharp
@@ -1332,12 +1355,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | 
-            var menuElements = new List<MenuElementHide>(); // List<MenuElementHide> | 
-            var isAvailable = true;  // bool? | 
+            var menuId = 56;  // int? | Menu id
+            var menuElements = new List<MenuElementHide>(); // List<MenuElementHide> | Elements to be show/hide
+            var isAvailable = true;  // bool? | Is available flag
 
             try
             {
+                // Bulk show/hide menu items or option set items
                 RestApiArrayResultMenuElementEditResponse result = apiInstance.MenusShowHideBulkItems(menuId, menuElements, isAvailable);
                 Debug.WriteLine(result);
             }
@@ -1354,9 +1378,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
- **menuElements** | [**List&lt;MenuElementHide&gt;**](MenuElementHide.md)|  | 
- **isAvailable** | **bool?**|  | 
+ **menuId** | **int?**| Menu id | 
+ **menuElements** | [**List&lt;MenuElementHide&gt;**](MenuElementHide.md)| Elements to be show/hide | 
+ **isAvailable** | **bool?**| Is available flag | 
 
 ### Return type
 
@@ -1377,7 +1401,9 @@ Name | Type | Description  | Notes
 # **MenusUpdateTaxType**
 > void MenusUpdateTaxType (int? menuId, string type)
 
-[PRIVATE API]Set the type of Tax on a Menu
+[PRIVATE API] Set the type of Tax on a Menu
+
+[PRIVATE API]
 
 ### Example
 ```csharp
@@ -1402,7 +1428,7 @@ namespace Example
 
             try
             {
-                // [PRIVATE API]Set the type of Tax on a Menu
+                // [PRIVATE API] Set the type of Tax on a Menu
                 apiInstance.MenusUpdateTaxType(menuId, type);
             }
             catch (Exception e)
@@ -1440,7 +1466,9 @@ void (empty response body)
 # **MenusUpsertTaxRate**
 > MenuTaxRate MenusUpsertTaxRate (int? menuId, MenuTaxRate taxRate)
 
-[PRIVATE API]Add/Update a Tax Rate
+[PRIVATE API] Add/Update a Tax Rate
+
+[PRIVATE API]
 
 ### Example
 ```csharp
@@ -1461,11 +1489,11 @@ namespace Example
 
             var apiInstance = new MenusApi();
             var menuId = 56;  // int? | Menu identifier
-            var taxRate = new MenuTaxRate(); // MenuTaxRate | Tax Rate to Add/Update
+            var taxRate = new MenuTaxRate(); // MenuTaxRate | Tax rate to add/update
 
             try
             {
-                // [PRIVATE API]Add/Update a Tax Rate
+                // [PRIVATE API] Add/Update a Tax Rate
                 MenuTaxRate result = apiInstance.MenusUpsertTaxRate(menuId, taxRate);
                 Debug.WriteLine(result);
             }
@@ -1483,7 +1511,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menuId** | **int?**| Menu identifier | 
- **taxRate** | [**MenuTaxRate**](MenuTaxRate.md)| Tax Rate to Add/Update | 
+ **taxRate** | [**MenuTaxRate**](MenuTaxRate.md)| Tax rate to add/update | 
 
 ### Return type
 
@@ -1504,7 +1532,9 @@ Name | Type | Description  | Notes
 # **RestoreAMenuCheckpoint**
 > void RestoreAMenuCheckpoint (int? menuId, int? checkpointId)
 
-[PRIVATE API]Restore a Menu to a checkpoint
+[PRIVATE API] Restore a Menu to a checkpoint
+
+[PRIVATE API]
 
 ### Example
 ```csharp
@@ -1529,7 +1559,7 @@ namespace Example
 
             try
             {
-                // [PRIVATE API]Restore a Menu to a checkpoint
+                // [PRIVATE API] Restore a Menu to a checkpoint
                 apiInstance.RestoreAMenuCheckpoint(menuId, checkpointId);
             }
             catch (Exception e)
@@ -1701,7 +1731,9 @@ void (empty response body)
 # **SetMenuLock**
 > void SetMenuLock (int? menuId, bool? locked)
 
-[PRIVATE API]Lock/Unlock a Menu for Editing
+[PRIVATE API] Lock/Unlock a Menu for Editing
+
+[PRIVATE API]
 
 ### Example
 ```csharp
@@ -1726,7 +1758,7 @@ namespace Example
 
             try
             {
-                // [PRIVATE API]Lock/Unlock a Menu for Editing
+                // [PRIVATE API] Lock/Unlock a Menu for Editing
                 apiInstance.SetMenuLock(menuId, locked);
             }
             catch (Exception e)
@@ -1764,7 +1796,9 @@ void (empty response body)
 # **SetMenuName**
 > void SetMenuName (int? menuId, string name)
 
-[PRIVATE API]Set Menus Name
+[PRIVATE API] Set Menus Name
+
+[PRIVATE API]
 
 ### Example
 ```csharp
@@ -1789,7 +1823,7 @@ namespace Example
 
             try
             {
-                // [PRIVATE API]Set Menus Name
+                // [PRIVATE API] Set Menus Name
                 apiInstance.SetMenuName(menuId, name);
             }
             catch (Exception e)
@@ -1848,7 +1882,7 @@ namespace Example
 
             var apiInstance = new MenusApi();
             var menuId = 56;  // int? | Menu identifier
-            var menu = new MenuBase(); // MenuBase | Menu (delta)
+            var menu = new MenuBase(); // MenuBase | Full menu data
 
             try
             {
@@ -1869,7 +1903,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menuId** | **int?**| Menu identifier | 
- **menu** | [**MenuBase**](MenuBase.md)| Menu (delta) | 
+ **menu** | [**MenuBase**](MenuBase.md)| Full menu data | 
 
 ### Return type
 

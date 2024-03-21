@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**GetMenuItemOptionSetItemById**](MenuOptionSetItemsApi.md#getmenuitemoptionsetitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Get menu item option set item by identifier
 [**GetMenuItemOptionSetItems**](MenuOptionSetItemsApi.md#getmenuitemoptionsetitems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Get menu item option set items
 [**RemoveMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#removemenuitemoptionsetitem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Delete menu item option set item
-[**SetOptionSetItemTax**](MenuOptionSetItemsApi.md#setoptionsetitemtax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/taxrate/{taxRateId} | [Private API] Set Tax Rate on OptionSetItem
+[**SetOptionSetItemTax**](MenuOptionSetItemsApi.md#setoptionsetitemtax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/taxrate/{taxRateId} | Set Tax Rate on OptionSetItem
 [**UpdateMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#updatemenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Update menu item option set item
 [**UploadOptionSetItemImage**](MenuOptionSetItemsApi.md#uploadoptionsetitemimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Upload menu item option set item image
 
@@ -364,7 +364,7 @@ void (empty response body)
 # **SetOptionSetItemTax**
 > void SetOptionSetItemTax (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, int? taxRateId)
 
-[Private API] Set Tax Rate on OptionSetItem
+Set Tax Rate on OptionSetItem
 
 ### Example
 ```csharp
@@ -393,7 +393,7 @@ namespace Example
 
             try
             {
-                // [Private API] Set Tax Rate on OptionSetItem
+                // Set Tax Rate on OptionSetItem
                 apiInstance.SetOptionSetItemTax(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, taxRateId);
             }
             catch (Exception e)
@@ -461,7 +461,7 @@ namespace Example
             var optionSetId = 56;  // int? | Option set identifier
             var menuItemOptionSetItemId = 56;  // int? | Option set item identifier
             var menuItemOptionSetItem = new MenuItemOptionSetItemBase(); // MenuItemOptionSetItemBase | Option set item (delta)
-            var undoAfter = 1.2;  // double? | An optional time period, in hours, after which the hide-section operaton will be undone. (optional) 
+            var undoAfter = 1.2;  // double? | An optional time period, in hours, after which the hide-section operation will be undone. (optional) 
 
             try
             {
@@ -487,7 +487,7 @@ Name | Type | Description  | Notes
  **optionSetId** | **int?**| Option set identifier | 
  **menuItemOptionSetItemId** | **int?**| Option set item identifier | 
  **menuItemOptionSetItem** | [**MenuItemOptionSetItemBase**](MenuItemOptionSetItemBase.md)| Option set item (delta) | 
- **undoAfter** | **double?**| An optional time period, in hours, after which the hide-section operaton will be undone. | [optional] 
+ **undoAfter** | **double?**| An optional time period, in hours, after which the hide-section operation will be undone. | [optional] 
 
 ### Return type
 

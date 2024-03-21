@@ -213,10 +213,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultMenuSection</returns>
         ApiResponse<RestApiArrayResultMenuSection> GetMenuSectionsWithHttpInfo (int? menuId);
         /// <summary>
-        /// Re-arrange Items within a Section
+        /// [PRIVATE API] Re-arrange Items within a Section
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -226,10 +226,10 @@ namespace Flipdish.Api
         void MenuSectionsSetItemDisplayOrders (int? menuId, int? menuSectionId, MenuObjectDisplayOrders displayOrders);
 
         /// <summary>
-        /// Re-arrange Items within a Section
+        /// [PRIVATE API] Re-arrange Items within a Section
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -480,10 +480,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultMenuSection)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuSection>> GetMenuSectionsAsyncWithHttpInfo (int? menuId);
         /// <summary>
-        /// Re-arrange Items within a Section
+        /// [PRIVATE API] Re-arrange Items within a Section
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -493,10 +493,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task MenuSectionsSetItemDisplayOrdersAsync (int? menuId, int? menuSectionId, MenuObjectDisplayOrders displayOrders);
 
         /// <summary>
-        /// Re-arrange Items within a Section
+        /// [PRIVATE API] Re-arrange Items within a Section
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -2053,7 +2053,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Re-arrange Items within a Section 
+        /// [PRIVATE API] Re-arrange Items within a Section [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -2066,7 +2066,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Re-arrange Items within a Section 
+        /// [PRIVATE API] Re-arrange Items within a Section [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -2151,7 +2151,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Re-arrange Items within a Section 
+        /// [PRIVATE API] Re-arrange Items within a Section [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -2165,7 +2165,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Re-arrange Items within a Section 
+        /// [PRIVATE API] Re-arrange Items within a Section [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>

@@ -198,10 +198,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultMenuSectionItem</returns>
         ApiResponse<RestApiArrayResultMenuSectionItem> GetMenuItemsWithHttpInfo (int? menuId, int? menuSectionId);
         /// <summary>
-        /// [PRIVATE API]Move an Item within a menu
+        /// [PRIVATE API] Move an Item within a menu
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -212,10 +212,10 @@ namespace Flipdish.Api
         void MoveMenuItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder);
 
         /// <summary>
-        /// [PRIVATE API]Move an Item within a menu
+        /// [PRIVATE API] Move an Item within a menu
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -225,7 +225,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> MoveMenuItemWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder);
         /// <summary>
-        /// [PRIVATE API]Move an Item within a menu
+        /// Set tax rate for menu item
         /// </summary>
         /// <remarks>
         /// 
@@ -239,7 +239,7 @@ namespace Flipdish.Api
         void SetSectionItemTax (int? menuId, int? menuSectionId, int? menuSectionItemId, int? taxRateId);
 
         /// <summary>
-        /// [PRIVATE API]Move an Item within a menu
+        /// Set tax rate for menu item
         /// </summary>
         /// <remarks>
         /// 
@@ -262,7 +262,7 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu section item identifier</param>
         /// <param name="menuSectionItem">Menu section item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone (optional)</param>
         /// <returns></returns>
         void UpdateMenuSectionItem (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuSectionItemBase menuSectionItem, double? undoAfter = null);
 
@@ -277,7 +277,7 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu section item identifier</param>
         /// <param name="menuSectionItem">Menu section item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateMenuSectionItemWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuSectionItemBase menuSectionItem, double? undoAfter = null);
         /// <summary>
@@ -483,10 +483,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultMenuSectionItem)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuSectionItem>> GetMenuItemsAsyncWithHttpInfo (int? menuId, int? menuSectionId);
         /// <summary>
-        /// [PRIVATE API]Move an Item within a menu
+        /// [PRIVATE API] Move an Item within a menu
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -497,10 +497,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task MoveMenuItemAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder);
 
         /// <summary>
-        /// [PRIVATE API]Move an Item within a menu
+        /// [PRIVATE API] Move an Item within a menu
         /// </summary>
         /// <remarks>
-        /// 
+        /// [PRIVATE API]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -510,7 +510,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> MoveMenuItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder);
         /// <summary>
-        /// [PRIVATE API]Move an Item within a menu
+        /// Set tax rate for menu item
         /// </summary>
         /// <remarks>
         /// 
@@ -524,7 +524,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task SetSectionItemTaxAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, int? taxRateId);
 
         /// <summary>
-        /// [PRIVATE API]Move an Item within a menu
+        /// Set tax rate for menu item
         /// </summary>
         /// <remarks>
         /// 
@@ -547,7 +547,7 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu section item identifier</param>
         /// <param name="menuSectionItem">Menu section item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone (optional)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UpdateMenuSectionItemAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuSectionItemBase menuSectionItem, double? undoAfter = null);
 
@@ -562,7 +562,7 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu section item identifier</param>
         /// <param name="menuSectionItem">Menu section item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateMenuSectionItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuSectionItemBase menuSectionItem, double? undoAfter = null);
         /// <summary>
@@ -1950,7 +1950,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Move an Item within a menu 
+        /// [PRIVATE API] Move an Item within a menu [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1964,7 +1964,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Move an Item within a menu 
+        /// [PRIVATE API] Move an Item within a menu [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -2042,7 +2042,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Move an Item within a menu 
+        /// [PRIVATE API] Move an Item within a menu [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -2057,7 +2057,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Move an Item within a menu 
+        /// [PRIVATE API] Move an Item within a menu [PRIVATE API]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -2135,7 +2135,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Move an Item within a menu 
+        /// Set tax rate for menu item 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -2149,7 +2149,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Move an Item within a menu 
+        /// Set tax rate for menu item 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -2227,7 +2227,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Move an Item within a menu 
+        /// Set tax rate for menu item 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -2242,7 +2242,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API]Move an Item within a menu 
+        /// Set tax rate for menu item 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -2327,7 +2327,7 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu section item identifier</param>
         /// <param name="menuSectionItem">Menu section item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone (optional)</param>
         /// <returns></returns>
         public void UpdateMenuSectionItem (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuSectionItemBase menuSectionItem, double? undoAfter = null)
         {
@@ -2342,7 +2342,7 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu section item identifier</param>
         /// <param name="menuSectionItem">Menu section item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> UpdateMenuSectionItemWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuSectionItemBase menuSectionItem, double? undoAfter = null)
         {
@@ -2434,7 +2434,7 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu section item identifier</param>
         /// <param name="menuSectionItem">Menu section item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone (optional)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UpdateMenuSectionItemAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuSectionItemBase menuSectionItem, double? undoAfter = null)
         {
@@ -2450,7 +2450,7 @@ namespace Flipdish.Api
         /// <param name="menuSectionId">Menu section identifier</param>
         /// <param name="menuSectionItemId">Menu section item identifier</param>
         /// <param name="menuSectionItem">Menu section item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operaton will be undone. (optional)</param>
+        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateMenuSectionItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuSectionItemBase menuSectionItem, double? undoAfter = null)
         {
