@@ -20,7 +20,6 @@ Name | Type | Description | Notes
 **ChannelOrderId** | **string** | ChannelOrderId from external channel | [optional] 
 **ChannelOrderDisplayId** | **string** | ChannelOrderDisplayId from external channel | [optional] 
 **Channel** | [**Channel**](Channel.md) | Channel where the Order comes from | [optional] 
-**ReceiptCode** | **string** | Generated receipt code for an order | [optional] 
 **OrderDropOffLocation** | [**OrderDropOffLocation**](OrderDropOffLocation.md) | DropOffLocation selected for this order | [optional] 
 **FulfillmentStatus** | [**OrderFulfillmentStatusBase**](OrderFulfillmentStatusBase.md) | [BETA - this is a new field in development] Fulfillment status for this order | [optional] 
 **OrderBatchInfo** | [**OrderBatchSummary**](OrderBatchSummary.md) | OrderBatch information | [optional] 
@@ -53,6 +52,7 @@ Name | Type | Description | Notes
 **TotalTax** | **double?** | Total tax applied to order | [optional] 
 **OrderTrackingCode** | **string** | Unique, 6 character long alpha numeric code for tracking. | [optional] 
 **DeliveryFeeAreaId** | **int?** | Delivery area identifier | [optional] 
+**ReceiptCode** | **string** | Code used to view the order&#39;s receipt | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

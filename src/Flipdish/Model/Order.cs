@@ -609,7 +609,6 @@ namespace Flipdish.Model
         /// <param name="channelOrderId">ChannelOrderId from external channel.</param>
         /// <param name="channelOrderDisplayId">ChannelOrderDisplayId from external channel.</param>
         /// <param name="channel">Channel where the Order comes from.</param>
-        /// <param name="receiptCode">Generated receipt code for an order.</param>
         /// <param name="orderDropOffLocation">DropOffLocation selected for this order.</param>
         /// <param name="fulfillmentStatus">[BETA - this is a new field in development] Fulfillment status for this order.</param>
         /// <param name="orderBatchInfo">OrderBatch information.</param>
@@ -642,7 +641,8 @@ namespace Flipdish.Model
         /// <param name="totalTax">Total tax applied to order.</param>
         /// <param name="orderTrackingCode">Unique, 6 character long alpha numeric code for tracking..</param>
         /// <param name="deliveryFeeAreaId">Delivery area identifier.</param>
-        public Order(StoreSummary store = default(StoreSummary), CustomerSummary customer = default(CustomerSummary), OrderVoucherSummary voucher = default(OrderVoucherSummary), FeeSummary fees = default(FeeSummary), List<OrderItem> orderItems = default(List<OrderItem>), DeliveryLocation deliveryLocation = default(DeliveryLocation), Coordinates customerLocation = default(Coordinates), MaskedPhoneNumber maskedPhoneNumber = default(MaskedPhoneNumber), int? dropOffLocationId = default(int?), string dropOffLocation = default(string), DateTime? acceptedFor = default(DateTime?), bool? inFraudZone = default(bool?), bool? unusualHighValueOrder = default(bool?), int? rejectedByUserId = default(int?), string channelOrderId = default(string), string channelOrderDisplayId = default(string), Channel channel = default(Channel), string receiptCode = default(string), OrderDropOffLocation orderDropOffLocation = default(OrderDropOffLocation), OrderFulfillmentStatusBase fulfillmentStatus = default(OrderFulfillmentStatusBase), OrderBatchSummary orderBatchInfo = default(OrderBatchSummary), int? orderId = default(int?), string localOrderId = default(string), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), TableServiceCatagoryEnum? tableServiceCatagory = default(TableServiceCatagoryEnum?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? orderItemsAmount = default(double?), double? serviceChargeAmount = default(double?), double? serviceChargePercentage = default(double?), double? amount = default(double?), double? processingFee = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), string paymentAccountDescription = default(string), OrderStateEnum? orderState = default(OrderStateEnum?), bool? isPreOrder = default(bool?), DateTime? placedTime = default(DateTime?), DateTime? requestedForTime = default(DateTime?), string chefNote = default(string), AppTypeEnum? appType = default(AppTypeEnum?), int? userRating = default(int?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), RejectionReasonEnum? rejectionReason = default(RejectionReasonEnum?), double? refundedAmount = default(double?), DeliveryTrackingStatusEnum? deliveryTrackingStatus = default(DeliveryTrackingStatusEnum?), int? driverId = default(int?), double? totalTax = default(double?), string orderTrackingCode = default(string), int? deliveryFeeAreaId = default(int?))
+        /// <param name="receiptCode">Code used to view the order&#39;s receipt.</param>
+        public Order(StoreSummary store = default(StoreSummary), CustomerSummary customer = default(CustomerSummary), OrderVoucherSummary voucher = default(OrderVoucherSummary), FeeSummary fees = default(FeeSummary), List<OrderItem> orderItems = default(List<OrderItem>), DeliveryLocation deliveryLocation = default(DeliveryLocation), Coordinates customerLocation = default(Coordinates), MaskedPhoneNumber maskedPhoneNumber = default(MaskedPhoneNumber), int? dropOffLocationId = default(int?), string dropOffLocation = default(string), DateTime? acceptedFor = default(DateTime?), bool? inFraudZone = default(bool?), bool? unusualHighValueOrder = default(bool?), int? rejectedByUserId = default(int?), string channelOrderId = default(string), string channelOrderDisplayId = default(string), Channel channel = default(Channel), OrderDropOffLocation orderDropOffLocation = default(OrderDropOffLocation), OrderFulfillmentStatusBase fulfillmentStatus = default(OrderFulfillmentStatusBase), OrderBatchSummary orderBatchInfo = default(OrderBatchSummary), int? orderId = default(int?), string localOrderId = default(string), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), TableServiceCatagoryEnum? tableServiceCatagory = default(TableServiceCatagoryEnum?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? orderItemsAmount = default(double?), double? serviceChargeAmount = default(double?), double? serviceChargePercentage = default(double?), double? amount = default(double?), double? processingFee = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), string paymentAccountDescription = default(string), OrderStateEnum? orderState = default(OrderStateEnum?), bool? isPreOrder = default(bool?), DateTime? placedTime = default(DateTime?), DateTime? requestedForTime = default(DateTime?), string chefNote = default(string), AppTypeEnum? appType = default(AppTypeEnum?), int? userRating = default(int?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), RejectionReasonEnum? rejectionReason = default(RejectionReasonEnum?), double? refundedAmount = default(double?), DeliveryTrackingStatusEnum? deliveryTrackingStatus = default(DeliveryTrackingStatusEnum?), int? driverId = default(int?), double? totalTax = default(double?), string orderTrackingCode = default(string), int? deliveryFeeAreaId = default(int?), string receiptCode = default(string))
         {
             this.Store = store;
             this.Customer = customer;
@@ -661,7 +661,6 @@ namespace Flipdish.Model
             this.ChannelOrderId = channelOrderId;
             this.ChannelOrderDisplayId = channelOrderDisplayId;
             this.Channel = channel;
-            this.ReceiptCode = receiptCode;
             this.OrderDropOffLocation = orderDropOffLocation;
             this.FulfillmentStatus = fulfillmentStatus;
             this.OrderBatchInfo = orderBatchInfo;
@@ -694,6 +693,7 @@ namespace Flipdish.Model
             this.TotalTax = totalTax;
             this.OrderTrackingCode = orderTrackingCode;
             this.DeliveryFeeAreaId = deliveryFeeAreaId;
+            this.ReceiptCode = receiptCode;
         }
         
         /// <summary>
@@ -814,13 +814,6 @@ namespace Flipdish.Model
         /// <value>Channel where the Order comes from</value>
         [DataMember(Name="Channel", EmitDefaultValue=false)]
         public Channel Channel { get; set; }
-
-        /// <summary>
-        /// Generated receipt code for an order
-        /// </summary>
-        /// <value>Generated receipt code for an order</value>
-        [DataMember(Name="ReceiptCode", EmitDefaultValue=false)]
-        public string ReceiptCode { get; set; }
 
         /// <summary>
         /// DropOffLocation selected for this order
@@ -993,6 +986,13 @@ namespace Flipdish.Model
         public int? DeliveryFeeAreaId { get; set; }
 
         /// <summary>
+        /// Code used to view the order&#39;s receipt
+        /// </summary>
+        /// <value>Code used to view the order&#39;s receipt</value>
+        [DataMember(Name="ReceiptCode", EmitDefaultValue=false)]
+        public string ReceiptCode { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -1017,7 +1017,6 @@ namespace Flipdish.Model
             sb.Append("  ChannelOrderId: ").Append(ChannelOrderId).Append("\n");
             sb.Append("  ChannelOrderDisplayId: ").Append(ChannelOrderDisplayId).Append("\n");
             sb.Append("  Channel: ").Append(Channel).Append("\n");
-            sb.Append("  ReceiptCode: ").Append(ReceiptCode).Append("\n");
             sb.Append("  OrderDropOffLocation: ").Append(OrderDropOffLocation).Append("\n");
             sb.Append("  FulfillmentStatus: ").Append(FulfillmentStatus).Append("\n");
             sb.Append("  OrderBatchInfo: ").Append(OrderBatchInfo).Append("\n");
@@ -1050,6 +1049,7 @@ namespace Flipdish.Model
             sb.Append("  TotalTax: ").Append(TotalTax).Append("\n");
             sb.Append("  OrderTrackingCode: ").Append(OrderTrackingCode).Append("\n");
             sb.Append("  DeliveryFeeAreaId: ").Append(DeliveryFeeAreaId).Append("\n");
+            sb.Append("  ReceiptCode: ").Append(ReceiptCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1168,11 +1168,6 @@ namespace Flipdish.Model
                     this.Channel == input.Channel ||
                     (this.Channel != null &&
                     this.Channel.Equals(input.Channel))
-                ) && 
-                (
-                    this.ReceiptCode == input.ReceiptCode ||
-                    (this.ReceiptCode != null &&
-                    this.ReceiptCode.Equals(input.ReceiptCode))
                 ) && 
                 (
                     this.OrderDropOffLocation == input.OrderDropOffLocation ||
@@ -1333,6 +1328,11 @@ namespace Flipdish.Model
                     this.DeliveryFeeAreaId == input.DeliveryFeeAreaId ||
                     (this.DeliveryFeeAreaId != null &&
                     this.DeliveryFeeAreaId.Equals(input.DeliveryFeeAreaId))
+                ) && 
+                (
+                    this.ReceiptCode == input.ReceiptCode ||
+                    (this.ReceiptCode != null &&
+                    this.ReceiptCode.Equals(input.ReceiptCode))
                 );
         }
 
@@ -1379,8 +1379,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ChannelOrderDisplayId.GetHashCode();
                 if (this.Channel != null)
                     hashCode = hashCode * 59 + this.Channel.GetHashCode();
-                if (this.ReceiptCode != null)
-                    hashCode = hashCode * 59 + this.ReceiptCode.GetHashCode();
                 if (this.OrderDropOffLocation != null)
                     hashCode = hashCode * 59 + this.OrderDropOffLocation.GetHashCode();
                 if (this.FulfillmentStatus != null)
@@ -1445,6 +1443,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OrderTrackingCode.GetHashCode();
                 if (this.DeliveryFeeAreaId != null)
                     hashCode = hashCode * 59 + this.DeliveryFeeAreaId.GetHashCode();
+                if (this.ReceiptCode != null)
+                    hashCode = hashCode * 59 + this.ReceiptCode.GetHashCode();
                 return hashCode;
             }
         }
