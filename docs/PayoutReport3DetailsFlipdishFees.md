@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **PosCard** | **double?** |  | [optional] 
 **PosCardOnFlipdishOrders** | **double?** |  | [optional] 
 **OtherIntegrationFees** | **double?** |  | [optional] 
+**OtherIntegrationTips** | **double?** |  | [optional] 
 **Vat** | **double?** |  | [optional] 
 **Total** | **double?** |  | [optional] 
 
