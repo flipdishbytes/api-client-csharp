@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 <a name="getpayoutreport3orders"></a>
 # **GetPayoutReport3Orders**
-> RestApiPaginationResultPayoutReport3PayoutOrder GetPayoutReport3Orders (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null)
+> RestApiPaginationResultPayoutReport3PayoutOrder GetPayoutReport3Orders (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, int? page = null, int? limit = null)
 
 
 
@@ -104,10 +104,12 @@ namespace Example
             var bankAccountId = 56;  // int? | 
             var payoutId = 56;  // int? | 
             var storeIds = new List<int?>(); // List<int?> |  (optional) 
+            var page = 56;  // int? |  (optional) 
+            var limit = 56;  // int? |  (optional) 
 
             try
             {
-                RestApiPaginationResultPayoutReport3PayoutOrder result = apiInstance.GetPayoutReport3Orders(appId, bankAccountId, payoutId, storeIds);
+                RestApiPaginationResultPayoutReport3PayoutOrder result = apiInstance.GetPayoutReport3Orders(appId, bankAccountId, payoutId, storeIds, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -127,6 +129,8 @@ Name | Type | Description  | Notes
  **bankAccountId** | **int?**|  | 
  **payoutId** | **int?**|  | 
  **storeIds** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
+ **page** | **int?**|  | [optional] 
+ **limit** | **int?**|  | [optional] 
 
 ### Return type
 
