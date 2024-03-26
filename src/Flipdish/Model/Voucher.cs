@@ -103,7 +103,13 @@ namespace Flipdish.Model
             /// Enum CreditNote for value: CreditNote
             /// </summary>
             [EnumMember(Value = "CreditNote")]
-            CreditNote = 4
+            CreditNote = 4,
+            
+            /// <summary>
+            /// Enum FreeDelivery for value: FreeDelivery
+            /// </summary>
+            [EnumMember(Value = "FreeDelivery")]
+            FreeDelivery = 5
         }
 
         /// <summary>
