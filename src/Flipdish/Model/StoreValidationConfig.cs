@@ -32,10 +32,10 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="StoreValidationConfig" /> class.
         /// </summary>
         /// <param name="storeId">Store identifier.</param>
-        /// <param name="name">name.</param>
+        /// <param name="name">Name.</param>
         /// <param name="isValid">Is Store Valid for Kiosk.</param>
         /// <param name="storeGroupId">Store group Id.</param>
-        /// <param name="configValidation">configValidation.</param>
+        /// <param name="configValidation">Store list of validations.</param>
         public StoreValidationConfig(int? storeId = default(int?), string name = default(string), bool? isValid = default(bool?), int? storeGroupId = default(int?), StoreConfig configValidation = default(StoreConfig))
         {
             this.StoreId = storeId;
@@ -53,8 +53,9 @@ namespace Flipdish.Model
         public int? StoreId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Name
         /// </summary>
+        /// <value>Name</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
@@ -73,8 +74,9 @@ namespace Flipdish.Model
         public int? StoreGroupId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ConfigValidation
+        /// Store list of validations
         /// </summary>
+        /// <value>Store list of validations</value>
         [DataMember(Name="ConfigValidation", EmitDefaultValue=false)]
         public StoreConfig ConfigValidation { get; set; }
 
