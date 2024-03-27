@@ -35,13 +35,15 @@ namespace Flipdish.Model
         /// <param name="revenueForFeeCalculations">revenueForFeeCalculations.</param>
         /// <param name="flipdishFees">flipdishFees.</param>
         /// <param name="adjustments">adjustments.</param>
+        /// <param name="thirdPartyIntegrationFeesAndTips">thirdPartyIntegrationFeesAndTips.</param>
         /// <param name="total">total.</param>
-        public PayoutReport3DetailsSummary(double? revenue = default(double?), double? revenueForFeeCalculations = default(double?), double? flipdishFees = default(double?), double? adjustments = default(double?), double? total = default(double?))
+        public PayoutReport3DetailsSummary(double? revenue = default(double?), double? revenueForFeeCalculations = default(double?), double? flipdishFees = default(double?), double? adjustments = default(double?), double? thirdPartyIntegrationFeesAndTips = default(double?), double? total = default(double?))
         {
             this.Revenue = revenue;
             this.RevenueForFeeCalculations = revenueForFeeCalculations;
             this.FlipdishFees = flipdishFees;
             this.Adjustments = adjustments;
+            this.ThirdPartyIntegrationFeesAndTips = thirdPartyIntegrationFeesAndTips;
             this.Total = total;
         }
         
@@ -70,6 +72,12 @@ namespace Flipdish.Model
         public double? Adjustments { get; set; }
 
         /// <summary>
+        /// Gets or Sets ThirdPartyIntegrationFeesAndTips
+        /// </summary>
+        [DataMember(Name="ThirdPartyIntegrationFeesAndTips", EmitDefaultValue=false)]
+        public double? ThirdPartyIntegrationFeesAndTips { get; set; }
+
+        /// <summary>
         /// Gets or Sets Total
         /// </summary>
         [DataMember(Name="Total", EmitDefaultValue=false)]
@@ -87,6 +95,7 @@ namespace Flipdish.Model
             sb.Append("  RevenueForFeeCalculations: ").Append(RevenueForFeeCalculations).Append("\n");
             sb.Append("  FlipdishFees: ").Append(FlipdishFees).Append("\n");
             sb.Append("  Adjustments: ").Append(Adjustments).Append("\n");
+            sb.Append("  ThirdPartyIntegrationFeesAndTips: ").Append(ThirdPartyIntegrationFeesAndTips).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -143,6 +152,11 @@ namespace Flipdish.Model
                     this.Adjustments.Equals(input.Adjustments))
                 ) && 
                 (
+                    this.ThirdPartyIntegrationFeesAndTips == input.ThirdPartyIntegrationFeesAndTips ||
+                    (this.ThirdPartyIntegrationFeesAndTips != null &&
+                    this.ThirdPartyIntegrationFeesAndTips.Equals(input.ThirdPartyIntegrationFeesAndTips))
+                ) && 
+                (
                     this.Total == input.Total ||
                     (this.Total != null &&
                     this.Total.Equals(input.Total))
@@ -166,6 +180,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.FlipdishFees.GetHashCode();
                 if (this.Adjustments != null)
                     hashCode = hashCode * 59 + this.Adjustments.GetHashCode();
+                if (this.ThirdPartyIntegrationFeesAndTips != null)
+                    hashCode = hashCode * 59 + this.ThirdPartyIntegrationFeesAndTips.GetHashCode();
                 if (this.Total != null)
                     hashCode = hashCode * 59 + this.Total.GetHashCode();
                 return hashCode;
