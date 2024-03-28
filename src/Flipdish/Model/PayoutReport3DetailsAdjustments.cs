@@ -31,6 +31,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PayoutReport3DetailsAdjustments" /> class.
         /// </summary>
+        /// <param name="openingBalanceDate">openingBalanceDate.</param>
+        /// <param name="closingBalanceDate">closingBalanceDate.</param>
         /// <param name="openingBalance">openingBalance.</param>
         /// <param name="refundsOnCardOrders">refundsOnCardOrders.</param>
         /// <param name="refundsOnCashOrders">refundsOnCashOrders.</param>
@@ -38,8 +40,10 @@ namespace Flipdish.Model
         /// <param name="chargebacks">chargebacks.</param>
         /// <param name="otherTransactions">otherTransactions.</param>
         /// <param name="closingBalance">closingBalance.</param>
-        public PayoutReport3DetailsAdjustments(double? openingBalance = default(double?), double? refundsOnCardOrders = default(double?), double? refundsOnCashOrders = default(double?), double? cashCustomerFees = default(double?), double? chargebacks = default(double?), double? otherTransactions = default(double?), double? closingBalance = default(double?))
+        public PayoutReport3DetailsAdjustments(DateTime? openingBalanceDate = default(DateTime?), DateTime? closingBalanceDate = default(DateTime?), double? openingBalance = default(double?), double? refundsOnCardOrders = default(double?), double? refundsOnCashOrders = default(double?), double? cashCustomerFees = default(double?), double? chargebacks = default(double?), double? otherTransactions = default(double?), double? closingBalance = default(double?))
         {
+            this.OpeningBalanceDate = openingBalanceDate;
+            this.ClosingBalanceDate = closingBalanceDate;
             this.OpeningBalance = openingBalance;
             this.RefundsOnCardOrders = refundsOnCardOrders;
             this.RefundsOnCashOrders = refundsOnCashOrders;
@@ -49,6 +53,18 @@ namespace Flipdish.Model
             this.ClosingBalance = closingBalance;
         }
         
+        /// <summary>
+        /// Gets or Sets OpeningBalanceDate
+        /// </summary>
+        [DataMember(Name="OpeningBalanceDate", EmitDefaultValue=false)]
+        public DateTime? OpeningBalanceDate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ClosingBalanceDate
+        /// </summary>
+        [DataMember(Name="ClosingBalanceDate", EmitDefaultValue=false)]
+        public DateTime? ClosingBalanceDate { get; set; }
+
         /// <summary>
         /// Gets or Sets OpeningBalance
         /// </summary>
@@ -99,6 +115,8 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PayoutReport3DetailsAdjustments {\n");
+            sb.Append("  OpeningBalanceDate: ").Append(OpeningBalanceDate).Append("\n");
+            sb.Append("  ClosingBalanceDate: ").Append(ClosingBalanceDate).Append("\n");
             sb.Append("  OpeningBalance: ").Append(OpeningBalance).Append("\n");
             sb.Append("  RefundsOnCardOrders: ").Append(RefundsOnCardOrders).Append("\n");
             sb.Append("  RefundsOnCashOrders: ").Append(RefundsOnCashOrders).Append("\n");
@@ -140,6 +158,16 @@ namespace Flipdish.Model
                 return false;
 
             return 
+                (
+                    this.OpeningBalanceDate == input.OpeningBalanceDate ||
+                    (this.OpeningBalanceDate != null &&
+                    this.OpeningBalanceDate.Equals(input.OpeningBalanceDate))
+                ) && 
+                (
+                    this.ClosingBalanceDate == input.ClosingBalanceDate ||
+                    (this.ClosingBalanceDate != null &&
+                    this.ClosingBalanceDate.Equals(input.ClosingBalanceDate))
+                ) && 
                 (
                     this.OpeningBalance == input.OpeningBalance ||
                     (this.OpeningBalance != null &&
@@ -186,6 +214,10 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.OpeningBalanceDate != null)
+                    hashCode = hashCode * 59 + this.OpeningBalanceDate.GetHashCode();
+                if (this.ClosingBalanceDate != null)
+                    hashCode = hashCode * 59 + this.ClosingBalanceDate.GetHashCode();
                 if (this.OpeningBalance != null)
                     hashCode = hashCode * 59 + this.OpeningBalance.GetHashCode();
                 if (this.RefundsOnCardOrders != null)

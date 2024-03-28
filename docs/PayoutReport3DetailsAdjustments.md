@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**OpeningBalanceDate** | **DateTime?** |  | [optional] 
+**ClosingBalanceDate** | **DateTime?** |  | [optional] 
 **OpeningBalance** | **double?** |  | [optional] 
 **RefundsOnCardOrders** | **double?** |  | [optional] 
 **RefundsOnCashOrders** | **double?** |  | [optional] 
