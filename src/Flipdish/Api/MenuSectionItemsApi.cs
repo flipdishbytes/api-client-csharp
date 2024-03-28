@@ -198,10 +198,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultMenuSectionItem</returns>
         ApiResponse<RestApiArrayResultMenuSectionItem> GetMenuItemsWithHttpInfo (int? menuId, int? menuSectionId);
         /// <summary>
-        /// [PRIVATE API] Move an Item within a menu
+        /// Move an Item within a menu
         /// </summary>
         /// <remarks>
-        /// [PRIVATE API]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -212,10 +212,10 @@ namespace Flipdish.Api
         void MoveMenuItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder);
 
         /// <summary>
-        /// [PRIVATE API] Move an Item within a menu
+        /// Move an Item within a menu
         /// </summary>
         /// <remarks>
-        /// [PRIVATE API]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -483,10 +483,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultMenuSectionItem)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuSectionItem>> GetMenuItemsAsyncWithHttpInfo (int? menuId, int? menuSectionId);
         /// <summary>
-        /// [PRIVATE API] Move an Item within a menu
+        /// Move an Item within a menu
         /// </summary>
         /// <remarks>
-        /// [PRIVATE API]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -497,10 +497,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task MoveMenuItemAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder);
 
         /// <summary>
-        /// [PRIVATE API] Move an Item within a menu
+        /// Move an Item within a menu
         /// </summary>
         /// <remarks>
-        /// [PRIVATE API]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1950,7 +1950,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Move an Item within a menu [PRIVATE API]
+        /// Move an Item within a menu 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -1964,7 +1964,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Move an Item within a menu [PRIVATE API]
+        /// Move an Item within a menu 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -2042,7 +2042,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Move an Item within a menu [PRIVATE API]
+        /// Move an Item within a menu 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>
@@ -2057,7 +2057,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// [PRIVATE API] Move an Item within a menu [PRIVATE API]
+        /// Move an Item within a menu 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuId">Menu identifier</param>

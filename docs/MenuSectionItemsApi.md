@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**DeleteMenuSectionItemImage**](MenuSectionItemsApi.md#deletemenusectionitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Delete menu section item image
 [**GetMenuItemById**](MenuSectionItemsApi.md#getmenuitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Get menu item by identifier
 [**GetMenuItems**](MenuSectionItemsApi.md#getmenuitems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems | Get menu items
-[**MoveMenuItem**](MenuSectionItemsApi.md#movemenuitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/setorder/{destinationDisplayOrder} | [PRIVATE API] Move an Item within a menu
+[**MoveMenuItem**](MenuSectionItemsApi.md#movemenuitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/setorder/{destinationDisplayOrder} | Move an Item within a menu
 [**SetSectionItemTax**](MenuSectionItemsApi.md#setsectionitemtax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/taxrate/{taxRateId} | Set tax rate for menu item
 [**UpdateMenuSectionItem**](MenuSectionItemsApi.md#updatemenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Update menu section item
 [**UploadMenuSectionItemImage**](MenuSectionItemsApi.md#uploadmenusectionitemimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Upload menu section item image
@@ -481,9 +481,7 @@ Name | Type | Description  | Notes
 # **MoveMenuItem**
 > void MoveMenuItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder)
 
-[PRIVATE API] Move an Item within a menu
-
-[PRIVATE API]
+Move an Item within a menu
 
 ### Example
 ```csharp
@@ -510,7 +508,7 @@ namespace Example
 
             try
             {
-                // [PRIVATE API] Move an Item within a menu
+                // Move an Item within a menu
                 apiInstance.MoveMenuItem(menuId, menuSectionId, menuSectionItemId, destinationDisplayOrder);
             }
             catch (Exception e)

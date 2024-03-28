@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**DeleteMenuSectionImage**](MenuSectionsApi.md#deletemenusectionimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Delete menu section image
 [**GetMenuSectionById**](MenuSectionsApi.md#getmenusectionbyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Get menu section by identifier
 [**GetMenuSections**](MenuSectionsApi.md#getmenusections) | **GET** /api/v1.0/menus/{menuId}/sections | Get menu sections
-[**MenuSectionsSetItemDisplayOrders**](MenuSectionsApi.md#menusectionssetitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitemdisplayorders | [PRIVATE API] Re-arrange Items within a Section
+[**MenuSectionsSetItemDisplayOrders**](MenuSectionsApi.md#menusectionssetitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitemdisplayorders | Re-arrange Items within a Section
 [**UpdateMenuSection**](MenuSectionsApi.md#updatemenusection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Update menu section
 [**UploadMenuSectionImage**](MenuSectionsApi.md#uploadmenusectionimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Upload menu section image
 
@@ -535,9 +535,7 @@ Name | Type | Description  | Notes
 # **MenuSectionsSetItemDisplayOrders**
 > void MenuSectionsSetItemDisplayOrders (int? menuId, int? menuSectionId, MenuObjectDisplayOrders displayOrders)
 
-[PRIVATE API] Re-arrange Items within a Section
-
-[PRIVATE API]
+Re-arrange Items within a Section
 
 ### Example
 ```csharp
@@ -563,7 +561,7 @@ namespace Example
 
             try
             {
-                // [PRIVATE API] Re-arrange Items within a Section
+                // Re-arrange Items within a Section
                 apiInstance.MenuSectionsSetItemDisplayOrders(menuId, menuSectionId, displayOrders);
             }
             catch (Exception e)
