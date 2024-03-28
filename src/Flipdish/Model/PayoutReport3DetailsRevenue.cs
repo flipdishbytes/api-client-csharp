@@ -35,18 +35,18 @@ namespace Flipdish.Model
         /// <param name="deliveryCharges">deliveryCharges.</param>
         /// <param name="otherCharges">otherCharges.</param>
         /// <param name="tips">tips.</param>
-        /// <param name="totalNetSales">totalNetSales.</param>
         /// <param name="totalRevenue">totalRevenue.</param>
         /// <param name="revenueForFeeCalculations">revenueForFeeCalculations.</param>
-        public PayoutReport3DetailsRevenue(PayoutReport3DetailsSalesLine grossSales = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine deliveryCharges = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine otherCharges = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine tips = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine totalNetSales = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine totalRevenue = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine revenueForFeeCalculations = default(PayoutReport3DetailsSalesLine))
+        /// <param name="drsCharges">drsCharges.</param>
+        public PayoutReport3DetailsRevenue(PayoutReport3DetailsSalesLine grossSales = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine deliveryCharges = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine otherCharges = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine tips = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine totalRevenue = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine revenueForFeeCalculations = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine drsCharges = default(PayoutReport3DetailsSalesLine))
         {
             this.GrossSales = grossSales;
             this.DeliveryCharges = deliveryCharges;
             this.OtherCharges = otherCharges;
             this.Tips = tips;
-            this.TotalNetSales = totalNetSales;
             this.TotalRevenue = totalRevenue;
             this.RevenueForFeeCalculations = revenueForFeeCalculations;
+            this.DrsCharges = drsCharges;
         }
         
         /// <summary>
@@ -74,12 +74,6 @@ namespace Flipdish.Model
         public PayoutReport3DetailsSalesLine Tips { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalNetSales
-        /// </summary>
-        [DataMember(Name="TotalNetSales", EmitDefaultValue=false)]
-        public PayoutReport3DetailsSalesLine TotalNetSales { get; set; }
-
-        /// <summary>
         /// Gets or Sets TotalRevenue
         /// </summary>
         [DataMember(Name="TotalRevenue", EmitDefaultValue=false)]
@@ -90,6 +84,12 @@ namespace Flipdish.Model
         /// </summary>
         [DataMember(Name="RevenueForFeeCalculations", EmitDefaultValue=false)]
         public PayoutReport3DetailsSalesLine RevenueForFeeCalculations { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DrsCharges
+        /// </summary>
+        [DataMember(Name="DrsCharges", EmitDefaultValue=false)]
+        public PayoutReport3DetailsSalesLine DrsCharges { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -103,9 +103,9 @@ namespace Flipdish.Model
             sb.Append("  DeliveryCharges: ").Append(DeliveryCharges).Append("\n");
             sb.Append("  OtherCharges: ").Append(OtherCharges).Append("\n");
             sb.Append("  Tips: ").Append(Tips).Append("\n");
-            sb.Append("  TotalNetSales: ").Append(TotalNetSales).Append("\n");
             sb.Append("  TotalRevenue: ").Append(TotalRevenue).Append("\n");
             sb.Append("  RevenueForFeeCalculations: ").Append(RevenueForFeeCalculations).Append("\n");
+            sb.Append("  DrsCharges: ").Append(DrsCharges).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -161,11 +161,6 @@ namespace Flipdish.Model
                     this.Tips.Equals(input.Tips))
                 ) && 
                 (
-                    this.TotalNetSales == input.TotalNetSales ||
-                    (this.TotalNetSales != null &&
-                    this.TotalNetSales.Equals(input.TotalNetSales))
-                ) && 
-                (
                     this.TotalRevenue == input.TotalRevenue ||
                     (this.TotalRevenue != null &&
                     this.TotalRevenue.Equals(input.TotalRevenue))
@@ -174,6 +169,11 @@ namespace Flipdish.Model
                     this.RevenueForFeeCalculations == input.RevenueForFeeCalculations ||
                     (this.RevenueForFeeCalculations != null &&
                     this.RevenueForFeeCalculations.Equals(input.RevenueForFeeCalculations))
+                ) && 
+                (
+                    this.DrsCharges == input.DrsCharges ||
+                    (this.DrsCharges != null &&
+                    this.DrsCharges.Equals(input.DrsCharges))
                 );
         }
 
@@ -194,12 +194,12 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OtherCharges.GetHashCode();
                 if (this.Tips != null)
                     hashCode = hashCode * 59 + this.Tips.GetHashCode();
-                if (this.TotalNetSales != null)
-                    hashCode = hashCode * 59 + this.TotalNetSales.GetHashCode();
                 if (this.TotalRevenue != null)
                     hashCode = hashCode * 59 + this.TotalRevenue.GetHashCode();
                 if (this.RevenueForFeeCalculations != null)
                     hashCode = hashCode * 59 + this.RevenueForFeeCalculations.GetHashCode();
+                if (this.DrsCharges != null)
+                    hashCode = hashCode * 59 + this.DrsCharges.GetHashCode();
                 return hashCode;
             }
         }
