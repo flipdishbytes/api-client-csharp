@@ -745,6 +745,31 @@ namespace Flipdish.Model
         [DataMember(Name="OrderCurrency", EmitDefaultValue=false)]
         public OrderCurrencyEnum? OrderCurrency { get; set; }
         /// <summary>
+        /// Defines RefundChargebackType
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum RefundChargebackTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Refund for value: Refund
+            /// </summary>
+            [EnumMember(Value = "Refund")]
+            Refund = 1,
+            
+            /// <summary>
+            /// Enum Chargeback for value: Chargeback
+            /// </summary>
+            [EnumMember(Value = "Chargeback")]
+            Chargeback = 2
+        }
+
+        /// <summary>
+        /// Gets or Sets RefundChargebackType
+        /// </summary>
+        [DataMember(Name="RefundChargebackType", EmitDefaultValue=false)]
+        public RefundChargebackTypeEnum? RefundChargebackType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="PayoutReport3PayoutOrder" /> class.
         /// </summary>
         /// <param name="orderId">orderId.</param>
@@ -759,7 +784,8 @@ namespace Flipdish.Model
         /// <param name="voucher">voucher.</param>
         /// <param name="storeId">storeId.</param>
         /// <param name="storeName">storeName.</param>
-        public PayoutReport3PayoutOrder(int? orderId = default(int?), int? payoutId = default(int?), DateTime? orderDate = default(DateTime?), OrderTypeEnum? orderType = default(OrderTypeEnum?), OrderCurrencyEnum? orderCurrency = default(OrderCurrencyEnum?), double? sales = default(double?), double? salesTax = default(double?), double? deliveryCharges = default(double?), double? tips = default(double?), double? voucher = default(double?), int? storeId = default(int?), string storeName = default(string))
+        /// <param name="refundChargebackType">refundChargebackType.</param>
+        public PayoutReport3PayoutOrder(int? orderId = default(int?), int? payoutId = default(int?), DateTime? orderDate = default(DateTime?), OrderTypeEnum? orderType = default(OrderTypeEnum?), OrderCurrencyEnum? orderCurrency = default(OrderCurrencyEnum?), double? sales = default(double?), double? salesTax = default(double?), double? deliveryCharges = default(double?), double? tips = default(double?), double? voucher = default(double?), int? storeId = default(int?), string storeName = default(string), RefundChargebackTypeEnum? refundChargebackType = default(RefundChargebackTypeEnum?))
         {
             this.OrderId = orderId;
             this.PayoutId = payoutId;
@@ -773,6 +799,7 @@ namespace Flipdish.Model
             this.Voucher = voucher;
             this.StoreId = storeId;
             this.StoreName = storeName;
+            this.RefundChargebackType = refundChargebackType;
         }
         
         /// <summary>
@@ -837,6 +864,7 @@ namespace Flipdish.Model
         [DataMember(Name="StoreName", EmitDefaultValue=false)]
         public string StoreName { get; set; }
 
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -857,6 +885,7 @@ namespace Flipdish.Model
             sb.Append("  Voucher: ").Append(Voucher).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  StoreName: ").Append(StoreName).Append("\n");
+            sb.Append("  RefundChargebackType: ").Append(RefundChargebackType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -950,6 +979,11 @@ namespace Flipdish.Model
                     this.StoreName == input.StoreName ||
                     (this.StoreName != null &&
                     this.StoreName.Equals(input.StoreName))
+                ) && 
+                (
+                    this.RefundChargebackType == input.RefundChargebackType ||
+                    (this.RefundChargebackType != null &&
+                    this.RefundChargebackType.Equals(input.RefundChargebackType))
                 );
         }
 
@@ -986,6 +1020,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StoreId.GetHashCode();
                 if (this.StoreName != null)
                     hashCode = hashCode * 59 + this.StoreName.GetHashCode();
+                if (this.RefundChargebackType != null)
+                    hashCode = hashCode * 59 + this.RefundChargebackType.GetHashCode();
                 return hashCode;
             }
         }
