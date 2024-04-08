@@ -209,7 +209,8 @@ namespace Flipdish.Model
         /// <param name="channelRestrictions">Limit the channels this voucher can be used on.</param>
         /// <param name="voucherSubType">Voucher Subtype.</param>
         /// <param name="customerId">Customer UserID.</param>
-        public CreateVoucher(VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), CreatePromotion promotion = default(CreatePromotion), CreditNoteDetails creditNoteDetails = default(CreditNoteDetails), LumpDiscountDetails lumpDiscountDetails = default(LumpDiscountDetails), PercentDiscountDetails percentDiscountDetails = default(PercentDiscountDetails), string code = default(string), string description = default(string), List<int?> stores = default(List<int?>), double? validOnOrdersOver = default(double?), bool? takesPriority = default(bool?), bool? isEnabled = default(bool?), bool? isAutomaticallyApplied = default(bool?), bool? includeDeliveryFee = default(bool?), bool? isValidForDeliveryOrders = default(bool?), bool? isValidForPickupOrders = default(bool?), bool? isValidForOrdersPayedOnline = default(bool?), bool? isValidForOrdersPayedByCash = default(bool?), bool? isValidForFirstOrderOnly = default(bool?), bool? isValidOncePerCustomer = default(bool?), bool? isValidOnlyOnce = default(bool?), DateTime? startDate = default(DateTime?), DateTime? expiryDate = default(DateTime?), List<ChannelRestrictionsEnum> channelRestrictions = default(List<ChannelRestrictionsEnum>), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), int? customerId = default(int?))
+        /// <param name="maxRedemptions">Maximum number of times the voucher can be redeemed (used).</param>
+        public CreateVoucher(VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), CreatePromotion promotion = default(CreatePromotion), CreditNoteDetails creditNoteDetails = default(CreditNoteDetails), LumpDiscountDetails lumpDiscountDetails = default(LumpDiscountDetails), PercentDiscountDetails percentDiscountDetails = default(PercentDiscountDetails), string code = default(string), string description = default(string), List<int?> stores = default(List<int?>), double? validOnOrdersOver = default(double?), bool? takesPriority = default(bool?), bool? isEnabled = default(bool?), bool? isAutomaticallyApplied = default(bool?), bool? includeDeliveryFee = default(bool?), bool? isValidForDeliveryOrders = default(bool?), bool? isValidForPickupOrders = default(bool?), bool? isValidForOrdersPayedOnline = default(bool?), bool? isValidForOrdersPayedByCash = default(bool?), bool? isValidForFirstOrderOnly = default(bool?), bool? isValidOncePerCustomer = default(bool?), bool? isValidOnlyOnce = default(bool?), DateTime? startDate = default(DateTime?), DateTime? expiryDate = default(DateTime?), List<ChannelRestrictionsEnum> channelRestrictions = default(List<ChannelRestrictionsEnum>), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), int? customerId = default(int?), int? maxRedemptions = default(int?))
         {
             this.VoucherType = voucherType;
             this.Promotion = promotion;
@@ -236,6 +237,7 @@ namespace Flipdish.Model
             this.ChannelRestrictions = channelRestrictions;
             this.VoucherSubType = voucherSubType;
             this.CustomerId = customerId;
+            this.MaxRedemptions = maxRedemptions;
         }
         
 
@@ -396,6 +398,13 @@ namespace Flipdish.Model
         public int? CustomerId { get; set; }
 
         /// <summary>
+        /// Maximum number of times the voucher can be redeemed (used)
+        /// </summary>
+        /// <value>Maximum number of times the voucher can be redeemed (used)</value>
+        [DataMember(Name="MaxRedemptions", EmitDefaultValue=false)]
+        public int? MaxRedemptions { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -428,6 +437,7 @@ namespace Flipdish.Model
             sb.Append("  ChannelRestrictions: ").Append(ChannelRestrictions).Append("\n");
             sb.Append("  VoucherSubType: ").Append(VoucherSubType).Append("\n");
             sb.Append("  CustomerId: ").Append(CustomerId).Append("\n");
+            sb.Append("  MaxRedemptions: ").Append(MaxRedemptions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -586,6 +596,11 @@ namespace Flipdish.Model
                     this.CustomerId == input.CustomerId ||
                     (this.CustomerId != null &&
                     this.CustomerId.Equals(input.CustomerId))
+                ) && 
+                (
+                    this.MaxRedemptions == input.MaxRedemptions ||
+                    (this.MaxRedemptions != null &&
+                    this.MaxRedemptions.Equals(input.MaxRedemptions))
                 );
         }
 
@@ -648,6 +663,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.VoucherSubType.GetHashCode();
                 if (this.CustomerId != null)
                     hashCode = hashCode * 59 + this.CustomerId.GetHashCode();
+                if (this.MaxRedemptions != null)
+                    hashCode = hashCode * 59 + this.MaxRedemptions.GetHashCode();
                 return hashCode;
             }
         }

@@ -32,6 +32,7 @@ Name | Type | Description | Notes
 **ChannelRestrictions** | **List&lt;string&gt;** | Limit the channels this voucher can be used on | [optional] 
 **VoucherSubType** | **string** | Voucher Subtype | [optional] 
 **CustomerId** | **int?** | Customer UserID | [optional] 
+**MaxRedemptions** | **int?** | Maximum number of times the voucher can be redeemed (used) | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
