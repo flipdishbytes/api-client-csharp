@@ -4,12 +4,15 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **WebAndAppCash** | **double?** |  | [optional] 
+**WebAndAppCashRevenueExcludingTips** | **double?** |  | [optional] 
 **WebAndAppCard** | **double?** |  | [optional] 
+**WebAndAppCardRevenueExcludingTips** | **double?** |  | [optional] 
 **KioskCash** | **double?** |  | [optional] 
 **KioskCard** | **double?** |  | [optional] 
 **QropCash** | **double?** |  | [optional] 
 **QropCard** | **double?** |  | [optional] 
 **PosCard** | **double?** |  | [optional] 
+**PosCardRevenue** | **double?** |  | [optional] 
 **PosCardOnFlipdishOrders** | **double?** |  | [optional] 
 **OtherIntegrationFees** | **double?** |  | [optional] 
 **OtherIntegrationTips** | **double?** |  | [optional] 
