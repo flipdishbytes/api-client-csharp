@@ -33,8 +33,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="fileId"></param>
-        /// <returns>string</returns>
-        string DownloadFile (string appId, string fileId);
+        /// <returns>RestApiResultFileDownloadResult</returns>
+        RestApiResultFileDownloadResult DownloadFile (string appId, string fileId);
 
         /// <summary>
         /// 
@@ -45,8 +45,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="fileId"></param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DownloadFileWithHttpInfo (string appId, string fileId);
+        /// <returns>ApiResponse of RestApiResultFileDownloadResult</returns>
+        ApiResponse<RestApiResultFileDownloadResult> DownloadFileWithHttpInfo (string appId, string fileId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -58,8 +58,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="fileId"></param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DownloadFileAsync (string appId, string fileId);
+        /// <returns>Task of RestApiResultFileDownloadResult</returns>
+        System.Threading.Tasks.Task<RestApiResultFileDownloadResult> DownloadFileAsync (string appId, string fileId);
 
         /// <summary>
         /// 
@@ -70,8 +70,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="fileId"></param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DownloadFileAsyncWithHttpInfo (string appId, string fileId);
+        /// <returns>Task of ApiResponse (RestApiResultFileDownloadResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultFileDownloadResult>> DownloadFileAsyncWithHttpInfo (string appId, string fileId);
         #endregion Asynchronous Operations
     }
 
@@ -178,10 +178,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="fileId"></param>
-        /// <returns>string</returns>
-        public string DownloadFile (string appId, string fileId)
+        /// <returns>RestApiResultFileDownloadResult</returns>
+        public RestApiResultFileDownloadResult DownloadFile (string appId, string fileId)
         {
-             ApiResponse<string> localVarResponse = DownloadFileWithHttpInfo(appId, fileId);
+             ApiResponse<RestApiResultFileDownloadResult> localVarResponse = DownloadFileWithHttpInfo(appId, fileId);
              return localVarResponse.Data;
         }
 
@@ -191,8 +191,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="fileId"></param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DownloadFileWithHttpInfo (string appId, string fileId)
+        /// <returns>ApiResponse of RestApiResultFileDownloadResult</returns>
+        public ApiResponse< RestApiResultFileDownloadResult > DownloadFileWithHttpInfo (string appId, string fileId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -248,9 +248,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<string>(localVarStatusCode,
+            return new ApiResponse<RestApiResultFileDownloadResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+                (RestApiResultFileDownloadResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultFileDownloadResult)));
         }
 
         /// <summary>
@@ -259,10 +259,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="fileId"></param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DownloadFileAsync (string appId, string fileId)
+        /// <returns>Task of RestApiResultFileDownloadResult</returns>
+        public async System.Threading.Tasks.Task<RestApiResultFileDownloadResult> DownloadFileAsync (string appId, string fileId)
         {
-             ApiResponse<string> localVarResponse = await DownloadFileAsyncWithHttpInfo(appId, fileId);
+             ApiResponse<RestApiResultFileDownloadResult> localVarResponse = await DownloadFileAsyncWithHttpInfo(appId, fileId);
              return localVarResponse.Data;
 
         }
@@ -273,8 +273,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="fileId"></param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DownloadFileAsyncWithHttpInfo (string appId, string fileId)
+        /// <returns>Task of ApiResponse (RestApiResultFileDownloadResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultFileDownloadResult>> DownloadFileAsyncWithHttpInfo (string appId, string fileId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -330,9 +330,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<string>(localVarStatusCode,
+            return new ApiResponse<RestApiResultFileDownloadResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+                (RestApiResultFileDownloadResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultFileDownloadResult)));
         }
 
     }

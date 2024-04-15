@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="downloadfile"></a>
 # **DownloadFile**
-> string DownloadFile (string appId, string fileId)
+> RestApiResultFileDownloadResult DownloadFile (string appId, string fileId)
 
 
 
@@ -36,7 +36,7 @@ namespace Example
 
             try
             {
-                string result = apiInstance.DownloadFile(appId, fileId);
+                RestApiResultFileDownloadResult result = apiInstance.DownloadFile(appId, fileId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**string**
+[**RestApiResultFileDownloadResult**](RestApiResultFileDownloadResult.md)
 
 ### Authorization
 

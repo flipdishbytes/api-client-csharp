@@ -121,8 +121,8 @@ namespace Flipdish.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
-        /// <returns>string</returns>
-        string PayoutReport3ExportPayoutOnlineOrders (string appId, string bankAccountId, string payoutId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
+        /// <returns>RestApiResultFileCreationResult</returns>
+        RestApiResultFileCreationResult PayoutReport3ExportPayoutOnlineOrders (string appId, string bankAccountId, string payoutId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
 
         /// <summary>
         /// 
@@ -138,8 +138,8 @@ namespace Flipdish.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> PayoutReport3ExportPayoutOnlineOrdersWithHttpInfo (string appId, string bankAccountId, string payoutId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
+        /// <returns>ApiResponse of RestApiResultFileCreationResult</returns>
+        ApiResponse<RestApiResultFileCreationResult> PayoutReport3ExportPayoutOnlineOrdersWithHttpInfo (string appId, string bankAccountId, string payoutId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -239,8 +239,8 @@ namespace Flipdish.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> PayoutReport3ExportPayoutOnlineOrdersAsync (string appId, string bankAccountId, string payoutId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
+        /// <returns>Task of RestApiResultFileCreationResult</returns>
+        System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutOnlineOrdersAsync (string appId, string bankAccountId, string payoutId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
 
         /// <summary>
         /// 
@@ -256,8 +256,8 @@ namespace Flipdish.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> PayoutReport3ExportPayoutOnlineOrdersAsyncWithHttpInfo (string appId, string bankAccountId, string payoutId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
+        /// <returns>Task of ApiResponse (RestApiResultFileCreationResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutOnlineOrdersAsyncWithHttpInfo (string appId, string bankAccountId, string payoutId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null);
         #endregion Asynchronous Operations
     }
 
@@ -918,10 +918,10 @@ namespace Flipdish.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
-        /// <returns>string</returns>
-        public string PayoutReport3ExportPayoutOnlineOrders (string appId, string bankAccountId, string payoutId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
+        /// <returns>RestApiResultFileCreationResult</returns>
+        public RestApiResultFileCreationResult PayoutReport3ExportPayoutOnlineOrders (string appId, string bankAccountId, string payoutId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
         {
-             ApiResponse<string> localVarResponse = PayoutReport3ExportPayoutOnlineOrdersWithHttpInfo(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
+             ApiResponse<RestApiResultFileCreationResult> localVarResponse = PayoutReport3ExportPayoutOnlineOrdersWithHttpInfo(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
              return localVarResponse.Data;
         }
 
@@ -936,8 +936,8 @@ namespace Flipdish.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > PayoutReport3ExportPayoutOnlineOrdersWithHttpInfo (string appId, string bankAccountId, string payoutId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
+        /// <returns>ApiResponse of RestApiResultFileCreationResult</returns>
+        public ApiResponse< RestApiResultFileCreationResult > PayoutReport3ExportPayoutOnlineOrdersWithHttpInfo (string appId, string bankAccountId, string payoutId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1001,9 +1001,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<string>(localVarStatusCode,
+            return new ApiResponse<RestApiResultFileCreationResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+                (RestApiResultFileCreationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultFileCreationResult)));
         }
 
         /// <summary>
@@ -1017,10 +1017,10 @@ namespace Flipdish.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> PayoutReport3ExportPayoutOnlineOrdersAsync (string appId, string bankAccountId, string payoutId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
+        /// <returns>Task of RestApiResultFileCreationResult</returns>
+        public async System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutOnlineOrdersAsync (string appId, string bankAccountId, string payoutId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
         {
-             ApiResponse<string> localVarResponse = await PayoutReport3ExportPayoutOnlineOrdersAsyncWithHttpInfo(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
+             ApiResponse<RestApiResultFileCreationResult> localVarResponse = await PayoutReport3ExportPayoutOnlineOrdersAsyncWithHttpInfo(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
              return localVarResponse.Data;
 
         }
@@ -1036,8 +1036,8 @@ namespace Flipdish.Api
         /// <param name="endDate"> (optional)</param>
         /// <param name="payoutRequestIdsBankAccountIds">List of bank account ids to search for (optional)</param>
         /// <param name="payoutRequestIdsStates">List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> PayoutReport3ExportPayoutOnlineOrdersAsyncWithHttpInfo (string appId, string bankAccountId, string payoutId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
+        /// <returns>Task of ApiResponse (RestApiResultFileCreationResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutOnlineOrdersAsyncWithHttpInfo (string appId, string bankAccountId, string payoutId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1101,9 +1101,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<string>(localVarStatusCode,
+            return new ApiResponse<RestApiResultFileCreationResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+                (RestApiResultFileCreationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultFileCreationResult)));
         }
 
     }

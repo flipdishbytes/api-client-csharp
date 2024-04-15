@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 
 <a name="payoutreport3exportpayoutonlineorders"></a>
 # **PayoutReport3ExportPayoutOnlineOrders**
-> string PayoutReport3ExportPayoutOnlineOrders (string appId, string bankAccountId, string payoutId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
+> RestApiResultFileCreationResult PayoutReport3ExportPayoutOnlineOrders (string appId, string bankAccountId, string payoutId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
 
 
 
@@ -247,7 +247,7 @@ namespace Example
 
             try
             {
-                string result = apiInstance.PayoutReport3ExportPayoutOnlineOrders(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
+                RestApiResultFileCreationResult result = apiInstance.PayoutReport3ExportPayoutOnlineOrders(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**string**
+[**RestApiResultFileCreationResult**](RestApiResultFileCreationResult.md)
 
 ### Authorization
 
