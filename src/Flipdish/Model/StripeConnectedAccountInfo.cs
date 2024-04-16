@@ -76,7 +76,13 @@ namespace Flipdish.Model
             /// Enum UpdateExternalAccount for value: UpdateExternalAccount
             /// </summary>
             [EnumMember(Value = "UpdateExternalAccount")]
-            UpdateExternalAccount = 7
+            UpdateExternalAccount = 7,
+            
+            /// <summary>
+            /// Enum PlatformPaused for value: PlatformPaused
+            /// </summary>
+            [EnumMember(Value = "PlatformPaused")]
+            PlatformPaused = 8
         }
 
         /// <summary>
