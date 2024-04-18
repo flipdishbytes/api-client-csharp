@@ -40,21 +40,7 @@ namespace Flipdish.Model
         /// <param name="chargebacks">chargebacks.</param>
         /// <param name="otherTransactions">otherTransactions.</param>
         /// <param name="closingBalance">closingBalance.</param>
-        /// <param name="openingBalanceCredit">openingBalanceCredit.</param>
-        /// <param name="openingBalanceDebit">openingBalanceDebit.</param>
-        /// <param name="refundsOnCardOrdersCredit">refundsOnCardOrdersCredit.</param>
-        /// <param name="refundsOnCardOrdersDebit">refundsOnCardOrdersDebit.</param>
-        /// <param name="refundsOnCashOrdersCredit">refundsOnCashOrdersCredit.</param>
-        /// <param name="refundsOnCashOrdersDebit">refundsOnCashOrdersDebit.</param>
-        /// <param name="cashCustomerFeesCredit">cashCustomerFeesCredit.</param>
-        /// <param name="cashCustomerFeesDebit">cashCustomerFeesDebit.</param>
-        /// <param name="chargebacksCredit">chargebacksCredit.</param>
-        /// <param name="chargebacksDebit">chargebacksDebit.</param>
-        /// <param name="otherTransactionsCredit">otherTransactionsCredit.</param>
-        /// <param name="otherTransactionsDebit">otherTransactionsDebit.</param>
-        /// <param name="closingBalanceCredit">closingBalanceCredit.</param>
-        /// <param name="closingBalanceDebit">closingBalanceDebit.</param>
-        public PayoutReport3DetailsAdjustments(DateTime? openingBalanceDate = default(DateTime?), DateTime? closingBalanceDate = default(DateTime?), double? openingBalance = default(double?), double? refundsOnCardOrders = default(double?), double? refundsOnCashOrders = default(double?), double? cashCustomerFees = default(double?), double? chargebacks = default(double?), double? otherTransactions = default(double?), double? closingBalance = default(double?), double? openingBalanceCredit = default(double?), double? openingBalanceDebit = default(double?), double? refundsOnCardOrdersCredit = default(double?), double? refundsOnCardOrdersDebit = default(double?), double? refundsOnCashOrdersCredit = default(double?), double? refundsOnCashOrdersDebit = default(double?), double? cashCustomerFeesCredit = default(double?), double? cashCustomerFeesDebit = default(double?), double? chargebacksCredit = default(double?), double? chargebacksDebit = default(double?), double? otherTransactionsCredit = default(double?), double? otherTransactionsDebit = default(double?), double? closingBalanceCredit = default(double?), double? closingBalanceDebit = default(double?))
+        public PayoutReport3DetailsAdjustments(DateTime? openingBalanceDate = default(DateTime?), DateTime? closingBalanceDate = default(DateTime?), double? openingBalance = default(double?), double? refundsOnCardOrders = default(double?), double? refundsOnCashOrders = default(double?), double? cashCustomerFees = default(double?), double? chargebacks = default(double?), double? otherTransactions = default(double?), double? closingBalance = default(double?))
         {
             this.OpeningBalanceDate = openingBalanceDate;
             this.ClosingBalanceDate = closingBalanceDate;
@@ -65,20 +51,6 @@ namespace Flipdish.Model
             this.Chargebacks = chargebacks;
             this.OtherTransactions = otherTransactions;
             this.ClosingBalance = closingBalance;
-            this.OpeningBalanceCredit = openingBalanceCredit;
-            this.OpeningBalanceDebit = openingBalanceDebit;
-            this.RefundsOnCardOrdersCredit = refundsOnCardOrdersCredit;
-            this.RefundsOnCardOrdersDebit = refundsOnCardOrdersDebit;
-            this.RefundsOnCashOrdersCredit = refundsOnCashOrdersCredit;
-            this.RefundsOnCashOrdersDebit = refundsOnCashOrdersDebit;
-            this.CashCustomerFeesCredit = cashCustomerFeesCredit;
-            this.CashCustomerFeesDebit = cashCustomerFeesDebit;
-            this.ChargebacksCredit = chargebacksCredit;
-            this.ChargebacksDebit = chargebacksDebit;
-            this.OtherTransactionsCredit = otherTransactionsCredit;
-            this.OtherTransactionsDebit = otherTransactionsDebit;
-            this.ClosingBalanceCredit = closingBalanceCredit;
-            this.ClosingBalanceDebit = closingBalanceDebit;
         }
         
         /// <summary>
@@ -136,90 +108,6 @@ namespace Flipdish.Model
         public double? ClosingBalance { get; set; }
 
         /// <summary>
-        /// Gets or Sets OpeningBalanceCredit
-        /// </summary>
-        [DataMember(Name="OpeningBalanceCredit", EmitDefaultValue=false)]
-        public double? OpeningBalanceCredit { get; set; }
-
-        /// <summary>
-        /// Gets or Sets OpeningBalanceDebit
-        /// </summary>
-        [DataMember(Name="OpeningBalanceDebit", EmitDefaultValue=false)]
-        public double? OpeningBalanceDebit { get; set; }
-
-        /// <summary>
-        /// Gets or Sets RefundsOnCardOrdersCredit
-        /// </summary>
-        [DataMember(Name="RefundsOnCardOrdersCredit", EmitDefaultValue=false)]
-        public double? RefundsOnCardOrdersCredit { get; set; }
-
-        /// <summary>
-        /// Gets or Sets RefundsOnCardOrdersDebit
-        /// </summary>
-        [DataMember(Name="RefundsOnCardOrdersDebit", EmitDefaultValue=false)]
-        public double? RefundsOnCardOrdersDebit { get; set; }
-
-        /// <summary>
-        /// Gets or Sets RefundsOnCashOrdersCredit
-        /// </summary>
-        [DataMember(Name="RefundsOnCashOrdersCredit", EmitDefaultValue=false)]
-        public double? RefundsOnCashOrdersCredit { get; set; }
-
-        /// <summary>
-        /// Gets or Sets RefundsOnCashOrdersDebit
-        /// </summary>
-        [DataMember(Name="RefundsOnCashOrdersDebit", EmitDefaultValue=false)]
-        public double? RefundsOnCashOrdersDebit { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CashCustomerFeesCredit
-        /// </summary>
-        [DataMember(Name="CashCustomerFeesCredit", EmitDefaultValue=false)]
-        public double? CashCustomerFeesCredit { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CashCustomerFeesDebit
-        /// </summary>
-        [DataMember(Name="CashCustomerFeesDebit", EmitDefaultValue=false)]
-        public double? CashCustomerFeesDebit { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ChargebacksCredit
-        /// </summary>
-        [DataMember(Name="ChargebacksCredit", EmitDefaultValue=false)]
-        public double? ChargebacksCredit { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ChargebacksDebit
-        /// </summary>
-        [DataMember(Name="ChargebacksDebit", EmitDefaultValue=false)]
-        public double? ChargebacksDebit { get; set; }
-
-        /// <summary>
-        /// Gets or Sets OtherTransactionsCredit
-        /// </summary>
-        [DataMember(Name="OtherTransactionsCredit", EmitDefaultValue=false)]
-        public double? OtherTransactionsCredit { get; set; }
-
-        /// <summary>
-        /// Gets or Sets OtherTransactionsDebit
-        /// </summary>
-        [DataMember(Name="OtherTransactionsDebit", EmitDefaultValue=false)]
-        public double? OtherTransactionsDebit { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ClosingBalanceCredit
-        /// </summary>
-        [DataMember(Name="ClosingBalanceCredit", EmitDefaultValue=false)]
-        public double? ClosingBalanceCredit { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ClosingBalanceDebit
-        /// </summary>
-        [DataMember(Name="ClosingBalanceDebit", EmitDefaultValue=false)]
-        public double? ClosingBalanceDebit { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -236,20 +124,6 @@ namespace Flipdish.Model
             sb.Append("  Chargebacks: ").Append(Chargebacks).Append("\n");
             sb.Append("  OtherTransactions: ").Append(OtherTransactions).Append("\n");
             sb.Append("  ClosingBalance: ").Append(ClosingBalance).Append("\n");
-            sb.Append("  OpeningBalanceCredit: ").Append(OpeningBalanceCredit).Append("\n");
-            sb.Append("  OpeningBalanceDebit: ").Append(OpeningBalanceDebit).Append("\n");
-            sb.Append("  RefundsOnCardOrdersCredit: ").Append(RefundsOnCardOrdersCredit).Append("\n");
-            sb.Append("  RefundsOnCardOrdersDebit: ").Append(RefundsOnCardOrdersDebit).Append("\n");
-            sb.Append("  RefundsOnCashOrdersCredit: ").Append(RefundsOnCashOrdersCredit).Append("\n");
-            sb.Append("  RefundsOnCashOrdersDebit: ").Append(RefundsOnCashOrdersDebit).Append("\n");
-            sb.Append("  CashCustomerFeesCredit: ").Append(CashCustomerFeesCredit).Append("\n");
-            sb.Append("  CashCustomerFeesDebit: ").Append(CashCustomerFeesDebit).Append("\n");
-            sb.Append("  ChargebacksCredit: ").Append(ChargebacksCredit).Append("\n");
-            sb.Append("  ChargebacksDebit: ").Append(ChargebacksDebit).Append("\n");
-            sb.Append("  OtherTransactionsCredit: ").Append(OtherTransactionsCredit).Append("\n");
-            sb.Append("  OtherTransactionsDebit: ").Append(OtherTransactionsDebit).Append("\n");
-            sb.Append("  ClosingBalanceCredit: ").Append(ClosingBalanceCredit).Append("\n");
-            sb.Append("  ClosingBalanceDebit: ").Append(ClosingBalanceDebit).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -328,76 +202,6 @@ namespace Flipdish.Model
                     this.ClosingBalance == input.ClosingBalance ||
                     (this.ClosingBalance != null &&
                     this.ClosingBalance.Equals(input.ClosingBalance))
-                ) && 
-                (
-                    this.OpeningBalanceCredit == input.OpeningBalanceCredit ||
-                    (this.OpeningBalanceCredit != null &&
-                    this.OpeningBalanceCredit.Equals(input.OpeningBalanceCredit))
-                ) && 
-                (
-                    this.OpeningBalanceDebit == input.OpeningBalanceDebit ||
-                    (this.OpeningBalanceDebit != null &&
-                    this.OpeningBalanceDebit.Equals(input.OpeningBalanceDebit))
-                ) && 
-                (
-                    this.RefundsOnCardOrdersCredit == input.RefundsOnCardOrdersCredit ||
-                    (this.RefundsOnCardOrdersCredit != null &&
-                    this.RefundsOnCardOrdersCredit.Equals(input.RefundsOnCardOrdersCredit))
-                ) && 
-                (
-                    this.RefundsOnCardOrdersDebit == input.RefundsOnCardOrdersDebit ||
-                    (this.RefundsOnCardOrdersDebit != null &&
-                    this.RefundsOnCardOrdersDebit.Equals(input.RefundsOnCardOrdersDebit))
-                ) && 
-                (
-                    this.RefundsOnCashOrdersCredit == input.RefundsOnCashOrdersCredit ||
-                    (this.RefundsOnCashOrdersCredit != null &&
-                    this.RefundsOnCashOrdersCredit.Equals(input.RefundsOnCashOrdersCredit))
-                ) && 
-                (
-                    this.RefundsOnCashOrdersDebit == input.RefundsOnCashOrdersDebit ||
-                    (this.RefundsOnCashOrdersDebit != null &&
-                    this.RefundsOnCashOrdersDebit.Equals(input.RefundsOnCashOrdersDebit))
-                ) && 
-                (
-                    this.CashCustomerFeesCredit == input.CashCustomerFeesCredit ||
-                    (this.CashCustomerFeesCredit != null &&
-                    this.CashCustomerFeesCredit.Equals(input.CashCustomerFeesCredit))
-                ) && 
-                (
-                    this.CashCustomerFeesDebit == input.CashCustomerFeesDebit ||
-                    (this.CashCustomerFeesDebit != null &&
-                    this.CashCustomerFeesDebit.Equals(input.CashCustomerFeesDebit))
-                ) && 
-                (
-                    this.ChargebacksCredit == input.ChargebacksCredit ||
-                    (this.ChargebacksCredit != null &&
-                    this.ChargebacksCredit.Equals(input.ChargebacksCredit))
-                ) && 
-                (
-                    this.ChargebacksDebit == input.ChargebacksDebit ||
-                    (this.ChargebacksDebit != null &&
-                    this.ChargebacksDebit.Equals(input.ChargebacksDebit))
-                ) && 
-                (
-                    this.OtherTransactionsCredit == input.OtherTransactionsCredit ||
-                    (this.OtherTransactionsCredit != null &&
-                    this.OtherTransactionsCredit.Equals(input.OtherTransactionsCredit))
-                ) && 
-                (
-                    this.OtherTransactionsDebit == input.OtherTransactionsDebit ||
-                    (this.OtherTransactionsDebit != null &&
-                    this.OtherTransactionsDebit.Equals(input.OtherTransactionsDebit))
-                ) && 
-                (
-                    this.ClosingBalanceCredit == input.ClosingBalanceCredit ||
-                    (this.ClosingBalanceCredit != null &&
-                    this.ClosingBalanceCredit.Equals(input.ClosingBalanceCredit))
-                ) && 
-                (
-                    this.ClosingBalanceDebit == input.ClosingBalanceDebit ||
-                    (this.ClosingBalanceDebit != null &&
-                    this.ClosingBalanceDebit.Equals(input.ClosingBalanceDebit))
                 );
         }
 
@@ -428,34 +232,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OtherTransactions.GetHashCode();
                 if (this.ClosingBalance != null)
                     hashCode = hashCode * 59 + this.ClosingBalance.GetHashCode();
-                if (this.OpeningBalanceCredit != null)
-                    hashCode = hashCode * 59 + this.OpeningBalanceCredit.GetHashCode();
-                if (this.OpeningBalanceDebit != null)
-                    hashCode = hashCode * 59 + this.OpeningBalanceDebit.GetHashCode();
-                if (this.RefundsOnCardOrdersCredit != null)
-                    hashCode = hashCode * 59 + this.RefundsOnCardOrdersCredit.GetHashCode();
-                if (this.RefundsOnCardOrdersDebit != null)
-                    hashCode = hashCode * 59 + this.RefundsOnCardOrdersDebit.GetHashCode();
-                if (this.RefundsOnCashOrdersCredit != null)
-                    hashCode = hashCode * 59 + this.RefundsOnCashOrdersCredit.GetHashCode();
-                if (this.RefundsOnCashOrdersDebit != null)
-                    hashCode = hashCode * 59 + this.RefundsOnCashOrdersDebit.GetHashCode();
-                if (this.CashCustomerFeesCredit != null)
-                    hashCode = hashCode * 59 + this.CashCustomerFeesCredit.GetHashCode();
-                if (this.CashCustomerFeesDebit != null)
-                    hashCode = hashCode * 59 + this.CashCustomerFeesDebit.GetHashCode();
-                if (this.ChargebacksCredit != null)
-                    hashCode = hashCode * 59 + this.ChargebacksCredit.GetHashCode();
-                if (this.ChargebacksDebit != null)
-                    hashCode = hashCode * 59 + this.ChargebacksDebit.GetHashCode();
-                if (this.OtherTransactionsCredit != null)
-                    hashCode = hashCode * 59 + this.OtherTransactionsCredit.GetHashCode();
-                if (this.OtherTransactionsDebit != null)
-                    hashCode = hashCode * 59 + this.OtherTransactionsDebit.GetHashCode();
-                if (this.ClosingBalanceCredit != null)
-                    hashCode = hashCode * 59 + this.ClosingBalanceCredit.GetHashCode();
-                if (this.ClosingBalanceDebit != null)
-                    hashCode = hashCode * 59 + this.ClosingBalanceDebit.GetHashCode();
                 return hashCode;
             }
         }

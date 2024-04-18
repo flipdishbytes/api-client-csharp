@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **WebAndAppCash** | **double?** |  | [optional] 
-**WebAndAppCashRevenueExcludingTips** | **double?** |  | [optional] 
+**WebAndAppCashRevenueIncludingTips** | **double?** |  | [optional] 
 **WebAndAppCard** | **double?** |  | [optional] 
-**WebAndAppCardRevenueExcludingTips** | **double?** |  | [optional] 
+**WebAndAppCardRevenueIncludingTips** | **double?** |  | [optional] 
 **KioskCash** | **double?** |  | [optional] 
 **KioskCard** | **double?** |  | [optional] 
 **QropCash** | **double?** |  | [optional] 

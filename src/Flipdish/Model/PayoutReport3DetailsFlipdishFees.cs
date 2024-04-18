@@ -32,9 +32,9 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="PayoutReport3DetailsFlipdishFees" /> class.
         /// </summary>
         /// <param name="webAndAppCash">webAndAppCash.</param>
-        /// <param name="webAndAppCashRevenueExcludingTips">webAndAppCashRevenueExcludingTips.</param>
+        /// <param name="webAndAppCashRevenueIncludingTips">webAndAppCashRevenueIncludingTips.</param>
         /// <param name="webAndAppCard">webAndAppCard.</param>
-        /// <param name="webAndAppCardRevenueExcludingTips">webAndAppCardRevenueExcludingTips.</param>
+        /// <param name="webAndAppCardRevenueIncludingTips">webAndAppCardRevenueIncludingTips.</param>
         /// <param name="kioskCash">kioskCash.</param>
         /// <param name="kioskCard">kioskCard.</param>
         /// <param name="qropCash">qropCash.</param>
@@ -46,12 +46,12 @@ namespace Flipdish.Model
         /// <param name="otherIntegrationTips">otherIntegrationTips.</param>
         /// <param name="vat">vat.</param>
         /// <param name="total">total.</param>
-        public PayoutReport3DetailsFlipdishFees(double? webAndAppCash = default(double?), double? webAndAppCashRevenueExcludingTips = default(double?), double? webAndAppCard = default(double?), double? webAndAppCardRevenueExcludingTips = default(double?), double? kioskCash = default(double?), double? kioskCard = default(double?), double? qropCash = default(double?), double? qropCard = default(double?), double? posCard = default(double?), double? posCardRevenue = default(double?), double? posCardOnFlipdishOrders = default(double?), double? otherIntegrationFees = default(double?), double? otherIntegrationTips = default(double?), double? vat = default(double?), double? total = default(double?))
+        public PayoutReport3DetailsFlipdishFees(double? webAndAppCash = default(double?), double? webAndAppCashRevenueIncludingTips = default(double?), double? webAndAppCard = default(double?), double? webAndAppCardRevenueIncludingTips = default(double?), double? kioskCash = default(double?), double? kioskCard = default(double?), double? qropCash = default(double?), double? qropCard = default(double?), double? posCard = default(double?), double? posCardRevenue = default(double?), double? posCardOnFlipdishOrders = default(double?), double? otherIntegrationFees = default(double?), double? otherIntegrationTips = default(double?), double? vat = default(double?), double? total = default(double?))
         {
             this.WebAndAppCash = webAndAppCash;
-            this.WebAndAppCashRevenueExcludingTips = webAndAppCashRevenueExcludingTips;
+            this.WebAndAppCashRevenueIncludingTips = webAndAppCashRevenueIncludingTips;
             this.WebAndAppCard = webAndAppCard;
-            this.WebAndAppCardRevenueExcludingTips = webAndAppCardRevenueExcludingTips;
+            this.WebAndAppCardRevenueIncludingTips = webAndAppCardRevenueIncludingTips;
             this.KioskCash = kioskCash;
             this.KioskCard = kioskCard;
             this.QropCash = qropCash;
@@ -72,10 +72,10 @@ namespace Flipdish.Model
         public double? WebAndAppCash { get; set; }
 
         /// <summary>
-        /// Gets or Sets WebAndAppCashRevenueExcludingTips
+        /// Gets or Sets WebAndAppCashRevenueIncludingTips
         /// </summary>
-        [DataMember(Name="WebAndAppCashRevenueExcludingTips", EmitDefaultValue=false)]
-        public double? WebAndAppCashRevenueExcludingTips { get; set; }
+        [DataMember(Name="WebAndAppCashRevenueIncludingTips", EmitDefaultValue=false)]
+        public double? WebAndAppCashRevenueIncludingTips { get; set; }
 
         /// <summary>
         /// Gets or Sets WebAndAppCard
@@ -84,10 +84,10 @@ namespace Flipdish.Model
         public double? WebAndAppCard { get; set; }
 
         /// <summary>
-        /// Gets or Sets WebAndAppCardRevenueExcludingTips
+        /// Gets or Sets WebAndAppCardRevenueIncludingTips
         /// </summary>
-        [DataMember(Name="WebAndAppCardRevenueExcludingTips", EmitDefaultValue=false)]
-        public double? WebAndAppCardRevenueExcludingTips { get; set; }
+        [DataMember(Name="WebAndAppCardRevenueIncludingTips", EmitDefaultValue=false)]
+        public double? WebAndAppCardRevenueIncludingTips { get; set; }
 
         /// <summary>
         /// Gets or Sets KioskCash
@@ -164,9 +164,9 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class PayoutReport3DetailsFlipdishFees {\n");
             sb.Append("  WebAndAppCash: ").Append(WebAndAppCash).Append("\n");
-            sb.Append("  WebAndAppCashRevenueExcludingTips: ").Append(WebAndAppCashRevenueExcludingTips).Append("\n");
+            sb.Append("  WebAndAppCashRevenueIncludingTips: ").Append(WebAndAppCashRevenueIncludingTips).Append("\n");
             sb.Append("  WebAndAppCard: ").Append(WebAndAppCard).Append("\n");
-            sb.Append("  WebAndAppCardRevenueExcludingTips: ").Append(WebAndAppCardRevenueExcludingTips).Append("\n");
+            sb.Append("  WebAndAppCardRevenueIncludingTips: ").Append(WebAndAppCardRevenueIncludingTips).Append("\n");
             sb.Append("  KioskCash: ").Append(KioskCash).Append("\n");
             sb.Append("  KioskCard: ").Append(KioskCard).Append("\n");
             sb.Append("  QropCash: ").Append(QropCash).Append("\n");
@@ -218,9 +218,9 @@ namespace Flipdish.Model
                     this.WebAndAppCash.Equals(input.WebAndAppCash))
                 ) && 
                 (
-                    this.WebAndAppCashRevenueExcludingTips == input.WebAndAppCashRevenueExcludingTips ||
-                    (this.WebAndAppCashRevenueExcludingTips != null &&
-                    this.WebAndAppCashRevenueExcludingTips.Equals(input.WebAndAppCashRevenueExcludingTips))
+                    this.WebAndAppCashRevenueIncludingTips == input.WebAndAppCashRevenueIncludingTips ||
+                    (this.WebAndAppCashRevenueIncludingTips != null &&
+                    this.WebAndAppCashRevenueIncludingTips.Equals(input.WebAndAppCashRevenueIncludingTips))
                 ) && 
                 (
                     this.WebAndAppCard == input.WebAndAppCard ||
@@ -228,9 +228,9 @@ namespace Flipdish.Model
                     this.WebAndAppCard.Equals(input.WebAndAppCard))
                 ) && 
                 (
-                    this.WebAndAppCardRevenueExcludingTips == input.WebAndAppCardRevenueExcludingTips ||
-                    (this.WebAndAppCardRevenueExcludingTips != null &&
-                    this.WebAndAppCardRevenueExcludingTips.Equals(input.WebAndAppCardRevenueExcludingTips))
+                    this.WebAndAppCardRevenueIncludingTips == input.WebAndAppCardRevenueIncludingTips ||
+                    (this.WebAndAppCardRevenueIncludingTips != null &&
+                    this.WebAndAppCardRevenueIncludingTips.Equals(input.WebAndAppCardRevenueIncludingTips))
                 ) && 
                 (
                     this.KioskCash == input.KioskCash ||
@@ -300,12 +300,12 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.WebAndAppCash != null)
                     hashCode = hashCode * 59 + this.WebAndAppCash.GetHashCode();
-                if (this.WebAndAppCashRevenueExcludingTips != null)
-                    hashCode = hashCode * 59 + this.WebAndAppCashRevenueExcludingTips.GetHashCode();
+                if (this.WebAndAppCashRevenueIncludingTips != null)
+                    hashCode = hashCode * 59 + this.WebAndAppCashRevenueIncludingTips.GetHashCode();
                 if (this.WebAndAppCard != null)
                     hashCode = hashCode * 59 + this.WebAndAppCard.GetHashCode();
-                if (this.WebAndAppCardRevenueExcludingTips != null)
-                    hashCode = hashCode * 59 + this.WebAndAppCardRevenueExcludingTips.GetHashCode();
+                if (this.WebAndAppCardRevenueIncludingTips != null)
+                    hashCode = hashCode * 59 + this.WebAndAppCardRevenueIncludingTips.GetHashCode();
                 if (this.KioskCash != null)
                     hashCode = hashCode * 59 + this.KioskCash.GetHashCode();
                 if (this.KioskCard != null)
