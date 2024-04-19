@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**GetPayoutReport3Details**](PayoutReportsApi.md#getpayoutreport3details) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/details | 
 [**GetPayoutReport3Orders**](PayoutReportsApi.md#getpayoutreport3orders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/orders | 
 [**GetPayoutReport3Overview**](PayoutReportsApi.md#getpayoutreport3overview) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/overview | 
+[**PayoutReport3ExportPayoutChargebacks**](PayoutReportsApi.md#payoutreport3exportpayoutchargebacks) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/chargebacks | 
 [**PayoutReport3ExportPayoutOnlineOrders**](PayoutReportsApi.md#payoutreport3exportpayoutonlineorders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/onlineorders | 
 [**PayoutReport3ExportPayoutOrders**](PayoutReportsApi.md#payoutreport3exportpayoutorders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/orders | 
 [**PayoutReport3ExportPayoutPosSales**](PayoutReportsApi.md#payoutreport3exportpayoutpossales) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/possales | 
@@ -203,6 +204,73 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultPayoutReport3Overview**](RestApiResultPayoutReport3Overview.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="payoutreport3exportpayoutchargebacks"></a>
+# **PayoutReport3ExportPayoutChargebacks**
+> RestApiResultFileCreationResult PayoutReport3ExportPayoutChargebacks (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class PayoutReport3ExportPayoutChargebacksExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new PayoutReportsApi();
+            var appId = appId_example;  // string | 
+            var bankAccountId = 56;  // int? | 
+            var payoutId = 56;  // int? | 
+            var stores = new List<int?>(); // List<int?> |  (optional) 
+
+            try
+            {
+                RestApiResultFileCreationResult result = apiInstance.PayoutReport3ExportPayoutChargebacks(appId, bankAccountId, payoutId, stores);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PayoutReportsApi.PayoutReport3ExportPayoutChargebacks: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **bankAccountId** | **int?**|  | 
+ **payoutId** | **int?**|  | 
+ **stores** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
+
+### Return type
+
+[**RestApiResultFileCreationResult**](RestApiResultFileCreationResult.md)
 
 ### Authorization
 
