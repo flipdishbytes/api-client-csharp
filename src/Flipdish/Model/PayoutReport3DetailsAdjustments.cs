@@ -40,7 +40,14 @@ namespace Flipdish.Model
         /// <param name="chargebacks">chargebacks.</param>
         /// <param name="otherTransactions">otherTransactions.</param>
         /// <param name="closingBalance">closingBalance.</param>
-        public PayoutReport3DetailsAdjustments(DateTime? openingBalanceDate = default(DateTime?), DateTime? closingBalanceDate = default(DateTime?), double? openingBalance = default(double?), double? refundsOnCardOrders = default(double?), double? refundsOnCashOrders = default(double?), double? cashCustomerFees = default(double?), double? chargebacks = default(double?), double? otherTransactions = default(double?), double? closingBalance = default(double?))
+        /// <param name="balanceRepaid">balanceRepaid.</param>
+        /// <param name="refundsOnCardOrdersBracketsAmount">refundsOnCardOrdersBracketsAmount.</param>
+        /// <param name="refundsOnCardOrdersBracketsOutOfAmount">refundsOnCardOrdersBracketsOutOfAmount.</param>
+        /// <param name="refundsOnCashOrdersBracketsAmount">refundsOnCashOrdersBracketsAmount.</param>
+        /// <param name="refundsOnCashOrdersBracketsOutOfAmount">refundsOnCashOrdersBracketsOutOfAmount.</param>
+        /// <param name="cashCustomerFeesBracketsAmount">cashCustomerFeesBracketsAmount.</param>
+        /// <param name="cashCustomerFeesBracketsOutOfAmount">cashCustomerFeesBracketsOutOfAmount.</param>
+        public PayoutReport3DetailsAdjustments(DateTime? openingBalanceDate = default(DateTime?), DateTime? closingBalanceDate = default(DateTime?), double? openingBalance = default(double?), double? refundsOnCardOrders = default(double?), double? refundsOnCashOrders = default(double?), double? cashCustomerFees = default(double?), double? chargebacks = default(double?), double? otherTransactions = default(double?), double? closingBalance = default(double?), double? balanceRepaid = default(double?), double? refundsOnCardOrdersBracketsAmount = default(double?), double? refundsOnCardOrdersBracketsOutOfAmount = default(double?), double? refundsOnCashOrdersBracketsAmount = default(double?), double? refundsOnCashOrdersBracketsOutOfAmount = default(double?), double? cashCustomerFeesBracketsAmount = default(double?), double? cashCustomerFeesBracketsOutOfAmount = default(double?))
         {
             this.OpeningBalanceDate = openingBalanceDate;
             this.ClosingBalanceDate = closingBalanceDate;
@@ -51,6 +58,13 @@ namespace Flipdish.Model
             this.Chargebacks = chargebacks;
             this.OtherTransactions = otherTransactions;
             this.ClosingBalance = closingBalance;
+            this.BalanceRepaid = balanceRepaid;
+            this.RefundsOnCardOrdersBracketsAmount = refundsOnCardOrdersBracketsAmount;
+            this.RefundsOnCardOrdersBracketsOutOfAmount = refundsOnCardOrdersBracketsOutOfAmount;
+            this.RefundsOnCashOrdersBracketsAmount = refundsOnCashOrdersBracketsAmount;
+            this.RefundsOnCashOrdersBracketsOutOfAmount = refundsOnCashOrdersBracketsOutOfAmount;
+            this.CashCustomerFeesBracketsAmount = cashCustomerFeesBracketsAmount;
+            this.CashCustomerFeesBracketsOutOfAmount = cashCustomerFeesBracketsOutOfAmount;
         }
         
         /// <summary>
@@ -108,6 +122,48 @@ namespace Flipdish.Model
         public double? ClosingBalance { get; set; }
 
         /// <summary>
+        /// Gets or Sets BalanceRepaid
+        /// </summary>
+        [DataMember(Name="BalanceRepaid", EmitDefaultValue=false)]
+        public double? BalanceRepaid { get; set; }
+
+        /// <summary>
+        /// Gets or Sets RefundsOnCardOrdersBracketsAmount
+        /// </summary>
+        [DataMember(Name="RefundsOnCardOrdersBracketsAmount", EmitDefaultValue=false)]
+        public double? RefundsOnCardOrdersBracketsAmount { get; set; }
+
+        /// <summary>
+        /// Gets or Sets RefundsOnCardOrdersBracketsOutOfAmount
+        /// </summary>
+        [DataMember(Name="RefundsOnCardOrdersBracketsOutOfAmount", EmitDefaultValue=false)]
+        public double? RefundsOnCardOrdersBracketsOutOfAmount { get; set; }
+
+        /// <summary>
+        /// Gets or Sets RefundsOnCashOrdersBracketsAmount
+        /// </summary>
+        [DataMember(Name="RefundsOnCashOrdersBracketsAmount", EmitDefaultValue=false)]
+        public double? RefundsOnCashOrdersBracketsAmount { get; set; }
+
+        /// <summary>
+        /// Gets or Sets RefundsOnCashOrdersBracketsOutOfAmount
+        /// </summary>
+        [DataMember(Name="RefundsOnCashOrdersBracketsOutOfAmount", EmitDefaultValue=false)]
+        public double? RefundsOnCashOrdersBracketsOutOfAmount { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CashCustomerFeesBracketsAmount
+        /// </summary>
+        [DataMember(Name="CashCustomerFeesBracketsAmount", EmitDefaultValue=false)]
+        public double? CashCustomerFeesBracketsAmount { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CashCustomerFeesBracketsOutOfAmount
+        /// </summary>
+        [DataMember(Name="CashCustomerFeesBracketsOutOfAmount", EmitDefaultValue=false)]
+        public double? CashCustomerFeesBracketsOutOfAmount { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -124,6 +180,13 @@ namespace Flipdish.Model
             sb.Append("  Chargebacks: ").Append(Chargebacks).Append("\n");
             sb.Append("  OtherTransactions: ").Append(OtherTransactions).Append("\n");
             sb.Append("  ClosingBalance: ").Append(ClosingBalance).Append("\n");
+            sb.Append("  BalanceRepaid: ").Append(BalanceRepaid).Append("\n");
+            sb.Append("  RefundsOnCardOrdersBracketsAmount: ").Append(RefundsOnCardOrdersBracketsAmount).Append("\n");
+            sb.Append("  RefundsOnCardOrdersBracketsOutOfAmount: ").Append(RefundsOnCardOrdersBracketsOutOfAmount).Append("\n");
+            sb.Append("  RefundsOnCashOrdersBracketsAmount: ").Append(RefundsOnCashOrdersBracketsAmount).Append("\n");
+            sb.Append("  RefundsOnCashOrdersBracketsOutOfAmount: ").Append(RefundsOnCashOrdersBracketsOutOfAmount).Append("\n");
+            sb.Append("  CashCustomerFeesBracketsAmount: ").Append(CashCustomerFeesBracketsAmount).Append("\n");
+            sb.Append("  CashCustomerFeesBracketsOutOfAmount: ").Append(CashCustomerFeesBracketsOutOfAmount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -202,6 +265,41 @@ namespace Flipdish.Model
                     this.ClosingBalance == input.ClosingBalance ||
                     (this.ClosingBalance != null &&
                     this.ClosingBalance.Equals(input.ClosingBalance))
+                ) && 
+                (
+                    this.BalanceRepaid == input.BalanceRepaid ||
+                    (this.BalanceRepaid != null &&
+                    this.BalanceRepaid.Equals(input.BalanceRepaid))
+                ) && 
+                (
+                    this.RefundsOnCardOrdersBracketsAmount == input.RefundsOnCardOrdersBracketsAmount ||
+                    (this.RefundsOnCardOrdersBracketsAmount != null &&
+                    this.RefundsOnCardOrdersBracketsAmount.Equals(input.RefundsOnCardOrdersBracketsAmount))
+                ) && 
+                (
+                    this.RefundsOnCardOrdersBracketsOutOfAmount == input.RefundsOnCardOrdersBracketsOutOfAmount ||
+                    (this.RefundsOnCardOrdersBracketsOutOfAmount != null &&
+                    this.RefundsOnCardOrdersBracketsOutOfAmount.Equals(input.RefundsOnCardOrdersBracketsOutOfAmount))
+                ) && 
+                (
+                    this.RefundsOnCashOrdersBracketsAmount == input.RefundsOnCashOrdersBracketsAmount ||
+                    (this.RefundsOnCashOrdersBracketsAmount != null &&
+                    this.RefundsOnCashOrdersBracketsAmount.Equals(input.RefundsOnCashOrdersBracketsAmount))
+                ) && 
+                (
+                    this.RefundsOnCashOrdersBracketsOutOfAmount == input.RefundsOnCashOrdersBracketsOutOfAmount ||
+                    (this.RefundsOnCashOrdersBracketsOutOfAmount != null &&
+                    this.RefundsOnCashOrdersBracketsOutOfAmount.Equals(input.RefundsOnCashOrdersBracketsOutOfAmount))
+                ) && 
+                (
+                    this.CashCustomerFeesBracketsAmount == input.CashCustomerFeesBracketsAmount ||
+                    (this.CashCustomerFeesBracketsAmount != null &&
+                    this.CashCustomerFeesBracketsAmount.Equals(input.CashCustomerFeesBracketsAmount))
+                ) && 
+                (
+                    this.CashCustomerFeesBracketsOutOfAmount == input.CashCustomerFeesBracketsOutOfAmount ||
+                    (this.CashCustomerFeesBracketsOutOfAmount != null &&
+                    this.CashCustomerFeesBracketsOutOfAmount.Equals(input.CashCustomerFeesBracketsOutOfAmount))
                 );
         }
 
@@ -232,6 +330,20 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OtherTransactions.GetHashCode();
                 if (this.ClosingBalance != null)
                     hashCode = hashCode * 59 + this.ClosingBalance.GetHashCode();
+                if (this.BalanceRepaid != null)
+                    hashCode = hashCode * 59 + this.BalanceRepaid.GetHashCode();
+                if (this.RefundsOnCardOrdersBracketsAmount != null)
+                    hashCode = hashCode * 59 + this.RefundsOnCardOrdersBracketsAmount.GetHashCode();
+                if (this.RefundsOnCardOrdersBracketsOutOfAmount != null)
+                    hashCode = hashCode * 59 + this.RefundsOnCardOrdersBracketsOutOfAmount.GetHashCode();
+                if (this.RefundsOnCashOrdersBracketsAmount != null)
+                    hashCode = hashCode * 59 + this.RefundsOnCashOrdersBracketsAmount.GetHashCode();
+                if (this.RefundsOnCashOrdersBracketsOutOfAmount != null)
+                    hashCode = hashCode * 59 + this.RefundsOnCashOrdersBracketsOutOfAmount.GetHashCode();
+                if (this.CashCustomerFeesBracketsAmount != null)
+                    hashCode = hashCode * 59 + this.CashCustomerFeesBracketsAmount.GetHashCode();
+                if (this.CashCustomerFeesBracketsOutOfAmount != null)
+                    hashCode = hashCode * 59 + this.CashCustomerFeesBracketsOutOfAmount.GetHashCode();
                 return hashCode;
             }
         }
