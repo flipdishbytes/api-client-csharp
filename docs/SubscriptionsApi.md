@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 <a name="getsubscriptionsforapp"></a>
 # **GetSubscriptionsForApp**
-> RestApiArrayResultSubscriptionSummary GetSubscriptionsForApp (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null)
+> RestApiArrayResultSubscriptionSummary GetSubscriptionsForApp (string appId, bool? excludeNotOwnedSubscriptions = null, List<int?> storeId = null, bool? excludeCancelledSubscriptions = null)
 
 
 
@@ -99,10 +99,11 @@ namespace Example
             var appId = appId_example;  // string | 
             var excludeNotOwnedSubscriptions = true;  // bool? |  (optional) 
             var storeId = new List<int?>(); // List<int?> |  (optional) 
+            var excludeCancelledSubscriptions = true;  // bool? |  (optional) 
 
             try
             {
-                RestApiArrayResultSubscriptionSummary result = apiInstance.GetSubscriptionsForApp(appId, excludeNotOwnedSubscriptions, storeId);
+                RestApiArrayResultSubscriptionSummary result = apiInstance.GetSubscriptionsForApp(appId, excludeNotOwnedSubscriptions, storeId, excludeCancelledSubscriptions);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -121,6 +122,7 @@ Name | Type | Description  | Notes
  **appId** | **string**|  | 
  **excludeNotOwnedSubscriptions** | **bool?**|  | [optional] 
  **storeId** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
+ **excludeCancelledSubscriptions** | **bool?**|  | [optional] 
 
 ### Return type
 
