@@ -9,7 +9,6 @@ Method | HTTP request | Description
 [**GetPayoutReport3Overview**](PayoutReportsApi.md#getpayoutreport3overview) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/overview | 
 [**PayoutReport3ExportPayoutChargebacks**](PayoutReportsApi.md#payoutreport3exportpayoutchargebacks) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/chargebacks | 
 [**PayoutReport3ExportPayoutLedgerEntries**](PayoutReportsApi.md#payoutreport3exportpayoutledgerentries) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/ledgerentries | 
-[**PayoutReport3ExportPayoutOnlineOrders**](PayoutReportsApi.md#payoutreport3exportpayoutonlineorders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/onlineorders | 
 [**PayoutReport3ExportPayoutOrders**](PayoutReportsApi.md#payoutreport3exportpayoutorders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/orders | 
 [**PayoutReport3ExportPayoutPosSales**](PayoutReportsApi.md#payoutreport3exportpayoutpossales) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/possales | 
 [**PayoutReport3ExportPayoutRefundedRejected**](PayoutReportsApi.md#payoutreport3exportpayoutrefundedrejected) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/refundedrejected | 
@@ -336,79 +335,6 @@ Name | Type | Description  | Notes
  **bankAccountId** | **int?**|  | 
  **payoutId** | **int?**|  | 
  **stores** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
-
-### Return type
-
-[**RestApiResultFileCreationResult**](RestApiResultFileCreationResult.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="payoutreport3exportpayoutonlineorders"></a>
-# **PayoutReport3ExportPayoutOnlineOrders**
-> RestApiResultFileCreationResult PayoutReport3ExportPayoutOnlineOrders (string appId, string bankAccountId, string payoutId, DateTime? startDate = null, DateTime? endDate = null, List<int?> payoutRequestIdsBankAccountIds = null, List<string> payoutRequestIdsStates = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class PayoutReport3ExportPayoutOnlineOrdersExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new PayoutReportsApi();
-            var appId = appId_example;  // string | 
-            var bankAccountId = bankAccountId_example;  // string | 
-            var payoutId = payoutId_example;  // string | 
-            var startDate = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
-            var endDate = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
-            var payoutRequestIdsBankAccountIds = new List<int?>(); // List<int?> | List of bank account ids to search for (optional) 
-            var payoutRequestIdsStates = payoutRequestIdsStates_example;  // List<string> | List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional) 
-
-            try
-            {
-                RestApiResultFileCreationResult result = apiInstance.PayoutReport3ExportPayoutOnlineOrders(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PayoutReportsApi.PayoutReport3ExportPayoutOnlineOrders: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
- **bankAccountId** | **string**|  | 
- **payoutId** | **string**|  | 
- **startDate** | **DateTime?**|  | [optional] 
- **endDate** | **DateTime?**|  | [optional] 
- **payoutRequestIdsBankAccountIds** | [**List&lt;int?&gt;**](int?.md)| List of bank account ids to search for | [optional] 
- **payoutRequestIdsStates** | **List&lt;string&gt;**| List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for | [optional] 
 
 ### Return type
 
