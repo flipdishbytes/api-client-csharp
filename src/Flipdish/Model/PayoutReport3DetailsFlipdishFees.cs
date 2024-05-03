@@ -44,9 +44,10 @@ namespace Flipdish.Model
         /// <param name="posCardOnFlipdishOrders">posCardOnFlipdishOrders.</param>
         /// <param name="otherIntegrationFees">otherIntegrationFees.</param>
         /// <param name="otherIntegrationTips">otherIntegrationTips.</param>
+        /// <param name="refundedFeesOnRefundedSales">refundedFeesOnRefundedSales.</param>
         /// <param name="vat">vat.</param>
         /// <param name="total">total.</param>
-        public PayoutReport3DetailsFlipdishFees(double? webAndAppCash = default(double?), double? webAndAppCashRevenueIncludingTips = default(double?), double? webAndAppCard = default(double?), double? webAndAppCardRevenueIncludingTips = default(double?), double? kioskCash = default(double?), double? kioskCard = default(double?), double? qropCash = default(double?), double? qropCard = default(double?), double? posCard = default(double?), double? posCardRevenue = default(double?), double? posCardOnFlipdishOrders = default(double?), double? otherIntegrationFees = default(double?), double? otherIntegrationTips = default(double?), double? vat = default(double?), double? total = default(double?))
+        public PayoutReport3DetailsFlipdishFees(double? webAndAppCash = default(double?), double? webAndAppCashRevenueIncludingTips = default(double?), double? webAndAppCard = default(double?), double? webAndAppCardRevenueIncludingTips = default(double?), double? kioskCash = default(double?), double? kioskCard = default(double?), double? qropCash = default(double?), double? qropCard = default(double?), double? posCard = default(double?), double? posCardRevenue = default(double?), double? posCardOnFlipdishOrders = default(double?), double? otherIntegrationFees = default(double?), double? otherIntegrationTips = default(double?), double? refundedFeesOnRefundedSales = default(double?), double? vat = default(double?), double? total = default(double?))
         {
             this.WebAndAppCash = webAndAppCash;
             this.WebAndAppCashRevenueIncludingTips = webAndAppCashRevenueIncludingTips;
@@ -61,6 +62,7 @@ namespace Flipdish.Model
             this.PosCardOnFlipdishOrders = posCardOnFlipdishOrders;
             this.OtherIntegrationFees = otherIntegrationFees;
             this.OtherIntegrationTips = otherIntegrationTips;
+            this.RefundedFeesOnRefundedSales = refundedFeesOnRefundedSales;
             this.Vat = vat;
             this.Total = total;
         }
@@ -144,6 +146,12 @@ namespace Flipdish.Model
         public double? OtherIntegrationTips { get; set; }
 
         /// <summary>
+        /// Gets or Sets RefundedFeesOnRefundedSales
+        /// </summary>
+        [DataMember(Name="RefundedFeesOnRefundedSales", EmitDefaultValue=false)]
+        public double? RefundedFeesOnRefundedSales { get; set; }
+
+        /// <summary>
         /// Gets or Sets Vat
         /// </summary>
         [DataMember(Name="Vat", EmitDefaultValue=false)]
@@ -176,6 +184,7 @@ namespace Flipdish.Model
             sb.Append("  PosCardOnFlipdishOrders: ").Append(PosCardOnFlipdishOrders).Append("\n");
             sb.Append("  OtherIntegrationFees: ").Append(OtherIntegrationFees).Append("\n");
             sb.Append("  OtherIntegrationTips: ").Append(OtherIntegrationTips).Append("\n");
+            sb.Append("  RefundedFeesOnRefundedSales: ").Append(RefundedFeesOnRefundedSales).Append("\n");
             sb.Append("  Vat: ").Append(Vat).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("}\n");
@@ -278,6 +287,11 @@ namespace Flipdish.Model
                     this.OtherIntegrationTips.Equals(input.OtherIntegrationTips))
                 ) && 
                 (
+                    this.RefundedFeesOnRefundedSales == input.RefundedFeesOnRefundedSales ||
+                    (this.RefundedFeesOnRefundedSales != null &&
+                    this.RefundedFeesOnRefundedSales.Equals(input.RefundedFeesOnRefundedSales))
+                ) && 
+                (
                     this.Vat == input.Vat ||
                     (this.Vat != null &&
                     this.Vat.Equals(input.Vat))
@@ -324,6 +338,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OtherIntegrationFees.GetHashCode();
                 if (this.OtherIntegrationTips != null)
                     hashCode = hashCode * 59 + this.OtherIntegrationTips.GetHashCode();
+                if (this.RefundedFeesOnRefundedSales != null)
+                    hashCode = hashCode * 59 + this.RefundedFeesOnRefundedSales.GetHashCode();
                 if (this.Vat != null)
                     hashCode = hashCode * 59 + this.Vat.GetHashCode();
                 if (this.Total != null)

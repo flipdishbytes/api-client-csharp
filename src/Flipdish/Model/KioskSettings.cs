@@ -32,9 +32,11 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="KioskSettings" /> class.
         /// </summary>
         /// <param name="hideLogoFromFrontPage">Hide logo from front page.</param>
-        public KioskSettings(bool? hideLogoFromFrontPage = default(bool?))
+        /// <param name="twoColumnMenuLayout">2 Column Menu Layout.</param>
+        public KioskSettings(bool? hideLogoFromFrontPage = default(bool?), bool? twoColumnMenuLayout = default(bool?))
         {
             this.HideLogoFromFrontPage = hideLogoFromFrontPage;
+            this.TwoColumnMenuLayout = twoColumnMenuLayout;
         }
         
         /// <summary>
@@ -45,6 +47,13 @@ namespace Flipdish.Model
         public bool? HideLogoFromFrontPage { get; set; }
 
         /// <summary>
+        /// 2 Column Menu Layout
+        /// </summary>
+        /// <value>2 Column Menu Layout</value>
+        [DataMember(Name="TwoColumnMenuLayout", EmitDefaultValue=false)]
+        public bool? TwoColumnMenuLayout { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -53,6 +62,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class KioskSettings {\n");
             sb.Append("  HideLogoFromFrontPage: ").Append(HideLogoFromFrontPage).Append("\n");
+            sb.Append("  TwoColumnMenuLayout: ").Append(TwoColumnMenuLayout).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,6 +101,11 @@ namespace Flipdish.Model
                     this.HideLogoFromFrontPage == input.HideLogoFromFrontPage ||
                     (this.HideLogoFromFrontPage != null &&
                     this.HideLogoFromFrontPage.Equals(input.HideLogoFromFrontPage))
+                ) && 
+                (
+                    this.TwoColumnMenuLayout == input.TwoColumnMenuLayout ||
+                    (this.TwoColumnMenuLayout != null &&
+                    this.TwoColumnMenuLayout.Equals(input.TwoColumnMenuLayout))
                 );
         }
 
@@ -105,6 +120,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.HideLogoFromFrontPage != null)
                     hashCode = hashCode * 59 + this.HideLogoFromFrontPage.GetHashCode();
+                if (this.TwoColumnMenuLayout != null)
+                    hashCode = hashCode * 59 + this.TwoColumnMenuLayout.GetHashCode();
                 return hashCode;
             }
         }
