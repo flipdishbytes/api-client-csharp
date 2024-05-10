@@ -773,32 +773,30 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="PayoutReport3PayoutOrder" /> class.
         /// </summary>
         /// <param name="orderId">orderId.</param>
-        /// <param name="payoutId">payoutId.</param>
         /// <param name="orderDate">orderDate.</param>
+        /// <param name="storeId">storeId.</param>
+        /// <param name="storeName">storeName.</param>
         /// <param name="orderType">orderType.</param>
-        /// <param name="orderCurrency">orderCurrency.</param>
         /// <param name="sales">sales.</param>
         /// <param name="salesTax">salesTax.</param>
         /// <param name="deliveryCharges">deliveryCharges.</param>
         /// <param name="tips">tips.</param>
         /// <param name="voucher">voucher.</param>
-        /// <param name="storeId">storeId.</param>
-        /// <param name="storeName">storeName.</param>
+        /// <param name="orderCurrency">orderCurrency.</param>
         /// <param name="refundChargebackType">refundChargebackType.</param>
-        public PayoutReport3PayoutOrder(int? orderId = default(int?), int? payoutId = default(int?), DateTime? orderDate = default(DateTime?), OrderTypeEnum? orderType = default(OrderTypeEnum?), OrderCurrencyEnum? orderCurrency = default(OrderCurrencyEnum?), double? sales = default(double?), double? salesTax = default(double?), double? deliveryCharges = default(double?), double? tips = default(double?), double? voucher = default(double?), int? storeId = default(int?), string storeName = default(string), RefundChargebackTypeEnum? refundChargebackType = default(RefundChargebackTypeEnum?))
+        public PayoutReport3PayoutOrder(int? orderId = default(int?), DateTime? orderDate = default(DateTime?), int? storeId = default(int?), string storeName = default(string), OrderTypeEnum? orderType = default(OrderTypeEnum?), double? sales = default(double?), double? salesTax = default(double?), double? deliveryCharges = default(double?), double? tips = default(double?), double? voucher = default(double?), OrderCurrencyEnum? orderCurrency = default(OrderCurrencyEnum?), RefundChargebackTypeEnum? refundChargebackType = default(RefundChargebackTypeEnum?))
         {
             this.OrderId = orderId;
-            this.PayoutId = payoutId;
             this.OrderDate = orderDate;
+            this.StoreId = storeId;
+            this.StoreName = storeName;
             this.OrderType = orderType;
-            this.OrderCurrency = orderCurrency;
             this.Sales = sales;
             this.SalesTax = salesTax;
             this.DeliveryCharges = deliveryCharges;
             this.Tips = tips;
             this.Voucher = voucher;
-            this.StoreId = storeId;
-            this.StoreName = storeName;
+            this.OrderCurrency = orderCurrency;
             this.RefundChargebackType = refundChargebackType;
         }
         
@@ -809,17 +807,22 @@ namespace Flipdish.Model
         public int? OrderId { get; set; }
 
         /// <summary>
-        /// Gets or Sets PayoutId
-        /// </summary>
-        [DataMember(Name="PayoutId", EmitDefaultValue=false)]
-        public int? PayoutId { get; set; }
-
-        /// <summary>
         /// Gets or Sets OrderDate
         /// </summary>
         [DataMember(Name="OrderDate", EmitDefaultValue=false)]
         public DateTime? OrderDate { get; set; }
 
+        /// <summary>
+        /// Gets or Sets StoreId
+        /// </summary>
+        [DataMember(Name="StoreId", EmitDefaultValue=false)]
+        public int? StoreId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets StoreName
+        /// </summary>
+        [DataMember(Name="StoreName", EmitDefaultValue=false)]
+        public string StoreName { get; set; }
 
 
         /// <summary>
@@ -852,17 +855,6 @@ namespace Flipdish.Model
         [DataMember(Name="Voucher", EmitDefaultValue=false)]
         public double? Voucher { get; set; }
 
-        /// <summary>
-        /// Gets or Sets StoreId
-        /// </summary>
-        [DataMember(Name="StoreId", EmitDefaultValue=false)]
-        public int? StoreId { get; set; }
-
-        /// <summary>
-        /// Gets or Sets StoreName
-        /// </summary>
-        [DataMember(Name="StoreName", EmitDefaultValue=false)]
-        public string StoreName { get; set; }
 
 
         /// <summary>
@@ -874,17 +866,16 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class PayoutReport3PayoutOrder {\n");
             sb.Append("  OrderId: ").Append(OrderId).Append("\n");
-            sb.Append("  PayoutId: ").Append(PayoutId).Append("\n");
             sb.Append("  OrderDate: ").Append(OrderDate).Append("\n");
+            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
+            sb.Append("  StoreName: ").Append(StoreName).Append("\n");
             sb.Append("  OrderType: ").Append(OrderType).Append("\n");
-            sb.Append("  OrderCurrency: ").Append(OrderCurrency).Append("\n");
             sb.Append("  Sales: ").Append(Sales).Append("\n");
             sb.Append("  SalesTax: ").Append(SalesTax).Append("\n");
             sb.Append("  DeliveryCharges: ").Append(DeliveryCharges).Append("\n");
             sb.Append("  Tips: ").Append(Tips).Append("\n");
             sb.Append("  Voucher: ").Append(Voucher).Append("\n");
-            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
-            sb.Append("  StoreName: ").Append(StoreName).Append("\n");
+            sb.Append("  OrderCurrency: ").Append(OrderCurrency).Append("\n");
             sb.Append("  RefundChargebackType: ").Append(RefundChargebackType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -926,24 +917,24 @@ namespace Flipdish.Model
                     this.OrderId.Equals(input.OrderId))
                 ) && 
                 (
-                    this.PayoutId == input.PayoutId ||
-                    (this.PayoutId != null &&
-                    this.PayoutId.Equals(input.PayoutId))
-                ) && 
-                (
                     this.OrderDate == input.OrderDate ||
                     (this.OrderDate != null &&
                     this.OrderDate.Equals(input.OrderDate))
                 ) && 
                 (
+                    this.StoreId == input.StoreId ||
+                    (this.StoreId != null &&
+                    this.StoreId.Equals(input.StoreId))
+                ) && 
+                (
+                    this.StoreName == input.StoreName ||
+                    (this.StoreName != null &&
+                    this.StoreName.Equals(input.StoreName))
+                ) && 
+                (
                     this.OrderType == input.OrderType ||
                     (this.OrderType != null &&
                     this.OrderType.Equals(input.OrderType))
-                ) && 
-                (
-                    this.OrderCurrency == input.OrderCurrency ||
-                    (this.OrderCurrency != null &&
-                    this.OrderCurrency.Equals(input.OrderCurrency))
                 ) && 
                 (
                     this.Sales == input.Sales ||
@@ -971,14 +962,9 @@ namespace Flipdish.Model
                     this.Voucher.Equals(input.Voucher))
                 ) && 
                 (
-                    this.StoreId == input.StoreId ||
-                    (this.StoreId != null &&
-                    this.StoreId.Equals(input.StoreId))
-                ) && 
-                (
-                    this.StoreName == input.StoreName ||
-                    (this.StoreName != null &&
-                    this.StoreName.Equals(input.StoreName))
+                    this.OrderCurrency == input.OrderCurrency ||
+                    (this.OrderCurrency != null &&
+                    this.OrderCurrency.Equals(input.OrderCurrency))
                 ) && 
                 (
                     this.RefundChargebackType == input.RefundChargebackType ||
@@ -998,14 +984,14 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.OrderId != null)
                     hashCode = hashCode * 59 + this.OrderId.GetHashCode();
-                if (this.PayoutId != null)
-                    hashCode = hashCode * 59 + this.PayoutId.GetHashCode();
                 if (this.OrderDate != null)
                     hashCode = hashCode * 59 + this.OrderDate.GetHashCode();
+                if (this.StoreId != null)
+                    hashCode = hashCode * 59 + this.StoreId.GetHashCode();
+                if (this.StoreName != null)
+                    hashCode = hashCode * 59 + this.StoreName.GetHashCode();
                 if (this.OrderType != null)
                     hashCode = hashCode * 59 + this.OrderType.GetHashCode();
-                if (this.OrderCurrency != null)
-                    hashCode = hashCode * 59 + this.OrderCurrency.GetHashCode();
                 if (this.Sales != null)
                     hashCode = hashCode * 59 + this.Sales.GetHashCode();
                 if (this.SalesTax != null)
@@ -1016,10 +1002,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Tips.GetHashCode();
                 if (this.Voucher != null)
                     hashCode = hashCode * 59 + this.Voucher.GetHashCode();
-                if (this.StoreId != null)
-                    hashCode = hashCode * 59 + this.StoreId.GetHashCode();
-                if (this.StoreName != null)
-                    hashCode = hashCode * 59 + this.StoreName.GetHashCode();
+                if (this.OrderCurrency != null)
+                    hashCode = hashCode * 59 + this.OrderCurrency.GetHashCode();
                 if (this.RefundChargebackType != null)
                     hashCode = hashCode * 59 + this.RefundChargebackType.GetHashCode();
                 return hashCode;
