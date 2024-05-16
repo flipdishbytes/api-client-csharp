@@ -52,7 +52,13 @@ namespace Flipdish.Model
             /// Enum PaymentSubscription for value: PaymentSubscription
             /// </summary>
             [EnumMember(Value = "PaymentSubscription")]
-            PaymentSubscription = 3
+            PaymentSubscription = 3,
+            
+            /// <summary>
+            /// Enum StoreName for value: StoreName
+            /// </summary>
+            [EnumMember(Value = "StoreName")]
+            StoreName = 4
         }
 
         /// <summary>
