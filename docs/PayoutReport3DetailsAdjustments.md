@@ -20,6 +20,8 @@ Name | Type | Description | Notes
 **CashCustomerFeesBracketsAmount** | **double?** |  | [optional] 
 **CashCustomerFeesBracketsOutOfAmount** | **double?** |  | [optional] 
 **BalanceChange** | **double?** |  | [optional] 
+**PreviousPayoutId** | **int?** |  | [optional] 
+**NextPayoutId** | **int?** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

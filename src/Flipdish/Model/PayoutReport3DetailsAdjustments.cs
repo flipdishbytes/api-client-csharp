@@ -48,7 +48,9 @@ namespace Flipdish.Model
         /// <param name="cashCustomerFeesBracketsAmount">cashCustomerFeesBracketsAmount.</param>
         /// <param name="cashCustomerFeesBracketsOutOfAmount">cashCustomerFeesBracketsOutOfAmount.</param>
         /// <param name="balanceChange">balanceChange.</param>
-        public PayoutReport3DetailsAdjustments(DateTime? openingBalanceDate = default(DateTime?), DateTime? closingBalanceDate = default(DateTime?), double? openingBalance = default(double?), double? refundsOnCardOrders = default(double?), double? refundsOnCashOrders = default(double?), double? cashCustomerFees = default(double?), double? chargebacks = default(double?), double? otherTransactions = default(double?), double? closingBalance = default(double?), double? balanceRepaid = default(double?), double? refundsOnCardOrdersBracketsAmount = default(double?), double? refundsOnCardOrdersBracketsOutOfAmount = default(double?), double? refundsOnCashOrdersBracketsAmount = default(double?), double? refundsOnCashOrdersBracketsOutOfAmount = default(double?), double? cashCustomerFeesBracketsAmount = default(double?), double? cashCustomerFeesBracketsOutOfAmount = default(double?), double? balanceChange = default(double?))
+        /// <param name="previousPayoutId">previousPayoutId.</param>
+        /// <param name="nextPayoutId">nextPayoutId.</param>
+        public PayoutReport3DetailsAdjustments(DateTime? openingBalanceDate = default(DateTime?), DateTime? closingBalanceDate = default(DateTime?), double? openingBalance = default(double?), double? refundsOnCardOrders = default(double?), double? refundsOnCashOrders = default(double?), double? cashCustomerFees = default(double?), double? chargebacks = default(double?), double? otherTransactions = default(double?), double? closingBalance = default(double?), double? balanceRepaid = default(double?), double? refundsOnCardOrdersBracketsAmount = default(double?), double? refundsOnCardOrdersBracketsOutOfAmount = default(double?), double? refundsOnCashOrdersBracketsAmount = default(double?), double? refundsOnCashOrdersBracketsOutOfAmount = default(double?), double? cashCustomerFeesBracketsAmount = default(double?), double? cashCustomerFeesBracketsOutOfAmount = default(double?), double? balanceChange = default(double?), int? previousPayoutId = default(int?), int? nextPayoutId = default(int?))
         {
             this.OpeningBalanceDate = openingBalanceDate;
             this.ClosingBalanceDate = closingBalanceDate;
@@ -67,6 +69,8 @@ namespace Flipdish.Model
             this.CashCustomerFeesBracketsAmount = cashCustomerFeesBracketsAmount;
             this.CashCustomerFeesBracketsOutOfAmount = cashCustomerFeesBracketsOutOfAmount;
             this.BalanceChange = balanceChange;
+            this.PreviousPayoutId = previousPayoutId;
+            this.NextPayoutId = nextPayoutId;
         }
         
         /// <summary>
@@ -172,6 +176,18 @@ namespace Flipdish.Model
         public double? BalanceChange { get; set; }
 
         /// <summary>
+        /// Gets or Sets PreviousPayoutId
+        /// </summary>
+        [DataMember(Name="PreviousPayoutId", EmitDefaultValue=false)]
+        public int? PreviousPayoutId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets NextPayoutId
+        /// </summary>
+        [DataMember(Name="NextPayoutId", EmitDefaultValue=false)]
+        public int? NextPayoutId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -196,6 +212,8 @@ namespace Flipdish.Model
             sb.Append("  CashCustomerFeesBracketsAmount: ").Append(CashCustomerFeesBracketsAmount).Append("\n");
             sb.Append("  CashCustomerFeesBracketsOutOfAmount: ").Append(CashCustomerFeesBracketsOutOfAmount).Append("\n");
             sb.Append("  BalanceChange: ").Append(BalanceChange).Append("\n");
+            sb.Append("  PreviousPayoutId: ").Append(PreviousPayoutId).Append("\n");
+            sb.Append("  NextPayoutId: ").Append(NextPayoutId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -314,6 +332,16 @@ namespace Flipdish.Model
                     this.BalanceChange == input.BalanceChange ||
                     (this.BalanceChange != null &&
                     this.BalanceChange.Equals(input.BalanceChange))
+                ) && 
+                (
+                    this.PreviousPayoutId == input.PreviousPayoutId ||
+                    (this.PreviousPayoutId != null &&
+                    this.PreviousPayoutId.Equals(input.PreviousPayoutId))
+                ) && 
+                (
+                    this.NextPayoutId == input.NextPayoutId ||
+                    (this.NextPayoutId != null &&
+                    this.NextPayoutId.Equals(input.NextPayoutId))
                 );
         }
 
@@ -360,6 +388,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CashCustomerFeesBracketsOutOfAmount.GetHashCode();
                 if (this.BalanceChange != null)
                     hashCode = hashCode * 59 + this.BalanceChange.GetHashCode();
+                if (this.PreviousPayoutId != null)
+                    hashCode = hashCode * 59 + this.PreviousPayoutId.GetHashCode();
+                if (this.NextPayoutId != null)
+                    hashCode = hashCode * 59 + this.NextPayoutId.GetHashCode();
                 return hashCode;
             }
         }

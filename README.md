@@ -129,6 +129,7 @@ Class | Method | HTTP request | Description
 *AppStoreSubscriptionsApi* | [**GetAppStoreSubscriptionChangeJobStatus**](docs/AppStoreSubscriptionsApi.md#getappstoresubscriptionchangejobstatus) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/jobs/{jobId} | 
 *AppStoreSubscriptionsApi* | [**GetAppStoreSubscriptions**](docs/AppStoreSubscriptionsApi.md#getappstoresubscriptions) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
 *AppStoreSubscriptionsApi* | [**UpdateAppStoreSubscription**](docs/AppStoreSubscriptionsApi.md#updateappstoresubscription) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/{subscriptionId} | 
+*AppsApi* | [**CreateApp**](docs/AppsApi.md#createapp) | **POST** /api/v1.0/apps | 
 *AppsApi* | [**GetApp**](docs/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | 
 *AppsApi* | [**GetAppHostnameStatus**](docs/AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
 *AppsApi* | [**GetApps**](docs/AppsApi.md#getapps) | **GET** /api/v1.0/apps | 
@@ -662,6 +663,7 @@ Class | Method | HTTP request | Description
  - [Model.BusinessHoursPeriod](docs/BusinessHoursPeriod.md)
  - [Model.BusinessHoursPeriodBase](docs/BusinessHoursPeriodBase.md)
  - [Model.CampaignStatistics](docs/CampaignStatistics.md)
+ - [Model.CancellationToken](docs/CancellationToken.md)
  - [Model.CardReader](docs/CardReader.md)
  - [Model.CardReaderRegistrationRequest](docs/CardReaderRegistrationRequest.md)
  - [Model.Cart](docs/Cart.md)
@@ -693,6 +695,7 @@ Class | Method | HTTP request | Description
  - [Model.CountryFormResponse](docs/CountryFormResponse.md)
  - [Model.CountryWithAccountFieldsDefinitions](docs/CountryWithAccountFieldsDefinitions.md)
  - [Model.CreateAccountModel](docs/CreateAccountModel.md)
+ - [Model.CreateAppParameters](docs/CreateAppParameters.md)
  - [Model.CreateAppStoreApp](docs/CreateAppStoreApp.md)
  - [Model.CreateBasicAccountModel](docs/CreateBasicAccountModel.md)
  - [Model.CreateCatalogGroupReference](docs/CreateCatalogGroupReference.md)
@@ -1260,6 +1263,7 @@ Class | Method | HTTP request | Description
  - [Model.RetentionCampaignUpdatedEvent](docs/RetentionCampaignUpdatedEvent.md)
  - [Model.RevenueAdjustmentsDetails](docs/RevenueAdjustmentsDetails.md)
  - [Model.RevenueDetail](docs/RevenueDetail.md)
+ - [Model.SafeWaitHandle](docs/SafeWaitHandle.md)
  - [Model.SearchCriteria](docs/SearchCriteria.md)
  - [Model.ServiceCharge](docs/ServiceCharge.md)
  - [Model.SetOrderBatchingConfiguration](docs/SetOrderBatchingConfiguration.md)
@@ -1394,6 +1398,7 @@ Class | Method | HTTP request | Description
  - [Model.VoucherSummary](docs/VoucherSummary.md)
  - [Model.VoucherUpdatedEvent](docs/VoucherUpdatedEvent.md)
  - [Model.VoucherWithStats](docs/VoucherWithStats.md)
+ - [Model.WaitHandle](docs/WaitHandle.md)
  - [Model.WebhookEventSample](docs/WebhookEventSample.md)
  - [Model.WebhookLog](docs/WebhookLog.md)
  - [Model.WebhookSubscription](docs/WebhookSubscription.md)
