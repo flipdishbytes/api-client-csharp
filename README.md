@@ -441,6 +441,7 @@ Class | Method | HTTP request | Description
 *OAuthClientsApi* | [**RemoveRedirectUri**](docs/OAuthClientsApi.md#removeredirecturi) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis/{uriId} | 
 *OAuthClientsApi* | [**UpdateOAuthApp**](docs/OAuthClientsApi.md#updateoauthapp) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId} | 
 *OnboardingApi* | [**OnboardingGetOnboardingConfig**](docs/OnboardingApi.md#onboardinggetonboardingconfig) | **GET** /api/v1.0/clients/{appId}/onboarding/config | 
+*OnboardingApi* | [**OnboardingGetOnboardingConfigs**](docs/OnboardingApi.md#onboardinggetonboardingconfigs) | **GET** /api/v1.0/clients/{appId}/onboarding/configs | 
 *OnboardingApi* | [**OnboardingGetOnboardingItems**](docs/OnboardingApi.md#onboardinggetonboardingitems) | **GET** /api/v1.0/clients/{appId}/onboarding/stores/{storeId} | 
 *OnboardingApi* | [**OnboardingUpdateOnboardingConfig**](docs/OnboardingApi.md#onboardingupdateonboardingconfig) | **POST** /api/v1.0/clients/{appId}/onboarding/config | 
 *OnboardingApi* | [**OnboardingUpdateOnboardingItem**](docs/OnboardingApi.md#onboardingupdateonboardingitem) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId} | 

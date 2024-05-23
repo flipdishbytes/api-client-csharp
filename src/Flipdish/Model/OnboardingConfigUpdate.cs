@@ -29,14 +29,43 @@ namespace Flipdish.Model
     public partial class OnboardingConfigUpdate :  IEquatable<OnboardingConfigUpdate>
     {
         /// <summary>
+        /// Onboarding config type
+        /// </summary>
+        /// <value>Onboarding config type</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ConfigTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Tutorial for value: Tutorial
+            /// </summary>
+            [EnumMember(Value = "Tutorial")]
+            Tutorial = 1,
+            
+            /// <summary>
+            /// Enum OnboardingWizard for value: OnboardingWizard
+            /// </summary>
+            [EnumMember(Value = "OnboardingWizard")]
+            OnboardingWizard = 2
+        }
+
+        /// <summary>
+        /// Onboarding config type
+        /// </summary>
+        /// <value>Onboarding config type</value>
+        [DataMember(Name="ConfigType", EmitDefaultValue=false)]
+        public ConfigTypeEnum? ConfigType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="OnboardingConfigUpdate" /> class.
         /// </summary>
         /// <param name="isEnabled">Gets or sets whether onboarding is enabled.</param>
         /// <param name="isWelcomeScreenEnabled">Gets or sets whether welcome screen is enabled.</param>
-        public OnboardingConfigUpdate(bool? isEnabled = default(bool?), bool? isWelcomeScreenEnabled = default(bool?))
+        /// <param name="configType">Onboarding config type.</param>
+        public OnboardingConfigUpdate(bool? isEnabled = default(bool?), bool? isWelcomeScreenEnabled = default(bool?), ConfigTypeEnum? configType = default(ConfigTypeEnum?))
         {
             this.IsEnabled = isEnabled;
             this.IsWelcomeScreenEnabled = isWelcomeScreenEnabled;
+            this.ConfigType = configType;
         }
         
         /// <summary>
@@ -53,6 +82,7 @@ namespace Flipdish.Model
         [DataMember(Name="IsWelcomeScreenEnabled", EmitDefaultValue=false)]
         public bool? IsWelcomeScreenEnabled { get; set; }
 
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -63,6 +93,7 @@ namespace Flipdish.Model
             sb.Append("class OnboardingConfigUpdate {\n");
             sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
             sb.Append("  IsWelcomeScreenEnabled: ").Append(IsWelcomeScreenEnabled).Append("\n");
+            sb.Append("  ConfigType: ").Append(ConfigType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -106,6 +137,11 @@ namespace Flipdish.Model
                     this.IsWelcomeScreenEnabled == input.IsWelcomeScreenEnabled ||
                     (this.IsWelcomeScreenEnabled != null &&
                     this.IsWelcomeScreenEnabled.Equals(input.IsWelcomeScreenEnabled))
+                ) && 
+                (
+                    this.ConfigType == input.ConfigType ||
+                    (this.ConfigType != null &&
+                    this.ConfigType.Equals(input.ConfigType))
                 );
         }
 
@@ -122,6 +158,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.IsEnabled.GetHashCode();
                 if (this.IsWelcomeScreenEnabled != null)
                     hashCode = hashCode * 59 + this.IsWelcomeScreenEnabled.GetHashCode();
+                if (this.ConfigType != null)
+                    hashCode = hashCode * 59 + this.ConfigType.GetHashCode();
                 return hashCode;
             }
         }
