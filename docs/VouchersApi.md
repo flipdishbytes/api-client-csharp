@@ -7,7 +7,9 @@ Method | HTTP request | Description
 [**CreateVoucher**](VouchersApi.md#createvoucher) | **POST** /api/v1.0/vouchers/{appId} | 
 [**GetVoucherById**](VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | 
 [**GetVoucherStatsById**](VouchersApi.md#getvoucherstatsbyid) | **GET** /api/v1.0/vouchers/stats/{voucherId} | 
+[**GetVoucherValidityPeriods**](VouchersApi.md#getvouchervalidityperiods) | **GET** /api/v1.0/{appId}/vouchers/{voucherId}/validity-periods | 
 [**GetVouchers**](VouchersApi.md#getvouchers) | **GET** /api/v1.0/{appId}/vouchers/summaries | 
+[**SetVoucherValidityPeriodsSimplified**](VouchersApi.md#setvouchervalidityperiodssimplified) | **POST** /api/v1.0/{appId}/vouchers/{voucherId}/validity-periods-simplified | 
 [**UpdateVoucher**](VouchersApi.md#updatevoucher) | **POST** /api/v1.0/vouchers/{voucherId} | 
 [**UpdateVoucherUsage**](VouchersApi.md#updatevoucherusage) | **POST** /api/v1.0/{appId}/vouchers/{voucherId}/usage | 
 
@@ -201,6 +203,68 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getvouchervalidityperiods"></a>
+# **GetVoucherValidityPeriods**
+> void GetVoucherValidityPeriods (string appId, int? voucherId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetVoucherValidityPeriodsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new VouchersApi();
+            var appId = appId_example;  // string | 
+            var voucherId = 56;  // int? | 
+
+            try
+            {
+                apiInstance.GetVoucherValidityPeriods(appId, voucherId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling VouchersApi.GetVoucherValidityPeriods: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **voucherId** | **int?**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getvouchers"></a>
 # **GetVouchers**
 > RestApiPaginationResultVoucherSummary GetVouchers (string appId, int? pageIndex = null, int? pageSize = null, List<string> searchCodes = null, List<string> statusSearch = null, List<string> typeSearch = null, List<string> subTypeSearch = null, List<int?> storeIds = null, List<string> channelRestrictions = null)
@@ -274,6 +338,70 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="setvouchervalidityperiodssimplified"></a>
+# **SetVoucherValidityPeriodsSimplified**
+> void SetVoucherValidityPeriodsSimplified (string appId, int? voucherId, SetVoucherValidityPeriodsSimplifiedRequest request)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class SetVoucherValidityPeriodsSimplifiedExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new VouchersApi();
+            var appId = appId_example;  // string | 
+            var voucherId = 56;  // int? | 
+            var request = new SetVoucherValidityPeriodsSimplifiedRequest(); // SetVoucherValidityPeriodsSimplifiedRequest | 
+
+            try
+            {
+                apiInstance.SetVoucherValidityPeriodsSimplified(appId, voucherId, request);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling VouchersApi.SetVoucherValidityPeriodsSimplified: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **voucherId** | **int?**|  | 
+ **request** | [**SetVoucherValidityPeriodsSimplifiedRequest**](SetVoucherValidityPeriodsSimplifiedRequest.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

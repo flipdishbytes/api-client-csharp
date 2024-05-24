@@ -122,6 +122,31 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
+        /// <param name="configId"></param>
+        /// <param name="configUpdate"></param>
+        /// <returns>Object</returns>
+        Object OnboardingUpdateOnboardingConfigById (string appId, int? configId, OnboardingConfigUpdate configUpdate);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
+        /// <param name="configUpdate"></param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> OnboardingUpdateOnboardingConfigByIdWithHttpInfo (string appId, int? configId, OnboardingConfigUpdate configUpdate);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <param name="storeId"></param>
         /// <param name="onboardingItemId"></param>
         /// <param name="itemUpdate"></param>
@@ -233,6 +258,31 @@ namespace Flipdish.Api
         /// <param name="configUpdate"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingUpdateOnboardingConfigAsyncWithHttpInfo (string appId, OnboardingConfigUpdate configUpdate);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
+        /// <param name="configUpdate"></param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> OnboardingUpdateOnboardingConfigByIdAsync (string appId, int? configId, OnboardingConfigUpdate configUpdate);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
+        /// <param name="configUpdate"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingUpdateOnboardingConfigByIdAsyncWithHttpInfo (string appId, int? configId, OnboardingConfigUpdate configUpdate);
         /// <summary>
         /// 
         /// </summary>
@@ -1010,6 +1060,205 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("OnboardingUpdateOnboardingConfig", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
+        /// <param name="configUpdate"></param>
+        /// <returns>Object</returns>
+        public Object OnboardingUpdateOnboardingConfigById (string appId, int? configId, OnboardingConfigUpdate configUpdate)
+        {
+             ApiResponse<Object> localVarResponse = OnboardingUpdateOnboardingConfigByIdWithHttpInfo(appId, configId, configUpdate);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
+        /// <param name="configUpdate"></param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > OnboardingUpdateOnboardingConfigByIdWithHttpInfo (string appId, int? configId, OnboardingConfigUpdate configUpdate)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingUpdateOnboardingConfigById");
+            // verify the required parameter 'configId' is set
+            if (configId == null)
+                throw new ApiException(400, "Missing required parameter 'configId' when calling OnboardingApi->OnboardingUpdateOnboardingConfigById");
+            // verify the required parameter 'configUpdate' is set
+            if (configUpdate == null)
+                throw new ApiException(400, "Missing required parameter 'configUpdate' when calling OnboardingApi->OnboardingUpdateOnboardingConfigById");
+
+            var localVarPath = "./api/v1.0/clients/{appId}/onboarding/config/{configId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (configId != null) localVarPathParams.Add("configId", this.Configuration.ApiClient.ParameterToString(configId)); // path parameter
+            if (configUpdate != null && configUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(configUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = configUpdate; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("OnboardingUpdateOnboardingConfigById", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
+        /// <param name="configUpdate"></param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> OnboardingUpdateOnboardingConfigByIdAsync (string appId, int? configId, OnboardingConfigUpdate configUpdate)
+        {
+             ApiResponse<Object> localVarResponse = await OnboardingUpdateOnboardingConfigByIdAsyncWithHttpInfo(appId, configId, configUpdate);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="configId"></param>
+        /// <param name="configUpdate"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingUpdateOnboardingConfigByIdAsyncWithHttpInfo (string appId, int? configId, OnboardingConfigUpdate configUpdate)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingUpdateOnboardingConfigById");
+            // verify the required parameter 'configId' is set
+            if (configId == null)
+                throw new ApiException(400, "Missing required parameter 'configId' when calling OnboardingApi->OnboardingUpdateOnboardingConfigById");
+            // verify the required parameter 'configUpdate' is set
+            if (configUpdate == null)
+                throw new ApiException(400, "Missing required parameter 'configUpdate' when calling OnboardingApi->OnboardingUpdateOnboardingConfigById");
+
+            var localVarPath = "./api/v1.0/clients/{appId}/onboarding/config/{configId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (configId != null) localVarPathParams.Add("configId", this.Configuration.ApiClient.ParameterToString(configId)); // path parameter
+            if (configUpdate != null && configUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(configUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = configUpdate; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("OnboardingUpdateOnboardingConfigById", localVarResponse);
                 if (exception != null) throw exception;
             }
 
