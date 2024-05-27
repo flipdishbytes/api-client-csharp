@@ -99,6 +99,31 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="milestoneId"> (optional)</param>
+        /// <returns>Object</returns>
+        Object OnboardingGetOnboardingItemsV2 (string appId, int? storeId = null, int? milestoneId = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="milestoneId"> (optional)</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> OnboardingGetOnboardingItemsV2WithHttpInfo (string appId, int? storeId = null, int? milestoneId = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <param name="configUpdate"></param>
         /// <returns>Object</returns>
         Object OnboardingUpdateOnboardingConfig (string appId, OnboardingConfigUpdate configUpdate);
@@ -166,6 +191,33 @@ namespace Flipdish.Api
         /// <param name="itemUpdate"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> OnboardingUpdateOnboardingItemWithHttpInfo (string appId, int? storeId, int? onboardingItemId, OnboardingItemUpdate itemUpdate);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="onboardingItemId"></param>
+        /// <param name="itemUpdate"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>Object</returns>
+        Object OnboardingUpdateOnboardingItemV2 (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="onboardingItemId"></param>
+        /// <param name="itemUpdate"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> OnboardingUpdateOnboardingItemV2WithHttpInfo (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -243,6 +295,31 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="milestoneId"> (optional)</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> OnboardingGetOnboardingItemsV2Async (string appId, int? storeId = null, int? milestoneId = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="milestoneId"> (optional)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingGetOnboardingItemsV2AsyncWithHttpInfo (string appId, int? storeId = null, int? milestoneId = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <param name="configUpdate"></param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> OnboardingUpdateOnboardingConfigAsync (string appId, OnboardingConfigUpdate configUpdate);
@@ -310,6 +387,33 @@ namespace Flipdish.Api
         /// <param name="itemUpdate"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingUpdateOnboardingItemAsyncWithHttpInfo (string appId, int? storeId, int? onboardingItemId, OnboardingItemUpdate itemUpdate);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="onboardingItemId"></param>
+        /// <param name="itemUpdate"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> OnboardingUpdateOnboardingItemV2Async (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="onboardingItemId"></param>
+        /// <param name="itemUpdate"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingUpdateOnboardingItemV2AsyncWithHttpInfo (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null);
         #endregion Asynchronous Operations
     }
 
@@ -873,6 +977,169 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("OnboardingGetOnboardingItems", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="milestoneId"> (optional)</param>
+        /// <returns>Object</returns>
+        public Object OnboardingGetOnboardingItemsV2 (string appId, int? storeId = null, int? milestoneId = null)
+        {
+             ApiResponse<Object> localVarResponse = OnboardingGetOnboardingItemsV2WithHttpInfo(appId, storeId, milestoneId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="milestoneId"> (optional)</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > OnboardingGetOnboardingItemsV2WithHttpInfo (string appId, int? storeId = null, int? milestoneId = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingGetOnboardingItemsV2");
+
+            var localVarPath = "./api/v1.0/clients/{appId}/onboarding/stores";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
+            if (milestoneId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "milestoneId", milestoneId)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("OnboardingGetOnboardingItemsV2", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="milestoneId"> (optional)</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> OnboardingGetOnboardingItemsV2Async (string appId, int? storeId = null, int? milestoneId = null)
+        {
+             ApiResponse<Object> localVarResponse = await OnboardingGetOnboardingItemsV2AsyncWithHttpInfo(appId, storeId, milestoneId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <param name="milestoneId"> (optional)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingGetOnboardingItemsV2AsyncWithHttpInfo (string appId, int? storeId = null, int? milestoneId = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingGetOnboardingItemsV2");
+
+            var localVarPath = "./api/v1.0/clients/{appId}/onboarding/stores";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
+            if (milestoneId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "milestoneId", milestoneId)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("OnboardingGetOnboardingItemsV2", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1470,6 +1737,211 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("OnboardingUpdateOnboardingItem", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="onboardingItemId"></param>
+        /// <param name="itemUpdate"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>Object</returns>
+        public Object OnboardingUpdateOnboardingItemV2 (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null)
+        {
+             ApiResponse<Object> localVarResponse = OnboardingUpdateOnboardingItemV2WithHttpInfo(appId, onboardingItemId, itemUpdate, storeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="onboardingItemId"></param>
+        /// <param name="itemUpdate"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > OnboardingUpdateOnboardingItemV2WithHttpInfo (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingUpdateOnboardingItemV2");
+            // verify the required parameter 'onboardingItemId' is set
+            if (onboardingItemId == null)
+                throw new ApiException(400, "Missing required parameter 'onboardingItemId' when calling OnboardingApi->OnboardingUpdateOnboardingItemV2");
+            // verify the required parameter 'itemUpdate' is set
+            if (itemUpdate == null)
+                throw new ApiException(400, "Missing required parameter 'itemUpdate' when calling OnboardingApi->OnboardingUpdateOnboardingItemV2");
+
+            var localVarPath = "./api/v1.0/clients/{appId}/onboarding/stores/items/{onboardingItemId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (onboardingItemId != null) localVarPathParams.Add("onboardingItemId", this.Configuration.ApiClient.ParameterToString(onboardingItemId)); // path parameter
+            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
+            if (itemUpdate != null && itemUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(itemUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = itemUpdate; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("OnboardingUpdateOnboardingItemV2", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="onboardingItemId"></param>
+        /// <param name="itemUpdate"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> OnboardingUpdateOnboardingItemV2Async (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null)
+        {
+             ApiResponse<Object> localVarResponse = await OnboardingUpdateOnboardingItemV2AsyncWithHttpInfo(appId, onboardingItemId, itemUpdate, storeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="onboardingItemId"></param>
+        /// <param name="itemUpdate"></param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingUpdateOnboardingItemV2AsyncWithHttpInfo (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingUpdateOnboardingItemV2");
+            // verify the required parameter 'onboardingItemId' is set
+            if (onboardingItemId == null)
+                throw new ApiException(400, "Missing required parameter 'onboardingItemId' when calling OnboardingApi->OnboardingUpdateOnboardingItemV2");
+            // verify the required parameter 'itemUpdate' is set
+            if (itemUpdate == null)
+                throw new ApiException(400, "Missing required parameter 'itemUpdate' when calling OnboardingApi->OnboardingUpdateOnboardingItemV2");
+
+            var localVarPath = "./api/v1.0/clients/{appId}/onboarding/stores/items/{onboardingItemId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (onboardingItemId != null) localVarPathParams.Add("onboardingItemId", this.Configuration.ApiClient.ParameterToString(onboardingItemId)); // path parameter
+            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
+            if (itemUpdate != null && itemUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(itemUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = itemUpdate; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("OnboardingUpdateOnboardingItemV2", localVarResponse);
                 if (exception != null) throw exception;
             }
 
