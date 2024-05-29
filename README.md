@@ -1398,6 +1398,7 @@ Class | Method | HTTP request | Description
  - [Model.UserUpdatedEvent](docs/UserUpdatedEvent.md)
  - [Model.ValidValue](docs/ValidValue.md)
  - [Model.ValidationErrorResult](docs/ValidationErrorResult.md)
+ - [Model.ValidityPeriod](docs/ValidityPeriod.md)
  - [Model.Voucher](docs/Voucher.md)
  - [Model.VoucherCreatedEvent](docs/VoucherCreatedEvent.md)
  - [Model.VoucherDataPoint](docs/VoucherDataPoint.md)

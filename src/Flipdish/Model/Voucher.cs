@@ -949,10 +949,11 @@ namespace Flipdish.Model
         /// <param name="startDate">Voucher Starts On (Time in UTC).</param>
         /// <param name="expiryDate">Voucher Expires On (Time in UTC).</param>
         /// <param name="channelRestrictions">Limit the channels this voucher can be used on.</param>
+        /// <param name="validityPeriods">Periods in which the voucher is valid.  An empty list means the voucher is valid at all times.  When updating the voucher, if this is set to null, the validity periods won&#39;t be updated..</param>
         /// <param name="voucherSubType">Voucher Subtype.</param>
         /// <param name="customerId">Customer UserID.</param>
         /// <param name="maxRedemptions">Maximum number of times the voucher can be redeemed (used).</param>
-        public Voucher(int? voucherId = default(int?), StatusEnum? status = default(StatusEnum?), VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), List<string> storeNames = default(List<string>), PromotionDetails promotionDetails = default(PromotionDetails), CreditNoteDetails creditNoteDetails = default(CreditNoteDetails), LumpDiscountDetails lumpDiscountDetails = default(LumpDiscountDetails), PercentDiscountDetails percentDiscountDetails = default(PercentDiscountDetails), string code = default(string), string description = default(string), List<int?> stores = default(List<int?>), double? validOnOrdersOver = default(double?), bool? takesPriority = default(bool?), bool? isEnabled = default(bool?), bool? isAutomaticallyApplied = default(bool?), bool? includeDeliveryFee = default(bool?), bool? isValidForDeliveryOrders = default(bool?), bool? isValidForPickupOrders = default(bool?), bool? isValidForOrdersPayedOnline = default(bool?), bool? isValidForOrdersPayedByCash = default(bool?), bool? isValidForFirstOrderOnly = default(bool?), bool? isValidOncePerCustomer = default(bool?), bool? isValidOnlyOnce = default(bool?), DateTime? startDate = default(DateTime?), DateTime? expiryDate = default(DateTime?), List<ChannelRestrictionsEnum> channelRestrictions = default(List<ChannelRestrictionsEnum>), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), int? customerId = default(int?), int? maxRedemptions = default(int?))
+        public Voucher(int? voucherId = default(int?), StatusEnum? status = default(StatusEnum?), VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), List<string> storeNames = default(List<string>), PromotionDetails promotionDetails = default(PromotionDetails), CreditNoteDetails creditNoteDetails = default(CreditNoteDetails), LumpDiscountDetails lumpDiscountDetails = default(LumpDiscountDetails), PercentDiscountDetails percentDiscountDetails = default(PercentDiscountDetails), string code = default(string), string description = default(string), List<int?> stores = default(List<int?>), double? validOnOrdersOver = default(double?), bool? takesPriority = default(bool?), bool? isEnabled = default(bool?), bool? isAutomaticallyApplied = default(bool?), bool? includeDeliveryFee = default(bool?), bool? isValidForDeliveryOrders = default(bool?), bool? isValidForPickupOrders = default(bool?), bool? isValidForOrdersPayedOnline = default(bool?), bool? isValidForOrdersPayedByCash = default(bool?), bool? isValidForFirstOrderOnly = default(bool?), bool? isValidOncePerCustomer = default(bool?), bool? isValidOnlyOnce = default(bool?), DateTime? startDate = default(DateTime?), DateTime? expiryDate = default(DateTime?), List<ChannelRestrictionsEnum> channelRestrictions = default(List<ChannelRestrictionsEnum>), List<ValidityPeriod> validityPeriods = default(List<ValidityPeriod>), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), int? customerId = default(int?), int? maxRedemptions = default(int?))
         {
             this.VoucherId = voucherId;
             this.Status = status;
@@ -981,6 +982,7 @@ namespace Flipdish.Model
             this.StartDate = startDate;
             this.ExpiryDate = expiryDate;
             this.ChannelRestrictions = channelRestrictions;
+            this.ValidityPeriods = validityPeriods;
             this.VoucherSubType = voucherSubType;
             this.CustomerId = customerId;
             this.MaxRedemptions = maxRedemptions;
@@ -1151,6 +1153,13 @@ namespace Flipdish.Model
         public DateTime? ExpiryDate { get; set; }
 
 
+        /// <summary>
+        /// Periods in which the voucher is valid.  An empty list means the voucher is valid at all times.  When updating the voucher, if this is set to null, the validity periods won&#39;t be updated.
+        /// </summary>
+        /// <value>Periods in which the voucher is valid.  An empty list means the voucher is valid at all times.  When updating the voucher, if this is set to null, the validity periods won&#39;t be updated.</value>
+        [DataMember(Name="ValidityPeriods", EmitDefaultValue=false)]
+        public List<ValidityPeriod> ValidityPeriods { get; set; }
+
 
         /// <summary>
         /// Customer UserID
@@ -1201,6 +1210,7 @@ namespace Flipdish.Model
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  ExpiryDate: ").Append(ExpiryDate).Append("\n");
             sb.Append("  ChannelRestrictions: ").Append(ChannelRestrictions).Append("\n");
+            sb.Append("  ValidityPeriods: ").Append(ValidityPeriods).Append("\n");
             sb.Append("  VoucherSubType: ").Append(VoucherSubType).Append("\n");
             sb.Append("  CustomerId: ").Append(CustomerId).Append("\n");
             sb.Append("  MaxRedemptions: ").Append(MaxRedemptions).Append("\n");
@@ -1374,6 +1384,11 @@ namespace Flipdish.Model
                     this.ChannelRestrictions.SequenceEqual(input.ChannelRestrictions)
                 ) && 
                 (
+                    this.ValidityPeriods == input.ValidityPeriods ||
+                    this.ValidityPeriods != null &&
+                    this.ValidityPeriods.SequenceEqual(input.ValidityPeriods)
+                ) && 
+                (
                     this.VoucherSubType == input.VoucherSubType ||
                     (this.VoucherSubType != null &&
                     this.VoucherSubType.Equals(input.VoucherSubType))
@@ -1453,6 +1468,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ExpiryDate.GetHashCode();
                 if (this.ChannelRestrictions != null)
                     hashCode = hashCode * 59 + this.ChannelRestrictions.GetHashCode();
+                if (this.ValidityPeriods != null)
+                    hashCode = hashCode * 59 + this.ValidityPeriods.GetHashCode();
                 if (this.VoucherSubType != null)
                     hashCode = hashCode * 59 + this.VoucherSubType.GetHashCode();
                 if (this.CustomerId != null)
