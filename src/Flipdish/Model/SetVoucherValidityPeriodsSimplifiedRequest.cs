@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// SetVoucherValidityPeriodsSimplifiedRequest
+    /// Set the validity periods of a voucher.
     /// </summary>
     [DataContract]
     public partial class SetVoucherValidityPeriodsSimplifiedRequest :  IEquatable<SetVoucherValidityPeriodsSimplifiedRequest>
