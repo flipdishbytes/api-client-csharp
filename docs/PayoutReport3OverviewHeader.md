@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PayoutId** | **int?** |  | [optional] 
 **BankAccountId** | **int?** |  | [optional] 
+**IsManualPayout** | **bool?** |  | [optional] 
 **AccountName** | **string** |  | [optional] 
 **PayoutStatus** | **string** |  | [optional] 
 **CreatedDate** | **DateTime?** |  | [optional] 

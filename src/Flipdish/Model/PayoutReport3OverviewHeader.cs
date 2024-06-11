@@ -33,6 +33,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="payoutId">payoutId.</param>
         /// <param name="bankAccountId">bankAccountId.</param>
+        /// <param name="isManualPayout">isManualPayout.</param>
         /// <param name="accountName">accountName.</param>
         /// <param name="payoutStatus">payoutStatus.</param>
         /// <param name="createdDate">createdDate.</param>
@@ -42,10 +43,11 @@ namespace Flipdish.Model
         /// <param name="destinationAccount">destinationAccount.</param>
         /// <param name="amount">amount.</param>
         /// <param name="currency">currency.</param>
-        public PayoutReport3OverviewHeader(int? payoutId = default(int?), int? bankAccountId = default(int?), string accountName = default(string), string payoutStatus = default(string), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?), string currency = default(string))
+        public PayoutReport3OverviewHeader(int? payoutId = default(int?), int? bankAccountId = default(int?), bool? isManualPayout = default(bool?), string accountName = default(string), string payoutStatus = default(string), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?), string currency = default(string))
         {
             this.PayoutId = payoutId;
             this.BankAccountId = bankAccountId;
+            this.IsManualPayout = isManualPayout;
             this.AccountName = accountName;
             this.PayoutStatus = payoutStatus;
             this.CreatedDate = createdDate;
@@ -68,6 +70,12 @@ namespace Flipdish.Model
         /// </summary>
         [DataMember(Name="BankAccountId", EmitDefaultValue=false)]
         public int? BankAccountId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsManualPayout
+        /// </summary>
+        [DataMember(Name="IsManualPayout", EmitDefaultValue=false)]
+        public bool? IsManualPayout { get; set; }
 
         /// <summary>
         /// Gets or Sets AccountName
@@ -133,6 +141,7 @@ namespace Flipdish.Model
             sb.Append("class PayoutReport3OverviewHeader {\n");
             sb.Append("  PayoutId: ").Append(PayoutId).Append("\n");
             sb.Append("  BankAccountId: ").Append(BankAccountId).Append("\n");
+            sb.Append("  IsManualPayout: ").Append(IsManualPayout).Append("\n");
             sb.Append("  AccountName: ").Append(AccountName).Append("\n");
             sb.Append("  PayoutStatus: ").Append(PayoutStatus).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
@@ -185,6 +194,11 @@ namespace Flipdish.Model
                     this.BankAccountId == input.BankAccountId ||
                     (this.BankAccountId != null &&
                     this.BankAccountId.Equals(input.BankAccountId))
+                ) && 
+                (
+                    this.IsManualPayout == input.IsManualPayout ||
+                    (this.IsManualPayout != null &&
+                    this.IsManualPayout.Equals(input.IsManualPayout))
                 ) && 
                 (
                     this.AccountName == input.AccountName ||
@@ -246,6 +260,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PayoutId.GetHashCode();
                 if (this.BankAccountId != null)
                     hashCode = hashCode * 59 + this.BankAccountId.GetHashCode();
+                if (this.IsManualPayout != null)
+                    hashCode = hashCode * 59 + this.IsManualPayout.GetHashCode();
                 if (this.AccountName != null)
                     hashCode = hashCode * 59 + this.AccountName.GetHashCode();
                 if (this.PayoutStatus != null)
