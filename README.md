@@ -136,7 +136,6 @@ Class | Method | HTTP request | Description
 *AppsApi* | [**GetApps**](docs/AppsApi.md#getapps) | **GET** /api/v1.0/apps | 
 *AppsApi* | [**GetCompliance**](docs/AppsApi.md#getcompliance) | **GET** /api/v1.0/apps/{appId}/compliance | 
 *AppsApi* | [**GetPanaceaVanityUrl**](docs/AppsApi.md#getpanaceavanityurl) | **GET** /api/v1.0/apps/{appId}/panacea/url | 
-*AppsApi* | [**GetSalesforceReferences**](docs/AppsApi.md#getsalesforcereferences) | **GET** /api/v1.0/apps/{appId}/salesforcereferences | 
 *AppsApi* | [**GetSupportedCountries**](docs/AppsApi.md#getsupportedcountries) | **GET** /api/v1.0/apps/supportedcountries | 
 *AppsApi* | [**IsPanaceaVanityUrlAvailable**](docs/AppsApi.md#ispanaceavanityurlavailable) | **GET** /api/v1.0/apps/{appId}/panacea/url/available | 
 *AppsApi* | [**LookupByWhitelabelId**](docs/AppsApi.md#lookupbywhitelabelid) | **GET** /api/v1.0/apps/{whitelabelId}/lookup | 
@@ -146,7 +145,6 @@ Class | Method | HTTP request | Description
 *AppsApi* | [**SetAppStoreName**](docs/AppsApi.md#setappstorename) | **POST** /api/v1.0/apps/{appId}/appstorename | 
 *AppsApi* | [**SetCompliance**](docs/AppsApi.md#setcompliance) | **POST** /api/v1.0/apps/{appId}/compliance | 
 *AppsApi* | [**SetPanaceaVanityUrl**](docs/AppsApi.md#setpanaceavanityurl) | **POST** /api/v1.0/apps/{appId}/panacea/url | 
-*AppsApi* | [**SetSalesforceReferences**](docs/AppsApi.md#setsalesforcereferences) | **POST** /api/v1.0/apps/{appId}/salesforcereferences | 
 *AppsApi* | [**ToggleNextGenWeb**](docs/AppsApi.md#togglenextgenweb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | 
 *AppsApi* | [**UploadAppLogo**](docs/AppsApi.md#uploadapplogo) | **POST** /api/v1.0/apps/{appId}/logo | 
 *AuditLogsApi* | [**AddOrderAuditLog**](docs/AuditLogsApi.md#addorderauditlog) | **POST** /api/v1.0/auditlogs/orders/{orderId} | 
@@ -635,7 +633,6 @@ Class | Method | HTTP request | Description
  - [Model.AppConfigUpdateModel](docs/AppConfigUpdateModel.md)
  - [Model.AppCreatedEvent](docs/AppCreatedEvent.md)
  - [Model.AppLookup](docs/AppLookup.md)
- - [Model.AppSalesforceReferences](docs/AppSalesforceReferences.md)
  - [Model.AppStoreApp](docs/AppStoreApp.md)
  - [Model.AppStoreAppConfiguration](docs/AppStoreAppConfiguration.md)
  - [Model.AppStoreAppConfigurationSummary](docs/AppStoreAppConfigurationSummary.md)

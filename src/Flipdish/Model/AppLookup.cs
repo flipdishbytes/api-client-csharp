@@ -32,13 +32,9 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="AppLookup" /> class.
         /// </summary>
         /// <param name="appId">App id.</param>
-        /// <param name="opportunityId">Salesforce opportunity id.</param>
-        /// <param name="accountId">Salesforce account id.</param>
-        public AppLookup(string appId = default(string), string opportunityId = default(string), string accountId = default(string))
+        public AppLookup(string appId = default(string))
         {
             this.AppId = appId;
-            this.OpportunityId = opportunityId;
-            this.AccountId = accountId;
         }
         
         /// <summary>
@@ -49,20 +45,6 @@ namespace Flipdish.Model
         public string AppId { get; set; }
 
         /// <summary>
-        /// Salesforce opportunity id
-        /// </summary>
-        /// <value>Salesforce opportunity id</value>
-        [DataMember(Name="OpportunityId", EmitDefaultValue=false)]
-        public string OpportunityId { get; set; }
-
-        /// <summary>
-        /// Salesforce account id
-        /// </summary>
-        /// <value>Salesforce account id</value>
-        [DataMember(Name="AccountId", EmitDefaultValue=false)]
-        public string AccountId { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -71,8 +53,6 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class AppLookup {\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
-            sb.Append("  OpportunityId: ").Append(OpportunityId).Append("\n");
-            sb.Append("  AccountId: ").Append(AccountId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -111,16 +91,6 @@ namespace Flipdish.Model
                     this.AppId == input.AppId ||
                     (this.AppId != null &&
                     this.AppId.Equals(input.AppId))
-                ) && 
-                (
-                    this.OpportunityId == input.OpportunityId ||
-                    (this.OpportunityId != null &&
-                    this.OpportunityId.Equals(input.OpportunityId))
-                ) && 
-                (
-                    this.AccountId == input.AccountId ||
-                    (this.AccountId != null &&
-                    this.AccountId.Equals(input.AccountId))
                 );
         }
 
@@ -135,10 +105,6 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.AppId != null)
                     hashCode = hashCode * 59 + this.AppId.GetHashCode();
-                if (this.OpportunityId != null)
-                    hashCode = hashCode * 59 + this.OpportunityId.GetHashCode();
-                if (this.AccountId != null)
-                    hashCode = hashCode * 59 + this.AccountId.GetHashCode();
                 return hashCode;
             }
         }

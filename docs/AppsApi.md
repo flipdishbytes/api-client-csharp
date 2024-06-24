@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**GetApps**](AppsApi.md#getapps) | **GET** /api/v1.0/apps | 
 [**GetCompliance**](AppsApi.md#getcompliance) | **GET** /api/v1.0/apps/{appId}/compliance | 
 [**GetPanaceaVanityUrl**](AppsApi.md#getpanaceavanityurl) | **GET** /api/v1.0/apps/{appId}/panacea/url | 
-[**GetSalesforceReferences**](AppsApi.md#getsalesforcereferences) | **GET** /api/v1.0/apps/{appId}/salesforcereferences | 
 [**GetSupportedCountries**](AppsApi.md#getsupportedcountries) | **GET** /api/v1.0/apps/supportedcountries | 
 [**IsPanaceaVanityUrlAvailable**](AppsApi.md#ispanaceavanityurlavailable) | **GET** /api/v1.0/apps/{appId}/panacea/url/available | 
 [**LookupByWhitelabelId**](AppsApi.md#lookupbywhitelabelid) | **GET** /api/v1.0/apps/{whitelabelId}/lookup | 
@@ -20,7 +19,6 @@ Method | HTTP request | Description
 [**SetAppStoreName**](AppsApi.md#setappstorename) | **POST** /api/v1.0/apps/{appId}/appstorename | 
 [**SetCompliance**](AppsApi.md#setcompliance) | **POST** /api/v1.0/apps/{appId}/compliance | 
 [**SetPanaceaVanityUrl**](AppsApi.md#setpanaceavanityurl) | **POST** /api/v1.0/apps/{appId}/panacea/url | 
-[**SetSalesforceReferences**](AppsApi.md#setsalesforcereferences) | **POST** /api/v1.0/apps/{appId}/salesforcereferences | 
 [**ToggleNextGenWeb**](AppsApi.md#togglenextgenweb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | 
 [**UploadAppLogo**](AppsApi.md#uploadapplogo) | **POST** /api/v1.0/apps/{appId}/logo | 
 
@@ -383,67 +381,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiStringResult**](RestApiStringResult.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getsalesforcereferences"></a>
-# **GetSalesforceReferences**
-> AppSalesforceReferences GetSalesforceReferences (string appId)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class GetSalesforceReferencesExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new AppsApi();
-            var appId = appId_example;  // string | 
-
-            try
-            {
-                AppSalesforceReferences result = apiInstance.GetSalesforceReferences(appId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AppsApi.GetSalesforceReferences: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
-
-### Return type
-
-[**AppSalesforceReferences**](AppSalesforceReferences.md)
 
 ### Authorization
 
@@ -1012,69 +949,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="setsalesforcereferences"></a>
-# **SetSalesforceReferences**
-> RestApiStringResult SetSalesforceReferences (string appId, AppSalesforceReferences salesforceReferences)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class SetSalesforceReferencesExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new AppsApi();
-            var appId = appId_example;  // string | 
-            var salesforceReferences = new AppSalesforceReferences(); // AppSalesforceReferences | 
-
-            try
-            {
-                RestApiStringResult result = apiInstance.SetSalesforceReferences(appId, salesforceReferences);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AppsApi.SetSalesforceReferences: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
- **salesforceReferences** | [**AppSalesforceReferences**](AppSalesforceReferences.md)|  | 
-
-### Return type
-
-[**RestApiStringResult**](RestApiStringResult.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

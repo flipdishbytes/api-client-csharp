@@ -38,9 +38,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="storeName">Store name (required).</param>
         /// <param name="languageId">LanguageId.</param>
-        /// <param name="opportunityId">Salesforce Opportunity ID.</param>
-        /// <param name="accountId">Salesforce Account Id.</param>
-        public CreateBasicAccountModel(string storeName = default(string), string languageId = default(string), string opportunityId = default(string), string accountId = default(string))
+        public CreateBasicAccountModel(string storeName = default(string), string languageId = default(string))
         {
             // to ensure "storeName" is required (not null)
             if (storeName == null)
@@ -52,8 +50,6 @@ namespace Flipdish.Model
                 this.StoreName = storeName;
             }
             this.LanguageId = languageId;
-            this.OpportunityId = opportunityId;
-            this.AccountId = accountId;
         }
         
         /// <summary>
@@ -71,20 +67,6 @@ namespace Flipdish.Model
         public string LanguageId { get; set; }
 
         /// <summary>
-        /// Salesforce Opportunity ID
-        /// </summary>
-        /// <value>Salesforce Opportunity ID</value>
-        [DataMember(Name="OpportunityId", EmitDefaultValue=false)]
-        public string OpportunityId { get; set; }
-
-        /// <summary>
-        /// Salesforce Account Id
-        /// </summary>
-        /// <value>Salesforce Account Id</value>
-        [DataMember(Name="AccountId", EmitDefaultValue=false)]
-        public string AccountId { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -94,8 +76,6 @@ namespace Flipdish.Model
             sb.Append("class CreateBasicAccountModel {\n");
             sb.Append("  StoreName: ").Append(StoreName).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
-            sb.Append("  OpportunityId: ").Append(OpportunityId).Append("\n");
-            sb.Append("  AccountId: ").Append(AccountId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -139,16 +119,6 @@ namespace Flipdish.Model
                     this.LanguageId == input.LanguageId ||
                     (this.LanguageId != null &&
                     this.LanguageId.Equals(input.LanguageId))
-                ) && 
-                (
-                    this.OpportunityId == input.OpportunityId ||
-                    (this.OpportunityId != null &&
-                    this.OpportunityId.Equals(input.OpportunityId))
-                ) && 
-                (
-                    this.AccountId == input.AccountId ||
-                    (this.AccountId != null &&
-                    this.AccountId.Equals(input.AccountId))
                 );
         }
 
@@ -165,10 +135,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StoreName.GetHashCode();
                 if (this.LanguageId != null)
                     hashCode = hashCode * 59 + this.LanguageId.GetHashCode();
-                if (this.OpportunityId != null)
-                    hashCode = hashCode * 59 + this.OpportunityId.GetHashCode();
-                if (this.AccountId != null)
-                    hashCode = hashCode * 59 + this.AccountId.GetHashCode();
                 return hashCode;
             }
         }
