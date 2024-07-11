@@ -32,15 +32,17 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="PayoutReport3DetailsRevenue" /> class.
         /// </summary>
         /// <param name="grossSales">grossSales.</param>
+        /// <param name="salesTax">salesTax.</param>
         /// <param name="deliveryCharges">deliveryCharges.</param>
         /// <param name="otherCharges">otherCharges.</param>
         /// <param name="tips">tips.</param>
         /// <param name="totalRevenue">totalRevenue.</param>
         /// <param name="revenueForFeeCalculations">revenueForFeeCalculations.</param>
         /// <param name="drsCharges">drsCharges.</param>
-        public PayoutReport3DetailsRevenue(PayoutReport3DetailsSalesLine grossSales = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine deliveryCharges = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine otherCharges = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine tips = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine totalRevenue = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine revenueForFeeCalculations = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine drsCharges = default(PayoutReport3DetailsSalesLine))
+        public PayoutReport3DetailsRevenue(PayoutReport3DetailsSalesLine grossSales = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine salesTax = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine deliveryCharges = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine otherCharges = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine tips = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine totalRevenue = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine revenueForFeeCalculations = default(PayoutReport3DetailsSalesLine), PayoutReport3DetailsSalesLine drsCharges = default(PayoutReport3DetailsSalesLine))
         {
             this.GrossSales = grossSales;
+            this.SalesTax = salesTax;
             this.DeliveryCharges = deliveryCharges;
             this.OtherCharges = otherCharges;
             this.Tips = tips;
@@ -54,6 +56,12 @@ namespace Flipdish.Model
         /// </summary>
         [DataMember(Name="GrossSales", EmitDefaultValue=false)]
         public PayoutReport3DetailsSalesLine GrossSales { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SalesTax
+        /// </summary>
+        [DataMember(Name="SalesTax", EmitDefaultValue=false)]
+        public PayoutReport3DetailsSalesLine SalesTax { get; set; }
 
         /// <summary>
         /// Gets or Sets DeliveryCharges
@@ -100,6 +108,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class PayoutReport3DetailsRevenue {\n");
             sb.Append("  GrossSales: ").Append(GrossSales).Append("\n");
+            sb.Append("  SalesTax: ").Append(SalesTax).Append("\n");
             sb.Append("  DeliveryCharges: ").Append(DeliveryCharges).Append("\n");
             sb.Append("  OtherCharges: ").Append(OtherCharges).Append("\n");
             sb.Append("  Tips: ").Append(Tips).Append("\n");
@@ -146,6 +155,11 @@ namespace Flipdish.Model
                     this.GrossSales.Equals(input.GrossSales))
                 ) && 
                 (
+                    this.SalesTax == input.SalesTax ||
+                    (this.SalesTax != null &&
+                    this.SalesTax.Equals(input.SalesTax))
+                ) && 
+                (
                     this.DeliveryCharges == input.DeliveryCharges ||
                     (this.DeliveryCharges != null &&
                     this.DeliveryCharges.Equals(input.DeliveryCharges))
@@ -188,6 +202,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.GrossSales != null)
                     hashCode = hashCode * 59 + this.GrossSales.GetHashCode();
+                if (this.SalesTax != null)
+                    hashCode = hashCode * 59 + this.SalesTax.GetHashCode();
                 if (this.DeliveryCharges != null)
                     hashCode = hashCode * 59 + this.DeliveryCharges.GetHashCode();
                 if (this.OtherCharges != null)
