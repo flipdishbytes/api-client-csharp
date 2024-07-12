@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **int?** | Delivery Fee Area Id | [optional] 
+**FeeChargedToStore** | **double?** | Delivery Fee charged to store | [optional] 
 **DeliveryFee** | **double?** | Delivery fee (will not be set below 0) | [optional] 
 **MinimumDeliveryOrderAmount** | **double?** | Minimum delivery order amount (will not be set below 0) | [optional] 
 **WellKnownText** | **string** | Spatial data in Well Known Text format  We also support CIRCLE((0 0, 200)) - (centerLong centerLat, radius in m) | [optional] 

@@ -32,13 +32,15 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="DeliveryZone" /> class.
         /// </summary>
         /// <param name="id">Delivery Fee Area Id.</param>
+        /// <param name="feeChargedToStore">Delivery Fee charged to store.</param>
         /// <param name="deliveryFee">Delivery fee (will not be set below 0).</param>
         /// <param name="minimumDeliveryOrderAmount">Minimum delivery order amount (will not be set below 0).</param>
         /// <param name="wellKnownText">Spatial data in Well Known Text format  We also support CIRCLE((0 0, 200)) - (centerLong centerLat, radius in m).</param>
         /// <param name="isEnabled">Is delivery zone enabled.</param>
-        public DeliveryZone(int? id = default(int?), double? deliveryFee = default(double?), double? minimumDeliveryOrderAmount = default(double?), string wellKnownText = default(string), bool? isEnabled = default(bool?))
+        public DeliveryZone(int? id = default(int?), double? feeChargedToStore = default(double?), double? deliveryFee = default(double?), double? minimumDeliveryOrderAmount = default(double?), string wellKnownText = default(string), bool? isEnabled = default(bool?))
         {
             this.Id = id;
+            this.FeeChargedToStore = feeChargedToStore;
             this.DeliveryFee = deliveryFee;
             this.MinimumDeliveryOrderAmount = minimumDeliveryOrderAmount;
             this.WellKnownText = wellKnownText;
@@ -51,6 +53,13 @@ namespace Flipdish.Model
         /// <value>Delivery Fee Area Id</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public int? Id { get; set; }
+
+        /// <summary>
+        /// Delivery Fee charged to store
+        /// </summary>
+        /// <value>Delivery Fee charged to store</value>
+        [DataMember(Name="FeeChargedToStore", EmitDefaultValue=false)]
+        public double? FeeChargedToStore { get; set; }
 
         /// <summary>
         /// Delivery fee (will not be set below 0)
@@ -89,6 +98,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class DeliveryZone {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  FeeChargedToStore: ").Append(FeeChargedToStore).Append("\n");
             sb.Append("  DeliveryFee: ").Append(DeliveryFee).Append("\n");
             sb.Append("  MinimumDeliveryOrderAmount: ").Append(MinimumDeliveryOrderAmount).Append("\n");
             sb.Append("  WellKnownText: ").Append(WellKnownText).Append("\n");
@@ -133,6 +143,11 @@ namespace Flipdish.Model
                     this.Id.Equals(input.Id))
                 ) && 
                 (
+                    this.FeeChargedToStore == input.FeeChargedToStore ||
+                    (this.FeeChargedToStore != null &&
+                    this.FeeChargedToStore.Equals(input.FeeChargedToStore))
+                ) && 
+                (
                     this.DeliveryFee == input.DeliveryFee ||
                     (this.DeliveryFee != null &&
                     this.DeliveryFee.Equals(input.DeliveryFee))
@@ -165,6 +180,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.FeeChargedToStore != null)
+                    hashCode = hashCode * 59 + this.FeeChargedToStore.GetHashCode();
                 if (this.DeliveryFee != null)
                     hashCode = hashCode * 59 + this.DeliveryFee.GetHashCode();
                 if (this.MinimumDeliveryOrderAmount != null)

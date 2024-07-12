@@ -131,6 +131,7 @@ Class | Method | HTTP request | Description
 *AppStoreSubscriptionsApi* | [**GetAppStoreSubscriptions**](docs/AppStoreSubscriptionsApi.md#getappstoresubscriptions) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
 *AppStoreSubscriptionsApi* | [**UpdateAppStoreSubscription**](docs/AppStoreSubscriptionsApi.md#updateappstoresubscription) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/{subscriptionId} | 
 *AppsApi* | [**CreateApp**](docs/AppsApi.md#createapp) | **POST** /api/v1.0/apps | 
+*AppsApi* | [**CreateAppInOrg**](docs/AppsApi.md#createappinorg) | **POST** /api/v1.0/orgs/{orgId}/apps | 
 *AppsApi* | [**GetApp**](docs/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | 
 *AppsApi* | [**GetAppHostnameStatus**](docs/AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
 *AppsApi* | [**GetApps**](docs/AppsApi.md#getapps) | **GET** /api/v1.0/apps | 
@@ -701,6 +702,7 @@ Class | Method | HTTP request | Description
  - [Model.CountryFormResponse](docs/CountryFormResponse.md)
  - [Model.CountryWithAccountFieldsDefinitions](docs/CountryWithAccountFieldsDefinitions.md)
  - [Model.CreateAccountModel](docs/CreateAccountModel.md)
+ - [Model.CreateAppInOrg](docs/CreateAppInOrg.md)
  - [Model.CreateAppParameters](docs/CreateAppParameters.md)
  - [Model.CreateAppStoreApp](docs/CreateAppStoreApp.md)
  - [Model.CreateBasicAccountModel](docs/CreateBasicAccountModel.md)

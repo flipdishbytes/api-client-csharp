@@ -52,6 +52,29 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orgId"></param>
+        /// <param name="createAppInOrgRequest"></param>
+        /// <returns>RestApiResultApp</returns>
+        RestApiResultApp CreateAppInOrg (string orgId, CreateAppInOrg createAppInOrgRequest);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orgId"></param>
+        /// <param name="createAppInOrgRequest"></param>
+        /// <returns>ApiResponse of RestApiResultApp</returns>
+        ApiResponse<RestApiResultApp> CreateAppInOrgWithHttpInfo (string orgId, CreateAppInOrg createAppInOrgRequest);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <returns>RestApiResultApp</returns>
         RestApiResultApp GetApp (string appId);
@@ -430,6 +453,29 @@ namespace Flipdish.Api
         /// <param name="parameters"></param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> CreateAppAsyncWithHttpInfo (CreateAppParameters parameters);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orgId"></param>
+        /// <param name="createAppInOrgRequest"></param>
+        /// <returns>Task of RestApiResultApp</returns>
+        System.Threading.Tasks.Task<RestApiResultApp> CreateAppInOrgAsync (string orgId, CreateAppInOrg createAppInOrgRequest);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orgId"></param>
+        /// <param name="createAppInOrgRequest"></param>
+        /// <returns>Task of ApiResponse (RestApiResultApp)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultApp>> CreateAppInOrgAsyncWithHttpInfo (string orgId, CreateAppInOrg createAppInOrgRequest);
         /// <summary>
         /// 
         /// </summary>
@@ -1065,6 +1111,193 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiStringResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orgId"></param>
+        /// <param name="createAppInOrgRequest"></param>
+        /// <returns>RestApiResultApp</returns>
+        public RestApiResultApp CreateAppInOrg (string orgId, CreateAppInOrg createAppInOrgRequest)
+        {
+             ApiResponse<RestApiResultApp> localVarResponse = CreateAppInOrgWithHttpInfo(orgId, createAppInOrgRequest);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orgId"></param>
+        /// <param name="createAppInOrgRequest"></param>
+        /// <returns>ApiResponse of RestApiResultApp</returns>
+        public ApiResponse< RestApiResultApp > CreateAppInOrgWithHttpInfo (string orgId, CreateAppInOrg createAppInOrgRequest)
+        {
+            // verify the required parameter 'orgId' is set
+            if (orgId == null)
+                throw new ApiException(400, "Missing required parameter 'orgId' when calling AppsApi->CreateAppInOrg");
+            // verify the required parameter 'createAppInOrgRequest' is set
+            if (createAppInOrgRequest == null)
+                throw new ApiException(400, "Missing required parameter 'createAppInOrgRequest' when calling AppsApi->CreateAppInOrg");
+
+            var localVarPath = "./api/v1.0/orgs/{orgId}/apps";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (orgId != null) localVarPathParams.Add("orgId", this.Configuration.ApiClient.ParameterToString(orgId)); // path parameter
+            if (createAppInOrgRequest != null && createAppInOrgRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(createAppInOrgRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = createAppInOrgRequest; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateAppInOrg", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultApp>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultApp)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orgId"></param>
+        /// <param name="createAppInOrgRequest"></param>
+        /// <returns>Task of RestApiResultApp</returns>
+        public async System.Threading.Tasks.Task<RestApiResultApp> CreateAppInOrgAsync (string orgId, CreateAppInOrg createAppInOrgRequest)
+        {
+             ApiResponse<RestApiResultApp> localVarResponse = await CreateAppInOrgAsyncWithHttpInfo(orgId, createAppInOrgRequest);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orgId"></param>
+        /// <param name="createAppInOrgRequest"></param>
+        /// <returns>Task of ApiResponse (RestApiResultApp)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultApp>> CreateAppInOrgAsyncWithHttpInfo (string orgId, CreateAppInOrg createAppInOrgRequest)
+        {
+            // verify the required parameter 'orgId' is set
+            if (orgId == null)
+                throw new ApiException(400, "Missing required parameter 'orgId' when calling AppsApi->CreateAppInOrg");
+            // verify the required parameter 'createAppInOrgRequest' is set
+            if (createAppInOrgRequest == null)
+                throw new ApiException(400, "Missing required parameter 'createAppInOrgRequest' when calling AppsApi->CreateAppInOrg");
+
+            var localVarPath = "./api/v1.0/orgs/{orgId}/apps";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (orgId != null) localVarPathParams.Add("orgId", this.Configuration.ApiClient.ParameterToString(orgId)); // path parameter
+            if (createAppInOrgRequest != null && createAppInOrgRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(createAppInOrgRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = createAppInOrgRequest; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateAppInOrg", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultApp>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultApp) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultApp)));
         }
 
         /// <summary>
