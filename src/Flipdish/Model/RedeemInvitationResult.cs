@@ -66,10 +66,12 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="appId">Access level is for this App.</param>
         /// <param name="invitationStatus">Invitation status.</param>
-        public RedeemInvitationResult(string appId = default(string), InvitationStatusEnum? invitationStatus = default(InvitationStatusEnum?))
+        /// <param name="isNewUser">Bool indicating if the user that redeemed the invitation is a new user.</param>
+        public RedeemInvitationResult(string appId = default(string), InvitationStatusEnum? invitationStatus = default(InvitationStatusEnum?), bool? isNewUser = default(bool?))
         {
             this.AppId = appId;
             this.InvitationStatus = invitationStatus;
+            this.IsNewUser = isNewUser;
         }
         
         /// <summary>
@@ -81,6 +83,13 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// Bool indicating if the user that redeemed the invitation is a new user
+        /// </summary>
+        /// <value>Bool indicating if the user that redeemed the invitation is a new user</value>
+        [DataMember(Name="IsNewUser", EmitDefaultValue=false)]
+        public bool? IsNewUser { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -90,6 +99,7 @@ namespace Flipdish.Model
             sb.Append("class RedeemInvitationResult {\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("  InvitationStatus: ").Append(InvitationStatus).Append("\n");
+            sb.Append("  IsNewUser: ").Append(IsNewUser).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -133,6 +143,11 @@ namespace Flipdish.Model
                     this.InvitationStatus == input.InvitationStatus ||
                     (this.InvitationStatus != null &&
                     this.InvitationStatus.Equals(input.InvitationStatus))
+                ) && 
+                (
+                    this.IsNewUser == input.IsNewUser ||
+                    (this.IsNewUser != null &&
+                    this.IsNewUser.Equals(input.IsNewUser))
                 );
         }
 
@@ -149,6 +164,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.AppId.GetHashCode();
                 if (this.InvitationStatus != null)
                     hashCode = hashCode * 59 + this.InvitationStatus.GetHashCode();
+                if (this.IsNewUser != null)
+                    hashCode = hashCode * 59 + this.IsNewUser.GetHashCode();
                 return hashCode;
             }
         }
