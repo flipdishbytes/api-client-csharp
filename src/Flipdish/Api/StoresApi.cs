@@ -167,6 +167,31 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeGroupId"></param>
+        /// <param name="propertyId"></param>
+        /// <param name="store"></param>
+        /// <returns>RestApiResultStore</returns>
+        RestApiResultStore CreateStoreInProperty (int? storeGroupId, string propertyId, StoreCreateBase store);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeGroupId"></param>
+        /// <param name="propertyId"></param>
+        /// <param name="store"></param>
+        /// <returns>ApiResponse of RestApiResultStore</returns>
+        ApiResponse<RestApiResultStore> CreateStoreInPropertyWithHttpInfo (int? storeGroupId, string propertyId, StoreCreateBase store);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="businessHoursOverrideId"></param>
         /// <returns>RestApiArrayResultRestApiDefaultResponse</returns>
@@ -1022,6 +1047,31 @@ namespace Flipdish.Api
         /// <param name="store"></param>
         /// <returns>Task of ApiResponse (RestApiResultStore)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultStore>> CreateStoreAsyncWithHttpInfo (int? storeGroupId, StoreCreateBase store);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeGroupId"></param>
+        /// <param name="propertyId"></param>
+        /// <param name="store"></param>
+        /// <returns>Task of RestApiResultStore</returns>
+        System.Threading.Tasks.Task<RestApiResultStore> CreateStoreInPropertyAsync (int? storeGroupId, string propertyId, StoreCreateBase store);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeGroupId"></param>
+        /// <param name="propertyId"></param>
+        /// <param name="store"></param>
+        /// <returns>Task of ApiResponse (RestApiResultStore)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultStore>> CreateStoreInPropertyAsyncWithHttpInfo (int? storeGroupId, string propertyId, StoreCreateBase store);
         /// <summary>
         /// 
         /// </summary>
@@ -2898,6 +2948,205 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("CreateStore", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultStore>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultStore) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStore)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeGroupId"></param>
+        /// <param name="propertyId"></param>
+        /// <param name="store"></param>
+        /// <returns>RestApiResultStore</returns>
+        public RestApiResultStore CreateStoreInProperty (int? storeGroupId, string propertyId, StoreCreateBase store)
+        {
+             ApiResponse<RestApiResultStore> localVarResponse = CreateStoreInPropertyWithHttpInfo(storeGroupId, propertyId, store);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeGroupId"></param>
+        /// <param name="propertyId"></param>
+        /// <param name="store"></param>
+        /// <returns>ApiResponse of RestApiResultStore</returns>
+        public ApiResponse< RestApiResultStore > CreateStoreInPropertyWithHttpInfo (int? storeGroupId, string propertyId, StoreCreateBase store)
+        {
+            // verify the required parameter 'storeGroupId' is set
+            if (storeGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'storeGroupId' when calling StoresApi->CreateStoreInProperty");
+            // verify the required parameter 'propertyId' is set
+            if (propertyId == null)
+                throw new ApiException(400, "Missing required parameter 'propertyId' when calling StoresApi->CreateStoreInProperty");
+            // verify the required parameter 'store' is set
+            if (store == null)
+                throw new ApiException(400, "Missing required parameter 'store' when calling StoresApi->CreateStoreInProperty");
+
+            var localVarPath = "./api/v1.0/properties/{propertyId}/stores";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (propertyId != null) localVarPathParams.Add("propertyId", this.Configuration.ApiClient.ParameterToString(propertyId)); // path parameter
+            if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
+            if (store != null && store.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(store); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = store; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateStoreInProperty", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultStore>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultStore) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultStore)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeGroupId"></param>
+        /// <param name="propertyId"></param>
+        /// <param name="store"></param>
+        /// <returns>Task of RestApiResultStore</returns>
+        public async System.Threading.Tasks.Task<RestApiResultStore> CreateStoreInPropertyAsync (int? storeGroupId, string propertyId, StoreCreateBase store)
+        {
+             ApiResponse<RestApiResultStore> localVarResponse = await CreateStoreInPropertyAsyncWithHttpInfo(storeGroupId, propertyId, store);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeGroupId"></param>
+        /// <param name="propertyId"></param>
+        /// <param name="store"></param>
+        /// <returns>Task of ApiResponse (RestApiResultStore)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStore>> CreateStoreInPropertyAsyncWithHttpInfo (int? storeGroupId, string propertyId, StoreCreateBase store)
+        {
+            // verify the required parameter 'storeGroupId' is set
+            if (storeGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'storeGroupId' when calling StoresApi->CreateStoreInProperty");
+            // verify the required parameter 'propertyId' is set
+            if (propertyId == null)
+                throw new ApiException(400, "Missing required parameter 'propertyId' when calling StoresApi->CreateStoreInProperty");
+            // verify the required parameter 'store' is set
+            if (store == null)
+                throw new ApiException(400, "Missing required parameter 'store' when calling StoresApi->CreateStoreInProperty");
+
+            var localVarPath = "./api/v1.0/properties/{propertyId}/stores";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (propertyId != null) localVarPathParams.Add("propertyId", this.Configuration.ApiClient.ParameterToString(propertyId)); // path parameter
+            if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
+            if (store != null && store.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(store); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = store; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateStoreInProperty", localVarResponse);
                 if (exception != null) throw exception;
             }
 

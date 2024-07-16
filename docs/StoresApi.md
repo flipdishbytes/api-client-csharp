@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**ConfigureStoreServiceCharge**](StoresApi.md#configurestoreservicecharge) | **POST** /api/v1.0/stores/{storeId}/servicecharge | 
 [**CreateBusinessHoursOverrideByStoreId**](StoresApi.md#createbusinesshoursoverridebystoreid) | **POST** /api/v1.0/stores/{storeId}/businesshoursoverrides | 
 [**CreateStore**](StoresApi.md#createstore) | **POST** /api/v1.0/stores | 
+[**CreateStoreInProperty**](StoresApi.md#createstoreinproperty) | **POST** /api/v1.0/properties/{propertyId}/stores | 
 [**DeleteBusinessHoursOverride**](StoresApi.md#deletebusinesshoursoverride) | **DELETE** /api/v1.0/stores/{storeId}/businesshoursoverrides/{businessHoursOverrideId} | 
 [**GetBankAccountForStore**](StoresApi.md#getbankaccountforstore) | **GET** /api/v1.0/stores/{storeId}/bankaccount | 
 [**GetBusinessHours**](StoresApi.md#getbusinesshours) | **GET** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
@@ -400,6 +401,71 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storeGroupId** | **int?**|  | 
+ **store** | [**StoreCreateBase**](StoreCreateBase.md)|  | 
+
+### Return type
+
+[**RestApiResultStore**](RestApiResultStore.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="createstoreinproperty"></a>
+# **CreateStoreInProperty**
+> RestApiResultStore CreateStoreInProperty (int? storeGroupId, string propertyId, StoreCreateBase store)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class CreateStoreInPropertyExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var storeGroupId = 56;  // int? | 
+            var propertyId = propertyId_example;  // string | 
+            var store = new StoreCreateBase(); // StoreCreateBase | 
+
+            try
+            {
+                RestApiResultStore result = apiInstance.CreateStoreInProperty(storeGroupId, propertyId, store);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.CreateStoreInProperty: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeGroupId** | **int?**|  | 
+ **propertyId** | **string**|  | 
  **store** | [**StoreCreateBase**](StoreCreateBase.md)|  | 
 
 ### Return type
