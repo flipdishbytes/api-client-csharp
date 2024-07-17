@@ -49,7 +49,8 @@ namespace Flipdish.Model
         /// <param name="refundedFeesOnRefundedSales">refundedFeesOnRefundedSales.</param>
         /// <param name="vat">vat.</param>
         /// <param name="total">total.</param>
-        public PayoutReport3DetailsFlipdishFees(double? webAndAppCash = default(double?), double? webAndAppCashRevenueIncludingTips = default(double?), double? webAndAppCard = default(double?), double? webAndAppCardRevenueIncludingTips = default(double?), double? kioskCash = default(double?), double? kioskCashRevenue = default(double?), double? kioskCard = default(double?), double? kioskCardRevenue = default(double?), double? qropCash = default(double?), double? qropCard = default(double?), double? posCard = default(double?), double? posCardRevenue = default(double?), double? posCardOnFlipdishOrders = default(double?), double? otherIntegrationFees = default(double?), double? otherIntegrationTips = default(double?), double? refundedFeesOnRefundedSales = default(double?), double? vat = default(double?), double? total = default(double?))
+        /// <param name="thirdPartyIntegrationFeesAndTips">thirdPartyIntegrationFeesAndTips.</param>
+        public PayoutReport3DetailsFlipdishFees(double? webAndAppCash = default(double?), double? webAndAppCashRevenueIncludingTips = default(double?), double? webAndAppCard = default(double?), double? webAndAppCardRevenueIncludingTips = default(double?), double? kioskCash = default(double?), double? kioskCashRevenue = default(double?), double? kioskCard = default(double?), double? kioskCardRevenue = default(double?), double? qropCash = default(double?), double? qropCard = default(double?), double? posCard = default(double?), double? posCardRevenue = default(double?), double? posCardOnFlipdishOrders = default(double?), double? otherIntegrationFees = default(double?), double? otherIntegrationTips = default(double?), double? refundedFeesOnRefundedSales = default(double?), double? vat = default(double?), double? total = default(double?), double? thirdPartyIntegrationFeesAndTips = default(double?))
         {
             this.WebAndAppCash = webAndAppCash;
             this.WebAndAppCashRevenueIncludingTips = webAndAppCashRevenueIncludingTips;
@@ -69,6 +70,7 @@ namespace Flipdish.Model
             this.RefundedFeesOnRefundedSales = refundedFeesOnRefundedSales;
             this.Vat = vat;
             this.Total = total;
+            this.ThirdPartyIntegrationFeesAndTips = thirdPartyIntegrationFeesAndTips;
         }
         
         /// <summary>
@@ -180,6 +182,12 @@ namespace Flipdish.Model
         public double? Total { get; set; }
 
         /// <summary>
+        /// Gets or Sets ThirdPartyIntegrationFeesAndTips
+        /// </summary>
+        [DataMember(Name="ThirdPartyIntegrationFeesAndTips", EmitDefaultValue=false)]
+        public double? ThirdPartyIntegrationFeesAndTips { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -205,6 +213,7 @@ namespace Flipdish.Model
             sb.Append("  RefundedFeesOnRefundedSales: ").Append(RefundedFeesOnRefundedSales).Append("\n");
             sb.Append("  Vat: ").Append(Vat).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
+            sb.Append("  ThirdPartyIntegrationFeesAndTips: ").Append(ThirdPartyIntegrationFeesAndTips).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -328,6 +337,11 @@ namespace Flipdish.Model
                     this.Total == input.Total ||
                     (this.Total != null &&
                     this.Total.Equals(input.Total))
+                ) && 
+                (
+                    this.ThirdPartyIntegrationFeesAndTips == input.ThirdPartyIntegrationFeesAndTips ||
+                    (this.ThirdPartyIntegrationFeesAndTips != null &&
+                    this.ThirdPartyIntegrationFeesAndTips.Equals(input.ThirdPartyIntegrationFeesAndTips))
                 );
         }
 
@@ -376,6 +390,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Vat.GetHashCode();
                 if (this.Total != null)
                     hashCode = hashCode * 59 + this.Total.GetHashCode();
+                if (this.ThirdPartyIntegrationFeesAndTips != null)
+                    hashCode = hashCode * 59 + this.ThirdPartyIntegrationFeesAndTips.GetHashCode();
                 return hashCode;
             }
         }
