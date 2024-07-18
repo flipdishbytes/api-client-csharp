@@ -112,7 +112,6 @@ Class | Method | HTTP request | Description
 *AppStoreConfigurationsApi* | [**ExecuteConfigurationAction**](docs/AppStoreConfigurationsApi.md#executeconfigurationaction) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/action | 
 *AppStoreConfigurationsApi* | [**GetAppStoreConfig**](docs/AppStoreConfigurationsApi.md#getappstoreconfig) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | 
 *AppStoreConfigurationsApi* | [**GetConfiguredAppSingleApp**](docs/AppStoreConfigurationsApi.md#getconfiguredappsingleapp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | 
-*AppStoreConfigurationsApi* | [**GetConfiguredAppWithSubscriptionsSingleApp**](docs/AppStoreConfigurationsApi.md#getconfiguredappwithsubscriptionssingleapp) | **GET** /api/v1.0/{appId}/appstore/apps_subscriptions/{appStoreAppId} | 
 *AppStoreConfigurationsApi* | [**GetConfiguredApps**](docs/AppStoreConfigurationsApi.md#getconfiguredapps) | **GET** /api/v1.0/{appId}/appstore/apps | 
 *AppStoreConfigurationsApi* | [**UpdateAppStoreConfig**](docs/AppStoreConfigurationsApi.md#updateappstoreconfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | 
 *AppStoreConfigurationsApi* | [**UpdateAppStoreConfigSettingValues**](docs/AppStoreConfigurationsApi.md#updateappstoreconfigsettingvalues) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/updatesettings | 
@@ -632,10 +631,7 @@ Class | Method | HTTP request | Description
  - [Model.AppStoreApp](docs/AppStoreApp.md)
  - [Model.AppStoreAppConfiguration](docs/AppStoreAppConfiguration.md)
  - [Model.AppStoreAppConfigurationSummary](docs/AppStoreAppConfigurationSummary.md)
- - [Model.AppStoreAppConfigurationsWithSubscriptions](docs/AppStoreAppConfigurationsWithSubscriptions.md)
  - [Model.AppStoreAppEntitlements](docs/AppStoreAppEntitlements.md)
- - [Model.AppStoreAppSubscriptionAccount](docs/AppStoreAppSubscriptionAccount.md)
- - [Model.AppStoreAppSubscriptionSummary](docs/AppStoreAppSubscriptionSummary.md)
  - [Model.AppStoreAppSummary](docs/AppStoreAppSummary.md)
  - [Model.AppStoreAppSupportInfo](docs/AppStoreAppSupportInfo.md)
  - [Model.AppStoreConfigCreatedEvent](docs/AppStoreConfigCreatedEvent.md)
@@ -1141,7 +1137,6 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultAppConfigSalesChannel](docs/RestApiResultAppConfigSalesChannel.md)
  - [Model.RestApiResultAppStoreApp](docs/RestApiResultAppStoreApp.md)
  - [Model.RestApiResultAppStoreAppConfiguration](docs/RestApiResultAppStoreAppConfiguration.md)
- - [Model.RestApiResultAppStoreAppConfigurationsWithSubscriptions](docs/RestApiResultAppStoreAppConfigurationsWithSubscriptions.md)
  - [Model.RestApiResultAppStoreAppEntitlements](docs/RestApiResultAppStoreAppEntitlements.md)
  - [Model.RestApiResultAssignedBankAccount](docs/RestApiResultAssignedBankAccount.md)
  - [Model.RestApiResultBankAccountDetail](docs/RestApiResultBankAccountDetail.md)
@@ -1339,7 +1334,6 @@ Class | Method | HTTP request | Description
  - [Model.SubmitOrderResponseDm](docs/SubmitOrderResponseDm.md)
  - [Model.Subscription](docs/Subscription.md)
  - [Model.SubscriptionProduct](docs/SubscriptionProduct.md)
- - [Model.SubscriptionProductPriceInfo](docs/SubscriptionProductPriceInfo.md)
  - [Model.SubscriptionStore](docs/SubscriptionStore.md)
  - [Model.SubscriptionSummary](docs/SubscriptionSummary.md)
  - [Model.SupportedCountry](docs/SupportedCountry.md)
