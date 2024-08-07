@@ -50,7 +50,9 @@ namespace Flipdish.Model
         /// <param name="balanceChange">balanceChange.</param>
         /// <param name="previousPayoutId">previousPayoutId.</param>
         /// <param name="nextPayoutId">nextPayoutId.</param>
-        public PayoutReport3DetailsAdjustments(DateTime? openingBalanceDate = default(DateTime?), DateTime? closingBalanceDate = default(DateTime?), double? openingBalance = default(double?), double? refundsOnCardOrders = default(double?), double? refundsOnCashOrders = default(double?), double? cashCustomerFees = default(double?), double? chargebacks = default(double?), double? otherTransactions = default(double?), double? closingBalance = default(double?), double? balanceRepaid = default(double?), double? refundsOnCardOrdersBracketsAmount = default(double?), double? refundsOnCardOrdersBracketsOutOfAmount = default(double?), double? refundsOnCashOrdersBracketsAmount = default(double?), double? refundsOnCashOrdersBracketsOutOfAmount = default(double?), double? cashCustomerFeesBracketsAmount = default(double?), double? cashCustomerFeesBracketsOutOfAmount = default(double?), double? balanceChange = default(double?), int? previousPayoutId = default(int?), int? nextPayoutId = default(int?))
+        /// <param name="refundedFeesOnChargebacks">refundedFeesOnChargebacks.</param>
+        /// <param name="totalChargebackCost">totalChargebackCost.</param>
+        public PayoutReport3DetailsAdjustments(DateTime? openingBalanceDate = default(DateTime?), DateTime? closingBalanceDate = default(DateTime?), double? openingBalance = default(double?), double? refundsOnCardOrders = default(double?), double? refundsOnCashOrders = default(double?), double? cashCustomerFees = default(double?), double? chargebacks = default(double?), double? otherTransactions = default(double?), double? closingBalance = default(double?), double? balanceRepaid = default(double?), double? refundsOnCardOrdersBracketsAmount = default(double?), double? refundsOnCardOrdersBracketsOutOfAmount = default(double?), double? refundsOnCashOrdersBracketsAmount = default(double?), double? refundsOnCashOrdersBracketsOutOfAmount = default(double?), double? cashCustomerFeesBracketsAmount = default(double?), double? cashCustomerFeesBracketsOutOfAmount = default(double?), double? balanceChange = default(double?), int? previousPayoutId = default(int?), int? nextPayoutId = default(int?), double? refundedFeesOnChargebacks = default(double?), double? totalChargebackCost = default(double?))
         {
             this.OpeningBalanceDate = openingBalanceDate;
             this.ClosingBalanceDate = closingBalanceDate;
@@ -71,6 +73,8 @@ namespace Flipdish.Model
             this.BalanceChange = balanceChange;
             this.PreviousPayoutId = previousPayoutId;
             this.NextPayoutId = nextPayoutId;
+            this.RefundedFeesOnChargebacks = refundedFeesOnChargebacks;
+            this.TotalChargebackCost = totalChargebackCost;
         }
         
         /// <summary>
@@ -188,6 +192,18 @@ namespace Flipdish.Model
         public int? NextPayoutId { get; set; }
 
         /// <summary>
+        /// Gets or Sets RefundedFeesOnChargebacks
+        /// </summary>
+        [DataMember(Name="RefundedFeesOnChargebacks", EmitDefaultValue=false)]
+        public double? RefundedFeesOnChargebacks { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TotalChargebackCost
+        /// </summary>
+        [DataMember(Name="TotalChargebackCost", EmitDefaultValue=false)]
+        public double? TotalChargebackCost { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -214,6 +230,8 @@ namespace Flipdish.Model
             sb.Append("  BalanceChange: ").Append(BalanceChange).Append("\n");
             sb.Append("  PreviousPayoutId: ").Append(PreviousPayoutId).Append("\n");
             sb.Append("  NextPayoutId: ").Append(NextPayoutId).Append("\n");
+            sb.Append("  RefundedFeesOnChargebacks: ").Append(RefundedFeesOnChargebacks).Append("\n");
+            sb.Append("  TotalChargebackCost: ").Append(TotalChargebackCost).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -342,6 +360,16 @@ namespace Flipdish.Model
                     this.NextPayoutId == input.NextPayoutId ||
                     (this.NextPayoutId != null &&
                     this.NextPayoutId.Equals(input.NextPayoutId))
+                ) && 
+                (
+                    this.RefundedFeesOnChargebacks == input.RefundedFeesOnChargebacks ||
+                    (this.RefundedFeesOnChargebacks != null &&
+                    this.RefundedFeesOnChargebacks.Equals(input.RefundedFeesOnChargebacks))
+                ) && 
+                (
+                    this.TotalChargebackCost == input.TotalChargebackCost ||
+                    (this.TotalChargebackCost != null &&
+                    this.TotalChargebackCost.Equals(input.TotalChargebackCost))
                 );
         }
 
@@ -392,6 +420,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PreviousPayoutId.GetHashCode();
                 if (this.NextPayoutId != null)
                     hashCode = hashCode * 59 + this.NextPayoutId.GetHashCode();
+                if (this.RefundedFeesOnChargebacks != null)
+                    hashCode = hashCode * 59 + this.RefundedFeesOnChargebacks.GetHashCode();
+                if (this.TotalChargebackCost != null)
+                    hashCode = hashCode * 59 + this.TotalChargebackCost.GetHashCode();
                 return hashCode;
             }
         }
