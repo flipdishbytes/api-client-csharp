@@ -41,7 +41,8 @@ namespace Flipdish.Model
         /// <param name="isEnabled">Is campaign enabled.</param>
         /// <param name="storeIds">Ids of stores this campaign applies to.</param>
         /// <param name="appId">The app that this campaign belongs to..</param>
-        public RetentionCampaignBase(int? notifyCustomerAfterMinutes = default(int?), int? percentDiscountAmount = default(int?), double? lumpDiscountAmount = default(double?), int? voucherValidPeriodDays = default(int?), bool? includeDeliveryFee = default(bool?), bool? autoApplyResultingVouchers = default(bool?), bool? includeExistingOrders = default(bool?), bool? isEnabled = default(bool?), List<int?> storeIds = default(List<int?>), string appId = default(string))
+        /// <param name="forceDiscount">Controls whether the voucher generated from this campaign will override discount exclusions.</param>
+        public RetentionCampaignBase(int? notifyCustomerAfterMinutes = default(int?), int? percentDiscountAmount = default(int?), double? lumpDiscountAmount = default(double?), int? voucherValidPeriodDays = default(int?), bool? includeDeliveryFee = default(bool?), bool? autoApplyResultingVouchers = default(bool?), bool? includeExistingOrders = default(bool?), bool? isEnabled = default(bool?), List<int?> storeIds = default(List<int?>), string appId = default(string), bool? forceDiscount = default(bool?))
         {
             this.NotifyCustomerAfterMinutes = notifyCustomerAfterMinutes;
             this.PercentDiscountAmount = percentDiscountAmount;
@@ -53,6 +54,7 @@ namespace Flipdish.Model
             this.IsEnabled = isEnabled;
             this.StoreIds = storeIds;
             this.AppId = appId;
+            this.ForceDiscount = forceDiscount;
         }
         
         /// <summary>
@@ -126,6 +128,13 @@ namespace Flipdish.Model
         public string AppId { get; set; }
 
         /// <summary>
+        /// Controls whether the voucher generated from this campaign will override discount exclusions
+        /// </summary>
+        /// <value>Controls whether the voucher generated from this campaign will override discount exclusions</value>
+        [DataMember(Name="ForceDiscount", EmitDefaultValue=false)]
+        public bool? ForceDiscount { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -143,6 +152,7 @@ namespace Flipdish.Model
             sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
             sb.Append("  StoreIds: ").Append(StoreIds).Append("\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
+            sb.Append("  ForceDiscount: ").Append(ForceDiscount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -226,6 +236,11 @@ namespace Flipdish.Model
                     this.AppId == input.AppId ||
                     (this.AppId != null &&
                     this.AppId.Equals(input.AppId))
+                ) && 
+                (
+                    this.ForceDiscount == input.ForceDiscount ||
+                    (this.ForceDiscount != null &&
+                    this.ForceDiscount.Equals(input.ForceDiscount))
                 );
         }
 
@@ -258,6 +273,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StoreIds.GetHashCode();
                 if (this.AppId != null)
                     hashCode = hashCode * 59 + this.AppId.GetHashCode();
+                if (this.ForceDiscount != null)
+                    hashCode = hashCode * 59 + this.ForceDiscount.GetHashCode();
                 return hashCode;
             }
         }

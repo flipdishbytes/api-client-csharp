@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **IsEnabled** | **bool?** | Is campaign enabled | [optional] 
 **StoreIds** | **List&lt;int?&gt;** | Ids of stores this campaign applies to | [optional] 
 **AppId** | **string** | The app that this campaign belongs to. | [optional] 
+**ForceDiscount** | **bool?** | Controls whether the voucher generated from this campaign will override discount exclusions | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
