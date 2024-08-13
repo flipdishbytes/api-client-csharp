@@ -117,6 +117,37 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>RestApiPaginationResultPayoutReport3RefundedOrder</returns>
+        RestApiPaginationResultPayoutReport3RefundedOrder GetPayoutReport3RefundedOrders (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultPayoutReport3RefundedOrder</returns>
+        ApiResponse<RestApiPaginationResultPayoutReport3RefundedOrder> GetPayoutReport3RefundedOrdersWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, int? page = null, int? limit = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
         /// <returns>RestApiResultFileCreationResult</returns>
         RestApiResultFileCreationResult PayoutReport3ExportPayoutChargebacks (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
@@ -215,6 +246,33 @@ namespace Flipdish.Api
         /// <param name="stores"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultFileCreationResult</returns>
         ApiResponse<RestApiResultFileCreationResult> PayoutReport3ExportPayoutPosSalesWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="stores"> (optional)</param>
+        /// <returns>RestApiResultFileCreationResult</returns>
+        RestApiResultFileCreationResult PayoutReport3ExportPayoutRefundedOrders (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="stores"> (optional)</param>
+        /// <returns>ApiResponse of RestApiResultFileCreationResult</returns>
+        ApiResponse<RestApiResultFileCreationResult> PayoutReport3ExportPayoutRefundedOrdersWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
         /// <summary>
         /// 
         /// </summary>
@@ -337,6 +395,37 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>Task of RestApiPaginationResultPayoutReport3RefundedOrder</returns>
+        System.Threading.Tasks.Task<RestApiPaginationResultPayoutReport3RefundedOrder> GetPayoutReport3RefundedOrdersAsync (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultPayoutReport3RefundedOrder)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPayoutReport3RefundedOrder>> GetPayoutReport3RefundedOrdersAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, int? page = null, int? limit = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
         /// <returns>Task of RestApiResultFileCreationResult</returns>
         System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutChargebacksAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
@@ -435,6 +524,33 @@ namespace Flipdish.Api
         /// <param name="stores"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultFileCreationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutPosSalesAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="stores"> (optional)</param>
+        /// <returns>Task of RestApiResultFileCreationResult</returns>
+        System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutRefundedOrdersAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="stores"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiResultFileCreationResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutRefundedOrdersAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1109,6 +1225,199 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultPayoutReport3Overview>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultPayoutReport3Overview) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultPayoutReport3Overview)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>RestApiPaginationResultPayoutReport3RefundedOrder</returns>
+        public RestApiPaginationResultPayoutReport3RefundedOrder GetPayoutReport3RefundedOrders (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<RestApiPaginationResultPayoutReport3RefundedOrder> localVarResponse = GetPayoutReport3RefundedOrdersWithHttpInfo(appId, bankAccountId, payoutId, storeIds, page, limit);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>ApiResponse of RestApiPaginationResultPayoutReport3RefundedOrder</returns>
+        public ApiResponse< RestApiPaginationResultPayoutReport3RefundedOrder > GetPayoutReport3RefundedOrdersWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, int? page = null, int? limit = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling PayoutReportsApi->GetPayoutReport3RefundedOrders");
+            // verify the required parameter 'bankAccountId' is set
+            if (bankAccountId == null)
+                throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling PayoutReportsApi->GetPayoutReport3RefundedOrders");
+            // verify the required parameter 'payoutId' is set
+            if (payoutId == null)
+                throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutReportsApi->GetPayoutReport3RefundedOrders");
+
+            var localVarPath = "./api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/refundedOrders";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
+            if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
+            if (storeIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeIds", storeIds)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPayoutReport3RefundedOrders", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiPaginationResultPayoutReport3RefundedOrder>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiPaginationResultPayoutReport3RefundedOrder) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultPayoutReport3RefundedOrder)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>Task of RestApiPaginationResultPayoutReport3RefundedOrder</returns>
+        public async System.Threading.Tasks.Task<RestApiPaginationResultPayoutReport3RefundedOrder> GetPayoutReport3RefundedOrdersAsync (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<RestApiPaginationResultPayoutReport3RefundedOrder> localVarResponse = await GetPayoutReport3RefundedOrdersAsyncWithHttpInfo(appId, bankAccountId, payoutId, storeIds, page, limit);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <param name="page"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiPaginationResultPayoutReport3RefundedOrder)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPayoutReport3RefundedOrder>> GetPayoutReport3RefundedOrdersAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, int? page = null, int? limit = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling PayoutReportsApi->GetPayoutReport3RefundedOrders");
+            // verify the required parameter 'bankAccountId' is set
+            if (bankAccountId == null)
+                throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling PayoutReportsApi->GetPayoutReport3RefundedOrders");
+            // verify the required parameter 'payoutId' is set
+            if (payoutId == null)
+                throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutReportsApi->GetPayoutReport3RefundedOrders");
+
+            var localVarPath = "./api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/refundedOrders";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
+            if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
+            if (storeIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeIds", storeIds)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPayoutReport3RefundedOrders", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiPaginationResultPayoutReport3RefundedOrder>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiPaginationResultPayoutReport3RefundedOrder) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultPayoutReport3RefundedOrder)));
         }
 
         /// <summary>
@@ -1827,6 +2136,187 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("PayoutReport3ExportPayoutPosSales", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultFileCreationResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultFileCreationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultFileCreationResult)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="stores"> (optional)</param>
+        /// <returns>RestApiResultFileCreationResult</returns>
+        public RestApiResultFileCreationResult PayoutReport3ExportPayoutRefundedOrders (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
+        {
+             ApiResponse<RestApiResultFileCreationResult> localVarResponse = PayoutReport3ExportPayoutRefundedOrdersWithHttpInfo(appId, bankAccountId, payoutId, stores);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="stores"> (optional)</param>
+        /// <returns>ApiResponse of RestApiResultFileCreationResult</returns>
+        public ApiResponse< RestApiResultFileCreationResult > PayoutReport3ExportPayoutRefundedOrdersWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling PayoutReportsApi->PayoutReport3ExportPayoutRefundedOrders");
+            // verify the required parameter 'bankAccountId' is set
+            if (bankAccountId == null)
+                throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling PayoutReportsApi->PayoutReport3ExportPayoutRefundedOrders");
+            // verify the required parameter 'payoutId' is set
+            if (payoutId == null)
+                throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutReportsApi->PayoutReport3ExportPayoutRefundedOrders");
+
+            var localVarPath = "./api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/refundedOrders";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
+            if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
+            if (stores != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "stores", stores)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PayoutReport3ExportPayoutRefundedOrders", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultFileCreationResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultFileCreationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultFileCreationResult)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="stores"> (optional)</param>
+        /// <returns>Task of RestApiResultFileCreationResult</returns>
+        public async System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutRefundedOrdersAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
+        {
+             ApiResponse<RestApiResultFileCreationResult> localVarResponse = await PayoutReport3ExportPayoutRefundedOrdersAsyncWithHttpInfo(appId, bankAccountId, payoutId, stores);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="stores"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiResultFileCreationResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutRefundedOrdersAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling PayoutReportsApi->PayoutReport3ExportPayoutRefundedOrders");
+            // verify the required parameter 'bankAccountId' is set
+            if (bankAccountId == null)
+                throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling PayoutReportsApi->PayoutReport3ExportPayoutRefundedOrders");
+            // verify the required parameter 'payoutId' is set
+            if (payoutId == null)
+                throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutReportsApi->PayoutReport3ExportPayoutRefundedOrders");
+
+            var localVarPath = "./api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/refundedOrders";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
+            if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
+            if (stores != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "stores", stores)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PayoutReport3ExportPayoutRefundedOrders", localVarResponse);
                 if (exception != null) throw exception;
             }
 
