@@ -465,7 +465,6 @@ Class | Method | HTTP request | Description
 *PaymentIntentsApi* | [**GetPaymentIntent**](docs/PaymentIntentsApi.md#getpaymentintent) | **GET** /api/v1.0/payment_intents/{paymentIntentId} | 
 *PaymentsApi* | [**GetOrderPaymentInformation**](docs/PaymentsApi.md#getorderpaymentinformation) | **GET** /api/v1.0/payments/payment/{orderId}/refundable | 
 *PayoutReportsApi* | [**GetPayoutReport3Details**](docs/PayoutReportsApi.md#getpayoutreport3details) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/details | 
-*PayoutReportsApi* | [**GetPayoutReport3Orders**](docs/PayoutReportsApi.md#getpayoutreport3orders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/orders | 
 *PayoutReportsApi* | [**GetPayoutReport3Overview**](docs/PayoutReportsApi.md#getpayoutreport3overview) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/overview | 
 *PayoutReportsApi* | [**GetPayoutReport3RefundedOrders**](docs/PayoutReportsApi.md#getpayoutreport3refundedorders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/refundedOrders | 
 *PayoutReportsApi* | [**PayoutReport3ExportPayoutChargebacks**](docs/PayoutReportsApi.md#payoutreport3exportpayoutchargebacks) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/chargebacks | 
@@ -473,7 +472,6 @@ Class | Method | HTTP request | Description
 *PayoutReportsApi* | [**PayoutReport3ExportPayoutOrders**](docs/PayoutReportsApi.md#payoutreport3exportpayoutorders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/orders | 
 *PayoutReportsApi* | [**PayoutReport3ExportPayoutPosSales**](docs/PayoutReportsApi.md#payoutreport3exportpayoutpossales) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/possales | 
 *PayoutReportsApi* | [**PayoutReport3ExportPayoutRefundedOrders**](docs/PayoutReportsApi.md#payoutreport3exportpayoutrefundedorders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/refundedOrders | 
-*PayoutReportsApi* | [**PayoutReport3ExportPayoutRefundedRejected**](docs/PayoutReportsApi.md#payoutreport3exportpayoutrefundedrejected) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/refundedrejected | 
 *PayoutsApi* | [**GetPayout**](docs/PayoutsApi.md#getpayout) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId} | 
 *PayoutsApi* | [**GetPayoutChargebacks**](docs/PayoutsApi.md#getpayoutchargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks | 
 *PayoutsApi* | [**GetPayoutOrders**](docs/PayoutsApi.md#getpayoutorders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders | 
@@ -991,7 +989,6 @@ Class | Method | HTTP request | Description
  - [Model.PayoutReport3DetailsSummary](docs/PayoutReport3DetailsSummary.md)
  - [Model.PayoutReport3Overview](docs/PayoutReport3Overview.md)
  - [Model.PayoutReport3OverviewHeader](docs/PayoutReport3OverviewHeader.md)
- - [Model.PayoutReport3PayoutOrder](docs/PayoutReport3PayoutOrder.md)
  - [Model.PayoutReport3RefundedOrder](docs/PayoutReport3RefundedOrder.md)
  - [Model.PayoutReport3Store](docs/PayoutReport3Store.md)
  - [Model.PayoutRequestIds](docs/PayoutRequestIds.md)
@@ -1118,7 +1115,6 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultPayoutOrder](docs/RestApiPaginationResultPayoutOrder.md)
  - [Model.RestApiPaginationResultPayoutOtherCharge](docs/RestApiPaginationResultPayoutOtherCharge.md)
  - [Model.RestApiPaginationResultPayoutRefund](docs/RestApiPaginationResultPayoutRefund.md)
- - [Model.RestApiPaginationResultPayoutReport3PayoutOrder](docs/RestApiPaginationResultPayoutReport3PayoutOrder.md)
  - [Model.RestApiPaginationResultPayoutReport3RefundedOrder](docs/RestApiPaginationResultPayoutReport3RefundedOrder.md)
  - [Model.RestApiPaginationResultPendingMenuChanges](docs/RestApiPaginationResultPendingMenuChanges.md)
  - [Model.RestApiPaginationResultPhoneCall](docs/RestApiPaginationResultPhoneCall.md)
