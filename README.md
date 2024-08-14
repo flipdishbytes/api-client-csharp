@@ -570,6 +570,7 @@ Class | Method | HTTP request | Description
 *TeammatesApi* | [**GetTeammateByAppIdAndTeammateId**](docs/TeammatesApi.md#getteammatebyappidandteammateid) | **GET** /api/v1.0/{appId}/teammates/{id} | 
 *TeammatesApi* | [**GetTeammatesByAppId**](docs/TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | 
 *TeammatesApi* | [**RedeemInvitation**](docs/TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+*TeammatesApi* | [**TeammatesAcceptInvitation**](docs/TeammatesApi.md#teammatesacceptinvitation) | **GET** /api/v1.0/{appId}/teammates/accept/{otc} | 
 *TeammatesApi* | [**UpdateTeammate**](docs/TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{id} | 
 *TerminalIotApi* | [**GetTerminalIotConnection**](docs/TerminalIotApi.md#getterminaliotconnection) | **POST** /api/v1.0/terminaliot/connect | 
 *TipsApi* | [**TipConfigGet**](docs/TipsApi.md#tipconfigget) | **GET** /api/v1.0/stores/{storeId}/tipconfig | 
@@ -608,6 +609,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Model.Accept](docs/Accept.md)
+ - [Model.AcceptInvitationResult](docs/AcceptInvitationResult.md)
  - [Model.AccountDetail](docs/AccountDetail.md)
  - [Model.AccountDetailBase](docs/AccountDetailBase.md)
  - [Model.AccountFieldDefinition](docs/AccountFieldDefinition.md)
@@ -1130,6 +1132,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultVoucherSummary](docs/RestApiPaginationResultVoucherSummary.md)
  - [Model.RestApiPaginationResultWebhookLog](docs/RestApiPaginationResultWebhookLog.md)
  - [Model.RestApiPaginationResultWebhookSubscription](docs/RestApiPaginationResultWebhookSubscription.md)
+ - [Model.RestApiResultAcceptInvitationResult](docs/RestApiResultAcceptInvitationResult.md)
  - [Model.RestApiResultAccountDetail](docs/RestApiResultAccountDetail.md)
  - [Model.RestApiResultAccountFieldsDefinitions](docs/RestApiResultAccountFieldsDefinitions.md)
  - [Model.RestApiResultAddressFormResponse](docs/RestApiResultAddressFormResponse.md)

@@ -144,6 +144,29 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="otc"></param>
+        /// <param name="appId"></param>
+        /// <returns>RestApiResultAcceptInvitationResult</returns>
+        RestApiResultAcceptInvitationResult TeammatesAcceptInvitation (string otc, string appId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="otc"></param>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiResultAcceptInvitationResult</returns>
+        ApiResponse<RestApiResultAcceptInvitationResult> TeammatesAcceptInvitationWithHttpInfo (string otc, string appId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="id"></param>
         /// <param name="teammate"></param>
@@ -277,6 +300,29 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultRedeemInvitationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultRedeemInvitationResult>> RedeemInvitationAsyncWithHttpInfo (string otc, string appId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="otc"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiResultAcceptInvitationResult</returns>
+        System.Threading.Tasks.Task<RestApiResultAcceptInvitationResult> TeammatesAcceptInvitationAsync (string otc, string appId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="otc"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultAcceptInvitationResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultAcceptInvitationResult>> TeammatesAcceptInvitationAsyncWithHttpInfo (string otc, string appId);
         /// <summary>
         /// 
         /// </summary>
@@ -1225,6 +1271,169 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultRedeemInvitationResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultRedeemInvitationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultRedeemInvitationResult)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="otc"></param>
+        /// <param name="appId"></param>
+        /// <returns>RestApiResultAcceptInvitationResult</returns>
+        public RestApiResultAcceptInvitationResult TeammatesAcceptInvitation (string otc, string appId)
+        {
+             ApiResponse<RestApiResultAcceptInvitationResult> localVarResponse = TeammatesAcceptInvitationWithHttpInfo(otc, appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="otc"></param>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiResultAcceptInvitationResult</returns>
+        public ApiResponse< RestApiResultAcceptInvitationResult > TeammatesAcceptInvitationWithHttpInfo (string otc, string appId)
+        {
+            // verify the required parameter 'otc' is set
+            if (otc == null)
+                throw new ApiException(400, "Missing required parameter 'otc' when calling TeammatesApi->TeammatesAcceptInvitation");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling TeammatesApi->TeammatesAcceptInvitation");
+
+            var localVarPath = "./api/v1.0/{appId}/teammates/accept/{otc}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (otc != null) localVarPathParams.Add("otc", this.Configuration.ApiClient.ParameterToString(otc)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TeammatesAcceptInvitation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultAcceptInvitationResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultAcceptInvitationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAcceptInvitationResult)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="otc"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiResultAcceptInvitationResult</returns>
+        public async System.Threading.Tasks.Task<RestApiResultAcceptInvitationResult> TeammatesAcceptInvitationAsync (string otc, string appId)
+        {
+             ApiResponse<RestApiResultAcceptInvitationResult> localVarResponse = await TeammatesAcceptInvitationAsyncWithHttpInfo(otc, appId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="otc"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultAcceptInvitationResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAcceptInvitationResult>> TeammatesAcceptInvitationAsyncWithHttpInfo (string otc, string appId)
+        {
+            // verify the required parameter 'otc' is set
+            if (otc == null)
+                throw new ApiException(400, "Missing required parameter 'otc' when calling TeammatesApi->TeammatesAcceptInvitation");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling TeammatesApi->TeammatesAcceptInvitation");
+
+            var localVarPath = "./api/v1.0/{appId}/teammates/accept/{otc}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (otc != null) localVarPathParams.Add("otc", this.Configuration.ApiClient.ParameterToString(otc)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TeammatesAcceptInvitation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultAcceptInvitationResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultAcceptInvitationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAcceptInvitationResult)));
         }
 
         /// <summary>

@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**GetTeammateByAppIdAndTeammateId**](TeammatesApi.md#getteammatebyappidandteammateid) | **GET** /api/v1.0/{appId}/teammates/{id} | 
 [**GetTeammatesByAppId**](TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | 
 [**RedeemInvitation**](TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+[**TeammatesAcceptInvitation**](TeammatesApi.md#teammatesacceptinvitation) | **GET** /api/v1.0/{appId}/teammates/accept/{otc} | 
 [**UpdateTeammate**](TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{id} | 
 
 
@@ -312,6 +313,69 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultRedeemInvitationResult**](RestApiResultRedeemInvitationResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="teammatesacceptinvitation"></a>
+# **TeammatesAcceptInvitation**
+> RestApiResultAcceptInvitationResult TeammatesAcceptInvitation (string otc, string appId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class TeammatesAcceptInvitationExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new TeammatesApi();
+            var otc = otc_example;  // string | 
+            var appId = appId_example;  // string | 
+
+            try
+            {
+                RestApiResultAcceptInvitationResult result = apiInstance.TeammatesAcceptInvitation(otc, appId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TeammatesApi.TeammatesAcceptInvitation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **otc** | **string**|  | 
+ **appId** | **string**|  | 
+
+### Return type
+
+[**RestApiResultAcceptInvitationResult**](RestApiResultAcceptInvitationResult.md)
 
 ### Authorization
 
