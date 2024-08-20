@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **IsValidForFirstOrderOnly** | **bool?** | Valid only on the first order by the customer | [optional] 
 **IsValidOncePerCustomer** | **bool?** | Valid once per customer | [optional] 
 **IsValidOnlyOnce** | **bool?** | Valid only once, by any customer (once used cannot be used again by any other customer) | [optional] 
+**IsDiscoverable** | **bool?** | Enables the voucher to be offered in the Voucher Discoverability feature | [optional] 
 **StartDate** | **DateTime?** | Voucher Starts On (Time in UTC) | [optional] 
 **ExpiryDate** | **DateTime?** | Voucher Expires On (Time in UTC) | [optional] 
 **ChannelRestrictions** | **List&lt;string&gt;** | Limit the channels this voucher can be used on | [optional] 
