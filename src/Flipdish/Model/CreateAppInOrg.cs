@@ -34,11 +34,13 @@ namespace Flipdish.Model
         /// <param name="name">Name.</param>
         /// <param name="countryId">Country in ISO 3166-1 alpha-2 standard.</param>
         /// <param name="mainColor">Main color for the different sales channels.</param>
-        public CreateAppInOrg(string name = default(string), string countryId = default(string), string mainColor = default(string))
+        /// <param name="appId">A predefined AppId.</param>
+        public CreateAppInOrg(string name = default(string), string countryId = default(string), string mainColor = default(string), string appId = default(string))
         {
             this.Name = name;
             this.CountryId = countryId;
             this.MainColor = mainColor;
+            this.AppId = appId;
         }
         
         /// <summary>
@@ -63,6 +65,13 @@ namespace Flipdish.Model
         public string MainColor { get; set; }
 
         /// <summary>
+        /// A predefined AppId
+        /// </summary>
+        /// <value>A predefined AppId</value>
+        [DataMember(Name="AppId", EmitDefaultValue=false)]
+        public string AppId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -73,6 +82,7 @@ namespace Flipdish.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  CountryId: ").Append(CountryId).Append("\n");
             sb.Append("  MainColor: ").Append(MainColor).Append("\n");
+            sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,6 +131,11 @@ namespace Flipdish.Model
                     this.MainColor == input.MainColor ||
                     (this.MainColor != null &&
                     this.MainColor.Equals(input.MainColor))
+                ) && 
+                (
+                    this.AppId == input.AppId ||
+                    (this.AppId != null &&
+                    this.AppId.Equals(input.AppId))
                 );
         }
 
@@ -139,6 +154,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CountryId.GetHashCode();
                 if (this.MainColor != null)
                     hashCode = hashCode * 59 + this.MainColor.GetHashCode();
+                if (this.AppId != null)
+                    hashCode = hashCode * 59 + this.AppId.GetHashCode();
                 return hashCode;
             }
         }
