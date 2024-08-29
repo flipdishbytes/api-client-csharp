@@ -205,6 +205,7 @@ namespace Flipdish.Model
         /// <param name="isValidOncePerCustomer">Valid once per customer.</param>
         /// <param name="isValidOnlyOnce">Valid only once, by any customer (once used cannot be used again by any other customer).</param>
         /// <param name="isDiscoverable">Enables the voucher to be offered in the Voucher Discoverability feature.</param>
+        /// <param name="forceDiscount">Force the discount to be applied which bypasses some menu restrictions.</param>
         /// <param name="startDate">Voucher Starts On (Time in UTC).</param>
         /// <param name="expiryDate">Voucher Expires On (Time in UTC).</param>
         /// <param name="channelRestrictions">Limit the channels this voucher can be used on.</param>
@@ -212,7 +213,7 @@ namespace Flipdish.Model
         /// <param name="voucherSubType">Voucher Subtype.</param>
         /// <param name="customerId">Customer UserID.</param>
         /// <param name="maxRedemptions">Maximum number of times the voucher can be redeemed (used).</param>
-        public CreateVoucher(VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), CreatePromotion promotion = default(CreatePromotion), CreditNoteDetails creditNoteDetails = default(CreditNoteDetails), LumpDiscountDetails lumpDiscountDetails = default(LumpDiscountDetails), PercentDiscountDetails percentDiscountDetails = default(PercentDiscountDetails), string code = default(string), string description = default(string), List<int?> stores = default(List<int?>), double? validOnOrdersOver = default(double?), bool? takesPriority = default(bool?), bool? isEnabled = default(bool?), bool? isAutomaticallyApplied = default(bool?), bool? includeDeliveryFee = default(bool?), bool? isValidForDeliveryOrders = default(bool?), bool? isValidForPickupOrders = default(bool?), bool? isValidForOrdersPayedOnline = default(bool?), bool? isValidForOrdersPayedByCash = default(bool?), bool? isValidForFirstOrderOnly = default(bool?), bool? isValidOncePerCustomer = default(bool?), bool? isValidOnlyOnce = default(bool?), bool? isDiscoverable = default(bool?), DateTime? startDate = default(DateTime?), DateTime? expiryDate = default(DateTime?), List<ChannelRestrictionsEnum> channelRestrictions = default(List<ChannelRestrictionsEnum>), List<ValidityPeriod> validityPeriods = default(List<ValidityPeriod>), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), int? customerId = default(int?), int? maxRedemptions = default(int?))
+        public CreateVoucher(VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), CreatePromotion promotion = default(CreatePromotion), CreditNoteDetails creditNoteDetails = default(CreditNoteDetails), LumpDiscountDetails lumpDiscountDetails = default(LumpDiscountDetails), PercentDiscountDetails percentDiscountDetails = default(PercentDiscountDetails), string code = default(string), string description = default(string), List<int?> stores = default(List<int?>), double? validOnOrdersOver = default(double?), bool? takesPriority = default(bool?), bool? isEnabled = default(bool?), bool? isAutomaticallyApplied = default(bool?), bool? includeDeliveryFee = default(bool?), bool? isValidForDeliveryOrders = default(bool?), bool? isValidForPickupOrders = default(bool?), bool? isValidForOrdersPayedOnline = default(bool?), bool? isValidForOrdersPayedByCash = default(bool?), bool? isValidForFirstOrderOnly = default(bool?), bool? isValidOncePerCustomer = default(bool?), bool? isValidOnlyOnce = default(bool?), bool? isDiscoverable = default(bool?), bool? forceDiscount = default(bool?), DateTime? startDate = default(DateTime?), DateTime? expiryDate = default(DateTime?), List<ChannelRestrictionsEnum> channelRestrictions = default(List<ChannelRestrictionsEnum>), List<ValidityPeriod> validityPeriods = default(List<ValidityPeriod>), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), int? customerId = default(int?), int? maxRedemptions = default(int?))
         {
             this.VoucherType = voucherType;
             this.Promotion = promotion;
@@ -235,6 +236,7 @@ namespace Flipdish.Model
             this.IsValidOncePerCustomer = isValidOncePerCustomer;
             this.IsValidOnlyOnce = isValidOnlyOnce;
             this.IsDiscoverable = isDiscoverable;
+            this.ForceDiscount = forceDiscount;
             this.StartDate = startDate;
             this.ExpiryDate = expiryDate;
             this.ChannelRestrictions = channelRestrictions;
@@ -386,6 +388,13 @@ namespace Flipdish.Model
         public bool? IsDiscoverable { get; set; }
 
         /// <summary>
+        /// Force the discount to be applied which bypasses some menu restrictions
+        /// </summary>
+        /// <value>Force the discount to be applied which bypasses some menu restrictions</value>
+        [DataMember(Name="ForceDiscount", EmitDefaultValue=false)]
+        public bool? ForceDiscount { get; set; }
+
+        /// <summary>
         /// Voucher Starts On (Time in UTC)
         /// </summary>
         /// <value>Voucher Starts On (Time in UTC)</value>
@@ -451,6 +460,7 @@ namespace Flipdish.Model
             sb.Append("  IsValidOncePerCustomer: ").Append(IsValidOncePerCustomer).Append("\n");
             sb.Append("  IsValidOnlyOnce: ").Append(IsValidOnlyOnce).Append("\n");
             sb.Append("  IsDiscoverable: ").Append(IsDiscoverable).Append("\n");
+            sb.Append("  ForceDiscount: ").Append(ForceDiscount).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  ExpiryDate: ").Append(ExpiryDate).Append("\n");
             sb.Append("  ChannelRestrictions: ").Append(ChannelRestrictions).Append("\n");
@@ -598,6 +608,11 @@ namespace Flipdish.Model
                     this.IsDiscoverable.Equals(input.IsDiscoverable))
                 ) && 
                 (
+                    this.ForceDiscount == input.ForceDiscount ||
+                    (this.ForceDiscount != null &&
+                    this.ForceDiscount.Equals(input.ForceDiscount))
+                ) && 
+                (
                     this.StartDate == input.StartDate ||
                     (this.StartDate != null &&
                     this.StartDate.Equals(input.StartDate))
@@ -685,6 +700,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.IsValidOnlyOnce.GetHashCode();
                 if (this.IsDiscoverable != null)
                     hashCode = hashCode * 59 + this.IsDiscoverable.GetHashCode();
+                if (this.ForceDiscount != null)
+                    hashCode = hashCode * 59 + this.ForceDiscount.GetHashCode();
                 if (this.StartDate != null)
                     hashCode = hashCode * 59 + this.StartDate.GetHashCode();
                 if (this.ExpiryDate != null)
