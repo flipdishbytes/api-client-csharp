@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**FormByCountry**](AddressApi.md#formbycountry) | **GET** /api/v1.0/address/country/{countryCode}/form | 
 [**FormatGoogleAddress**](AddressApi.md#formatgoogleaddress) | **POST** /api/v1.0/address/google | 
 [**GetCountries**](AddressApi.md#getcountries) | **GET** /api/v1.0/address/countries | 
+[**ValidateAddressForm**](AddressApi.md#validateaddressform) | **POST** /api/v1.0/address/validate | 
 
 
 <a name="formbyapp"></a>
@@ -256,6 +257,67 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validateaddressform"></a>
+# **ValidateAddressForm**
+> RestApiStringResult ValidateAddressForm (StoreAddressForm address)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class ValidateAddressFormExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AddressApi();
+            var address = new StoreAddressForm(); // StoreAddressForm | 
+
+            try
+            {
+                RestApiStringResult result = apiInstance.ValidateAddressForm(address);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AddressApi.ValidateAddressForm: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **address** | [**StoreAddressForm**](StoreAddressForm.md)|  | 
+
+### Return type
+
+[**RestApiStringResult**](RestApiStringResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

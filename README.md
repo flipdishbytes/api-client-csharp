@@ -98,6 +98,7 @@ Class | Method | HTTP request | Description
 *AddressApi* | [**FormByCountry**](docs/AddressApi.md#formbycountry) | **GET** /api/v1.0/address/country/{countryCode}/form | 
 *AddressApi* | [**FormatGoogleAddress**](docs/AddressApi.md#formatgoogleaddress) | **POST** /api/v1.0/address/google | 
 *AddressApi* | [**GetCountries**](docs/AddressApi.md#getcountries) | **GET** /api/v1.0/address/countries | 
+*AddressApi* | [**ValidateAddressForm**](docs/AddressApi.md#validateaddressform) | **POST** /api/v1.0/address/validate | 
 *ApmApi* | [**GetApmStatus**](docs/ApmApi.md#getapmstatus) | **GET** /api/v1.0/{appId}/apm/status | 
 *ApmApi* | [**GetBasicStatistics**](docs/ApmApi.md#getbasicstatistics) | **GET** /api/v1.0/{appId}/apm/statistics | 
 *ApmApi* | [**GetCalendarWeekStatistics**](docs/ApmApi.md#getcalendarweekstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calendar | 
