@@ -3,6 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**OrgId** | **string** | Organisation Id | [optional] 
 **BankAccount** | [**BankAccount**](BankAccount.md) | The create bank account | [optional] 
 **User** | [**UserEventInfo**](UserEventInfo.md) | Updated by user | [optional] 
 **EventName** | **string** | The event name | [optional] 

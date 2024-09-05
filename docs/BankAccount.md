@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **AccountHolderAddress** | **string** | Account Holders Address | [optional] 
 **AccountHolderCountryCode** | **string** | Account Holders Country Code | [optional] 
 **VatNumber** | **string** | Account Holders Vat Number | [optional] 
+**StripeAccountId** | **string** | Stripe Id of the connected account | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

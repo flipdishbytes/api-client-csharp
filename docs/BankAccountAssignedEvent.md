@@ -3,6 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**OrgId** | **string** | Organisation Id | [optional] 
 **BankAccount** | [**BankAccount**](BankAccount.md) | The assigned bank account | [optional] 
 **Description** | **string** | Event description | [optional] 
 **User** | [**UserEventInfo**](UserEventInfo.md) | Updated by user | [optional] 

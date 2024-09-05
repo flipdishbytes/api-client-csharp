@@ -82,7 +82,8 @@ namespace Flipdish.Model
         /// <param name="accountHolderAddress">Account Holders Address.</param>
         /// <param name="accountHolderCountryCode">Account Holders Country Code.</param>
         /// <param name="vatNumber">Account Holders Vat Number.</param>
-        public BankAccount(int? id = default(int?), string accountName = default(string), string iban = default(string), string swift = default(string), List<AccountFieldKeyValuePair> populatedAccountFields = default(List<AccountFieldKeyValuePair>), AccountStateEnum? accountState = default(AccountStateEnum?), List<string> storeNames = default(List<string>), string bankAddress = default(string), string bankCountryCode = default(string), string accountHolderAddress = default(string), string accountHolderCountryCode = default(string), string vatNumber = default(string))
+        /// <param name="stripeAccountId">Stripe Id of the connected account.</param>
+        public BankAccount(int? id = default(int?), string accountName = default(string), string iban = default(string), string swift = default(string), List<AccountFieldKeyValuePair> populatedAccountFields = default(List<AccountFieldKeyValuePair>), AccountStateEnum? accountState = default(AccountStateEnum?), List<string> storeNames = default(List<string>), string bankAddress = default(string), string bankCountryCode = default(string), string accountHolderAddress = default(string), string accountHolderCountryCode = default(string), string vatNumber = default(string), string stripeAccountId = default(string))
         {
             this.Id = id;
             this.AccountName = accountName;
@@ -96,6 +97,7 @@ namespace Flipdish.Model
             this.AccountHolderAddress = accountHolderAddress;
             this.AccountHolderCountryCode = accountHolderCountryCode;
             this.VatNumber = vatNumber;
+            this.StripeAccountId = stripeAccountId;
         }
         
         /// <summary>
@@ -177,6 +179,13 @@ namespace Flipdish.Model
         public string VatNumber { get; set; }
 
         /// <summary>
+        /// Stripe Id of the connected account
+        /// </summary>
+        /// <value>Stripe Id of the connected account</value>
+        [DataMember(Name="StripeAccountId", EmitDefaultValue=false)]
+        public string StripeAccountId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -196,6 +205,7 @@ namespace Flipdish.Model
             sb.Append("  AccountHolderAddress: ").Append(AccountHolderAddress).Append("\n");
             sb.Append("  AccountHolderCountryCode: ").Append(AccountHolderCountryCode).Append("\n");
             sb.Append("  VatNumber: ").Append(VatNumber).Append("\n");
+            sb.Append("  StripeAccountId: ").Append(StripeAccountId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -289,6 +299,11 @@ namespace Flipdish.Model
                     this.VatNumber == input.VatNumber ||
                     (this.VatNumber != null &&
                     this.VatNumber.Equals(input.VatNumber))
+                ) && 
+                (
+                    this.StripeAccountId == input.StripeAccountId ||
+                    (this.StripeAccountId != null &&
+                    this.StripeAccountId.Equals(input.StripeAccountId))
                 );
         }
 
@@ -325,6 +340,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.AccountHolderCountryCode.GetHashCode();
                 if (this.VatNumber != null)
                     hashCode = hashCode * 59 + this.VatNumber.GetHashCode();
+                if (this.StripeAccountId != null)
+                    hashCode = hashCode * 59 + this.StripeAccountId.GetHashCode();
                 return hashCode;
             }
         }

@@ -31,6 +31,7 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BankAccountCreatedEvent" /> class.
         /// </summary>
+        /// <param name="orgId">Organisation Id.</param>
         /// <param name="bankAccount">The create bank account.</param>
         /// <param name="user">Updated by user.</param>
         /// <param name="eventName">The event name.</param>
@@ -39,8 +40,9 @@ namespace Flipdish.Model
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
         /// <param name="ipAddress">Ip Address.</param>
-        public BankAccountCreatedEvent(BankAccount bankAccount = default(BankAccount), UserEventInfo user = default(UserEventInfo), string eventName = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
+        public BankAccountCreatedEvent(string orgId = default(string), BankAccount bankAccount = default(BankAccount), UserEventInfo user = default(UserEventInfo), string eventName = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
         {
+            this.OrgId = orgId;
             this.BankAccount = bankAccount;
             this.User = user;
             this.EventName = eventName;
@@ -51,6 +53,13 @@ namespace Flipdish.Model
             this.IpAddress = ipAddress;
         }
         
+        /// <summary>
+        /// Organisation Id
+        /// </summary>
+        /// <value>Organisation Id</value>
+        [DataMember(Name="OrgId", EmitDefaultValue=false)]
+        public string OrgId { get; set; }
+
         /// <summary>
         /// The create bank account
         /// </summary>
@@ -115,6 +124,7 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BankAccountCreatedEvent {\n");
+            sb.Append("  OrgId: ").Append(OrgId).Append("\n");
             sb.Append("  BankAccount: ").Append(BankAccount).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
@@ -157,6 +167,11 @@ namespace Flipdish.Model
                 return false;
 
             return 
+                (
+                    this.OrgId == input.OrgId ||
+                    (this.OrgId != null &&
+                    this.OrgId.Equals(input.OrgId))
+                ) && 
                 (
                     this.BankAccount == input.BankAccount ||
                     (this.BankAccount != null &&
@@ -208,6 +223,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.OrgId != null)
+                    hashCode = hashCode * 59 + this.OrgId.GetHashCode();
                 if (this.BankAccount != null)
                     hashCode = hashCode * 59 + this.BankAccount.GetHashCode();
                 if (this.User != null)
