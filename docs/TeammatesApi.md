@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**DeleteTeammate**](TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | 
 [**GetTeammateByAppIdAndTeammateId**](TeammatesApi.md#getteammatebyappidandteammateid) | **GET** /api/v1.0/{appId}/teammates/{id} | 
 [**GetTeammatesByAppId**](TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | 
-[**GrantAccess**](TeammatesApi.md#grantaccess) | **POST** /api/v1.0/{appId}/teammates/GrantAccess | 
+[**Grantaccess**](TeammatesApi.md#grantaccess) | **POST** /api/v1.0/{appId}/teammates/grantaccess | 
 [**RedeemInvitation**](TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
 [**TeammatesAcceptInvitation**](TeammatesApi.md#teammatesacceptinvitation) | **GET** /api/v1.0/{appId}/teammates/accept/{otc} | 
 [**UpdateTeammate**](TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{id} | 
@@ -264,8 +264,8 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="grantaccess"></a>
-# **GrantAccess**
-> Object GrantAccess (string appId, CreateTeammate teammate)
+# **Grantaccess**
+> Object Grantaccess (string appId, CreateTeammate teammate)
 
 
 
@@ -279,7 +279,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class GrantAccessExample
+    public class GrantaccessExample
     {
         public void main()
         {
@@ -292,12 +292,12 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.GrantAccess(appId, teammate);
+                Object result = apiInstance.Grantaccess(appId, teammate);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TeammatesApi.GrantAccess: " + e.Message );
+                Debug.Print("Exception when calling TeammatesApi.Grantaccess: " + e.Message );
             }
         }
     }

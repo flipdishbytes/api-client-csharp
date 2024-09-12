@@ -568,7 +568,7 @@ Class | Method | HTTP request | Description
 *TeammatesApi* | [**DeleteTeammate**](docs/TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | 
 *TeammatesApi* | [**GetTeammateByAppIdAndTeammateId**](docs/TeammatesApi.md#getteammatebyappidandteammateid) | **GET** /api/v1.0/{appId}/teammates/{id} | 
 *TeammatesApi* | [**GetTeammatesByAppId**](docs/TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | 
-*TeammatesApi* | [**GrantAccess**](docs/TeammatesApi.md#grantaccess) | **POST** /api/v1.0/{appId}/teammates/GrantAccess | 
+*TeammatesApi* | [**Grantaccess**](docs/TeammatesApi.md#grantaccess) | **POST** /api/v1.0/{appId}/teammates/grantaccess | 
 *TeammatesApi* | [**RedeemInvitation**](docs/TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
 *TeammatesApi* | [**TeammatesAcceptInvitation**](docs/TeammatesApi.md#teammatesacceptinvitation) | **GET** /api/v1.0/{appId}/teammates/accept/{otc} | 
 *TeammatesApi* | [**UpdateTeammate**](docs/TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{id} | 

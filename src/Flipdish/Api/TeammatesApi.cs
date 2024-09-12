@@ -124,7 +124,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="teammate"></param>
         /// <returns>Object</returns>
-        Object GrantAccess (string appId, CreateTeammate teammate);
+        Object Grantaccess (string appId, CreateTeammate teammate);
 
         /// <summary>
         /// 
@@ -136,7 +136,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="teammate"></param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> GrantAccessWithHttpInfo (string appId, CreateTeammate teammate);
+        ApiResponse<Object> GrantaccessWithHttpInfo (string appId, CreateTeammate teammate);
         /// <summary>
         /// 
         /// </summary>
@@ -310,7 +310,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="teammate"></param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> GrantAccessAsync (string appId, CreateTeammate teammate);
+        System.Threading.Tasks.Task<Object> GrantaccessAsync (string appId, CreateTeammate teammate);
 
         /// <summary>
         /// 
@@ -322,7 +322,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="teammate"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GrantAccessAsyncWithHttpInfo (string appId, CreateTeammate teammate);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GrantaccessAsyncWithHttpInfo (string appId, CreateTeammate teammate);
         /// <summary>
         /// 
         /// </summary>
@@ -1163,9 +1163,9 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="teammate"></param>
         /// <returns>Object</returns>
-        public Object GrantAccess (string appId, CreateTeammate teammate)
+        public Object Grantaccess (string appId, CreateTeammate teammate)
         {
-             ApiResponse<Object> localVarResponse = GrantAccessWithHttpInfo(appId, teammate);
+             ApiResponse<Object> localVarResponse = GrantaccessWithHttpInfo(appId, teammate);
              return localVarResponse.Data;
         }
 
@@ -1176,16 +1176,16 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="teammate"></param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > GrantAccessWithHttpInfo (string appId, CreateTeammate teammate)
+        public ApiResponse< Object > GrantaccessWithHttpInfo (string appId, CreateTeammate teammate)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling TeammatesApi->GrantAccess");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling TeammatesApi->Grantaccess");
             // verify the required parameter 'teammate' is set
             if (teammate == null)
-                throw new ApiException(400, "Missing required parameter 'teammate' when calling TeammatesApi->GrantAccess");
+                throw new ApiException(400, "Missing required parameter 'teammate' when calling TeammatesApi->Grantaccess");
 
-            var localVarPath = "./api/v1.0/{appId}/teammates/GrantAccess";
+            var localVarPath = "./api/v1.0/{appId}/teammates/grantaccess";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1240,7 +1240,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GrantAccess", localVarResponse);
+                Exception exception = ExceptionFactory("Grantaccess", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1256,9 +1256,9 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="teammate"></param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> GrantAccessAsync (string appId, CreateTeammate teammate)
+        public async System.Threading.Tasks.Task<Object> GrantaccessAsync (string appId, CreateTeammate teammate)
         {
-             ApiResponse<Object> localVarResponse = await GrantAccessAsyncWithHttpInfo(appId, teammate);
+             ApiResponse<Object> localVarResponse = await GrantaccessAsyncWithHttpInfo(appId, teammate);
              return localVarResponse.Data;
 
         }
@@ -1270,16 +1270,16 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="teammate"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GrantAccessAsyncWithHttpInfo (string appId, CreateTeammate teammate)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GrantaccessAsyncWithHttpInfo (string appId, CreateTeammate teammate)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling TeammatesApi->GrantAccess");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling TeammatesApi->Grantaccess");
             // verify the required parameter 'teammate' is set
             if (teammate == null)
-                throw new ApiException(400, "Missing required parameter 'teammate' when calling TeammatesApi->GrantAccess");
+                throw new ApiException(400, "Missing required parameter 'teammate' when calling TeammatesApi->Grantaccess");
 
-            var localVarPath = "./api/v1.0/{appId}/teammates/GrantAccess";
+            var localVarPath = "./api/v1.0/{appId}/teammates/grantaccess";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1334,7 +1334,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GrantAccess", localVarResponse);
+                Exception exception = ExceptionFactory("Grantaccess", localVarResponse);
                 if (exception != null) throw exception;
             }
 
