@@ -72,7 +72,8 @@ namespace Flipdish.Model
         /// <param name="isPanaceaEnabled">Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain..</param>
         /// <param name="panaceaVanityUrl">In case of IsPanaceaEnabled is true, the app can be accessed via https://my.flipdish.com/{PanaceaVanityUrl}.</param>
         /// <param name="cookieConsentPromptEnabled">Cookie Consent Prompt Enabled.</param>
-        public AppConfigUpdateModel(string name = default(string), string hostName = default(string), string mainColor = default(string), string kioskPrimaryColour = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?), bool? isPanaceaEnabled = default(bool?), string panaceaVanityUrl = default(string), bool? cookieConsentPromptEnabled = default(bool?))
+        /// <param name="logoImageUrl">Logo image URL.</param>
+        public AppConfigUpdateModel(string name = default(string), string hostName = default(string), string mainColor = default(string), string kioskPrimaryColour = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?), bool? isPanaceaEnabled = default(bool?), string panaceaVanityUrl = default(string), bool? cookieConsentPromptEnabled = default(bool?), string logoImageUrl = default(string))
         {
             this.Name = name;
             this.HostName = hostName;
@@ -82,6 +83,7 @@ namespace Flipdish.Model
             this.IsPanaceaEnabled = isPanaceaEnabled;
             this.PanaceaVanityUrl = panaceaVanityUrl;
             this.CookieConsentPromptEnabled = cookieConsentPromptEnabled;
+            this.LogoImageUrl = logoImageUrl;
         }
         
         /// <summary>
@@ -135,6 +137,13 @@ namespace Flipdish.Model
         public bool? CookieConsentPromptEnabled { get; set; }
 
         /// <summary>
+        /// Logo image URL
+        /// </summary>
+        /// <value>Logo image URL</value>
+        [DataMember(Name="LogoImageUrl", EmitDefaultValue=false)]
+        public string LogoImageUrl { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -150,6 +159,7 @@ namespace Flipdish.Model
             sb.Append("  IsPanaceaEnabled: ").Append(IsPanaceaEnabled).Append("\n");
             sb.Append("  PanaceaVanityUrl: ").Append(PanaceaVanityUrl).Append("\n");
             sb.Append("  CookieConsentPromptEnabled: ").Append(CookieConsentPromptEnabled).Append("\n");
+            sb.Append("  LogoImageUrl: ").Append(LogoImageUrl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -223,6 +233,11 @@ namespace Flipdish.Model
                     this.CookieConsentPromptEnabled == input.CookieConsentPromptEnabled ||
                     (this.CookieConsentPromptEnabled != null &&
                     this.CookieConsentPromptEnabled.Equals(input.CookieConsentPromptEnabled))
+                ) && 
+                (
+                    this.LogoImageUrl == input.LogoImageUrl ||
+                    (this.LogoImageUrl != null &&
+                    this.LogoImageUrl.Equals(input.LogoImageUrl))
                 );
         }
 
@@ -251,6 +266,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PanaceaVanityUrl.GetHashCode();
                 if (this.CookieConsentPromptEnabled != null)
                     hashCode = hashCode * 59 + this.CookieConsentPromptEnabled.GetHashCode();
+                if (this.LogoImageUrl != null)
+                    hashCode = hashCode * 59 + this.LogoImageUrl.GetHashCode();
                 return hashCode;
             }
         }

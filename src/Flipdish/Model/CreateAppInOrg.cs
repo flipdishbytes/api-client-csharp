@@ -35,12 +35,14 @@ namespace Flipdish.Model
         /// <param name="countryId">Country in ISO 3166-1 alpha-2 standard.</param>
         /// <param name="mainColor">Main color for the different sales channels.</param>
         /// <param name="appId">A predefined AppId.</param>
-        public CreateAppInOrg(string name = default(string), string countryId = default(string), string mainColor = default(string), string appId = default(string))
+        /// <param name="logoImageUrl">Logo image URL.</param>
+        public CreateAppInOrg(string name = default(string), string countryId = default(string), string mainColor = default(string), string appId = default(string), string logoImageUrl = default(string))
         {
             this.Name = name;
             this.CountryId = countryId;
             this.MainColor = mainColor;
             this.AppId = appId;
+            this.LogoImageUrl = logoImageUrl;
         }
         
         /// <summary>
@@ -72,6 +74,13 @@ namespace Flipdish.Model
         public string AppId { get; set; }
 
         /// <summary>
+        /// Logo image URL
+        /// </summary>
+        /// <value>Logo image URL</value>
+        [DataMember(Name="LogoImageUrl", EmitDefaultValue=false)]
+        public string LogoImageUrl { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -83,6 +92,7 @@ namespace Flipdish.Model
             sb.Append("  CountryId: ").Append(CountryId).Append("\n");
             sb.Append("  MainColor: ").Append(MainColor).Append("\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
+            sb.Append("  LogoImageUrl: ").Append(LogoImageUrl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -136,6 +146,11 @@ namespace Flipdish.Model
                     this.AppId == input.AppId ||
                     (this.AppId != null &&
                     this.AppId.Equals(input.AppId))
+                ) && 
+                (
+                    this.LogoImageUrl == input.LogoImageUrl ||
+                    (this.LogoImageUrl != null &&
+                    this.LogoImageUrl.Equals(input.LogoImageUrl))
                 );
         }
 
@@ -156,6 +171,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.MainColor.GetHashCode();
                 if (this.AppId != null)
                     hashCode = hashCode * 59 + this.AppId.GetHashCode();
+                if (this.LogoImageUrl != null)
+                    hashCode = hashCode * 59 + this.LogoImageUrl.GetHashCode();
                 return hashCode;
             }
         }
