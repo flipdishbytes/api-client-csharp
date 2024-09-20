@@ -36,13 +36,15 @@ namespace Flipdish.Model
         /// <param name="timeZoneInfoId">Time Zone Info Id.</param>
         /// <param name="displayTimesInUserLocalTimeZone">Display the time in time zone local to the user.</param>
         /// <param name="showHiddenFeatures">Show hidden features.</param>
-        public AccountDetailBase(string name = default(string), string language = default(string), string timeZoneInfoId = default(string), bool? displayTimesInUserLocalTimeZone = default(bool?), bool? showHiddenFeatures = default(bool?))
+        /// <param name="createdAt">User created at.</param>
+        public AccountDetailBase(string name = default(string), string language = default(string), string timeZoneInfoId = default(string), bool? displayTimesInUserLocalTimeZone = default(bool?), bool? showHiddenFeatures = default(bool?), DateTime? createdAt = default(DateTime?))
         {
             this.Name = name;
             this.Language = language;
             this.TimeZoneInfoId = timeZoneInfoId;
             this.DisplayTimesInUserLocalTimeZone = displayTimesInUserLocalTimeZone;
             this.ShowHiddenFeatures = showHiddenFeatures;
+            this.CreatedAt = createdAt;
         }
         
         /// <summary>
@@ -81,6 +83,13 @@ namespace Flipdish.Model
         public bool? ShowHiddenFeatures { get; set; }
 
         /// <summary>
+        /// User created at
+        /// </summary>
+        /// <value>User created at</value>
+        [DataMember(Name="CreatedAt", EmitDefaultValue=false)]
+        public DateTime? CreatedAt { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -93,6 +102,7 @@ namespace Flipdish.Model
             sb.Append("  TimeZoneInfoId: ").Append(TimeZoneInfoId).Append("\n");
             sb.Append("  DisplayTimesInUserLocalTimeZone: ").Append(DisplayTimesInUserLocalTimeZone).Append("\n");
             sb.Append("  ShowHiddenFeatures: ").Append(ShowHiddenFeatures).Append("\n");
+            sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -151,6 +161,11 @@ namespace Flipdish.Model
                     this.ShowHiddenFeatures == input.ShowHiddenFeatures ||
                     (this.ShowHiddenFeatures != null &&
                     this.ShowHiddenFeatures.Equals(input.ShowHiddenFeatures))
+                ) && 
+                (
+                    this.CreatedAt == input.CreatedAt ||
+                    (this.CreatedAt != null &&
+                    this.CreatedAt.Equals(input.CreatedAt))
                 );
         }
 
@@ -173,6 +188,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.DisplayTimesInUserLocalTimeZone.GetHashCode();
                 if (this.ShowHiddenFeatures != null)
                     hashCode = hashCode * 59 + this.ShowHiddenFeatures.GetHashCode();
+                if (this.CreatedAt != null)
+                    hashCode = hashCode * 59 + this.CreatedAt.GetHashCode();
                 return hashCode;
             }
         }

@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **TimeZoneInfoId** | **string** | Time Zone Info Id | [optional] 
 **DisplayTimesInUserLocalTimeZone** | **bool?** | Display the time in time zone local to the user | [optional] 
 **ShowHiddenFeatures** | **bool?** | Show hidden features | [optional] 
+**CreatedAt** | **DateTime?** | User created at | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
