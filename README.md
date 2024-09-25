@@ -94,6 +94,7 @@ Class | Method | HTTP request | Description
 *AccountsApi* | [**SendPinForPasswordReset**](docs/AccountsApi.md#sendpinforpasswordreset) | **POST** /api/v1.0/accounts/password/resetpin | 
 *AccountsApi* | [**SkipSignupStep**](docs/AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | 
 *AccountsApi* | [**UpdateAccount**](docs/AccountsApi.md#updateaccount) | **PUT** /api/v1.0/accounts | 
+*AddressApi* | [**AddressTemplates**](docs/AddressApi.md#addresstemplates) | **POST** /api/v1.0/address/templates | 
 *AddressApi* | [**FormByApp**](docs/AddressApi.md#formbyapp) | **GET** /api/v1.0/app/{appId}/address/form | 
 *AddressApi* | [**FormByCountry**](docs/AddressApi.md#formbycountry) | **GET** /api/v1.0/address/country/{countryCode}/form | 
 *AddressApi* | [**FormatGoogleAddress**](docs/AddressApi.md#formatgoogleaddress) | **POST** /api/v1.0/address/google | 
