@@ -73,7 +73,8 @@ namespace Flipdish.Model
         /// <param name="panaceaVanityUrl">In case of IsPanaceaEnabled is true, the app can be accessed via https://my.flipdish.com/{PanaceaVanityUrl}.</param>
         /// <param name="cookieConsentPromptEnabled">Cookie Consent Prompt Enabled.</param>
         /// <param name="logoImageUrl">Logo image URL.</param>
-        public AppConfigUpdateModel(string name = default(string), string hostName = default(string), string mainColor = default(string), string kioskPrimaryColour = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?), bool? isPanaceaEnabled = default(bool?), string panaceaVanityUrl = default(string), bool? cookieConsentPromptEnabled = default(bool?), string logoImageUrl = default(string))
+        /// <param name="countryId">Country identifier in ISO 3166-1 alpha-2 format..</param>
+        public AppConfigUpdateModel(string name = default(string), string hostName = default(string), string mainColor = default(string), string kioskPrimaryColour = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?), bool? isPanaceaEnabled = default(bool?), string panaceaVanityUrl = default(string), bool? cookieConsentPromptEnabled = default(bool?), string logoImageUrl = default(string), string countryId = default(string))
         {
             this.Name = name;
             this.HostName = hostName;
@@ -84,6 +85,7 @@ namespace Flipdish.Model
             this.PanaceaVanityUrl = panaceaVanityUrl;
             this.CookieConsentPromptEnabled = cookieConsentPromptEnabled;
             this.LogoImageUrl = logoImageUrl;
+            this.CountryId = countryId;
         }
         
         /// <summary>
@@ -144,6 +146,13 @@ namespace Flipdish.Model
         public string LogoImageUrl { get; set; }
 
         /// <summary>
+        /// Country identifier in ISO 3166-1 alpha-2 format.
+        /// </summary>
+        /// <value>Country identifier in ISO 3166-1 alpha-2 format.</value>
+        [DataMember(Name="CountryId", EmitDefaultValue=false)]
+        public string CountryId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -160,6 +169,7 @@ namespace Flipdish.Model
             sb.Append("  PanaceaVanityUrl: ").Append(PanaceaVanityUrl).Append("\n");
             sb.Append("  CookieConsentPromptEnabled: ").Append(CookieConsentPromptEnabled).Append("\n");
             sb.Append("  LogoImageUrl: ").Append(LogoImageUrl).Append("\n");
+            sb.Append("  CountryId: ").Append(CountryId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -238,6 +248,11 @@ namespace Flipdish.Model
                     this.LogoImageUrl == input.LogoImageUrl ||
                     (this.LogoImageUrl != null &&
                     this.LogoImageUrl.Equals(input.LogoImageUrl))
+                ) && 
+                (
+                    this.CountryId == input.CountryId ||
+                    (this.CountryId != null &&
+                    this.CountryId.Equals(input.CountryId))
                 );
         }
 
@@ -268,6 +283,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CookieConsentPromptEnabled.GetHashCode();
                 if (this.LogoImageUrl != null)
                     hashCode = hashCode * 59 + this.LogoImageUrl.GetHashCode();
+                if (this.CountryId != null)
+                    hashCode = hashCode * 59 + this.CountryId.GetHashCode();
                 return hashCode;
             }
         }
