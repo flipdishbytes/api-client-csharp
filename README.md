@@ -274,7 +274,6 @@ Class | Method | HTTP request | Description
 *HomeApi* | [**GetHomeActions**](docs/HomeApi.md#gethomeactions) | **GET** /api/v1.0/{appId}/home | 
 *HomeApi* | [**GetHomeStatistics**](docs/HomeApi.md#gethomestatistics) | **GET** /api/v1.0/{appId}/home/stats | 
 *HomeApi* | [**GetOktaPortalFeatureFlag**](docs/HomeApi.md#getoktaportalfeatureflag) | **GET** /api/v1.0/home/okta-portal | 
-*HttpRequestResponseLogsApi* | [**GetLogs**](docs/HttpRequestResponseLogsApi.md#getlogs) | **GET** /api/v1.0/{appId}/interactions/logs | 
 *HydraApi* | [**AssignEmv**](docs/HydraApi.md#assignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/assign/{hydraConfigId}/{emvTerminalId} | 
 *HydraApi* | [**AttachStoreToKiosk**](docs/HydraApi.md#attachstoretokiosk) | **POST** /api/v1.0/{appId}/AttachStoreToKiosk/{deviceId}/store/{storeId} | 
 *HydraApi* | [**AttachStoreToTerminal**](docs/HydraApi.md#attachstoretoterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId} | 
@@ -792,7 +791,6 @@ Class | Method | HTTP request | Description
  - [Model.HomeAction](docs/HomeAction.md)
  - [Model.HomeStatistics](docs/HomeStatistics.md)
  - [Model.HttpPostedFileBase](docs/HttpPostedFileBase.md)
- - [Model.HttpRequestAndResponseLog](docs/HttpRequestAndResponseLog.md)
  - [Model.HydraAssignedEvent](docs/HydraAssignedEvent.md)
  - [Model.HydraConfig](docs/HydraConfig.md)
  - [Model.HydraConnectionStatusChangedEvent](docs/HydraConnectionStatusChangedEvent.md)
@@ -1105,7 +1103,6 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultBusinessHoursOverride](docs/RestApiPaginationResultBusinessHoursOverride.md)
  - [Model.RestApiPaginationResultCatalogItem](docs/RestApiPaginationResultCatalogItem.md)
  - [Model.RestApiPaginationResultGroup](docs/RestApiPaginationResultGroup.md)
- - [Model.RestApiPaginationResultHttpRequestAndResponseLog](docs/RestApiPaginationResultHttpRequestAndResponseLog.md)
  - [Model.RestApiPaginationResultHydraDeviceDetails](docs/RestApiPaginationResultHydraDeviceDetails.md)
  - [Model.RestApiPaginationResultMetafieldDefinition](docs/RestApiPaginationResultMetafieldDefinition.md)
  - [Model.RestApiPaginationResultMetafieldDefinitionRecommendation](docs/RestApiPaginationResultMetafieldDefinitionRecommendation.md)
