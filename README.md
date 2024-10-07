@@ -571,6 +571,7 @@ Class | Method | HTTP request | Description
 *TeammatesApi* | [**Grantaccess**](docs/TeammatesApi.md#grantaccess) | **POST** /api/v1.0/{appId}/teammates/grantaccess | 
 *TeammatesApi* | [**RedeemInvitation**](docs/TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
 *TeammatesApi* | [**TeammatesAcceptInvitation**](docs/TeammatesApi.md#teammatesacceptinvitation) | **GET** /api/v1.0/{appId}/teammates/accept/{otc} | 
+*TeammatesApi* | [**TeammatesPendingInvitations**](docs/TeammatesApi.md#teammatespendinginvitations) | **GET** /api/v1.0/teammates/pending-invitations | 
 *TeammatesApi* | [**UpdateTeammate**](docs/TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{id} | 
 *TerminalIotApi* | [**GetTerminalIotConnection**](docs/TerminalIotApi.md#getterminaliotconnection) | **POST** /api/v1.0/terminaliot/connect | 
 *TipsApi* | [**TipConfigGet**](docs/TipsApi.md#tipconfigget) | **GET** /api/v1.0/stores/{storeId}/tipconfig | 
@@ -994,6 +995,7 @@ Class | Method | HTTP request | Description
  - [Model.PayoutRequestIds](docs/PayoutRequestIds.md)
  - [Model.PayoutStore](docs/PayoutStore.md)
  - [Model.PayoutSummary](docs/PayoutSummary.md)
+ - [Model.PendingInvitation](docs/PendingInvitation.md)
  - [Model.PendingMenuChanges](docs/PendingMenuChanges.md)
  - [Model.PendingMenuChangesSummaries](docs/PendingMenuChangesSummaries.md)
  - [Model.PercentDiscountDetails](docs/PercentDiscountDetails.md)
@@ -1074,6 +1076,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultOrderBatch](docs/RestApiArrayResultOrderBatch.md)
  - [Model.RestApiArrayResultOrderFulfillmentStatus](docs/RestApiArrayResultOrderFulfillmentStatus.md)
  - [Model.RestApiArrayResultPayoutSummary](docs/RestApiArrayResultPayoutSummary.md)
+ - [Model.RestApiArrayResultPendingInvitation](docs/RestApiArrayResultPendingInvitation.md)
  - [Model.RestApiArrayResultPendingMenuChangesSummaries](docs/RestApiArrayResultPendingMenuChangesSummaries.md)
  - [Model.RestApiArrayResultPreOrderTime](docs/RestApiArrayResultPreOrderTime.md)
  - [Model.RestApiArrayResultProcessingFeeConfig](docs/RestApiArrayResultProcessingFeeConfig.md)
