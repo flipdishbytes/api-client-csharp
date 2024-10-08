@@ -31,6 +31,31 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="storeIds"></param>
+        /// <returns></returns>
+        void AssignStoresToStoreGroup (string appId, int? storeGroupId, List<int?> storeIds);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="storeIds"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> AssignStoresToStoreGroupWithHttpInfo (string appId, int? storeGroupId, List<int?> storeIds);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appNameId"></param>
         /// <param name="storeGroup"></param>
         /// <returns>RestApiResultStoreGroup</returns>
@@ -195,6 +220,31 @@ namespace Flipdish.Api
         ApiResponse<RestApiResultStoreGroupBase> UpdateStoreGroupWithHttpInfo (int? storeGroupId, StoreGroupBase storeGroup);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="storeIds"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task AssignStoresToStoreGroupAsync (string appId, int? storeGroupId, List<int?> storeIds);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="storeIds"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> AssignStoresToStoreGroupAsyncWithHttpInfo (string appId, int? storeGroupId, List<int?> storeIds);
         /// <summary>
         /// 
         /// </summary>
@@ -462,6 +512,203 @@ namespace Flipdish.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="storeIds"></param>
+        /// <returns></returns>
+        public void AssignStoresToStoreGroup (string appId, int? storeGroupId, List<int?> storeIds)
+        {
+             AssignStoresToStoreGroupWithHttpInfo(appId, storeGroupId, storeIds);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="storeIds"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> AssignStoresToStoreGroupWithHttpInfo (string appId, int? storeGroupId, List<int?> storeIds)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling StoreGroupsApi->AssignStoresToStoreGroup");
+            // verify the required parameter 'storeGroupId' is set
+            if (storeGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'storeGroupId' when calling StoreGroupsApi->AssignStoresToStoreGroup");
+            // verify the required parameter 'storeIds' is set
+            if (storeIds == null)
+                throw new ApiException(400, "Missing required parameter 'storeIds' when calling StoreGroupsApi->AssignStoresToStoreGroup");
+
+            var localVarPath = "./api/v1.0/{appId}/storegroups/{storeGroupId}/assignStores";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (storeGroupId != null) localVarPathParams.Add("storeGroupId", this.Configuration.ApiClient.ParameterToString(storeGroupId)); // path parameter
+            if (storeIds != null && storeIds.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(storeIds); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = storeIds; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AssignStoresToStoreGroup", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="storeIds"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task AssignStoresToStoreGroupAsync (string appId, int? storeGroupId, List<int?> storeIds)
+        {
+             await AssignStoresToStoreGroupAsyncWithHttpInfo(appId, storeGroupId, storeIds);
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeGroupId"></param>
+        /// <param name="storeIds"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AssignStoresToStoreGroupAsyncWithHttpInfo (string appId, int? storeGroupId, List<int?> storeIds)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling StoreGroupsApi->AssignStoresToStoreGroup");
+            // verify the required parameter 'storeGroupId' is set
+            if (storeGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'storeGroupId' when calling StoreGroupsApi->AssignStoresToStoreGroup");
+            // verify the required parameter 'storeIds' is set
+            if (storeIds == null)
+                throw new ApiException(400, "Missing required parameter 'storeIds' when calling StoreGroupsApi->AssignStoresToStoreGroup");
+
+            var localVarPath = "./api/v1.0/{appId}/storegroups/{storeGroupId}/assignStores";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (storeGroupId != null) localVarPathParams.Add("storeGroupId", this.Configuration.ApiClient.ParameterToString(storeGroupId)); // path parameter
+            if (storeIds != null && storeIds.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(storeIds); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = storeIds; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AssignStoresToStoreGroup", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>

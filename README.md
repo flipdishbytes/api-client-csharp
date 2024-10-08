@@ -501,6 +501,7 @@ Class | Method | HTTP request | Description
 *RestaurantVouchersPayGreenApi* | [**ListPayGreenConfigurations**](docs/RestaurantVouchersPayGreenApi.md#listpaygreenconfigurations) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId} | 
 *RestaurantVouchersPayGreenApi* | [**UpdatePayGreenConfiguration**](docs/RestaurantVouchersPayGreenApi.md#updatepaygreenconfiguration) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId} | 
 *RestaurantVouchersPayGreenApi* | [**UpdateStorePayGreenConfiguration_**](docs/RestaurantVouchersPayGreenApi.md#updatestorepaygreenconfiguration_) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores/{storeId} | 
+*StoreGroupsApi* | [**AssignStoresToStoreGroup**](docs/StoreGroupsApi.md#assignstorestostoregroup) | **POST** /api/v1.0/{appId}/storegroups/{storeGroupId}/assignStores | 
 *StoreGroupsApi* | [**CreateStoreGroup**](docs/StoreGroupsApi.md#createstoregroup) | **POST** /api/v1.0/{appNameId}/storegroups | 
 *StoreGroupsApi* | [**GetStoreGroup**](docs/StoreGroupsApi.md#getstoregroup) | **GET** /api/v1.0/storegroups/{storeGroupId} | 
 *StoreGroupsApi* | [**GetStoreGroups**](docs/StoreGroupsApi.md#getstoregroups) | **GET** /api/v1.0/{appNameId}/storegroups | 

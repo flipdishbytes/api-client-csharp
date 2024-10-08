@@ -4,6 +4,7 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**AssignStoresToStoreGroup**](StoreGroupsApi.md#assignstorestostoregroup) | **POST** /api/v1.0/{appId}/storegroups/{storeGroupId}/assignStores | 
 [**CreateStoreGroup**](StoreGroupsApi.md#createstoregroup) | **POST** /api/v1.0/{appNameId}/storegroups | 
 [**GetStoreGroup**](StoreGroupsApi.md#getstoregroup) | **GET** /api/v1.0/storegroups/{storeGroupId} | 
 [**GetStoreGroups**](StoreGroupsApi.md#getstoregroups) | **GET** /api/v1.0/{appNameId}/storegroups | 
@@ -12,6 +13,70 @@ Method | HTTP request | Description
 [**SetMenuMessagePerDeliveryType**](StoreGroupsApi.md#setmenumessageperdeliverytype) | **POST** /api/v1.0/storegroups/{storeGroupId}/{deliveryType}/MenuMessagePerDeliveryType | 
 [**UpdateStoreGroup**](StoreGroupsApi.md#updatestoregroup) | **POST** /api/v1.0/storegroups/{storeGroupId} | 
 
+
+<a name="assignstorestostoregroup"></a>
+# **AssignStoresToStoreGroup**
+> void AssignStoresToStoreGroup (string appId, int? storeGroupId, List<int?> storeIds)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class AssignStoresToStoreGroupExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoreGroupsApi();
+            var appId = appId_example;  // string | 
+            var storeGroupId = 56;  // int? | 
+            var storeIds = ;  // List<int?> | 
+
+            try
+            {
+                apiInstance.AssignStoresToStoreGroup(appId, storeGroupId, storeIds);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoreGroupsApi.AssignStoresToStoreGroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **storeGroupId** | **int?**|  | 
+ **storeIds** | **List&lt;int?&gt;**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="createstoregroup"></a>
 # **CreateStoreGroup**
