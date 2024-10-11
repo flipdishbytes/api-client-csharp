@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EventName** | **string** | The event name | [optional] 
+**OrgId** | **string** | Organisation Id | [optional] 
 **Description** | **string** | Description | [optional] 
 **OrderAcceptedTime** | **DateTime?** | Order Accepted Time | [optional] 
 **User** | [**UserEventInfo**](UserEventInfo.md) | User who has accepted the order | [optional] 
