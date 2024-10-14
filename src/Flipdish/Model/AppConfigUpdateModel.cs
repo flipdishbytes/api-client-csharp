@@ -69,11 +69,11 @@ namespace Flipdish.Model
         /// <param name="mainColor">Main color of the web / Android / iOS applications.</param>
         /// <param name="kioskPrimaryColour">Primary colour used on the Kiosk.</param>
         /// <param name="applicationCategory">Application Category.</param>
-        /// <param name="isPanaceaEnabled">Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain..</param>
+        /// <param name="isPanaceaEnabled">Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The alternative to using Panacea websites is to use a custom domain..</param>
         /// <param name="panaceaVanityUrl">In case of IsPanaceaEnabled is true, the app can be accessed via https://my.flipdish.com/{PanaceaVanityUrl}.</param>
         /// <param name="cookieConsentPromptEnabled">Cookie Consent Prompt Enabled.</param>
         /// <param name="logoImageUrl">Logo image URL.</param>
-        /// <param name="countryId">Country identifier in ISO 3166-1 alpha-2 format..</param>
+        /// <param name="countryId">Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks.</param>
         public AppConfigUpdateModel(string name = default(string), string hostName = default(string), string mainColor = default(string), string kioskPrimaryColour = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?), bool? isPanaceaEnabled = default(bool?), string panaceaVanityUrl = default(string), bool? cookieConsentPromptEnabled = default(bool?), string logoImageUrl = default(string), string countryId = default(string))
         {
             this.Name = name;
@@ -118,9 +118,9 @@ namespace Flipdish.Model
 
 
         /// <summary>
-        /// Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain.
+        /// Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The alternative to using Panacea websites is to use a custom domain.
         /// </summary>
-        /// <value>Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain.</value>
+        /// <value>Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The alternative to using Panacea websites is to use a custom domain.</value>
         [DataMember(Name="IsPanaceaEnabled", EmitDefaultValue=false)]
         public bool? IsPanaceaEnabled { get; set; }
 
@@ -146,9 +146,9 @@ namespace Flipdish.Model
         public string LogoImageUrl { get; set; }
 
         /// <summary>
-        /// Country identifier in ISO 3166-1 alpha-2 format.
+        /// Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks
         /// </summary>
-        /// <value>Country identifier in ISO 3166-1 alpha-2 format.</value>
+        /// <value>Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks</value>
         [DataMember(Name="CountryId", EmitDefaultValue=false)]
         public string CountryId { get; set; }
 

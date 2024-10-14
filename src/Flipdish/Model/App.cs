@@ -1153,7 +1153,6 @@ namespace Flipdish.Model
         /// <param name="appId">App Identifier.</param>
         /// <param name="hasIosApp">Has iOS app in Apple App Store. This is readonly..</param>
         /// <param name="hasAndroidApp">Has Android app in Google Play Store. This is readonly..</param>
-        /// <param name="countryId">Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks.</param>
         /// <param name="logoImageUrl">Application Logo..</param>
         /// <param name="languages">Languages that have been selected to be available to customers..</param>
         /// <param name="availableAppLanguages">Lists all languages that are supported by Flipdish..</param>
@@ -1169,15 +1168,15 @@ namespace Flipdish.Model
         /// <param name="mainColor">Main color of the web / Android / iOS applications.</param>
         /// <param name="kioskPrimaryColour">Primary colour used on the Kiosk.</param>
         /// <param name="applicationCategory">Application Category.</param>
-        /// <param name="isPanaceaEnabled">Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain..</param>
+        /// <param name="isPanaceaEnabled">Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The alternative to using Panacea websites is to use a custom domain..</param>
         /// <param name="panaceaVanityUrl">In case of IsPanaceaEnabled is true, the app can be accessed via https://my.flipdish.com/{PanaceaVanityUrl}.</param>
         /// <param name="cookieConsentPromptEnabled">Cookie Consent Prompt Enabled.</param>
-        public App(string appId = default(string), bool? hasIosApp = default(bool?), bool? hasAndroidApp = default(bool?), string countryId = default(string), string logoImageUrl = default(string), List<Language> languages = default(List<Language>), List<Language> availableAppLanguages = default(List<Language>), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), List<AppResourceSetEnum> appResourceSet = default(List<AppResourceSetEnum>), List<string> features = default(List<string>), Coordinates mapCenter = default(Coordinates), Coordinates mapNorthEast = default(Coordinates), Coordinates mapSouthWest = default(Coordinates), string googleMapsApiKeyWeb = default(string), string name = default(string), string hostName = default(string), string mainColor = default(string), string kioskPrimaryColour = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?), bool? isPanaceaEnabled = default(bool?), string panaceaVanityUrl = default(string), bool? cookieConsentPromptEnabled = default(bool?))
+        /// <param name="countryId">Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks.</param>
+        public App(string appId = default(string), bool? hasIosApp = default(bool?), bool? hasAndroidApp = default(bool?), string logoImageUrl = default(string), List<Language> languages = default(List<Language>), List<Language> availableAppLanguages = default(List<Language>), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), List<AppResourceSetEnum> appResourceSet = default(List<AppResourceSetEnum>), List<string> features = default(List<string>), Coordinates mapCenter = default(Coordinates), Coordinates mapNorthEast = default(Coordinates), Coordinates mapSouthWest = default(Coordinates), string googleMapsApiKeyWeb = default(string), string name = default(string), string hostName = default(string), string mainColor = default(string), string kioskPrimaryColour = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?), bool? isPanaceaEnabled = default(bool?), string panaceaVanityUrl = default(string), bool? cookieConsentPromptEnabled = default(bool?), string countryId = default(string))
         {
             this.AppId = appId;
             this.HasIosApp = hasIosApp;
             this.HasAndroidApp = hasAndroidApp;
-            this.CountryId = countryId;
             this.LogoImageUrl = logoImageUrl;
             this.Languages = languages;
             this.AvailableAppLanguages = availableAppLanguages;
@@ -1196,6 +1195,7 @@ namespace Flipdish.Model
             this.IsPanaceaEnabled = isPanaceaEnabled;
             this.PanaceaVanityUrl = panaceaVanityUrl;
             this.CookieConsentPromptEnabled = cookieConsentPromptEnabled;
+            this.CountryId = countryId;
         }
         
         /// <summary>
@@ -1218,13 +1218,6 @@ namespace Flipdish.Model
         /// <value>Has Android app in Google Play Store. This is readonly.</value>
         [DataMember(Name="HasAndroidApp", EmitDefaultValue=false)]
         public bool? HasAndroidApp { get; set; }
-
-        /// <summary>
-        /// Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks
-        /// </summary>
-        /// <value>Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks</value>
-        [DataMember(Name="CountryId", EmitDefaultValue=false)]
-        public string CountryId { get; set; }
 
         /// <summary>
         /// Application Logo.
@@ -1314,9 +1307,9 @@ namespace Flipdish.Model
 
 
         /// <summary>
-        /// Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain.
+        /// Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The alternative to using Panacea websites is to use a custom domain.
         /// </summary>
-        /// <value>Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain.</value>
+        /// <value>Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The alternative to using Panacea websites is to use a custom domain.</value>
         [DataMember(Name="IsPanaceaEnabled", EmitDefaultValue=false)]
         public bool? IsPanaceaEnabled { get; set; }
 
@@ -1335,6 +1328,13 @@ namespace Flipdish.Model
         public bool? CookieConsentPromptEnabled { get; set; }
 
         /// <summary>
+        /// Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks
+        /// </summary>
+        /// <value>Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks</value>
+        [DataMember(Name="CountryId", EmitDefaultValue=false)]
+        public string CountryId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -1345,7 +1345,6 @@ namespace Flipdish.Model
             sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("  HasIosApp: ").Append(HasIosApp).Append("\n");
             sb.Append("  HasAndroidApp: ").Append(HasAndroidApp).Append("\n");
-            sb.Append("  CountryId: ").Append(CountryId).Append("\n");
             sb.Append("  LogoImageUrl: ").Append(LogoImageUrl).Append("\n");
             sb.Append("  Languages: ").Append(Languages).Append("\n");
             sb.Append("  AvailableAppLanguages: ").Append(AvailableAppLanguages).Append("\n");
@@ -1364,6 +1363,7 @@ namespace Flipdish.Model
             sb.Append("  IsPanaceaEnabled: ").Append(IsPanaceaEnabled).Append("\n");
             sb.Append("  PanaceaVanityUrl: ").Append(PanaceaVanityUrl).Append("\n");
             sb.Append("  CookieConsentPromptEnabled: ").Append(CookieConsentPromptEnabled).Append("\n");
+            sb.Append("  CountryId: ").Append(CountryId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1412,11 +1412,6 @@ namespace Flipdish.Model
                     this.HasAndroidApp == input.HasAndroidApp ||
                     (this.HasAndroidApp != null &&
                     this.HasAndroidApp.Equals(input.HasAndroidApp))
-                ) && 
-                (
-                    this.CountryId == input.CountryId ||
-                    (this.CountryId != null &&
-                    this.CountryId.Equals(input.CountryId))
                 ) && 
                 (
                     this.LogoImageUrl == input.LogoImageUrl ||
@@ -1507,6 +1502,11 @@ namespace Flipdish.Model
                     this.CookieConsentPromptEnabled == input.CookieConsentPromptEnabled ||
                     (this.CookieConsentPromptEnabled != null &&
                     this.CookieConsentPromptEnabled.Equals(input.CookieConsentPromptEnabled))
+                ) && 
+                (
+                    this.CountryId == input.CountryId ||
+                    (this.CountryId != null &&
+                    this.CountryId.Equals(input.CountryId))
                 );
         }
 
@@ -1525,8 +1525,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.HasIosApp.GetHashCode();
                 if (this.HasAndroidApp != null)
                     hashCode = hashCode * 59 + this.HasAndroidApp.GetHashCode();
-                if (this.CountryId != null)
-                    hashCode = hashCode * 59 + this.CountryId.GetHashCode();
                 if (this.LogoImageUrl != null)
                     hashCode = hashCode * 59 + this.LogoImageUrl.GetHashCode();
                 if (this.Languages != null)
@@ -1563,6 +1561,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PanaceaVanityUrl.GetHashCode();
                 if (this.CookieConsentPromptEnabled != null)
                     hashCode = hashCode * 59 + this.CookieConsentPromptEnabled.GetHashCode();
+                if (this.CountryId != null)
+                    hashCode = hashCode * 59 + this.CountryId.GetHashCode();
                 return hashCode;
             }
         }
