@@ -32,6 +32,7 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="CustomerCreatedEvent" /> class.
         /// </summary>
         /// <param name="eventName">The event name.</param>
+        /// <param name="orgId">Organisation Id.</param>
         /// <param name="user">Customer User info.</param>
         /// <param name="description">Description.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
@@ -39,9 +40,10 @@ namespace Flipdish.Model
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
         /// <param name="ipAddress">Ip Address.</param>
-        public CustomerCreatedEvent(string eventName = default(string), UserEventInfo user = default(UserEventInfo), string description = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
+        public CustomerCreatedEvent(string eventName = default(string), string orgId = default(string), UserEventInfo user = default(UserEventInfo), string description = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
         {
             this.EventName = eventName;
+            this.OrgId = orgId;
             this.User = user;
             this.Description = description;
             this.FlipdishEventId = flipdishEventId;
@@ -57,6 +59,13 @@ namespace Flipdish.Model
         /// <value>The event name</value>
         [DataMember(Name="EventName", EmitDefaultValue=false)]
         public string EventName { get; set; }
+
+        /// <summary>
+        /// Organisation Id
+        /// </summary>
+        /// <value>Organisation Id</value>
+        [DataMember(Name="OrgId", EmitDefaultValue=false)]
+        public string OrgId { get; set; }
 
         /// <summary>
         /// Customer User info
@@ -116,6 +125,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class CustomerCreatedEvent {\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
+            sb.Append("  OrgId: ").Append(OrgId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
@@ -161,6 +171,11 @@ namespace Flipdish.Model
                     this.EventName == input.EventName ||
                     (this.EventName != null &&
                     this.EventName.Equals(input.EventName))
+                ) && 
+                (
+                    this.OrgId == input.OrgId ||
+                    (this.OrgId != null &&
+                    this.OrgId.Equals(input.OrgId))
                 ) && 
                 (
                     this.User == input.User ||
@@ -210,6 +225,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.EventName != null)
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
+                if (this.OrgId != null)
+                    hashCode = hashCode * 59 + this.OrgId.GetHashCode();
                 if (this.User != null)
                     hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.Description != null)

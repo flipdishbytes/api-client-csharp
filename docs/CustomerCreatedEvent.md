@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EventName** | **string** | The event name | [optional] 
+**OrgId** | **string** | Organisation Id | [optional] 
 **User** | [**UserEventInfo**](UserEventInfo.md) | Customer User info | [optional] 
 **Description** | **string** | Description | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 
