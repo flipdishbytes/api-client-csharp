@@ -727,13 +727,17 @@ namespace Flipdish.Model
         /// <param name="storeGroupId">Unique Store Group Identifier.</param>
         /// <param name="generalRating">Store Group rating.</param>
         /// <param name="generalRatingCount">Store Group rating count.</param>
+        /// <param name="deliveryMenuMessage">Delivery menu message.</param>
+        /// <param name="pickupMenuMessage">Pickup menu message.</param>
         /// <param name="name">Store Group Name.</param>
         /// <param name="currency">Currency used by the stores in this group.</param>
-        public StoreGroup(int? storeGroupId = default(int?), double? generalRating = default(double?), int? generalRatingCount = default(int?), string name = default(string), CurrencyEnum? currency = default(CurrencyEnum?))
+        public StoreGroup(int? storeGroupId = default(int?), double? generalRating = default(double?), int? generalRatingCount = default(int?), string deliveryMenuMessage = default(string), string pickupMenuMessage = default(string), string name = default(string), CurrencyEnum? currency = default(CurrencyEnum?))
         {
             this.StoreGroupId = storeGroupId;
             this.GeneralRating = generalRating;
             this.GeneralRatingCount = generalRatingCount;
+            this.DeliveryMenuMessage = deliveryMenuMessage;
+            this.PickupMenuMessage = pickupMenuMessage;
             this.Name = name;
             this.Currency = currency;
         }
@@ -760,6 +764,20 @@ namespace Flipdish.Model
         public int? GeneralRatingCount { get; set; }
 
         /// <summary>
+        /// Delivery menu message
+        /// </summary>
+        /// <value>Delivery menu message</value>
+        [DataMember(Name="DeliveryMenuMessage", EmitDefaultValue=false)]
+        public string DeliveryMenuMessage { get; set; }
+
+        /// <summary>
+        /// Pickup menu message
+        /// </summary>
+        /// <value>Pickup menu message</value>
+        [DataMember(Name="PickupMenuMessage", EmitDefaultValue=false)]
+        public string PickupMenuMessage { get; set; }
+
+        /// <summary>
         /// Store Group Name
         /// </summary>
         /// <value>Store Group Name</value>
@@ -778,6 +796,8 @@ namespace Flipdish.Model
             sb.Append("  StoreGroupId: ").Append(StoreGroupId).Append("\n");
             sb.Append("  GeneralRating: ").Append(GeneralRating).Append("\n");
             sb.Append("  GeneralRatingCount: ").Append(GeneralRatingCount).Append("\n");
+            sb.Append("  DeliveryMenuMessage: ").Append(DeliveryMenuMessage).Append("\n");
+            sb.Append("  PickupMenuMessage: ").Append(PickupMenuMessage).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("}\n");
@@ -830,6 +850,16 @@ namespace Flipdish.Model
                     this.GeneralRatingCount.Equals(input.GeneralRatingCount))
                 ) && 
                 (
+                    this.DeliveryMenuMessage == input.DeliveryMenuMessage ||
+                    (this.DeliveryMenuMessage != null &&
+                    this.DeliveryMenuMessage.Equals(input.DeliveryMenuMessage))
+                ) && 
+                (
+                    this.PickupMenuMessage == input.PickupMenuMessage ||
+                    (this.PickupMenuMessage != null &&
+                    this.PickupMenuMessage.Equals(input.PickupMenuMessage))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -856,6 +886,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.GeneralRating.GetHashCode();
                 if (this.GeneralRatingCount != null)
                     hashCode = hashCode * 59 + this.GeneralRatingCount.GetHashCode();
+                if (this.DeliveryMenuMessage != null)
+                    hashCode = hashCode * 59 + this.DeliveryMenuMessage.GetHashCode();
+                if (this.PickupMenuMessage != null)
+                    hashCode = hashCode * 59 + this.PickupMenuMessage.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Currency != null)

@@ -507,7 +507,7 @@ Class | Method | HTTP request | Description
 *StoreGroupsApi* | [**GetStoreGroups**](docs/StoreGroupsApi.md#getstoregroups) | **GET** /api/v1.0/{appNameId}/storegroups | 
 *StoreGroupsApi* | [**GetStoreGroupsExtended**](docs/StoreGroupsApi.md#getstoregroupsextended) | **GET** /api/v1.0/{appNameId}/storegroups/extended | 
 *StoreGroupsApi* | [**RemoveStoreGroup**](docs/StoreGroupsApi.md#removestoregroup) | **DELETE** /api/v1.0/storegroups/{storeGroupId} | 
-*StoreGroupsApi* | [**SetMenuMessagePerDeliveryType**](docs/StoreGroupsApi.md#setmenumessageperdeliverytype) | **POST** /api/v1.0/storegroups/{storeGroupId}/{deliveryType}/MenuMessagePerDeliveryType | 
+*StoreGroupsApi* | [**SetCustomerMessages**](docs/StoreGroupsApi.md#setcustomermessages) | **POST** /api/v1.0/storegroups/{storeGroupId}/CustomerMessages | 
 *StoreGroupsApi* | [**UpdateStoreGroup**](docs/StoreGroupsApi.md#updatestoregroup) | **POST** /api/v1.0/storegroups/{storeGroupId} | 
 *StoreOrderCapacityApi* | [**GetStoreOrderCapacity**](docs/StoreOrderCapacityApi.md#getstoreordercapacity) | **GET** /api/v1.0/{appId}/storeordercapacity/{storeId}/{deliveryType} | 
 *StoreOrderCapacityApi* | [**UpdateStoreOrderCapacityConfig**](docs/StoreOrderCapacityApi.md#updatestoreordercapacityconfig) | **POST** /api/v1.0/{appId}/storeordercapacity/{storeId} | 
@@ -733,6 +733,7 @@ Class | Method | HTTP request | Description
  - [Model.CustomerCreatedEvent](docs/CustomerCreatedEvent.md)
  - [Model.CustomerDeliveryTrackingOrder](docs/CustomerDeliveryTrackingOrder.md)
  - [Model.CustomerDeliveryTrackingOrderLine](docs/CustomerDeliveryTrackingOrderLine.md)
+ - [Model.CustomerMessages](docs/CustomerMessages.md)
  - [Model.CustomerSummary](docs/CustomerSummary.md)
  - [Model.CustomerUpdateModel](docs/CustomerUpdateModel.md)
  - [Model.CustomerUpdatedEvent](docs/CustomerUpdatedEvent.md)

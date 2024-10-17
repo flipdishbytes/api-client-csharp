@@ -178,10 +178,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeGroupId"></param>
-        /// <param name="deliveryType"></param>
-        /// <param name="menuMessage"></param>
+        /// <param name="customerMessages"></param>
         /// <returns></returns>
-        void SetMenuMessagePerDeliveryType (int? storeGroupId, string deliveryType, string menuMessage);
+        void SetCustomerMessages (int? storeGroupId, CustomerMessages customerMessages);
 
         /// <summary>
         /// 
@@ -191,10 +190,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeGroupId"></param>
-        /// <param name="deliveryType"></param>
-        /// <param name="menuMessage"></param>
+        /// <param name="customerMessages"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> SetMenuMessagePerDeliveryTypeWithHttpInfo (int? storeGroupId, string deliveryType, string menuMessage);
+        ApiResponse<Object> SetCustomerMessagesWithHttpInfo (int? storeGroupId, CustomerMessages customerMessages);
         /// <summary>
         /// 
         /// </summary>
@@ -374,10 +372,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeGroupId"></param>
-        /// <param name="deliveryType"></param>
-        /// <param name="menuMessage"></param>
+        /// <param name="customerMessages"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task SetMenuMessagePerDeliveryTypeAsync (int? storeGroupId, string deliveryType, string menuMessage);
+        System.Threading.Tasks.Task SetCustomerMessagesAsync (int? storeGroupId, CustomerMessages customerMessages);
 
         /// <summary>
         /// 
@@ -387,10 +384,9 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeGroupId"></param>
-        /// <param name="deliveryType"></param>
-        /// <param name="menuMessage"></param>
+        /// <param name="customerMessages"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SetMenuMessagePerDeliveryTypeAsyncWithHttpInfo (int? storeGroupId, string deliveryType, string menuMessage);
+        System.Threading.Tasks.Task<ApiResponse<Object>> SetCustomerMessagesAsyncWithHttpInfo (int? storeGroupId, CustomerMessages customerMessages);
         /// <summary>
         /// 
         /// </summary>
@@ -1547,12 +1543,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeGroupId"></param>
-        /// <param name="deliveryType"></param>
-        /// <param name="menuMessage"></param>
+        /// <param name="customerMessages"></param>
         /// <returns></returns>
-        public void SetMenuMessagePerDeliveryType (int? storeGroupId, string deliveryType, string menuMessage)
+        public void SetCustomerMessages (int? storeGroupId, CustomerMessages customerMessages)
         {
-             SetMenuMessagePerDeliveryTypeWithHttpInfo(storeGroupId, deliveryType, menuMessage);
+             SetCustomerMessagesWithHttpInfo(storeGroupId, customerMessages);
         }
 
         /// <summary>
@@ -1560,22 +1555,18 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeGroupId"></param>
-        /// <param name="deliveryType"></param>
-        /// <param name="menuMessage"></param>
+        /// <param name="customerMessages"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> SetMenuMessagePerDeliveryTypeWithHttpInfo (int? storeGroupId, string deliveryType, string menuMessage)
+        public ApiResponse<Object> SetCustomerMessagesWithHttpInfo (int? storeGroupId, CustomerMessages customerMessages)
         {
             // verify the required parameter 'storeGroupId' is set
             if (storeGroupId == null)
-                throw new ApiException(400, "Missing required parameter 'storeGroupId' when calling StoreGroupsApi->SetMenuMessagePerDeliveryType");
-            // verify the required parameter 'deliveryType' is set
-            if (deliveryType == null)
-                throw new ApiException(400, "Missing required parameter 'deliveryType' when calling StoreGroupsApi->SetMenuMessagePerDeliveryType");
-            // verify the required parameter 'menuMessage' is set
-            if (menuMessage == null)
-                throw new ApiException(400, "Missing required parameter 'menuMessage' when calling StoreGroupsApi->SetMenuMessagePerDeliveryType");
+                throw new ApiException(400, "Missing required parameter 'storeGroupId' when calling StoreGroupsApi->SetCustomerMessages");
+            // verify the required parameter 'customerMessages' is set
+            if (customerMessages == null)
+                throw new ApiException(400, "Missing required parameter 'customerMessages' when calling StoreGroupsApi->SetCustomerMessages");
 
-            var localVarPath = "./api/v1.0/storegroups/{storeGroupId}/{deliveryType}/MenuMessagePerDeliveryType";
+            var localVarPath = "./api/v1.0/storegroups/{storeGroupId}/CustomerMessages";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1605,14 +1596,13 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (storeGroupId != null) localVarPathParams.Add("storeGroupId", this.Configuration.ApiClient.ParameterToString(storeGroupId)); // path parameter
-            if (deliveryType != null) localVarPathParams.Add("deliveryType", this.Configuration.ApiClient.ParameterToString(deliveryType)); // path parameter
-            if (menuMessage != null && menuMessage.GetType() != typeof(byte[]))
+            if (customerMessages != null && customerMessages.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(menuMessage); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(customerMessages); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = menuMessage; // byte array
+                localVarPostBody = customerMessages; // byte array
             }
 
             // authentication (oauth2) required
@@ -1631,7 +1621,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SetMenuMessagePerDeliveryType", localVarResponse);
+                Exception exception = ExceptionFactory("SetCustomerMessages", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1645,12 +1635,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeGroupId"></param>
-        /// <param name="deliveryType"></param>
-        /// <param name="menuMessage"></param>
+        /// <param name="customerMessages"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task SetMenuMessagePerDeliveryTypeAsync (int? storeGroupId, string deliveryType, string menuMessage)
+        public async System.Threading.Tasks.Task SetCustomerMessagesAsync (int? storeGroupId, CustomerMessages customerMessages)
         {
-             await SetMenuMessagePerDeliveryTypeAsyncWithHttpInfo(storeGroupId, deliveryType, menuMessage);
+             await SetCustomerMessagesAsyncWithHttpInfo(storeGroupId, customerMessages);
 
         }
 
@@ -1659,22 +1648,18 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeGroupId"></param>
-        /// <param name="deliveryType"></param>
-        /// <param name="menuMessage"></param>
+        /// <param name="customerMessages"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetMenuMessagePerDeliveryTypeAsyncWithHttpInfo (int? storeGroupId, string deliveryType, string menuMessage)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetCustomerMessagesAsyncWithHttpInfo (int? storeGroupId, CustomerMessages customerMessages)
         {
             // verify the required parameter 'storeGroupId' is set
             if (storeGroupId == null)
-                throw new ApiException(400, "Missing required parameter 'storeGroupId' when calling StoreGroupsApi->SetMenuMessagePerDeliveryType");
-            // verify the required parameter 'deliveryType' is set
-            if (deliveryType == null)
-                throw new ApiException(400, "Missing required parameter 'deliveryType' when calling StoreGroupsApi->SetMenuMessagePerDeliveryType");
-            // verify the required parameter 'menuMessage' is set
-            if (menuMessage == null)
-                throw new ApiException(400, "Missing required parameter 'menuMessage' when calling StoreGroupsApi->SetMenuMessagePerDeliveryType");
+                throw new ApiException(400, "Missing required parameter 'storeGroupId' when calling StoreGroupsApi->SetCustomerMessages");
+            // verify the required parameter 'customerMessages' is set
+            if (customerMessages == null)
+                throw new ApiException(400, "Missing required parameter 'customerMessages' when calling StoreGroupsApi->SetCustomerMessages");
 
-            var localVarPath = "./api/v1.0/storegroups/{storeGroupId}/{deliveryType}/MenuMessagePerDeliveryType";
+            var localVarPath = "./api/v1.0/storegroups/{storeGroupId}/CustomerMessages";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1704,14 +1689,13 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (storeGroupId != null) localVarPathParams.Add("storeGroupId", this.Configuration.ApiClient.ParameterToString(storeGroupId)); // path parameter
-            if (deliveryType != null) localVarPathParams.Add("deliveryType", this.Configuration.ApiClient.ParameterToString(deliveryType)); // path parameter
-            if (menuMessage != null && menuMessage.GetType() != typeof(byte[]))
+            if (customerMessages != null && customerMessages.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(menuMessage); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(customerMessages); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = menuMessage; // byte array
+                localVarPostBody = customerMessages; // byte array
             }
 
             // authentication (oauth2) required
@@ -1730,7 +1714,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SetMenuMessagePerDeliveryType", localVarResponse);
+                Exception exception = ExceptionFactory("SetCustomerMessages", localVarResponse);
                 if (exception != null) throw exception;
             }
 

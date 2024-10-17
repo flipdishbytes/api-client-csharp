@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**GetStoreGroups**](StoreGroupsApi.md#getstoregroups) | **GET** /api/v1.0/{appNameId}/storegroups | 
 [**GetStoreGroupsExtended**](StoreGroupsApi.md#getstoregroupsextended) | **GET** /api/v1.0/{appNameId}/storegroups/extended | 
 [**RemoveStoreGroup**](StoreGroupsApi.md#removestoregroup) | **DELETE** /api/v1.0/storegroups/{storeGroupId} | 
-[**SetMenuMessagePerDeliveryType**](StoreGroupsApi.md#setmenumessageperdeliverytype) | **POST** /api/v1.0/storegroups/{storeGroupId}/{deliveryType}/MenuMessagePerDeliveryType | 
+[**SetCustomerMessages**](StoreGroupsApi.md#setcustomermessages) | **POST** /api/v1.0/storegroups/{storeGroupId}/CustomerMessages | 
 [**UpdateStoreGroup**](StoreGroupsApi.md#updatestoregroup) | **POST** /api/v1.0/storegroups/{storeGroupId} | 
 
 
@@ -398,9 +398,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="setmenumessageperdeliverytype"></a>
-# **SetMenuMessagePerDeliveryType**
-> void SetMenuMessagePerDeliveryType (int? storeGroupId, string deliveryType, string menuMessage)
+<a name="setcustomermessages"></a>
+# **SetCustomerMessages**
+> void SetCustomerMessages (int? storeGroupId, CustomerMessages customerMessages)
 
 
 
@@ -414,7 +414,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class SetMenuMessagePerDeliveryTypeExample
+    public class SetCustomerMessagesExample
     {
         public void main()
         {
@@ -423,16 +423,15 @@ namespace Example
 
             var apiInstance = new StoreGroupsApi();
             var storeGroupId = 56;  // int? | 
-            var deliveryType = deliveryType_example;  // string | 
-            var menuMessage = menuMessage_example;  // string | 
+            var customerMessages = new CustomerMessages(); // CustomerMessages | 
 
             try
             {
-                apiInstance.SetMenuMessagePerDeliveryType(storeGroupId, deliveryType, menuMessage);
+                apiInstance.SetCustomerMessages(storeGroupId, customerMessages);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling StoreGroupsApi.SetMenuMessagePerDeliveryType: " + e.Message );
+                Debug.Print("Exception when calling StoreGroupsApi.SetCustomerMessages: " + e.Message );
             }
         }
     }
@@ -444,8 +443,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storeGroupId** | **int?**|  | 
- **deliveryType** | **string**|  | 
- **menuMessage** | **string**|  | 
+ **customerMessages** | [**CustomerMessages**](CustomerMessages.md)|  | 
 
 ### Return type
 
