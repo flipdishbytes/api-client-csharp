@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **EventName** | **string** | The event name | [optional] 
 **AppStoreAppId** | **string** | App Store Id | [optional] 
 **AppStoreAppConfiguration** | [**UpdateAppStoreAppConfigurationWebhookDTO**](UpdateAppStoreAppConfigurationWebhookDTO.md) | App Configuration | [optional] 
+**User** | [**UserEventInfo**](UserEventInfo.md) | User who has update the configuration | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 
 **CreateTime** | **DateTime?** | The time of creation of the event | [optional] 
 **Position** | **int?** | Position | [optional] 
