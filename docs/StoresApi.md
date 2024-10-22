@@ -420,7 +420,7 @@ Name | Type | Description  | Notes
 
 <a name="createstoreinproperty"></a>
 # **CreateStoreInProperty**
-> RestApiResultStore CreateStoreInProperty (int? storeGroupId, string propertyId, StoreCreateBase store)
+> RestApiResultStore CreateStoreInProperty (int? storeGroupId, string propertyId, StoreCreateBase store, bool? autoAssignMenu = null)
 
 
 
@@ -445,10 +445,11 @@ namespace Example
             var storeGroupId = 56;  // int? | 
             var propertyId = propertyId_example;  // string | 
             var store = new StoreCreateBase(); // StoreCreateBase | 
+            var autoAssignMenu = true;  // bool? |  (optional) 
 
             try
             {
-                RestApiResultStore result = apiInstance.CreateStoreInProperty(storeGroupId, propertyId, store);
+                RestApiResultStore result = apiInstance.CreateStoreInProperty(storeGroupId, propertyId, store, autoAssignMenu);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -467,6 +468,7 @@ Name | Type | Description  | Notes
  **storeGroupId** | **int?**|  | 
  **propertyId** | **string**|  | 
  **store** | [**StoreCreateBase**](StoreCreateBase.md)|  | 
+ **autoAssignMenu** | **bool?**|  | [optional] 
 
 ### Return type
 

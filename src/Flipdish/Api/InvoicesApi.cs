@@ -61,6 +61,89 @@ namespace Flipdish.Api
         /// <param name="storeId"> (optional)</param>
         /// <returns>ApiResponse of RestApiFinanceSearchPaginationResultInvoice</returns>
         ApiResponse<RestApiFinanceSearchPaginationResultInvoice> GetInvoicesWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="invoiceNumber"></param>
+        /// <param name="appId"></param>
+        /// <returns></returns>
+        void InvoicePdf (string invoiceNumber, string appId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="invoiceNumber"></param>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> InvoicePdfWithHttpInfo (string invoiceNumber, string appId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>Object</returns>
+        Object ListInvoices (string appId, int? storeId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ListInvoicesWithHttpInfo (string appId, int? storeId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="subscriptionId"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="pageId"> (optional)</param>
+        /// <param name="excludeNotOwnedInvoices"> (optional)</param>
+        /// <param name="dateFrom"> (optional)</param>
+        /// <param name="dateTo"> (optional)</param>
+        /// <param name="invoiceNumber"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>RestApiFinanceSearchPaginationResultInvoice</returns>
+        RestApiFinanceSearchPaginationResultInvoice ListSubscriptionInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="subscriptionId"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="pageId"> (optional)</param>
+        /// <param name="excludeNotOwnedInvoices"> (optional)</param>
+        /// <param name="dateFrom"> (optional)</param>
+        /// <param name="dateTo"> (optional)</param>
+        /// <param name="invoiceNumber"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>ApiResponse of RestApiFinanceSearchPaginationResultInvoice</returns>
+        ApiResponse<RestApiFinanceSearchPaginationResultInvoice> ListSubscriptionInvoicesWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -100,6 +183,89 @@ namespace Flipdish.Api
         /// <param name="storeId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiFinanceSearchPaginationResultInvoice)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiFinanceSearchPaginationResultInvoice>> GetInvoicesAsyncWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="invoiceNumber"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task InvoicePdfAsync (string invoiceNumber, string appId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="invoiceNumber"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> InvoicePdfAsyncWithHttpInfo (string invoiceNumber, string appId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ListInvoicesAsync (string appId, int? storeId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ListInvoicesAsyncWithHttpInfo (string appId, int? storeId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="subscriptionId"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="pageId"> (optional)</param>
+        /// <param name="excludeNotOwnedInvoices"> (optional)</param>
+        /// <param name="dateFrom"> (optional)</param>
+        /// <param name="dateTo"> (optional)</param>
+        /// <param name="invoiceNumber"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>Task of RestApiFinanceSearchPaginationResultInvoice</returns>
+        System.Threading.Tasks.Task<RestApiFinanceSearchPaginationResultInvoice> ListSubscriptionInvoicesAsync (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="subscriptionId"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="pageId"> (optional)</param>
+        /// <param name="excludeNotOwnedInvoices"> (optional)</param>
+        /// <param name="dateFrom"> (optional)</param>
+        /// <param name="dateTo"> (optional)</param>
+        /// <param name="invoiceNumber"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiFinanceSearchPaginationResultInvoice)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiFinanceSearchPaginationResultInvoice>> ListSubscriptionInvoicesAsyncWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
         #endregion Asynchronous Operations
     }
 
@@ -391,6 +557,529 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("GetInvoices", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiFinanceSearchPaginationResultInvoice>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiFinanceSearchPaginationResultInvoice) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiFinanceSearchPaginationResultInvoice)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="invoiceNumber"></param>
+        /// <param name="appId"></param>
+        /// <returns></returns>
+        public void InvoicePdf (string invoiceNumber, string appId)
+        {
+             InvoicePdfWithHttpInfo(invoiceNumber, appId);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="invoiceNumber"></param>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> InvoicePdfWithHttpInfo (string invoiceNumber, string appId)
+        {
+            // verify the required parameter 'invoiceNumber' is set
+            if (invoiceNumber == null)
+                throw new ApiException(400, "Missing required parameter 'invoiceNumber' when calling InvoicesApi->InvoicePdf");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling InvoicesApi->InvoicePdf");
+
+            var localVarPath = "./api/v1.0/{appId}/invoices/InvoicePdf";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (invoiceNumber != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "invoiceNumber", invoiceNumber)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("InvoicePdf", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="invoiceNumber"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task InvoicePdfAsync (string invoiceNumber, string appId)
+        {
+             await InvoicePdfAsyncWithHttpInfo(invoiceNumber, appId);
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="invoiceNumber"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> InvoicePdfAsyncWithHttpInfo (string invoiceNumber, string appId)
+        {
+            // verify the required parameter 'invoiceNumber' is set
+            if (invoiceNumber == null)
+                throw new ApiException(400, "Missing required parameter 'invoiceNumber' when calling InvoicesApi->InvoicePdf");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling InvoicesApi->InvoicePdf");
+
+            var localVarPath = "./api/v1.0/{appId}/invoices/InvoicePdf";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (invoiceNumber != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "invoiceNumber", invoiceNumber)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("InvoicePdf", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>Object</returns>
+        public Object ListInvoices (string appId, int? storeId)
+        {
+             ApiResponse<Object> localVarResponse = ListInvoicesWithHttpInfo(appId, storeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ListInvoicesWithHttpInfo (string appId, int? storeId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling InvoicesApi->ListInvoices");
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling InvoicesApi->ListInvoices");
+
+            var localVarPath = "./api/v1.0/{appId}/invoices/ListInvoices";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ListInvoices", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ListInvoicesAsync (string appId, int? storeId)
+        {
+             ApiResponse<Object> localVarResponse = await ListInvoicesAsyncWithHttpInfo(appId, storeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ListInvoicesAsyncWithHttpInfo (string appId, int? storeId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling InvoicesApi->ListInvoices");
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling InvoicesApi->ListInvoices");
+
+            var localVarPath = "./api/v1.0/{appId}/invoices/ListInvoices";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ListInvoices", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="subscriptionId"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="pageId"> (optional)</param>
+        /// <param name="excludeNotOwnedInvoices"> (optional)</param>
+        /// <param name="dateFrom"> (optional)</param>
+        /// <param name="dateTo"> (optional)</param>
+        /// <param name="invoiceNumber"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>RestApiFinanceSearchPaginationResultInvoice</returns>
+        public RestApiFinanceSearchPaginationResultInvoice ListSubscriptionInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
+        {
+             ApiResponse<RestApiFinanceSearchPaginationResultInvoice> localVarResponse = ListSubscriptionInvoicesWithHttpInfo(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="subscriptionId"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="pageId"> (optional)</param>
+        /// <param name="excludeNotOwnedInvoices"> (optional)</param>
+        /// <param name="dateFrom"> (optional)</param>
+        /// <param name="dateTo"> (optional)</param>
+        /// <param name="invoiceNumber"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>ApiResponse of RestApiFinanceSearchPaginationResultInvoice</returns>
+        public ApiResponse< RestApiFinanceSearchPaginationResultInvoice > ListSubscriptionInvoicesWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling InvoicesApi->ListSubscriptionInvoices");
+
+            var localVarPath = "./api/v1.0/{appId}/invoices/ListSubscriptionInvoices";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (subscriptionId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "subscriptionId", subscriptionId)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (pageId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pageId", pageId)); // query parameter
+            if (excludeNotOwnedInvoices != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "excludeNotOwnedInvoices", excludeNotOwnedInvoices)); // query parameter
+            if (dateFrom != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "dateFrom", dateFrom)); // query parameter
+            if (dateTo != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "dateTo", dateTo)); // query parameter
+            if (invoiceNumber != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "invoiceNumber", invoiceNumber)); // query parameter
+            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeId", storeId)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ListSubscriptionInvoices", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiFinanceSearchPaginationResultInvoice>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiFinanceSearchPaginationResultInvoice) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiFinanceSearchPaginationResultInvoice)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="subscriptionId"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="pageId"> (optional)</param>
+        /// <param name="excludeNotOwnedInvoices"> (optional)</param>
+        /// <param name="dateFrom"> (optional)</param>
+        /// <param name="dateTo"> (optional)</param>
+        /// <param name="invoiceNumber"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>Task of RestApiFinanceSearchPaginationResultInvoice</returns>
+        public async System.Threading.Tasks.Task<RestApiFinanceSearchPaginationResultInvoice> ListSubscriptionInvoicesAsync (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
+        {
+             ApiResponse<RestApiFinanceSearchPaginationResultInvoice> localVarResponse = await ListSubscriptionInvoicesAsyncWithHttpInfo(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="subscriptionId"> (optional)</param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="pageId"> (optional)</param>
+        /// <param name="excludeNotOwnedInvoices"> (optional)</param>
+        /// <param name="dateFrom"> (optional)</param>
+        /// <param name="dateTo"> (optional)</param>
+        /// <param name="invoiceNumber"> (optional)</param>
+        /// <param name="storeId"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiFinanceSearchPaginationResultInvoice)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiFinanceSearchPaginationResultInvoice>> ListSubscriptionInvoicesAsyncWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling InvoicesApi->ListSubscriptionInvoices");
+
+            var localVarPath = "./api/v1.0/{appId}/invoices/ListSubscriptionInvoices";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (subscriptionId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "subscriptionId", subscriptionId)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (pageId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pageId", pageId)); // query parameter
+            if (excludeNotOwnedInvoices != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "excludeNotOwnedInvoices", excludeNotOwnedInvoices)); // query parameter
+            if (dateFrom != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "dateFrom", dateFrom)); // query parameter
+            if (dateTo != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "dateTo", dateTo)); // query parameter
+            if (invoiceNumber != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "invoiceNumber", invoiceNumber)); // query parameter
+            if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeId", storeId)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ListSubscriptionInvoices", localVarResponse);
                 if (exception != null) throw exception;
             }
 

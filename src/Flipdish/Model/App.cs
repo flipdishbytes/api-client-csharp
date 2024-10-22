@@ -1104,7 +1104,13 @@ namespace Flipdish.Model
             /// Enum ViewSubscriptions for value: ViewSubscriptions
             /// </summary>
             [EnumMember(Value = "ViewSubscriptions")]
-            ViewSubscriptions = 165
+            ViewSubscriptions = 165,
+            
+            /// <summary>
+            /// Enum ViewInvoices for value: ViewInvoices
+            /// </summary>
+            [EnumMember(Value = "ViewInvoices")]
+            ViewInvoices = 166
         }
 
 

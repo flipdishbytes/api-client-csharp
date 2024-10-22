@@ -170,8 +170,9 @@ namespace Flipdish.Api
         /// <param name="storeGroupId"></param>
         /// <param name="propertyId"></param>
         /// <param name="store"></param>
+        /// <param name="autoAssignMenu"> (optional)</param>
         /// <returns>RestApiResultStore</returns>
-        RestApiResultStore CreateStoreInProperty (int? storeGroupId, string propertyId, StoreCreateBase store);
+        RestApiResultStore CreateStoreInProperty (int? storeGroupId, string propertyId, StoreCreateBase store, bool? autoAssignMenu = null);
 
         /// <summary>
         /// 
@@ -183,8 +184,9 @@ namespace Flipdish.Api
         /// <param name="storeGroupId"></param>
         /// <param name="propertyId"></param>
         /// <param name="store"></param>
+        /// <param name="autoAssignMenu"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultStore</returns>
-        ApiResponse<RestApiResultStore> CreateStoreInPropertyWithHttpInfo (int? storeGroupId, string propertyId, StoreCreateBase store);
+        ApiResponse<RestApiResultStore> CreateStoreInPropertyWithHttpInfo (int? storeGroupId, string propertyId, StoreCreateBase store, bool? autoAssignMenu = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1057,8 +1059,9 @@ namespace Flipdish.Api
         /// <param name="storeGroupId"></param>
         /// <param name="propertyId"></param>
         /// <param name="store"></param>
+        /// <param name="autoAssignMenu"> (optional)</param>
         /// <returns>Task of RestApiResultStore</returns>
-        System.Threading.Tasks.Task<RestApiResultStore> CreateStoreInPropertyAsync (int? storeGroupId, string propertyId, StoreCreateBase store);
+        System.Threading.Tasks.Task<RestApiResultStore> CreateStoreInPropertyAsync (int? storeGroupId, string propertyId, StoreCreateBase store, bool? autoAssignMenu = null);
 
         /// <summary>
         /// 
@@ -1070,8 +1073,9 @@ namespace Flipdish.Api
         /// <param name="storeGroupId"></param>
         /// <param name="propertyId"></param>
         /// <param name="store"></param>
+        /// <param name="autoAssignMenu"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultStore)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultStore>> CreateStoreInPropertyAsyncWithHttpInfo (int? storeGroupId, string propertyId, StoreCreateBase store);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultStore>> CreateStoreInPropertyAsyncWithHttpInfo (int? storeGroupId, string propertyId, StoreCreateBase store, bool? autoAssignMenu = null);
         /// <summary>
         /// 
         /// </summary>
@@ -2963,10 +2967,11 @@ namespace Flipdish.Api
         /// <param name="storeGroupId"></param>
         /// <param name="propertyId"></param>
         /// <param name="store"></param>
+        /// <param name="autoAssignMenu"> (optional)</param>
         /// <returns>RestApiResultStore</returns>
-        public RestApiResultStore CreateStoreInProperty (int? storeGroupId, string propertyId, StoreCreateBase store)
+        public RestApiResultStore CreateStoreInProperty (int? storeGroupId, string propertyId, StoreCreateBase store, bool? autoAssignMenu = null)
         {
-             ApiResponse<RestApiResultStore> localVarResponse = CreateStoreInPropertyWithHttpInfo(storeGroupId, propertyId, store);
+             ApiResponse<RestApiResultStore> localVarResponse = CreateStoreInPropertyWithHttpInfo(storeGroupId, propertyId, store, autoAssignMenu);
              return localVarResponse.Data;
         }
 
@@ -2977,8 +2982,9 @@ namespace Flipdish.Api
         /// <param name="storeGroupId"></param>
         /// <param name="propertyId"></param>
         /// <param name="store"></param>
+        /// <param name="autoAssignMenu"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultStore</returns>
-        public ApiResponse< RestApiResultStore > CreateStoreInPropertyWithHttpInfo (int? storeGroupId, string propertyId, StoreCreateBase store)
+        public ApiResponse< RestApiResultStore > CreateStoreInPropertyWithHttpInfo (int? storeGroupId, string propertyId, StoreCreateBase store, bool? autoAssignMenu = null)
         {
             // verify the required parameter 'storeGroupId' is set
             if (storeGroupId == null)
@@ -3021,6 +3027,7 @@ namespace Flipdish.Api
 
             if (propertyId != null) localVarPathParams.Add("propertyId", this.Configuration.ApiClient.ParameterToString(propertyId)); // path parameter
             if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
+            if (autoAssignMenu != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "autoAssignMenu", autoAssignMenu)); // query parameter
             if (store != null && store.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(store); // http body (model) parameter
@@ -3062,10 +3069,11 @@ namespace Flipdish.Api
         /// <param name="storeGroupId"></param>
         /// <param name="propertyId"></param>
         /// <param name="store"></param>
+        /// <param name="autoAssignMenu"> (optional)</param>
         /// <returns>Task of RestApiResultStore</returns>
-        public async System.Threading.Tasks.Task<RestApiResultStore> CreateStoreInPropertyAsync (int? storeGroupId, string propertyId, StoreCreateBase store)
+        public async System.Threading.Tasks.Task<RestApiResultStore> CreateStoreInPropertyAsync (int? storeGroupId, string propertyId, StoreCreateBase store, bool? autoAssignMenu = null)
         {
-             ApiResponse<RestApiResultStore> localVarResponse = await CreateStoreInPropertyAsyncWithHttpInfo(storeGroupId, propertyId, store);
+             ApiResponse<RestApiResultStore> localVarResponse = await CreateStoreInPropertyAsyncWithHttpInfo(storeGroupId, propertyId, store, autoAssignMenu);
              return localVarResponse.Data;
 
         }
@@ -3077,8 +3085,9 @@ namespace Flipdish.Api
         /// <param name="storeGroupId"></param>
         /// <param name="propertyId"></param>
         /// <param name="store"></param>
+        /// <param name="autoAssignMenu"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultStore)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStore>> CreateStoreInPropertyAsyncWithHttpInfo (int? storeGroupId, string propertyId, StoreCreateBase store)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStore>> CreateStoreInPropertyAsyncWithHttpInfo (int? storeGroupId, string propertyId, StoreCreateBase store, bool? autoAssignMenu = null)
         {
             // verify the required parameter 'storeGroupId' is set
             if (storeGroupId == null)
@@ -3121,6 +3130,7 @@ namespace Flipdish.Api
 
             if (propertyId != null) localVarPathParams.Add("propertyId", this.Configuration.ApiClient.ParameterToString(propertyId)); // path parameter
             if (storeGroupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeGroupId", storeGroupId)); // query parameter
+            if (autoAssignMenu != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "autoAssignMenu", autoAssignMenu)); // query parameter
             if (store != null && store.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(store); // http body (model) parameter

@@ -300,6 +300,9 @@ Class | Method | HTTP request | Description
 *HydraApi* | [**UpdateKioskSettings**](docs/HydraApi.md#updatekiosksettings) | **POST** /api/v1.0/{appId}/kiosksettings/{deviceId} | 
 *IntercomApi* | [**UserHash**](docs/IntercomApi.md#userhash) | **GET** /api/v1.0/intercom/userHash | 
 *InvoicesApi* | [**GetInvoices**](docs/InvoicesApi.md#getinvoices) | **GET** /api/v1.0/{appId}/invoices | 
+*InvoicesApi* | [**InvoicePdf**](docs/InvoicesApi.md#invoicepdf) | **GET** /api/v1.0/{appId}/invoices/InvoicePdf | 
+*InvoicesApi* | [**ListInvoices**](docs/InvoicesApi.md#listinvoices) | **GET** /api/v1.0/{appId}/invoices/ListInvoices | 
+*InvoicesApi* | [**ListSubscriptionInvoices**](docs/InvoicesApi.md#listsubscriptioninvoices) | **GET** /api/v1.0/{appId}/invoices/ListSubscriptionInvoices | 
 *KioskEntitlementsApi* | [**QueryKioskEntitlements**](docs/KioskEntitlementsApi.md#querykioskentitlements) | **GET** /api/v1.0/{appId}/kiosk/entitlements | 
 *KioskEntitlementsApi* | [**QueryKioskEntitlementsByOrgId**](docs/KioskEntitlementsApi.md#querykioskentitlementsbyorgid) | **GET** /api/v1.0/orgs/{orgId}/kiosk/entitlements | 
 *KioskIotApi* | [**GetKioskIotConnection**](docs/KioskIotApi.md#getkioskiotconnection) | **POST** /api/v1.0/kioskiot/connect | 
