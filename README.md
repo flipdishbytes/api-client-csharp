@@ -1396,6 +1396,7 @@ Class | Method | HTTP request | Description
  - [Model.ValidationErrorResult](docs/ValidationErrorResult.md)
  - [Model.ValidityPeriod](docs/ValidityPeriod.md)
  - [Model.Voucher](docs/Voucher.md)
+ - [Model.VoucherAppliedEvent](docs/VoucherAppliedEvent.md)
  - [Model.VoucherCreatedEvent](docs/VoucherCreatedEvent.md)
  - [Model.VoucherDataPoint](docs/VoucherDataPoint.md)
  - [Model.VoucherDeletedEvent](docs/VoucherDeletedEvent.md)

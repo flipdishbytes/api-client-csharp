@@ -23,33 +23,27 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Store Updated Event
+    /// Voucher Applied Event
     /// </summary>
     [DataContract]
-    public partial class StoreUpdatedEvent :  IEquatable<StoreUpdatedEvent>
+    public partial class VoucherAppliedEvent :  IEquatable<VoucherAppliedEvent>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="StoreUpdatedEvent" /> class.
+        /// Initializes a new instance of the <see cref="VoucherAppliedEvent" /> class.
         /// </summary>
+        /// <param name="voucherId">Voucher Id.</param>
         /// <param name="eventName">The event name.</param>
-        /// <param name="orgId">Organisation Id.</param>
-        /// <param name="storeId">Store Id.</param>
-        /// <param name="user">User which updated this store.</param>
-        /// <param name="description">Description.</param>
-        /// <param name="store">Updated Store.</param>
+        /// <param name="orderId">Order id.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
         /// <param name="ipAddress">Ip Address.</param>
-        public StoreUpdatedEvent(string eventName = default(string), string orgId = default(string), int? storeId = default(int?), UserEventInfo user = default(UserEventInfo), string description = default(string), Store store = default(Store), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
+        public VoucherAppliedEvent(int? voucherId = default(int?), string eventName = default(string), int? orderId = default(int?), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
         {
+            this.VoucherId = voucherId;
             this.EventName = eventName;
-            this.OrgId = orgId;
-            this.StoreId = storeId;
-            this.User = user;
-            this.Description = description;
-            this.Store = store;
+            this.OrderId = orderId;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
             this.Position = position;
@@ -58,6 +52,13 @@ namespace Flipdish.Model
         }
         
         /// <summary>
+        /// Voucher Id
+        /// </summary>
+        /// <value>Voucher Id</value>
+        [DataMember(Name="VoucherId", EmitDefaultValue=false)]
+        public int? VoucherId { get; set; }
+
+        /// <summary>
         /// The event name
         /// </summary>
         /// <value>The event name</value>
@@ -65,46 +66,11 @@ namespace Flipdish.Model
         public string EventName { get; set; }
 
         /// <summary>
-        /// Organisation Id
+        /// Order id
         /// </summary>
-        /// <value>Organisation Id</value>
-        [DataMember(Name="OrgId", EmitDefaultValue=false)]
-        public string OrgId { get; set; }
-
-        /// <summary>
-        /// Store Id
-        /// </summary>
-        /// <value>Store Id</value>
-        [DataMember(Name="StoreId", EmitDefaultValue=false)]
-        public int? StoreId { get; set; }
-
-        /// <summary>
-        /// Store group Id
-        /// </summary>
-        /// <value>Store group Id</value>
-        [DataMember(Name="StoreGroupId", EmitDefaultValue=false)]
-        public int? StoreGroupId { get; private set; }
-
-        /// <summary>
-        /// User which updated this store
-        /// </summary>
-        /// <value>User which updated this store</value>
-        [DataMember(Name="User", EmitDefaultValue=false)]
-        public UserEventInfo User { get; set; }
-
-        /// <summary>
-        /// Description
-        /// </summary>
-        /// <value>Description</value>
-        [DataMember(Name="Description", EmitDefaultValue=false)]
-        public string Description { get; set; }
-
-        /// <summary>
-        /// Updated Store
-        /// </summary>
-        /// <value>Updated Store</value>
-        [DataMember(Name="Store", EmitDefaultValue=false)]
-        public Store Store { get; set; }
+        /// <value>Order id</value>
+        [DataMember(Name="OrderId", EmitDefaultValue=false)]
+        public int? OrderId { get; set; }
 
         /// <summary>
         /// The identitfier of the event
@@ -148,14 +114,10 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class StoreUpdatedEvent {\n");
+            sb.Append("class VoucherAppliedEvent {\n");
+            sb.Append("  VoucherId: ").Append(VoucherId).Append("\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
-            sb.Append("  OrgId: ").Append(OrgId).Append("\n");
-            sb.Append("  StoreId: ").Append(StoreId).Append("\n");
-            sb.Append("  StoreGroupId: ").Append(StoreGroupId).Append("\n");
-            sb.Append("  User: ").Append(User).Append("\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  Store: ").Append(Store).Append("\n");
+            sb.Append("  OrderId: ").Append(OrderId).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -181,54 +143,34 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as StoreUpdatedEvent);
+            return this.Equals(input as VoucherAppliedEvent);
         }
 
         /// <summary>
-        /// Returns true if StoreUpdatedEvent instances are equal
+        /// Returns true if VoucherAppliedEvent instances are equal
         /// </summary>
-        /// <param name="input">Instance of StoreUpdatedEvent to be compared</param>
+        /// <param name="input">Instance of VoucherAppliedEvent to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(StoreUpdatedEvent input)
+        public bool Equals(VoucherAppliedEvent input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
+                    this.VoucherId == input.VoucherId ||
+                    (this.VoucherId != null &&
+                    this.VoucherId.Equals(input.VoucherId))
+                ) && 
+                (
                     this.EventName == input.EventName ||
                     (this.EventName != null &&
                     this.EventName.Equals(input.EventName))
                 ) && 
                 (
-                    this.OrgId == input.OrgId ||
-                    (this.OrgId != null &&
-                    this.OrgId.Equals(input.OrgId))
-                ) && 
-                (
-                    this.StoreId == input.StoreId ||
-                    (this.StoreId != null &&
-                    this.StoreId.Equals(input.StoreId))
-                ) && 
-                (
-                    this.StoreGroupId == input.StoreGroupId ||
-                    (this.StoreGroupId != null &&
-                    this.StoreGroupId.Equals(input.StoreGroupId))
-                ) && 
-                (
-                    this.User == input.User ||
-                    (this.User != null &&
-                    this.User.Equals(input.User))
-                ) && 
-                (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
-                ) && 
-                (
-                    this.Store == input.Store ||
-                    (this.Store != null &&
-                    this.Store.Equals(input.Store))
+                    this.OrderId == input.OrderId ||
+                    (this.OrderId != null &&
+                    this.OrderId.Equals(input.OrderId))
                 ) && 
                 (
                     this.FlipdishEventId == input.FlipdishEventId ||
@@ -266,20 +208,12 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.VoucherId != null)
+                    hashCode = hashCode * 59 + this.VoucherId.GetHashCode();
                 if (this.EventName != null)
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
-                if (this.OrgId != null)
-                    hashCode = hashCode * 59 + this.OrgId.GetHashCode();
-                if (this.StoreId != null)
-                    hashCode = hashCode * 59 + this.StoreId.GetHashCode();
-                if (this.StoreGroupId != null)
-                    hashCode = hashCode * 59 + this.StoreGroupId.GetHashCode();
-                if (this.User != null)
-                    hashCode = hashCode * 59 + this.User.GetHashCode();
-                if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
-                if (this.Store != null)
-                    hashCode = hashCode * 59 + this.Store.GetHashCode();
+                if (this.OrderId != null)
+                    hashCode = hashCode * 59 + this.OrderId.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)
