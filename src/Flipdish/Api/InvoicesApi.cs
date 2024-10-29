@@ -40,8 +40,8 @@ namespace Flipdish.Api
         /// <param name="dateTo"> (optional)</param>
         /// <param name="invoiceNumber"> (optional)</param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>RestApiFinanceSearchPaginationResultInvoice</returns>
-        RestApiFinanceSearchPaginationResultInvoice GetInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
+        /// <returns>RestApiFinanceSearchPaginationResultSubscriptionInvoice</returns>
+        RestApiFinanceSearchPaginationResultSubscriptionInvoice GetInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
 
         /// <summary>
         /// 
@@ -59,8 +59,8 @@ namespace Flipdish.Api
         /// <param name="dateTo"> (optional)</param>
         /// <param name="invoiceNumber"> (optional)</param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>ApiResponse of RestApiFinanceSearchPaginationResultInvoice</returns>
-        ApiResponse<RestApiFinanceSearchPaginationResultInvoice> GetInvoicesWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
+        /// <returns>ApiResponse of RestApiFinanceSearchPaginationResultSubscriptionInvoice</returns>
+        ApiResponse<RestApiFinanceSearchPaginationResultSubscriptionInvoice> GetInvoicesWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -91,10 +91,12 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
         /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="page"> (optional)</param>
         /// <returns>Object</returns>
-        Object ListInvoices (string appId, int? storeId);
+        Object ListInvoices (int? storeId, string appId, int? limit = null, int? page = null);
 
         /// <summary>
         /// 
@@ -103,10 +105,12 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
         /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="page"> (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ListInvoicesWithHttpInfo (string appId, int? storeId);
+        ApiResponse<Object> ListInvoicesWithHttpInfo (int? storeId, string appId, int? limit = null, int? page = null);
         /// <summary>
         /// 
         /// </summary>
@@ -123,8 +127,8 @@ namespace Flipdish.Api
         /// <param name="dateTo"> (optional)</param>
         /// <param name="invoiceNumber"> (optional)</param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>RestApiFinanceSearchPaginationResultInvoice</returns>
-        RestApiFinanceSearchPaginationResultInvoice ListSubscriptionInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
+        /// <returns>RestApiFinanceSearchPaginationResultSubscriptionInvoice</returns>
+        RestApiFinanceSearchPaginationResultSubscriptionInvoice ListSubscriptionInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
 
         /// <summary>
         /// 
@@ -142,8 +146,8 @@ namespace Flipdish.Api
         /// <param name="dateTo"> (optional)</param>
         /// <param name="invoiceNumber"> (optional)</param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>ApiResponse of RestApiFinanceSearchPaginationResultInvoice</returns>
-        ApiResponse<RestApiFinanceSearchPaginationResultInvoice> ListSubscriptionInvoicesWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
+        /// <returns>ApiResponse of RestApiFinanceSearchPaginationResultSubscriptionInvoice</returns>
+        ApiResponse<RestApiFinanceSearchPaginationResultSubscriptionInvoice> ListSubscriptionInvoicesWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -162,8 +166,8 @@ namespace Flipdish.Api
         /// <param name="dateTo"> (optional)</param>
         /// <param name="invoiceNumber"> (optional)</param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>Task of RestApiFinanceSearchPaginationResultInvoice</returns>
-        System.Threading.Tasks.Task<RestApiFinanceSearchPaginationResultInvoice> GetInvoicesAsync (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
+        /// <returns>Task of RestApiFinanceSearchPaginationResultSubscriptionInvoice</returns>
+        System.Threading.Tasks.Task<RestApiFinanceSearchPaginationResultSubscriptionInvoice> GetInvoicesAsync (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
 
         /// <summary>
         /// 
@@ -181,8 +185,8 @@ namespace Flipdish.Api
         /// <param name="dateTo"> (optional)</param>
         /// <param name="invoiceNumber"> (optional)</param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiFinanceSearchPaginationResultInvoice)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiFinanceSearchPaginationResultInvoice>> GetInvoicesAsyncWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
+        /// <returns>Task of ApiResponse (RestApiFinanceSearchPaginationResultSubscriptionInvoice)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiFinanceSearchPaginationResultSubscriptionInvoice>> GetInvoicesAsyncWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -213,10 +217,12 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
         /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="page"> (optional)</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ListInvoicesAsync (string appId, int? storeId);
+        System.Threading.Tasks.Task<Object> ListInvoicesAsync (int? storeId, string appId, int? limit = null, int? page = null);
 
         /// <summary>
         /// 
@@ -225,10 +231,12 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
         /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="page"> (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ListInvoicesAsyncWithHttpInfo (string appId, int? storeId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> ListInvoicesAsyncWithHttpInfo (int? storeId, string appId, int? limit = null, int? page = null);
         /// <summary>
         /// 
         /// </summary>
@@ -245,8 +253,8 @@ namespace Flipdish.Api
         /// <param name="dateTo"> (optional)</param>
         /// <param name="invoiceNumber"> (optional)</param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>Task of RestApiFinanceSearchPaginationResultInvoice</returns>
-        System.Threading.Tasks.Task<RestApiFinanceSearchPaginationResultInvoice> ListSubscriptionInvoicesAsync (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
+        /// <returns>Task of RestApiFinanceSearchPaginationResultSubscriptionInvoice</returns>
+        System.Threading.Tasks.Task<RestApiFinanceSearchPaginationResultSubscriptionInvoice> ListSubscriptionInvoicesAsync (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
 
         /// <summary>
         /// 
@@ -264,8 +272,8 @@ namespace Flipdish.Api
         /// <param name="dateTo"> (optional)</param>
         /// <param name="invoiceNumber"> (optional)</param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiFinanceSearchPaginationResultInvoice)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiFinanceSearchPaginationResultInvoice>> ListSubscriptionInvoicesAsyncWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
+        /// <returns>Task of ApiResponse (RestApiFinanceSearchPaginationResultSubscriptionInvoice)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiFinanceSearchPaginationResultSubscriptionInvoice>> ListSubscriptionInvoicesAsyncWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null);
         #endregion Asynchronous Operations
     }
 
@@ -379,10 +387,10 @@ namespace Flipdish.Api
         /// <param name="dateTo"> (optional)</param>
         /// <param name="invoiceNumber"> (optional)</param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>RestApiFinanceSearchPaginationResultInvoice</returns>
-        public RestApiFinanceSearchPaginationResultInvoice GetInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
+        /// <returns>RestApiFinanceSearchPaginationResultSubscriptionInvoice</returns>
+        public RestApiFinanceSearchPaginationResultSubscriptionInvoice GetInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
         {
-             ApiResponse<RestApiFinanceSearchPaginationResultInvoice> localVarResponse = GetInvoicesWithHttpInfo(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
+             ApiResponse<RestApiFinanceSearchPaginationResultSubscriptionInvoice> localVarResponse = GetInvoicesWithHttpInfo(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
              return localVarResponse.Data;
         }
 
@@ -399,8 +407,8 @@ namespace Flipdish.Api
         /// <param name="dateTo"> (optional)</param>
         /// <param name="invoiceNumber"> (optional)</param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>ApiResponse of RestApiFinanceSearchPaginationResultInvoice</returns>
-        public ApiResponse< RestApiFinanceSearchPaginationResultInvoice > GetInvoicesWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
+        /// <returns>ApiResponse of RestApiFinanceSearchPaginationResultSubscriptionInvoice</returns>
+        public ApiResponse< RestApiFinanceSearchPaginationResultSubscriptionInvoice > GetInvoicesWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -460,9 +468,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiFinanceSearchPaginationResultInvoice>(localVarStatusCode,
+            return new ApiResponse<RestApiFinanceSearchPaginationResultSubscriptionInvoice>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiFinanceSearchPaginationResultInvoice) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiFinanceSearchPaginationResultInvoice)));
+                (RestApiFinanceSearchPaginationResultSubscriptionInvoice) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiFinanceSearchPaginationResultSubscriptionInvoice)));
         }
 
         /// <summary>
@@ -478,10 +486,10 @@ namespace Flipdish.Api
         /// <param name="dateTo"> (optional)</param>
         /// <param name="invoiceNumber"> (optional)</param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>Task of RestApiFinanceSearchPaginationResultInvoice</returns>
-        public async System.Threading.Tasks.Task<RestApiFinanceSearchPaginationResultInvoice> GetInvoicesAsync (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
+        /// <returns>Task of RestApiFinanceSearchPaginationResultSubscriptionInvoice</returns>
+        public async System.Threading.Tasks.Task<RestApiFinanceSearchPaginationResultSubscriptionInvoice> GetInvoicesAsync (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
         {
-             ApiResponse<RestApiFinanceSearchPaginationResultInvoice> localVarResponse = await GetInvoicesAsyncWithHttpInfo(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
+             ApiResponse<RestApiFinanceSearchPaginationResultSubscriptionInvoice> localVarResponse = await GetInvoicesAsyncWithHttpInfo(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
              return localVarResponse.Data;
 
         }
@@ -499,8 +507,8 @@ namespace Flipdish.Api
         /// <param name="dateTo"> (optional)</param>
         /// <param name="invoiceNumber"> (optional)</param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiFinanceSearchPaginationResultInvoice)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiFinanceSearchPaginationResultInvoice>> GetInvoicesAsyncWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
+        /// <returns>Task of ApiResponse (RestApiFinanceSearchPaginationResultSubscriptionInvoice)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiFinanceSearchPaginationResultSubscriptionInvoice>> GetInvoicesAsyncWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -560,9 +568,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiFinanceSearchPaginationResultInvoice>(localVarStatusCode,
+            return new ApiResponse<RestApiFinanceSearchPaginationResultSubscriptionInvoice>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiFinanceSearchPaginationResultInvoice) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiFinanceSearchPaginationResultInvoice)));
+                (RestApiFinanceSearchPaginationResultSubscriptionInvoice) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiFinanceSearchPaginationResultSubscriptionInvoice)));
         }
 
         /// <summary>
@@ -730,12 +738,14 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
         /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="page"> (optional)</param>
         /// <returns>Object</returns>
-        public Object ListInvoices (string appId, int? storeId)
+        public Object ListInvoices (int? storeId, string appId, int? limit = null, int? page = null)
         {
-             ApiResponse<Object> localVarResponse = ListInvoicesWithHttpInfo(appId, storeId);
+             ApiResponse<Object> localVarResponse = ListInvoicesWithHttpInfo(storeId, appId, limit, page);
              return localVarResponse.Data;
         }
 
@@ -743,17 +753,19 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
         /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="page"> (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ListInvoicesWithHttpInfo (string appId, int? storeId)
+        public ApiResponse< Object > ListInvoicesWithHttpInfo (int? storeId, string appId, int? limit = null, int? page = null)
         {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling InvoicesApi->ListInvoices");
             // verify the required parameter 'storeId' is set
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling InvoicesApi->ListInvoices");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling InvoicesApi->ListInvoices");
 
             var localVarPath = "./api/v1.0/{appId}/invoices/ListInvoices";
             var localVarPathParams = new Dictionary<String, String>();
@@ -781,6 +793,8 @@ namespace Flipdish.Api
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -811,12 +825,14 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
         /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="page"> (optional)</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ListInvoicesAsync (string appId, int? storeId)
+        public async System.Threading.Tasks.Task<Object> ListInvoicesAsync (int? storeId, string appId, int? limit = null, int? page = null)
         {
-             ApiResponse<Object> localVarResponse = await ListInvoicesAsyncWithHttpInfo(appId, storeId);
+             ApiResponse<Object> localVarResponse = await ListInvoicesAsyncWithHttpInfo(storeId, appId, limit, page);
              return localVarResponse.Data;
 
         }
@@ -825,17 +841,19 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
         /// <param name="storeId"></param>
+        /// <param name="appId"></param>
+        /// <param name="limit"> (optional)</param>
+        /// <param name="page"> (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ListInvoicesAsyncWithHttpInfo (string appId, int? storeId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ListInvoicesAsyncWithHttpInfo (int? storeId, string appId, int? limit = null, int? page = null)
         {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling InvoicesApi->ListInvoices");
             // verify the required parameter 'storeId' is set
             if (storeId == null)
                 throw new ApiException(400, "Missing required parameter 'storeId' when calling InvoicesApi->ListInvoices");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling InvoicesApi->ListInvoices");
 
             var localVarPath = "./api/v1.0/{appId}/invoices/ListInvoices";
             var localVarPathParams = new Dictionary<String, String>();
@@ -863,6 +881,8 @@ namespace Flipdish.Api
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (storeId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeId", storeId)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -902,10 +922,10 @@ namespace Flipdish.Api
         /// <param name="dateTo"> (optional)</param>
         /// <param name="invoiceNumber"> (optional)</param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>RestApiFinanceSearchPaginationResultInvoice</returns>
-        public RestApiFinanceSearchPaginationResultInvoice ListSubscriptionInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
+        /// <returns>RestApiFinanceSearchPaginationResultSubscriptionInvoice</returns>
+        public RestApiFinanceSearchPaginationResultSubscriptionInvoice ListSubscriptionInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
         {
-             ApiResponse<RestApiFinanceSearchPaginationResultInvoice> localVarResponse = ListSubscriptionInvoicesWithHttpInfo(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
+             ApiResponse<RestApiFinanceSearchPaginationResultSubscriptionInvoice> localVarResponse = ListSubscriptionInvoicesWithHttpInfo(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
              return localVarResponse.Data;
         }
 
@@ -922,8 +942,8 @@ namespace Flipdish.Api
         /// <param name="dateTo"> (optional)</param>
         /// <param name="invoiceNumber"> (optional)</param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>ApiResponse of RestApiFinanceSearchPaginationResultInvoice</returns>
-        public ApiResponse< RestApiFinanceSearchPaginationResultInvoice > ListSubscriptionInvoicesWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
+        /// <returns>ApiResponse of RestApiFinanceSearchPaginationResultSubscriptionInvoice</returns>
+        public ApiResponse< RestApiFinanceSearchPaginationResultSubscriptionInvoice > ListSubscriptionInvoicesWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -983,9 +1003,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiFinanceSearchPaginationResultInvoice>(localVarStatusCode,
+            return new ApiResponse<RestApiFinanceSearchPaginationResultSubscriptionInvoice>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiFinanceSearchPaginationResultInvoice) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiFinanceSearchPaginationResultInvoice)));
+                (RestApiFinanceSearchPaginationResultSubscriptionInvoice) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiFinanceSearchPaginationResultSubscriptionInvoice)));
         }
 
         /// <summary>
@@ -1001,10 +1021,10 @@ namespace Flipdish.Api
         /// <param name="dateTo"> (optional)</param>
         /// <param name="invoiceNumber"> (optional)</param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>Task of RestApiFinanceSearchPaginationResultInvoice</returns>
-        public async System.Threading.Tasks.Task<RestApiFinanceSearchPaginationResultInvoice> ListSubscriptionInvoicesAsync (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
+        /// <returns>Task of RestApiFinanceSearchPaginationResultSubscriptionInvoice</returns>
+        public async System.Threading.Tasks.Task<RestApiFinanceSearchPaginationResultSubscriptionInvoice> ListSubscriptionInvoicesAsync (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
         {
-             ApiResponse<RestApiFinanceSearchPaginationResultInvoice> localVarResponse = await ListSubscriptionInvoicesAsyncWithHttpInfo(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
+             ApiResponse<RestApiFinanceSearchPaginationResultSubscriptionInvoice> localVarResponse = await ListSubscriptionInvoicesAsyncWithHttpInfo(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
              return localVarResponse.Data;
 
         }
@@ -1022,8 +1042,8 @@ namespace Flipdish.Api
         /// <param name="dateTo"> (optional)</param>
         /// <param name="invoiceNumber"> (optional)</param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiFinanceSearchPaginationResultInvoice)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiFinanceSearchPaginationResultInvoice>> ListSubscriptionInvoicesAsyncWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
+        /// <returns>Task of ApiResponse (RestApiFinanceSearchPaginationResultSubscriptionInvoice)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiFinanceSearchPaginationResultSubscriptionInvoice>> ListSubscriptionInvoicesAsyncWithHttpInfo (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1083,9 +1103,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiFinanceSearchPaginationResultInvoice>(localVarStatusCode,
+            return new ApiResponse<RestApiFinanceSearchPaginationResultSubscriptionInvoice>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiFinanceSearchPaginationResultInvoice) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiFinanceSearchPaginationResultInvoice)));
+                (RestApiFinanceSearchPaginationResultSubscriptionInvoice) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiFinanceSearchPaginationResultSubscriptionInvoice)));
         }
 
     }

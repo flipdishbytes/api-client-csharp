@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="getinvoices"></a>
 # **GetInvoices**
-> RestApiFinanceSearchPaginationResultInvoice GetInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
+> RestApiFinanceSearchPaginationResultSubscriptionInvoice GetInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
 
 
 
@@ -46,7 +46,7 @@ namespace Example
 
             try
             {
-                RestApiFinanceSearchPaginationResultInvoice result = apiInstance.GetInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
+                RestApiFinanceSearchPaginationResultSubscriptionInvoice result = apiInstance.GetInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiFinanceSearchPaginationResultInvoice**](RestApiFinanceSearchPaginationResultInvoice.md)
+[**RestApiFinanceSearchPaginationResultSubscriptionInvoice**](RestApiFinanceSearchPaginationResultSubscriptionInvoice.md)
 
 ### Authorization
 
@@ -151,7 +151,7 @@ void (empty response body)
 
 <a name="listinvoices"></a>
 # **ListInvoices**
-> Object ListInvoices (string appId, int? storeId)
+> Object ListInvoices (int? storeId, string appId, int? limit = null, int? page = null)
 
 
 
@@ -173,12 +173,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new InvoicesApi();
-            var appId = appId_example;  // string | 
             var storeId = 56;  // int? | 
+            var appId = appId_example;  // string | 
+            var limit = 56;  // int? |  (optional) 
+            var page = 56;  // int? |  (optional) 
 
             try
             {
-                Object result = apiInstance.ListInvoices(appId, storeId);
+                Object result = apiInstance.ListInvoices(storeId, appId, limit, page);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -194,8 +196,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
  **storeId** | **int?**|  | 
+ **appId** | **string**|  | 
+ **limit** | **int?**|  | [optional] 
+ **page** | **int?**|  | [optional] 
 
 ### Return type
 
@@ -214,7 +218,7 @@ Name | Type | Description  | Notes
 
 <a name="listsubscriptioninvoices"></a>
 # **ListSubscriptionInvoices**
-> RestApiFinanceSearchPaginationResultInvoice ListSubscriptionInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
+> RestApiFinanceSearchPaginationResultSubscriptionInvoice ListSubscriptionInvoices (string appId, string subscriptionId = null, int? limit = null, string pageId = null, bool? excludeNotOwnedInvoices = null, DateTime? dateFrom = null, DateTime? dateTo = null, string invoiceNumber = null, List<int?> storeId = null)
 
 
 
@@ -248,7 +252,7 @@ namespace Example
 
             try
             {
-                RestApiFinanceSearchPaginationResultInvoice result = apiInstance.ListSubscriptionInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
+                RestApiFinanceSearchPaginationResultSubscriptionInvoice result = apiInstance.ListSubscriptionInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -276,7 +280,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiFinanceSearchPaginationResultInvoice**](RestApiFinanceSearchPaginationResultInvoice.md)
+[**RestApiFinanceSearchPaginationResultSubscriptionInvoice**](RestApiFinanceSearchPaginationResultSubscriptionInvoice.md)
 
 ### Authorization
 
