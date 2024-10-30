@@ -29,16 +29,57 @@ namespace Flipdish.Model
     public partial class StoreCreateBase :  IEquatable<StoreCreateBase>
     {
         /// <summary>
+        /// Sales Channel Type
+        /// </summary>
+        /// <value>Sales Channel Type</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SalesChannelTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Web for value: Web
+            /// </summary>
+            [EnumMember(Value = "Web")]
+            Web = 1,
+            
+            /// <summary>
+            /// Enum App for value: App
+            /// </summary>
+            [EnumMember(Value = "App")]
+            App = 2,
+            
+            /// <summary>
+            /// Enum Kiosk for value: Kiosk
+            /// </summary>
+            [EnumMember(Value = "Kiosk")]
+            Kiosk = 3,
+            
+            /// <summary>
+            /// Enum Pos for value: Pos
+            /// </summary>
+            [EnumMember(Value = "Pos")]
+            Pos = 4
+        }
+
+        /// <summary>
+        /// Sales Channel Type
+        /// </summary>
+        /// <value>Sales Channel Type</value>
+        [DataMember(Name="SalesChannelType", EmitDefaultValue=false)]
+        public SalesChannelTypeEnum? SalesChannelType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="StoreCreateBase" /> class.
         /// </summary>
         /// <param name="name">Name.</param>
         /// <param name="emailAddress">Email address (visible to customers).</param>
         /// <param name="staffLanguage">Staff Language (used for communication with the staff)  Emails, Printouts etc.</param>
-        public StoreCreateBase(string name = default(string), string emailAddress = default(string), string staffLanguage = default(string))
+        /// <param name="salesChannelType">Sales Channel Type.</param>
+        public StoreCreateBase(string name = default(string), string emailAddress = default(string), string staffLanguage = default(string), SalesChannelTypeEnum? salesChannelType = default(SalesChannelTypeEnum?))
         {
             this.Name = name;
             this.EmailAddress = emailAddress;
             this.StaffLanguage = staffLanguage;
+            this.SalesChannelType = salesChannelType;
         }
         
         /// <summary>
@@ -62,6 +103,7 @@ namespace Flipdish.Model
         [DataMember(Name="StaffLanguage", EmitDefaultValue=false)]
         public string StaffLanguage { get; set; }
 
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -73,6 +115,7 @@ namespace Flipdish.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  EmailAddress: ").Append(EmailAddress).Append("\n");
             sb.Append("  StaffLanguage: ").Append(StaffLanguage).Append("\n");
+            sb.Append("  SalesChannelType: ").Append(SalesChannelType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,6 +164,11 @@ namespace Flipdish.Model
                     this.StaffLanguage == input.StaffLanguage ||
                     (this.StaffLanguage != null &&
                     this.StaffLanguage.Equals(input.StaffLanguage))
+                ) && 
+                (
+                    this.SalesChannelType == input.SalesChannelType ||
+                    (this.SalesChannelType != null &&
+                    this.SalesChannelType.Equals(input.SalesChannelType))
                 );
         }
 
@@ -139,6 +187,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.EmailAddress.GetHashCode();
                 if (this.StaffLanguage != null)
                     hashCode = hashCode * 59 + this.StaffLanguage.GetHashCode();
+                if (this.SalesChannelType != null)
+                    hashCode = hashCode * 59 + this.SalesChannelType.GetHashCode();
                 return hashCode;
             }
         }

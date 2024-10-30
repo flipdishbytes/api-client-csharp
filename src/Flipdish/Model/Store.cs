@@ -761,6 +761,45 @@ namespace Flipdish.Model
         [DataMember(Name="Currency", EmitDefaultValue=false)]
         public CurrencyEnum? Currency { get; set; }
         /// <summary>
+        /// Defines SalesChannelTypes
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SalesChannelTypesEnum
+        {
+            
+            /// <summary>
+            /// Enum Web for value: Web
+            /// </summary>
+            [EnumMember(Value = "Web")]
+            Web = 1,
+            
+            /// <summary>
+            /// Enum App for value: App
+            /// </summary>
+            [EnumMember(Value = "App")]
+            App = 2,
+            
+            /// <summary>
+            /// Enum Kiosk for value: Kiosk
+            /// </summary>
+            [EnumMember(Value = "Kiosk")]
+            Kiosk = 3,
+            
+            /// <summary>
+            /// Enum Pos for value: Pos
+            /// </summary>
+            [EnumMember(Value = "Pos")]
+            Pos = 4
+        }
+
+
+        /// <summary>
+        /// Sales Channel Types
+        /// </summary>
+        /// <value>Sales Channel Types</value>
+        [DataMember(Name="SalesChannelTypes", EmitDefaultValue=false)]
+        public List<SalesChannelTypesEnum> SalesChannelTypes { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="Store" /> class.
         /// </summary>
         /// <param name="storeId">Store identifier.</param>
@@ -812,7 +851,8 @@ namespace Flipdish.Model
         /// <param name="name">Name.</param>
         /// <param name="emailAddress">Email address (visible to customers).</param>
         /// <param name="staffLanguage">Staff Language (used for communication with the staff)  Emails, Printouts etc.</param>
-        public Store(int? storeId = default(int?), int? storeGroupId = default(int?), StoreAddress address = default(StoreAddress), List<DeliveryZone> deliveryZones = default(List<DeliveryZone>), string apmPhoneNumber = default(string), List<BusinessHoursPeriod> pickupHours = default(List<BusinessHoursPeriod>), List<BusinessHoursPeriod> deliveryHours = default(List<BusinessHoursPeriod>), int? menuId = default(int?), string orderConfirmationMessageOverrideDelivery = default(string), string orderConfirmationMessageOverridePickup = default(string), PrintoutLayoutTypeEnum? printoutLayoutType = default(PrintoutLayoutTypeEnum?), List<StoreNote> storeNotes = default(List<StoreNote>), string microsoftTimeZone = default(string), string ianaTimeZone = default(string), CurrencyEnum? currency = default(CurrencyEnum?), bool? preOrderDeliveryEnabled = default(bool?), bool? preOrderPickupEnabled = default(bool?), string logoUrl = default(string), string fraudPreventionStrategy = default(string), List<string> appIds = default(List<string>), string phoneNumber = default(string), bool? alwaysAppearOpen = default(bool?), bool? preOrderEnabled = default(bool?), bool? takeOutEnabled = default(bool?), bool? tableServiceEnabled = default(bool?), bool? dineInEnabled = default(bool?), bool? allowPreOrdersAndTableService = default(bool?), bool? pickupEnabled = default(bool?), bool? deliveryEnabled = default(bool?), bool? cardOrderDeliveryEnabled = default(bool?), bool? cashOrdersDeliveryEnabled = default(bool?), bool? cardOrdersPickupEnabled = default(bool?), bool? cashOrdersPickupEnabled = default(bool?), bool? tipsEnabled = default(bool?), bool? automaticallyAcceptOrders = default(bool?), bool? openForDelivery = default(bool?), bool? openForPickup = default(bool?), double? minimumPickupOrderAmount = default(double?), bool? requireCustomerNameForPickup = default(bool?), bool? gdprCustomerPhoneNumbers = default(bool?), bool? requireCustomerNameForDelivery = default(bool?), bool? allowChefNotes = default(bool?), bool? etaInPickupConfirmationSmsEnabled = default(bool?), bool? etaInDeliveryConfirmationSmsEnabled = default(bool?), bool? isArchived = default(bool?), bool? isPublished = default(bool?), string name = default(string), string emailAddress = default(string), string staffLanguage = default(string))
+        /// <param name="salesChannelTypes">Sales Channel Types.</param>
+        public Store(int? storeId = default(int?), int? storeGroupId = default(int?), StoreAddress address = default(StoreAddress), List<DeliveryZone> deliveryZones = default(List<DeliveryZone>), string apmPhoneNumber = default(string), List<BusinessHoursPeriod> pickupHours = default(List<BusinessHoursPeriod>), List<BusinessHoursPeriod> deliveryHours = default(List<BusinessHoursPeriod>), int? menuId = default(int?), string orderConfirmationMessageOverrideDelivery = default(string), string orderConfirmationMessageOverridePickup = default(string), PrintoutLayoutTypeEnum? printoutLayoutType = default(PrintoutLayoutTypeEnum?), List<StoreNote> storeNotes = default(List<StoreNote>), string microsoftTimeZone = default(string), string ianaTimeZone = default(string), CurrencyEnum? currency = default(CurrencyEnum?), bool? preOrderDeliveryEnabled = default(bool?), bool? preOrderPickupEnabled = default(bool?), string logoUrl = default(string), string fraudPreventionStrategy = default(string), List<string> appIds = default(List<string>), string phoneNumber = default(string), bool? alwaysAppearOpen = default(bool?), bool? preOrderEnabled = default(bool?), bool? takeOutEnabled = default(bool?), bool? tableServiceEnabled = default(bool?), bool? dineInEnabled = default(bool?), bool? allowPreOrdersAndTableService = default(bool?), bool? pickupEnabled = default(bool?), bool? deliveryEnabled = default(bool?), bool? cardOrderDeliveryEnabled = default(bool?), bool? cashOrdersDeliveryEnabled = default(bool?), bool? cardOrdersPickupEnabled = default(bool?), bool? cashOrdersPickupEnabled = default(bool?), bool? tipsEnabled = default(bool?), bool? automaticallyAcceptOrders = default(bool?), bool? openForDelivery = default(bool?), bool? openForPickup = default(bool?), double? minimumPickupOrderAmount = default(double?), bool? requireCustomerNameForPickup = default(bool?), bool? gdprCustomerPhoneNumbers = default(bool?), bool? requireCustomerNameForDelivery = default(bool?), bool? allowChefNotes = default(bool?), bool? etaInPickupConfirmationSmsEnabled = default(bool?), bool? etaInDeliveryConfirmationSmsEnabled = default(bool?), bool? isArchived = default(bool?), bool? isPublished = default(bool?), string name = default(string), string emailAddress = default(string), string staffLanguage = default(string), List<SalesChannelTypesEnum> salesChannelTypes = default(List<SalesChannelTypesEnum>))
         {
             this.StoreId = storeId;
             this.StoreGroupId = storeGroupId;
@@ -863,6 +903,7 @@ namespace Flipdish.Model
             this.Name = name;
             this.EmailAddress = emailAddress;
             this.StaffLanguage = staffLanguage;
+            this.SalesChannelTypes = salesChannelTypes;
         }
         
         /// <summary>
@@ -1196,6 +1237,7 @@ namespace Flipdish.Model
         [DataMember(Name="StaffLanguage", EmitDefaultValue=false)]
         public string StaffLanguage { get; set; }
 
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1253,6 +1295,7 @@ namespace Flipdish.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  EmailAddress: ").Append(EmailAddress).Append("\n");
             sb.Append("  StaffLanguage: ").Append(StaffLanguage).Append("\n");
+            sb.Append("  SalesChannelTypes: ").Append(SalesChannelTypes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1531,6 +1574,11 @@ namespace Flipdish.Model
                     this.StaffLanguage == input.StaffLanguage ||
                     (this.StaffLanguage != null &&
                     this.StaffLanguage.Equals(input.StaffLanguage))
+                ) && 
+                (
+                    this.SalesChannelTypes == input.SalesChannelTypes ||
+                    this.SalesChannelTypes != null &&
+                    this.SalesChannelTypes.SequenceEqual(input.SalesChannelTypes)
                 );
         }
 
@@ -1641,6 +1689,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.EmailAddress.GetHashCode();
                 if (this.StaffLanguage != null)
                     hashCode = hashCode * 59 + this.StaffLanguage.GetHashCode();
+                if (this.SalesChannelTypes != null)
+                    hashCode = hashCode * 59 + this.SalesChannelTypes.GetHashCode();
                 return hashCode;
             }
         }
