@@ -1261,7 +1261,7 @@ Name | Type | Description  | Notes
 
 <a name="getstoreheadersbyappid"></a>
 # **GetStoreHeadersByAppId**
-> RestApiPaginationResultStoreHeader GetStoreHeadersByAppId (string appId, string storeNameQuery = null, int? page = null, int? limit = null)
+> RestApiPaginationResultStoreHeader GetStoreHeadersByAppId (string appId, string storeNameQuery = null, string salesChannelType = null, int? page = null, int? limit = null)
 
 
 
@@ -1285,12 +1285,13 @@ namespace Example
             var apiInstance = new StoresApi();
             var appId = appId_example;  // string | 
             var storeNameQuery = storeNameQuery_example;  // string |  (optional) 
+            var salesChannelType = salesChannelType_example;  // string |  (optional) 
             var page = 56;  // int? |  (optional) 
             var limit = 56;  // int? |  (optional) 
 
             try
             {
-                RestApiPaginationResultStoreHeader result = apiInstance.GetStoreHeadersByAppId(appId, storeNameQuery, page, limit);
+                RestApiPaginationResultStoreHeader result = apiInstance.GetStoreHeadersByAppId(appId, storeNameQuery, salesChannelType, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1308,6 +1309,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
  **storeNameQuery** | **string**|  | [optional] 
+ **salesChannelType** | **string**|  | [optional] 
  **page** | **int?**|  | [optional] 
  **limit** | **int?**|  | [optional] 
 

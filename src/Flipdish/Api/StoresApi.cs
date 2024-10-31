@@ -490,10 +490,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="storeNameQuery"> (optional)</param>
+        /// <param name="salesChannelType"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultStoreHeader</returns>
-        RestApiPaginationResultStoreHeader GetStoreHeadersByAppId (string appId, string storeNameQuery = null, int? page = null, int? limit = null);
+        RestApiPaginationResultStoreHeader GetStoreHeadersByAppId (string appId, string storeNameQuery = null, string salesChannelType = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// 
@@ -504,10 +505,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="storeNameQuery"> (optional)</param>
+        /// <param name="salesChannelType"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultStoreHeader</returns>
-        ApiResponse<RestApiPaginationResultStoreHeader> GetStoreHeadersByAppIdWithHttpInfo (string appId, string storeNameQuery = null, int? page = null, int? limit = null);
+        ApiResponse<RestApiPaginationResultStoreHeader> GetStoreHeadersByAppIdWithHttpInfo (string appId, string storeNameQuery = null, string salesChannelType = null, int? page = null, int? limit = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1379,10 +1381,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="storeNameQuery"> (optional)</param>
+        /// <param name="salesChannelType"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultStoreHeader</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultStoreHeader> GetStoreHeadersByAppIdAsync (string appId, string storeNameQuery = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<RestApiPaginationResultStoreHeader> GetStoreHeadersByAppIdAsync (string appId, string storeNameQuery = null, string salesChannelType = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// 
@@ -1393,10 +1396,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="storeNameQuery"> (optional)</param>
+        /// <param name="salesChannelType"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStoreHeader)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStoreHeader>> GetStoreHeadersByAppIdAsyncWithHttpInfo (string appId, string storeNameQuery = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStoreHeader>> GetStoreHeadersByAppIdAsyncWithHttpInfo (string appId, string storeNameQuery = null, string salesChannelType = null, int? page = null, int? limit = null);
         /// <summary>
         /// 
         /// </summary>
@@ -5149,12 +5153,13 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="storeNameQuery"> (optional)</param>
+        /// <param name="salesChannelType"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultStoreHeader</returns>
-        public RestApiPaginationResultStoreHeader GetStoreHeadersByAppId (string appId, string storeNameQuery = null, int? page = null, int? limit = null)
+        public RestApiPaginationResultStoreHeader GetStoreHeadersByAppId (string appId, string storeNameQuery = null, string salesChannelType = null, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultStoreHeader> localVarResponse = GetStoreHeadersByAppIdWithHttpInfo(appId, storeNameQuery, page, limit);
+             ApiResponse<RestApiPaginationResultStoreHeader> localVarResponse = GetStoreHeadersByAppIdWithHttpInfo(appId, storeNameQuery, salesChannelType, page, limit);
              return localVarResponse.Data;
         }
 
@@ -5164,10 +5169,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="storeNameQuery"> (optional)</param>
+        /// <param name="salesChannelType"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultStoreHeader</returns>
-        public ApiResponse< RestApiPaginationResultStoreHeader > GetStoreHeadersByAppIdWithHttpInfo (string appId, string storeNameQuery = null, int? page = null, int? limit = null)
+        public ApiResponse< RestApiPaginationResultStoreHeader > GetStoreHeadersByAppIdWithHttpInfo (string appId, string storeNameQuery = null, string salesChannelType = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -5199,6 +5205,7 @@ namespace Flipdish.Api
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (storeNameQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeNameQuery", storeNameQuery)); // query parameter
+            if (salesChannelType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "salesChannelType", salesChannelType)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
@@ -5233,12 +5240,13 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="storeNameQuery"> (optional)</param>
+        /// <param name="salesChannelType"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultStoreHeader</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultStoreHeader> GetStoreHeadersByAppIdAsync (string appId, string storeNameQuery = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<RestApiPaginationResultStoreHeader> GetStoreHeadersByAppIdAsync (string appId, string storeNameQuery = null, string salesChannelType = null, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultStoreHeader> localVarResponse = await GetStoreHeadersByAppIdAsyncWithHttpInfo(appId, storeNameQuery, page, limit);
+             ApiResponse<RestApiPaginationResultStoreHeader> localVarResponse = await GetStoreHeadersByAppIdAsyncWithHttpInfo(appId, storeNameQuery, salesChannelType, page, limit);
              return localVarResponse.Data;
 
         }
@@ -5249,10 +5257,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="storeNameQuery"> (optional)</param>
+        /// <param name="salesChannelType"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStoreHeader)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStoreHeader>> GetStoreHeadersByAppIdAsyncWithHttpInfo (string appId, string storeNameQuery = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStoreHeader>> GetStoreHeadersByAppIdAsyncWithHttpInfo (string appId, string storeNameQuery = null, string salesChannelType = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -5284,6 +5293,7 @@ namespace Flipdish.Api
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (storeNameQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "storeNameQuery", storeNameQuery)); // query parameter
+            if (salesChannelType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "salesChannelType", salesChannelType)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
