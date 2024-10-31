@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **CountryId** | **string** | Country Id | [optional] 
 **User** | [**UserEventInfo**](UserEventInfo.md) | User information | [optional] 
 **App** | [**App**](App.md) | App - Whitelabel config | [optional] 
+**OrgId** | **string** | Organisation Id | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 
 **CreateTime** | **DateTime?** | The time of creation of the event | [optional] 
 **Position** | **int?** | Position | [optional] 

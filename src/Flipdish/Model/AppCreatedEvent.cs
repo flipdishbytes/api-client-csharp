@@ -37,12 +37,13 @@ namespace Flipdish.Model
         /// <param name="countryId">Country Id.</param>
         /// <param name="user">User information.</param>
         /// <param name="accountId">Salesforce Account Id.</param>
+        /// <param name="orgId">Organisation Id.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
         /// <param name="ipAddress">Ip Address.</param>
-        public AppCreatedEvent(string eventName = default(string), string description = default(string), string appName = default(string), string countryId = default(string), UserEventInfo user = default(UserEventInfo), string accountId = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
+        public AppCreatedEvent(string eventName = default(string), string description = default(string), string appName = default(string), string countryId = default(string), UserEventInfo user = default(UserEventInfo), string accountId = default(string), string orgId = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
         {
             this.EventName = eventName;
             this.Description = description;
@@ -50,6 +51,7 @@ namespace Flipdish.Model
             this.CountryId = countryId;
             this.User = user;
             this.AccountId = accountId;
+            this.OrgId = orgId;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
             this.Position = position;
@@ -100,6 +102,13 @@ namespace Flipdish.Model
         public string AccountId { get; set; }
 
         /// <summary>
+        /// Organisation Id
+        /// </summary>
+        /// <value>Organisation Id</value>
+        [DataMember(Name="OrgId", EmitDefaultValue=false)]
+        public string OrgId { get; set; }
+
+        /// <summary>
         /// The identitfier of the event
         /// </summary>
         /// <value>The identitfier of the event</value>
@@ -148,6 +157,7 @@ namespace Flipdish.Model
             sb.Append("  CountryId: ").Append(CountryId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  AccountId: ").Append(AccountId).Append("\n");
+            sb.Append("  OrgId: ").Append(OrgId).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -218,6 +228,11 @@ namespace Flipdish.Model
                     this.AccountId.Equals(input.AccountId))
                 ) && 
                 (
+                    this.OrgId == input.OrgId ||
+                    (this.OrgId != null &&
+                    this.OrgId.Equals(input.OrgId))
+                ) && 
+                (
                     this.FlipdishEventId == input.FlipdishEventId ||
                     (this.FlipdishEventId != null &&
                     this.FlipdishEventId.Equals(input.FlipdishEventId))
@@ -265,6 +280,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.AccountId != null)
                     hashCode = hashCode * 59 + this.AccountId.GetHashCode();
+                if (this.OrgId != null)
+                    hashCode = hashCode * 59 + this.OrgId.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)
