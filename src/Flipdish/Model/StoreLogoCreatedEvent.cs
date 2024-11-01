@@ -34,6 +34,7 @@ namespace Flipdish.Model
         /// <param name="eventName">The event name.</param>
         /// <param name="orgId">Organisation Id.</param>
         /// <param name="storeId">ID of store that the logo has been added to.</param>
+        /// <param name="logoUrl">Url of logo.</param>
         /// <param name="description">Description.</param>
         /// <param name="user">User who added the logo.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
@@ -41,11 +42,12 @@ namespace Flipdish.Model
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
         /// <param name="ipAddress">Ip Address.</param>
-        public StoreLogoCreatedEvent(string eventName = default(string), string orgId = default(string), int? storeId = default(int?), string description = default(string), UserEventInfo user = default(UserEventInfo), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
+        public StoreLogoCreatedEvent(string eventName = default(string), string orgId = default(string), int? storeId = default(int?), string logoUrl = default(string), string description = default(string), UserEventInfo user = default(UserEventInfo), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
         {
             this.EventName = eventName;
             this.OrgId = orgId;
             this.StoreId = storeId;
+            this.LogoUrl = logoUrl;
             this.Description = description;
             this.User = user;
             this.FlipdishEventId = flipdishEventId;
@@ -75,6 +77,13 @@ namespace Flipdish.Model
         /// <value>ID of store that the logo has been added to</value>
         [DataMember(Name="StoreId", EmitDefaultValue=false)]
         public int? StoreId { get; set; }
+
+        /// <summary>
+        /// Url of logo
+        /// </summary>
+        /// <value>Url of logo</value>
+        [DataMember(Name="LogoUrl", EmitDefaultValue=false)]
+        public string LogoUrl { get; set; }
 
         /// <summary>
         /// Description
@@ -136,6 +145,7 @@ namespace Flipdish.Model
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  OrgId: ").Append(OrgId).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
+            sb.Append("  LogoUrl: ").Append(LogoUrl).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
@@ -193,6 +203,11 @@ namespace Flipdish.Model
                     this.StoreId.Equals(input.StoreId))
                 ) && 
                 (
+                    this.LogoUrl == input.LogoUrl ||
+                    (this.LogoUrl != null &&
+                    this.LogoUrl.Equals(input.LogoUrl))
+                ) && 
+                (
                     this.Description == input.Description ||
                     (this.Description != null &&
                     this.Description.Equals(input.Description))
@@ -244,6 +259,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OrgId.GetHashCode();
                 if (this.StoreId != null)
                     hashCode = hashCode * 59 + this.StoreId.GetHashCode();
+                if (this.LogoUrl != null)
+                    hashCode = hashCode * 59 + this.LogoUrl.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.User != null)
