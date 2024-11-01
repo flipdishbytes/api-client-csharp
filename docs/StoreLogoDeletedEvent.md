@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EventName** | **string** | The event name | [optional] 
+**OrgId** | **string** | Organisation Id | [optional] 
 **StoreId** | **int?** | ID of store that the logo has been added to | [optional] 
 **Description** | **string** | Description | [optional] 
 **User** | [**UserEventInfo**](UserEventInfo.md) | User who removed the logo | [optional] 

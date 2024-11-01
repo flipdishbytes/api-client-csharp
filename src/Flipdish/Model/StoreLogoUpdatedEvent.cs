@@ -32,6 +32,7 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="StoreLogoUpdatedEvent" /> class.
         /// </summary>
         /// <param name="eventName">The event name.</param>
+        /// <param name="orgId">Organisation Id.</param>
         /// <param name="storeId">ID of store that the logo has been added to.</param>
         /// <param name="description">Description.</param>
         /// <param name="user">User who updated the logo.</param>
@@ -40,9 +41,10 @@ namespace Flipdish.Model
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
         /// <param name="ipAddress">Ip Address.</param>
-        public StoreLogoUpdatedEvent(string eventName = default(string), int? storeId = default(int?), string description = default(string), UserEventInfo user = default(UserEventInfo), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
+        public StoreLogoUpdatedEvent(string eventName = default(string), string orgId = default(string), int? storeId = default(int?), string description = default(string), UserEventInfo user = default(UserEventInfo), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
         {
             this.EventName = eventName;
+            this.OrgId = orgId;
             this.StoreId = storeId;
             this.Description = description;
             this.User = user;
@@ -59,6 +61,13 @@ namespace Flipdish.Model
         /// <value>The event name</value>
         [DataMember(Name="EventName", EmitDefaultValue=false)]
         public string EventName { get; set; }
+
+        /// <summary>
+        /// Organisation Id
+        /// </summary>
+        /// <value>Organisation Id</value>
+        [DataMember(Name="OrgId", EmitDefaultValue=false)]
+        public string OrgId { get; set; }
 
         /// <summary>
         /// ID of store that the logo has been added to
@@ -125,6 +134,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class StoreLogoUpdatedEvent {\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
+            sb.Append("  OrgId: ").Append(OrgId).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
@@ -171,6 +181,11 @@ namespace Flipdish.Model
                     this.EventName == input.EventName ||
                     (this.EventName != null &&
                     this.EventName.Equals(input.EventName))
+                ) && 
+                (
+                    this.OrgId == input.OrgId ||
+                    (this.OrgId != null &&
+                    this.OrgId.Equals(input.OrgId))
                 ) && 
                 (
                     this.StoreId == input.StoreId ||
@@ -225,6 +240,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.EventName != null)
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
+                if (this.OrgId != null)
+                    hashCode = hashCode * 59 + this.OrgId.GetHashCode();
                 if (this.StoreId != null)
                     hashCode = hashCode * 59 + this.StoreId.GetHashCode();
                 if (this.Description != null)
