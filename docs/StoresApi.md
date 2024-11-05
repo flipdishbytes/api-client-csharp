@@ -35,6 +35,7 @@ Method | HTTP request | Description
 [**SetBusinessHours**](StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
 [**SetPreOrdeEnabled**](StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
 [**SetStoreLeadTimes**](StoresApi.md#setstoreleadtimes) | **POST** /api/v1.0/stores/{storeId}/leadTimes | 
+[**SupportedSalesChannelsTypes**](StoresApi.md#supportedsaleschannelstypes) | **POST** /api/v1.0/properties/{propertyId}/stores/{storeId}/supportedSalesChannels | 
 [**UnpublishStore**](StoresApi.md#unpublishstore) | **POST** /api/v1.0/stores/{storeId}/unpublish | 
 [**UpdatePreOrderConfig**](StoresApi.md#updatepreorderconfig) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | 
 [**UpdateStore**](StoresApi.md#updatestore) | **POST** /api/v1.0/stores/{storeId} | 
@@ -2017,6 +2018,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultOrderLeadTimes**](RestApiResultOrderLeadTimes.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="supportedsaleschannelstypes"></a>
+# **SupportedSalesChannelsTypes**
+> void SupportedSalesChannelsTypes (string propertyId, int? storeId, List<string> salesChannelTypes)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class SupportedSalesChannelsTypesExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var propertyId = propertyId_example;  // string | 
+            var storeId = 56;  // int? | 
+            var salesChannelTypes = salesChannelTypes_example;  // List<string> | 
+
+            try
+            {
+                apiInstance.SupportedSalesChannelsTypes(propertyId, storeId, salesChannelTypes);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.SupportedSalesChannelsTypes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **propertyId** | **string**|  | 
+ **storeId** | **int?**|  | 
+ **salesChannelTypes** | **List&lt;string&gt;**|  | 
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

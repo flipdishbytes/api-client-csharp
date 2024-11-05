@@ -780,6 +780,31 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="propertyId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="salesChannelTypes"></param>
+        /// <returns></returns>
+        void SupportedSalesChannelsTypes (string propertyId, int? storeId, List<string> salesChannelTypes);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="propertyId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="salesChannelTypes"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> SupportedSalesChannelsTypesWithHttpInfo (string propertyId, int? storeId, List<string> salesChannelTypes);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <returns></returns>
         void UnpublishStore (int? storeId);
@@ -1664,6 +1689,31 @@ namespace Flipdish.Api
         /// <param name="leadTime"></param>
         /// <returns>Task of ApiResponse (RestApiResultOrderLeadTimes)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderLeadTimes>> SetStoreLeadTimesAsyncWithHttpInfo (int? storeId, LeadTime leadTime);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="propertyId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="salesChannelTypes"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task SupportedSalesChannelsTypesAsync (string propertyId, int? storeId, List<string> salesChannelTypes);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="propertyId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="salesChannelTypes"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> SupportedSalesChannelsTypesAsyncWithHttpInfo (string propertyId, int? storeId, List<string> salesChannelTypes);
         /// <summary>
         /// 
         /// </summary>
@@ -7187,6 +7237,203 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultOrderLeadTimes>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultOrderLeadTimes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOrderLeadTimes)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="propertyId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="salesChannelTypes"></param>
+        /// <returns></returns>
+        public void SupportedSalesChannelsTypes (string propertyId, int? storeId, List<string> salesChannelTypes)
+        {
+             SupportedSalesChannelsTypesWithHttpInfo(propertyId, storeId, salesChannelTypes);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="propertyId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="salesChannelTypes"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> SupportedSalesChannelsTypesWithHttpInfo (string propertyId, int? storeId, List<string> salesChannelTypes)
+        {
+            // verify the required parameter 'propertyId' is set
+            if (propertyId == null)
+                throw new ApiException(400, "Missing required parameter 'propertyId' when calling StoresApi->SupportedSalesChannelsTypes");
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->SupportedSalesChannelsTypes");
+            // verify the required parameter 'salesChannelTypes' is set
+            if (salesChannelTypes == null)
+                throw new ApiException(400, "Missing required parameter 'salesChannelTypes' when calling StoresApi->SupportedSalesChannelsTypes");
+
+            var localVarPath = "./api/v1.0/properties/{propertyId}/stores/{storeId}/supportedSalesChannels";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (propertyId != null) localVarPathParams.Add("propertyId", this.Configuration.ApiClient.ParameterToString(propertyId)); // path parameter
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (salesChannelTypes != null && salesChannelTypes.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(salesChannelTypes); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = salesChannelTypes; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SupportedSalesChannelsTypes", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="propertyId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="salesChannelTypes"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task SupportedSalesChannelsTypesAsync (string propertyId, int? storeId, List<string> salesChannelTypes)
+        {
+             await SupportedSalesChannelsTypesAsyncWithHttpInfo(propertyId, storeId, salesChannelTypes);
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="propertyId"></param>
+        /// <param name="storeId"></param>
+        /// <param name="salesChannelTypes"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SupportedSalesChannelsTypesAsyncWithHttpInfo (string propertyId, int? storeId, List<string> salesChannelTypes)
+        {
+            // verify the required parameter 'propertyId' is set
+            if (propertyId == null)
+                throw new ApiException(400, "Missing required parameter 'propertyId' when calling StoresApi->SupportedSalesChannelsTypes");
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->SupportedSalesChannelsTypes");
+            // verify the required parameter 'salesChannelTypes' is set
+            if (salesChannelTypes == null)
+                throw new ApiException(400, "Missing required parameter 'salesChannelTypes' when calling StoresApi->SupportedSalesChannelsTypes");
+
+            var localVarPath = "./api/v1.0/properties/{propertyId}/stores/{storeId}/supportedSalesChannels";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (propertyId != null) localVarPathParams.Add("propertyId", this.Configuration.ApiClient.ParameterToString(propertyId)); // path parameter
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (salesChannelTypes != null && salesChannelTypes.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(salesChannelTypes); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = salesChannelTypes; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SupportedSalesChannelsTypes", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>

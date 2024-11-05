@@ -545,6 +545,7 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**SetBusinessHours**](docs/StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
 *StoresApi* | [**SetPreOrdeEnabled**](docs/StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
 *StoresApi* | [**SetStoreLeadTimes**](docs/StoresApi.md#setstoreleadtimes) | **POST** /api/v1.0/stores/{storeId}/leadTimes | 
+*StoresApi* | [**SupportedSalesChannelsTypes**](docs/StoresApi.md#supportedsaleschannelstypes) | **POST** /api/v1.0/properties/{propertyId}/stores/{storeId}/supportedSalesChannels | 
 *StoresApi* | [**UnpublishStore**](docs/StoresApi.md#unpublishstore) | **POST** /api/v1.0/stores/{storeId}/unpublish | 
 *StoresApi* | [**UpdatePreOrderConfig**](docs/StoresApi.md#updatepreorderconfig) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | 
 *StoresApi* | [**UpdateStore**](docs/StoresApi.md#updatestore) | **POST** /api/v1.0/stores/{storeId} | 
