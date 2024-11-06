@@ -95,8 +95,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="limit"> (optional)</param>
         /// <param name="page"> (optional)</param>
-        /// <returns>Object</returns>
-        Object ListInvoices (int? storeId, string appId, int? limit = null, int? page = null);
+        /// <returns>RestApiFinanceSearchPaginationResultInvoice</returns>
+        RestApiFinanceSearchPaginationResultInvoice ListInvoices (int? storeId, string appId, int? limit = null, int? page = null);
 
         /// <summary>
         /// 
@@ -109,8 +109,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="limit"> (optional)</param>
         /// <param name="page"> (optional)</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ListInvoicesWithHttpInfo (int? storeId, string appId, int? limit = null, int? page = null);
+        /// <returns>ApiResponse of RestApiFinanceSearchPaginationResultInvoice</returns>
+        ApiResponse<RestApiFinanceSearchPaginationResultInvoice> ListInvoicesWithHttpInfo (int? storeId, string appId, int? limit = null, int? page = null);
         /// <summary>
         /// 
         /// </summary>
@@ -221,8 +221,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="limit"> (optional)</param>
         /// <param name="page"> (optional)</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ListInvoicesAsync (int? storeId, string appId, int? limit = null, int? page = null);
+        /// <returns>Task of RestApiFinanceSearchPaginationResultInvoice</returns>
+        System.Threading.Tasks.Task<RestApiFinanceSearchPaginationResultInvoice> ListInvoicesAsync (int? storeId, string appId, int? limit = null, int? page = null);
 
         /// <summary>
         /// 
@@ -235,8 +235,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="limit"> (optional)</param>
         /// <param name="page"> (optional)</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ListInvoicesAsyncWithHttpInfo (int? storeId, string appId, int? limit = null, int? page = null);
+        /// <returns>Task of ApiResponse (RestApiFinanceSearchPaginationResultInvoice)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiFinanceSearchPaginationResultInvoice>> ListInvoicesAsyncWithHttpInfo (int? storeId, string appId, int? limit = null, int? page = null);
         /// <summary>
         /// 
         /// </summary>
@@ -742,10 +742,10 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="limit"> (optional)</param>
         /// <param name="page"> (optional)</param>
-        /// <returns>Object</returns>
-        public Object ListInvoices (int? storeId, string appId, int? limit = null, int? page = null)
+        /// <returns>RestApiFinanceSearchPaginationResultInvoice</returns>
+        public RestApiFinanceSearchPaginationResultInvoice ListInvoices (int? storeId, string appId, int? limit = null, int? page = null)
         {
-             ApiResponse<Object> localVarResponse = ListInvoicesWithHttpInfo(storeId, appId, limit, page);
+             ApiResponse<RestApiFinanceSearchPaginationResultInvoice> localVarResponse = ListInvoicesWithHttpInfo(storeId, appId, limit, page);
              return localVarResponse.Data;
         }
 
@@ -757,8 +757,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="limit"> (optional)</param>
         /// <param name="page"> (optional)</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ListInvoicesWithHttpInfo (int? storeId, string appId, int? limit = null, int? page = null)
+        /// <returns>ApiResponse of RestApiFinanceSearchPaginationResultInvoice</returns>
+        public ApiResponse< RestApiFinanceSearchPaginationResultInvoice > ListInvoicesWithHttpInfo (int? storeId, string appId, int? limit = null, int? page = null)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -816,9 +816,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<RestApiFinanceSearchPaginationResultInvoice>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (RestApiFinanceSearchPaginationResultInvoice) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiFinanceSearchPaginationResultInvoice)));
         }
 
         /// <summary>
@@ -829,10 +829,10 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="limit"> (optional)</param>
         /// <param name="page"> (optional)</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ListInvoicesAsync (int? storeId, string appId, int? limit = null, int? page = null)
+        /// <returns>Task of RestApiFinanceSearchPaginationResultInvoice</returns>
+        public async System.Threading.Tasks.Task<RestApiFinanceSearchPaginationResultInvoice> ListInvoicesAsync (int? storeId, string appId, int? limit = null, int? page = null)
         {
-             ApiResponse<Object> localVarResponse = await ListInvoicesAsyncWithHttpInfo(storeId, appId, limit, page);
+             ApiResponse<RestApiFinanceSearchPaginationResultInvoice> localVarResponse = await ListInvoicesAsyncWithHttpInfo(storeId, appId, limit, page);
              return localVarResponse.Data;
 
         }
@@ -845,8 +845,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="limit"> (optional)</param>
         /// <param name="page"> (optional)</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ListInvoicesAsyncWithHttpInfo (int? storeId, string appId, int? limit = null, int? page = null)
+        /// <returns>Task of ApiResponse (RestApiFinanceSearchPaginationResultInvoice)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiFinanceSearchPaginationResultInvoice>> ListInvoicesAsyncWithHttpInfo (int? storeId, string appId, int? limit = null, int? page = null)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -904,9 +904,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<RestApiFinanceSearchPaginationResultInvoice>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (RestApiFinanceSearchPaginationResultInvoice) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiFinanceSearchPaginationResultInvoice)));
         }
 
         /// <summary>

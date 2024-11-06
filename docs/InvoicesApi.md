@@ -151,7 +151,7 @@ void (empty response body)
 
 <a name="listinvoices"></a>
 # **ListInvoices**
-> Object ListInvoices (int? storeId, string appId, int? limit = null, int? page = null)
+> RestApiFinanceSearchPaginationResultInvoice ListInvoices (int? storeId, string appId, int? limit = null, int? page = null)
 
 
 
@@ -180,7 +180,7 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.ListInvoices(storeId, appId, limit, page);
+                RestApiFinanceSearchPaginationResultInvoice result = apiInstance.ListInvoices(storeId, appId, limit, page);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**RestApiFinanceSearchPaginationResultInvoice**](RestApiFinanceSearchPaginationResultInvoice.md)
 
 ### Authorization
 

@@ -33,10 +33,12 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="entitlementQuantity">entitlementQuantity.</param>
         /// <param name="currentUsage">currentUsage.</param>
-        public AppStoreAppEntitlements(int? entitlementQuantity = default(int?), int? currentUsage = default(int?))
+        /// <param name="currentUsageInBrand">currentUsageInBrand.</param>
+        public AppStoreAppEntitlements(int? entitlementQuantity = default(int?), int? currentUsage = default(int?), int? currentUsageInBrand = default(int?))
         {
             this.EntitlementQuantity = entitlementQuantity;
             this.CurrentUsage = currentUsage;
+            this.CurrentUsageInBrand = currentUsageInBrand;
         }
         
         /// <summary>
@@ -52,6 +54,12 @@ namespace Flipdish.Model
         public int? CurrentUsage { get; set; }
 
         /// <summary>
+        /// Gets or Sets CurrentUsageInBrand
+        /// </summary>
+        [DataMember(Name="CurrentUsageInBrand", EmitDefaultValue=false)]
+        public int? CurrentUsageInBrand { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -61,6 +69,7 @@ namespace Flipdish.Model
             sb.Append("class AppStoreAppEntitlements {\n");
             sb.Append("  EntitlementQuantity: ").Append(EntitlementQuantity).Append("\n");
             sb.Append("  CurrentUsage: ").Append(CurrentUsage).Append("\n");
+            sb.Append("  CurrentUsageInBrand: ").Append(CurrentUsageInBrand).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -104,6 +113,11 @@ namespace Flipdish.Model
                     this.CurrentUsage == input.CurrentUsage ||
                     (this.CurrentUsage != null &&
                     this.CurrentUsage.Equals(input.CurrentUsage))
+                ) && 
+                (
+                    this.CurrentUsageInBrand == input.CurrentUsageInBrand ||
+                    (this.CurrentUsageInBrand != null &&
+                    this.CurrentUsageInBrand.Equals(input.CurrentUsageInBrand))
                 );
         }
 
@@ -120,6 +134,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.EntitlementQuantity.GetHashCode();
                 if (this.CurrentUsage != null)
                     hashCode = hashCode * 59 + this.CurrentUsage.GetHashCode();
+                if (this.CurrentUsageInBrand != null)
+                    hashCode = hashCode * 59 + this.CurrentUsageInBrand.GetHashCode();
                 return hashCode;
             }
         }
