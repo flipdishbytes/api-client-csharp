@@ -1583,7 +1583,7 @@ Name | Type | Description  | Notes
 
 <a name="getstoresbyappid"></a>
 # **GetStoresByAppId**
-> RestApiPaginationResultStore GetStoresByAppId (string appId, string searchQuery = null, int? page = null, int? limit = null)
+> RestApiPaginationResultStore GetStoresByAppId (string appId, string searchQuery = null, string salesChannelType = null, int? page = null, int? limit = null)
 
 
 
@@ -1607,12 +1607,13 @@ namespace Example
             var apiInstance = new StoresApi();
             var appId = appId_example;  // string | 
             var searchQuery = searchQuery_example;  // string |  (optional) 
+            var salesChannelType = salesChannelType_example;  // string |  (optional) 
             var page = 56;  // int? |  (optional) 
             var limit = 56;  // int? |  (optional) 
 
             try
             {
-                RestApiPaginationResultStore result = apiInstance.GetStoresByAppId(appId, searchQuery, page, limit);
+                RestApiPaginationResultStore result = apiInstance.GetStoresByAppId(appId, searchQuery, salesChannelType, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1630,6 +1631,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
  **searchQuery** | **string**|  | [optional] 
+ **salesChannelType** | **string**|  | [optional] 
  **page** | **int?**|  | [optional] 
  **limit** | **int?**|  | [optional] 
 
