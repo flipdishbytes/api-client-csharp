@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **NotifyCustomerAfterMinutes** | **int?** | Time in minutes, after which customer will receive retention voucher if he/she does not order | [optional] 
 **PercentDiscountAmount** | **int?** | Discount amount in percents | [optional] 
+**MaxDiscount** | **double?** | Maximum discount for percentage discounts | [optional] 
 **LumpDiscountAmount** | **double?** | Discount amount in sum of money | [optional] 
 **VoucherValidPeriodDays** | **int?** | Number of days for which the voucher will be valid. | [optional] 
 **IncludeDeliveryFee** | **bool?** | Discount will include delivery fee | [optional] 

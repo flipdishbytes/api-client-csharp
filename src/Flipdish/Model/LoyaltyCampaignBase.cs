@@ -33,6 +33,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="ordersBeforeReceivingVoucher">Number of orders customer needs to make, before receiving voucher.</param>
         /// <param name="percentDiscountAmount">Discount amount in percents.</param>
+        /// <param name="maxDiscount">Maximum discount for percentage discounts.</param>
         /// <param name="roundingStrategy">Controls how the loyalty voucher&#39;s amount is rounded.</param>
         /// <param name="shouldIncludeOrdersWithLoyaltyVoucher">Controls whether we should include orders with loyalty vouchers in the campaign calculation.</param>
         /// <param name="voucherValidPeriodDays">Number of days for which the voucher will be valid..</param>
@@ -43,10 +44,11 @@ namespace Flipdish.Model
         /// <param name="storeIds">Ids of stores this campaign applies to.</param>
         /// <param name="appId">The app that this campaign belongs to..</param>
         /// <param name="forceDiscount">Controls whether the voucher generated from this campaign will override discount exclusions.</param>
-        public LoyaltyCampaignBase(int? ordersBeforeReceivingVoucher = default(int?), int? percentDiscountAmount = default(int?), int? roundingStrategy = default(int?), bool? shouldIncludeOrdersWithLoyaltyVoucher = default(bool?), int? voucherValidPeriodDays = default(int?), bool? includeDeliveryFee = default(bool?), bool? autoApplyResultingVouchers = default(bool?), bool? includeExistingOrders = default(bool?), bool? isEnabled = default(bool?), List<int?> storeIds = default(List<int?>), string appId = default(string), bool? forceDiscount = default(bool?))
+        public LoyaltyCampaignBase(int? ordersBeforeReceivingVoucher = default(int?), int? percentDiscountAmount = default(int?), double? maxDiscount = default(double?), int? roundingStrategy = default(int?), bool? shouldIncludeOrdersWithLoyaltyVoucher = default(bool?), int? voucherValidPeriodDays = default(int?), bool? includeDeliveryFee = default(bool?), bool? autoApplyResultingVouchers = default(bool?), bool? includeExistingOrders = default(bool?), bool? isEnabled = default(bool?), List<int?> storeIds = default(List<int?>), string appId = default(string), bool? forceDiscount = default(bool?))
         {
             this.OrdersBeforeReceivingVoucher = ordersBeforeReceivingVoucher;
             this.PercentDiscountAmount = percentDiscountAmount;
+            this.MaxDiscount = maxDiscount;
             this.RoundingStrategy = roundingStrategy;
             this.ShouldIncludeOrdersWithLoyaltyVoucher = shouldIncludeOrdersWithLoyaltyVoucher;
             this.VoucherValidPeriodDays = voucherValidPeriodDays;
@@ -72,6 +74,13 @@ namespace Flipdish.Model
         /// <value>Discount amount in percents</value>
         [DataMember(Name="PercentDiscountAmount", EmitDefaultValue=false)]
         public int? PercentDiscountAmount { get; set; }
+
+        /// <summary>
+        /// Maximum discount for percentage discounts
+        /// </summary>
+        /// <value>Maximum discount for percentage discounts</value>
+        [DataMember(Name="MaxDiscount", EmitDefaultValue=false)]
+        public double? MaxDiscount { get; set; }
 
         /// <summary>
         /// Controls how the loyalty voucher&#39;s amount is rounded
@@ -153,6 +162,7 @@ namespace Flipdish.Model
             sb.Append("class LoyaltyCampaignBase {\n");
             sb.Append("  OrdersBeforeReceivingVoucher: ").Append(OrdersBeforeReceivingVoucher).Append("\n");
             sb.Append("  PercentDiscountAmount: ").Append(PercentDiscountAmount).Append("\n");
+            sb.Append("  MaxDiscount: ").Append(MaxDiscount).Append("\n");
             sb.Append("  RoundingStrategy: ").Append(RoundingStrategy).Append("\n");
             sb.Append("  ShouldIncludeOrdersWithLoyaltyVoucher: ").Append(ShouldIncludeOrdersWithLoyaltyVoucher).Append("\n");
             sb.Append("  VoucherValidPeriodDays: ").Append(VoucherValidPeriodDays).Append("\n");
@@ -206,6 +216,11 @@ namespace Flipdish.Model
                     this.PercentDiscountAmount == input.PercentDiscountAmount ||
                     (this.PercentDiscountAmount != null &&
                     this.PercentDiscountAmount.Equals(input.PercentDiscountAmount))
+                ) && 
+                (
+                    this.MaxDiscount == input.MaxDiscount ||
+                    (this.MaxDiscount != null &&
+                    this.MaxDiscount.Equals(input.MaxDiscount))
                 ) && 
                 (
                     this.RoundingStrategy == input.RoundingStrategy ||
@@ -272,6 +287,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OrdersBeforeReceivingVoucher.GetHashCode();
                 if (this.PercentDiscountAmount != null)
                     hashCode = hashCode * 59 + this.PercentDiscountAmount.GetHashCode();
+                if (this.MaxDiscount != null)
+                    hashCode = hashCode * 59 + this.MaxDiscount.GetHashCode();
                 if (this.RoundingStrategy != null)
                     hashCode = hashCode * 59 + this.RoundingStrategy.GetHashCode();
                 if (this.ShouldIncludeOrdersWithLoyaltyVoucher != null)

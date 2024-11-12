@@ -33,6 +33,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="notifyCustomerAfterMinutes">Time in minutes, after which customer will receive retention voucher if he/she does not order.</param>
         /// <param name="percentDiscountAmount">Discount amount in percents.</param>
+        /// <param name="maxDiscount">Maximum discount for percentage discounts.</param>
         /// <param name="lumpDiscountAmount">Discount amount in sum of money.</param>
         /// <param name="voucherValidPeriodDays">Number of days for which the voucher will be valid..</param>
         /// <param name="includeDeliveryFee">Discount will include delivery fee.</param>
@@ -42,10 +43,11 @@ namespace Flipdish.Model
         /// <param name="storeIds">Ids of stores this campaign applies to.</param>
         /// <param name="appId">The app that this campaign belongs to..</param>
         /// <param name="forceDiscount">Controls whether the voucher generated from this campaign will override discount exclusions.</param>
-        public RetentionCampaignBase(int? notifyCustomerAfterMinutes = default(int?), int? percentDiscountAmount = default(int?), double? lumpDiscountAmount = default(double?), int? voucherValidPeriodDays = default(int?), bool? includeDeliveryFee = default(bool?), bool? autoApplyResultingVouchers = default(bool?), bool? includeExistingOrders = default(bool?), bool? isEnabled = default(bool?), List<int?> storeIds = default(List<int?>), string appId = default(string), bool? forceDiscount = default(bool?))
+        public RetentionCampaignBase(int? notifyCustomerAfterMinutes = default(int?), int? percentDiscountAmount = default(int?), double? maxDiscount = default(double?), double? lumpDiscountAmount = default(double?), int? voucherValidPeriodDays = default(int?), bool? includeDeliveryFee = default(bool?), bool? autoApplyResultingVouchers = default(bool?), bool? includeExistingOrders = default(bool?), bool? isEnabled = default(bool?), List<int?> storeIds = default(List<int?>), string appId = default(string), bool? forceDiscount = default(bool?))
         {
             this.NotifyCustomerAfterMinutes = notifyCustomerAfterMinutes;
             this.PercentDiscountAmount = percentDiscountAmount;
+            this.MaxDiscount = maxDiscount;
             this.LumpDiscountAmount = lumpDiscountAmount;
             this.VoucherValidPeriodDays = voucherValidPeriodDays;
             this.IncludeDeliveryFee = includeDeliveryFee;
@@ -70,6 +72,13 @@ namespace Flipdish.Model
         /// <value>Discount amount in percents</value>
         [DataMember(Name="PercentDiscountAmount", EmitDefaultValue=false)]
         public int? PercentDiscountAmount { get; set; }
+
+        /// <summary>
+        /// Maximum discount for percentage discounts
+        /// </summary>
+        /// <value>Maximum discount for percentage discounts</value>
+        [DataMember(Name="MaxDiscount", EmitDefaultValue=false)]
+        public double? MaxDiscount { get; set; }
 
         /// <summary>
         /// Discount amount in sum of money
@@ -144,6 +153,7 @@ namespace Flipdish.Model
             sb.Append("class RetentionCampaignBase {\n");
             sb.Append("  NotifyCustomerAfterMinutes: ").Append(NotifyCustomerAfterMinutes).Append("\n");
             sb.Append("  PercentDiscountAmount: ").Append(PercentDiscountAmount).Append("\n");
+            sb.Append("  MaxDiscount: ").Append(MaxDiscount).Append("\n");
             sb.Append("  LumpDiscountAmount: ").Append(LumpDiscountAmount).Append("\n");
             sb.Append("  VoucherValidPeriodDays: ").Append(VoucherValidPeriodDays).Append("\n");
             sb.Append("  IncludeDeliveryFee: ").Append(IncludeDeliveryFee).Append("\n");
@@ -196,6 +206,11 @@ namespace Flipdish.Model
                     this.PercentDiscountAmount == input.PercentDiscountAmount ||
                     (this.PercentDiscountAmount != null &&
                     this.PercentDiscountAmount.Equals(input.PercentDiscountAmount))
+                ) && 
+                (
+                    this.MaxDiscount == input.MaxDiscount ||
+                    (this.MaxDiscount != null &&
+                    this.MaxDiscount.Equals(input.MaxDiscount))
                 ) && 
                 (
                     this.LumpDiscountAmount == input.LumpDiscountAmount ||
@@ -257,6 +272,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.NotifyCustomerAfterMinutes.GetHashCode();
                 if (this.PercentDiscountAmount != null)
                     hashCode = hashCode * 59 + this.PercentDiscountAmount.GetHashCode();
+                if (this.MaxDiscount != null)
+                    hashCode = hashCode * 59 + this.MaxDiscount.GetHashCode();
                 if (this.LumpDiscountAmount != null)
                     hashCode = hashCode * 59 + this.LumpDiscountAmount.GetHashCode();
                 if (this.VoucherValidPeriodDays != null)
