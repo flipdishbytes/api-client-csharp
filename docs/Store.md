@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **LogoUrl** | **string** | Url for logo image | [optional] 
 **FraudPreventionStrategy** | **string** | Fraud Prevention Strategy | [optional] 
 **AppIds** | **List&lt;string&gt;** | Store&#39;s app ids | [optional] 
+**PropertyId** | **string** | Property Id | [optional] 
 **PhoneNumber** | **string** | Phone number | [optional] 
 **AlwaysAppearOpen** | **bool?** | True if the store always appears open | [optional] 
 **PreOrderEnabled** | **bool?** | True if the store accepts pre-orders | [optional] 
