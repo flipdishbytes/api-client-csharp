@@ -38,7 +38,8 @@ namespace Flipdish.Model
         /// <param name="name">Name of Menu, only shown in portal.</param>
         /// <param name="locked">Locked: is menu locked against modifcation.</param>
         /// <param name="storeNames">List of stores names which are associated with this menu.</param>
-        public MenuSummary(int? menuId = default(int?), DateTime? modifiedTime = default(DateTime?), int? versionNumber = default(int?), string menuUrl = default(string), string name = default(string), bool? locked = default(bool?), List<string> storeNames = default(List<string>))
+        /// <param name="isIntegrated">Flag to indicate if the menu is integrated (contains metadata).</param>
+        public MenuSummary(int? menuId = default(int?), DateTime? modifiedTime = default(DateTime?), int? versionNumber = default(int?), string menuUrl = default(string), string name = default(string), bool? locked = default(bool?), List<string> storeNames = default(List<string>), bool? isIntegrated = default(bool?))
         {
             this.MenuId = menuId;
             this.ModifiedTime = modifiedTime;
@@ -47,6 +48,7 @@ namespace Flipdish.Model
             this.Name = name;
             this.Locked = locked;
             this.StoreNames = storeNames;
+            this.IsIntegrated = isIntegrated;
         }
         
         /// <summary>
@@ -99,6 +101,13 @@ namespace Flipdish.Model
         public List<string> StoreNames { get; set; }
 
         /// <summary>
+        /// Flag to indicate if the menu is integrated (contains metadata)
+        /// </summary>
+        /// <value>Flag to indicate if the menu is integrated (contains metadata)</value>
+        [DataMember(Name="IsIntegrated", EmitDefaultValue=false)]
+        public bool? IsIntegrated { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -113,6 +122,7 @@ namespace Flipdish.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Locked: ").Append(Locked).Append("\n");
             sb.Append("  StoreNames: ").Append(StoreNames).Append("\n");
+            sb.Append("  IsIntegrated: ").Append(IsIntegrated).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -181,6 +191,11 @@ namespace Flipdish.Model
                     this.StoreNames == input.StoreNames ||
                     this.StoreNames != null &&
                     this.StoreNames.SequenceEqual(input.StoreNames)
+                ) && 
+                (
+                    this.IsIntegrated == input.IsIntegrated ||
+                    (this.IsIntegrated != null &&
+                    this.IsIntegrated.Equals(input.IsIntegrated))
                 );
         }
 
@@ -207,6 +222,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Locked.GetHashCode();
                 if (this.StoreNames != null)
                     hashCode = hashCode * 59 + this.StoreNames.GetHashCode();
+                if (this.IsIntegrated != null)
+                    hashCode = hashCode * 59 + this.IsIntegrated.GetHashCode();
                 return hashCode;
             }
         }

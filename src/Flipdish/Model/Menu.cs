@@ -98,7 +98,8 @@ namespace Flipdish.Model
         /// <param name="displaySectionLinks">Display menu section link on UI.</param>
         /// <param name="menuSectionBehaviour">Menu section behaviour.</param>
         /// <param name="taxType">Tax type.</param>
-        public Menu(int? menuId = default(int?), DateTime? modifiedTime = default(DateTime?), int? versionNumber = default(int?), string imageName = default(string), string imageUrl = default(string), string name = default(string), bool? locked = default(bool?), List<MenuSection> menuSections = default(List<MenuSection>), List<MenuTaxRate> taxRates = default(List<MenuTaxRate>), string appId = default(string), bool? displaySectionLinks = default(bool?), MenuSectionBehaviourEnum? menuSectionBehaviour = default(MenuSectionBehaviourEnum?), TaxTypeEnum? taxType = default(TaxTypeEnum?))
+        /// <param name="isIntegrated">Flag to indicate if the menu is integrated (contains metadata).</param>
+        public Menu(int? menuId = default(int?), DateTime? modifiedTime = default(DateTime?), int? versionNumber = default(int?), string imageName = default(string), string imageUrl = default(string), string name = default(string), bool? locked = default(bool?), List<MenuSection> menuSections = default(List<MenuSection>), List<MenuTaxRate> taxRates = default(List<MenuTaxRate>), string appId = default(string), bool? displaySectionLinks = default(bool?), MenuSectionBehaviourEnum? menuSectionBehaviour = default(MenuSectionBehaviourEnum?), TaxTypeEnum? taxType = default(TaxTypeEnum?), bool? isIntegrated = default(bool?))
         {
             this.MenuId = menuId;
             this.ModifiedTime = modifiedTime;
@@ -113,6 +114,7 @@ namespace Flipdish.Model
             this.DisplaySectionLinks = displaySectionLinks;
             this.MenuSectionBehaviour = menuSectionBehaviour;
             this.TaxType = taxType;
+            this.IsIntegrated = isIntegrated;
         }
         
         /// <summary>
@@ -195,6 +197,13 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// Flag to indicate if the menu is integrated (contains metadata)
+        /// </summary>
+        /// <value>Flag to indicate if the menu is integrated (contains metadata)</value>
+        [DataMember(Name="IsIntegrated", EmitDefaultValue=false)]
+        public bool? IsIntegrated { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -215,6 +224,7 @@ namespace Flipdish.Model
             sb.Append("  DisplaySectionLinks: ").Append(DisplaySectionLinks).Append("\n");
             sb.Append("  MenuSectionBehaviour: ").Append(MenuSectionBehaviour).Append("\n");
             sb.Append("  TaxType: ").Append(TaxType).Append("\n");
+            sb.Append("  IsIntegrated: ").Append(IsIntegrated).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -313,6 +323,11 @@ namespace Flipdish.Model
                     this.TaxType == input.TaxType ||
                     (this.TaxType != null &&
                     this.TaxType.Equals(input.TaxType))
+                ) && 
+                (
+                    this.IsIntegrated == input.IsIntegrated ||
+                    (this.IsIntegrated != null &&
+                    this.IsIntegrated.Equals(input.IsIntegrated))
                 );
         }
 
@@ -351,6 +366,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.MenuSectionBehaviour.GetHashCode();
                 if (this.TaxType != null)
                     hashCode = hashCode * 59 + this.TaxType.GetHashCode();
+                if (this.IsIntegrated != null)
+                    hashCode = hashCode * 59 + this.IsIntegrated.GetHashCode();
                 return hashCode;
             }
         }
