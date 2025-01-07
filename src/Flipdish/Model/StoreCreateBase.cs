@@ -74,12 +74,14 @@ namespace Flipdish.Model
         /// <param name="emailAddress">Email address (visible to customers).</param>
         /// <param name="staffLanguage">Staff Language (used for communication with the staff)  Emails, Printouts etc.</param>
         /// <param name="salesChannelType">Sales Channel Type.</param>
-        public StoreCreateBase(string name = default(string), string emailAddress = default(string), string staffLanguage = default(string), SalesChannelTypeEnum? salesChannelType = default(SalesChannelTypeEnum?))
+        /// <param name="phoneNumber">Phone Number.</param>
+        public StoreCreateBase(string name = default(string), string emailAddress = default(string), string staffLanguage = default(string), SalesChannelTypeEnum? salesChannelType = default(SalesChannelTypeEnum?), string phoneNumber = default(string))
         {
             this.Name = name;
             this.EmailAddress = emailAddress;
             this.StaffLanguage = staffLanguage;
             this.SalesChannelType = salesChannelType;
+            this.PhoneNumber = phoneNumber;
         }
         
         /// <summary>
@@ -105,6 +107,13 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// Phone Number
+        /// </summary>
+        /// <value>Phone Number</value>
+        [DataMember(Name="PhoneNumber", EmitDefaultValue=false)]
+        public string PhoneNumber { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -116,6 +125,7 @@ namespace Flipdish.Model
             sb.Append("  EmailAddress: ").Append(EmailAddress).Append("\n");
             sb.Append("  StaffLanguage: ").Append(StaffLanguage).Append("\n");
             sb.Append("  SalesChannelType: ").Append(SalesChannelType).Append("\n");
+            sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -169,6 +179,11 @@ namespace Flipdish.Model
                     this.SalesChannelType == input.SalesChannelType ||
                     (this.SalesChannelType != null &&
                     this.SalesChannelType.Equals(input.SalesChannelType))
+                ) && 
+                (
+                    this.PhoneNumber == input.PhoneNumber ||
+                    (this.PhoneNumber != null &&
+                    this.PhoneNumber.Equals(input.PhoneNumber))
                 );
         }
 
@@ -189,6 +204,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StaffLanguage.GetHashCode();
                 if (this.SalesChannelType != null)
                     hashCode = hashCode * 59 + this.SalesChannelType.GetHashCode();
+                if (this.PhoneNumber != null)
+                    hashCode = hashCode * 59 + this.PhoneNumber.GetHashCode();
                 return hashCode;
             }
         }

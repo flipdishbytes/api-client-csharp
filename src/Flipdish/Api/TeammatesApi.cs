@@ -190,8 +190,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void TeammatesAcceptInvitations ();
+        /// <returns>RestApiArrayResultRedeemInvitationResult</returns>
+        RestApiArrayResultRedeemInvitationResult TeammatesAcceptInvitations ();
 
         /// <summary>
         /// 
@@ -200,8 +200,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> TeammatesAcceptInvitationsWithHttpInfo ();
+        /// <returns>ApiResponse of RestApiArrayResultRedeemInvitationResult</returns>
+        ApiResponse<RestApiArrayResultRedeemInvitationResult> TeammatesAcceptInvitationsWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -414,8 +414,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task TeammatesAcceptInvitationsAsync ();
+        /// <returns>Task of RestApiArrayResultRedeemInvitationResult</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultRedeemInvitationResult> TeammatesAcceptInvitationsAsync ();
 
         /// <summary>
         /// 
@@ -424,8 +424,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> TeammatesAcceptInvitationsAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (RestApiArrayResultRedeemInvitationResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRedeemInvitationResult>> TeammatesAcceptInvitationsAsyncWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -1749,18 +1749,19 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void TeammatesAcceptInvitations ()
+        /// <returns>RestApiArrayResultRedeemInvitationResult</returns>
+        public RestApiArrayResultRedeemInvitationResult TeammatesAcceptInvitations ()
         {
-             TeammatesAcceptInvitationsWithHttpInfo();
+             ApiResponse<RestApiArrayResultRedeemInvitationResult> localVarResponse = TeammatesAcceptInvitationsWithHttpInfo();
+             return localVarResponse.Data;
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> TeammatesAcceptInvitationsWithHttpInfo ()
+        /// <returns>ApiResponse of RestApiArrayResultRedeemInvitationResult</returns>
+        public ApiResponse< RestApiArrayResultRedeemInvitationResult > TeammatesAcceptInvitationsWithHttpInfo ()
         {
 
             var localVarPath = "./api/v1.0/teammates/acceptInvitations";
@@ -1808,19 +1809,20 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<RestApiArrayResultRedeemInvitationResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (RestApiArrayResultRedeemInvitationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultRedeemInvitationResult)));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task TeammatesAcceptInvitationsAsync ()
+        /// <returns>Task of RestApiArrayResultRedeemInvitationResult</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultRedeemInvitationResult> TeammatesAcceptInvitationsAsync ()
         {
-             await TeammatesAcceptInvitationsAsyncWithHttpInfo();
+             ApiResponse<RestApiArrayResultRedeemInvitationResult> localVarResponse = await TeammatesAcceptInvitationsAsyncWithHttpInfo();
+             return localVarResponse.Data;
 
         }
 
@@ -1828,8 +1830,8 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> TeammatesAcceptInvitationsAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (RestApiArrayResultRedeemInvitationResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRedeemInvitationResult>> TeammatesAcceptInvitationsAsyncWithHttpInfo ()
         {
 
             var localVarPath = "./api/v1.0/teammates/acceptInvitations";
@@ -1877,9 +1879,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<RestApiArrayResultRedeemInvitationResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (RestApiArrayResultRedeemInvitationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultRedeemInvitationResult)));
         }
 
         /// <summary>

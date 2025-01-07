@@ -543,7 +543,7 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**PublishStore**](docs/StoresApi.md#publishstore) | **POST** /api/v1.0/stores/{storeId}/publish | 
 *StoresApi* | [**PutStoreDeliveryFeeConfig**](docs/StoresApi.md#putstoredeliveryfeeconfig) | **PUT** /api/v1.0/stores/{storeId}/feeConfig/deliveryZones | 
 *StoresApi* | [**SetBusinessHours**](docs/StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
-*StoresApi* | [**SetPreOrdeEnabled**](docs/StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
+*StoresApi* | [**SetPreOrderEnabled**](docs/StoresApi.md#setpreorderenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
 *StoresApi* | [**SetStoreLeadTimes**](docs/StoresApi.md#setstoreleadtimes) | **POST** /api/v1.0/stores/{storeId}/leadTimes | 
 *StoresApi* | [**StoresSetPropertyId**](docs/StoresApi.md#storessetpropertyid) | **POST** /api/v1.0/stores/{storeId}/propertyId/{propertyId} | 
 *StoresApi* | [**SupportedSalesChannelsTypes**](docs/StoresApi.md#supportedsaleschannelstypes) | **POST** /api/v1.0/properties/{propertyId}/stores/{storeId}/supportedSalesChannels | 
@@ -1088,6 +1088,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultPendingMenuChangesSummaries](docs/RestApiArrayResultPendingMenuChangesSummaries.md)
  - [Model.RestApiArrayResultPreOrderTime](docs/RestApiArrayResultPreOrderTime.md)
  - [Model.RestApiArrayResultProcessingFeeConfig](docs/RestApiArrayResultProcessingFeeConfig.md)
+ - [Model.RestApiArrayResultRedeemInvitationResult](docs/RestApiArrayResultRedeemInvitationResult.md)
  - [Model.RestApiArrayResultRestApiDefaultResponse](docs/RestApiArrayResultRestApiDefaultResponse.md)
  - [Model.RestApiArrayResultRestaurantVoucherEligibleStore](docs/RestApiArrayResultRestaurantVoucherEligibleStore.md)
  - [Model.RestApiArrayResultRestaurantVoucherPayGreenConfiguration](docs/RestApiArrayResultRestaurantVoucherPayGreenConfiguration.md)

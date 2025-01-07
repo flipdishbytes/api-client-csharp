@@ -33,7 +33,7 @@ Method | HTTP request | Description
 [**PublishStore**](StoresApi.md#publishstore) | **POST** /api/v1.0/stores/{storeId}/publish | 
 [**PutStoreDeliveryFeeConfig**](StoresApi.md#putstoredeliveryfeeconfig) | **PUT** /api/v1.0/stores/{storeId}/feeConfig/deliveryZones | 
 [**SetBusinessHours**](StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
-[**SetPreOrdeEnabled**](StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
+[**SetPreOrderEnabled**](StoresApi.md#setpreorderenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
 [**SetStoreLeadTimes**](StoresApi.md#setstoreleadtimes) | **POST** /api/v1.0/stores/{storeId}/leadTimes | 
 [**StoresSetPropertyId**](StoresApi.md#storessetpropertyid) | **POST** /api/v1.0/stores/{storeId}/propertyId/{propertyId} | 
 [**SupportedSalesChannelsTypes**](StoresApi.md#supportedsaleschannelstypes) | **POST** /api/v1.0/properties/{propertyId}/stores/{storeId}/supportedSalesChannels | 
@@ -1905,9 +1905,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="setpreordeenabled"></a>
-# **SetPreOrdeEnabled**
-> RestApiArrayResultRestApiDefaultResponse SetPreOrdeEnabled (int? storeId, string deliveryType, bool? enabled)
+<a name="setpreorderenabled"></a>
+# **SetPreOrderEnabled**
+> RestApiArrayResultRestApiDefaultResponse SetPreOrderEnabled (int? storeId, string deliveryType, bool? enabled)
 
 
 
@@ -1921,7 +1921,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class SetPreOrdeEnabledExample
+    public class SetPreOrderEnabledExample
     {
         public void main()
         {
@@ -1935,12 +1935,12 @@ namespace Example
 
             try
             {
-                RestApiArrayResultRestApiDefaultResponse result = apiInstance.SetPreOrdeEnabled(storeId, deliveryType, enabled);
+                RestApiArrayResultRestApiDefaultResponse result = apiInstance.SetPreOrderEnabled(storeId, deliveryType, enabled);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling StoresApi.SetPreOrdeEnabled: " + e.Message );
+                Debug.Print("Exception when calling StoresApi.SetPreOrderEnabled: " + e.Message );
             }
         }
     }

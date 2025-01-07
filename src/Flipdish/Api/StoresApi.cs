@@ -738,7 +738,7 @@ namespace Flipdish.Api
         /// <param name="deliveryType"></param>
         /// <param name="enabled"></param>
         /// <returns>RestApiArrayResultRestApiDefaultResponse</returns>
-        RestApiArrayResultRestApiDefaultResponse SetPreOrdeEnabled (int? storeId, string deliveryType, bool? enabled);
+        RestApiArrayResultRestApiDefaultResponse SetPreOrderEnabled (int? storeId, string deliveryType, bool? enabled);
 
         /// <summary>
         /// 
@@ -751,7 +751,7 @@ namespace Flipdish.Api
         /// <param name="deliveryType"></param>
         /// <param name="enabled"></param>
         /// <returns>ApiResponse of RestApiArrayResultRestApiDefaultResponse</returns>
-        ApiResponse<RestApiArrayResultRestApiDefaultResponse> SetPreOrdeEnabledWithHttpInfo (int? storeId, string deliveryType, bool? enabled);
+        ApiResponse<RestApiArrayResultRestApiDefaultResponse> SetPreOrderEnabledWithHttpInfo (int? storeId, string deliveryType, bool? enabled);
         /// <summary>
         /// 
         /// </summary>
@@ -1679,7 +1679,7 @@ namespace Flipdish.Api
         /// <param name="deliveryType"></param>
         /// <param name="enabled"></param>
         /// <returns>Task of RestApiArrayResultRestApiDefaultResponse</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultRestApiDefaultResponse> SetPreOrdeEnabledAsync (int? storeId, string deliveryType, bool? enabled);
+        System.Threading.Tasks.Task<RestApiArrayResultRestApiDefaultResponse> SetPreOrderEnabledAsync (int? storeId, string deliveryType, bool? enabled);
 
         /// <summary>
         /// 
@@ -1692,7 +1692,7 @@ namespace Flipdish.Api
         /// <param name="deliveryType"></param>
         /// <param name="enabled"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultRestApiDefaultResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRestApiDefaultResponse>> SetPreOrdeEnabledAsyncWithHttpInfo (int? storeId, string deliveryType, bool? enabled);
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRestApiDefaultResponse>> SetPreOrderEnabledAsyncWithHttpInfo (int? storeId, string deliveryType, bool? enabled);
         /// <summary>
         /// 
         /// </summary>
@@ -6941,9 +6941,9 @@ namespace Flipdish.Api
         /// <param name="deliveryType"></param>
         /// <param name="enabled"></param>
         /// <returns>RestApiArrayResultRestApiDefaultResponse</returns>
-        public RestApiArrayResultRestApiDefaultResponse SetPreOrdeEnabled (int? storeId, string deliveryType, bool? enabled)
+        public RestApiArrayResultRestApiDefaultResponse SetPreOrderEnabled (int? storeId, string deliveryType, bool? enabled)
         {
-             ApiResponse<RestApiArrayResultRestApiDefaultResponse> localVarResponse = SetPreOrdeEnabledWithHttpInfo(storeId, deliveryType, enabled);
+             ApiResponse<RestApiArrayResultRestApiDefaultResponse> localVarResponse = SetPreOrderEnabledWithHttpInfo(storeId, deliveryType, enabled);
              return localVarResponse.Data;
         }
 
@@ -6955,17 +6955,17 @@ namespace Flipdish.Api
         /// <param name="deliveryType"></param>
         /// <param name="enabled"></param>
         /// <returns>ApiResponse of RestApiArrayResultRestApiDefaultResponse</returns>
-        public ApiResponse< RestApiArrayResultRestApiDefaultResponse > SetPreOrdeEnabledWithHttpInfo (int? storeId, string deliveryType, bool? enabled)
+        public ApiResponse< RestApiArrayResultRestApiDefaultResponse > SetPreOrderEnabledWithHttpInfo (int? storeId, string deliveryType, bool? enabled)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->SetPreOrdeEnabled");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->SetPreOrderEnabled");
             // verify the required parameter 'deliveryType' is set
             if (deliveryType == null)
-                throw new ApiException(400, "Missing required parameter 'deliveryType' when calling StoresApi->SetPreOrdeEnabled");
+                throw new ApiException(400, "Missing required parameter 'deliveryType' when calling StoresApi->SetPreOrderEnabled");
             // verify the required parameter 'enabled' is set
             if (enabled == null)
-                throw new ApiException(400, "Missing required parameter 'enabled' when calling StoresApi->SetPreOrdeEnabled");
+                throw new ApiException(400, "Missing required parameter 'enabled' when calling StoresApi->SetPreOrderEnabled");
 
             var localVarPath = "./api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7011,7 +7011,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SetPreOrdeEnabled", localVarResponse);
+                Exception exception = ExceptionFactory("SetPreOrderEnabled", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -7028,9 +7028,9 @@ namespace Flipdish.Api
         /// <param name="deliveryType"></param>
         /// <param name="enabled"></param>
         /// <returns>Task of RestApiArrayResultRestApiDefaultResponse</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultRestApiDefaultResponse> SetPreOrdeEnabledAsync (int? storeId, string deliveryType, bool? enabled)
+        public async System.Threading.Tasks.Task<RestApiArrayResultRestApiDefaultResponse> SetPreOrderEnabledAsync (int? storeId, string deliveryType, bool? enabled)
         {
-             ApiResponse<RestApiArrayResultRestApiDefaultResponse> localVarResponse = await SetPreOrdeEnabledAsyncWithHttpInfo(storeId, deliveryType, enabled);
+             ApiResponse<RestApiArrayResultRestApiDefaultResponse> localVarResponse = await SetPreOrderEnabledAsyncWithHttpInfo(storeId, deliveryType, enabled);
              return localVarResponse.Data;
 
         }
@@ -7043,17 +7043,17 @@ namespace Flipdish.Api
         /// <param name="deliveryType"></param>
         /// <param name="enabled"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultRestApiDefaultResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRestApiDefaultResponse>> SetPreOrdeEnabledAsyncWithHttpInfo (int? storeId, string deliveryType, bool? enabled)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRestApiDefaultResponse>> SetPreOrderEnabledAsyncWithHttpInfo (int? storeId, string deliveryType, bool? enabled)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->SetPreOrdeEnabled");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->SetPreOrderEnabled");
             // verify the required parameter 'deliveryType' is set
             if (deliveryType == null)
-                throw new ApiException(400, "Missing required parameter 'deliveryType' when calling StoresApi->SetPreOrdeEnabled");
+                throw new ApiException(400, "Missing required parameter 'deliveryType' when calling StoresApi->SetPreOrderEnabled");
             // verify the required parameter 'enabled' is set
             if (enabled == null)
-                throw new ApiException(400, "Missing required parameter 'enabled' when calling StoresApi->SetPreOrdeEnabled");
+                throw new ApiException(400, "Missing required parameter 'enabled' when calling StoresApi->SetPreOrderEnabled");
 
             var localVarPath = "./api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7099,7 +7099,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SetPreOrdeEnabled", localVarResponse);
+                Exception exception = ExceptionFactory("SetPreOrderEnabled", localVarResponse);
                 if (exception != null) throw exception;
             }
 

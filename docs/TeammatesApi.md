@@ -456,7 +456,7 @@ Name | Type | Description  | Notes
 
 <a name="teammatesacceptinvitations"></a>
 # **TeammatesAcceptInvitations**
-> void TeammatesAcceptInvitations ()
+> RestApiArrayResultRedeemInvitationResult TeammatesAcceptInvitations ()
 
 
 
@@ -481,7 +481,8 @@ namespace Example
 
             try
             {
-                apiInstance.TeammatesAcceptInvitations();
+                RestApiArrayResultRedeemInvitationResult result = apiInstance.TeammatesAcceptInvitations();
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -497,7 +498,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**RestApiArrayResultRedeemInvitationResult**](RestApiArrayResultRedeemInvitationResult.md)
 
 ### Authorization
 
