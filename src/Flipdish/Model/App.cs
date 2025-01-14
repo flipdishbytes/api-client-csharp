@@ -1158,7 +1158,9 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="appId">App Identifier.</param>
         /// <param name="hasIosApp">Has iOS app in Apple App Store. This is readonly..</param>
+        /// <param name="iosAppStoreUrl">IOS App Store URL.</param>
         /// <param name="hasAndroidApp">Has Android app in Google Play Store. This is readonly..</param>
+        /// <param name="androidPlayStoreUrl">Android Play Store URL.</param>
         /// <param name="logoImageUrl">Application Logo..</param>
         /// <param name="languages">Languages that have been selected to be available to customers..</param>
         /// <param name="availableAppLanguages">Lists all languages that are supported by Flipdish..</param>
@@ -1180,11 +1182,13 @@ namespace Flipdish.Model
         /// <param name="panaceaVanityUrl">In case of IsPanaceaEnabled is true, the app can be accessed via https://my.flipdish.com/{PanaceaVanityUrl}.</param>
         /// <param name="cookieConsentPromptEnabled">Cookie Consent Prompt Enabled.</param>
         /// <param name="countryId">Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks.</param>
-        public App(string appId = default(string), bool? hasIosApp = default(bool?), bool? hasAndroidApp = default(bool?), string logoImageUrl = default(string), List<Language> languages = default(List<Language>), List<Language> availableAppLanguages = default(List<Language>), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), List<AppResourceSetEnum> appResourceSet = default(List<AppResourceSetEnum>), List<string> features = default(List<string>), Coordinates mapCenter = default(Coordinates), Coordinates mapNorthEast = default(Coordinates), Coordinates mapSouthWest = default(Coordinates), string googleMapsApiKeyWeb = default(string), string orgId = default(string), string smsRestaurantName = default(string), string name = default(string), string hostName = default(string), string mainColor = default(string), string kioskPrimaryColour = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?), bool? isPanaceaEnabled = default(bool?), string panaceaVanityUrl = default(string), bool? cookieConsentPromptEnabled = default(bool?), string countryId = default(string))
+        public App(string appId = default(string), bool? hasIosApp = default(bool?), string iosAppStoreUrl = default(string), bool? hasAndroidApp = default(bool?), string androidPlayStoreUrl = default(string), string logoImageUrl = default(string), List<Language> languages = default(List<Language>), List<Language> availableAppLanguages = default(List<Language>), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), List<AppResourceSetEnum> appResourceSet = default(List<AppResourceSetEnum>), List<string> features = default(List<string>), Coordinates mapCenter = default(Coordinates), Coordinates mapNorthEast = default(Coordinates), Coordinates mapSouthWest = default(Coordinates), string googleMapsApiKeyWeb = default(string), string orgId = default(string), string smsRestaurantName = default(string), string name = default(string), string hostName = default(string), string mainColor = default(string), string kioskPrimaryColour = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?), bool? isPanaceaEnabled = default(bool?), string panaceaVanityUrl = default(string), bool? cookieConsentPromptEnabled = default(bool?), string countryId = default(string))
         {
             this.AppId = appId;
             this.HasIosApp = hasIosApp;
+            this.IosAppStoreUrl = iosAppStoreUrl;
             this.HasAndroidApp = hasAndroidApp;
+            this.AndroidPlayStoreUrl = androidPlayStoreUrl;
             this.LogoImageUrl = logoImageUrl;
             this.Languages = languages;
             this.AvailableAppLanguages = availableAppLanguages;
@@ -1223,11 +1227,25 @@ namespace Flipdish.Model
         public bool? HasIosApp { get; set; }
 
         /// <summary>
+        /// IOS App Store URL
+        /// </summary>
+        /// <value>IOS App Store URL</value>
+        [DataMember(Name="IosAppStoreUrl", EmitDefaultValue=false)]
+        public string IosAppStoreUrl { get; set; }
+
+        /// <summary>
         /// Has Android app in Google Play Store. This is readonly.
         /// </summary>
         /// <value>Has Android app in Google Play Store. This is readonly.</value>
         [DataMember(Name="HasAndroidApp", EmitDefaultValue=false)]
         public bool? HasAndroidApp { get; set; }
+
+        /// <summary>
+        /// Android Play Store URL
+        /// </summary>
+        /// <value>Android Play Store URL</value>
+        [DataMember(Name="AndroidPlayStoreUrl", EmitDefaultValue=false)]
+        public string AndroidPlayStoreUrl { get; set; }
 
         /// <summary>
         /// Application Logo.
@@ -1368,7 +1386,9 @@ namespace Flipdish.Model
             sb.Append("class App {\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("  HasIosApp: ").Append(HasIosApp).Append("\n");
+            sb.Append("  IosAppStoreUrl: ").Append(IosAppStoreUrl).Append("\n");
             sb.Append("  HasAndroidApp: ").Append(HasAndroidApp).Append("\n");
+            sb.Append("  AndroidPlayStoreUrl: ").Append(AndroidPlayStoreUrl).Append("\n");
             sb.Append("  LogoImageUrl: ").Append(LogoImageUrl).Append("\n");
             sb.Append("  Languages: ").Append(Languages).Append("\n");
             sb.Append("  AvailableAppLanguages: ").Append(AvailableAppLanguages).Append("\n");
@@ -1435,9 +1455,19 @@ namespace Flipdish.Model
                     this.HasIosApp.Equals(input.HasIosApp))
                 ) && 
                 (
+                    this.IosAppStoreUrl == input.IosAppStoreUrl ||
+                    (this.IosAppStoreUrl != null &&
+                    this.IosAppStoreUrl.Equals(input.IosAppStoreUrl))
+                ) && 
+                (
                     this.HasAndroidApp == input.HasAndroidApp ||
                     (this.HasAndroidApp != null &&
                     this.HasAndroidApp.Equals(input.HasAndroidApp))
+                ) && 
+                (
+                    this.AndroidPlayStoreUrl == input.AndroidPlayStoreUrl ||
+                    (this.AndroidPlayStoreUrl != null &&
+                    this.AndroidPlayStoreUrl.Equals(input.AndroidPlayStoreUrl))
                 ) && 
                 (
                     this.LogoImageUrl == input.LogoImageUrl ||
@@ -1559,8 +1589,12 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.AppId.GetHashCode();
                 if (this.HasIosApp != null)
                     hashCode = hashCode * 59 + this.HasIosApp.GetHashCode();
+                if (this.IosAppStoreUrl != null)
+                    hashCode = hashCode * 59 + this.IosAppStoreUrl.GetHashCode();
                 if (this.HasAndroidApp != null)
                     hashCode = hashCode * 59 + this.HasAndroidApp.GetHashCode();
+                if (this.AndroidPlayStoreUrl != null)
+                    hashCode = hashCode * 59 + this.AndroidPlayStoreUrl.GetHashCode();
                 if (this.LogoImageUrl != null)
                     hashCode = hashCode * 59 + this.LogoImageUrl.GetHashCode();
                 if (this.Languages != null)
