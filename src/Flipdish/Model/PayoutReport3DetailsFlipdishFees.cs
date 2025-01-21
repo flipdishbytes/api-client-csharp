@@ -57,7 +57,7 @@ namespace Flipdish.Model
         /// <param name="qropCardOnXOrders">qropCardOnXOrders.</param>
         /// <param name="qropCashOnXOrders">qropCashOnXOrders.</param>
         /// <param name="posCardOnXOrders">posCardOnXOrders.</param>
-        public PayoutReport3DetailsFlipdishFees(double? webAndAppCash = default(double?), double? webAndAppCashRevenueIncludingTips = default(double?), double? webAndAppCard = default(double?), double? webAndAppCardRevenueIncludingTips = default(double?), double? kioskCash = default(double?), double? kioskCashRevenue = default(double?), double? kioskCard = default(double?), double? kioskCardRevenue = default(double?), double? qropCash = default(double?), double? qropCard = default(double?), double? posCard = default(double?), double? posCardRevenue = default(double?), double? posCardOnFlipdishOrders = default(double?), double? otherIntegrationFees = default(double?), double? otherIntegrationTips = default(double?), double? refundedFeesOnRefundedSales = default(double?), double? vat = default(double?), double? total = default(double?), double? thirdPartyIntegrationFeesAndTips = default(double?), double? webAndAppCardOnXOrders = default(double?), double? webAndAppCashOnXOrders = default(double?), double? kioskCardOnXOrders = default(double?), double? kioskCashOnXOrders = default(double?), double? qropCardOnXOrders = default(double?), double? qropCashOnXOrders = default(double?), double? posCardOnXOrders = default(double?))
+        public PayoutReport3DetailsFlipdishFees(double? webAndAppCash = default(double?), double? webAndAppCashRevenueIncludingTips = default(double?), double? webAndAppCard = default(double?), double? webAndAppCardRevenueIncludingTips = default(double?), double? kioskCash = default(double?), double? kioskCashRevenue = default(double?), double? kioskCard = default(double?), double? kioskCardRevenue = default(double?), double? qropCash = default(double?), double? qropCard = default(double?), double? posCard = default(double?), double? posCardRevenue = default(double?), double? posCardOnFlipdishOrders = default(double?), double? otherIntegrationFees = default(double?), double? otherIntegrationTips = default(double?), double? refundedFeesOnRefundedSales = default(double?), double? vat = default(double?), double? total = default(double?), double? thirdPartyIntegrationFeesAndTips = default(double?), int? webAndAppCardOnXOrders = default(int?), int? webAndAppCashOnXOrders = default(int?), int? kioskCardOnXOrders = default(int?), int? kioskCashOnXOrders = default(int?), int? qropCardOnXOrders = default(int?), int? qropCashOnXOrders = default(int?), int? posCardOnXOrders = default(int?))
         {
             this.WebAndAppCash = webAndAppCash;
             this.WebAndAppCashRevenueIncludingTips = webAndAppCashRevenueIncludingTips;
@@ -205,43 +205,43 @@ namespace Flipdish.Model
         /// Gets or Sets WebAndAppCardOnXOrders
         /// </summary>
         [DataMember(Name="WebAndAppCardOnXOrders", EmitDefaultValue=false)]
-        public double? WebAndAppCardOnXOrders { get; set; }
+        public int? WebAndAppCardOnXOrders { get; set; }
 
         /// <summary>
         /// Gets or Sets WebAndAppCashOnXOrders
         /// </summary>
         [DataMember(Name="WebAndAppCashOnXOrders", EmitDefaultValue=false)]
-        public double? WebAndAppCashOnXOrders { get; set; }
+        public int? WebAndAppCashOnXOrders { get; set; }
 
         /// <summary>
         /// Gets or Sets KioskCardOnXOrders
         /// </summary>
         [DataMember(Name="KioskCardOnXOrders", EmitDefaultValue=false)]
-        public double? KioskCardOnXOrders { get; set; }
+        public int? KioskCardOnXOrders { get; set; }
 
         /// <summary>
         /// Gets or Sets KioskCashOnXOrders
         /// </summary>
         [DataMember(Name="KioskCashOnXOrders", EmitDefaultValue=false)]
-        public double? KioskCashOnXOrders { get; set; }
+        public int? KioskCashOnXOrders { get; set; }
 
         /// <summary>
         /// Gets or Sets QropCardOnXOrders
         /// </summary>
         [DataMember(Name="QropCardOnXOrders", EmitDefaultValue=false)]
-        public double? QropCardOnXOrders { get; set; }
+        public int? QropCardOnXOrders { get; set; }
 
         /// <summary>
         /// Gets or Sets QropCashOnXOrders
         /// </summary>
         [DataMember(Name="QropCashOnXOrders", EmitDefaultValue=false)]
-        public double? QropCashOnXOrders { get; set; }
+        public int? QropCashOnXOrders { get; set; }
 
         /// <summary>
         /// Gets or Sets PosCardOnXOrders
         /// </summary>
         [DataMember(Name="PosCardOnXOrders", EmitDefaultValue=false)]
-        public double? PosCardOnXOrders { get; set; }
+        public int? PosCardOnXOrders { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
