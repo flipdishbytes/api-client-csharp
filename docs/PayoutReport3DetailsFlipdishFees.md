@@ -22,6 +22,13 @@ Name | Type | Description | Notes
 **Vat** | **double?** |  | [optional] 
 **Total** | **double?** |  | [optional] 
 **ThirdPartyIntegrationFeesAndTips** | **double?** |  | [optional] 
+**WebAndAppCardOnXOrders** | **double?** |  | [optional] 
+**WebAndAppCashOnXOrders** | **double?** |  | [optional] 
+**KioskCardOnXOrders** | **double?** |  | [optional] 
+**KioskCashOnXOrders** | **double?** |  | [optional] 
+**QropCardOnXOrders** | **double?** |  | [optional] 
+**QropCashOnXOrders** | **double?** |  | [optional] 
+**PosCardOnXOrders** | **double?** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

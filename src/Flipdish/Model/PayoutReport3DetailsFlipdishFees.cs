@@ -50,7 +50,14 @@ namespace Flipdish.Model
         /// <param name="vat">vat.</param>
         /// <param name="total">total.</param>
         /// <param name="thirdPartyIntegrationFeesAndTips">thirdPartyIntegrationFeesAndTips.</param>
-        public PayoutReport3DetailsFlipdishFees(double? webAndAppCash = default(double?), double? webAndAppCashRevenueIncludingTips = default(double?), double? webAndAppCard = default(double?), double? webAndAppCardRevenueIncludingTips = default(double?), double? kioskCash = default(double?), double? kioskCashRevenue = default(double?), double? kioskCard = default(double?), double? kioskCardRevenue = default(double?), double? qropCash = default(double?), double? qropCard = default(double?), double? posCard = default(double?), double? posCardRevenue = default(double?), double? posCardOnFlipdishOrders = default(double?), double? otherIntegrationFees = default(double?), double? otherIntegrationTips = default(double?), double? refundedFeesOnRefundedSales = default(double?), double? vat = default(double?), double? total = default(double?), double? thirdPartyIntegrationFeesAndTips = default(double?))
+        /// <param name="webAndAppCardOnXOrders">webAndAppCardOnXOrders.</param>
+        /// <param name="webAndAppCashOnXOrders">webAndAppCashOnXOrders.</param>
+        /// <param name="kioskCardOnXOrders">kioskCardOnXOrders.</param>
+        /// <param name="kioskCashOnXOrders">kioskCashOnXOrders.</param>
+        /// <param name="qropCardOnXOrders">qropCardOnXOrders.</param>
+        /// <param name="qropCashOnXOrders">qropCashOnXOrders.</param>
+        /// <param name="posCardOnXOrders">posCardOnXOrders.</param>
+        public PayoutReport3DetailsFlipdishFees(double? webAndAppCash = default(double?), double? webAndAppCashRevenueIncludingTips = default(double?), double? webAndAppCard = default(double?), double? webAndAppCardRevenueIncludingTips = default(double?), double? kioskCash = default(double?), double? kioskCashRevenue = default(double?), double? kioskCard = default(double?), double? kioskCardRevenue = default(double?), double? qropCash = default(double?), double? qropCard = default(double?), double? posCard = default(double?), double? posCardRevenue = default(double?), double? posCardOnFlipdishOrders = default(double?), double? otherIntegrationFees = default(double?), double? otherIntegrationTips = default(double?), double? refundedFeesOnRefundedSales = default(double?), double? vat = default(double?), double? total = default(double?), double? thirdPartyIntegrationFeesAndTips = default(double?), double? webAndAppCardOnXOrders = default(double?), double? webAndAppCashOnXOrders = default(double?), double? kioskCardOnXOrders = default(double?), double? kioskCashOnXOrders = default(double?), double? qropCardOnXOrders = default(double?), double? qropCashOnXOrders = default(double?), double? posCardOnXOrders = default(double?))
         {
             this.WebAndAppCash = webAndAppCash;
             this.WebAndAppCashRevenueIncludingTips = webAndAppCashRevenueIncludingTips;
@@ -71,6 +78,13 @@ namespace Flipdish.Model
             this.Vat = vat;
             this.Total = total;
             this.ThirdPartyIntegrationFeesAndTips = thirdPartyIntegrationFeesAndTips;
+            this.WebAndAppCardOnXOrders = webAndAppCardOnXOrders;
+            this.WebAndAppCashOnXOrders = webAndAppCashOnXOrders;
+            this.KioskCardOnXOrders = kioskCardOnXOrders;
+            this.KioskCashOnXOrders = kioskCashOnXOrders;
+            this.QropCardOnXOrders = qropCardOnXOrders;
+            this.QropCashOnXOrders = qropCashOnXOrders;
+            this.PosCardOnXOrders = posCardOnXOrders;
         }
         
         /// <summary>
@@ -188,6 +202,48 @@ namespace Flipdish.Model
         public double? ThirdPartyIntegrationFeesAndTips { get; set; }
 
         /// <summary>
+        /// Gets or Sets WebAndAppCardOnXOrders
+        /// </summary>
+        [DataMember(Name="WebAndAppCardOnXOrders", EmitDefaultValue=false)]
+        public double? WebAndAppCardOnXOrders { get; set; }
+
+        /// <summary>
+        /// Gets or Sets WebAndAppCashOnXOrders
+        /// </summary>
+        [DataMember(Name="WebAndAppCashOnXOrders", EmitDefaultValue=false)]
+        public double? WebAndAppCashOnXOrders { get; set; }
+
+        /// <summary>
+        /// Gets or Sets KioskCardOnXOrders
+        /// </summary>
+        [DataMember(Name="KioskCardOnXOrders", EmitDefaultValue=false)]
+        public double? KioskCardOnXOrders { get; set; }
+
+        /// <summary>
+        /// Gets or Sets KioskCashOnXOrders
+        /// </summary>
+        [DataMember(Name="KioskCashOnXOrders", EmitDefaultValue=false)]
+        public double? KioskCashOnXOrders { get; set; }
+
+        /// <summary>
+        /// Gets or Sets QropCardOnXOrders
+        /// </summary>
+        [DataMember(Name="QropCardOnXOrders", EmitDefaultValue=false)]
+        public double? QropCardOnXOrders { get; set; }
+
+        /// <summary>
+        /// Gets or Sets QropCashOnXOrders
+        /// </summary>
+        [DataMember(Name="QropCashOnXOrders", EmitDefaultValue=false)]
+        public double? QropCashOnXOrders { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PosCardOnXOrders
+        /// </summary>
+        [DataMember(Name="PosCardOnXOrders", EmitDefaultValue=false)]
+        public double? PosCardOnXOrders { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -214,6 +270,13 @@ namespace Flipdish.Model
             sb.Append("  Vat: ").Append(Vat).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("  ThirdPartyIntegrationFeesAndTips: ").Append(ThirdPartyIntegrationFeesAndTips).Append("\n");
+            sb.Append("  WebAndAppCardOnXOrders: ").Append(WebAndAppCardOnXOrders).Append("\n");
+            sb.Append("  WebAndAppCashOnXOrders: ").Append(WebAndAppCashOnXOrders).Append("\n");
+            sb.Append("  KioskCardOnXOrders: ").Append(KioskCardOnXOrders).Append("\n");
+            sb.Append("  KioskCashOnXOrders: ").Append(KioskCashOnXOrders).Append("\n");
+            sb.Append("  QropCardOnXOrders: ").Append(QropCardOnXOrders).Append("\n");
+            sb.Append("  QropCashOnXOrders: ").Append(QropCashOnXOrders).Append("\n");
+            sb.Append("  PosCardOnXOrders: ").Append(PosCardOnXOrders).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -342,6 +405,41 @@ namespace Flipdish.Model
                     this.ThirdPartyIntegrationFeesAndTips == input.ThirdPartyIntegrationFeesAndTips ||
                     (this.ThirdPartyIntegrationFeesAndTips != null &&
                     this.ThirdPartyIntegrationFeesAndTips.Equals(input.ThirdPartyIntegrationFeesAndTips))
+                ) && 
+                (
+                    this.WebAndAppCardOnXOrders == input.WebAndAppCardOnXOrders ||
+                    (this.WebAndAppCardOnXOrders != null &&
+                    this.WebAndAppCardOnXOrders.Equals(input.WebAndAppCardOnXOrders))
+                ) && 
+                (
+                    this.WebAndAppCashOnXOrders == input.WebAndAppCashOnXOrders ||
+                    (this.WebAndAppCashOnXOrders != null &&
+                    this.WebAndAppCashOnXOrders.Equals(input.WebAndAppCashOnXOrders))
+                ) && 
+                (
+                    this.KioskCardOnXOrders == input.KioskCardOnXOrders ||
+                    (this.KioskCardOnXOrders != null &&
+                    this.KioskCardOnXOrders.Equals(input.KioskCardOnXOrders))
+                ) && 
+                (
+                    this.KioskCashOnXOrders == input.KioskCashOnXOrders ||
+                    (this.KioskCashOnXOrders != null &&
+                    this.KioskCashOnXOrders.Equals(input.KioskCashOnXOrders))
+                ) && 
+                (
+                    this.QropCardOnXOrders == input.QropCardOnXOrders ||
+                    (this.QropCardOnXOrders != null &&
+                    this.QropCardOnXOrders.Equals(input.QropCardOnXOrders))
+                ) && 
+                (
+                    this.QropCashOnXOrders == input.QropCashOnXOrders ||
+                    (this.QropCashOnXOrders != null &&
+                    this.QropCashOnXOrders.Equals(input.QropCashOnXOrders))
+                ) && 
+                (
+                    this.PosCardOnXOrders == input.PosCardOnXOrders ||
+                    (this.PosCardOnXOrders != null &&
+                    this.PosCardOnXOrders.Equals(input.PosCardOnXOrders))
                 );
         }
 
@@ -392,6 +490,20 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Total.GetHashCode();
                 if (this.ThirdPartyIntegrationFeesAndTips != null)
                     hashCode = hashCode * 59 + this.ThirdPartyIntegrationFeesAndTips.GetHashCode();
+                if (this.WebAndAppCardOnXOrders != null)
+                    hashCode = hashCode * 59 + this.WebAndAppCardOnXOrders.GetHashCode();
+                if (this.WebAndAppCashOnXOrders != null)
+                    hashCode = hashCode * 59 + this.WebAndAppCashOnXOrders.GetHashCode();
+                if (this.KioskCardOnXOrders != null)
+                    hashCode = hashCode * 59 + this.KioskCardOnXOrders.GetHashCode();
+                if (this.KioskCashOnXOrders != null)
+                    hashCode = hashCode * 59 + this.KioskCashOnXOrders.GetHashCode();
+                if (this.QropCardOnXOrders != null)
+                    hashCode = hashCode * 59 + this.QropCardOnXOrders.GetHashCode();
+                if (this.QropCashOnXOrders != null)
+                    hashCode = hashCode * 59 + this.QropCashOnXOrders.GetHashCode();
+                if (this.PosCardOnXOrders != null)
+                    hashCode = hashCode * 59 + this.PosCardOnXOrders.GetHashCode();
                 return hashCode;
             }
         }
