@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EventName** | **string** | The event name | [optional] 
+**OrgId** | **string** | Organisation Id | [optional] 
 **StoreId** | **int?** | Store Id | [optional] 
 **StoreGroupId** | **int?** | Store group Id | [optional] 
 **User** | [**UserEventInfo**](UserEventInfo.md) | User which updated this store address | [optional] 
