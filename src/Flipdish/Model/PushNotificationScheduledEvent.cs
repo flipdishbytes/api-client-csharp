@@ -39,8 +39,9 @@ namespace Flipdish.Model
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
+        /// <param name="orgId">Org id.</param>
         /// <param name="ipAddress">Ip Address.</param>
-        public PushNotificationScheduledEvent(string eventName = default(string), UserEventInfo user = default(UserEventInfo), string description = default(string), PushNotificationRequest pushNotification = default(PushNotificationRequest), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
+        public PushNotificationScheduledEvent(string eventName = default(string), UserEventInfo user = default(UserEventInfo), string description = default(string), PushNotificationRequest pushNotification = default(PushNotificationRequest), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string orgId = default(string), string ipAddress = default(string))
         {
             this.EventName = eventName;
             this.User = user;
@@ -50,6 +51,7 @@ namespace Flipdish.Model
             this.CreateTime = createTime;
             this.Position = position;
             this.AppId = appId;
+            this.OrgId = orgId;
             this.IpAddress = ipAddress;
         }
         
@@ -107,6 +109,13 @@ namespace Flipdish.Model
         public string AppId { get; set; }
 
         /// <summary>
+        /// Org id
+        /// </summary>
+        /// <value>Org id</value>
+        [DataMember(Name="OrgId", EmitDefaultValue=false)]
+        public string OrgId { get; set; }
+
+        /// <summary>
         /// Ip Address
         /// </summary>
         /// <value>Ip Address</value>
@@ -129,6 +138,7 @@ namespace Flipdish.Model
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
+            sb.Append("  OrgId: ").Append(OrgId).Append("\n");
             sb.Append("  IpAddress: ").Append(IpAddress).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -205,6 +215,11 @@ namespace Flipdish.Model
                     this.AppId.Equals(input.AppId))
                 ) && 
                 (
+                    this.OrgId == input.OrgId ||
+                    (this.OrgId != null &&
+                    this.OrgId.Equals(input.OrgId))
+                ) && 
+                (
                     this.IpAddress == input.IpAddress ||
                     (this.IpAddress != null &&
                     this.IpAddress.Equals(input.IpAddress))
@@ -236,6 +251,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Position.GetHashCode();
                 if (this.AppId != null)
                     hashCode = hashCode * 59 + this.AppId.GetHashCode();
+                if (this.OrgId != null)
+                    hashCode = hashCode * 59 + this.OrgId.GetHashCode();
                 if (this.IpAddress != null)
                     hashCode = hashCode * 59 + this.IpAddress.GetHashCode();
                 return hashCode;
