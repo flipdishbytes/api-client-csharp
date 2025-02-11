@@ -265,8 +265,6 @@ Class | Method | HTTP request | Description
 *FulfillmentStateConfigurationApi* | [**GetFulfillmentStatesConfigurationTemplate**](docs/FulfillmentStateConfigurationApi.md#getfulfillmentstatesconfigurationtemplate) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states_template | 
 *FulfillmentStateConfigurationApi* | [**SearchFulfillmentStatesConfigurations**](docs/FulfillmentStateConfigurationApi.md#searchfulfillmentstatesconfigurations) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states | 
 *FulfillmentStateConfigurationApi* | [**UpdateFulfillmentStatesConfig**](docs/FulfillmentStateConfigurationApi.md#updatefulfillmentstatesconfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | 
-*GoogleFoodOrderPrototypeApi* | [**CreateOrder**](docs/GoogleFoodOrderPrototypeApi.md#createorder) | **POST** /api/v1.0/{appId}/googleorder | 
-*GoogleFoodOrderPrototypeApi* | [**SubmitOrder**](docs/GoogleFoodOrderPrototypeApi.md#submitorder) | **POST** /api/v1.0/{appId}/googleorder/{orderId}/submit | 
 *HeartbeatApi* | [**HeadHostname**](docs/HeartbeatApi.md#headhostname) | **HEAD** /api/v1.0/heartbeat/Hostname | 
 *HeartbeatApi* | [**HeadPing**](docs/HeartbeatApi.md#headping) | **HEAD** /api/v1.0/heartbeat | 
 *HeartbeatApi* | [**Hostname**](docs/HeartbeatApi.md#hostname) | **GET** /api/v1.0/heartbeat/Hostname | 
@@ -698,7 +696,6 @@ Class | Method | HTTP request | Description
  - [Model.ConfiguredStore](docs/ConfiguredStore.md)
  - [Model.Contact](docs/Contact.md)
  - [Model.Coordinates](docs/Coordinates.md)
- - [Model.CoordinatesDm](docs/CoordinatesDm.md)
  - [Model.CountryFormResponse](docs/CountryFormResponse.md)
  - [Model.CountryWithAccountFieldsDefinitions](docs/CountryWithAccountFieldsDefinitions.md)
  - [Model.CreateAccountModel](docs/CreateAccountModel.md)
@@ -721,7 +718,6 @@ Class | Method | HTTP request | Description
  - [Model.CreateMenuTaxRate](docs/CreateMenuTaxRate.md)
  - [Model.CreateMetadata](docs/CreateMetadata.md)
  - [Model.CreateMetafieldDefinition](docs/CreateMetafieldDefinition.md)
- - [Model.CreateOrderRequest](docs/CreateOrderRequest.md)
  - [Model.CreatePayGreenConfigurationRequest](docs/CreatePayGreenConfigurationRequest.md)
  - [Model.CreateProduct](docs/CreateProduct.md)
  - [Model.CreateProductReference](docs/CreateProductReference.md)
@@ -757,7 +753,6 @@ Class | Method | HTTP request | Description
  - [Model.DnsVerifiedEvent](docs/DnsVerifiedEvent.md)
  - [Model.DriverLoginModel](docs/DriverLoginModel.md)
  - [Model.DriverRequestLoginPinModel](docs/DriverRequestLoginPinModel.md)
- - [Model.DuringOrderPromotionOptionsDm](docs/DuringOrderPromotionOptionsDm.md)
  - [Model.DynamicFormField](docs/DynamicFormField.md)
  - [Model.DynamicFormFieldOption](docs/DynamicFormFieldOption.md)
  - [Model.DynamicFormRule](docs/DynamicFormRule.md)
@@ -955,7 +950,6 @@ Class | Method | HTTP request | Description
  - [Model.OrderDeliveryInformationBase](docs/OrderDeliveryInformationBase.md)
  - [Model.OrderDeliveryTrackingStatusUpdatedEvent](docs/OrderDeliveryTrackingStatusUpdatedEvent.md)
  - [Model.OrderDispatchedEvent](docs/OrderDispatchedEvent.md)
- - [Model.OrderDm](docs/OrderDm.md)
  - [Model.OrderDropOffLocation](docs/OrderDropOffLocation.md)
  - [Model.OrderFulfillmentStatus](docs/OrderFulfillmentStatus.md)
  - [Model.OrderFulfillmentStatusBase](docs/OrderFulfillmentStatusBase.md)
@@ -965,7 +959,6 @@ Class | Method | HTTP request | Description
  - [Model.OrderIngestSubmitOrderRequest](docs/OrderIngestSubmitOrderRequest.md)
  - [Model.OrderIngestSubmitOrderResponse](docs/OrderIngestSubmitOrderResponse.md)
  - [Model.OrderItem](docs/OrderItem.md)
- - [Model.OrderItemDm](docs/OrderItemDm.md)
  - [Model.OrderItemOption](docs/OrderItemOption.md)
  - [Model.OrderLeadTimes](docs/OrderLeadTimes.md)
  - [Model.OrderList](docs/OrderList.md)
@@ -1250,7 +1243,6 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultStripeTerminalConnectionToken](docs/RestApiResultStripeTerminalConnectionToken.md)
  - [Model.RestApiResultStripeTerminalLocation](docs/RestApiResultStripeTerminalLocation.md)
  - [Model.RestApiResultStuartSettings](docs/RestApiResultStuartSettings.md)
- - [Model.RestApiResultSubmitOrderResponseDm](docs/RestApiResultSubmitOrderResponseDm.md)
  - [Model.RestApiResultSubscription](docs/RestApiResultSubscription.md)
  - [Model.RestApiResultTeammate](docs/RestApiResultTeammate.md)
  - [Model.RestApiResultTelemetrySeriesResult](docs/RestApiResultTelemetrySeriesResult.md)
@@ -1348,8 +1340,6 @@ Class | Method | HTTP request | Description
  - [Model.StripeTerminalLocation](docs/StripeTerminalLocation.md)
  - [Model.StuartSettings](docs/StuartSettings.md)
  - [Model.StuartSettingsTransportPrices](docs/StuartSettingsTransportPrices.md)
- - [Model.SubmitOrderRequest](docs/SubmitOrderRequest.md)
- - [Model.SubmitOrderResponseDm](docs/SubmitOrderResponseDm.md)
  - [Model.Subscription](docs/Subscription.md)
  - [Model.SubscriptionInvoice](docs/SubscriptionInvoice.md)
  - [Model.SubscriptionProduct](docs/SubscriptionProduct.md)
