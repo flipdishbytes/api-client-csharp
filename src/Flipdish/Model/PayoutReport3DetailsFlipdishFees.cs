@@ -40,7 +40,9 @@ namespace Flipdish.Model
         /// <param name="kioskCard">kioskCard.</param>
         /// <param name="kioskCardRevenue">kioskCardRevenue.</param>
         /// <param name="qropCash">qropCash.</param>
+        /// <param name="qropCashRevenue">qropCashRevenue.</param>
         /// <param name="qropCard">qropCard.</param>
+        /// <param name="qropCardRevenue">qropCardRevenue.</param>
         /// <param name="posCard">posCard.</param>
         /// <param name="posCardRevenue">posCardRevenue.</param>
         /// <param name="posCardOnFlipdishOrders">posCardOnFlipdishOrders.</param>
@@ -57,7 +59,7 @@ namespace Flipdish.Model
         /// <param name="qropCardOnXOrders">qropCardOnXOrders.</param>
         /// <param name="qropCashOnXOrders">qropCashOnXOrders.</param>
         /// <param name="posCardOnXOrders">posCardOnXOrders.</param>
-        public PayoutReport3DetailsFlipdishFees(double? webAndAppCash = default(double?), double? webAndAppCashRevenueIncludingTips = default(double?), double? webAndAppCard = default(double?), double? webAndAppCardRevenueIncludingTips = default(double?), double? kioskCash = default(double?), double? kioskCashRevenue = default(double?), double? kioskCard = default(double?), double? kioskCardRevenue = default(double?), double? qropCash = default(double?), double? qropCard = default(double?), double? posCard = default(double?), double? posCardRevenue = default(double?), double? posCardOnFlipdishOrders = default(double?), double? otherIntegrationFees = default(double?), double? otherIntegrationTips = default(double?), double? refundedFeesOnRefundedSales = default(double?), double? vat = default(double?), double? total = default(double?), double? thirdPartyIntegrationFeesAndTips = default(double?), int? webAndAppCardOnXOrders = default(int?), int? webAndAppCashOnXOrders = default(int?), int? kioskCardOnXOrders = default(int?), int? kioskCashOnXOrders = default(int?), int? qropCardOnXOrders = default(int?), int? qropCashOnXOrders = default(int?), int? posCardOnXOrders = default(int?))
+        public PayoutReport3DetailsFlipdishFees(double? webAndAppCash = default(double?), double? webAndAppCashRevenueIncludingTips = default(double?), double? webAndAppCard = default(double?), double? webAndAppCardRevenueIncludingTips = default(double?), double? kioskCash = default(double?), double? kioskCashRevenue = default(double?), double? kioskCard = default(double?), double? kioskCardRevenue = default(double?), double? qropCash = default(double?), double? qropCashRevenue = default(double?), double? qropCard = default(double?), double? qropCardRevenue = default(double?), double? posCard = default(double?), double? posCardRevenue = default(double?), double? posCardOnFlipdishOrders = default(double?), double? otherIntegrationFees = default(double?), double? otherIntegrationTips = default(double?), double? refundedFeesOnRefundedSales = default(double?), double? vat = default(double?), double? total = default(double?), double? thirdPartyIntegrationFeesAndTips = default(double?), int? webAndAppCardOnXOrders = default(int?), int? webAndAppCashOnXOrders = default(int?), int? kioskCardOnXOrders = default(int?), int? kioskCashOnXOrders = default(int?), int? qropCardOnXOrders = default(int?), int? qropCashOnXOrders = default(int?), int? posCardOnXOrders = default(int?))
         {
             this.WebAndAppCash = webAndAppCash;
             this.WebAndAppCashRevenueIncludingTips = webAndAppCashRevenueIncludingTips;
@@ -68,7 +70,9 @@ namespace Flipdish.Model
             this.KioskCard = kioskCard;
             this.KioskCardRevenue = kioskCardRevenue;
             this.QropCash = qropCash;
+            this.QropCashRevenue = qropCashRevenue;
             this.QropCard = qropCard;
+            this.QropCardRevenue = qropCardRevenue;
             this.PosCard = posCard;
             this.PosCardRevenue = posCardRevenue;
             this.PosCardOnFlipdishOrders = posCardOnFlipdishOrders;
@@ -142,10 +146,22 @@ namespace Flipdish.Model
         public double? QropCash { get; set; }
 
         /// <summary>
+        /// Gets or Sets QropCashRevenue
+        /// </summary>
+        [DataMember(Name="QropCashRevenue", EmitDefaultValue=false)]
+        public double? QropCashRevenue { get; set; }
+
+        /// <summary>
         /// Gets or Sets QropCard
         /// </summary>
         [DataMember(Name="QropCard", EmitDefaultValue=false)]
         public double? QropCard { get; set; }
+
+        /// <summary>
+        /// Gets or Sets QropCardRevenue
+        /// </summary>
+        [DataMember(Name="QropCardRevenue", EmitDefaultValue=false)]
+        public double? QropCardRevenue { get; set; }
 
         /// <summary>
         /// Gets or Sets PosCard
@@ -260,7 +276,9 @@ namespace Flipdish.Model
             sb.Append("  KioskCard: ").Append(KioskCard).Append("\n");
             sb.Append("  KioskCardRevenue: ").Append(KioskCardRevenue).Append("\n");
             sb.Append("  QropCash: ").Append(QropCash).Append("\n");
+            sb.Append("  QropCashRevenue: ").Append(QropCashRevenue).Append("\n");
             sb.Append("  QropCard: ").Append(QropCard).Append("\n");
+            sb.Append("  QropCardRevenue: ").Append(QropCardRevenue).Append("\n");
             sb.Append("  PosCard: ").Append(PosCard).Append("\n");
             sb.Append("  PosCardRevenue: ").Append(PosCardRevenue).Append("\n");
             sb.Append("  PosCardOnFlipdishOrders: ").Append(PosCardOnFlipdishOrders).Append("\n");
@@ -357,9 +375,19 @@ namespace Flipdish.Model
                     this.QropCash.Equals(input.QropCash))
                 ) && 
                 (
+                    this.QropCashRevenue == input.QropCashRevenue ||
+                    (this.QropCashRevenue != null &&
+                    this.QropCashRevenue.Equals(input.QropCashRevenue))
+                ) && 
+                (
                     this.QropCard == input.QropCard ||
                     (this.QropCard != null &&
                     this.QropCard.Equals(input.QropCard))
+                ) && 
+                (
+                    this.QropCardRevenue == input.QropCardRevenue ||
+                    (this.QropCardRevenue != null &&
+                    this.QropCardRevenue.Equals(input.QropCardRevenue))
                 ) && 
                 (
                     this.PosCard == input.PosCard ||
@@ -470,8 +498,12 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.KioskCardRevenue.GetHashCode();
                 if (this.QropCash != null)
                     hashCode = hashCode * 59 + this.QropCash.GetHashCode();
+                if (this.QropCashRevenue != null)
+                    hashCode = hashCode * 59 + this.QropCashRevenue.GetHashCode();
                 if (this.QropCard != null)
                     hashCode = hashCode * 59 + this.QropCard.GetHashCode();
+                if (this.QropCardRevenue != null)
+                    hashCode = hashCode * 59 + this.QropCardRevenue.GetHashCode();
                 if (this.PosCard != null)
                     hashCode = hashCode * 59 + this.PosCard.GetHashCode();
                 if (this.PosCardRevenue != null)
