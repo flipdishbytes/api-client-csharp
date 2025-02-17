@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**CreateApp**](AppsApi.md#createapp) | **POST** /api/v1.0/apps | 
 [**GetApp**](AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | 
 [**GetAppHostnameStatus**](AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
+[**GetAppName**](AppsApi.md#getappname) | **GET** /api/v1.0/apps/{appId}/name | 
 [**GetApps**](AppsApi.md#getapps) | **GET** /api/v1.0/apps | 
 [**GetCompliance**](AppsApi.md#getcompliance) | **GET** /api/v1.0/apps/{appId}/compliance | 
 [**GetPanaceaVanityUrl**](AppsApi.md#getpanaceavanityurl) | **GET** /api/v1.0/apps/{appId}/panacea/url | 
@@ -258,6 +259,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultDnsRecordInformation**](RestApiResultDnsRecordInformation.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getappname"></a>
+# **GetAppName**
+> RestApiStringResult GetAppName (string appId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetAppNameExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AppsApi();
+            var appId = appId_example;  // string | 
+
+            try
+            {
+                RestApiStringResult result = apiInstance.GetAppName(appId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AppsApi.GetAppName: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+
+### Return type
+
+[**RestApiStringResult**](RestApiStringResult.md)
 
 ### Authorization
 

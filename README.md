@@ -129,6 +129,7 @@ Class | Method | HTTP request | Description
 *AppsApi* | [**CreateApp**](docs/AppsApi.md#createapp) | **POST** /api/v1.0/apps | 
 *AppsApi* | [**GetApp**](docs/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | 
 *AppsApi* | [**GetAppHostnameStatus**](docs/AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
+*AppsApi* | [**GetAppName**](docs/AppsApi.md#getappname) | **GET** /api/v1.0/apps/{appId}/name | 
 *AppsApi* | [**GetApps**](docs/AppsApi.md#getapps) | **GET** /api/v1.0/apps | 
 *AppsApi* | [**GetCompliance**](docs/AppsApi.md#getcompliance) | **GET** /api/v1.0/apps/{appId}/compliance | 
 *AppsApi* | [**GetPanaceaVanityUrl**](docs/AppsApi.md#getpanaceavanityurl) | **GET** /api/v1.0/apps/{appId}/panacea/url | 
