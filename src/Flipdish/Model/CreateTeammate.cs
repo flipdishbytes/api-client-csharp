@@ -67,40 +67,46 @@ namespace Flipdish.Model
             Integrator = 5,
             
             /// <summary>
+            /// Enum PropertyManager for value: PropertyManager
+            /// </summary>
+            [EnumMember(Value = "PropertyManager")]
+            PropertyManager = 6,
+            
+            /// <summary>
             /// Enum StoreManager for value: StoreManager
             /// </summary>
             [EnumMember(Value = "StoreManager")]
-            StoreManager = 6,
+            StoreManager = 7,
             
             /// <summary>
             /// Enum StoreStaff for value: StoreStaff
             /// </summary>
             [EnumMember(Value = "StoreStaff")]
-            StoreStaff = 7,
+            StoreStaff = 8,
             
             /// <summary>
             /// Enum StoreReadOnlyAccess for value: StoreReadOnlyAccess
             /// </summary>
             [EnumMember(Value = "StoreReadOnlyAccess")]
-            StoreReadOnlyAccess = 8,
+            StoreReadOnlyAccess = 9,
             
             /// <summary>
             /// Enum FinanceManger for value: FinanceManger
             /// </summary>
             [EnumMember(Value = "FinanceManger")]
-            FinanceManger = 9,
+            FinanceManger = 10,
             
             /// <summary>
             /// Enum Onboarding for value: Onboarding
             /// </summary>
             [EnumMember(Value = "Onboarding")]
-            Onboarding = 10,
+            Onboarding = 11,
             
             /// <summary>
             /// Enum Support for value: Support
             /// </summary>
             [EnumMember(Value = "Support")]
-            Support = 11
+            Support = 12
         }
 
         /// <summary>
@@ -116,12 +122,14 @@ namespace Flipdish.Model
         /// <param name="appAccessLevel">App access level.</param>
         /// <param name="hasAccessToAllStores">The user has access to all stores for the app (including new stores that added later).</param>
         /// <param name="storeIds">Store IDs the user has access to (if HasAccessToAllStores is false).</param>
-        public CreateTeammate(string email = default(string), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), bool? hasAccessToAllStores = default(bool?), List<int?> storeIds = default(List<int?>))
+        /// <param name="propertyIds">Property Ids the user has access to (if HasAccessToAllStores is false).</param>
+        public CreateTeammate(string email = default(string), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), bool? hasAccessToAllStores = default(bool?), List<int?> storeIds = default(List<int?>), List<string> propertyIds = default(List<string>))
         {
             this.Email = email;
             this.AppAccessLevel = appAccessLevel;
             this.HasAccessToAllStores = hasAccessToAllStores;
             this.StoreIds = storeIds;
+            this.PropertyIds = propertyIds;
         }
         
         /// <summary>
@@ -147,6 +155,13 @@ namespace Flipdish.Model
         public List<int?> StoreIds { get; set; }
 
         /// <summary>
+        /// Property Ids the user has access to (if HasAccessToAllStores is false)
+        /// </summary>
+        /// <value>Property Ids the user has access to (if HasAccessToAllStores is false)</value>
+        [DataMember(Name="PropertyIds", EmitDefaultValue=false)]
+        public List<string> PropertyIds { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -158,6 +173,7 @@ namespace Flipdish.Model
             sb.Append("  AppAccessLevel: ").Append(AppAccessLevel).Append("\n");
             sb.Append("  HasAccessToAllStores: ").Append(HasAccessToAllStores).Append("\n");
             sb.Append("  StoreIds: ").Append(StoreIds).Append("\n");
+            sb.Append("  PropertyIds: ").Append(PropertyIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -211,6 +227,11 @@ namespace Flipdish.Model
                     this.StoreIds == input.StoreIds ||
                     this.StoreIds != null &&
                     this.StoreIds.SequenceEqual(input.StoreIds)
+                ) && 
+                (
+                    this.PropertyIds == input.PropertyIds ||
+                    this.PropertyIds != null &&
+                    this.PropertyIds.SequenceEqual(input.PropertyIds)
                 );
         }
 
@@ -231,6 +252,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.HasAccessToAllStores.GetHashCode();
                 if (this.StoreIds != null)
                     hashCode = hashCode * 59 + this.StoreIds.GetHashCode();
+                if (this.PropertyIds != null)
+                    hashCode = hashCode * 59 + this.PropertyIds.GetHashCode();
                 return hashCode;
             }
         }
