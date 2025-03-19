@@ -56,6 +56,33 @@ namespace Flipdish.Model
         [DataMember(Name="DeliveryType", EmitDefaultValue=false)]
         public DeliveryTypeEnum? DeliveryType { get; set; }
         /// <summary>
+        /// Type of opening hours Delivery / Pickup as a string
+        /// </summary>
+        /// <value>Type of opening hours Delivery / Pickup as a string</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DeliveryTypeStringEnum
+        {
+            
+            /// <summary>
+            /// Enum Delivery for value: Delivery
+            /// </summary>
+            [EnumMember(Value = "Delivery")]
+            Delivery = 1,
+            
+            /// <summary>
+            /// Enum Pickup for value: Pickup
+            /// </summary>
+            [EnumMember(Value = "Pickup")]
+            Pickup = 2
+        }
+
+        /// <summary>
+        /// Type of opening hours Delivery / Pickup as a string
+        /// </summary>
+        /// <value>Type of opening hours Delivery / Pickup as a string</value>
+        [DataMember(Name="DeliveryTypeString", EmitDefaultValue=false)]
+        public DeliveryTypeStringEnum? DeliveryTypeString { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="StoreOpeningHoursUpdatedEvent" /> class.
         /// </summary>
         /// <param name="eventName">The event name.</param>
@@ -64,6 +91,7 @@ namespace Flipdish.Model
         /// <param name="storeGroupId">Store group Id.</param>
         /// <param name="user">User which updated opening hours for this store.</param>
         /// <param name="deliveryType">Type of opening hours Delivery / Pickup.</param>
+        /// <param name="deliveryTypeString">Type of opening hours Delivery / Pickup as a string.</param>
         /// <param name="businessHoursPeriodOld">The period that was updated.</param>
         /// <param name="businessHoursPeriod">The new values of the period.</param>
         /// <param name="description">Description.</param>
@@ -72,7 +100,7 @@ namespace Flipdish.Model
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
         /// <param name="ipAddress">Ip Address.</param>
-        public StoreOpeningHoursUpdatedEvent(string eventName = default(string), string orgId = default(string), int? storeId = default(int?), int? storeGroupId = default(int?), UserEventInfo user = default(UserEventInfo), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), BusinessHoursPeriod businessHoursPeriodOld = default(BusinessHoursPeriod), BusinessHoursPeriod businessHoursPeriod = default(BusinessHoursPeriod), string description = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
+        public StoreOpeningHoursUpdatedEvent(string eventName = default(string), string orgId = default(string), int? storeId = default(int?), int? storeGroupId = default(int?), UserEventInfo user = default(UserEventInfo), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), DeliveryTypeStringEnum? deliveryTypeString = default(DeliveryTypeStringEnum?), BusinessHoursPeriod businessHoursPeriodOld = default(BusinessHoursPeriod), BusinessHoursPeriod businessHoursPeriod = default(BusinessHoursPeriod), string description = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
         {
             this.EventName = eventName;
             this.OrgId = orgId;
@@ -80,6 +108,7 @@ namespace Flipdish.Model
             this.StoreGroupId = storeGroupId;
             this.User = user;
             this.DeliveryType = deliveryType;
+            this.DeliveryTypeString = deliveryTypeString;
             this.BusinessHoursPeriodOld = businessHoursPeriodOld;
             this.BusinessHoursPeriod = businessHoursPeriod;
             this.Description = description;
@@ -124,6 +153,7 @@ namespace Flipdish.Model
         /// <value>User which updated opening hours for this store</value>
         [DataMember(Name="User", EmitDefaultValue=false)]
         public UserEventInfo User { get; set; }
+
 
 
         /// <summary>
@@ -196,6 +226,7 @@ namespace Flipdish.Model
             sb.Append("  StoreGroupId: ").Append(StoreGroupId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  DeliveryType: ").Append(DeliveryType).Append("\n");
+            sb.Append("  DeliveryTypeString: ").Append(DeliveryTypeString).Append("\n");
             sb.Append("  BusinessHoursPeriodOld: ").Append(BusinessHoursPeriodOld).Append("\n");
             sb.Append("  BusinessHoursPeriod: ").Append(BusinessHoursPeriod).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -269,6 +300,11 @@ namespace Flipdish.Model
                     this.DeliveryType.Equals(input.DeliveryType))
                 ) && 
                 (
+                    this.DeliveryTypeString == input.DeliveryTypeString ||
+                    (this.DeliveryTypeString != null &&
+                    this.DeliveryTypeString.Equals(input.DeliveryTypeString))
+                ) && 
+                (
                     this.BusinessHoursPeriodOld == input.BusinessHoursPeriodOld ||
                     (this.BusinessHoursPeriodOld != null &&
                     this.BusinessHoursPeriodOld.Equals(input.BusinessHoursPeriodOld))
@@ -331,6 +367,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.DeliveryType != null)
                     hashCode = hashCode * 59 + this.DeliveryType.GetHashCode();
+                if (this.DeliveryTypeString != null)
+                    hashCode = hashCode * 59 + this.DeliveryTypeString.GetHashCode();
                 if (this.BusinessHoursPeriodOld != null)
                     hashCode = hashCode * 59 + this.BusinessHoursPeriodOld.GetHashCode();
                 if (this.BusinessHoursPeriod != null)

@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **StoreGroupId** | **int?** | Store group Id | [optional] 
 **User** | [**UserEventInfo**](UserEventInfo.md) | User which updated opening hours for this store | [optional] 
 **DeliveryType** | **string** | Type of opening hours Delivery / Pickup | [optional] 
+**DeliveryTypeString** | **string** | Type of opening hours Delivery / Pickup as a string | [optional] 
 **BusinessHoursPeriodOld** | [**BusinessHoursPeriod**](BusinessHoursPeriod.md) | The period that was updated | [optional] 
 **BusinessHoursPeriod** | [**BusinessHoursPeriod**](BusinessHoursPeriod.md) | The new values of the period | [optional] 
 **Description** | **string** | Description | [optional] 
