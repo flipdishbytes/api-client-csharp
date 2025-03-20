@@ -562,7 +562,6 @@ Class | Method | HTTP request | Description
 *StripeCustomConnectApi* | [**StripeCustomConnectRefresh**](docs/StripeCustomConnectApi.md#stripecustomconnectrefresh) | **GET** /api/v1.0/{appId}/customconnect/refresh-link | 
 *StripeCustomConnectApi* | [**UpdateBankAccountDetails**](docs/StripeCustomConnectApi.md#updatebankaccountdetails) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details | 
 *StripeCustomConnectApi* | [**UpdatePayoutSchedule**](docs/StripeCustomConnectApi.md#updatepayoutschedule) | **POST** /api/v1.0/{appId}/customconnect/update-payout-schedule/{stripeConnectedAccountId}/{interval} | 
-*StripeCustomConnectAdminApi* | [**InitializeBankAccountConnectedAccount**](docs/StripeCustomConnectAdminApi.md#initializebankaccountconnectedaccount) | **POST** /api/v1.0/customconnect/initialize-bank-account | 
 *StuartApi* | [**StuartCancelJob**](docs/StuartApi.md#stuartcanceljob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | 
 *StuartApi* | [**StuartGetJob**](docs/StuartApi.md#stuartgetjob) | **GET** /api/v1.0/stuart/jobs/{jobId} | 
 *StuartApi* | [**StuartGetStuartSettings**](docs/StuartApi.md#stuartgetstuartsettings) | **GET** /api/v1.0/stuart/settings/{storeId} | 
