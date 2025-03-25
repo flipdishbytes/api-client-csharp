@@ -111,6 +111,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="id">Id of this account.</param>
         /// <param name="storeNames">Store Names that are attached to this account.</param>
+        /// <param name="storeIds">Store Ids that are attached to this account.</param>
         /// <param name="accountState">Status of Account.</param>
         /// <param name="currencyCode">Currency of Account.</param>
         /// <param name="stripeConnectedAccountInfo">Information about the Stripe connected account associated with this bank account (if any).</param>
@@ -121,10 +122,11 @@ namespace Flipdish.Model
         /// <param name="populatedAccountFields">A list of one or more populated account fields (field key-value pairs).  If this list contains at least one item, the Iban, Swift and NationalClearingCode fields will be ignored..</param>
         /// <param name="rejectionReason">Reason for Rejection.</param>
         /// <param name="businessType">Business Type.</param>
-        public BankAccountSummary(int? id = default(int?), List<string> storeNames = default(List<string>), AccountStateEnum? accountState = default(AccountStateEnum?), string currencyCode = default(string), StripeConnectedAccountInfo stripeConnectedAccountInfo = default(StripeConnectedAccountInfo), string accountName = default(string), string iban = default(string), string swift = default(string), string nationalClearingCode = default(string), List<AccountFieldKeyValuePair> populatedAccountFields = default(List<AccountFieldKeyValuePair>), string rejectionReason = default(string), BusinessTypeEnum? businessType = default(BusinessTypeEnum?))
+        public BankAccountSummary(int? id = default(int?), List<string> storeNames = default(List<string>), List<int?> storeIds = default(List<int?>), AccountStateEnum? accountState = default(AccountStateEnum?), string currencyCode = default(string), StripeConnectedAccountInfo stripeConnectedAccountInfo = default(StripeConnectedAccountInfo), string accountName = default(string), string iban = default(string), string swift = default(string), string nationalClearingCode = default(string), List<AccountFieldKeyValuePair> populatedAccountFields = default(List<AccountFieldKeyValuePair>), string rejectionReason = default(string), BusinessTypeEnum? businessType = default(BusinessTypeEnum?))
         {
             this.Id = id;
             this.StoreNames = storeNames;
+            this.StoreIds = storeIds;
             this.AccountState = accountState;
             this.CurrencyCode = currencyCode;
             this.StripeConnectedAccountInfo = stripeConnectedAccountInfo;
@@ -150,6 +152,13 @@ namespace Flipdish.Model
         /// <value>Store Names that are attached to this account</value>
         [DataMember(Name="StoreNames", EmitDefaultValue=false)]
         public List<string> StoreNames { get; set; }
+
+        /// <summary>
+        /// Store Ids that are attached to this account
+        /// </summary>
+        /// <value>Store Ids that are attached to this account</value>
+        [DataMember(Name="StoreIds", EmitDefaultValue=false)]
+        public List<int?> StoreIds { get; set; }
 
 
         /// <summary>
@@ -219,6 +228,7 @@ namespace Flipdish.Model
             sb.Append("class BankAccountSummary {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  StoreNames: ").Append(StoreNames).Append("\n");
+            sb.Append("  StoreIds: ").Append(StoreIds).Append("\n");
             sb.Append("  AccountState: ").Append(AccountState).Append("\n");
             sb.Append("  CurrencyCode: ").Append(CurrencyCode).Append("\n");
             sb.Append("  StripeConnectedAccountInfo: ").Append(StripeConnectedAccountInfo).Append("\n");
@@ -272,6 +282,11 @@ namespace Flipdish.Model
                     this.StoreNames == input.StoreNames ||
                     this.StoreNames != null &&
                     this.StoreNames.SequenceEqual(input.StoreNames)
+                ) && 
+                (
+                    this.StoreIds == input.StoreIds ||
+                    this.StoreIds != null &&
+                    this.StoreIds.SequenceEqual(input.StoreIds)
                 ) && 
                 (
                     this.AccountState == input.AccountState ||
@@ -338,6 +353,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.StoreNames != null)
                     hashCode = hashCode * 59 + this.StoreNames.GetHashCode();
+                if (this.StoreIds != null)
+                    hashCode = hashCode * 59 + this.StoreIds.GetHashCode();
                 if (this.AccountState != null)
                     hashCode = hashCode * 59 + this.AccountState.GetHashCode();
                 if (this.CurrencyCode != null)
