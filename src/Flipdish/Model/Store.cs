@@ -789,7 +789,13 @@ namespace Flipdish.Model
             /// Enum Pos for value: Pos
             /// </summary>
             [EnumMember(Value = "Pos")]
-            Pos = 4
+            Pos = 4,
+            
+            /// <summary>
+            /// Enum None for value: None
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None = 5
         }
 
 
