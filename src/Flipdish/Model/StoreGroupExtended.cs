@@ -732,9 +732,10 @@ namespace Flipdish.Model
         /// <param name="generalRatingCount">Store Group rating count.</param>
         /// <param name="deliveryMenuMessage">Delivery menu message.</param>
         /// <param name="pickupMenuMessage">Pickup menu message.</param>
+        /// <param name="brandIds">List of brand ids (AppIds) that are associated with this store group.</param>
         /// <param name="name">Store Group Name.</param>
         /// <param name="currency">Currency used by the stores in this group.</param>
-        public StoreGroupExtended(int? totalStores = default(int?), List<GroupedCoordinates> groupedCoordinates = default(List<GroupedCoordinates>), List<StoreHeader> storeHeaders = default(List<StoreHeader>), int? storeGroupId = default(int?), double? generalRating = default(double?), int? generalRatingCount = default(int?), string deliveryMenuMessage = default(string), string pickupMenuMessage = default(string), string name = default(string), CurrencyEnum? currency = default(CurrencyEnum?))
+        public StoreGroupExtended(int? totalStores = default(int?), List<GroupedCoordinates> groupedCoordinates = default(List<GroupedCoordinates>), List<StoreHeader> storeHeaders = default(List<StoreHeader>), int? storeGroupId = default(int?), double? generalRating = default(double?), int? generalRatingCount = default(int?), string deliveryMenuMessage = default(string), string pickupMenuMessage = default(string), List<string> brandIds = default(List<string>), string name = default(string), CurrencyEnum? currency = default(CurrencyEnum?))
         {
             this.TotalStores = totalStores;
             this.GroupedCoordinates = groupedCoordinates;
@@ -744,6 +745,7 @@ namespace Flipdish.Model
             this.GeneralRatingCount = generalRatingCount;
             this.DeliveryMenuMessage = deliveryMenuMessage;
             this.PickupMenuMessage = pickupMenuMessage;
+            this.BrandIds = brandIds;
             this.Name = name;
             this.Currency = currency;
         }
@@ -805,6 +807,13 @@ namespace Flipdish.Model
         public string PickupMenuMessage { get; set; }
 
         /// <summary>
+        /// List of brand ids (AppIds) that are associated with this store group
+        /// </summary>
+        /// <value>List of brand ids (AppIds) that are associated with this store group</value>
+        [DataMember(Name="BrandIds", EmitDefaultValue=false)]
+        public List<string> BrandIds { get; set; }
+
+        /// <summary>
         /// Store Group Name
         /// </summary>
         /// <value>Store Group Name</value>
@@ -828,6 +837,7 @@ namespace Flipdish.Model
             sb.Append("  GeneralRatingCount: ").Append(GeneralRatingCount).Append("\n");
             sb.Append("  DeliveryMenuMessage: ").Append(DeliveryMenuMessage).Append("\n");
             sb.Append("  PickupMenuMessage: ").Append(PickupMenuMessage).Append("\n");
+            sb.Append("  BrandIds: ").Append(BrandIds).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("}\n");
@@ -905,6 +915,11 @@ namespace Flipdish.Model
                     this.PickupMenuMessage.Equals(input.PickupMenuMessage))
                 ) && 
                 (
+                    this.BrandIds == input.BrandIds ||
+                    this.BrandIds != null &&
+                    this.BrandIds.SequenceEqual(input.BrandIds)
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -941,6 +956,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.DeliveryMenuMessage.GetHashCode();
                 if (this.PickupMenuMessage != null)
                     hashCode = hashCode * 59 + this.PickupMenuMessage.GetHashCode();
+                if (this.BrandIds != null)
+                    hashCode = hashCode * 59 + this.BrandIds.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Currency != null)
