@@ -1584,7 +1584,7 @@ Name | Type | Description  | Notes
 
 <a name="getstoresbyappid"></a>
 # **GetStoresByAppId**
-> RestApiPaginationResultStore GetStoresByAppId (string appId, string searchQuery = null, string salesChannelType = null, int? page = null, int? limit = null)
+> RestApiPaginationResultStore GetStoresByAppId (string appId, string searchQuery = null, string salesChannelType = null, bool? excludeUnpublished = null, int? page = null, int? limit = null)
 
 
 
@@ -1609,12 +1609,13 @@ namespace Example
             var appId = appId_example;  // string | 
             var searchQuery = searchQuery_example;  // string |  (optional) 
             var salesChannelType = salesChannelType_example;  // string |  (optional) 
+            var excludeUnpublished = true;  // bool? |  (optional) 
             var page = 56;  // int? |  (optional) 
             var limit = 56;  // int? |  (optional) 
 
             try
             {
-                RestApiPaginationResultStore result = apiInstance.GetStoresByAppId(appId, searchQuery, salesChannelType, page, limit);
+                RestApiPaginationResultStore result = apiInstance.GetStoresByAppId(appId, searchQuery, salesChannelType, excludeUnpublished, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1633,6 +1634,7 @@ Name | Type | Description  | Notes
  **appId** | **string**|  | 
  **searchQuery** | **string**|  | [optional] 
  **salesChannelType** | **string**|  | [optional] 
+ **excludeUnpublished** | **bool?**|  | [optional] 
  **page** | **int?**|  | [optional] 
  **limit** | **int?**|  | [optional] 
 

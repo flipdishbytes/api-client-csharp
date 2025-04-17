@@ -612,10 +612,11 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="searchQuery"> (optional)</param>
         /// <param name="salesChannelType"> (optional)</param>
+        /// <param name="excludeUnpublished"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultStore</returns>
-        RestApiPaginationResultStore GetStoresByAppId (string appId, string searchQuery = null, string salesChannelType = null, int? page = null, int? limit = null);
+        RestApiPaginationResultStore GetStoresByAppId (string appId, string searchQuery = null, string salesChannelType = null, bool? excludeUnpublished = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// 
@@ -627,10 +628,11 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="searchQuery"> (optional)</param>
         /// <param name="salesChannelType"> (optional)</param>
+        /// <param name="excludeUnpublished"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultStore</returns>
-        ApiResponse<RestApiPaginationResultStore> GetStoresByAppIdWithHttpInfo (string appId, string searchQuery = null, string salesChannelType = null, int? page = null, int? limit = null);
+        ApiResponse<RestApiPaginationResultStore> GetStoresByAppIdWithHttpInfo (string appId, string searchQuery = null, string salesChannelType = null, bool? excludeUnpublished = null, int? page = null, int? limit = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1553,10 +1555,11 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="searchQuery"> (optional)</param>
         /// <param name="salesChannelType"> (optional)</param>
+        /// <param name="excludeUnpublished"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultStore</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultStore> GetStoresByAppIdAsync (string appId, string searchQuery = null, string salesChannelType = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<RestApiPaginationResultStore> GetStoresByAppIdAsync (string appId, string searchQuery = null, string salesChannelType = null, bool? excludeUnpublished = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// 
@@ -1568,10 +1571,11 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="searchQuery"> (optional)</param>
         /// <param name="salesChannelType"> (optional)</param>
+        /// <param name="excludeUnpublished"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStore)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStore>> GetStoresByAppIdAsyncWithHttpInfo (string appId, string searchQuery = null, string salesChannelType = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStore>> GetStoresByAppIdAsyncWithHttpInfo (string appId, string searchQuery = null, string salesChannelType = null, bool? excludeUnpublished = null, int? page = null, int? limit = null);
         /// <summary>
         /// 
         /// </summary>
@@ -6057,12 +6061,13 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="searchQuery"> (optional)</param>
         /// <param name="salesChannelType"> (optional)</param>
+        /// <param name="excludeUnpublished"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultStore</returns>
-        public RestApiPaginationResultStore GetStoresByAppId (string appId, string searchQuery = null, string salesChannelType = null, int? page = null, int? limit = null)
+        public RestApiPaginationResultStore GetStoresByAppId (string appId, string searchQuery = null, string salesChannelType = null, bool? excludeUnpublished = null, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultStore> localVarResponse = GetStoresByAppIdWithHttpInfo(appId, searchQuery, salesChannelType, page, limit);
+             ApiResponse<RestApiPaginationResultStore> localVarResponse = GetStoresByAppIdWithHttpInfo(appId, searchQuery, salesChannelType, excludeUnpublished, page, limit);
              return localVarResponse.Data;
         }
 
@@ -6073,10 +6078,11 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="searchQuery"> (optional)</param>
         /// <param name="salesChannelType"> (optional)</param>
+        /// <param name="excludeUnpublished"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultStore</returns>
-        public ApiResponse< RestApiPaginationResultStore > GetStoresByAppIdWithHttpInfo (string appId, string searchQuery = null, string salesChannelType = null, int? page = null, int? limit = null)
+        public ApiResponse< RestApiPaginationResultStore > GetStoresByAppIdWithHttpInfo (string appId, string searchQuery = null, string salesChannelType = null, bool? excludeUnpublished = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -6109,6 +6115,7 @@ namespace Flipdish.Api
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (searchQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "searchQuery", searchQuery)); // query parameter
             if (salesChannelType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "salesChannelType", salesChannelType)); // query parameter
+            if (excludeUnpublished != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "excludeUnpublished", excludeUnpublished)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
@@ -6144,12 +6151,13 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="searchQuery"> (optional)</param>
         /// <param name="salesChannelType"> (optional)</param>
+        /// <param name="excludeUnpublished"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultStore</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultStore> GetStoresByAppIdAsync (string appId, string searchQuery = null, string salesChannelType = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<RestApiPaginationResultStore> GetStoresByAppIdAsync (string appId, string searchQuery = null, string salesChannelType = null, bool? excludeUnpublished = null, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultStore> localVarResponse = await GetStoresByAppIdAsyncWithHttpInfo(appId, searchQuery, salesChannelType, page, limit);
+             ApiResponse<RestApiPaginationResultStore> localVarResponse = await GetStoresByAppIdAsyncWithHttpInfo(appId, searchQuery, salesChannelType, excludeUnpublished, page, limit);
              return localVarResponse.Data;
 
         }
@@ -6161,10 +6169,11 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="searchQuery"> (optional)</param>
         /// <param name="salesChannelType"> (optional)</param>
+        /// <param name="excludeUnpublished"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultStore)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStore>> GetStoresByAppIdAsyncWithHttpInfo (string appId, string searchQuery = null, string salesChannelType = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultStore>> GetStoresByAppIdAsyncWithHttpInfo (string appId, string searchQuery = null, string salesChannelType = null, bool? excludeUnpublished = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -6197,6 +6206,7 @@ namespace Flipdish.Api
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (searchQuery != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "searchQuery", searchQuery)); // query parameter
             if (salesChannelType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "salesChannelType", salesChannelType)); // query parameter
+            if (excludeUnpublished != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "excludeUnpublished", excludeUnpublished)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
