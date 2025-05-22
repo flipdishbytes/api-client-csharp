@@ -1152,7 +1152,205 @@ namespace Flipdish.Model
             /// Enum ViewInvoices for value: ViewInvoices
             /// </summary>
             [EnumMember(Value = "ViewInvoices")]
-            ViewInvoices = 171
+            ViewInvoices = 171,
+            
+            /// <summary>
+            /// Enum EditAccountsBills for value: EditAccountsBills
+            /// </summary>
+            [EnumMember(Value = "EditAccountsBills")]
+            EditAccountsBills = 172,
+            
+            /// <summary>
+            /// Enum ViewAccountsBills for value: ViewAccountsBills
+            /// </summary>
+            [EnumMember(Value = "ViewAccountsBills")]
+            ViewAccountsBills = 173,
+            
+            /// <summary>
+            /// Enum EditAccountsCategories for value: EditAccountsCategories
+            /// </summary>
+            [EnumMember(Value = "EditAccountsCategories")]
+            EditAccountsCategories = 174,
+            
+            /// <summary>
+            /// Enum ViewAccountsCategories for value: ViewAccountsCategories
+            /// </summary>
+            [EnumMember(Value = "ViewAccountsCategories")]
+            ViewAccountsCategories = 175,
+            
+            /// <summary>
+            /// Enum EditAccountsCreditAccounts for value: EditAccountsCreditAccounts
+            /// </summary>
+            [EnumMember(Value = "EditAccountsCreditAccounts")]
+            EditAccountsCreditAccounts = 176,
+            
+            /// <summary>
+            /// Enum ViewAccountsCreditAccounts for value: ViewAccountsCreditAccounts
+            /// </summary>
+            [EnumMember(Value = "ViewAccountsCreditAccounts")]
+            ViewAccountsCreditAccounts = 177,
+            
+            /// <summary>
+            /// Enum EditAccountsCreditBooks for value: EditAccountsCreditBooks
+            /// </summary>
+            [EnumMember(Value = "EditAccountsCreditBooks")]
+            EditAccountsCreditBooks = 178,
+            
+            /// <summary>
+            /// Enum ViewAccountsCreditBooks for value: ViewAccountsCreditBooks
+            /// </summary>
+            [EnumMember(Value = "ViewAccountsCreditBooks")]
+            ViewAccountsCreditBooks = 179,
+            
+            /// <summary>
+            /// Enum EditAccountsExpenses for value: EditAccountsExpenses
+            /// </summary>
+            [EnumMember(Value = "EditAccountsExpenses")]
+            EditAccountsExpenses = 180,
+            
+            /// <summary>
+            /// Enum ViewAccountsExpenses for value: ViewAccountsExpenses
+            /// </summary>
+            [EnumMember(Value = "ViewAccountsExpenses")]
+            ViewAccountsExpenses = 181,
+            
+            /// <summary>
+            /// Enum EditAccountsTransactionAccounts for value: EditAccountsTransactionAccounts
+            /// </summary>
+            [EnumMember(Value = "EditAccountsTransactionAccounts")]
+            EditAccountsTransactionAccounts = 182,
+            
+            /// <summary>
+            /// Enum ViewAccountsTransactionAccounts for value: ViewAccountsTransactionAccounts
+            /// </summary>
+            [EnumMember(Value = "ViewAccountsTransactionAccounts")]
+            ViewAccountsTransactionAccounts = 183,
+            
+            /// <summary>
+            /// Enum EditDocumentExplorer for value: EditDocumentExplorer
+            /// </summary>
+            [EnumMember(Value = "EditDocumentExplorer")]
+            EditDocumentExplorer = 184,
+            
+            /// <summary>
+            /// Enum ViewDocumentExplorer for value: ViewDocumentExplorer
+            /// </summary>
+            [EnumMember(Value = "ViewDocumentExplorer")]
+            ViewDocumentExplorer = 185,
+            
+            /// <summary>
+            /// Enum ViewInventoryReports for value: ViewInventoryReports
+            /// </summary>
+            [EnumMember(Value = "ViewInventoryReports")]
+            ViewInventoryReports = 186,
+            
+            /// <summary>
+            /// Enum EditInventoryPurchaseOrders for value: EditInventoryPurchaseOrders
+            /// </summary>
+            [EnumMember(Value = "EditInventoryPurchaseOrders")]
+            EditInventoryPurchaseOrders = 187,
+            
+            /// <summary>
+            /// Enum ViewInventoryPurchaseOrders for value: ViewInventoryPurchaseOrders
+            /// </summary>
+            [EnumMember(Value = "ViewInventoryPurchaseOrders")]
+            ViewInventoryPurchaseOrders = 188,
+            
+            /// <summary>
+            /// Enum EditInventoryStockItems for value: EditInventoryStockItems
+            /// </summary>
+            [EnumMember(Value = "EditInventoryStockItems")]
+            EditInventoryStockItems = 189,
+            
+            /// <summary>
+            /// Enum ViewInventoryStockItems for value: ViewInventoryStockItems
+            /// </summary>
+            [EnumMember(Value = "ViewInventoryStockItems")]
+            ViewInventoryStockItems = 190,
+            
+            /// <summary>
+            /// Enum EditInventorySupplier for value: EditInventorySupplier
+            /// </summary>
+            [EnumMember(Value = "EditInventorySupplier")]
+            EditInventorySupplier = 191,
+            
+            /// <summary>
+            /// Enum ViewInventorySupplier for value: ViewInventorySupplier
+            /// </summary>
+            [EnumMember(Value = "ViewInventorySupplier")]
+            ViewInventorySupplier = 192,
+            
+            /// <summary>
+            /// Enum EditInventoryTrackingProfiles for value: EditInventoryTrackingProfiles
+            /// </summary>
+            [EnumMember(Value = "EditInventoryTrackingProfiles")]
+            EditInventoryTrackingProfiles = 193,
+            
+            /// <summary>
+            /// Enum ViewInventoryTrackingProfiles for value: ViewInventoryTrackingProfiles
+            /// </summary>
+            [EnumMember(Value = "ViewInventoryTrackingProfiles")]
+            ViewInventoryTrackingProfiles = 194,
+            
+            /// <summary>
+            /// Enum ViewPayrollReports for value: ViewPayrollReports
+            /// </summary>
+            [EnumMember(Value = "ViewPayrollReports")]
+            ViewPayrollReports = 195,
+            
+            /// <summary>
+            /// Enum EditPayrollHoliday for value: EditPayrollHoliday
+            /// </summary>
+            [EnumMember(Value = "EditPayrollHoliday")]
+            EditPayrollHoliday = 196,
+            
+            /// <summary>
+            /// Enum ViewPayrollHoliday for value: ViewPayrollHoliday
+            /// </summary>
+            [EnumMember(Value = "ViewPayrollHoliday")]
+            ViewPayrollHoliday = 197,
+            
+            /// <summary>
+            /// Enum EditPayrollRota for value: EditPayrollRota
+            /// </summary>
+            [EnumMember(Value = "EditPayrollRota")]
+            EditPayrollRota = 198,
+            
+            /// <summary>
+            /// Enum ViewPayrollRota for value: ViewPayrollRota
+            /// </summary>
+            [EnumMember(Value = "ViewPayrollRota")]
+            ViewPayrollRota = 199,
+            
+            /// <summary>
+            /// Enum EditPayrollStaff for value: EditPayrollStaff
+            /// </summary>
+            [EnumMember(Value = "EditPayrollStaff")]
+            EditPayrollStaff = 200,
+            
+            /// <summary>
+            /// Enum ViewPayrollStaff for value: ViewPayrollStaff
+            /// </summary>
+            [EnumMember(Value = "ViewPayrollStaff")]
+            ViewPayrollStaff = 201,
+            
+            /// <summary>
+            /// Enum ViewSalesReports for value: ViewSalesReports
+            /// </summary>
+            [EnumMember(Value = "ViewSalesReports")]
+            ViewSalesReports = 202,
+            
+            /// <summary>
+            /// Enum ViewCostReports for value: ViewCostReports
+            /// </summary>
+            [EnumMember(Value = "ViewCostReports")]
+            ViewCostReports = 203,
+            
+            /// <summary>
+            /// Enum ViewMenuReports for value: ViewMenuReports
+            /// </summary>
+            [EnumMember(Value = "ViewMenuReports")]
+            ViewMenuReports = 204
         }
 
 
