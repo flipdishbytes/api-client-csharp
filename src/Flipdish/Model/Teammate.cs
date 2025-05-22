@@ -88,64 +88,58 @@ namespace Flipdish.Model
             StoreOwner = 3,
             
             /// <summary>
-            /// Enum PropertyOwner for value: PropertyOwner
-            /// </summary>
-            [EnumMember(Value = "PropertyOwner")]
-            PropertyOwner = 4,
-            
-            /// <summary>
             /// Enum ManagedOwner for value: ManagedOwner
             /// </summary>
             [EnumMember(Value = "ManagedOwner")]
-            ManagedOwner = 5,
+            ManagedOwner = 4,
             
             /// <summary>
             /// Enum Integrator for value: Integrator
             /// </summary>
             [EnumMember(Value = "Integrator")]
-            Integrator = 6,
+            Integrator = 5,
             
             /// <summary>
             /// Enum PropertyManager for value: PropertyManager
             /// </summary>
             [EnumMember(Value = "PropertyManager")]
-            PropertyManager = 7,
+            PropertyManager = 6,
             
             /// <summary>
             /// Enum StoreManager for value: StoreManager
             /// </summary>
             [EnumMember(Value = "StoreManager")]
-            StoreManager = 8,
+            StoreManager = 7,
             
             /// <summary>
             /// Enum StoreStaff for value: StoreStaff
             /// </summary>
             [EnumMember(Value = "StoreStaff")]
-            StoreStaff = 9,
+            StoreStaff = 8,
             
             /// <summary>
             /// Enum StoreReadOnlyAccess for value: StoreReadOnlyAccess
             /// </summary>
             [EnumMember(Value = "StoreReadOnlyAccess")]
-            StoreReadOnlyAccess = 10,
+            StoreReadOnlyAccess = 9,
             
             /// <summary>
             /// Enum FinanceManger for value: FinanceManger
             /// </summary>
             [EnumMember(Value = "FinanceManger")]
-            FinanceManger = 11,
+            FinanceManger = 10,
             
             /// <summary>
             /// Enum Onboarding for value: Onboarding
             /// </summary>
             [EnumMember(Value = "Onboarding")]
-            Onboarding = 12,
+            Onboarding = 11,
             
             /// <summary>
             /// Enum Support for value: Support
             /// </summary>
             [EnumMember(Value = "Support")]
-            Support = 13
+            Support = 12
         }
 
         /// <summary>
