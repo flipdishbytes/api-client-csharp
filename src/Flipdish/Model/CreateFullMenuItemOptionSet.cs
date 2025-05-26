@@ -78,7 +78,8 @@ namespace Flipdish.Model
         /// <param name="minSelectCount">Minimum items must be selected.</param>
         /// <param name="maxSelectCount">Maximum number of items can be selected.</param>
         /// <param name="cellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
-        public CreateFullMenuItemOptionSet(int? menuItemOptionSetId = default(int?), List<CreateFullMenuItemOptionSetItem> menuItemOptionSetItems = default(List<CreateFullMenuItemOptionSetItem>), string name = default(string), bool? isMasterOptionSet = default(bool?), int? displayOrder = default(int?), int? minSelectCount = default(int?), int? maxSelectCount = default(int?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?))
+        /// <param name="publicId">Permanent reference to the item..</param>
+        public CreateFullMenuItemOptionSet(int? menuItemOptionSetId = default(int?), List<CreateFullMenuItemOptionSetItem> menuItemOptionSetItems = default(List<CreateFullMenuItemOptionSetItem>), string name = default(string), bool? isMasterOptionSet = default(bool?), int? displayOrder = default(int?), int? minSelectCount = default(int?), int? maxSelectCount = default(int?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), Guid? publicId = default(Guid?))
         {
             this.MenuItemOptionSetId = menuItemOptionSetId;
             this.MenuItemOptionSetItems = menuItemOptionSetItems;
@@ -88,6 +89,7 @@ namespace Flipdish.Model
             this.MinSelectCount = minSelectCount;
             this.MaxSelectCount = maxSelectCount;
             this.CellLayoutType = cellLayoutType;
+            this.PublicId = publicId;
         }
         
         /// <summary>
@@ -141,6 +143,13 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// Permanent reference to the item.
+        /// </summary>
+        /// <value>Permanent reference to the item.</value>
+        [DataMember(Name="PublicId", EmitDefaultValue=false)]
+        public Guid? PublicId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -156,6 +165,7 @@ namespace Flipdish.Model
             sb.Append("  MinSelectCount: ").Append(MinSelectCount).Append("\n");
             sb.Append("  MaxSelectCount: ").Append(MaxSelectCount).Append("\n");
             sb.Append("  CellLayoutType: ").Append(CellLayoutType).Append("\n");
+            sb.Append("  PublicId: ").Append(PublicId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -229,6 +239,11 @@ namespace Flipdish.Model
                     this.CellLayoutType == input.CellLayoutType ||
                     (this.CellLayoutType != null &&
                     this.CellLayoutType.Equals(input.CellLayoutType))
+                ) && 
+                (
+                    this.PublicId == input.PublicId ||
+                    (this.PublicId != null &&
+                    this.PublicId.Equals(input.PublicId))
                 );
         }
 
@@ -257,6 +272,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.MaxSelectCount.GetHashCode();
                 if (this.CellLayoutType != null)
                     hashCode = hashCode * 59 + this.CellLayoutType.GetHashCode();
+                if (this.PublicId != null)
+                    hashCode = hashCode * 59 + this.PublicId.GetHashCode();
                 return hashCode;
             }
         }

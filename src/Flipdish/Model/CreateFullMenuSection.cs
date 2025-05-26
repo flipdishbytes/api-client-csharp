@@ -40,7 +40,8 @@ namespace Flipdish.Model
         /// <param name="isHiddenFromCustomers">Is hidden from customer. Perhaps when the item is out of stock..</param>
         /// <param name="imageUrl">Image url.</param>
         /// <param name="menuSectionId">Menu Section Id.</param>
-        public CreateFullMenuSection(MenuSectionAvailability menuSectionAvailability = default(MenuSectionAvailability), List<CreateFullMenuSectionItem> menuItems = default(List<CreateFullMenuSectionItem>), string name = default(string), string description = default(string), int? displayOrder = default(int?), bool? isAvailable = default(bool?), bool? isHiddenFromCustomers = default(bool?), string imageUrl = default(string), int? menuSectionId = default(int?))
+        /// <param name="publicId">Permanent reference to the item..</param>
+        public CreateFullMenuSection(MenuSectionAvailability menuSectionAvailability = default(MenuSectionAvailability), List<CreateFullMenuSectionItem> menuItems = default(List<CreateFullMenuSectionItem>), string name = default(string), string description = default(string), int? displayOrder = default(int?), bool? isAvailable = default(bool?), bool? isHiddenFromCustomers = default(bool?), string imageUrl = default(string), int? menuSectionId = default(int?), Guid? publicId = default(Guid?))
         {
             this.MenuSectionAvailability = menuSectionAvailability;
             this.MenuItems = menuItems;
@@ -51,6 +52,7 @@ namespace Flipdish.Model
             this.IsHiddenFromCustomers = isHiddenFromCustomers;
             this.ImageUrl = imageUrl;
             this.MenuSectionId = menuSectionId;
+            this.PublicId = publicId;
         }
         
         /// <summary>
@@ -117,6 +119,13 @@ namespace Flipdish.Model
         public int? MenuSectionId { get; set; }
 
         /// <summary>
+        /// Permanent reference to the item.
+        /// </summary>
+        /// <value>Permanent reference to the item.</value>
+        [DataMember(Name="PublicId", EmitDefaultValue=false)]
+        public Guid? PublicId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -133,6 +142,7 @@ namespace Flipdish.Model
             sb.Append("  IsHiddenFromCustomers: ").Append(IsHiddenFromCustomers).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  MenuSectionId: ").Append(MenuSectionId).Append("\n");
+            sb.Append("  PublicId: ").Append(PublicId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -211,6 +221,11 @@ namespace Flipdish.Model
                     this.MenuSectionId == input.MenuSectionId ||
                     (this.MenuSectionId != null &&
                     this.MenuSectionId.Equals(input.MenuSectionId))
+                ) && 
+                (
+                    this.PublicId == input.PublicId ||
+                    (this.PublicId != null &&
+                    this.PublicId.Equals(input.PublicId))
                 );
         }
 
@@ -241,6 +256,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
                 if (this.MenuSectionId != null)
                     hashCode = hashCode * 59 + this.MenuSectionId.GetHashCode();
+                if (this.PublicId != null)
+                    hashCode = hashCode * 59 + this.PublicId.GetHashCode();
                 return hashCode;
             }
         }

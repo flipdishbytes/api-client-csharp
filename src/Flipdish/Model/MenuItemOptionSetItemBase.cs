@@ -77,7 +77,8 @@ namespace Flipdish.Model
         /// <param name="displayOrder">Display order. Displayed in ascending order..</param>
         /// <param name="cellLayoutType">Small | Medium | Large  Affects the layout of the menu..</param>
         /// <param name="imageUrl">Image url.</param>
-        public MenuItemOptionSetItemBase(string name = default(string), double? price = default(double?), double? depositReturnFee = default(double?), bool? isAvailable = default(bool?), int? displayOrder = default(int?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), string imageUrl = default(string))
+        /// <param name="publicId">Permanent reference to the item..</param>
+        public MenuItemOptionSetItemBase(string name = default(string), double? price = default(double?), double? depositReturnFee = default(double?), bool? isAvailable = default(bool?), int? displayOrder = default(int?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), string imageUrl = default(string), Guid? publicId = default(Guid?))
         {
             this.Name = name;
             this.Price = price;
@@ -86,6 +87,7 @@ namespace Flipdish.Model
             this.DisplayOrder = displayOrder;
             this.CellLayoutType = cellLayoutType;
             this.ImageUrl = imageUrl;
+            this.PublicId = publicId;
         }
         
         /// <summary>
@@ -132,6 +134,13 @@ namespace Flipdish.Model
         public string ImageUrl { get; set; }
 
         /// <summary>
+        /// Permanent reference to the item.
+        /// </summary>
+        /// <value>Permanent reference to the item.</value>
+        [DataMember(Name="PublicId", EmitDefaultValue=false)]
+        public Guid? PublicId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -146,6 +155,7 @@ namespace Flipdish.Model
             sb.Append("  DisplayOrder: ").Append(DisplayOrder).Append("\n");
             sb.Append("  CellLayoutType: ").Append(CellLayoutType).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
+            sb.Append("  PublicId: ").Append(PublicId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -214,6 +224,11 @@ namespace Flipdish.Model
                     this.ImageUrl == input.ImageUrl ||
                     (this.ImageUrl != null &&
                     this.ImageUrl.Equals(input.ImageUrl))
+                ) && 
+                (
+                    this.PublicId == input.PublicId ||
+                    (this.PublicId != null &&
+                    this.PublicId.Equals(input.PublicId))
                 );
         }
 
@@ -240,6 +255,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CellLayoutType.GetHashCode();
                 if (this.ImageUrl != null)
                     hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
+                if (this.PublicId != null)
+                    hashCode = hashCode * 59 + this.PublicId.GetHashCode();
                 return hashCode;
             }
         }

@@ -123,7 +123,8 @@ namespace Flipdish.Model
         /// <param name="imageUrl">Image url.</param>
         /// <param name="menuItemId">Menu Item Id.</param>
         /// <param name="excludeFromVoucherDiscounting">If true, the item is excluded from voucher discount calculations.</param>
-        public MenuSectionItemBase(string name = default(string), string description = default(string), SpicinessRatingEnum? spicinessRating = default(SpicinessRatingEnum?), double? price = default(double?), double? depositReturnFee = default(double?), int? displayOrder = default(int?), bool? alcohol = default(bool?), bool? isAvailable = default(bool?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), bool? disableVouchers = default(bool?), string imageName = default(string), string imageUrl = default(string), int? menuItemId = default(int?), bool? excludeFromVoucherDiscounting = default(bool?))
+        /// <param name="publicId">Permanent reference to the item..</param>
+        public MenuSectionItemBase(string name = default(string), string description = default(string), SpicinessRatingEnum? spicinessRating = default(SpicinessRatingEnum?), double? price = default(double?), double? depositReturnFee = default(double?), int? displayOrder = default(int?), bool? alcohol = default(bool?), bool? isAvailable = default(bool?), CellLayoutTypeEnum? cellLayoutType = default(CellLayoutTypeEnum?), bool? disableVouchers = default(bool?), string imageName = default(string), string imageUrl = default(string), int? menuItemId = default(int?), bool? excludeFromVoucherDiscounting = default(bool?), Guid? publicId = default(Guid?))
         {
             this.Name = name;
             this.Description = description;
@@ -139,6 +140,7 @@ namespace Flipdish.Model
             this.ImageUrl = imageUrl;
             this.MenuItemId = menuItemId;
             this.ExcludeFromVoucherDiscounting = excludeFromVoucherDiscounting;
+            this.PublicId = publicId;
         }
         
         /// <summary>
@@ -228,6 +230,13 @@ namespace Flipdish.Model
         public bool? ExcludeFromVoucherDiscounting { get; set; }
 
         /// <summary>
+        /// Permanent reference to the item.
+        /// </summary>
+        /// <value>Permanent reference to the item.</value>
+        [DataMember(Name="PublicId", EmitDefaultValue=false)]
+        public Guid? PublicId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -249,6 +258,7 @@ namespace Flipdish.Model
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  MenuItemId: ").Append(MenuItemId).Append("\n");
             sb.Append("  ExcludeFromVoucherDiscounting: ").Append(ExcludeFromVoucherDiscounting).Append("\n");
+            sb.Append("  PublicId: ").Append(PublicId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -352,6 +362,11 @@ namespace Flipdish.Model
                     this.ExcludeFromVoucherDiscounting == input.ExcludeFromVoucherDiscounting ||
                     (this.ExcludeFromVoucherDiscounting != null &&
                     this.ExcludeFromVoucherDiscounting.Equals(input.ExcludeFromVoucherDiscounting))
+                ) && 
+                (
+                    this.PublicId == input.PublicId ||
+                    (this.PublicId != null &&
+                    this.PublicId.Equals(input.PublicId))
                 );
         }
 
@@ -392,6 +407,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.MenuItemId.GetHashCode();
                 if (this.ExcludeFromVoucherDiscounting != null)
                     hashCode = hashCode * 59 + this.ExcludeFromVoucherDiscounting.GetHashCode();
+                if (this.PublicId != null)
+                    hashCode = hashCode * 59 + this.PublicId.GetHashCode();
                 return hashCode;
             }
         }

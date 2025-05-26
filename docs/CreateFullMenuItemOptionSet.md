@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **MinSelectCount** | **int?** | Minimum items must be selected | [optional] 
 **MaxSelectCount** | **int?** | Maximum number of items can be selected | [optional] 
 **CellLayoutType** | **string** | Small | Medium | Large  Affects the layout of the menu. | [optional] 
+**PublicId** | **Guid?** | Permanent reference to the item. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
