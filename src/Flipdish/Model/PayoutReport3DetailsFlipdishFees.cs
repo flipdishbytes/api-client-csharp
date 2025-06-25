@@ -50,6 +50,7 @@ namespace Flipdish.Model
         /// <param name="otherIntegrationTips">otherIntegrationTips.</param>
         /// <param name="refundedFeesOnRefundedSales">refundedFeesOnRefundedSales.</param>
         /// <param name="vat">vat.</param>
+        /// <param name="refundedFeesOnPosSales">refundedFeesOnPosSales.</param>
         /// <param name="total">total.</param>
         /// <param name="thirdPartyIntegrationFeesAndTips">thirdPartyIntegrationFeesAndTips.</param>
         /// <param name="webAndAppCardOnXOrders">webAndAppCardOnXOrders.</param>
@@ -59,7 +60,7 @@ namespace Flipdish.Model
         /// <param name="qropCardOnXOrders">qropCardOnXOrders.</param>
         /// <param name="qropCashOnXOrders">qropCashOnXOrders.</param>
         /// <param name="posCardOnXOrders">posCardOnXOrders.</param>
-        public PayoutReport3DetailsFlipdishFees(double? webAndAppCash = default(double?), double? webAndAppCashRevenueIncludingTips = default(double?), double? webAndAppCard = default(double?), double? webAndAppCardRevenueIncludingTips = default(double?), double? kioskCash = default(double?), double? kioskCashRevenue = default(double?), double? kioskCard = default(double?), double? kioskCardRevenue = default(double?), double? qropCash = default(double?), double? qropCashRevenue = default(double?), double? qropCard = default(double?), double? qropCardRevenue = default(double?), double? posCard = default(double?), double? posCardRevenue = default(double?), double? posCardOnFlipdishOrders = default(double?), double? otherIntegrationFees = default(double?), double? otherIntegrationTips = default(double?), double? refundedFeesOnRefundedSales = default(double?), double? vat = default(double?), double? total = default(double?), double? thirdPartyIntegrationFeesAndTips = default(double?), int? webAndAppCardOnXOrders = default(int?), int? webAndAppCashOnXOrders = default(int?), int? kioskCardOnXOrders = default(int?), int? kioskCashOnXOrders = default(int?), int? qropCardOnXOrders = default(int?), int? qropCashOnXOrders = default(int?), int? posCardOnXOrders = default(int?))
+        public PayoutReport3DetailsFlipdishFees(double? webAndAppCash = default(double?), double? webAndAppCashRevenueIncludingTips = default(double?), double? webAndAppCard = default(double?), double? webAndAppCardRevenueIncludingTips = default(double?), double? kioskCash = default(double?), double? kioskCashRevenue = default(double?), double? kioskCard = default(double?), double? kioskCardRevenue = default(double?), double? qropCash = default(double?), double? qropCashRevenue = default(double?), double? qropCard = default(double?), double? qropCardRevenue = default(double?), double? posCard = default(double?), double? posCardRevenue = default(double?), double? posCardOnFlipdishOrders = default(double?), double? otherIntegrationFees = default(double?), double? otherIntegrationTips = default(double?), double? refundedFeesOnRefundedSales = default(double?), double? vat = default(double?), double? refundedFeesOnPosSales = default(double?), double? total = default(double?), double? thirdPartyIntegrationFeesAndTips = default(double?), int? webAndAppCardOnXOrders = default(int?), int? webAndAppCashOnXOrders = default(int?), int? kioskCardOnXOrders = default(int?), int? kioskCashOnXOrders = default(int?), int? qropCardOnXOrders = default(int?), int? qropCashOnXOrders = default(int?), int? posCardOnXOrders = default(int?))
         {
             this.WebAndAppCash = webAndAppCash;
             this.WebAndAppCashRevenueIncludingTips = webAndAppCashRevenueIncludingTips;
@@ -80,6 +81,7 @@ namespace Flipdish.Model
             this.OtherIntegrationTips = otherIntegrationTips;
             this.RefundedFeesOnRefundedSales = refundedFeesOnRefundedSales;
             this.Vat = vat;
+            this.RefundedFeesOnPosSales = refundedFeesOnPosSales;
             this.Total = total;
             this.ThirdPartyIntegrationFeesAndTips = thirdPartyIntegrationFeesAndTips;
             this.WebAndAppCardOnXOrders = webAndAppCardOnXOrders;
@@ -206,6 +208,12 @@ namespace Flipdish.Model
         public double? Vat { get; set; }
 
         /// <summary>
+        /// Gets or Sets RefundedFeesOnPosSales
+        /// </summary>
+        [DataMember(Name="RefundedFeesOnPosSales", EmitDefaultValue=false)]
+        public double? RefundedFeesOnPosSales { get; set; }
+
+        /// <summary>
         /// Gets or Sets Total
         /// </summary>
         [DataMember(Name="Total", EmitDefaultValue=false)]
@@ -286,6 +294,7 @@ namespace Flipdish.Model
             sb.Append("  OtherIntegrationTips: ").Append(OtherIntegrationTips).Append("\n");
             sb.Append("  RefundedFeesOnRefundedSales: ").Append(RefundedFeesOnRefundedSales).Append("\n");
             sb.Append("  Vat: ").Append(Vat).Append("\n");
+            sb.Append("  RefundedFeesOnPosSales: ").Append(RefundedFeesOnPosSales).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("  ThirdPartyIntegrationFeesAndTips: ").Append(ThirdPartyIntegrationFeesAndTips).Append("\n");
             sb.Append("  WebAndAppCardOnXOrders: ").Append(WebAndAppCardOnXOrders).Append("\n");
@@ -425,6 +434,11 @@ namespace Flipdish.Model
                     this.Vat.Equals(input.Vat))
                 ) && 
                 (
+                    this.RefundedFeesOnPosSales == input.RefundedFeesOnPosSales ||
+                    (this.RefundedFeesOnPosSales != null &&
+                    this.RefundedFeesOnPosSales.Equals(input.RefundedFeesOnPosSales))
+                ) && 
+                (
                     this.Total == input.Total ||
                     (this.Total != null &&
                     this.Total.Equals(input.Total))
@@ -518,6 +532,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.RefundedFeesOnRefundedSales.GetHashCode();
                 if (this.Vat != null)
                     hashCode = hashCode * 59 + this.Vat.GetHashCode();
+                if (this.RefundedFeesOnPosSales != null)
+                    hashCode = hashCode * 59 + this.RefundedFeesOnPosSales.GetHashCode();
                 if (this.Total != null)
                     hashCode = hashCode * 59 + this.Total.GetHashCode();
                 if (this.ThirdPartyIntegrationFeesAndTips != null)
