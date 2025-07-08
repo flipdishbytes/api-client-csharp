@@ -158,6 +158,7 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="Teammate" /> class.
         /// </summary>
         /// <param name="teammateId">Unique indentifier.</param>
+        /// <param name="userId">User ID of the teammate.</param>
         /// <param name="name">Name.</param>
         /// <param name="lastActivity">Last activity.</param>
         /// <param name="appId">Access level is for this App.</param>
@@ -167,9 +168,10 @@ namespace Flipdish.Model
         /// <param name="hasAccessToAllStores">The user has access to all stores for the app (including new stores that added later).</param>
         /// <param name="storeIds">Store IDs the user has access to (if HasAccessToAllStores is false).</param>
         /// <param name="propertyIds">Property Ids the user has access to (if HasAccessToAllStores is false).</param>
-        public Teammate(string teammateId = default(string), string name = default(string), DateTime? lastActivity = default(DateTime?), string appId = default(string), InvitationStatusEnum? invitationStatus = default(InvitationStatusEnum?), string email = default(string), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), bool? hasAccessToAllStores = default(bool?), List<int?> storeIds = default(List<int?>), List<string> propertyIds = default(List<string>))
+        public Teammate(string teammateId = default(string), int? userId = default(int?), string name = default(string), DateTime? lastActivity = default(DateTime?), string appId = default(string), InvitationStatusEnum? invitationStatus = default(InvitationStatusEnum?), string email = default(string), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), bool? hasAccessToAllStores = default(bool?), List<int?> storeIds = default(List<int?>), List<string> propertyIds = default(List<string>))
         {
             this.TeammateId = teammateId;
+            this.UserId = userId;
             this.Name = name;
             this.LastActivity = lastActivity;
             this.AppId = appId;
@@ -187,6 +189,13 @@ namespace Flipdish.Model
         /// <value>Unique indentifier</value>
         [DataMember(Name="TeammateId", EmitDefaultValue=false)]
         public string TeammateId { get; set; }
+
+        /// <summary>
+        /// User ID of the teammate
+        /// </summary>
+        /// <value>User ID of the teammate</value>
+        [DataMember(Name="UserId", EmitDefaultValue=false)]
+        public int? UserId { get; set; }
 
         /// <summary>
         /// Name
@@ -248,6 +257,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class Teammate {\n");
             sb.Append("  TeammateId: ").Append(TeammateId).Append("\n");
+            sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  LastActivity: ").Append(LastActivity).Append("\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
@@ -295,6 +305,11 @@ namespace Flipdish.Model
                     this.TeammateId == input.TeammateId ||
                     (this.TeammateId != null &&
                     this.TeammateId.Equals(input.TeammateId))
+                ) && 
+                (
+                    this.UserId == input.UserId ||
+                    (this.UserId != null &&
+                    this.UserId.Equals(input.UserId))
                 ) && 
                 (
                     this.Name == input.Name ||
@@ -354,6 +369,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.TeammateId != null)
                     hashCode = hashCode * 59 + this.TeammateId.GetHashCode();
+                if (this.UserId != null)
+                    hashCode = hashCode * 59 + this.UserId.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.LastActivity != null)
