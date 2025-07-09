@@ -732,7 +732,9 @@ namespace Flipdish.Model
         /// <param name="coordinates">Latitude and longitude of the store.</param>
         /// <param name="storeTimezone">Timezone of store.</param>
         /// <param name="storeGroupId">Store group id of store.</param>
-        public StoreSummary(int? id = default(int?), string name = default(string), int? menuId = default(int?), Dictionary<string, string> metadata = default(Dictionary<string, string>), CurrencyEnum? currency = default(CurrencyEnum?), Coordinates coordinates = default(Coordinates), string storeTimezone = default(string), int? storeGroupId = default(int?))
+        /// <param name="taxId">VAT number or generic Tax ID of the store.</param>
+        /// <param name="prettyAddress">Address of the store.</param>
+        public StoreSummary(int? id = default(int?), string name = default(string), int? menuId = default(int?), Dictionary<string, string> metadata = default(Dictionary<string, string>), CurrencyEnum? currency = default(CurrencyEnum?), Coordinates coordinates = default(Coordinates), string storeTimezone = default(string), int? storeGroupId = default(int?), string taxId = default(string), string prettyAddress = default(string))
         {
             this.Id = id;
             this.Name = name;
@@ -742,6 +744,8 @@ namespace Flipdish.Model
             this.Coordinates = coordinates;
             this.StoreTimezone = storeTimezone;
             this.StoreGroupId = storeGroupId;
+            this.TaxId = taxId;
+            this.PrettyAddress = prettyAddress;
         }
         
         /// <summary>
@@ -795,6 +799,20 @@ namespace Flipdish.Model
         public int? StoreGroupId { get; set; }
 
         /// <summary>
+        /// VAT number or generic Tax ID of the store
+        /// </summary>
+        /// <value>VAT number or generic Tax ID of the store</value>
+        [DataMember(Name="TaxId", EmitDefaultValue=false)]
+        public string TaxId { get; set; }
+
+        /// <summary>
+        /// Address of the store
+        /// </summary>
+        /// <value>Address of the store</value>
+        [DataMember(Name="PrettyAddress", EmitDefaultValue=false)]
+        public string PrettyAddress { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -810,6 +828,8 @@ namespace Flipdish.Model
             sb.Append("  Coordinates: ").Append(Coordinates).Append("\n");
             sb.Append("  StoreTimezone: ").Append(StoreTimezone).Append("\n");
             sb.Append("  StoreGroupId: ").Append(StoreGroupId).Append("\n");
+            sb.Append("  TaxId: ").Append(TaxId).Append("\n");
+            sb.Append("  PrettyAddress: ").Append(PrettyAddress).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -883,6 +903,16 @@ namespace Flipdish.Model
                     this.StoreGroupId == input.StoreGroupId ||
                     (this.StoreGroupId != null &&
                     this.StoreGroupId.Equals(input.StoreGroupId))
+                ) && 
+                (
+                    this.TaxId == input.TaxId ||
+                    (this.TaxId != null &&
+                    this.TaxId.Equals(input.TaxId))
+                ) && 
+                (
+                    this.PrettyAddress == input.PrettyAddress ||
+                    (this.PrettyAddress != null &&
+                    this.PrettyAddress.Equals(input.PrettyAddress))
                 );
         }
 
@@ -911,6 +941,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StoreTimezone.GetHashCode();
                 if (this.StoreGroupId != null)
                     hashCode = hashCode * 59 + this.StoreGroupId.GetHashCode();
+                if (this.TaxId != null)
+                    hashCode = hashCode * 59 + this.TaxId.GetHashCode();
+                if (this.PrettyAddress != null)
+                    hashCode = hashCode * 59 + this.PrettyAddress.GetHashCode();
                 return hashCode;
             }
         }

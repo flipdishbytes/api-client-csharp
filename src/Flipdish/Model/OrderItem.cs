@@ -39,12 +39,13 @@ namespace Flipdish.Model
         /// <param name="name">Name.</param>
         /// <param name="description">Description.</param>
         /// <param name="price">Price.</param>
+        /// <param name="taxAmount">Tax currency amount.</param>
         /// <param name="priceIncludingOptionSetItems">Price including option set items.</param>
         /// <param name="menuItemId">Menu item identifier.</param>
         /// <param name="menuItemDisplayOrder">Menu item display order.</param>
         /// <param name="isAvailable">Is available.</param>
         /// <param name="depositReturnFee">Deposit return fee.</param>
-        public OrderItem(List<OrderItemOption> orderItemOptions = default(List<OrderItemOption>), Dictionary<string, string> metadata = default(Dictionary<string, string>), Guid? menuItemPublicId = default(Guid?), string menuSectionName = default(string), int? menuSectionDisplayOrder = default(int?), string name = default(string), string description = default(string), double? price = default(double?), double? priceIncludingOptionSetItems = default(double?), int? menuItemId = default(int?), int? menuItemDisplayOrder = default(int?), bool? isAvailable = default(bool?), double? depositReturnFee = default(double?))
+        public OrderItem(List<OrderItemOption> orderItemOptions = default(List<OrderItemOption>), Dictionary<string, string> metadata = default(Dictionary<string, string>), Guid? menuItemPublicId = default(Guid?), string menuSectionName = default(string), int? menuSectionDisplayOrder = default(int?), string name = default(string), string description = default(string), double? price = default(double?), double? taxAmount = default(double?), double? priceIncludingOptionSetItems = default(double?), int? menuItemId = default(int?), int? menuItemDisplayOrder = default(int?), bool? isAvailable = default(bool?), double? depositReturnFee = default(double?))
         {
             this.OrderItemOptions = orderItemOptions;
             this.Metadata = metadata;
@@ -54,6 +55,7 @@ namespace Flipdish.Model
             this.Name = name;
             this.Description = description;
             this.Price = price;
+            this.TaxAmount = taxAmount;
             this.PriceIncludingOptionSetItems = priceIncludingOptionSetItems;
             this.MenuItemId = menuItemId;
             this.MenuItemDisplayOrder = menuItemDisplayOrder;
@@ -118,6 +120,13 @@ namespace Flipdish.Model
         public double? Price { get; set; }
 
         /// <summary>
+        /// Tax currency amount
+        /// </summary>
+        /// <value>Tax currency amount</value>
+        [DataMember(Name="TaxAmount", EmitDefaultValue=false)]
+        public double? TaxAmount { get; set; }
+
+        /// <summary>
         /// Price including option set items
         /// </summary>
         /// <value>Price including option set items</value>
@@ -168,6 +177,7 @@ namespace Flipdish.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
+            sb.Append("  TaxAmount: ").Append(TaxAmount).Append("\n");
             sb.Append("  PriceIncludingOptionSetItems: ").Append(PriceIncludingOptionSetItems).Append("\n");
             sb.Append("  MenuItemId: ").Append(MenuItemId).Append("\n");
             sb.Append("  MenuItemDisplayOrder: ").Append(MenuItemDisplayOrder).Append("\n");
@@ -248,6 +258,11 @@ namespace Flipdish.Model
                     this.Price.Equals(input.Price))
                 ) && 
                 (
+                    this.TaxAmount == input.TaxAmount ||
+                    (this.TaxAmount != null &&
+                    this.TaxAmount.Equals(input.TaxAmount))
+                ) && 
+                (
                     this.PriceIncludingOptionSetItems == input.PriceIncludingOptionSetItems ||
                     (this.PriceIncludingOptionSetItems != null &&
                     this.PriceIncludingOptionSetItems.Equals(input.PriceIncludingOptionSetItems))
@@ -299,6 +314,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.Price != null)
                     hashCode = hashCode * 59 + this.Price.GetHashCode();
+                if (this.TaxAmount != null)
+                    hashCode = hashCode * 59 + this.TaxAmount.GetHashCode();
                 if (this.PriceIncludingOptionSetItems != null)
                     hashCode = hashCode * 59 + this.PriceIncludingOptionSetItems.GetHashCode();
                 if (this.MenuItemId != null)

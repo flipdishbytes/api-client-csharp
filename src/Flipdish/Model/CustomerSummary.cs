@@ -36,13 +36,15 @@ namespace Flipdish.Model
         /// <param name="emailAddress">Customer email address.</param>
         /// <param name="phoneNumberLocalFormat">Customer local phone number.</param>
         /// <param name="phoneNumber">Customer phone number.</param>
-        public CustomerSummary(int? id = default(int?), string name = default(string), string emailAddress = default(string), string phoneNumberLocalFormat = default(string), string phoneNumber = default(string))
+        /// <param name="languagePreference">Preferred language of the consumer.</param>
+        public CustomerSummary(int? id = default(int?), string name = default(string), string emailAddress = default(string), string phoneNumberLocalFormat = default(string), string phoneNumber = default(string), string languagePreference = default(string))
         {
             this.Id = id;
             this.Name = name;
             this.EmailAddress = emailAddress;
             this.PhoneNumberLocalFormat = phoneNumberLocalFormat;
             this.PhoneNumber = phoneNumber;
+            this.LanguagePreference = languagePreference;
         }
         
         /// <summary>
@@ -81,6 +83,13 @@ namespace Flipdish.Model
         public string PhoneNumber { get; set; }
 
         /// <summary>
+        /// Preferred language of the consumer
+        /// </summary>
+        /// <value>Preferred language of the consumer</value>
+        [DataMember(Name="LanguagePreference", EmitDefaultValue=false)]
+        public string LanguagePreference { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -93,6 +102,7 @@ namespace Flipdish.Model
             sb.Append("  EmailAddress: ").Append(EmailAddress).Append("\n");
             sb.Append("  PhoneNumberLocalFormat: ").Append(PhoneNumberLocalFormat).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
+            sb.Append("  LanguagePreference: ").Append(LanguagePreference).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -151,6 +161,11 @@ namespace Flipdish.Model
                     this.PhoneNumber == input.PhoneNumber ||
                     (this.PhoneNumber != null &&
                     this.PhoneNumber.Equals(input.PhoneNumber))
+                ) && 
+                (
+                    this.LanguagePreference == input.LanguagePreference ||
+                    (this.LanguagePreference != null &&
+                    this.LanguagePreference.Equals(input.LanguagePreference))
                 );
         }
 
@@ -173,6 +188,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PhoneNumberLocalFormat.GetHashCode();
                 if (this.PhoneNumber != null)
                     hashCode = hashCode * 59 + this.PhoneNumber.GetHashCode();
+                if (this.LanguagePreference != null)
+                    hashCode = hashCode * 59 + this.LanguagePreference.GetHashCode();
                 return hashCode;
             }
         }

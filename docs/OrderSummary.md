@@ -30,7 +30,7 @@ Name | Type | Description | Notes
 **ChannelOrderDisplayId** | **string** | ChannelOrderDisplayId from external channel | [optional] 
 **OrderDropOffLocation** | [**OrderDropOffLocation**](OrderDropOffLocation.md) | DropOffLocation selected for this order | [optional] 
 **OrderBatchInfo** | [**OrderBatchSummary**](OrderBatchSummary.md) | OrderBatch information | [optional] 
-**DeliveryLocation** | [**DeliveryLocation**](DeliveryLocation.md) |  | [optional] 
+**DeliveryLocation** | [**DeliveryLocation**](DeliveryLocation.md) | Delivery location details | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

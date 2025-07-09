@@ -1347,6 +1347,7 @@ Class | Method | HTTP request | Description
  - [Model.SubscriptionStore](docs/SubscriptionStore.md)
  - [Model.SubscriptionSummary](docs/SubscriptionSummary.md)
  - [Model.SupportedCountry](docs/SupportedCountry.md)
+ - [Model.TaxItem](docs/TaxItem.md)
  - [Model.TaxRate](docs/TaxRate.md)
  - [Model.Teammate](docs/Teammate.md)
  - [Model.TeammateBase](docs/TeammateBase.md)

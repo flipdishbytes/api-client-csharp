@@ -1180,7 +1180,7 @@ namespace Flipdish.Model
         /// <param name="channelOrderDisplayId">ChannelOrderDisplayId from external channel.</param>
         /// <param name="orderDropOffLocation">DropOffLocation selected for this order.</param>
         /// <param name="orderBatchInfo">OrderBatch information.</param>
-        /// <param name="deliveryLocation">deliveryLocation.</param>
+        /// <param name="deliveryLocation">Delivery location details.</param>
         public OrderSummary(int? orderId = default(int?), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), TableServiceCatagoryEnum? tableServiceCatagory = default(TableServiceCatagoryEnum?), OrderStateEnum? orderState = default(OrderStateEnum?), DateTime? requestedForTime = default(DateTime?), string storeName = default(string), string storeIanaTimeZone = default(string), string customerName = default(string), string customerPhoneNumber = default(string), double? amount = default(double?), double? refundedAmount = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), CurrencyEnum? currency = default(CurrencyEnum?), AppTypeEnum? appType = default(AppTypeEnum?), string localOrderId = default(string), int? dropOffLocationId = default(int?), string dropOffLocation = default(string), DateTime? acceptedFor = default(DateTime?), Channel channel = default(Channel), bool? inFraudZone = default(bool?), bool? unusualHighValueOrder = default(bool?), string channelOrderId = default(string), string channelOrderDisplayId = default(string), OrderDropOffLocation orderDropOffLocation = default(OrderDropOffLocation), OrderBatchSummary orderBatchInfo = default(OrderBatchSummary), DeliveryLocation deliveryLocation = default(DeliveryLocation))
         {
             this.OrderId = orderId;
@@ -1355,8 +1355,9 @@ namespace Flipdish.Model
         public OrderBatchSummary OrderBatchInfo { get; set; }
 
         /// <summary>
-        /// Gets or Sets DeliveryLocation
+        /// Delivery location details
         /// </summary>
+        /// <value>Delivery location details</value>
         [DataMember(Name="DeliveryLocation", EmitDefaultValue=false)]
         public DeliveryLocation DeliveryLocation { get; set; }
 

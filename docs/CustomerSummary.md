@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **EmailAddress** | **string** | Customer email address | [optional] 
 **PhoneNumberLocalFormat** | **string** | Customer local phone number | [optional] 
 **PhoneNumber** | **string** | Customer phone number | [optional] 
+**LanguagePreference** | **string** | Preferred language of the consumer | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

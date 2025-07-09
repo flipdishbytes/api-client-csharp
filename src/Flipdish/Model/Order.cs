@@ -612,6 +612,7 @@ namespace Flipdish.Model
         /// <param name="orderDropOffLocation">DropOffLocation selected for this order.</param>
         /// <param name="fulfillmentStatus">[BETA - this is a new field in development] Fulfillment status for this order.</param>
         /// <param name="orderBatchInfo">OrderBatch information.</param>
+        /// <param name="taxItems">A collection of tax items on the order..</param>
         /// <param name="createdCampaignVoucherId">The id of the campaign voucher that was created from this order.</param>
         /// <param name="orderId">Order identifier.</param>
         /// <param name="localOrderId">Local order Id. This is used for displaying a \&quot;shorter\&quot; order ID for customers (eg. Kiosk orders).</param>
@@ -643,7 +644,8 @@ namespace Flipdish.Model
         /// <param name="orderTrackingCode">Unique, 6 character long alpha numeric code for tracking..</param>
         /// <param name="deliveryFeeAreaId">Delivery area identifier.</param>
         /// <param name="receiptCode">Code used to view the order&#39;s receipt.</param>
-        public Order(StoreSummary store = default(StoreSummary), CustomerSummary customer = default(CustomerSummary), OrderVoucherSummary voucher = default(OrderVoucherSummary), FeeSummary fees = default(FeeSummary), List<OrderItem> orderItems = default(List<OrderItem>), DeliveryLocation deliveryLocation = default(DeliveryLocation), Coordinates customerLocation = default(Coordinates), MaskedPhoneNumber maskedPhoneNumber = default(MaskedPhoneNumber), int? dropOffLocationId = default(int?), string dropOffLocation = default(string), DateTime? acceptedFor = default(DateTime?), bool? inFraudZone = default(bool?), bool? unusualHighValueOrder = default(bool?), int? rejectedByUserId = default(int?), string channelOrderId = default(string), string channelOrderDisplayId = default(string), Channel channel = default(Channel), OrderDropOffLocation orderDropOffLocation = default(OrderDropOffLocation), OrderFulfillmentStatusBase fulfillmentStatus = default(OrderFulfillmentStatusBase), OrderBatchSummary orderBatchInfo = default(OrderBatchSummary), int? createdCampaignVoucherId = default(int?), int? orderId = default(int?), string localOrderId = default(string), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), TableServiceCatagoryEnum? tableServiceCatagory = default(TableServiceCatagoryEnum?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? orderItemsAmount = default(double?), double? serviceChargeAmount = default(double?), double? serviceChargePercentage = default(double?), double? amount = default(double?), double? processingFee = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), string paymentAccountDescription = default(string), OrderStateEnum? orderState = default(OrderStateEnum?), bool? isPreOrder = default(bool?), DateTime? placedTime = default(DateTime?), DateTime? requestedForTime = default(DateTime?), string chefNote = default(string), AppTypeEnum? appType = default(AppTypeEnum?), int? userRating = default(int?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), RejectionReasonEnum? rejectionReason = default(RejectionReasonEnum?), double? refundedAmount = default(double?), DeliveryTrackingStatusEnum? deliveryTrackingStatus = default(DeliveryTrackingStatusEnum?), int? driverId = default(int?), double? totalTax = default(double?), string orderTrackingCode = default(string), int? deliveryFeeAreaId = default(int?), string receiptCode = default(string))
+        /// <param name="totalDepositReturnFeeAmount">This contains the total deposit return fee amount for the order..</param>
+        public Order(StoreSummary store = default(StoreSummary), CustomerSummary customer = default(CustomerSummary), OrderVoucherSummary voucher = default(OrderVoucherSummary), FeeSummary fees = default(FeeSummary), List<OrderItem> orderItems = default(List<OrderItem>), DeliveryLocation deliveryLocation = default(DeliveryLocation), Coordinates customerLocation = default(Coordinates), MaskedPhoneNumber maskedPhoneNumber = default(MaskedPhoneNumber), int? dropOffLocationId = default(int?), string dropOffLocation = default(string), DateTime? acceptedFor = default(DateTime?), bool? inFraudZone = default(bool?), bool? unusualHighValueOrder = default(bool?), int? rejectedByUserId = default(int?), string channelOrderId = default(string), string channelOrderDisplayId = default(string), Channel channel = default(Channel), OrderDropOffLocation orderDropOffLocation = default(OrderDropOffLocation), OrderFulfillmentStatusBase fulfillmentStatus = default(OrderFulfillmentStatusBase), OrderBatchSummary orderBatchInfo = default(OrderBatchSummary), List<TaxItem> taxItems = default(List<TaxItem>), int? createdCampaignVoucherId = default(int?), int? orderId = default(int?), string localOrderId = default(string), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PickupLocationTypeEnum? pickupLocationType = default(PickupLocationTypeEnum?), TableServiceCatagoryEnum? tableServiceCatagory = default(TableServiceCatagoryEnum?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? orderItemsAmount = default(double?), double? serviceChargeAmount = default(double?), double? serviceChargePercentage = default(double?), double? amount = default(double?), double? processingFee = default(double?), PaymentAccountTypeEnum? paymentAccountType = default(PaymentAccountTypeEnum?), string paymentAccountDescription = default(string), OrderStateEnum? orderState = default(OrderStateEnum?), bool? isPreOrder = default(bool?), DateTime? placedTime = default(DateTime?), DateTime? requestedForTime = default(DateTime?), string chefNote = default(string), AppTypeEnum? appType = default(AppTypeEnum?), int? userRating = default(int?), PaymentStatusEnum? paymentStatus = default(PaymentStatusEnum?), RejectionReasonEnum? rejectionReason = default(RejectionReasonEnum?), double? refundedAmount = default(double?), DeliveryTrackingStatusEnum? deliveryTrackingStatus = default(DeliveryTrackingStatusEnum?), int? driverId = default(int?), double? totalTax = default(double?), string orderTrackingCode = default(string), int? deliveryFeeAreaId = default(int?), string receiptCode = default(string), double? totalDepositReturnFeeAmount = default(double?))
         {
             this.Store = store;
             this.Customer = customer;
@@ -665,6 +667,7 @@ namespace Flipdish.Model
             this.OrderDropOffLocation = orderDropOffLocation;
             this.FulfillmentStatus = fulfillmentStatus;
             this.OrderBatchInfo = orderBatchInfo;
+            this.TaxItems = taxItems;
             this.CreatedCampaignVoucherId = createdCampaignVoucherId;
             this.OrderId = orderId;
             this.LocalOrderId = localOrderId;
@@ -696,6 +699,7 @@ namespace Flipdish.Model
             this.OrderTrackingCode = orderTrackingCode;
             this.DeliveryFeeAreaId = deliveryFeeAreaId;
             this.ReceiptCode = receiptCode;
+            this.TotalDepositReturnFeeAmount = totalDepositReturnFeeAmount;
         }
         
         /// <summary>
@@ -837,6 +841,13 @@ namespace Flipdish.Model
         /// <value>OrderBatch information</value>
         [DataMember(Name="OrderBatchInfo", EmitDefaultValue=false)]
         public OrderBatchSummary OrderBatchInfo { get; set; }
+
+        /// <summary>
+        /// A collection of tax items on the order.
+        /// </summary>
+        /// <value>A collection of tax items on the order.</value>
+        [DataMember(Name="TaxItems", EmitDefaultValue=false)]
+        public List<TaxItem> TaxItems { get; set; }
 
         /// <summary>
         /// The id of the campaign voucher that was created from this order
@@ -1002,6 +1013,13 @@ namespace Flipdish.Model
         public string ReceiptCode { get; set; }
 
         /// <summary>
+        /// This contains the total deposit return fee amount for the order.
+        /// </summary>
+        /// <value>This contains the total deposit return fee amount for the order.</value>
+        [DataMember(Name="TotalDepositReturnFeeAmount", EmitDefaultValue=false)]
+        public double? TotalDepositReturnFeeAmount { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -1029,6 +1047,7 @@ namespace Flipdish.Model
             sb.Append("  OrderDropOffLocation: ").Append(OrderDropOffLocation).Append("\n");
             sb.Append("  FulfillmentStatus: ").Append(FulfillmentStatus).Append("\n");
             sb.Append("  OrderBatchInfo: ").Append(OrderBatchInfo).Append("\n");
+            sb.Append("  TaxItems: ").Append(TaxItems).Append("\n");
             sb.Append("  CreatedCampaignVoucherId: ").Append(CreatedCampaignVoucherId).Append("\n");
             sb.Append("  OrderId: ").Append(OrderId).Append("\n");
             sb.Append("  LocalOrderId: ").Append(LocalOrderId).Append("\n");
@@ -1060,6 +1079,7 @@ namespace Flipdish.Model
             sb.Append("  OrderTrackingCode: ").Append(OrderTrackingCode).Append("\n");
             sb.Append("  DeliveryFeeAreaId: ").Append(DeliveryFeeAreaId).Append("\n");
             sb.Append("  ReceiptCode: ").Append(ReceiptCode).Append("\n");
+            sb.Append("  TotalDepositReturnFeeAmount: ").Append(TotalDepositReturnFeeAmount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1193,6 +1213,11 @@ namespace Flipdish.Model
                     this.OrderBatchInfo == input.OrderBatchInfo ||
                     (this.OrderBatchInfo != null &&
                     this.OrderBatchInfo.Equals(input.OrderBatchInfo))
+                ) && 
+                (
+                    this.TaxItems == input.TaxItems ||
+                    this.TaxItems != null &&
+                    this.TaxItems.SequenceEqual(input.TaxItems)
                 ) && 
                 (
                     this.CreatedCampaignVoucherId == input.CreatedCampaignVoucherId ||
@@ -1348,6 +1373,11 @@ namespace Flipdish.Model
                     this.ReceiptCode == input.ReceiptCode ||
                     (this.ReceiptCode != null &&
                     this.ReceiptCode.Equals(input.ReceiptCode))
+                ) && 
+                (
+                    this.TotalDepositReturnFeeAmount == input.TotalDepositReturnFeeAmount ||
+                    (this.TotalDepositReturnFeeAmount != null &&
+                    this.TotalDepositReturnFeeAmount.Equals(input.TotalDepositReturnFeeAmount))
                 );
         }
 
@@ -1400,6 +1430,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.FulfillmentStatus.GetHashCode();
                 if (this.OrderBatchInfo != null)
                     hashCode = hashCode * 59 + this.OrderBatchInfo.GetHashCode();
+                if (this.TaxItems != null)
+                    hashCode = hashCode * 59 + this.TaxItems.GetHashCode();
                 if (this.CreatedCampaignVoucherId != null)
                     hashCode = hashCode * 59 + this.CreatedCampaignVoucherId.GetHashCode();
                 if (this.OrderId != null)
@@ -1462,6 +1494,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.DeliveryFeeAreaId.GetHashCode();
                 if (this.ReceiptCode != null)
                     hashCode = hashCode * 59 + this.ReceiptCode.GetHashCode();
+                if (this.TotalDepositReturnFeeAmount != null)
+                    hashCode = hashCode * 59 + this.TotalDepositReturnFeeAmount.GetHashCode();
                 return hashCode;
             }
         }

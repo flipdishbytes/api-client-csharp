@@ -37,10 +37,11 @@ namespace Flipdish.Model
         /// <param name="isMasterOptionSetItem">Is master option set item.</param>
         /// <param name="name">Name.</param>
         /// <param name="price">Price.</param>
+        /// <param name="taxAmount">Tax currency amount.</param>
         /// <param name="menuItemOptionDisplayOrder">Menu item option display order.</param>
         /// <param name="menuItemOptionSetDisplayOrder">Menu item option set display order.</param>
         /// <param name="depositReturnFee">Deposit return fee.</param>
-        public OrderItemOption(Dictionary<string, string> metadata = default(Dictionary<string, string>), Guid? menuItemOptionPublicId = default(Guid?), int? menuItemOptionId = default(int?), bool? isMasterOptionSetItem = default(bool?), string name = default(string), double? price = default(double?), int? menuItemOptionDisplayOrder = default(int?), int? menuItemOptionSetDisplayOrder = default(int?), double? depositReturnFee = default(double?))
+        public OrderItemOption(Dictionary<string, string> metadata = default(Dictionary<string, string>), Guid? menuItemOptionPublicId = default(Guid?), int? menuItemOptionId = default(int?), bool? isMasterOptionSetItem = default(bool?), string name = default(string), double? price = default(double?), double? taxAmount = default(double?), int? menuItemOptionDisplayOrder = default(int?), int? menuItemOptionSetDisplayOrder = default(int?), double? depositReturnFee = default(double?))
         {
             this.Metadata = metadata;
             this.MenuItemOptionPublicId = menuItemOptionPublicId;
@@ -48,6 +49,7 @@ namespace Flipdish.Model
             this.IsMasterOptionSetItem = isMasterOptionSetItem;
             this.Name = name;
             this.Price = price;
+            this.TaxAmount = taxAmount;
             this.MenuItemOptionDisplayOrder = menuItemOptionDisplayOrder;
             this.MenuItemOptionSetDisplayOrder = menuItemOptionSetDisplayOrder;
             this.DepositReturnFee = depositReturnFee;
@@ -96,6 +98,13 @@ namespace Flipdish.Model
         public double? Price { get; set; }
 
         /// <summary>
+        /// Tax currency amount
+        /// </summary>
+        /// <value>Tax currency amount</value>
+        [DataMember(Name="TaxAmount", EmitDefaultValue=false)]
+        public double? TaxAmount { get; set; }
+
+        /// <summary>
         /// Menu item option display order
         /// </summary>
         /// <value>Menu item option display order</value>
@@ -130,6 +139,7 @@ namespace Flipdish.Model
             sb.Append("  IsMasterOptionSetItem: ").Append(IsMasterOptionSetItem).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
+            sb.Append("  TaxAmount: ").Append(TaxAmount).Append("\n");
             sb.Append("  MenuItemOptionDisplayOrder: ").Append(MenuItemOptionDisplayOrder).Append("\n");
             sb.Append("  MenuItemOptionSetDisplayOrder: ").Append(MenuItemOptionSetDisplayOrder).Append("\n");
             sb.Append("  DepositReturnFee: ").Append(DepositReturnFee).Append("\n");
@@ -198,6 +208,11 @@ namespace Flipdish.Model
                     this.Price.Equals(input.Price))
                 ) && 
                 (
+                    this.TaxAmount == input.TaxAmount ||
+                    (this.TaxAmount != null &&
+                    this.TaxAmount.Equals(input.TaxAmount))
+                ) && 
+                (
                     this.MenuItemOptionDisplayOrder == input.MenuItemOptionDisplayOrder ||
                     (this.MenuItemOptionDisplayOrder != null &&
                     this.MenuItemOptionDisplayOrder.Equals(input.MenuItemOptionDisplayOrder))
@@ -235,6 +250,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Price != null)
                     hashCode = hashCode * 59 + this.Price.GetHashCode();
+                if (this.TaxAmount != null)
+                    hashCode = hashCode * 59 + this.TaxAmount.GetHashCode();
                 if (this.MenuItemOptionDisplayOrder != null)
                     hashCode = hashCode * 59 + this.MenuItemOptionDisplayOrder.GetHashCode();
                 if (this.MenuItemOptionSetDisplayOrder != null)
