@@ -32,14 +32,16 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="Customer" /> class.
         /// </summary>
         /// <param name="customerId">Id of the customer.</param>
+        /// <param name="name">Customer name.</param>
         /// <param name="registrationDate">Customer registration date.</param>
         /// <param name="phoneNumber">Phone Number in international format.</param>
         /// <param name="cashOrdersEnabled">Customer can place cash orders.</param>
         /// <param name="cardOrdersEnabled">Customer can place card orders.</param>
         /// <param name="marketingEnabled">Customer can receive marketing.</param>
-        public Customer(int? customerId = default(int?), DateTime? registrationDate = default(DateTime?), string phoneNumber = default(string), bool? cashOrdersEnabled = default(bool?), bool? cardOrdersEnabled = default(bool?), bool? marketingEnabled = default(bool?))
+        public Customer(int? customerId = default(int?), string name = default(string), DateTime? registrationDate = default(DateTime?), string phoneNumber = default(string), bool? cashOrdersEnabled = default(bool?), bool? cardOrdersEnabled = default(bool?), bool? marketingEnabled = default(bool?))
         {
             this.CustomerId = customerId;
+            this.Name = name;
             this.RegistrationDate = registrationDate;
             this.PhoneNumber = phoneNumber;
             this.CashOrdersEnabled = cashOrdersEnabled;
@@ -53,6 +55,13 @@ namespace Flipdish.Model
         /// <value>Id of the customer</value>
         [DataMember(Name="CustomerId", EmitDefaultValue=false)]
         public int? CustomerId { get; set; }
+
+        /// <summary>
+        /// Customer name
+        /// </summary>
+        /// <value>Customer name</value>
+        [DataMember(Name="Name", EmitDefaultValue=false)]
+        public string Name { get; set; }
 
         /// <summary>
         /// Customer registration date
@@ -98,6 +107,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class Customer {\n");
             sb.Append("  CustomerId: ").Append(CustomerId).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  RegistrationDate: ").Append(RegistrationDate).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  CashOrdersEnabled: ").Append(CashOrdersEnabled).Append("\n");
@@ -143,6 +153,11 @@ namespace Flipdish.Model
                     this.CustomerId.Equals(input.CustomerId))
                 ) && 
                 (
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
+                ) && 
+                (
                     this.RegistrationDate == input.RegistrationDate ||
                     (this.RegistrationDate != null &&
                     this.RegistrationDate.Equals(input.RegistrationDate))
@@ -180,6 +195,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.CustomerId != null)
                     hashCode = hashCode * 59 + this.CustomerId.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.RegistrationDate != null)
                     hashCode = hashCode * 59 + this.RegistrationDate.GetHashCode();
                 if (this.PhoneNumber != null)
