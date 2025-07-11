@@ -29,10 +29,38 @@ namespace Flipdish.Model
     public partial class TelephonyConfig :  IEquatable<TelephonyConfig>
     {
         /// <summary>
+        /// Type of telephony service
+        /// </summary>
+        /// <value>Type of telephony service</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum
+        {
+            
+            /// <summary>
+            /// Enum PreRecorded for value: PreRecorded
+            /// </summary>
+            [EnumMember(Value = "PreRecorded")]
+            PreRecorded = 1,
+            
+            /// <summary>
+            /// Enum VoiceAI for value: VoiceAI
+            /// </summary>
+            [EnumMember(Value = "VoiceAI")]
+            VoiceAI = 2
+        }
+
+        /// <summary>
+        /// Type of telephony service
+        /// </summary>
+        /// <value>Type of telephony service</value>
+        [DataMember(Name="Type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="TelephonyConfig" /> class.
         /// </summary>
         /// <param name="telephonyConfigId">ID of the phone call.</param>
         /// <param name="apmEnabled">APM enabled flag.</param>
+        /// <param name="type">Type of telephony service.</param>
         /// <param name="consentEnabled">Consent enabled flag.</param>
         /// <param name="phoneNumber">APM phone number of the store.</param>
         /// <param name="sendAppLinkSms">Send app link SMS flag.</param>
@@ -40,10 +68,11 @@ namespace Flipdish.Model
         /// <param name="useCustomVoiceMessage">Use custom voice message flag.</param>
         /// <param name="appLinkSmsMessage">App link SMS message.</param>
         /// <param name="resendApmMessageAfterDays">Amount of days to resend APM message.</param>
-        public TelephonyConfig(int? telephonyConfigId = default(int?), bool? apmEnabled = default(bool?), bool? consentEnabled = default(bool?), string phoneNumber = default(string), bool? sendAppLinkSms = default(bool?), bool? useCustomAppLinkSmsMessage = default(bool?), bool? useCustomVoiceMessage = default(bool?), string appLinkSmsMessage = default(string), int? resendApmMessageAfterDays = default(int?))
+        public TelephonyConfig(int? telephonyConfigId = default(int?), bool? apmEnabled = default(bool?), TypeEnum? type = default(TypeEnum?), bool? consentEnabled = default(bool?), string phoneNumber = default(string), bool? sendAppLinkSms = default(bool?), bool? useCustomAppLinkSmsMessage = default(bool?), bool? useCustomVoiceMessage = default(bool?), string appLinkSmsMessage = default(string), int? resendApmMessageAfterDays = default(int?))
         {
             this.TelephonyConfigId = telephonyConfigId;
             this.ApmEnabled = apmEnabled;
+            this.Type = type;
             this.ConsentEnabled = consentEnabled;
             this.PhoneNumber = phoneNumber;
             this.SendAppLinkSms = sendAppLinkSms;
@@ -66,6 +95,7 @@ namespace Flipdish.Model
         /// <value>APM enabled flag</value>
         [DataMember(Name="ApmEnabled", EmitDefaultValue=false)]
         public bool? ApmEnabled { get; set; }
+
 
         /// <summary>
         /// Consent enabled flag
@@ -126,6 +156,7 @@ namespace Flipdish.Model
             sb.Append("class TelephonyConfig {\n");
             sb.Append("  TelephonyConfigId: ").Append(TelephonyConfigId).Append("\n");
             sb.Append("  ApmEnabled: ").Append(ApmEnabled).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  ConsentEnabled: ").Append(ConsentEnabled).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  SendAppLinkSms: ").Append(SendAppLinkSms).Append("\n");
@@ -178,6 +209,11 @@ namespace Flipdish.Model
                     this.ApmEnabled.Equals(input.ApmEnabled))
                 ) && 
                 (
+                    this.Type == input.Type ||
+                    (this.Type != null &&
+                    this.Type.Equals(input.Type))
+                ) && 
+                (
                     this.ConsentEnabled == input.ConsentEnabled ||
                     (this.ConsentEnabled != null &&
                     this.ConsentEnabled.Equals(input.ConsentEnabled))
@@ -227,6 +263,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.TelephonyConfigId.GetHashCode();
                 if (this.ApmEnabled != null)
                     hashCode = hashCode * 59 + this.ApmEnabled.GetHashCode();
+                if (this.Type != null)
+                    hashCode = hashCode * 59 + this.Type.GetHashCode();
                 if (this.ConsentEnabled != null)
                     hashCode = hashCode * 59 + this.ConsentEnabled.GetHashCode();
                 if (this.PhoneNumber != null)

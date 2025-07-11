@@ -260,6 +260,7 @@ Class | Method | HTTP request | Description
 *FirebaseAppsApi* | [**FirebaseAppsGetFirebaseApp**](docs/FirebaseAppsApi.md#firebaseappsgetfirebaseapp) | **GET** /api/v1.0/FirebaseApp/{whitelabelId} | 
 *FpmApi* | [**CreateFpmForStore**](docs/FpmApi.md#createfpmforstore) | **POST** /api/v1.0/{storeId}/fpm | 
 *FpmApi* | [**EditFpmForStore**](docs/FpmApi.md#editfpmforstore) | **POST** /api/v1.0/{storeId}/fpm/edit | 
+*FpmApi* | [**GetFpmForStore**](docs/FpmApi.md#getfpmforstore) | **GET** /api/v1.0/{storeId}/fpm | 
 *FulfillmentStateConfigurationApi* | [**CreateFulfillmentStatesConfig**](docs/FulfillmentStateConfigurationApi.md#createfulfillmentstatesconfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states | 
 *FulfillmentStateConfigurationApi* | [**DeleteFulfillmentStatesConfig**](docs/FulfillmentStateConfigurationApi.md#deletefulfillmentstatesconfig) | **DELETE** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | 
 *FulfillmentStateConfigurationApi* | [**GetFulfillmentStatesConfiguration**](docs/FulfillmentStateConfigurationApi.md#getfulfillmentstatesconfiguration) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | 
