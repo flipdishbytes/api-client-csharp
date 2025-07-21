@@ -107,9 +107,9 @@ namespace Flipdish.Model
         [DataMember(Name="WebToAppRedirect", EmitDefaultValue=false)]
         public WebToAppRedirectEnum? WebToAppRedirect { get; set; }
         /// <summary>
-        /// Address entry type
+        /// Address entry type - TextEntryManualDisallowed is the only supported configuration
         /// </summary>
-        /// <value>Address entry type</value>
+        /// <value>Address entry type - TextEntryManualDisallowed is the only supported configuration</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum AddressEntryTypeEnum
         {
@@ -134,9 +134,9 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Address entry type
+        /// Address entry type - TextEntryManualDisallowed is the only supported configuration
         /// </summary>
-        /// <value>Address entry type</value>
+        /// <value>Address entry type - TextEntryManualDisallowed is the only supported configuration</value>
         [DataMember(Name="AddressEntryType", EmitDefaultValue=false)]
         public AddressEntryTypeEnum? AddressEntryType { get; set; }
         /// <summary>
@@ -144,7 +144,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="emailRequestMode">Display a popup to users requesting their email address.</param>
         /// <param name="webToAppRedirect">Sends users to their native apps or request them to install the pwa.</param>
-        /// <param name="addressEntryType">Address entry type.</param>
+        /// <param name="addressEntryType">Address entry type - TextEntryManualDisallowed is the only supported configuration.</param>
         /// <param name="displayDeliveryRestaurantListScreen">Display Pickup Restaurant List Screen.</param>
         public AppConfigSalesChannel(EmailRequestModeEnum? emailRequestMode = default(EmailRequestModeEnum?), WebToAppRedirectEnum? webToAppRedirect = default(WebToAppRedirectEnum?), AddressEntryTypeEnum? addressEntryType = default(AddressEntryTypeEnum?), bool? displayDeliveryRestaurantListScreen = default(bool?))
         {
