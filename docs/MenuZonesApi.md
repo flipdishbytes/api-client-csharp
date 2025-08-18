@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**FlipMenuZones**](MenuZonesApi.md#flipmenuzones) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/flip/{menuZoneI2} | Flips the order of two menu zones.
 [**GetMenuZone**](MenuZonesApi.md#getmenuzone) | **GET** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | Gets a specific menu zone for a given zone id
 [**GetMenuZonesForMenuId**](MenuZonesApi.md#getmenuzonesformenuid) | **GET** /api/v1.0/menus/{menuId}/zones | Gets all the menu zones for a menu
-[**SetMenuSectionMenuZone**](MenuZonesApi.md#setmenusectionmenuzone) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/section/{menuSectionId} | Sets a zone to a menu section.
+[**SetMenuSectionMenuZone**](MenuZonesApi.md#setmenusectionmenuzone) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/section/{menuSectionId} | Assigns a zone to a menu section.
 [**SetMenuZoneDescription**](MenuZonesApi.md#setmenuzonedescription) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/description | Sets the description of a menu zone.
 [**SetMenuZoneName**](MenuZonesApi.md#setmenuzonename) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/name/{menuZoneName} | Sets the name of a menu zone.
 [**UpdateMenuZone**](MenuZonesApi.md#updatemenuzone) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | Updates a menu zone.
@@ -402,7 +402,7 @@ Name | Type | Description  | Notes
 # **SetMenuSectionMenuZone**
 > void SetMenuSectionMenuZone (int? menuZoneId, int? menuSectionId, string menuId)
 
-Sets a zone to a menu section.
+Assigns a zone to a menu section.
 
 ### Example
 ```csharp
@@ -428,7 +428,7 @@ namespace Example
 
             try
             {
-                // Sets a zone to a menu section.
+                // Assigns a zone to a menu section.
                 apiInstance.SetMenuSectionMenuZone(menuZoneId, menuSectionId, menuId);
             }
             catch (Exception e)

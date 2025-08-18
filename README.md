@@ -364,7 +364,7 @@ Class | Method | HTTP request | Description
 *MenuZonesApi* | [**FlipMenuZones**](docs/MenuZonesApi.md#flipmenuzones) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/flip/{menuZoneI2} | Flips the order of two menu zones.
 *MenuZonesApi* | [**GetMenuZone**](docs/MenuZonesApi.md#getmenuzone) | **GET** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | Gets a specific menu zone for a given zone id
 *MenuZonesApi* | [**GetMenuZonesForMenuId**](docs/MenuZonesApi.md#getmenuzonesformenuid) | **GET** /api/v1.0/menus/{menuId}/zones | Gets all the menu zones for a menu
-*MenuZonesApi* | [**SetMenuSectionMenuZone**](docs/MenuZonesApi.md#setmenusectionmenuzone) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/section/{menuSectionId} | Sets a zone to a menu section.
+*MenuZonesApi* | [**SetMenuSectionMenuZone**](docs/MenuZonesApi.md#setmenusectionmenuzone) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/section/{menuSectionId} | Assigns a zone to a menu section.
 *MenuZonesApi* | [**SetMenuZoneDescription**](docs/MenuZonesApi.md#setmenuzonedescription) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/description | Sets the description of a menu zone.
 *MenuZonesApi* | [**SetMenuZoneName**](docs/MenuZonesApi.md#setmenuzonename) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/name/{menuZoneName} | Sets the name of a menu zone.
 *MenuZonesApi* | [**UpdateMenuZone**](docs/MenuZonesApi.md#updatemenuzone) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | Updates a menu zone.

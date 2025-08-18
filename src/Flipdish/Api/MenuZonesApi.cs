@@ -163,7 +163,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultMenuZone</returns>
         ApiResponse<RestApiArrayResultMenuZone> GetMenuZonesForMenuIdWithHttpInfo (int? menuId);
         /// <summary>
-        /// Sets a zone to a menu section.
+        /// Assigns a zone to a menu section.
         /// </summary>
         /// <remarks>
         /// 
@@ -176,7 +176,7 @@ namespace Flipdish.Api
         void SetMenuSectionMenuZone (int? menuZoneId, int? menuSectionId, string menuId);
 
         /// <summary>
-        /// Sets a zone to a menu section.
+        /// Assigns a zone to a menu section.
         /// </summary>
         /// <remarks>
         /// 
@@ -428,7 +428,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultMenuZone)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuZone>> GetMenuZonesForMenuIdAsyncWithHttpInfo (int? menuId);
         /// <summary>
-        /// Sets a zone to a menu section.
+        /// Assigns a zone to a menu section.
         /// </summary>
         /// <remarks>
         /// 
@@ -441,7 +441,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task SetMenuSectionMenuZoneAsync (int? menuZoneId, int? menuSectionId, string menuId);
 
         /// <summary>
-        /// Sets a zone to a menu section.
+        /// Assigns a zone to a menu section.
         /// </summary>
         /// <remarks>
         /// 
@@ -1649,7 +1649,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Sets a zone to a menu section. 
+        /// Assigns a zone to a menu section. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuZoneId">The menu id.</param>
@@ -1662,7 +1662,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Sets a zone to a menu section. 
+        /// Assigns a zone to a menu section. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuZoneId">The menu id.</param>
@@ -1735,7 +1735,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Sets a zone to a menu section. 
+        /// Assigns a zone to a menu section. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuZoneId">The menu id.</param>
@@ -1749,7 +1749,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Sets a zone to a menu section. 
+        /// Assigns a zone to a menu section. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="menuZoneId">The menu id.</param>
