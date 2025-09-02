@@ -37,7 +37,8 @@ namespace Flipdish.Model
         /// <param name="description">description.</param>
         /// <param name="imageName">imageName.</param>
         /// <param name="displayOrder">displayOrder.</param>
-        public MenuZone(int? menuZoneId = default(int?), int? menuId = default(int?), string name = default(string), string description = default(string), string imageName = default(string), int? displayOrder = default(int?))
+        /// <param name="imageUrl">imageUrl.</param>
+        public MenuZone(int? menuZoneId = default(int?), int? menuId = default(int?), string name = default(string), string description = default(string), string imageName = default(string), int? displayOrder = default(int?), string imageUrl = default(string))
         {
             this.MenuZoneId = menuZoneId;
             this.MenuId = menuId;
@@ -45,6 +46,7 @@ namespace Flipdish.Model
             this.Description = description;
             this.ImageName = imageName;
             this.DisplayOrder = displayOrder;
+            this.ImageUrl = imageUrl;
         }
         
         /// <summary>
@@ -84,6 +86,12 @@ namespace Flipdish.Model
         public int? DisplayOrder { get; set; }
 
         /// <summary>
+        /// Gets or Sets ImageUrl
+        /// </summary>
+        [DataMember(Name="ImageUrl", EmitDefaultValue=false)]
+        public string ImageUrl { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -97,6 +105,7 @@ namespace Flipdish.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  ImageName: ").Append(ImageName).Append("\n");
             sb.Append("  DisplayOrder: ").Append(DisplayOrder).Append("\n");
+            sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,6 +169,11 @@ namespace Flipdish.Model
                     this.DisplayOrder == input.DisplayOrder ||
                     (this.DisplayOrder != null &&
                     this.DisplayOrder.Equals(input.DisplayOrder))
+                ) && 
+                (
+                    this.ImageUrl == input.ImageUrl ||
+                    (this.ImageUrl != null &&
+                    this.ImageUrl.Equals(input.ImageUrl))
                 );
         }
 
@@ -184,6 +198,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ImageName.GetHashCode();
                 if (this.DisplayOrder != null)
                     hashCode = hashCode * 59 + this.DisplayOrder.GetHashCode();
+                if (this.ImageUrl != null)
+                    hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
                 return hashCode;
             }
         }
