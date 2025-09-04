@@ -214,8 +214,6 @@ Class | Method | HTTP request | Description
 *ChannelsApi* | [**GetStoresAssignedToChannel**](docs/ChannelsApi.md#getstoresassignedtochannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | 
 *ChannelsApi* | [**GetStoresBySalesChannel**](docs/ChannelsApi.md#getstoresbysaleschannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/stores | 
 *ChannelsApi* | [**UnassignStoreFromChannel**](docs/ChannelsApi.md#unassignstorefromchannel) | **DELETE** /api/v1.0/{appId}/channels/unassign-store | 
-*ChannelsStoreMappingApi* | [**ChannelsGetStoreChannelStoreMapping**](docs/ChannelsStoreMappingApi.md#channelsgetstorechannelstoremapping) | **GET** /api/v1.0/{appId}/channels/storemappings | 
-*ChannelsStoreMappingApi* | [**ChannelsSetStoreChannelStoreMapping**](docs/ChannelsStoreMappingApi.md#channelssetstorechannelstoremapping) | **POST** /api/v1.0/{appId}/channels/storemappings | 
 *ClientsApi* | [**GetClient**](docs/ClientsApi.md#getclient) | **GET** /api/v1.0/clients/{clientId} | 
 *ClientsApi* | [**SetSalesForceContactId**](docs/ClientsApi.md#setsalesforcecontactid) | **POST** /api/v1.0/clients/{clientId}/salesforcecontactid | 
 *ClientsApi* | [**SetStripeCustomerId**](docs/ClientsApi.md#setstripecustomerid) | **POST** /api/v1.0/clients/{clientId}/stripecustomerid | 
@@ -453,7 +451,6 @@ Class | Method | HTTP request | Description
 *OrderBatchesApi* | [**GetOrderBatch**](docs/OrderBatchesApi.md#getorderbatch) | **GET** /api/v1.0/{appId}/order-batches/{orderBatchId} | 
 *OrderBatchingConfigurationApi* | [**Get**](docs/OrderBatchingConfigurationApi.md#get) | **GET** /api/v1.0/stores/{storeId}/order-batching-configuration | 
 *OrderBatchingConfigurationApi* | [**Post**](docs/OrderBatchingConfigurationApi.md#post) | **POST** /api/v1.0/stores/{storeId}/order-batching-configuration | 
-*OrderIngestApi* | [**OrderIngestSubmitNewOrder**](docs/OrderIngestApi.md#orderingestsubmitneworder) | **POST** /api/v1.0/{appNameId}/order-ingest/submit | 
 *OrdersApi* | [**AcceptOrder**](docs/OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | 
 *OrdersApi* | [**DispatchOrder**](docs/OrdersApi.md#dispatchorder) | **POST** /api/v1.0/orders/{id}/dispatch | 
 *OrdersApi* | [**GetDeliveryInformation**](docs/OrdersApi.md#getdeliveryinformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | 
@@ -680,7 +677,6 @@ Class | Method | HTTP request | Description
  - [Model.CancellationToken](docs/CancellationToken.md)
  - [Model.CardReader](docs/CardReader.md)
  - [Model.CardReaderRegistrationRequest](docs/CardReaderRegistrationRequest.md)
- - [Model.Cart](docs/Cart.md)
  - [Model.CatalogGroupArchivedEvent](docs/CatalogGroupArchivedEvent.md)
  - [Model.CatalogGroupCreatedEvent](docs/CatalogGroupCreatedEvent.md)
  - [Model.CatalogGroupReference](docs/CatalogGroupReference.md)
@@ -694,7 +690,6 @@ Class | Method | HTTP request | Description
  - [Model.CertificateRenewedEvent](docs/CertificateRenewedEvent.md)
  - [Model.ChangePasswordModel](docs/ChangePasswordModel.md)
  - [Model.Channel](docs/Channel.md)
- - [Model.ChannelStoreMapping](docs/ChannelStoreMapping.md)
  - [Model.ChannelStoresUpdatedEvent](docs/ChannelStoresUpdatedEvent.md)
  - [Model.ChargebackDetails](docs/ChargebackDetails.md)
  - [Model.ClientDevice](docs/ClientDevice.md)
@@ -703,7 +698,6 @@ Class | Method | HTTP request | Description
  - [Model.ClientDeviceEnrollmentResult](docs/ClientDeviceEnrollmentResult.md)
  - [Model.ClientDeviceSummary](docs/ClientDeviceSummary.md)
  - [Model.ConfiguredStore](docs/ConfiguredStore.md)
- - [Model.Contact](docs/Contact.md)
  - [Model.Coordinates](docs/Coordinates.md)
  - [Model.CountryFormResponse](docs/CountryFormResponse.md)
  - [Model.CountryWithAccountFieldsDefinitions](docs/CountryWithAccountFieldsDefinitions.md)
@@ -784,7 +778,6 @@ Class | Method | HTTP request | Description
  - [Model.FlipdishEventBase](docs/FlipdishEventBase.md)
  - [Model.FlipdishFeesDetails](docs/FlipdishFeesDetails.md)
  - [Model.FulfillentStatusActionItem](docs/FulfillentStatusActionItem.md)
- - [Model.FulfillmentInfo](docs/FulfillmentInfo.md)
  - [Model.FulfillmentStatesConfiguration](docs/FulfillmentStatesConfiguration.md)
  - [Model.FulfillmentStatesConfigurationSummary](docs/FulfillmentStatesConfigurationSummary.md)
  - [Model.FulfillmentStatesConfiguredStore](docs/FulfillmentStatesConfiguredStore.md)
@@ -854,10 +847,7 @@ Class | Method | HTTP request | Description
  - [Model.LastPaymentError](docs/LastPaymentError.md)
  - [Model.LeadTime](docs/LeadTime.md)
  - [Model.LightspeedSettings](docs/LightspeedSettings.md)
- - [Model.LineItem](docs/LineItem.md)
- - [Model.LineItemOption](docs/LineItemOption.md)
  - [Model.LocalisedTimeZone](docs/LocalisedTimeZone.md)
- - [Model.Location](docs/Location.md)
  - [Model.LocationArea](docs/LocationArea.md)
  - [Model.LocationAreaCreatedEvent](docs/LocationAreaCreatedEvent.md)
  - [Model.LocationAreaLocation](docs/LocationAreaLocation.md)
@@ -965,8 +955,6 @@ Class | Method | HTTP request | Description
  - [Model.OrderFulfillmentStatusUpdate](docs/OrderFulfillmentStatusUpdate.md)
  - [Model.OrderFulfillmentStatusUpdatedEvent](docs/OrderFulfillmentStatusUpdatedEvent.md)
  - [Model.OrderFulfillmentStatusWithConfigurationActions](docs/OrderFulfillmentStatusWithConfigurationActions.md)
- - [Model.OrderIngestSubmitOrderRequest](docs/OrderIngestSubmitOrderRequest.md)
- - [Model.OrderIngestSubmitOrderResponse](docs/OrderIngestSubmitOrderResponse.md)
  - [Model.OrderItem](docs/OrderItem.md)
  - [Model.OrderItemOption](docs/OrderItemOption.md)
  - [Model.OrderLeadTimes](docs/OrderLeadTimes.md)
@@ -983,7 +971,6 @@ Class | Method | HTTP request | Description
  - [Model.OwnerEntityConfiguration](docs/OwnerEntityConfiguration.md)
  - [Model.OwnerEntityConfigurations](docs/OwnerEntityConfigurations.md)
  - [Model.PasswordResetModel](docs/PasswordResetModel.md)
- - [Model.PaymentInfo](docs/PaymentInfo.md)
  - [Model.PaymentIntent](docs/PaymentIntent.md)
  - [Model.PaymentTerminalDetails](docs/PaymentTerminalDetails.md)
  - [Model.PaymentTerminalTransactionDetails](docs/PaymentTerminalTransactionDetails.md)
@@ -1020,7 +1007,6 @@ Class | Method | HTTP request | Description
  - [Model.PreviousOrder](docs/PreviousOrder.md)
  - [Model.PreviousOrderItem](docs/PreviousOrderItem.md)
  - [Model.PreviousOrderItemOption](docs/PreviousOrderItemOption.md)
- - [Model.Price](docs/Price.md)
  - [Model.Printer](docs/Printer.md)
  - [Model.PrinterAssignedToStoreEvent](docs/PrinterAssignedToStoreEvent.md)
  - [Model.PrinterTurnedOffEvent](docs/PrinterTurnedOffEvent.md)
@@ -1099,7 +1085,6 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultRetentionCampaign](docs/RestApiArrayResultRetentionCampaign.md)
  - [Model.RestApiArrayResultSmsProviderCredential](docs/RestApiArrayResultSmsProviderCredential.md)
  - [Model.RestApiArrayResultStoreChannelAssignment](docs/RestApiArrayResultStoreChannelAssignment.md)
- - [Model.RestApiArrayResultStoreChannelStoreMapping](docs/RestApiArrayResultStoreChannelStoreMapping.md)
  - [Model.RestApiArrayResultStoreDeliveryZoneFeeConfig](docs/RestApiArrayResultStoreDeliveryZoneFeeConfig.md)
  - [Model.RestApiArrayResultStoreListItem](docs/RestApiArrayResultStoreListItem.md)
  - [Model.RestApiArrayResultStoreStatistics](docs/RestApiArrayResultStoreStatistics.md)
@@ -1224,7 +1209,6 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultOrderDeliveryInformation](docs/RestApiResultOrderDeliveryInformation.md)
  - [Model.RestApiResultOrderFulfillmentStatus](docs/RestApiResultOrderFulfillmentStatus.md)
  - [Model.RestApiResultOrderFulfillmentStatusWithConfigurationActions](docs/RestApiResultOrderFulfillmentStatusWithConfigurationActions.md)
- - [Model.RestApiResultOrderIngestSubmitOrderResponse](docs/RestApiResultOrderIngestSubmitOrderResponse.md)
  - [Model.RestApiResultOrderLeadTimes](docs/RestApiResultOrderLeadTimes.md)
  - [Model.RestApiResultOrderPaymentInformation](docs/RestApiResultOrderPaymentInformation.md)
  - [Model.RestApiResultPaymentIntent](docs/RestApiResultPaymentIntent.md)
@@ -1303,7 +1287,6 @@ Class | Method | HTTP request | Description
  - [Model.StoreBusinessHoursOverrideDeletedEvent](docs/StoreBusinessHoursOverrideDeletedEvent.md)
  - [Model.StoreCampaignStartTime](docs/StoreCampaignStartTime.md)
  - [Model.StoreChannelAssignment](docs/StoreChannelAssignment.md)
- - [Model.StoreChannelStoreMapping](docs/StoreChannelStoreMapping.md)
  - [Model.StoreCloneSettings](docs/StoreCloneSettings.md)
  - [Model.StoreConfig](docs/StoreConfig.md)
  - [Model.StoreCreateBase](docs/StoreCreateBase.md)
