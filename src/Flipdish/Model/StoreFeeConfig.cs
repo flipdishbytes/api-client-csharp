@@ -74,7 +74,9 @@ namespace Flipdish.Model
         /// <param name="fixedFeeCardPosTransaction">Gets or sets the fixed fee for POS transactions..</param>
         /// <param name="percentFeeOrderWithGoogle">Additional percentage fee charged on orders submitted through Order With Google.</param>
         /// <param name="fixedFeeOrderWithGoogle">Additional fixed fee charged on orders submitted through Order With Google.</param>
-        public StoreFeeConfig(int? feeConfigId = default(int?), int? storeId = default(int?), DateTime? startTime = default(DateTime?), double? percentFeeCardOrders = default(double?), double? percentFeeCashOrders = default(double?), double? percentFeeCardOrdersWeb = default(double?), double? percentFeeCashOrdersWeb = default(double?), double? percentFeeCardOrdersKiosk = default(double?), double? percentFeeCashOrdersKiosk = default(double?), double? fixedFeeCardOrdersKiosk = default(double?), double? fixedFeeCashOrdersKiosk = default(double?), double? percentFeeCardOrdersKioskChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrdersKioskChargedToCustomerIncludingVat = default(double?), double? percentFeeCashOrdersKioskChargedToCustomerIncludingVat = default(double?), double? fixedFeeCashOrdersKioskChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrders = default(double?), double? fixedFeeCashOrders = default(double?), double? percentFeeCardOrdersChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrdersChargedToCustomerIncludingVat = default(double?), double? percentFeeCashOrdersChargedToCustomerIncludingVat = default(double?), double? fixedFeeCashOrdersChargedToCustomerIncludingVat = default(double?), double? percentFeeTips = default(double?), double? percentFeeTipsCollection = default(double?), double? percentFeeTipsDelivery = default(double?), double? taxRatePercent = default(double?), double? percentFeeCardOrdersLocationService = default(double?), double? percentFeeCashOrdersLocationService = default(double?), double? fixedFeeCardOrdersLocationService = default(double?), double? fixedFeeCashOrdersLocationService = default(double?), double? percentFeeCardOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? percentFeeCashOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? fixedFeeCashOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? percentFeeCardOrdersIngest = default(double?), double? percentFeeCashOrdersIngest = default(double?), double? fixedFeeCardOrdersIngest = default(double?), double? fixedFeeCashOrdersIngest = default(double?), double? percentFeeDelivery = default(double?), double? fixedFeeDelivery = default(double?), double? percentFeeCardPosTransaction = default(double?), double? fixedFeeCardPosTransaction = default(double?), double? percentFeeOrderWithGoogle = default(double?), double? fixedFeeOrderWithGoogle = default(double?))
+        /// <param name="shouldNotAutoIncreaseBefore">Should not auto increase fees before this date.</param>
+        /// <param name="reason">Reason for the last fee change (optional).</param>
+        public StoreFeeConfig(int? feeConfigId = default(int?), int? storeId = default(int?), DateTime? startTime = default(DateTime?), double? percentFeeCardOrders = default(double?), double? percentFeeCashOrders = default(double?), double? percentFeeCardOrdersWeb = default(double?), double? percentFeeCashOrdersWeb = default(double?), double? percentFeeCardOrdersKiosk = default(double?), double? percentFeeCashOrdersKiosk = default(double?), double? fixedFeeCardOrdersKiosk = default(double?), double? fixedFeeCashOrdersKiosk = default(double?), double? percentFeeCardOrdersKioskChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrdersKioskChargedToCustomerIncludingVat = default(double?), double? percentFeeCashOrdersKioskChargedToCustomerIncludingVat = default(double?), double? fixedFeeCashOrdersKioskChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrders = default(double?), double? fixedFeeCashOrders = default(double?), double? percentFeeCardOrdersChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrdersChargedToCustomerIncludingVat = default(double?), double? percentFeeCashOrdersChargedToCustomerIncludingVat = default(double?), double? fixedFeeCashOrdersChargedToCustomerIncludingVat = default(double?), double? percentFeeTips = default(double?), double? percentFeeTipsCollection = default(double?), double? percentFeeTipsDelivery = default(double?), double? taxRatePercent = default(double?), double? percentFeeCardOrdersLocationService = default(double?), double? percentFeeCashOrdersLocationService = default(double?), double? fixedFeeCardOrdersLocationService = default(double?), double? fixedFeeCashOrdersLocationService = default(double?), double? percentFeeCardOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? percentFeeCashOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? fixedFeeCashOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? percentFeeCardOrdersIngest = default(double?), double? percentFeeCashOrdersIngest = default(double?), double? fixedFeeCardOrdersIngest = default(double?), double? fixedFeeCashOrdersIngest = default(double?), double? percentFeeDelivery = default(double?), double? fixedFeeDelivery = default(double?), double? percentFeeCardPosTransaction = default(double?), double? fixedFeeCardPosTransaction = default(double?), double? percentFeeOrderWithGoogle = default(double?), double? fixedFeeOrderWithGoogle = default(double?), DateTime? shouldNotAutoIncreaseBefore = default(DateTime?), string reason = default(string))
         {
             this.FeeConfigId = feeConfigId;
             this.StoreId = storeId;
@@ -119,6 +121,8 @@ namespace Flipdish.Model
             this.FixedFeeCardPosTransaction = fixedFeeCardPosTransaction;
             this.PercentFeeOrderWithGoogle = percentFeeOrderWithGoogle;
             this.FixedFeeOrderWithGoogle = fixedFeeOrderWithGoogle;
+            this.ShouldNotAutoIncreaseBefore = shouldNotAutoIncreaseBefore;
+            this.Reason = reason;
         }
         
         /// <summary>
@@ -402,6 +406,20 @@ namespace Flipdish.Model
         public double? FixedFeeOrderWithGoogle { get; set; }
 
         /// <summary>
+        /// Should not auto increase fees before this date
+        /// </summary>
+        /// <value>Should not auto increase fees before this date</value>
+        [DataMember(Name="ShouldNotAutoIncreaseBefore", EmitDefaultValue=false)]
+        public DateTime? ShouldNotAutoIncreaseBefore { get; set; }
+
+        /// <summary>
+        /// Reason for the last fee change (optional)
+        /// </summary>
+        /// <value>Reason for the last fee change (optional)</value>
+        [DataMember(Name="Reason", EmitDefaultValue=false)]
+        public string Reason { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -452,6 +470,8 @@ namespace Flipdish.Model
             sb.Append("  FixedFeeCardPosTransaction: ").Append(FixedFeeCardPosTransaction).Append("\n");
             sb.Append("  PercentFeeOrderWithGoogle: ").Append(PercentFeeOrderWithGoogle).Append("\n");
             sb.Append("  FixedFeeOrderWithGoogle: ").Append(FixedFeeOrderWithGoogle).Append("\n");
+            sb.Append("  ShouldNotAutoIncreaseBefore: ").Append(ShouldNotAutoIncreaseBefore).Append("\n");
+            sb.Append("  Reason: ").Append(Reason).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -700,6 +720,16 @@ namespace Flipdish.Model
                     this.FixedFeeOrderWithGoogle == input.FixedFeeOrderWithGoogle ||
                     (this.FixedFeeOrderWithGoogle != null &&
                     this.FixedFeeOrderWithGoogle.Equals(input.FixedFeeOrderWithGoogle))
+                ) && 
+                (
+                    this.ShouldNotAutoIncreaseBefore == input.ShouldNotAutoIncreaseBefore ||
+                    (this.ShouldNotAutoIncreaseBefore != null &&
+                    this.ShouldNotAutoIncreaseBefore.Equals(input.ShouldNotAutoIncreaseBefore))
+                ) && 
+                (
+                    this.Reason == input.Reason ||
+                    (this.Reason != null &&
+                    this.Reason.Equals(input.Reason))
                 );
         }
 
@@ -798,6 +828,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PercentFeeOrderWithGoogle.GetHashCode();
                 if (this.FixedFeeOrderWithGoogle != null)
                     hashCode = hashCode * 59 + this.FixedFeeOrderWithGoogle.GetHashCode();
+                if (this.ShouldNotAutoIncreaseBefore != null)
+                    hashCode = hashCode * 59 + this.ShouldNotAutoIncreaseBefore.GetHashCode();
+                if (this.Reason != null)
+                    hashCode = hashCode * 59 + this.Reason.GetHashCode();
                 return hashCode;
             }
         }
