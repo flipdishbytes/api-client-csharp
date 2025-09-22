@@ -762,6 +762,29 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
+        /// <param name="settings"></param>
+        /// <returns>RestApiResultRestApiDefaultResponse</returns>
+        RestApiResultRestApiDefaultResponse SetStoreCollectionSettings (int? storeId, StoreCollectionSettings settings);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="settings"></param>
+        /// <returns>ApiResponse of RestApiResultRestApiDefaultResponse</returns>
+        ApiResponse<RestApiResultRestApiDefaultResponse> SetStoreCollectionSettingsWithHttpInfo (int? storeId, StoreCollectionSettings settings);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
         /// <param name="leadTime"></param>
         /// <returns>RestApiResultOrderLeadTimes</returns>
         RestApiResultOrderLeadTimes SetStoreLeadTimes (int? storeId, LeadTime leadTime);
@@ -1697,6 +1720,29 @@ namespace Flipdish.Api
         /// <param name="enabled"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultRestApiDefaultResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultRestApiDefaultResponse>> SetPreOrdeEnabledAsyncWithHttpInfo (int? storeId, string deliveryType, bool? enabled);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="settings"></param>
+        /// <returns>Task of RestApiResultRestApiDefaultResponse</returns>
+        System.Threading.Tasks.Task<RestApiResultRestApiDefaultResponse> SetStoreCollectionSettingsAsync (int? storeId, StoreCollectionSettings settings);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="settings"></param>
+        /// <returns>Task of ApiResponse (RestApiResultRestApiDefaultResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultRestApiDefaultResponse>> SetStoreCollectionSettingsAsyncWithHttpInfo (int? storeId, StoreCollectionSettings settings);
         /// <summary>
         /// 
         /// </summary>
@@ -7116,6 +7162,193 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiArrayResultRestApiDefaultResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultRestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultRestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="settings"></param>
+        /// <returns>RestApiResultRestApiDefaultResponse</returns>
+        public RestApiResultRestApiDefaultResponse SetStoreCollectionSettings (int? storeId, StoreCollectionSettings settings)
+        {
+             ApiResponse<RestApiResultRestApiDefaultResponse> localVarResponse = SetStoreCollectionSettingsWithHttpInfo(storeId, settings);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="settings"></param>
+        /// <returns>ApiResponse of RestApiResultRestApiDefaultResponse</returns>
+        public ApiResponse< RestApiResultRestApiDefaultResponse > SetStoreCollectionSettingsWithHttpInfo (int? storeId, StoreCollectionSettings settings)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->SetStoreCollectionSettings");
+            // verify the required parameter 'settings' is set
+            if (settings == null)
+                throw new ApiException(400, "Missing required parameter 'settings' when calling StoresApi->SetStoreCollectionSettings");
+
+            var localVarPath = "./api/v1.0/stores/{storeId}/collectionsettings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (settings != null && settings.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(settings); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = settings; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetStoreCollectionSettings", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultRestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultRestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultRestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="settings"></param>
+        /// <returns>Task of RestApiResultRestApiDefaultResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiResultRestApiDefaultResponse> SetStoreCollectionSettingsAsync (int? storeId, StoreCollectionSettings settings)
+        {
+             ApiResponse<RestApiResultRestApiDefaultResponse> localVarResponse = await SetStoreCollectionSettingsAsyncWithHttpInfo(storeId, settings);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="settings"></param>
+        /// <returns>Task of ApiResponse (RestApiResultRestApiDefaultResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultRestApiDefaultResponse>> SetStoreCollectionSettingsAsyncWithHttpInfo (int? storeId, StoreCollectionSettings settings)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->SetStoreCollectionSettings");
+            // verify the required parameter 'settings' is set
+            if (settings == null)
+                throw new ApiException(400, "Missing required parameter 'settings' when calling StoresApi->SetStoreCollectionSettings");
+
+            var localVarPath = "./api/v1.0/stores/{storeId}/collectionsettings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (settings != null && settings.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(settings); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = settings; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetStoreCollectionSettings", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultRestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultRestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultRestApiDefaultResponse)));
         }
 
         /// <summary>

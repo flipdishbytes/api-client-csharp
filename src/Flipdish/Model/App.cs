@@ -1361,6 +1361,51 @@ namespace Flipdish.Model
         [DataMember(Name="AppResourceSet", EmitDefaultValue=false)]
         public List<AppResourceSetEnum> AppResourceSet { get; set; }
         /// <summary>
+        /// Web to App Redirect settings
+        /// </summary>
+        /// <value>Web to App Redirect settings</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum WebToAppRedirectEnum
+        {
+            
+            /// <summary>
+            /// Enum NoRedirect for value: NoRedirect
+            /// </summary>
+            [EnumMember(Value = "NoRedirect")]
+            NoRedirect = 1,
+            
+            /// <summary>
+            /// Enum RedirectOnce for value: RedirectOnce
+            /// </summary>
+            [EnumMember(Value = "RedirectOnce")]
+            RedirectOnce = 2,
+            
+            /// <summary>
+            /// Enum RedirectAlways for value: RedirectAlways
+            /// </summary>
+            [EnumMember(Value = "RedirectAlways")]
+            RedirectAlways = 3,
+            
+            /// <summary>
+            /// Enum SuggestPwa for value: SuggestPwa
+            /// </summary>
+            [EnumMember(Value = "SuggestPwa")]
+            SuggestPwa = 4,
+            
+            /// <summary>
+            /// Enum ForcePwa for value: ForcePwa
+            /// </summary>
+            [EnumMember(Value = "ForcePwa")]
+            ForcePwa = 5
+        }
+
+        /// <summary>
+        /// Web to App Redirect settings
+        /// </summary>
+        /// <value>Web to App Redirect settings</value>
+        [DataMember(Name="WebToAppRedirect", EmitDefaultValue=false)]
+        public WebToAppRedirectEnum? WebToAppRedirect { get; set; }
+        /// <summary>
         /// Application Category
         /// </summary>
         /// <value>Application Category</value>
@@ -1414,6 +1459,7 @@ namespace Flipdish.Model
         /// <param name="googleMapsApiKeyWeb">Key to be passed with Google Maps requests.</param>
         /// <param name="orgId">Org Id.</param>
         /// <param name="smsRestaurantName">SMS Restaurant Name.</param>
+        /// <param name="webToAppRedirect">Web to App Redirect settings.</param>
         /// <param name="name">App name.   This is used in various places on the Apple App Store, Google Play Store, mobile apps and websites..</param>
         /// <param name="hostName">HostName on which the web-ordering system is allowed to be hosted or that a Flipdish website is hosted on..</param>
         /// <param name="mainColor">Main color of the web / Android / iOS applications.</param>
@@ -1423,7 +1469,7 @@ namespace Flipdish.Model
         /// <param name="panaceaVanityUrl">In case of IsPanaceaEnabled is true, the app can be accessed via https://my.flipdish.com/{PanaceaVanityUrl}.</param>
         /// <param name="cookieConsentPromptEnabled">Cookie Consent Prompt Enabled.</param>
         /// <param name="countryId">Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks.</param>
-        public App(string appId = default(string), bool? hasIosApp = default(bool?), string iosAppStoreUrl = default(string), bool? hasAndroidApp = default(bool?), string androidPlayStoreUrl = default(string), bool? displayDeliveryRestaurantScreen = default(bool?), string logoImageUrl = default(string), List<Language> languages = default(List<Language>), List<Language> availableAppLanguages = default(List<Language>), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), List<AppResourceSetEnum> appResourceSet = default(List<AppResourceSetEnum>), List<string> features = default(List<string>), Coordinates mapCenter = default(Coordinates), Coordinates mapNorthEast = default(Coordinates), Coordinates mapSouthWest = default(Coordinates), string googleMapsApiKeyWeb = default(string), string orgId = default(string), string smsRestaurantName = default(string), string name = default(string), string hostName = default(string), string mainColor = default(string), string kioskPrimaryColour = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?), bool? isPanaceaEnabled = default(bool?), string panaceaVanityUrl = default(string), bool? cookieConsentPromptEnabled = default(bool?), string countryId = default(string))
+        public App(string appId = default(string), bool? hasIosApp = default(bool?), string iosAppStoreUrl = default(string), bool? hasAndroidApp = default(bool?), string androidPlayStoreUrl = default(string), bool? displayDeliveryRestaurantScreen = default(bool?), string logoImageUrl = default(string), List<Language> languages = default(List<Language>), List<Language> availableAppLanguages = default(List<Language>), AppAccessLevelEnum? appAccessLevel = default(AppAccessLevelEnum?), List<AppResourceSetEnum> appResourceSet = default(List<AppResourceSetEnum>), List<string> features = default(List<string>), Coordinates mapCenter = default(Coordinates), Coordinates mapNorthEast = default(Coordinates), Coordinates mapSouthWest = default(Coordinates), string googleMapsApiKeyWeb = default(string), string orgId = default(string), string smsRestaurantName = default(string), WebToAppRedirectEnum? webToAppRedirect = default(WebToAppRedirectEnum?), string name = default(string), string hostName = default(string), string mainColor = default(string), string kioskPrimaryColour = default(string), ApplicationCategoryEnum? applicationCategory = default(ApplicationCategoryEnum?), bool? isPanaceaEnabled = default(bool?), string panaceaVanityUrl = default(string), bool? cookieConsentPromptEnabled = default(bool?), string countryId = default(string))
         {
             this.AppId = appId;
             this.HasIosApp = hasIosApp;
@@ -1443,6 +1489,7 @@ namespace Flipdish.Model
             this.GoogleMapsApiKeyWeb = googleMapsApiKeyWeb;
             this.OrgId = orgId;
             this.SmsRestaurantName = smsRestaurantName;
+            this.WebToAppRedirect = webToAppRedirect;
             this.Name = name;
             this.HostName = hostName;
             this.MainColor = mainColor;
@@ -1568,6 +1615,7 @@ namespace Flipdish.Model
         [DataMember(Name="SmsRestaurantName", EmitDefaultValue=false)]
         public string SmsRestaurantName { get; set; }
 
+
         /// <summary>
         /// App name.   This is used in various places on the Apple App Store, Google Play Store, mobile apps and websites.
         /// </summary>
@@ -1651,6 +1699,7 @@ namespace Flipdish.Model
             sb.Append("  GoogleMapsApiKeyWeb: ").Append(GoogleMapsApiKeyWeb).Append("\n");
             sb.Append("  OrgId: ").Append(OrgId).Append("\n");
             sb.Append("  SmsRestaurantName: ").Append(SmsRestaurantName).Append("\n");
+            sb.Append("  WebToAppRedirect: ").Append(WebToAppRedirect).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  HostName: ").Append(HostName).Append("\n");
             sb.Append("  MainColor: ").Append(MainColor).Append("\n");
@@ -1785,6 +1834,11 @@ namespace Flipdish.Model
                     this.SmsRestaurantName.Equals(input.SmsRestaurantName))
                 ) && 
                 (
+                    this.WebToAppRedirect == input.WebToAppRedirect ||
+                    (this.WebToAppRedirect != null &&
+                    this.WebToAppRedirect.Equals(input.WebToAppRedirect))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -1876,6 +1930,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.OrgId.GetHashCode();
                 if (this.SmsRestaurantName != null)
                     hashCode = hashCode * 59 + this.SmsRestaurantName.GetHashCode();
+                if (this.WebToAppRedirect != null)
+                    hashCode = hashCode * 59 + this.WebToAppRedirect.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.HostName != null)

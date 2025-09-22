@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **GoogleMapsApiKeyWeb** | **string** | Key to be passed with Google Maps requests | [optional] 
 **OrgId** | **string** | Org Id | [optional] 
 **SmsRestaurantName** | **string** | SMS Restaurant Name | [optional] 
+**WebToAppRedirect** | **string** | Web to App Redirect settings | [optional] 
 **Name** | **string** | App name.   This is used in various places on the Apple App Store, Google Play Store, mobile apps and websites. | [optional] 
 **HostName** | **string** | HostName on which the web-ordering system is allowed to be hosted or that a Flipdish website is hosted on. | [optional] 
 **MainColor** | **string** | Main color of the web / Android / iOS applications | [optional] 

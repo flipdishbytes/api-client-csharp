@@ -34,6 +34,7 @@ Method | HTTP request | Description
 [**PutStoreDeliveryFeeConfig**](StoresApi.md#putstoredeliveryfeeconfig) | **PUT** /api/v1.0/stores/{storeId}/feeConfig/deliveryZones | 
 [**SetBusinessHours**](StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
 [**SetPreOrdeEnabled**](StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
+[**SetStoreCollectionSettings**](StoresApi.md#setstorecollectionsettings) | **POST** /api/v1.0/stores/{storeId}/collectionsettings | 
 [**SetStoreLeadTimes**](StoresApi.md#setstoreleadtimes) | **POST** /api/v1.0/stores/{storeId}/leadTimes | 
 [**StoresSetPropertyId**](StoresApi.md#storessetpropertyid) | **POST** /api/v1.0/stores/{storeId}/propertyId/{propertyId} | 
 [**SupportedSalesChannelsTypes**](StoresApi.md#supportedsaleschannelstypes) | **POST** /api/v1.0/properties/{propertyId}/stores/{storeId}/supportedSalesChannels | 
@@ -1968,6 +1969,69 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="setstorecollectionsettings"></a>
+# **SetStoreCollectionSettings**
+> RestApiResultRestApiDefaultResponse SetStoreCollectionSettings (int? storeId, StoreCollectionSettings settings)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class SetStoreCollectionSettingsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new StoresApi();
+            var storeId = 56;  // int? | 
+            var settings = new StoreCollectionSettings(); // StoreCollectionSettings | 
+
+            try
+            {
+                RestApiResultRestApiDefaultResponse result = apiInstance.SetStoreCollectionSettings(storeId, settings);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StoresApi.SetStoreCollectionSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **int?**|  | 
+ **settings** | [**StoreCollectionSettings**](StoreCollectionSettings.md)|  | 
+
+### Return type
+
+[**RestApiResultRestApiDefaultResponse**](RestApiResultRestApiDefaultResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
