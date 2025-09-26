@@ -1975,7 +1975,7 @@ Name | Type | Description  | Notes
 
 <a name="setstorecollectionsettings"></a>
 # **SetStoreCollectionSettings**
-> RestApiResultRestApiDefaultResponse SetStoreCollectionSettings (int? storeId, StoreCollectionSettings settings)
+> RestApiResultRestApiDefaultResponse SetStoreCollectionSettings (int? storeId, StoreCollectionSettings settings, bool? inheritFromProperty = null)
 
 
 
@@ -1999,10 +1999,11 @@ namespace Example
             var apiInstance = new StoresApi();
             var storeId = 56;  // int? | 
             var settings = new StoreCollectionSettings(); // StoreCollectionSettings | 
+            var inheritFromProperty = true;  // bool? |  (optional) 
 
             try
             {
-                RestApiResultRestApiDefaultResponse result = apiInstance.SetStoreCollectionSettings(storeId, settings);
+                RestApiResultRestApiDefaultResponse result = apiInstance.SetStoreCollectionSettings(storeId, settings, inheritFromProperty);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2020,6 +2021,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storeId** | **int?**|  | 
  **settings** | [**StoreCollectionSettings**](StoreCollectionSettings.md)|  | 
+ **inheritFromProperty** | **bool?**|  | [optional] 
 
 ### Return type
 

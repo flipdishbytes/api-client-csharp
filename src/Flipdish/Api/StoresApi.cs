@@ -763,8 +763,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="settings"></param>
+        /// <param name="inheritFromProperty"> (optional)</param>
         /// <returns>RestApiResultRestApiDefaultResponse</returns>
-        RestApiResultRestApiDefaultResponse SetStoreCollectionSettings (int? storeId, StoreCollectionSettings settings);
+        RestApiResultRestApiDefaultResponse SetStoreCollectionSettings (int? storeId, StoreCollectionSettings settings, bool? inheritFromProperty = null);
 
         /// <summary>
         /// 
@@ -775,8 +776,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="settings"></param>
+        /// <param name="inheritFromProperty"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultRestApiDefaultResponse</returns>
-        ApiResponse<RestApiResultRestApiDefaultResponse> SetStoreCollectionSettingsWithHttpInfo (int? storeId, StoreCollectionSettings settings);
+        ApiResponse<RestApiResultRestApiDefaultResponse> SetStoreCollectionSettingsWithHttpInfo (int? storeId, StoreCollectionSettings settings, bool? inheritFromProperty = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1729,8 +1731,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="settings"></param>
+        /// <param name="inheritFromProperty"> (optional)</param>
         /// <returns>Task of RestApiResultRestApiDefaultResponse</returns>
-        System.Threading.Tasks.Task<RestApiResultRestApiDefaultResponse> SetStoreCollectionSettingsAsync (int? storeId, StoreCollectionSettings settings);
+        System.Threading.Tasks.Task<RestApiResultRestApiDefaultResponse> SetStoreCollectionSettingsAsync (int? storeId, StoreCollectionSettings settings, bool? inheritFromProperty = null);
 
         /// <summary>
         /// 
@@ -1741,8 +1744,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="settings"></param>
+        /// <param name="inheritFromProperty"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultRestApiDefaultResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultRestApiDefaultResponse>> SetStoreCollectionSettingsAsyncWithHttpInfo (int? storeId, StoreCollectionSettings settings);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultRestApiDefaultResponse>> SetStoreCollectionSettingsAsyncWithHttpInfo (int? storeId, StoreCollectionSettings settings, bool? inheritFromProperty = null);
         /// <summary>
         /// 
         /// </summary>
@@ -7170,10 +7174,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="settings"></param>
+        /// <param name="inheritFromProperty"> (optional)</param>
         /// <returns>RestApiResultRestApiDefaultResponse</returns>
-        public RestApiResultRestApiDefaultResponse SetStoreCollectionSettings (int? storeId, StoreCollectionSettings settings)
+        public RestApiResultRestApiDefaultResponse SetStoreCollectionSettings (int? storeId, StoreCollectionSettings settings, bool? inheritFromProperty = null)
         {
-             ApiResponse<RestApiResultRestApiDefaultResponse> localVarResponse = SetStoreCollectionSettingsWithHttpInfo(storeId, settings);
+             ApiResponse<RestApiResultRestApiDefaultResponse> localVarResponse = SetStoreCollectionSettingsWithHttpInfo(storeId, settings, inheritFromProperty);
              return localVarResponse.Data;
         }
 
@@ -7183,8 +7188,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="settings"></param>
+        /// <param name="inheritFromProperty"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultRestApiDefaultResponse</returns>
-        public ApiResponse< RestApiResultRestApiDefaultResponse > SetStoreCollectionSettingsWithHttpInfo (int? storeId, StoreCollectionSettings settings)
+        public ApiResponse< RestApiResultRestApiDefaultResponse > SetStoreCollectionSettingsWithHttpInfo (int? storeId, StoreCollectionSettings settings, bool? inheritFromProperty = null)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -7223,6 +7229,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (inheritFromProperty != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "inheritFromProperty", inheritFromProperty)); // query parameter
             if (settings != null && settings.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(settings); // http body (model) parameter
@@ -7263,10 +7270,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="settings"></param>
+        /// <param name="inheritFromProperty"> (optional)</param>
         /// <returns>Task of RestApiResultRestApiDefaultResponse</returns>
-        public async System.Threading.Tasks.Task<RestApiResultRestApiDefaultResponse> SetStoreCollectionSettingsAsync (int? storeId, StoreCollectionSettings settings)
+        public async System.Threading.Tasks.Task<RestApiResultRestApiDefaultResponse> SetStoreCollectionSettingsAsync (int? storeId, StoreCollectionSettings settings, bool? inheritFromProperty = null)
         {
-             ApiResponse<RestApiResultRestApiDefaultResponse> localVarResponse = await SetStoreCollectionSettingsAsyncWithHttpInfo(storeId, settings);
+             ApiResponse<RestApiResultRestApiDefaultResponse> localVarResponse = await SetStoreCollectionSettingsAsyncWithHttpInfo(storeId, settings, inheritFromProperty);
              return localVarResponse.Data;
 
         }
@@ -7277,8 +7285,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="settings"></param>
+        /// <param name="inheritFromProperty"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultRestApiDefaultResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultRestApiDefaultResponse>> SetStoreCollectionSettingsAsyncWithHttpInfo (int? storeId, StoreCollectionSettings settings)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultRestApiDefaultResponse>> SetStoreCollectionSettingsAsyncWithHttpInfo (int? storeId, StoreCollectionSettings settings, bool? inheritFromProperty = null)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -7317,6 +7326,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (inheritFromProperty != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "inheritFromProperty", inheritFromProperty)); // query parameter
             if (settings != null && settings.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(settings); // http body (model) parameter
