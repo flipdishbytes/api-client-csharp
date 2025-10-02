@@ -813,16 +813,10 @@ namespace Flipdish.Model
         {
             
             /// <summary>
-            /// Enum CollectionSetting for value: CollectionSetting
+            /// Enum CollectionSettings for value: CollectionSettings
             /// </summary>
-            [EnumMember(Value = "CollectionSetting")]
-            CollectionSetting = 1,
-            
-            /// <summary>
-            /// Enum DeliverySetting for value: DeliverySetting
-            /// </summary>
-            [EnumMember(Value = "DeliverySetting")]
-            DeliverySetting = 2
+            [EnumMember(Value = "CollectionSettings")]
+            CollectionSettings = 1
         }
 
 
