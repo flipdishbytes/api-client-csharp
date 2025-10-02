@@ -74,6 +74,33 @@ namespace Flipdish.Model
         [DataMember(Name="SalesChannelTypes", EmitDefaultValue=false)]
         public List<SalesChannelTypesEnum> SalesChannelTypes { get; set; }
         /// <summary>
+        /// Defines InheritanceConfigTypes
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum InheritanceConfigTypesEnum
+        {
+            
+            /// <summary>
+            /// Enum CollectionSetting for value: CollectionSetting
+            /// </summary>
+            [EnumMember(Value = "CollectionSetting")]
+            CollectionSetting = 1,
+            
+            /// <summary>
+            /// Enum DeliverySetting for value: DeliverySetting
+            /// </summary>
+            [EnumMember(Value = "DeliverySetting")]
+            DeliverySetting = 2
+        }
+
+
+        /// <summary>
+        /// Inheritance Config Types
+        /// </summary>
+        /// <value>Inheritance Config Types</value>
+        [DataMember(Name="InheritanceConfigTypes", EmitDefaultValue=false)]
+        public List<InheritanceConfigTypesEnum> InheritanceConfigTypes { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="StoreBase" /> class.
         /// </summary>
         /// <param name="phoneNumber">Phone number.</param>
@@ -106,7 +133,8 @@ namespace Flipdish.Model
         /// <param name="emailAddress">Email address (visible to customers).</param>
         /// <param name="staffLanguage">Staff Language (used for communication with the staff)  Emails, Printouts etc.</param>
         /// <param name="salesChannelTypes">Sales Channel Types.</param>
-        public StoreBase(string phoneNumber = default(string), bool? alwaysAppearOpen = default(bool?), bool? preOrderEnabled = default(bool?), bool? takeOutEnabled = default(bool?), bool? tableServiceEnabled = default(bool?), bool? dineInEnabled = default(bool?), bool? allowPreOrdersAndTableService = default(bool?), bool? pickupEnabled = default(bool?), bool? deliveryEnabled = default(bool?), bool? cardOrderDeliveryEnabled = default(bool?), bool? cashOrdersDeliveryEnabled = default(bool?), bool? cardOrdersPickupEnabled = default(bool?), bool? cashOrdersPickupEnabled = default(bool?), bool? tipsEnabled = default(bool?), bool? automaticallyAcceptOrders = default(bool?), bool? openForDelivery = default(bool?), bool? openForPickup = default(bool?), double? minimumPickupOrderAmount = default(double?), bool? requireCustomerNameForPickup = default(bool?), bool? gdprCustomerPhoneNumbers = default(bool?), bool? requireCustomerNameForDelivery = default(bool?), bool? allowChefNotes = default(bool?), bool? etaInPickupConfirmationSmsEnabled = default(bool?), bool? etaInDeliveryConfirmationSmsEnabled = default(bool?), bool? isArchived = default(bool?), bool? isPublished = default(bool?), string name = default(string), string emailAddress = default(string), string staffLanguage = default(string), List<SalesChannelTypesEnum> salesChannelTypes = default(List<SalesChannelTypesEnum>))
+        /// <param name="inheritanceConfigTypes">Inheritance Config Types.</param>
+        public StoreBase(string phoneNumber = default(string), bool? alwaysAppearOpen = default(bool?), bool? preOrderEnabled = default(bool?), bool? takeOutEnabled = default(bool?), bool? tableServiceEnabled = default(bool?), bool? dineInEnabled = default(bool?), bool? allowPreOrdersAndTableService = default(bool?), bool? pickupEnabled = default(bool?), bool? deliveryEnabled = default(bool?), bool? cardOrderDeliveryEnabled = default(bool?), bool? cashOrdersDeliveryEnabled = default(bool?), bool? cardOrdersPickupEnabled = default(bool?), bool? cashOrdersPickupEnabled = default(bool?), bool? tipsEnabled = default(bool?), bool? automaticallyAcceptOrders = default(bool?), bool? openForDelivery = default(bool?), bool? openForPickup = default(bool?), double? minimumPickupOrderAmount = default(double?), bool? requireCustomerNameForPickup = default(bool?), bool? gdprCustomerPhoneNumbers = default(bool?), bool? requireCustomerNameForDelivery = default(bool?), bool? allowChefNotes = default(bool?), bool? etaInPickupConfirmationSmsEnabled = default(bool?), bool? etaInDeliveryConfirmationSmsEnabled = default(bool?), bool? isArchived = default(bool?), bool? isPublished = default(bool?), string name = default(string), string emailAddress = default(string), string staffLanguage = default(string), List<SalesChannelTypesEnum> salesChannelTypes = default(List<SalesChannelTypesEnum>), List<InheritanceConfigTypesEnum> inheritanceConfigTypes = default(List<InheritanceConfigTypesEnum>))
         {
             this.PhoneNumber = phoneNumber;
             this.AlwaysAppearOpen = alwaysAppearOpen;
@@ -138,6 +166,7 @@ namespace Flipdish.Model
             this.EmailAddress = emailAddress;
             this.StaffLanguage = staffLanguage;
             this.SalesChannelTypes = salesChannelTypes;
+            this.InheritanceConfigTypes = inheritanceConfigTypes;
         }
         
         /// <summary>
@@ -344,6 +373,7 @@ namespace Flipdish.Model
         public string StaffLanguage { get; set; }
 
 
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -382,6 +412,7 @@ namespace Flipdish.Model
             sb.Append("  EmailAddress: ").Append(EmailAddress).Append("\n");
             sb.Append("  StaffLanguage: ").Append(StaffLanguage).Append("\n");
             sb.Append("  SalesChannelTypes: ").Append(SalesChannelTypes).Append("\n");
+            sb.Append("  InheritanceConfigTypes: ").Append(InheritanceConfigTypes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -565,6 +596,11 @@ namespace Flipdish.Model
                     this.SalesChannelTypes == input.SalesChannelTypes ||
                     this.SalesChannelTypes != null &&
                     this.SalesChannelTypes.SequenceEqual(input.SalesChannelTypes)
+                ) && 
+                (
+                    this.InheritanceConfigTypes == input.InheritanceConfigTypes ||
+                    this.InheritanceConfigTypes != null &&
+                    this.InheritanceConfigTypes.SequenceEqual(input.InheritanceConfigTypes)
                 );
         }
 
@@ -637,6 +673,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StaffLanguage.GetHashCode();
                 if (this.SalesChannelTypes != null)
                     hashCode = hashCode * 59 + this.SalesChannelTypes.GetHashCode();
+                if (this.InheritanceConfigTypes != null)
+                    hashCode = hashCode * 59 + this.InheritanceConfigTypes.GetHashCode();
                 return hashCode;
             }
         }

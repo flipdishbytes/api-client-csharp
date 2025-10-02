@@ -33,6 +33,7 @@ Name | Type | Description | Notes
 **EmailAddress** | **string** | Email address (visible to customers) | [optional] 
 **StaffLanguage** | **string** | Staff Language (used for communication with the staff)  Emails, Printouts etc | [optional] 
 **SalesChannelTypes** | **List&lt;string&gt;** | Sales Channel Types | [optional] 
+**InheritanceConfigTypes** | **List&lt;string&gt;** | Inheritance Config Types | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
