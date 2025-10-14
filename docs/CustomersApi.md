@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateCustomer**](CustomersApi.md#createcustomer) | **POST** /api/v1.0/{appId}/customers | 
 [**GetCustomerById**](CustomersApi.md#getcustomerbyid) | **GET** /api/v1.0/{appId}/customers/{customerId} | 
+[**GetCustomers**](CustomersApi.md#getcustomers) | **GET** /api/v1.0/{appId}/customers | 
 [**UpdateCustomerById**](CustomersApi.md#updatecustomerbyid) | **POST** /api/v1.0/{appId}/customers/{customerId} | 
 
 
@@ -123,6 +124,69 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultCustomer**](RestApiResultCustomer.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getcustomers"></a>
+# **GetCustomers**
+> RestApiResultCustomers GetCustomers (string appId, string phoneNumber)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetCustomersExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new CustomersApi();
+            var appId = appId_example;  // string | 
+            var phoneNumber = phoneNumber_example;  // string | 
+
+            try
+            {
+                RestApiResultCustomers result = apiInstance.GetCustomers(appId, phoneNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CustomersApi.GetCustomers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **phoneNumber** | **string**|  | 
+
+### Return type
+
+[**RestApiResultCustomers**](RestApiResultCustomers.md)
 
 ### Authorization
 

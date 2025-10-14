@@ -731,10 +731,11 @@ namespace Flipdish.Model
         /// <param name="currency">Currency which used by the Store.</param>
         /// <param name="coordinates">Latitude and longitude of the store.</param>
         /// <param name="storeTimezone">Timezone of store.</param>
+        /// <param name="storeIanaTimezone">IANA Timezone of store.</param>
         /// <param name="storeGroupId">Store group id of store.</param>
         /// <param name="taxId">VAT number or generic Tax ID of the store.</param>
         /// <param name="prettyAddress">Address of the store.</param>
-        public StoreSummary(int? id = default(int?), string name = default(string), int? menuId = default(int?), Dictionary<string, string> metadata = default(Dictionary<string, string>), CurrencyEnum? currency = default(CurrencyEnum?), Coordinates coordinates = default(Coordinates), string storeTimezone = default(string), int? storeGroupId = default(int?), string taxId = default(string), string prettyAddress = default(string))
+        public StoreSummary(int? id = default(int?), string name = default(string), int? menuId = default(int?), Dictionary<string, string> metadata = default(Dictionary<string, string>), CurrencyEnum? currency = default(CurrencyEnum?), Coordinates coordinates = default(Coordinates), string storeTimezone = default(string), string storeIanaTimezone = default(string), int? storeGroupId = default(int?), string taxId = default(string), string prettyAddress = default(string))
         {
             this.Id = id;
             this.Name = name;
@@ -743,6 +744,7 @@ namespace Flipdish.Model
             this.Currency = currency;
             this.Coordinates = coordinates;
             this.StoreTimezone = storeTimezone;
+            this.StoreIanaTimezone = storeIanaTimezone;
             this.StoreGroupId = storeGroupId;
             this.TaxId = taxId;
             this.PrettyAddress = prettyAddress;
@@ -792,6 +794,13 @@ namespace Flipdish.Model
         public string StoreTimezone { get; set; }
 
         /// <summary>
+        /// IANA Timezone of store
+        /// </summary>
+        /// <value>IANA Timezone of store</value>
+        [DataMember(Name="StoreIanaTimezone", EmitDefaultValue=false)]
+        public string StoreIanaTimezone { get; set; }
+
+        /// <summary>
         /// Store group id of store
         /// </summary>
         /// <value>Store group id of store</value>
@@ -827,6 +836,7 @@ namespace Flipdish.Model
             sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("  Coordinates: ").Append(Coordinates).Append("\n");
             sb.Append("  StoreTimezone: ").Append(StoreTimezone).Append("\n");
+            sb.Append("  StoreIanaTimezone: ").Append(StoreIanaTimezone).Append("\n");
             sb.Append("  StoreGroupId: ").Append(StoreGroupId).Append("\n");
             sb.Append("  TaxId: ").Append(TaxId).Append("\n");
             sb.Append("  PrettyAddress: ").Append(PrettyAddress).Append("\n");
@@ -900,6 +910,11 @@ namespace Flipdish.Model
                     this.StoreTimezone.Equals(input.StoreTimezone))
                 ) && 
                 (
+                    this.StoreIanaTimezone == input.StoreIanaTimezone ||
+                    (this.StoreIanaTimezone != null &&
+                    this.StoreIanaTimezone.Equals(input.StoreIanaTimezone))
+                ) && 
+                (
                     this.StoreGroupId == input.StoreGroupId ||
                     (this.StoreGroupId != null &&
                     this.StoreGroupId.Equals(input.StoreGroupId))
@@ -939,6 +954,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Coordinates.GetHashCode();
                 if (this.StoreTimezone != null)
                     hashCode = hashCode * 59 + this.StoreTimezone.GetHashCode();
+                if (this.StoreIanaTimezone != null)
+                    hashCode = hashCode * 59 + this.StoreIanaTimezone.GetHashCode();
                 if (this.StoreGroupId != null)
                     hashCode = hashCode * 59 + this.StoreGroupId.GetHashCode();
                 if (this.TaxId != null)

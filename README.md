@@ -221,6 +221,7 @@ Class | Method | HTTP request | Description
 *CrossSellApi* | [**GetCrossSellMenuItems**](docs/CrossSellApi.md#getcrosssellmenuitems) | **GET** /api/v1.0/{appId}/crossSell/menuItems | 
 *CustomersApi* | [**CreateCustomer**](docs/CustomersApi.md#createcustomer) | **POST** /api/v1.0/{appId}/customers | 
 *CustomersApi* | [**GetCustomerById**](docs/CustomersApi.md#getcustomerbyid) | **GET** /api/v1.0/{appId}/customers/{customerId} | 
+*CustomersApi* | [**GetCustomers**](docs/CustomersApi.md#getcustomers) | **GET** /api/v1.0/{appId}/customers | 
 *CustomersApi* | [**UpdateCustomerById**](docs/CustomersApi.md#updatecustomerbyid) | **POST** /api/v1.0/{appId}/customers/{customerId} | 
 *DeliveryZoneApi* | [**AddDeliveryZone**](docs/DeliveryZoneApi.md#adddeliveryzone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones | 
 *DeliveryZoneApi* | [**GetDeliveryZones**](docs/DeliveryZoneApi.md#getdeliveryzones) | **GET** /api/v1.0/stores/{storeId}/deliveryzones | 
@@ -590,6 +591,7 @@ Class | Method | HTTP request | Description
 *TipsApi* | [**TipConfigUpsert**](docs/TipsApi.md#tipconfigupsert) | **POST** /api/v1.0/stores/{storeId}/tipconfig | 
 *UsersApi* | [**GetPreviousOrderCountForStore**](docs/UsersApi.md#getpreviousordercountforstore) | **GET** /api/v1.0/users/{userId}/previousordercount/{storeId} | 
 *UsersApi* | [**GetRoles**](docs/UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | 
+*UsersApi* | [**SearchUsers**](docs/UsersApi.md#searchusers) | **GET** /api/v1.0/users/search | 
 *VouchersApi* | [**CreateVoucher**](docs/VouchersApi.md#createvoucher) | **POST** /api/v1.0/vouchers/{appId} | 
 *VouchersApi* | [**GetVoucherByCode**](docs/VouchersApi.md#getvoucherbycode) | **GET** /api/v1.0/{appId}/vouchers/code/{code} | 
 *VouchersApi* | [**GetVoucherById**](docs/VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | 
@@ -744,6 +746,7 @@ Class | Method | HTTP request | Description
  - [Model.CustomerSummary](docs/CustomerSummary.md)
  - [Model.CustomerUpdateModel](docs/CustomerUpdateModel.md)
  - [Model.CustomerUpdatedEvent](docs/CustomerUpdatedEvent.md)
+ - [Model.Customers](docs/Customers.md)
  - [Model.DashboardEmbed](docs/DashboardEmbed.md)
  - [Model.DeliveryLocation](docs/DeliveryLocation.md)
  - [Model.DeliveryZone](docs/DeliveryZone.md)
@@ -1128,6 +1131,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiPaginationResultStoreGroupExtended](docs/RestApiPaginationResultStoreGroupExtended.md)
  - [Model.RestApiPaginationResultStoreHeader](docs/RestApiPaginationResultStoreHeader.md)
  - [Model.RestApiPaginationResultStoreValidationConfig](docs/RestApiPaginationResultStoreValidationConfig.md)
+ - [Model.RestApiPaginationResultUser](docs/RestApiPaginationResultUser.md)
  - [Model.RestApiPaginationResultVoucherSummary](docs/RestApiPaginationResultVoucherSummary.md)
  - [Model.RestApiPaginationResultWebhookLog](docs/RestApiPaginationResultWebhookLog.md)
  - [Model.RestApiPaginationResultWebhookSubscription](docs/RestApiPaginationResultWebhookSubscription.md)
@@ -1159,6 +1163,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultCreatedMenuSectionItems](docs/RestApiResultCreatedMenuSectionItems.md)
  - [Model.RestApiResultCrossSellMenuItems](docs/RestApiResultCrossSellMenuItems.md)
  - [Model.RestApiResultCustomer](docs/RestApiResultCustomer.md)
+ - [Model.RestApiResultCustomers](docs/RestApiResultCustomers.md)
  - [Model.RestApiResultDeliveryZone](docs/RestApiResultDeliveryZone.md)
  - [Model.RestApiResultDnsRecordInformation](docs/RestApiResultDnsRecordInformation.md)
  - [Model.RestApiResultExecuteConfigurationActionResult](docs/RestApiResultExecuteConfigurationActionResult.md)
@@ -1385,6 +1390,7 @@ Class | Method | HTTP request | Description
  - [Model.UpdateTipConfiguration](docs/UpdateTipConfiguration.md)
  - [Model.UpdateVoucher](docs/UpdateVoucher.md)
  - [Model.UpdateVoucherUsage](docs/UpdateVoucherUsage.md)
+ - [Model.User](docs/User.md)
  - [Model.UserAnsweredSignupQuestionsEvent](docs/UserAnsweredSignupQuestionsEvent.md)
  - [Model.UserCreatedEvent](docs/UserCreatedEvent.md)
  - [Model.UserDeletedEvent](docs/UserDeletedEvent.md)
@@ -1392,6 +1398,7 @@ Class | Method | HTTP request | Description
  - [Model.UserLoginEvent](docs/UserLoginEvent.md)
  - [Model.UserPasswordCreatedEvent](docs/UserPasswordCreatedEvent.md)
  - [Model.UserUpdatedEvent](docs/UserUpdatedEvent.md)
+ - [Model.UserWhiteLabelConfig](docs/UserWhiteLabelConfig.md)
  - [Model.ValidValue](docs/ValidValue.md)
  - [Model.ValidationErrorResult](docs/ValidationErrorResult.md)
  - [Model.ValidityPeriod](docs/ValidityPeriod.md)

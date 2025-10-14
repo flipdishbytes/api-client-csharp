@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **Currency** | **string** | Currency which used by the Store | [optional] 
 **Coordinates** | [**Coordinates**](Coordinates.md) | Latitude and longitude of the store | [optional] 
 **StoreTimezone** | **string** | Timezone of store | [optional] 
+**StoreIanaTimezone** | **string** | IANA Timezone of store | [optional] 
 **StoreGroupId** | **int?** | Store group id of store | [optional] 
 **TaxId** | **string** | VAT number or generic Tax ID of the store | [optional] 
 **PrettyAddress** | **string** | Address of the store | [optional] 
