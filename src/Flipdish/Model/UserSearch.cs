@@ -23,10 +23,10 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// User
+    /// User Search Result
     /// </summary>
     [DataContract]
-    public partial class User :  IEquatable<User>
+    public partial class UserSearch :  IEquatable<UserSearch>
     {
         /// <summary>
         /// User Discriminator
@@ -68,7 +68,7 @@ namespace Flipdish.Model
         [DataMember(Name="UserDiscriminator", EmitDefaultValue=false)]
         public UserDiscriminatorEnum? UserDiscriminator { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="User" /> class.
+        /// Initializes a new instance of the <see cref="UserSearch" /> class.
         /// </summary>
         /// <param name="id">User Id.</param>
         /// <param name="phoneNumber">Phone Number.</param>
@@ -78,7 +78,7 @@ namespace Flipdish.Model
         /// <param name="userDiscriminator">User Discriminator.</param>
         /// <param name="tsCreate">Timestamp Created.</param>
         /// <param name="whiteLabelConfigs">WhiteLabel Configs.</param>
-        public User(int? id = default(int?), string phoneNumber = default(string), string email = default(string), string customerName = default(string), bool? hasLoggedIn = default(bool?), UserDiscriminatorEnum? userDiscriminator = default(UserDiscriminatorEnum?), DateTime? tsCreate = default(DateTime?), List<UserWhiteLabelConfig> whiteLabelConfigs = default(List<UserWhiteLabelConfig>))
+        public UserSearch(int? id = default(int?), string phoneNumber = default(string), string email = default(string), string customerName = default(string), bool? hasLoggedIn = default(bool?), UserDiscriminatorEnum? userDiscriminator = default(UserDiscriminatorEnum?), DateTime? tsCreate = default(DateTime?), List<UserWhiteLabelConfig> whiteLabelConfigs = default(List<UserWhiteLabelConfig>))
         {
             this.Id = id;
             this.PhoneNumber = phoneNumber;
@@ -154,7 +154,7 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class User {\n");
+            sb.Append("class UserSearch {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
@@ -184,15 +184,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as User);
+            return this.Equals(input as UserSearch);
         }
 
         /// <summary>
-        /// Returns true if User instances are equal
+        /// Returns true if UserSearch instances are equal
         /// </summary>
-        /// <param name="input">Instance of User to be compared</param>
+        /// <param name="input">Instance of UserSearch to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(User input)
+        public bool Equals(UserSearch input)
         {
             if (input == null)
                 return false;

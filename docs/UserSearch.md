@@ -1,4 +1,4 @@
-# Flipdish.Model.User
+# Flipdish.Model.UserSearch
 ## Properties
 
 Name | Type | Description | Notes

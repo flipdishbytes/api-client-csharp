@@ -34,11 +34,13 @@ namespace Flipdish.Model
         /// <param name="languageId">ISO 639-1 Language Code.</param>
         /// <param name="displayOrder">Display Order.</param>
         /// <param name="name">Language Name.</param>
-        public Language(string languageId = default(string), int? displayOrder = default(int?), string name = default(string))
+        /// <param name="enabled">Is the language enabled for use..</param>
+        public Language(string languageId = default(string), int? displayOrder = default(int?), string name = default(string), bool? enabled = default(bool?))
         {
             this.LanguageId = languageId;
             this.DisplayOrder = displayOrder;
             this.Name = name;
+            this.Enabled = enabled;
         }
         
         /// <summary>
@@ -63,6 +65,13 @@ namespace Flipdish.Model
         public string Name { get; set; }
 
         /// <summary>
+        /// Is the language enabled for use.
+        /// </summary>
+        /// <value>Is the language enabled for use.</value>
+        [DataMember(Name="Enabled", EmitDefaultValue=false)]
+        public bool? Enabled { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -73,6 +82,7 @@ namespace Flipdish.Model
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  DisplayOrder: ").Append(DisplayOrder).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,6 +131,11 @@ namespace Flipdish.Model
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.Enabled == input.Enabled ||
+                    (this.Enabled != null &&
+                    this.Enabled.Equals(input.Enabled))
                 );
         }
 
@@ -139,6 +154,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.DisplayOrder.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Enabled != null)
+                    hashCode = hashCode * 59 + this.Enabled.GetHashCode();
                 return hashCode;
             }
         }

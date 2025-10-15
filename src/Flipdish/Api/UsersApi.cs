@@ -73,14 +73,35 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>RestApiResultUserInfo</returns>
+        RestApiResultUserInfo GetUserById (int? userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>ApiResponse of RestApiResultUserInfo</returns>
+        ApiResponse<RestApiResultUserInfo> GetUserByIdWithHttpInfo (int? userId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchQuery"></param>
         /// <param name="hasUserLoggedIn"> (optional)</param>
         /// <param name="userDiscriminator"> (optional)</param>
         /// <param name="searchIn"> (optional)</param>
         /// <param name="pageIndex"> (optional)</param>
         /// <param name="pageSize"> (optional)</param>
-        /// <returns>RestApiPaginationResultUser</returns>
-        RestApiPaginationResultUser SearchUsers (string searchQuery, bool? hasUserLoggedIn = null, string userDiscriminator = null, string searchIn = null, int? pageIndex = null, int? pageSize = null);
+        /// <returns>RestApiPaginationResultUserSearch</returns>
+        RestApiPaginationResultUserSearch SearchUsers (string searchQuery, bool? hasUserLoggedIn = null, string userDiscriminator = null, string searchIn = null, int? pageIndex = null, int? pageSize = null);
 
         /// <summary>
         /// 
@@ -95,8 +116,8 @@ namespace Flipdish.Api
         /// <param name="searchIn"> (optional)</param>
         /// <param name="pageIndex"> (optional)</param>
         /// <param name="pageSize"> (optional)</param>
-        /// <returns>ApiResponse of RestApiPaginationResultUser</returns>
-        ApiResponse<RestApiPaginationResultUser> SearchUsersWithHttpInfo (string searchQuery, bool? hasUserLoggedIn = null, string userDiscriminator = null, string searchIn = null, int? pageIndex = null, int? pageSize = null);
+        /// <returns>ApiResponse of RestApiPaginationResultUserSearch</returns>
+        ApiResponse<RestApiPaginationResultUserSearch> SearchUsersWithHttpInfo (string searchQuery, bool? hasUserLoggedIn = null, string userDiscriminator = null, string searchIn = null, int? pageIndex = null, int? pageSize = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -148,14 +169,35 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of RestApiResultUserInfo</returns>
+        System.Threading.Tasks.Task<RestApiResultUserInfo> GetUserByIdAsync (int? userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultUserInfo)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultUserInfo>> GetUserByIdAsyncWithHttpInfo (int? userId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchQuery"></param>
         /// <param name="hasUserLoggedIn"> (optional)</param>
         /// <param name="userDiscriminator"> (optional)</param>
         /// <param name="searchIn"> (optional)</param>
         /// <param name="pageIndex"> (optional)</param>
         /// <param name="pageSize"> (optional)</param>
-        /// <returns>Task of RestApiPaginationResultUser</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultUser> SearchUsersAsync (string searchQuery, bool? hasUserLoggedIn = null, string userDiscriminator = null, string searchIn = null, int? pageIndex = null, int? pageSize = null);
+        /// <returns>Task of RestApiPaginationResultUserSearch</returns>
+        System.Threading.Tasks.Task<RestApiPaginationResultUserSearch> SearchUsersAsync (string searchQuery, bool? hasUserLoggedIn = null, string userDiscriminator = null, string searchIn = null, int? pageIndex = null, int? pageSize = null);
 
         /// <summary>
         /// 
@@ -170,8 +212,8 @@ namespace Flipdish.Api
         /// <param name="searchIn"> (optional)</param>
         /// <param name="pageIndex"> (optional)</param>
         /// <param name="pageSize"> (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiPaginationResultUser)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultUser>> SearchUsersAsyncWithHttpInfo (string searchQuery, bool? hasUserLoggedIn = null, string userDiscriminator = null, string searchIn = null, int? pageIndex = null, int? pageSize = null);
+        /// <returns>Task of ApiResponse (RestApiPaginationResultUserSearch)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultUserSearch>> SearchUsersAsyncWithHttpInfo (string searchQuery, bool? hasUserLoggedIn = null, string userDiscriminator = null, string searchIn = null, int? pageIndex = null, int? pageSize = null);
         #endregion Asynchronous Operations
     }
 
@@ -578,16 +620,167 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>RestApiResultUserInfo</returns>
+        public RestApiResultUserInfo GetUserById (int? userId)
+        {
+             ApiResponse<RestApiResultUserInfo> localVarResponse = GetUserByIdWithHttpInfo(userId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>ApiResponse of RestApiResultUserInfo</returns>
+        public ApiResponse< RestApiResultUserInfo > GetUserByIdWithHttpInfo (int? userId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserById");
+
+            var localVarPath = "./api/v1.0/users/{userId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUserById", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultUserInfo>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultUserInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultUserInfo)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of RestApiResultUserInfo</returns>
+        public async System.Threading.Tasks.Task<RestApiResultUserInfo> GetUserByIdAsync (int? userId)
+        {
+             ApiResponse<RestApiResultUserInfo> localVarResponse = await GetUserByIdAsyncWithHttpInfo(userId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultUserInfo)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultUserInfo>> GetUserByIdAsyncWithHttpInfo (int? userId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserById");
+
+            var localVarPath = "./api/v1.0/users/{userId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUserById", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultUserInfo>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultUserInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultUserInfo)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchQuery"></param>
         /// <param name="hasUserLoggedIn"> (optional)</param>
         /// <param name="userDiscriminator"> (optional)</param>
         /// <param name="searchIn"> (optional)</param>
         /// <param name="pageIndex"> (optional)</param>
         /// <param name="pageSize"> (optional)</param>
-        /// <returns>RestApiPaginationResultUser</returns>
-        public RestApiPaginationResultUser SearchUsers (string searchQuery, bool? hasUserLoggedIn = null, string userDiscriminator = null, string searchIn = null, int? pageIndex = null, int? pageSize = null)
+        /// <returns>RestApiPaginationResultUserSearch</returns>
+        public RestApiPaginationResultUserSearch SearchUsers (string searchQuery, bool? hasUserLoggedIn = null, string userDiscriminator = null, string searchIn = null, int? pageIndex = null, int? pageSize = null)
         {
-             ApiResponse<RestApiPaginationResultUser> localVarResponse = SearchUsersWithHttpInfo(searchQuery, hasUserLoggedIn, userDiscriminator, searchIn, pageIndex, pageSize);
+             ApiResponse<RestApiPaginationResultUserSearch> localVarResponse = SearchUsersWithHttpInfo(searchQuery, hasUserLoggedIn, userDiscriminator, searchIn, pageIndex, pageSize);
              return localVarResponse.Data;
         }
 
@@ -601,8 +794,8 @@ namespace Flipdish.Api
         /// <param name="searchIn"> (optional)</param>
         /// <param name="pageIndex"> (optional)</param>
         /// <param name="pageSize"> (optional)</param>
-        /// <returns>ApiResponse of RestApiPaginationResultUser</returns>
-        public ApiResponse< RestApiPaginationResultUser > SearchUsersWithHttpInfo (string searchQuery, bool? hasUserLoggedIn = null, string userDiscriminator = null, string searchIn = null, int? pageIndex = null, int? pageSize = null)
+        /// <returns>ApiResponse of RestApiPaginationResultUserSearch</returns>
+        public ApiResponse< RestApiPaginationResultUserSearch > SearchUsersWithHttpInfo (string searchQuery, bool? hasUserLoggedIn = null, string userDiscriminator = null, string searchIn = null, int? pageIndex = null, int? pageSize = null)
         {
             // verify the required parameter 'searchQuery' is set
             if (searchQuery == null)
@@ -659,9 +852,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiPaginationResultUser>(localVarStatusCode,
+            return new ApiResponse<RestApiPaginationResultUserSearch>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiPaginationResultUser) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultUser)));
+                (RestApiPaginationResultUserSearch) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultUserSearch)));
         }
 
         /// <summary>
@@ -674,10 +867,10 @@ namespace Flipdish.Api
         /// <param name="searchIn"> (optional)</param>
         /// <param name="pageIndex"> (optional)</param>
         /// <param name="pageSize"> (optional)</param>
-        /// <returns>Task of RestApiPaginationResultUser</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultUser> SearchUsersAsync (string searchQuery, bool? hasUserLoggedIn = null, string userDiscriminator = null, string searchIn = null, int? pageIndex = null, int? pageSize = null)
+        /// <returns>Task of RestApiPaginationResultUserSearch</returns>
+        public async System.Threading.Tasks.Task<RestApiPaginationResultUserSearch> SearchUsersAsync (string searchQuery, bool? hasUserLoggedIn = null, string userDiscriminator = null, string searchIn = null, int? pageIndex = null, int? pageSize = null)
         {
-             ApiResponse<RestApiPaginationResultUser> localVarResponse = await SearchUsersAsyncWithHttpInfo(searchQuery, hasUserLoggedIn, userDiscriminator, searchIn, pageIndex, pageSize);
+             ApiResponse<RestApiPaginationResultUserSearch> localVarResponse = await SearchUsersAsyncWithHttpInfo(searchQuery, hasUserLoggedIn, userDiscriminator, searchIn, pageIndex, pageSize);
              return localVarResponse.Data;
 
         }
@@ -692,8 +885,8 @@ namespace Flipdish.Api
         /// <param name="searchIn"> (optional)</param>
         /// <param name="pageIndex"> (optional)</param>
         /// <param name="pageSize"> (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiPaginationResultUser)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultUser>> SearchUsersAsyncWithHttpInfo (string searchQuery, bool? hasUserLoggedIn = null, string userDiscriminator = null, string searchIn = null, int? pageIndex = null, int? pageSize = null)
+        /// <returns>Task of ApiResponse (RestApiPaginationResultUserSearch)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultUserSearch>> SearchUsersAsyncWithHttpInfo (string searchQuery, bool? hasUserLoggedIn = null, string userDiscriminator = null, string searchIn = null, int? pageIndex = null, int? pageSize = null)
         {
             // verify the required parameter 'searchQuery' is set
             if (searchQuery == null)
@@ -750,9 +943,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiPaginationResultUser>(localVarStatusCode,
+            return new ApiResponse<RestApiPaginationResultUserSearch>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiPaginationResultUser) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultUser)));
+                (RestApiPaginationResultUserSearch) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultUserSearch)));
         }
 
     }

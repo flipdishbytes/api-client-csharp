@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetPreviousOrderCountForStore**](UsersApi.md#getpreviousordercountforstore) | **GET** /api/v1.0/users/{userId}/previousordercount/{storeId} | 
 [**GetRoles**](UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | 
+[**GetUserById**](UsersApi.md#getuserbyid) | **GET** /api/v1.0/users/{userId} | 
 [**SearchUsers**](UsersApi.md#searchusers) | **GET** /api/v1.0/users/search | 
 
 
@@ -129,9 +130,70 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getuserbyid"></a>
+# **GetUserById**
+> RestApiResultUserInfo GetUserById (int? userId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetUserByIdExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var userId = 56;  // int? | 
+
+            try
+            {
+                RestApiResultUserInfo result = apiInstance.GetUserById(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetUserById: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **int?**|  | 
+
+### Return type
+
+[**RestApiResultUserInfo**](RestApiResultUserInfo.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="searchusers"></a>
 # **SearchUsers**
-> RestApiPaginationResultUser SearchUsers (string searchQuery, bool? hasUserLoggedIn = null, string userDiscriminator = null, string searchIn = null, int? pageIndex = null, int? pageSize = null)
+> RestApiPaginationResultUserSearch SearchUsers (string searchQuery, bool? hasUserLoggedIn = null, string userDiscriminator = null, string searchIn = null, int? pageIndex = null, int? pageSize = null)
 
 
 
@@ -162,7 +224,7 @@ namespace Example
 
             try
             {
-                RestApiPaginationResultUser result = apiInstance.SearchUsers(searchQuery, hasUserLoggedIn, userDiscriminator, searchIn, pageIndex, pageSize);
+                RestApiPaginationResultUserSearch result = apiInstance.SearchUsers(searchQuery, hasUserLoggedIn, userDiscriminator, searchIn, pageIndex, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -187,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiPaginationResultUser**](RestApiPaginationResultUser.md)
+[**RestApiPaginationResultUserSearch**](RestApiPaginationResultUserSearch.md)
 
 ### Authorization
 

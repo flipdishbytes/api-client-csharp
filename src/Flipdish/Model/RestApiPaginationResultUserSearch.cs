@@ -26,26 +26,26 @@ namespace Flipdish.Model
     /// Rest api pagination result
     /// </summary>
     [DataContract]
-    public partial class RestApiPaginationResultUser :  IEquatable<RestApiPaginationResultUser>
+    public partial class RestApiPaginationResultUserSearch :  IEquatable<RestApiPaginationResultUserSearch>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiPaginationResultUser" /> class.
+        /// Initializes a new instance of the <see cref="RestApiPaginationResultUserSearch" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected RestApiPaginationResultUser() { }
+        protected RestApiPaginationResultUserSearch() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="RestApiPaginationResultUser" /> class.
+        /// Initializes a new instance of the <see cref="RestApiPaginationResultUserSearch" /> class.
         /// </summary>
         /// <param name="page">Current page index (required).</param>
         /// <param name="limit">Current page size (required).</param>
         /// <param name="totalRecordCount">Total record count (required).</param>
         /// <param name="data">Generic data object. (required).</param>
-        public RestApiPaginationResultUser(int? page = default(int?), int? limit = default(int?), int? totalRecordCount = default(int?), List<User> data = default(List<User>))
+        public RestApiPaginationResultUserSearch(int? page = default(int?), int? limit = default(int?), int? totalRecordCount = default(int?), List<UserSearch> data = default(List<UserSearch>))
         {
             // to ensure "page" is required (not null)
             if (page == null)
             {
-                throw new InvalidDataException("page is a required property for RestApiPaginationResultUser and cannot be null");
+                throw new InvalidDataException("page is a required property for RestApiPaginationResultUserSearch and cannot be null");
             }
             else
             {
@@ -54,7 +54,7 @@ namespace Flipdish.Model
             // to ensure "limit" is required (not null)
             if (limit == null)
             {
-                throw new InvalidDataException("limit is a required property for RestApiPaginationResultUser and cannot be null");
+                throw new InvalidDataException("limit is a required property for RestApiPaginationResultUserSearch and cannot be null");
             }
             else
             {
@@ -63,7 +63,7 @@ namespace Flipdish.Model
             // to ensure "totalRecordCount" is required (not null)
             if (totalRecordCount == null)
             {
-                throw new InvalidDataException("totalRecordCount is a required property for RestApiPaginationResultUser and cannot be null");
+                throw new InvalidDataException("totalRecordCount is a required property for RestApiPaginationResultUserSearch and cannot be null");
             }
             else
             {
@@ -72,7 +72,7 @@ namespace Flipdish.Model
             // to ensure "data" is required (not null)
             if (data == null)
             {
-                throw new InvalidDataException("data is a required property for RestApiPaginationResultUser and cannot be null");
+                throw new InvalidDataException("data is a required property for RestApiPaginationResultUserSearch and cannot be null");
             }
             else
             {
@@ -106,7 +106,7 @@ namespace Flipdish.Model
         /// </summary>
         /// <value>Generic data object.</value>
         [DataMember(Name="Data", EmitDefaultValue=false)]
-        public List<User> Data { get; set; }
+        public List<UserSearch> Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -115,7 +115,7 @@ namespace Flipdish.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RestApiPaginationResultUser {\n");
+            sb.Append("class RestApiPaginationResultUserSearch {\n");
             sb.Append("  Page: ").Append(Page).Append("\n");
             sb.Append("  Limit: ").Append(Limit).Append("\n");
             sb.Append("  TotalRecordCount: ").Append(TotalRecordCount).Append("\n");
@@ -140,15 +140,15 @@ namespace Flipdish.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as RestApiPaginationResultUser);
+            return this.Equals(input as RestApiPaginationResultUserSearch);
         }
 
         /// <summary>
-        /// Returns true if RestApiPaginationResultUser instances are equal
+        /// Returns true if RestApiPaginationResultUserSearch instances are equal
         /// </summary>
-        /// <param name="input">Instance of RestApiPaginationResultUser to be compared</param>
+        /// <param name="input">Instance of RestApiPaginationResultUserSearch to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RestApiPaginationResultUser input)
+        public bool Equals(RestApiPaginationResultUserSearch input)
         {
             if (input == null)
                 return false;
