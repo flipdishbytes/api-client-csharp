@@ -5,8 +5,12 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetPreviousOrderCountForStore**](UsersApi.md#getpreviousordercountforstore) | **GET** /api/v1.0/users/{userId}/previousordercount/{storeId} | 
+[**GetRestaurantUserAccounts**](UsersApi.md#getrestaurantuseraccounts) | **GET** /api/v1.0/users/{userId}/RestaurantUserAccounts | 
+[**GetRestaurantUserStores**](UsersApi.md#getrestaurantuserstores) | **GET** /api/v1.0/users/{userId}/RestaurantUserStores | 
 [**GetRoles**](UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | 
+[**GetRolesAndUnassignedRoles**](UsersApi.md#getrolesandunassignedroles) | **GET** /api/v1.0/users/{userId}/roles | 
 [**GetUserById**](UsersApi.md#getuserbyid) | **GET** /api/v1.0/users/{userId} | 
+[**GetUserNotes**](UsersApi.md#getusernotes) | **GET** /api/v1.0/users/{userId}/UserNotes | 
 [**SearchUsers**](UsersApi.md#searchusers) | **GET** /api/v1.0/users/search | 
 
 
@@ -61,6 +65,128 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiStringResult**](RestApiStringResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getrestaurantuseraccounts"></a>
+# **GetRestaurantUserAccounts**
+> RestApiArrayResultUserFlipdishAccount GetRestaurantUserAccounts (int? userId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetRestaurantUserAccountsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var userId = 56;  // int? | 
+
+            try
+            {
+                RestApiArrayResultUserFlipdishAccount result = apiInstance.GetRestaurantUserAccounts(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetRestaurantUserAccounts: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **int?**|  | 
+
+### Return type
+
+[**RestApiArrayResultUserFlipdishAccount**](RestApiArrayResultUserFlipdishAccount.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getrestaurantuserstores"></a>
+# **GetRestaurantUserStores**
+> RestApiArrayResultUserStoreInfo GetRestaurantUserStores (int? userId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetRestaurantUserStoresExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var userId = 56;  // int? | 
+
+            try
+            {
+                RestApiArrayResultUserStoreInfo result = apiInstance.GetRestaurantUserStores(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetRestaurantUserStores: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **int?**|  | 
+
+### Return type
+
+[**RestApiArrayResultUserStoreInfo**](RestApiArrayResultUserStoreInfo.md)
 
 ### Authorization
 
@@ -130,6 +256,67 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getrolesandunassignedroles"></a>
+# **GetRolesAndUnassignedRoles**
+> RestApiResultUserRole GetRolesAndUnassignedRoles (int? userId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetRolesAndUnassignedRolesExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var userId = 56;  // int? | 
+
+            try
+            {
+                RestApiResultUserRole result = apiInstance.GetRolesAndUnassignedRoles(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetRolesAndUnassignedRoles: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **int?**|  | 
+
+### Return type
+
+[**RestApiResultUserRole**](RestApiResultUserRole.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getuserbyid"></a>
 # **GetUserById**
 > RestApiResultUserInfo GetUserById (int? userId)
@@ -179,6 +366,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultUserInfo**](RestApiResultUserInfo.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getusernotes"></a>
+# **GetUserNotes**
+> RestApiArrayResultUserNote GetUserNotes (int? userId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetUserNotesExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var userId = 56;  // int? | 
+
+            try
+            {
+                RestApiArrayResultUserNote result = apiInstance.GetUserNotes(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetUserNotes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **int?**|  | 
+
+### Return type
+
+[**RestApiArrayResultUserNote**](RestApiArrayResultUserNote.md)
 
 ### Authorization
 
