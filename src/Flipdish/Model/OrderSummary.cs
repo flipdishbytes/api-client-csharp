@@ -247,7 +247,13 @@ namespace Flipdish.Model
             /// Enum AcceptedAndRefunded for value: AcceptedAndRefunded
             /// </summary>
             [EnumMember(Value = "AcceptedAndRefunded")]
-            AcceptedAndRefunded = 13
+            AcceptedAndRefunded = 13,
+            
+            /// <summary>
+            /// Enum PendingPayment for value: PendingPayment
+            /// </summary>
+            [EnumMember(Value = "PendingPayment")]
+            PendingPayment = 14
         }
 
         /// <summary>
