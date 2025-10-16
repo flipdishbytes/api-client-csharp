@@ -32,6 +32,94 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
+        /// <param name="note"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        RestApiDefaultResponse AddUserNote (int? userId, string note);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="note"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        ApiResponse<RestApiDefaultResponse> AddUserNoteWithHttpInfo (int? userId, string note);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="roleName"></param>
+        /// <returns>RestApiResultUserRole</returns>
+        RestApiResultUserRole AddUserToRole (int? userId, string roleName);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="roleName"></param>
+        /// <returns>ApiResponse of RestApiResultUserRole</returns>
+        ApiResponse<RestApiResultUserRole> AddUserToRoleWithHttpInfo (int? userId, string roleName);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        RestApiDefaultResponse AnonymizeUser (int? userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        ApiResponse<RestApiDefaultResponse> AnonymizeUserWithHttpInfo (int? userId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        RestApiDefaultResponse BlockUserPhoneNumber (int? userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        ApiResponse<RestApiDefaultResponse> BlockUserPhoneNumberWithHttpInfo (int? userId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
         /// <param name="storeId"></param>
         /// <returns>RestApiStringResult</returns>
         RestApiStringResult GetPreviousOrderCountForStore (int? userId, int? storeId);
@@ -178,6 +266,92 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        RestApiDefaultResponse MarkUserAsFraudulent (int? userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        ApiResponse<RestApiDefaultResponse> MarkUserAsFraudulentWithHttpInfo (int? userId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        RestApiDefaultResponse MarkUserAsSuspicious (int? userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        ApiResponse<RestApiDefaultResponse> MarkUserAsSuspiciousWithHttpInfo (int? userId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="roleName"></param>
+        /// <returns>RestApiResultUserRole</returns>
+        RestApiResultUserRole RemoveUserFromRole (int? userId, string roleName);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="roleName"></param>
+        /// <returns>ApiResponse of RestApiResultUserRole</returns>
+        ApiResponse<RestApiResultUserRole> RemoveUserFromRoleWithHttpInfo (int? userId, string roleName);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        RestApiDefaultResponse ResetMfa (int? userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        ApiResponse<RestApiDefaultResponse> ResetMfaWithHttpInfo (int? userId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchQuery"></param>
         /// <param name="hasUserLoggedIn"> (optional)</param>
         /// <param name="userDiscriminator"> (optional)</param>
@@ -202,8 +376,163 @@ namespace Flipdish.Api
         /// <param name="pageSize"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultUserSearch</returns>
         ApiResponse<RestApiPaginationResultUserSearch> SearchUsersWithHttpInfo (string searchQuery, bool? hasUserLoggedIn = null, string userDiscriminator = null, string searchIn = null, int? pageIndex = null, int? pageSize = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="customerName"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        RestApiDefaultResponse SetCustomerName (int? userId, string customerName);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="customerName"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        ApiResponse<RestApiDefaultResponse> SetCustomerNameWithHttpInfo (int? userId, string customerName);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="languageId"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        RestApiDefaultResponse SetUserLanguage (int? userId, string languageId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="languageId"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        ApiResponse<RestApiDefaultResponse> SetUserLanguageWithHttpInfo (int? userId, string languageId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        RestApiDefaultResponse UnblockUserPhoneNumber (int? userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        ApiResponse<RestApiDefaultResponse> UnblockUserPhoneNumberWithHttpInfo (int? userId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="note"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        System.Threading.Tasks.Task<RestApiDefaultResponse> AddUserNoteAsync (int? userId, string note);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="note"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> AddUserNoteAsyncWithHttpInfo (int? userId, string note);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="roleName"></param>
+        /// <returns>Task of RestApiResultUserRole</returns>
+        System.Threading.Tasks.Task<RestApiResultUserRole> AddUserToRoleAsync (int? userId, string roleName);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="roleName"></param>
+        /// <returns>Task of ApiResponse (RestApiResultUserRole)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultUserRole>> AddUserToRoleAsyncWithHttpInfo (int? userId, string roleName);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        System.Threading.Tasks.Task<RestApiDefaultResponse> AnonymizeUserAsync (int? userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> AnonymizeUserAsyncWithHttpInfo (int? userId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        System.Threading.Tasks.Task<RestApiDefaultResponse> BlockUserPhoneNumberAsync (int? userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> BlockUserPhoneNumberAsyncWithHttpInfo (int? userId);
         /// <summary>
         /// 
         /// </summary>
@@ -358,6 +687,92 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        System.Threading.Tasks.Task<RestApiDefaultResponse> MarkUserAsFraudulentAsync (int? userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> MarkUserAsFraudulentAsyncWithHttpInfo (int? userId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        System.Threading.Tasks.Task<RestApiDefaultResponse> MarkUserAsSuspiciousAsync (int? userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> MarkUserAsSuspiciousAsyncWithHttpInfo (int? userId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="roleName"></param>
+        /// <returns>Task of RestApiResultUserRole</returns>
+        System.Threading.Tasks.Task<RestApiResultUserRole> RemoveUserFromRoleAsync (int? userId, string roleName);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="roleName"></param>
+        /// <returns>Task of ApiResponse (RestApiResultUserRole)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultUserRole>> RemoveUserFromRoleAsyncWithHttpInfo (int? userId, string roleName);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        System.Threading.Tasks.Task<RestApiDefaultResponse> ResetMfaAsync (int? userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> ResetMfaAsyncWithHttpInfo (int? userId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchQuery"></param>
         /// <param name="hasUserLoggedIn"> (optional)</param>
         /// <param name="userDiscriminator"> (optional)</param>
@@ -382,6 +797,73 @@ namespace Flipdish.Api
         /// <param name="pageSize"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultUserSearch)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultUserSearch>> SearchUsersAsyncWithHttpInfo (string searchQuery, bool? hasUserLoggedIn = null, string userDiscriminator = null, string searchIn = null, int? pageIndex = null, int? pageSize = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="customerName"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        System.Threading.Tasks.Task<RestApiDefaultResponse> SetCustomerNameAsync (int? userId, string customerName);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="customerName"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> SetCustomerNameAsyncWithHttpInfo (int? userId, string customerName);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="languageId"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        System.Threading.Tasks.Task<RestApiDefaultResponse> SetUserLanguageAsync (int? userId, string languageId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="languageId"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> SetUserLanguageAsyncWithHttpInfo (int? userId, string languageId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        System.Threading.Tasks.Task<RestApiDefaultResponse> UnblockUserPhoneNumberAsync (int? userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> UnblockUserPhoneNumberAsyncWithHttpInfo (int? userId);
         #endregion Asynchronous Operations
     }
 
@@ -480,6 +962,658 @@ namespace Flipdish.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="note"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        public RestApiDefaultResponse AddUserNote (int? userId, string note)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = AddUserNoteWithHttpInfo(userId, note);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="note"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        public ApiResponse< RestApiDefaultResponse > AddUserNoteWithHttpInfo (int? userId, string note)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->AddUserNote");
+            // verify the required parameter 'note' is set
+            if (note == null)
+                throw new ApiException(400, "Missing required parameter 'note' when calling UsersApi->AddUserNote");
+
+            var localVarPath = "./api/v1.0/users/{userId}/AddUserNote";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (note != null && note.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(note); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = note; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddUserNote", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="note"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiDefaultResponse> AddUserNoteAsync (int? userId, string note)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = await AddUserNoteAsyncWithHttpInfo(userId, note);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="note"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> AddUserNoteAsyncWithHttpInfo (int? userId, string note)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->AddUserNote");
+            // verify the required parameter 'note' is set
+            if (note == null)
+                throw new ApiException(400, "Missing required parameter 'note' when calling UsersApi->AddUserNote");
+
+            var localVarPath = "./api/v1.0/users/{userId}/AddUserNote";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (note != null && note.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(note); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = note; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddUserNote", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="roleName"></param>
+        /// <returns>RestApiResultUserRole</returns>
+        public RestApiResultUserRole AddUserToRole (int? userId, string roleName)
+        {
+             ApiResponse<RestApiResultUserRole> localVarResponse = AddUserToRoleWithHttpInfo(userId, roleName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="roleName"></param>
+        /// <returns>ApiResponse of RestApiResultUserRole</returns>
+        public ApiResponse< RestApiResultUserRole > AddUserToRoleWithHttpInfo (int? userId, string roleName)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->AddUserToRole");
+            // verify the required parameter 'roleName' is set
+            if (roleName == null)
+                throw new ApiException(400, "Missing required parameter 'roleName' when calling UsersApi->AddUserToRole");
+
+            var localVarPath = "./api/v1.0/users/{userId}/AddUserToRole/{roleName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (roleName != null) localVarPathParams.Add("roleName", this.Configuration.ApiClient.ParameterToString(roleName)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddUserToRole", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultUserRole>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultUserRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultUserRole)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="roleName"></param>
+        /// <returns>Task of RestApiResultUserRole</returns>
+        public async System.Threading.Tasks.Task<RestApiResultUserRole> AddUserToRoleAsync (int? userId, string roleName)
+        {
+             ApiResponse<RestApiResultUserRole> localVarResponse = await AddUserToRoleAsyncWithHttpInfo(userId, roleName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="roleName"></param>
+        /// <returns>Task of ApiResponse (RestApiResultUserRole)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultUserRole>> AddUserToRoleAsyncWithHttpInfo (int? userId, string roleName)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->AddUserToRole");
+            // verify the required parameter 'roleName' is set
+            if (roleName == null)
+                throw new ApiException(400, "Missing required parameter 'roleName' when calling UsersApi->AddUserToRole");
+
+            var localVarPath = "./api/v1.0/users/{userId}/AddUserToRole/{roleName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (roleName != null) localVarPathParams.Add("roleName", this.Configuration.ApiClient.ParameterToString(roleName)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddUserToRole", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultUserRole>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultUserRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultUserRole)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        public RestApiDefaultResponse AnonymizeUser (int? userId)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = AnonymizeUserWithHttpInfo(userId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        public ApiResponse< RestApiDefaultResponse > AnonymizeUserWithHttpInfo (int? userId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->AnonymizeUser");
+
+            var localVarPath = "./api/v1.0/users/{userId}/AnonymizeUser";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AnonymizeUser", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiDefaultResponse> AnonymizeUserAsync (int? userId)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = await AnonymizeUserAsyncWithHttpInfo(userId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> AnonymizeUserAsyncWithHttpInfo (int? userId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->AnonymizeUser");
+
+            var localVarPath = "./api/v1.0/users/{userId}/AnonymizeUser";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AnonymizeUser", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        public RestApiDefaultResponse BlockUserPhoneNumber (int? userId)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = BlockUserPhoneNumberWithHttpInfo(userId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        public ApiResponse< RestApiDefaultResponse > BlockUserPhoneNumberWithHttpInfo (int? userId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->BlockUserPhoneNumber");
+
+            var localVarPath = "./api/v1.0/users/{userId}/BlockUserPhoneNumber";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("BlockUserPhoneNumber", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiDefaultResponse> BlockUserPhoneNumberAsync (int? userId)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = await BlockUserPhoneNumberAsyncWithHttpInfo(userId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> BlockUserPhoneNumberAsyncWithHttpInfo (int? userId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->BlockUserPhoneNumber");
+
+            var localVarPath = "./api/v1.0/users/{userId}/BlockUserPhoneNumber";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("BlockUserPhoneNumber", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
         }
 
         /// <summary>
@@ -1543,6 +2677,622 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        public RestApiDefaultResponse MarkUserAsFraudulent (int? userId)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = MarkUserAsFraudulentWithHttpInfo(userId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        public ApiResponse< RestApiDefaultResponse > MarkUserAsFraudulentWithHttpInfo (int? userId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->MarkUserAsFraudulent");
+
+            var localVarPath = "./api/v1.0/users/{userId}/MarkUserAsFraudulent";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MarkUserAsFraudulent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiDefaultResponse> MarkUserAsFraudulentAsync (int? userId)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = await MarkUserAsFraudulentAsyncWithHttpInfo(userId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> MarkUserAsFraudulentAsyncWithHttpInfo (int? userId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->MarkUserAsFraudulent");
+
+            var localVarPath = "./api/v1.0/users/{userId}/MarkUserAsFraudulent";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MarkUserAsFraudulent", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        public RestApiDefaultResponse MarkUserAsSuspicious (int? userId)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = MarkUserAsSuspiciousWithHttpInfo(userId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        public ApiResponse< RestApiDefaultResponse > MarkUserAsSuspiciousWithHttpInfo (int? userId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->MarkUserAsSuspicious");
+
+            var localVarPath = "./api/v1.0/users/{userId}/MarkUserAsSuspicious";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MarkUserAsSuspicious", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiDefaultResponse> MarkUserAsSuspiciousAsync (int? userId)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = await MarkUserAsSuspiciousAsyncWithHttpInfo(userId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> MarkUserAsSuspiciousAsyncWithHttpInfo (int? userId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->MarkUserAsSuspicious");
+
+            var localVarPath = "./api/v1.0/users/{userId}/MarkUserAsSuspicious";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MarkUserAsSuspicious", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="roleName"></param>
+        /// <returns>RestApiResultUserRole</returns>
+        public RestApiResultUserRole RemoveUserFromRole (int? userId, string roleName)
+        {
+             ApiResponse<RestApiResultUserRole> localVarResponse = RemoveUserFromRoleWithHttpInfo(userId, roleName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="roleName"></param>
+        /// <returns>ApiResponse of RestApiResultUserRole</returns>
+        public ApiResponse< RestApiResultUserRole > RemoveUserFromRoleWithHttpInfo (int? userId, string roleName)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->RemoveUserFromRole");
+            // verify the required parameter 'roleName' is set
+            if (roleName == null)
+                throw new ApiException(400, "Missing required parameter 'roleName' when calling UsersApi->RemoveUserFromRole");
+
+            var localVarPath = "./api/v1.0/users/{userId}/RemoveUserFromRole/{roleName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (roleName != null) localVarPathParams.Add("roleName", this.Configuration.ApiClient.ParameterToString(roleName)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RemoveUserFromRole", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultUserRole>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultUserRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultUserRole)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="roleName"></param>
+        /// <returns>Task of RestApiResultUserRole</returns>
+        public async System.Threading.Tasks.Task<RestApiResultUserRole> RemoveUserFromRoleAsync (int? userId, string roleName)
+        {
+             ApiResponse<RestApiResultUserRole> localVarResponse = await RemoveUserFromRoleAsyncWithHttpInfo(userId, roleName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="roleName"></param>
+        /// <returns>Task of ApiResponse (RestApiResultUserRole)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultUserRole>> RemoveUserFromRoleAsyncWithHttpInfo (int? userId, string roleName)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->RemoveUserFromRole");
+            // verify the required parameter 'roleName' is set
+            if (roleName == null)
+                throw new ApiException(400, "Missing required parameter 'roleName' when calling UsersApi->RemoveUserFromRole");
+
+            var localVarPath = "./api/v1.0/users/{userId}/RemoveUserFromRole/{roleName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (roleName != null) localVarPathParams.Add("roleName", this.Configuration.ApiClient.ParameterToString(roleName)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RemoveUserFromRole", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultUserRole>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultUserRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultUserRole)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        public RestApiDefaultResponse ResetMfa (int? userId)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = ResetMfaWithHttpInfo(userId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        public ApiResponse< RestApiDefaultResponse > ResetMfaWithHttpInfo (int? userId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->ResetMfa");
+
+            var localVarPath = "./api/v1.0/users/{userId}/ResetMfa";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ResetMfa", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiDefaultResponse> ResetMfaAsync (int? userId)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = await ResetMfaAsyncWithHttpInfo(userId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> ResetMfaAsyncWithHttpInfo (int? userId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->ResetMfa");
+
+            var localVarPath = "./api/v1.0/users/{userId}/ResetMfa";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ResetMfa", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchQuery"></param>
         /// <param name="hasUserLoggedIn"> (optional)</param>
         /// <param name="userDiscriminator"> (optional)</param>
@@ -1718,6 +3468,507 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiPaginationResultUserSearch>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiPaginationResultUserSearch) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiPaginationResultUserSearch)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="customerName"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        public RestApiDefaultResponse SetCustomerName (int? userId, string customerName)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = SetCustomerNameWithHttpInfo(userId, customerName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="customerName"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        public ApiResponse< RestApiDefaultResponse > SetCustomerNameWithHttpInfo (int? userId, string customerName)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->SetCustomerName");
+            // verify the required parameter 'customerName' is set
+            if (customerName == null)
+                throw new ApiException(400, "Missing required parameter 'customerName' when calling UsersApi->SetCustomerName");
+
+            var localVarPath = "./api/v1.0/users/{userId}/SetCustomerName";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (customerName != null && customerName.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(customerName); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = customerName; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetCustomerName", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="customerName"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiDefaultResponse> SetCustomerNameAsync (int? userId, string customerName)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = await SetCustomerNameAsyncWithHttpInfo(userId, customerName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="customerName"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> SetCustomerNameAsyncWithHttpInfo (int? userId, string customerName)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->SetCustomerName");
+            // verify the required parameter 'customerName' is set
+            if (customerName == null)
+                throw new ApiException(400, "Missing required parameter 'customerName' when calling UsersApi->SetCustomerName");
+
+            var localVarPath = "./api/v1.0/users/{userId}/SetCustomerName";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (customerName != null && customerName.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(customerName); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = customerName; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetCustomerName", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="languageId"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        public RestApiDefaultResponse SetUserLanguage (int? userId, string languageId)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = SetUserLanguageWithHttpInfo(userId, languageId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="languageId"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        public ApiResponse< RestApiDefaultResponse > SetUserLanguageWithHttpInfo (int? userId, string languageId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->SetUserLanguage");
+            // verify the required parameter 'languageId' is set
+            if (languageId == null)
+                throw new ApiException(400, "Missing required parameter 'languageId' when calling UsersApi->SetUserLanguage");
+
+            var localVarPath = "./api/v1.0/users/{userId}/SetLanguage/{languageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (languageId != null) localVarPathParams.Add("languageId", this.Configuration.ApiClient.ParameterToString(languageId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetUserLanguage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="languageId"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiDefaultResponse> SetUserLanguageAsync (int? userId, string languageId)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = await SetUserLanguageAsyncWithHttpInfo(userId, languageId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="languageId"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> SetUserLanguageAsyncWithHttpInfo (int? userId, string languageId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->SetUserLanguage");
+            // verify the required parameter 'languageId' is set
+            if (languageId == null)
+                throw new ApiException(400, "Missing required parameter 'languageId' when calling UsersApi->SetUserLanguage");
+
+            var localVarPath = "./api/v1.0/users/{userId}/SetLanguage/{languageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (languageId != null) localVarPathParams.Add("languageId", this.Configuration.ApiClient.ParameterToString(languageId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetUserLanguage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        public RestApiDefaultResponse UnblockUserPhoneNumber (int? userId)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = UnblockUserPhoneNumberWithHttpInfo(userId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        public ApiResponse< RestApiDefaultResponse > UnblockUserPhoneNumberWithHttpInfo (int? userId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UnblockUserPhoneNumber");
+
+            var localVarPath = "./api/v1.0/users/{userId}/UnblockUserPhoneNumber";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UnblockUserPhoneNumber", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiDefaultResponse> UnblockUserPhoneNumberAsync (int? userId)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = await UnblockUserPhoneNumberAsyncWithHttpInfo(userId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> UnblockUserPhoneNumberAsyncWithHttpInfo (int? userId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UnblockUserPhoneNumber");
+
+            var localVarPath = "./api/v1.0/users/{userId}/UnblockUserPhoneNumber";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UnblockUserPhoneNumber", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
         }
 
     }
