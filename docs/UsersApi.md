@@ -17,10 +17,13 @@ Method | HTTP request | Description
 [**GetUserNotes**](UsersApi.md#getusernotes) | **GET** /api/v1.0/users/{userId}/UserNotes | 
 [**MarkUserAsFraudulent**](UsersApi.md#markuserasfraudulent) | **POST** /api/v1.0/users/{userId}/MarkUserAsFraudulent | 
 [**MarkUserAsSuspicious**](UsersApi.md#markuserassuspicious) | **POST** /api/v1.0/users/{userId}/MarkUserAsSuspicious | 
+[**RemoveFlipdishAccountIdForUser**](UsersApi.md#removeflipdishaccountidforuser) | **POST** /api/v1.0/users/{userId}/RemoveFlipdishAccountId/{accountId} | 
 [**RemoveUserFromRole**](UsersApi.md#removeuserfromrole) | **POST** /api/v1.0/users/{userId}/RemoveUserFromRole/{roleName} | 
 [**ResetMfa**](UsersApi.md#resetmfa) | **POST** /api/v1.0/users/{userId}/ResetMfa | 
+[**SearchFlipdishAccounts**](UsersApi.md#searchflipdishaccounts) | **GET** /api/v1.0/users/searchFlipdishAccounts | 
 [**SearchUsers**](UsersApi.md#searchusers) | **GET** /api/v1.0/users/search | 
 [**SetCustomerName**](UsersApi.md#setcustomername) | **POST** /api/v1.0/users/{userId}/SetCustomerName | 
+[**SetFlipdishAccountIdForUser**](UsersApi.md#setflipdishaccountidforuser) | **POST** /api/v1.0/users/{userId}/SetFlipdishAccountId/{accountId} | 
 [**SetUserLanguage**](UsersApi.md#setuserlanguage) | **POST** /api/v1.0/users/{userId}/SetLanguage/{languageId} | 
 [**UnblockUserPhoneNumber**](UsersApi.md#unblockuserphonenumber) | **POST** /api/v1.0/users/{userId}/UnblockUserPhoneNumber | 
 
@@ -820,6 +823,69 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="removeflipdishaccountidforuser"></a>
+# **RemoveFlipdishAccountIdForUser**
+> RestApiDefaultResponse RemoveFlipdishAccountIdForUser (int? userId, int? accountId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class RemoveFlipdishAccountIdForUserExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var userId = 56;  // int? | 
+            var accountId = 56;  // int? | 
+
+            try
+            {
+                RestApiDefaultResponse result = apiInstance.RemoveFlipdishAccountIdForUser(userId, accountId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.RemoveFlipdishAccountIdForUser: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **int?**|  | 
+ **accountId** | **int?**|  | 
+
+### Return type
+
+[**RestApiDefaultResponse**](RestApiDefaultResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="removeuserfromrole"></a>
 # **RemoveUserFromRole**
 > RestApiResultUserRole RemoveUserFromRole (int? userId, string roleName)
@@ -932,6 +998,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiDefaultResponse**](RestApiDefaultResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="searchflipdishaccounts"></a>
+# **SearchFlipdishAccounts**
+> RestApiArrayResultFlipdishAccountName SearchFlipdishAccounts (string searchPattern)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class SearchFlipdishAccountsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var searchPattern = searchPattern_example;  // string | 
+
+            try
+            {
+                RestApiArrayResultFlipdishAccountName result = apiInstance.SearchFlipdishAccounts(searchPattern);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.SearchFlipdishAccounts: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **searchPattern** | **string**|  | 
+
+### Return type
+
+[**RestApiArrayResultFlipdishAccountName**](RestApiArrayResultFlipdishAccountName.md)
 
 ### Authorization
 
@@ -1074,6 +1201,69 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="setflipdishaccountidforuser"></a>
+# **SetFlipdishAccountIdForUser**
+> RestApiDefaultResponse SetFlipdishAccountIdForUser (int? userId, int? accountId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class SetFlipdishAccountIdForUserExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var userId = 56;  // int? | 
+            var accountId = 56;  // int? | 
+
+            try
+            {
+                RestApiDefaultResponse result = apiInstance.SetFlipdishAccountIdForUser(userId, accountId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.SetFlipdishAccountIdForUser: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **int?**|  | 
+ **accountId** | **int?**|  | 
+
+### Return type
+
+[**RestApiDefaultResponse**](RestApiDefaultResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
