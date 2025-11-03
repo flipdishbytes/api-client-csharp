@@ -269,6 +269,31 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
+        /// <param name="customerId"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+        void SendPushNotification (string appId, int? customerId, string message);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
+        /// <param name="message"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> SendPushNotificationWithHttpInfo (string appId, int? customerId, string message);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <param name="appConfigUpdate"></param>
         /// <returns>RestApiResultApp</returns>
         RestApiResultApp SetAppConfig (string appId, AppConfigUpdateModel appConfigUpdate);
@@ -690,6 +715,31 @@ namespace Flipdish.Api
         /// <param name="whitelabelId"></param>
         /// <returns>Task of ApiResponse (AppLookup)</returns>
         System.Threading.Tasks.Task<ApiResponse<AppLookup>> LookupByWhitelabelIdAsyncWithHttpInfo (int? whitelabelId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
+        /// <param name="message"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task SendPushNotificationAsync (string appId, int? customerId, string message);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
+        /// <param name="message"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> SendPushNotificationAsyncWithHttpInfo (string appId, int? customerId, string message);
         /// <summary>
         /// 
         /// </summary>
@@ -2681,6 +2731,203 @@ namespace Flipdish.Api
             return new ApiResponse<AppLookup>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (AppLookup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppLookup)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+        public void SendPushNotification (string appId, int? customerId, string message)
+        {
+             SendPushNotificationWithHttpInfo(appId, customerId, message);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
+        /// <param name="message"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> SendPushNotificationWithHttpInfo (string appId, int? customerId, string message)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->SendPushNotification");
+            // verify the required parameter 'customerId' is set
+            if (customerId == null)
+                throw new ApiException(400, "Missing required parameter 'customerId' when calling AppsApi->SendPushNotification");
+            // verify the required parameter 'message' is set
+            if (message == null)
+                throw new ApiException(400, "Missing required parameter 'message' when calling AppsApi->SendPushNotification");
+
+            var localVarPath = "./api/v1.0/apps/{appId}/SendPushNotification/{customerId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (customerId != null) localVarPathParams.Add("customerId", this.Configuration.ApiClient.ParameterToString(customerId)); // path parameter
+            if (message != null && message.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(message); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = message; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SendPushNotification", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
+        /// <param name="message"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task SendPushNotificationAsync (string appId, int? customerId, string message)
+        {
+             await SendPushNotificationAsyncWithHttpInfo(appId, customerId, message);
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="customerId"></param>
+        /// <param name="message"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SendPushNotificationAsyncWithHttpInfo (string appId, int? customerId, string message)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling AppsApi->SendPushNotification");
+            // verify the required parameter 'customerId' is set
+            if (customerId == null)
+                throw new ApiException(400, "Missing required parameter 'customerId' when calling AppsApi->SendPushNotification");
+            // verify the required parameter 'message' is set
+            if (message == null)
+                throw new ApiException(400, "Missing required parameter 'message' when calling AppsApi->SendPushNotification");
+
+            var localVarPath = "./api/v1.0/apps/{appId}/SendPushNotification/{customerId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (customerId != null) localVarPathParams.Add("customerId", this.Configuration.ApiClient.ParameterToString(customerId)); // path parameter
+            if (message != null && message.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(message); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = message; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SendPushNotification", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
