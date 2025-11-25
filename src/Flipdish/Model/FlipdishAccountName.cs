@@ -31,14 +31,23 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FlipdishAccountName" /> class.
         /// </summary>
+        /// <param name="payeeBankAccountDataId">Payee Bank Account Data Id.</param>
         /// <param name="flipdishAccountId">Flipdish Account Id.</param>
         /// <param name="name">Account Name.</param>
-        public FlipdishAccountName(int? flipdishAccountId = default(int?), string name = default(string))
+        public FlipdishAccountName(int? payeeBankAccountDataId = default(int?), int? flipdishAccountId = default(int?), string name = default(string))
         {
+            this.PayeeBankAccountDataId = payeeBankAccountDataId;
             this.FlipdishAccountId = flipdishAccountId;
             this.Name = name;
         }
         
+        /// <summary>
+        /// Payee Bank Account Data Id
+        /// </summary>
+        /// <value>Payee Bank Account Data Id</value>
+        [DataMember(Name="PayeeBankAccountDataId", EmitDefaultValue=false)]
+        public int? PayeeBankAccountDataId { get; set; }
+
         /// <summary>
         /// Flipdish Account Id
         /// </summary>
@@ -61,6 +70,7 @@ namespace Flipdish.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FlipdishAccountName {\n");
+            sb.Append("  PayeeBankAccountDataId: ").Append(PayeeBankAccountDataId).Append("\n");
             sb.Append("  FlipdishAccountId: ").Append(FlipdishAccountId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
@@ -98,6 +108,11 @@ namespace Flipdish.Model
 
             return 
                 (
+                    this.PayeeBankAccountDataId == input.PayeeBankAccountDataId ||
+                    (this.PayeeBankAccountDataId != null &&
+                    this.PayeeBankAccountDataId.Equals(input.PayeeBankAccountDataId))
+                ) && 
+                (
                     this.FlipdishAccountId == input.FlipdishAccountId ||
                     (this.FlipdishAccountId != null &&
                     this.FlipdishAccountId.Equals(input.FlipdishAccountId))
@@ -118,6 +133,8 @@ namespace Flipdish.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.PayeeBankAccountDataId != null)
+                    hashCode = hashCode * 59 + this.PayeeBankAccountDataId.GetHashCode();
                 if (this.FlipdishAccountId != null)
                     hashCode = hashCode * 59 + this.FlipdishAccountId.GetHashCode();
                 if (this.Name != null)

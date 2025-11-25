@@ -3,6 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**PayeeBankAccountDataId** | **int?** | Payee Bank Account Data Id | [optional] 
 **FlipdishAccountId** | **int?** | Flipdish Account Id | [optional] 
 **Name** | **string** | Account Name | [optional] 
 
