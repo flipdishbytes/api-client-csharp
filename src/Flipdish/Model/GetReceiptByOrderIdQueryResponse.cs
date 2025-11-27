@@ -39,7 +39,9 @@ namespace Flipdish.Model
         /// <param name="address">address.</param>
         /// <param name="vatNumber">vatNumber.</param>
         /// <param name="paymentMethodDescription">paymentMethodDescription.</param>
-        public GetReceiptByOrderIdQueryResponse(PreviousOrder previousOrder = default(PreviousOrder), List<DepositReturnFeesSummary> depositReturnFeesSummary = default(List<DepositReturnFeesSummary>), DateTime? tsRequestedForLocal = default(DateTime?), DateTime? tsOrderPlacedLocal = default(DateTime?), string logoUrl = default(string), string address = default(string), string vatNumber = default(string), string paymentMethodDescription = default(string))
+        /// <param name="orgId">orgId.</param>
+        /// <param name="countryCode">countryCode.</param>
+        public GetReceiptByOrderIdQueryResponse(PreviousOrder previousOrder = default(PreviousOrder), List<DepositReturnFeesSummary> depositReturnFeesSummary = default(List<DepositReturnFeesSummary>), DateTime? tsRequestedForLocal = default(DateTime?), DateTime? tsOrderPlacedLocal = default(DateTime?), string logoUrl = default(string), string address = default(string), string vatNumber = default(string), string paymentMethodDescription = default(string), string orgId = default(string), string countryCode = default(string))
         {
             this.PreviousOrder = previousOrder;
             this.DepositReturnFeesSummary = depositReturnFeesSummary;
@@ -49,6 +51,8 @@ namespace Flipdish.Model
             this.Address = address;
             this.VatNumber = vatNumber;
             this.PaymentMethodDescription = paymentMethodDescription;
+            this.OrgId = orgId;
+            this.CountryCode = countryCode;
         }
         
         /// <summary>
@@ -100,6 +104,18 @@ namespace Flipdish.Model
         public string PaymentMethodDescription { get; set; }
 
         /// <summary>
+        /// Gets or Sets OrgId
+        /// </summary>
+        [DataMember(Name="OrgId", EmitDefaultValue=false)]
+        public string OrgId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CountryCode
+        /// </summary>
+        [DataMember(Name="CountryCode", EmitDefaultValue=false)]
+        public string CountryCode { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -115,6 +131,8 @@ namespace Flipdish.Model
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  VatNumber: ").Append(VatNumber).Append("\n");
             sb.Append("  PaymentMethodDescription: ").Append(PaymentMethodDescription).Append("\n");
+            sb.Append("  OrgId: ").Append(OrgId).Append("\n");
+            sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -188,6 +206,16 @@ namespace Flipdish.Model
                     this.PaymentMethodDescription == input.PaymentMethodDescription ||
                     (this.PaymentMethodDescription != null &&
                     this.PaymentMethodDescription.Equals(input.PaymentMethodDescription))
+                ) && 
+                (
+                    this.OrgId == input.OrgId ||
+                    (this.OrgId != null &&
+                    this.OrgId.Equals(input.OrgId))
+                ) && 
+                (
+                    this.CountryCode == input.CountryCode ||
+                    (this.CountryCode != null &&
+                    this.CountryCode.Equals(input.CountryCode))
                 );
         }
 
@@ -216,6 +244,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.VatNumber.GetHashCode();
                 if (this.PaymentMethodDescription != null)
                     hashCode = hashCode * 59 + this.PaymentMethodDescription.GetHashCode();
+                if (this.OrgId != null)
+                    hashCode = hashCode * 59 + this.OrgId.GetHashCode();
+                if (this.CountryCode != null)
+                    hashCode = hashCode * 59 + this.CountryCode.GetHashCode();
                 return hashCode;
             }
         }
