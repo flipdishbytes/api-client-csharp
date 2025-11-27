@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 <a name="createnewmenuasync"></a>
 # **CreateNewMenuAsync**
-> Object CreateNewMenuAsync (string appId, CreateFullMenu menu)
+> Object CreateNewMenuAsync (string appId, CreateFullMenu menu, string orgId = null)
 
 Create a new menu asynchronously
 
@@ -132,11 +132,12 @@ namespace Example
             var apiInstance = new MenusApi();
             var appId = appId_example;  // string | App id
             var menu = new CreateFullMenu(); // CreateFullMenu | Menu
+            var orgId = orgId_example;  // string | Org id (optional) 
 
             try
             {
                 // Create a new menu asynchronously
-                Object result = apiInstance.CreateNewMenuAsync(appId, menu);
+                Object result = apiInstance.CreateNewMenuAsync(appId, menu, orgId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -154,6 +155,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**| App id | 
  **menu** | [**CreateFullMenu**](CreateFullMenu.md)| Menu | 
+ **orgId** | **string**| Org id | [optional] 
 
 ### Return type
 

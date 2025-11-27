@@ -56,8 +56,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
         /// <param name="menu">Menu</param>
+        /// <param name="orgId">Org id (optional)</param>
         /// <returns>Object</returns>
-        Object CreateNewMenuAsync (string appId, CreateFullMenu menu);
+        Object CreateNewMenuAsync (string appId, CreateFullMenu menu, string orgId = null);
 
         /// <summary>
         /// Create a new menu asynchronously
@@ -68,8 +69,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
         /// <param name="menu">Menu</param>
+        /// <param name="orgId">Org id (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> CreateNewMenuAsyncWithHttpInfo (string appId, CreateFullMenu menu);
+        ApiResponse<Object> CreateNewMenuAsyncWithHttpInfo (string appId, CreateFullMenu menu, string orgId = null);
         /// <summary>
         /// Create a new menu
         /// </summary>
@@ -846,8 +848,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
         /// <param name="menu">Menu</param>
+        /// <param name="orgId">Org id (optional)</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> CreateNewMenuAsyncAsync (string appId, CreateFullMenu menu);
+        System.Threading.Tasks.Task<Object> CreateNewMenuAsyncAsync (string appId, CreateFullMenu menu, string orgId = null);
 
         /// <summary>
         /// Create a new menu asynchronously
@@ -858,8 +861,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
         /// <param name="menu">Menu</param>
+        /// <param name="orgId">Org id (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateNewMenuAsyncAsyncWithHttpInfo (string appId, CreateFullMenu menu);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateNewMenuAsyncAsyncWithHttpInfo (string appId, CreateFullMenu menu, string orgId = null);
         /// <summary>
         /// Create a new menu
         /// </summary>
@@ -1871,10 +1875,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
         /// <param name="menu">Menu</param>
+        /// <param name="orgId">Org id (optional)</param>
         /// <returns>Object</returns>
-        public Object CreateNewMenuAsync (string appId, CreateFullMenu menu)
+        public Object CreateNewMenuAsync (string appId, CreateFullMenu menu, string orgId = null)
         {
-             ApiResponse<Object> localVarResponse = CreateNewMenuAsyncWithHttpInfo(appId, menu);
+             ApiResponse<Object> localVarResponse = CreateNewMenuAsyncWithHttpInfo(appId, menu, orgId);
              return localVarResponse.Data;
         }
 
@@ -1884,8 +1889,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
         /// <param name="menu">Menu</param>
+        /// <param name="orgId">Org id (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > CreateNewMenuAsyncWithHttpInfo (string appId, CreateFullMenu menu)
+        public ApiResponse< Object > CreateNewMenuAsyncWithHttpInfo (string appId, CreateFullMenu menu, string orgId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1924,6 +1930,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (orgId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orgId", orgId)); // query parameter
             if (menu != null && menu.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(menu); // http body (model) parameter
@@ -1964,10 +1971,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
         /// <param name="menu">Menu</param>
+        /// <param name="orgId">Org id (optional)</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> CreateNewMenuAsyncAsync (string appId, CreateFullMenu menu)
+        public async System.Threading.Tasks.Task<Object> CreateNewMenuAsyncAsync (string appId, CreateFullMenu menu, string orgId = null)
         {
-             ApiResponse<Object> localVarResponse = await CreateNewMenuAsyncAsyncWithHttpInfo(appId, menu);
+             ApiResponse<Object> localVarResponse = await CreateNewMenuAsyncAsyncWithHttpInfo(appId, menu, orgId);
              return localVarResponse.Data;
 
         }
@@ -1978,8 +1986,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">App id</param>
         /// <param name="menu">Menu</param>
+        /// <param name="orgId">Org id (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateNewMenuAsyncAsyncWithHttpInfo (string appId, CreateFullMenu menu)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateNewMenuAsyncAsyncWithHttpInfo (string appId, CreateFullMenu menu, string orgId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -2018,6 +2027,7 @@ namespace Flipdish.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (orgId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orgId", orgId)); // query parameter
             if (menu != null && menu.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(menu); // http body (model) parameter
