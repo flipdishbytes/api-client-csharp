@@ -735,7 +735,8 @@ namespace Flipdish.Model
         /// <param name="storeGroupId">Store group id of store.</param>
         /// <param name="taxId">VAT number or generic Tax ID of the store.</param>
         /// <param name="prettyAddress">Address of the store.</param>
-        public StoreSummary(int? id = default(int?), string name = default(string), int? menuId = default(int?), Dictionary<string, string> metadata = default(Dictionary<string, string>), CurrencyEnum? currency = default(CurrencyEnum?), Coordinates coordinates = default(Coordinates), string storeTimezone = default(string), string storeIanaTimezone = default(string), int? storeGroupId = default(int?), string taxId = default(string), string prettyAddress = default(string))
+        /// <param name="countryCode">Country code of the store address (ISO 3166-1 alpha-2).</param>
+        public StoreSummary(int? id = default(int?), string name = default(string), int? menuId = default(int?), Dictionary<string, string> metadata = default(Dictionary<string, string>), CurrencyEnum? currency = default(CurrencyEnum?), Coordinates coordinates = default(Coordinates), string storeTimezone = default(string), string storeIanaTimezone = default(string), int? storeGroupId = default(int?), string taxId = default(string), string prettyAddress = default(string), string countryCode = default(string))
         {
             this.Id = id;
             this.Name = name;
@@ -748,6 +749,7 @@ namespace Flipdish.Model
             this.StoreGroupId = storeGroupId;
             this.TaxId = taxId;
             this.PrettyAddress = prettyAddress;
+            this.CountryCode = countryCode;
         }
         
         /// <summary>
@@ -822,6 +824,13 @@ namespace Flipdish.Model
         public string PrettyAddress { get; set; }
 
         /// <summary>
+        /// Country code of the store address (ISO 3166-1 alpha-2)
+        /// </summary>
+        /// <value>Country code of the store address (ISO 3166-1 alpha-2)</value>
+        [DataMember(Name="CountryCode", EmitDefaultValue=false)]
+        public string CountryCode { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -840,6 +849,7 @@ namespace Flipdish.Model
             sb.Append("  StoreGroupId: ").Append(StoreGroupId).Append("\n");
             sb.Append("  TaxId: ").Append(TaxId).Append("\n");
             sb.Append("  PrettyAddress: ").Append(PrettyAddress).Append("\n");
+            sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -928,6 +938,11 @@ namespace Flipdish.Model
                     this.PrettyAddress == input.PrettyAddress ||
                     (this.PrettyAddress != null &&
                     this.PrettyAddress.Equals(input.PrettyAddress))
+                ) && 
+                (
+                    this.CountryCode == input.CountryCode ||
+                    (this.CountryCode != null &&
+                    this.CountryCode.Equals(input.CountryCode))
                 );
         }
 
@@ -962,6 +977,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.TaxId.GetHashCode();
                 if (this.PrettyAddress != null)
                     hashCode = hashCode * 59 + this.PrettyAddress.GetHashCode();
+                if (this.CountryCode != null)
+                    hashCode = hashCode * 59 + this.CountryCode.GetHashCode();
                 return hashCode;
             }
         }

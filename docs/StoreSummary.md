@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **StoreGroupId** | **int?** | Store group id of store | [optional] 
 **TaxId** | **string** | VAT number or generic Tax ID of the store | [optional] 
 **PrettyAddress** | **string** | Address of the store | [optional] 
+**CountryCode** | **string** | Country code of the store address (ISO 3166-1 alpha-2) | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
