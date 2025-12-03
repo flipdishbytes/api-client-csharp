@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **StoreIds** | **List&lt;int?&gt;** | Store Ids that are attached to this account | [optional] 
 **AccountState** | **string** | Status of Account | [optional] 
 **CurrencyCode** | **string** | Currency of Account | [optional] 
+**VatNumber** | **string** | Account Holders Vat Number | [optional] 
 **StripeConnectedAccountInfo** | [**StripeConnectedAccountInfo**](StripeConnectedAccountInfo.md) | Information about the Stripe connected account associated with this bank account (if any) | [optional] 
 **AccountName** | **string** | Name of this account | [optional] 
 **Iban** | **string** | IBAN of this account | [optional] 
