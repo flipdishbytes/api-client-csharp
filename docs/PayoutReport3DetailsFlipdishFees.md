@@ -19,6 +19,8 @@ Name | Type | Description | Notes
 **PosCardRevenue** | **double?** |  | [optional] 
 **PosCardOnFlipdishOrders** | **double?** |  | [optional] 
 **OtherIntegrationFees** | **double?** |  | [optional] 
+**OtherIntegrationFeesExcludingVat** | **double?** |  | [optional] 
+**OtherIntegrationFeesVatAmount** | **double?** |  | [optional] 
 **OtherIntegrationTips** | **double?** |  | [optional] 
 **RefundedFeesOnRefundedSales** | **double?** |  | [optional] 
 **Vat** | **double?** |  | [optional] 

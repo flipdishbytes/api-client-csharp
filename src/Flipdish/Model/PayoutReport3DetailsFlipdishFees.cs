@@ -47,6 +47,8 @@ namespace Flipdish.Model
         /// <param name="posCardRevenue">posCardRevenue.</param>
         /// <param name="posCardOnFlipdishOrders">posCardOnFlipdishOrders.</param>
         /// <param name="otherIntegrationFees">otherIntegrationFees.</param>
+        /// <param name="otherIntegrationFeesExcludingVat">otherIntegrationFeesExcludingVat.</param>
+        /// <param name="otherIntegrationFeesVatAmount">otherIntegrationFeesVatAmount.</param>
         /// <param name="otherIntegrationTips">otherIntegrationTips.</param>
         /// <param name="refundedFeesOnRefundedSales">refundedFeesOnRefundedSales.</param>
         /// <param name="vat">vat.</param>
@@ -60,7 +62,7 @@ namespace Flipdish.Model
         /// <param name="qropCardOnXOrders">qropCardOnXOrders.</param>
         /// <param name="qropCashOnXOrders">qropCashOnXOrders.</param>
         /// <param name="posCardOnXOrders">posCardOnXOrders.</param>
-        public PayoutReport3DetailsFlipdishFees(double? webAndAppCash = default(double?), double? webAndAppCashRevenueIncludingTips = default(double?), double? webAndAppCard = default(double?), double? webAndAppCardRevenueIncludingTips = default(double?), double? kioskCash = default(double?), double? kioskCashRevenue = default(double?), double? kioskCard = default(double?), double? kioskCardRevenue = default(double?), double? qropCash = default(double?), double? qropCashRevenue = default(double?), double? qropCard = default(double?), double? qropCardRevenue = default(double?), double? posCard = default(double?), double? posCardRevenue = default(double?), double? posCardOnFlipdishOrders = default(double?), double? otherIntegrationFees = default(double?), double? otherIntegrationTips = default(double?), double? refundedFeesOnRefundedSales = default(double?), double? vat = default(double?), double? refundedFeesOnPosSales = default(double?), double? total = default(double?), double? thirdPartyIntegrationFeesAndTips = default(double?), int? webAndAppCardOnXOrders = default(int?), int? webAndAppCashOnXOrders = default(int?), int? kioskCardOnXOrders = default(int?), int? kioskCashOnXOrders = default(int?), int? qropCardOnXOrders = default(int?), int? qropCashOnXOrders = default(int?), int? posCardOnXOrders = default(int?))
+        public PayoutReport3DetailsFlipdishFees(double? webAndAppCash = default(double?), double? webAndAppCashRevenueIncludingTips = default(double?), double? webAndAppCard = default(double?), double? webAndAppCardRevenueIncludingTips = default(double?), double? kioskCash = default(double?), double? kioskCashRevenue = default(double?), double? kioskCard = default(double?), double? kioskCardRevenue = default(double?), double? qropCash = default(double?), double? qropCashRevenue = default(double?), double? qropCard = default(double?), double? qropCardRevenue = default(double?), double? posCard = default(double?), double? posCardRevenue = default(double?), double? posCardOnFlipdishOrders = default(double?), double? otherIntegrationFees = default(double?), double? otherIntegrationFeesExcludingVat = default(double?), double? otherIntegrationFeesVatAmount = default(double?), double? otherIntegrationTips = default(double?), double? refundedFeesOnRefundedSales = default(double?), double? vat = default(double?), double? refundedFeesOnPosSales = default(double?), double? total = default(double?), double? thirdPartyIntegrationFeesAndTips = default(double?), int? webAndAppCardOnXOrders = default(int?), int? webAndAppCashOnXOrders = default(int?), int? kioskCardOnXOrders = default(int?), int? kioskCashOnXOrders = default(int?), int? qropCardOnXOrders = default(int?), int? qropCashOnXOrders = default(int?), int? posCardOnXOrders = default(int?))
         {
             this.WebAndAppCash = webAndAppCash;
             this.WebAndAppCashRevenueIncludingTips = webAndAppCashRevenueIncludingTips;
@@ -78,6 +80,8 @@ namespace Flipdish.Model
             this.PosCardRevenue = posCardRevenue;
             this.PosCardOnFlipdishOrders = posCardOnFlipdishOrders;
             this.OtherIntegrationFees = otherIntegrationFees;
+            this.OtherIntegrationFeesExcludingVat = otherIntegrationFeesExcludingVat;
+            this.OtherIntegrationFeesVatAmount = otherIntegrationFeesVatAmount;
             this.OtherIntegrationTips = otherIntegrationTips;
             this.RefundedFeesOnRefundedSales = refundedFeesOnRefundedSales;
             this.Vat = vat;
@@ -190,6 +194,18 @@ namespace Flipdish.Model
         public double? OtherIntegrationFees { get; set; }
 
         /// <summary>
+        /// Gets or Sets OtherIntegrationFeesExcludingVat
+        /// </summary>
+        [DataMember(Name="OtherIntegrationFeesExcludingVat", EmitDefaultValue=false)]
+        public double? OtherIntegrationFeesExcludingVat { get; set; }
+
+        /// <summary>
+        /// Gets or Sets OtherIntegrationFeesVatAmount
+        /// </summary>
+        [DataMember(Name="OtherIntegrationFeesVatAmount", EmitDefaultValue=false)]
+        public double? OtherIntegrationFeesVatAmount { get; set; }
+
+        /// <summary>
         /// Gets or Sets OtherIntegrationTips
         /// </summary>
         [DataMember(Name="OtherIntegrationTips", EmitDefaultValue=false)]
@@ -291,6 +307,8 @@ namespace Flipdish.Model
             sb.Append("  PosCardRevenue: ").Append(PosCardRevenue).Append("\n");
             sb.Append("  PosCardOnFlipdishOrders: ").Append(PosCardOnFlipdishOrders).Append("\n");
             sb.Append("  OtherIntegrationFees: ").Append(OtherIntegrationFees).Append("\n");
+            sb.Append("  OtherIntegrationFeesExcludingVat: ").Append(OtherIntegrationFeesExcludingVat).Append("\n");
+            sb.Append("  OtherIntegrationFeesVatAmount: ").Append(OtherIntegrationFeesVatAmount).Append("\n");
             sb.Append("  OtherIntegrationTips: ").Append(OtherIntegrationTips).Append("\n");
             sb.Append("  RefundedFeesOnRefundedSales: ").Append(RefundedFeesOnRefundedSales).Append("\n");
             sb.Append("  Vat: ").Append(Vat).Append("\n");
@@ -419,6 +437,16 @@ namespace Flipdish.Model
                     this.OtherIntegrationFees.Equals(input.OtherIntegrationFees))
                 ) && 
                 (
+                    this.OtherIntegrationFeesExcludingVat == input.OtherIntegrationFeesExcludingVat ||
+                    (this.OtherIntegrationFeesExcludingVat != null &&
+                    this.OtherIntegrationFeesExcludingVat.Equals(input.OtherIntegrationFeesExcludingVat))
+                ) && 
+                (
+                    this.OtherIntegrationFeesVatAmount == input.OtherIntegrationFeesVatAmount ||
+                    (this.OtherIntegrationFeesVatAmount != null &&
+                    this.OtherIntegrationFeesVatAmount.Equals(input.OtherIntegrationFeesVatAmount))
+                ) && 
+                (
                     this.OtherIntegrationTips == input.OtherIntegrationTips ||
                     (this.OtherIntegrationTips != null &&
                     this.OtherIntegrationTips.Equals(input.OtherIntegrationTips))
@@ -526,6 +554,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PosCardOnFlipdishOrders.GetHashCode();
                 if (this.OtherIntegrationFees != null)
                     hashCode = hashCode * 59 + this.OtherIntegrationFees.GetHashCode();
+                if (this.OtherIntegrationFeesExcludingVat != null)
+                    hashCode = hashCode * 59 + this.OtherIntegrationFeesExcludingVat.GetHashCode();
+                if (this.OtherIntegrationFeesVatAmount != null)
+                    hashCode = hashCode * 59 + this.OtherIntegrationFeesVatAmount.GetHashCode();
                 if (this.OtherIntegrationTips != null)
                     hashCode = hashCode * 59 + this.OtherIntegrationTips.GetHashCode();
                 if (this.RefundedFeesOnRefundedSales != null)
