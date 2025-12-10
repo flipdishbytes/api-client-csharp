@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **Id** | **int?** | Store identifier | [optional] 
 **Name** | **string** | Store name | [optional] 
 **MenuId** | **int?** | Stores menu identifier | [optional] 
+**MenuPublishId** | **Guid?** | Stores menu publish GUID | [optional] 
 **Metadata** | **Dictionary&lt;string, string&gt;** | Store metadata | [optional] 
 **Currency** | **string** | Currency which used by the Store | [optional] 
 **Coordinates** | [**Coordinates**](Coordinates.md) | Latitude and longitude of the store | [optional] 

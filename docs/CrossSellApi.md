@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getcrosssellmenuitems"></a>
 # **GetCrossSellMenuItems**
-> RestApiResultCrossSellMenuItems GetCrossSellMenuItems (int? menuId, List<int?> menuItemId, int? limit, double? totalValue, string appId)
+> RestApiResultCrossSellMenuItems GetCrossSellMenuItems (string appId, int? menuId, List<int?> menuItemId, int? limit, double? totalValue)
 
 
 
@@ -31,15 +31,15 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new CrossSellApi();
+            var appId = appId_example;  // string | 
             var menuId = 56;  // int? | 
             var menuItemId = new List<int?>(); // List<int?> | 
             var limit = 56;  // int? | 
             var totalValue = 1.2;  // double? | 
-            var appId = appId_example;  // string | 
 
             try
             {
-                RestApiResultCrossSellMenuItems result = apiInstance.GetCrossSellMenuItems(menuId, menuItemId, limit, totalValue, appId);
+                RestApiResultCrossSellMenuItems result = apiInstance.GetCrossSellMenuItems(appId, menuId, menuItemId, limit, totalValue);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -55,11 +55,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
  **menuId** | **int?**|  | 
  **menuItemId** | [**List&lt;int?&gt;**](int?.md)|  | 
  **limit** | **int?**|  | 
  **totalValue** | **double?**|  | 
- **appId** | **string**|  | 
 
 ### Return type
 

@@ -727,6 +727,7 @@ namespace Flipdish.Model
         /// <param name="id">Store identifier.</param>
         /// <param name="name">Store name.</param>
         /// <param name="menuId">Stores menu identifier.</param>
+        /// <param name="menuPublishId">Stores menu publish GUID.</param>
         /// <param name="metadata">Store metadata.</param>
         /// <param name="currency">Currency which used by the Store.</param>
         /// <param name="coordinates">Latitude and longitude of the store.</param>
@@ -736,11 +737,12 @@ namespace Flipdish.Model
         /// <param name="taxId">VAT number or generic Tax ID of the store.</param>
         /// <param name="prettyAddress">Address of the store.</param>
         /// <param name="countryCode">Country code of the store address (ISO 3166-1 alpha-2).</param>
-        public StoreSummary(int? id = default(int?), string name = default(string), int? menuId = default(int?), Dictionary<string, string> metadata = default(Dictionary<string, string>), CurrencyEnum? currency = default(CurrencyEnum?), Coordinates coordinates = default(Coordinates), string storeTimezone = default(string), string storeIanaTimezone = default(string), int? storeGroupId = default(int?), string taxId = default(string), string prettyAddress = default(string), string countryCode = default(string))
+        public StoreSummary(int? id = default(int?), string name = default(string), int? menuId = default(int?), Guid? menuPublishId = default(Guid?), Dictionary<string, string> metadata = default(Dictionary<string, string>), CurrencyEnum? currency = default(CurrencyEnum?), Coordinates coordinates = default(Coordinates), string storeTimezone = default(string), string storeIanaTimezone = default(string), int? storeGroupId = default(int?), string taxId = default(string), string prettyAddress = default(string), string countryCode = default(string))
         {
             this.Id = id;
             this.Name = name;
             this.MenuId = menuId;
+            this.MenuPublishId = menuPublishId;
             this.Metadata = metadata;
             this.Currency = currency;
             this.Coordinates = coordinates;
@@ -772,6 +774,13 @@ namespace Flipdish.Model
         /// <value>Stores menu identifier</value>
         [DataMember(Name="MenuId", EmitDefaultValue=false)]
         public int? MenuId { get; set; }
+
+        /// <summary>
+        /// Stores menu publish GUID
+        /// </summary>
+        /// <value>Stores menu publish GUID</value>
+        [DataMember(Name="MenuPublishId", EmitDefaultValue=false)]
+        public Guid? MenuPublishId { get; set; }
 
         /// <summary>
         /// Store metadata
@@ -841,6 +850,7 @@ namespace Flipdish.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  MenuId: ").Append(MenuId).Append("\n");
+            sb.Append("  MenuPublishId: ").Append(MenuPublishId).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("  Coordinates: ").Append(Coordinates).Append("\n");
@@ -898,6 +908,11 @@ namespace Flipdish.Model
                     this.MenuId == input.MenuId ||
                     (this.MenuId != null &&
                     this.MenuId.Equals(input.MenuId))
+                ) && 
+                (
+                    this.MenuPublishId == input.MenuPublishId ||
+                    (this.MenuPublishId != null &&
+                    this.MenuPublishId.Equals(input.MenuPublishId))
                 ) && 
                 (
                     this.Metadata == input.Metadata ||
@@ -961,6 +976,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.MenuId != null)
                     hashCode = hashCode * 59 + this.MenuId.GetHashCode();
+                if (this.MenuPublishId != null)
+                    hashCode = hashCode * 59 + this.MenuPublishId.GetHashCode();
                 if (this.Metadata != null)
                     hashCode = hashCode * 59 + this.Metadata.GetHashCode();
                 if (this.Currency != null)
