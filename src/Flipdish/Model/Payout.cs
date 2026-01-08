@@ -840,7 +840,8 @@ namespace Flipdish.Model
         /// <param name="posSalesAmount">POS sales amount.</param>
         /// <param name="posSalesTax">POS sales tax.</param>
         /// <param name="tipsOnPosSales">Tips on POS sales.</param>
-        public Payout(int? payoutId = default(int?), int? payeeBankAccountId = default(int?), string accountName = default(string), PayoutStatusEnum? payoutStatus = default(PayoutStatusEnum?), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?), PayoutTypeEnum? payoutType = default(PayoutTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), DateTime? cutoffDate = default(DateTime?), double? onlineSalesAmount = default(double?), double? onlineSalesDeliveryCharges = default(double?), double? onlineSalesTips = default(double?), double? onlineSalesServiceCharges = default(double?), double? onlineSalesRefundedFees = default(double?), double? onlineSalesFees = default(double?), double? posSalesFees = default(double?), double? onlineSalesRefundedAmount = default(double?), double? posSalesRefundedAmount = default(double?), double? onlineSalesTax = default(double?), double? totalOnlineRevenue = default(double?), double? cashSalesFees = default(double?), double? cashSalesRefundedFees = default(double?), double? customerCashFees = default(double?), double? salesFeesVat = default(double?), double? totalFees = default(double?), double? totalOnlineRevenueAdjustments = default(double?), double? chargebackAmount = default(double?), double? posSalesChargebackAmount = default(double?), double? chargebackRefundedFees = default(double?), double? totalChargebackCost = default(double?), double? totalOtherCharges = default(double?), double? openingBalance = default(double?), double? closingBalance = default(double?), double? payGreenSalesAmount = default(double?), double? deliveryIntegrationFee = default(double?), double? deliveryIntegrationTipFee = default(double?), double? totalThirdPartyFees = default(double?), double? posSalesAmount = default(double?), double? posSalesTax = default(double?), double? tipsOnPosSales = default(double?))
+        /// <param name="bankAccountHasChanged">Indicates whether the bank account has changed since the previous payout.</param>
+        public Payout(int? payoutId = default(int?), int? payeeBankAccountId = default(int?), string accountName = default(string), PayoutStatusEnum? payoutStatus = default(PayoutStatusEnum?), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?), PayoutTypeEnum? payoutType = default(PayoutTypeEnum?), CurrencyEnum? currency = default(CurrencyEnum?), DateTime? cutoffDate = default(DateTime?), double? onlineSalesAmount = default(double?), double? onlineSalesDeliveryCharges = default(double?), double? onlineSalesTips = default(double?), double? onlineSalesServiceCharges = default(double?), double? onlineSalesRefundedFees = default(double?), double? onlineSalesFees = default(double?), double? posSalesFees = default(double?), double? onlineSalesRefundedAmount = default(double?), double? posSalesRefundedAmount = default(double?), double? onlineSalesTax = default(double?), double? totalOnlineRevenue = default(double?), double? cashSalesFees = default(double?), double? cashSalesRefundedFees = default(double?), double? customerCashFees = default(double?), double? salesFeesVat = default(double?), double? totalFees = default(double?), double? totalOnlineRevenueAdjustments = default(double?), double? chargebackAmount = default(double?), double? posSalesChargebackAmount = default(double?), double? chargebackRefundedFees = default(double?), double? totalChargebackCost = default(double?), double? totalOtherCharges = default(double?), double? openingBalance = default(double?), double? closingBalance = default(double?), double? payGreenSalesAmount = default(double?), double? deliveryIntegrationFee = default(double?), double? deliveryIntegrationTipFee = default(double?), double? totalThirdPartyFees = default(double?), double? posSalesAmount = default(double?), double? posSalesTax = default(double?), double? tipsOnPosSales = default(double?), bool? bankAccountHasChanged = default(bool?))
         {
             this.PayoutId = payoutId;
             this.PayeeBankAccountId = payeeBankAccountId;
@@ -886,6 +887,7 @@ namespace Flipdish.Model
             this.PosSalesAmount = posSalesAmount;
             this.PosSalesTax = posSalesTax;
             this.TipsOnPosSales = tipsOnPosSales;
+            this.BankAccountHasChanged = bankAccountHasChanged;
         }
         
         /// <summary>
@@ -1179,6 +1181,13 @@ namespace Flipdish.Model
         public double? TipsOnPosSales { get; set; }
 
         /// <summary>
+        /// Indicates whether the bank account has changed since the previous payout
+        /// </summary>
+        /// <value>Indicates whether the bank account has changed since the previous payout</value>
+        [DataMember(Name="BankAccountHasChanged", EmitDefaultValue=false)]
+        public bool? BankAccountHasChanged { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -1230,6 +1239,7 @@ namespace Flipdish.Model
             sb.Append("  PosSalesAmount: ").Append(PosSalesAmount).Append("\n");
             sb.Append("  PosSalesTax: ").Append(PosSalesTax).Append("\n");
             sb.Append("  TipsOnPosSales: ").Append(TipsOnPosSales).Append("\n");
+            sb.Append("  BankAccountHasChanged: ").Append(BankAccountHasChanged).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1483,6 +1493,11 @@ namespace Flipdish.Model
                     this.TipsOnPosSales == input.TipsOnPosSales ||
                     (this.TipsOnPosSales != null &&
                     this.TipsOnPosSales.Equals(input.TipsOnPosSales))
+                ) && 
+                (
+                    this.BankAccountHasChanged == input.BankAccountHasChanged ||
+                    (this.BankAccountHasChanged != null &&
+                    this.BankAccountHasChanged.Equals(input.BankAccountHasChanged))
                 );
         }
 
@@ -1583,6 +1598,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PosSalesTax.GetHashCode();
                 if (this.TipsOnPosSales != null)
                     hashCode = hashCode * 59 + this.TipsOnPosSales.GetHashCode();
+                if (this.BankAccountHasChanged != null)
+                    hashCode = hashCode * 59 + this.BankAccountHasChanged.GetHashCode();
                 return hashCode;
             }
         }

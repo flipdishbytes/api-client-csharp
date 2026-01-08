@@ -43,7 +43,8 @@ namespace Flipdish.Model
         /// <param name="destinationAccount">destinationAccount.</param>
         /// <param name="amount">amount.</param>
         /// <param name="currency">currency.</param>
-        public PayoutReport3OverviewHeader(int? payoutId = default(int?), int? bankAccountId = default(int?), bool? isManualPayout = default(bool?), string accountName = default(string), string payoutStatus = default(string), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?), string currency = default(string))
+        /// <param name="bankAccountHasChanged">bankAccountHasChanged.</param>
+        public PayoutReport3OverviewHeader(int? payoutId = default(int?), int? bankAccountId = default(int?), bool? isManualPayout = default(bool?), string accountName = default(string), string payoutStatus = default(string), DateTime? createdDate = default(DateTime?), DateTime? periodStartTime = default(DateTime?), DateTime? periodEndTime = default(DateTime?), string destinationBank = default(string), string destinationAccount = default(string), double? amount = default(double?), string currency = default(string), bool? bankAccountHasChanged = default(bool?))
         {
             this.PayoutId = payoutId;
             this.BankAccountId = bankAccountId;
@@ -57,6 +58,7 @@ namespace Flipdish.Model
             this.DestinationAccount = destinationAccount;
             this.Amount = amount;
             this.Currency = currency;
+            this.BankAccountHasChanged = bankAccountHasChanged;
         }
         
         /// <summary>
@@ -132,6 +134,12 @@ namespace Flipdish.Model
         public string Currency { get; set; }
 
         /// <summary>
+        /// Gets or Sets BankAccountHasChanged
+        /// </summary>
+        [DataMember(Name="BankAccountHasChanged", EmitDefaultValue=false)]
+        public bool? BankAccountHasChanged { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -151,6 +159,7 @@ namespace Flipdish.Model
             sb.Append("  DestinationAccount: ").Append(DestinationAccount).Append("\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
+            sb.Append("  BankAccountHasChanged: ").Append(BankAccountHasChanged).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -244,6 +253,11 @@ namespace Flipdish.Model
                     this.Currency == input.Currency ||
                     (this.Currency != null &&
                     this.Currency.Equals(input.Currency))
+                ) && 
+                (
+                    this.BankAccountHasChanged == input.BankAccountHasChanged ||
+                    (this.BankAccountHasChanged != null &&
+                    this.BankAccountHasChanged.Equals(input.BankAccountHasChanged))
                 );
         }
 
@@ -280,6 +294,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Amount.GetHashCode();
                 if (this.Currency != null)
                     hashCode = hashCode * 59 + this.Currency.GetHashCode();
+                if (this.BankAccountHasChanged != null)
+                    hashCode = hashCode * 59 + this.BankAccountHasChanged.GetHashCode();
                 return hashCode;
             }
         }
