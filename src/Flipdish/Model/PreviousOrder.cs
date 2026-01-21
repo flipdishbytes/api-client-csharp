@@ -726,6 +726,7 @@ namespace Flipdish.Model
         /// <param name="deliveryLocationAddressString">deliveryLocationAddressString.</param>
         /// <param name="paymentAccountType">paymentAccountType.</param>
         /// <param name="orderId">orderId.</param>
+        /// <param name="receiptCode">receiptCode.</param>
         /// <param name="restaurantName">restaurantName.</param>
         /// <param name="localOrderId">localOrderId.</param>
         /// <param name="tableServiceCategory">tableServiceCategory.</param>
@@ -745,12 +746,13 @@ namespace Flipdish.Model
         /// <param name="items">items.</param>
         /// <param name="taxRates">taxRates.</param>
         /// <param name="whiteLabelId">whiteLabelId.</param>
-        public PreviousOrder(string deliveryType = default(string), string deliveryLocationAddressString = default(string), string paymentAccountType = default(string), int? orderId = default(int?), string restaurantName = default(string), string localOrderId = default(string), string tableServiceCategory = default(string), string pickupLocationOptionValue = default(string), string customerName = default(string), string phoneNumberInternationalFormatString = default(string), string deliveryInstructions = default(string), CurrencyEnum? currency = default(CurrencyEnum?), double? processingFee = default(double?), double? serviceChargePercentage = default(double?), double? serviceChargeAmount = default(double?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? depositReturnFeeAmount = default(double?), double? totalTax = default(double?), double? totalAmount = default(double?), List<PreviousOrderItem> items = default(List<PreviousOrderItem>), List<TaxRate> taxRates = default(List<TaxRate>), int? whiteLabelId = default(int?))
+        public PreviousOrder(string deliveryType = default(string), string deliveryLocationAddressString = default(string), string paymentAccountType = default(string), int? orderId = default(int?), string receiptCode = default(string), string restaurantName = default(string), string localOrderId = default(string), string tableServiceCategory = default(string), string pickupLocationOptionValue = default(string), string customerName = default(string), string phoneNumberInternationalFormatString = default(string), string deliveryInstructions = default(string), CurrencyEnum? currency = default(CurrencyEnum?), double? processingFee = default(double?), double? serviceChargePercentage = default(double?), double? serviceChargeAmount = default(double?), double? tipAmount = default(double?), double? deliveryAmount = default(double?), double? depositReturnFeeAmount = default(double?), double? totalTax = default(double?), double? totalAmount = default(double?), List<PreviousOrderItem> items = default(List<PreviousOrderItem>), List<TaxRate> taxRates = default(List<TaxRate>), int? whiteLabelId = default(int?))
         {
             this.DeliveryType = deliveryType;
             this.DeliveryLocationAddressString = deliveryLocationAddressString;
             this.PaymentAccountType = paymentAccountType;
             this.OrderId = orderId;
+            this.ReceiptCode = receiptCode;
             this.RestaurantName = restaurantName;
             this.LocalOrderId = localOrderId;
             this.TableServiceCategory = tableServiceCategory;
@@ -795,6 +797,12 @@ namespace Flipdish.Model
         /// </summary>
         [DataMember(Name="OrderId", EmitDefaultValue=false)]
         public int? OrderId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ReceiptCode
+        /// </summary>
+        [DataMember(Name="ReceiptCode", EmitDefaultValue=false)]
+        public string ReceiptCode { get; set; }
 
         /// <summary>
         /// Gets or Sets RestaurantName
@@ -917,6 +925,7 @@ namespace Flipdish.Model
             sb.Append("  DeliveryLocationAddressString: ").Append(DeliveryLocationAddressString).Append("\n");
             sb.Append("  PaymentAccountType: ").Append(PaymentAccountType).Append("\n");
             sb.Append("  OrderId: ").Append(OrderId).Append("\n");
+            sb.Append("  ReceiptCode: ").Append(ReceiptCode).Append("\n");
             sb.Append("  RestaurantName: ").Append(RestaurantName).Append("\n");
             sb.Append("  LocalOrderId: ").Append(LocalOrderId).Append("\n");
             sb.Append("  TableServiceCategory: ").Append(TableServiceCategory).Append("\n");
@@ -989,6 +998,11 @@ namespace Flipdish.Model
                     this.OrderId == input.OrderId ||
                     (this.OrderId != null &&
                     this.OrderId.Equals(input.OrderId))
+                ) && 
+                (
+                    this.ReceiptCode == input.ReceiptCode ||
+                    (this.ReceiptCode != null &&
+                    this.ReceiptCode.Equals(input.ReceiptCode))
                 ) && 
                 (
                     this.RestaurantName == input.RestaurantName ||
@@ -1104,6 +1118,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PaymentAccountType.GetHashCode();
                 if (this.OrderId != null)
                     hashCode = hashCode * 59 + this.OrderId.GetHashCode();
+                if (this.ReceiptCode != null)
+                    hashCode = hashCode * 59 + this.ReceiptCode.GetHashCode();
                 if (this.RestaurantName != null)
                     hashCode = hashCode * 59 + this.RestaurantName.GetHashCode();
                 if (this.LocalOrderId != null)

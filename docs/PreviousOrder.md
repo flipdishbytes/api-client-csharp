@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **DeliveryLocationAddressString** | **string** |  | [optional] 
 **PaymentAccountType** | **string** |  | [optional] 
 **OrderId** | **int?** |  | [optional] 
+**ReceiptCode** | **string** |  | [optional] 
 **RestaurantName** | **string** |  | [optional] 
 **LocalOrderId** | **string** |  | [optional] 
 **TableServiceCategory** | **string** |  | [optional] 
