@@ -76,7 +76,15 @@ namespace Flipdish.Model
         /// <param name="fixedFeeOrderWithGoogle">Additional fixed fee charged on orders submitted through Order With Google.</param>
         /// <param name="shouldNotAutoIncreaseBefore">Should not auto increase fees before this date.</param>
         /// <param name="reason">Reason for the last fee change (optional).</param>
-        public StoreFeeConfig(int? feeConfigId = default(int?), int? storeId = default(int?), DateTime? startTime = default(DateTime?), double? percentFeeCardOrders = default(double?), double? percentFeeCashOrders = default(double?), double? percentFeeCardOrdersWeb = default(double?), double? percentFeeCashOrdersWeb = default(double?), double? percentFeeCardOrdersKiosk = default(double?), double? percentFeeCashOrdersKiosk = default(double?), double? fixedFeeCardOrdersKiosk = default(double?), double? fixedFeeCashOrdersKiosk = default(double?), double? percentFeeCardOrdersKioskChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrdersKioskChargedToCustomerIncludingVat = default(double?), double? percentFeeCashOrdersKioskChargedToCustomerIncludingVat = default(double?), double? fixedFeeCashOrdersKioskChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrders = default(double?), double? fixedFeeCashOrders = default(double?), double? percentFeeCardOrdersChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrdersChargedToCustomerIncludingVat = default(double?), double? percentFeeCashOrdersChargedToCustomerIncludingVat = default(double?), double? fixedFeeCashOrdersChargedToCustomerIncludingVat = default(double?), double? percentFeeTips = default(double?), double? percentFeeTipsCollection = default(double?), double? percentFeeTipsDelivery = default(double?), double? taxRatePercent = default(double?), double? percentFeeCardOrdersLocationService = default(double?), double? percentFeeCashOrdersLocationService = default(double?), double? fixedFeeCardOrdersLocationService = default(double?), double? fixedFeeCashOrdersLocationService = default(double?), double? percentFeeCardOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? percentFeeCashOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? fixedFeeCashOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? percentFeeCardOrdersIngest = default(double?), double? percentFeeCashOrdersIngest = default(double?), double? fixedFeeCardOrdersIngest = default(double?), double? fixedFeeCashOrdersIngest = default(double?), double? percentFeeDelivery = default(double?), double? fixedFeeDelivery = default(double?), double? percentFeeCardPosTransaction = default(double?), double? fixedFeeCardPosTransaction = default(double?), double? percentFeeOrderWithGoogle = default(double?), double? fixedFeeOrderWithGoogle = default(double?), DateTime? shouldNotAutoIncreaseBefore = default(DateTime?), string reason = default(string))
+        /// <param name="percentFeeCardOrdersPhoneAgent">Gets or sets the percent fee card orders phone agent..</param>
+        /// <param name="percentFeeCashOrdersPhoneAgent">Gets or sets the percent fee cash orders phone agent..</param>
+        /// <param name="fixedFeeCardOrdersPhoneAgent">Gets or sets the fixed fee card orders phone agent..</param>
+        /// <param name="fixedFeeCashOrdersPhoneAgent">Gets or sets the fixed fee cash orders phone agent..</param>
+        /// <param name="percentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat">Gets or sets the percent fee card orders phone agent charged to customer including vat..</param>
+        /// <param name="percentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat">Gets or sets the percent fee cash orders phone agent charged to customer including vat..</param>
+        /// <param name="fixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat">Gets or sets the fixed fee card orders phone agent charged to customer including vat..</param>
+        /// <param name="fixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat">Gets or sets the fixed fee cash orders phone agent charged to customer including vat..</param>
+        public StoreFeeConfig(int? feeConfigId = default(int?), int? storeId = default(int?), DateTime? startTime = default(DateTime?), double? percentFeeCardOrders = default(double?), double? percentFeeCashOrders = default(double?), double? percentFeeCardOrdersWeb = default(double?), double? percentFeeCashOrdersWeb = default(double?), double? percentFeeCardOrdersKiosk = default(double?), double? percentFeeCashOrdersKiosk = default(double?), double? fixedFeeCardOrdersKiosk = default(double?), double? fixedFeeCashOrdersKiosk = default(double?), double? percentFeeCardOrdersKioskChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrdersKioskChargedToCustomerIncludingVat = default(double?), double? percentFeeCashOrdersKioskChargedToCustomerIncludingVat = default(double?), double? fixedFeeCashOrdersKioskChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrders = default(double?), double? fixedFeeCashOrders = default(double?), double? percentFeeCardOrdersChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrdersChargedToCustomerIncludingVat = default(double?), double? percentFeeCashOrdersChargedToCustomerIncludingVat = default(double?), double? fixedFeeCashOrdersChargedToCustomerIncludingVat = default(double?), double? percentFeeTips = default(double?), double? percentFeeTipsCollection = default(double?), double? percentFeeTipsDelivery = default(double?), double? taxRatePercent = default(double?), double? percentFeeCardOrdersLocationService = default(double?), double? percentFeeCashOrdersLocationService = default(double?), double? fixedFeeCardOrdersLocationService = default(double?), double? fixedFeeCashOrdersLocationService = default(double?), double? percentFeeCardOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? percentFeeCashOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? fixedFeeCashOrdersLocationServiceChargedToCustomerIncludingVat = default(double?), double? percentFeeCardOrdersIngest = default(double?), double? percentFeeCashOrdersIngest = default(double?), double? fixedFeeCardOrdersIngest = default(double?), double? fixedFeeCashOrdersIngest = default(double?), double? percentFeeDelivery = default(double?), double? fixedFeeDelivery = default(double?), double? percentFeeCardPosTransaction = default(double?), double? fixedFeeCardPosTransaction = default(double?), double? percentFeeOrderWithGoogle = default(double?), double? fixedFeeOrderWithGoogle = default(double?), DateTime? shouldNotAutoIncreaseBefore = default(DateTime?), string reason = default(string), double? percentFeeCardOrdersPhoneAgent = default(double?), double? percentFeeCashOrdersPhoneAgent = default(double?), double? fixedFeeCardOrdersPhoneAgent = default(double?), double? fixedFeeCashOrdersPhoneAgent = default(double?), double? percentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat = default(double?), double? percentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat = default(double?), double? fixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat = default(double?), double? fixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat = default(double?))
         {
             this.FeeConfigId = feeConfigId;
             this.StoreId = storeId;
@@ -123,6 +131,14 @@ namespace Flipdish.Model
             this.FixedFeeOrderWithGoogle = fixedFeeOrderWithGoogle;
             this.ShouldNotAutoIncreaseBefore = shouldNotAutoIncreaseBefore;
             this.Reason = reason;
+            this.PercentFeeCardOrdersPhoneAgent = percentFeeCardOrdersPhoneAgent;
+            this.PercentFeeCashOrdersPhoneAgent = percentFeeCashOrdersPhoneAgent;
+            this.FixedFeeCardOrdersPhoneAgent = fixedFeeCardOrdersPhoneAgent;
+            this.FixedFeeCashOrdersPhoneAgent = fixedFeeCashOrdersPhoneAgent;
+            this.PercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat = percentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat;
+            this.PercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat = percentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat;
+            this.FixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat = fixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat;
+            this.FixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat = fixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat;
         }
         
         /// <summary>
@@ -420,6 +436,62 @@ namespace Flipdish.Model
         public string Reason { get; set; }
 
         /// <summary>
+        /// Gets or sets the percent fee card orders phone agent.
+        /// </summary>
+        /// <value>Gets or sets the percent fee card orders phone agent.</value>
+        [DataMember(Name="PercentFeeCardOrdersPhoneAgent", EmitDefaultValue=false)]
+        public double? PercentFeeCardOrdersPhoneAgent { get; set; }
+
+        /// <summary>
+        /// Gets or sets the percent fee cash orders phone agent.
+        /// </summary>
+        /// <value>Gets or sets the percent fee cash orders phone agent.</value>
+        [DataMember(Name="PercentFeeCashOrdersPhoneAgent", EmitDefaultValue=false)]
+        public double? PercentFeeCashOrdersPhoneAgent { get; set; }
+
+        /// <summary>
+        /// Gets or sets the fixed fee card orders phone agent.
+        /// </summary>
+        /// <value>Gets or sets the fixed fee card orders phone agent.</value>
+        [DataMember(Name="FixedFeeCardOrdersPhoneAgent", EmitDefaultValue=false)]
+        public double? FixedFeeCardOrdersPhoneAgent { get; set; }
+
+        /// <summary>
+        /// Gets or sets the fixed fee cash orders phone agent.
+        /// </summary>
+        /// <value>Gets or sets the fixed fee cash orders phone agent.</value>
+        [DataMember(Name="FixedFeeCashOrdersPhoneAgent", EmitDefaultValue=false)]
+        public double? FixedFeeCashOrdersPhoneAgent { get; set; }
+
+        /// <summary>
+        /// Gets or sets the percent fee card orders phone agent charged to customer including vat.
+        /// </summary>
+        /// <value>Gets or sets the percent fee card orders phone agent charged to customer including vat.</value>
+        [DataMember(Name="PercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat", EmitDefaultValue=false)]
+        public double? PercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat { get; set; }
+
+        /// <summary>
+        /// Gets or sets the percent fee cash orders phone agent charged to customer including vat.
+        /// </summary>
+        /// <value>Gets or sets the percent fee cash orders phone agent charged to customer including vat.</value>
+        [DataMember(Name="PercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat", EmitDefaultValue=false)]
+        public double? PercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat { get; set; }
+
+        /// <summary>
+        /// Gets or sets the fixed fee card orders phone agent charged to customer including vat.
+        /// </summary>
+        /// <value>Gets or sets the fixed fee card orders phone agent charged to customer including vat.</value>
+        [DataMember(Name="FixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat", EmitDefaultValue=false)]
+        public double? FixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat { get; set; }
+
+        /// <summary>
+        /// Gets or sets the fixed fee cash orders phone agent charged to customer including vat.
+        /// </summary>
+        /// <value>Gets or sets the fixed fee cash orders phone agent charged to customer including vat.</value>
+        [DataMember(Name="FixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat", EmitDefaultValue=false)]
+        public double? FixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -472,6 +544,14 @@ namespace Flipdish.Model
             sb.Append("  FixedFeeOrderWithGoogle: ").Append(FixedFeeOrderWithGoogle).Append("\n");
             sb.Append("  ShouldNotAutoIncreaseBefore: ").Append(ShouldNotAutoIncreaseBefore).Append("\n");
             sb.Append("  Reason: ").Append(Reason).Append("\n");
+            sb.Append("  PercentFeeCardOrdersPhoneAgent: ").Append(PercentFeeCardOrdersPhoneAgent).Append("\n");
+            sb.Append("  PercentFeeCashOrdersPhoneAgent: ").Append(PercentFeeCashOrdersPhoneAgent).Append("\n");
+            sb.Append("  FixedFeeCardOrdersPhoneAgent: ").Append(FixedFeeCardOrdersPhoneAgent).Append("\n");
+            sb.Append("  FixedFeeCashOrdersPhoneAgent: ").Append(FixedFeeCashOrdersPhoneAgent).Append("\n");
+            sb.Append("  PercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat: ").Append(PercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat).Append("\n");
+            sb.Append("  PercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat: ").Append(PercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat).Append("\n");
+            sb.Append("  FixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat: ").Append(FixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat).Append("\n");
+            sb.Append("  FixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat: ").Append(FixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -730,6 +810,46 @@ namespace Flipdish.Model
                     this.Reason == input.Reason ||
                     (this.Reason != null &&
                     this.Reason.Equals(input.Reason))
+                ) && 
+                (
+                    this.PercentFeeCardOrdersPhoneAgent == input.PercentFeeCardOrdersPhoneAgent ||
+                    (this.PercentFeeCardOrdersPhoneAgent != null &&
+                    this.PercentFeeCardOrdersPhoneAgent.Equals(input.PercentFeeCardOrdersPhoneAgent))
+                ) && 
+                (
+                    this.PercentFeeCashOrdersPhoneAgent == input.PercentFeeCashOrdersPhoneAgent ||
+                    (this.PercentFeeCashOrdersPhoneAgent != null &&
+                    this.PercentFeeCashOrdersPhoneAgent.Equals(input.PercentFeeCashOrdersPhoneAgent))
+                ) && 
+                (
+                    this.FixedFeeCardOrdersPhoneAgent == input.FixedFeeCardOrdersPhoneAgent ||
+                    (this.FixedFeeCardOrdersPhoneAgent != null &&
+                    this.FixedFeeCardOrdersPhoneAgent.Equals(input.FixedFeeCardOrdersPhoneAgent))
+                ) && 
+                (
+                    this.FixedFeeCashOrdersPhoneAgent == input.FixedFeeCashOrdersPhoneAgent ||
+                    (this.FixedFeeCashOrdersPhoneAgent != null &&
+                    this.FixedFeeCashOrdersPhoneAgent.Equals(input.FixedFeeCashOrdersPhoneAgent))
+                ) && 
+                (
+                    this.PercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat == input.PercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat ||
+                    (this.PercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat != null &&
+                    this.PercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat.Equals(input.PercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat))
+                ) && 
+                (
+                    this.PercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat == input.PercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat ||
+                    (this.PercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat != null &&
+                    this.PercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat.Equals(input.PercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat))
+                ) && 
+                (
+                    this.FixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat == input.FixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat ||
+                    (this.FixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat != null &&
+                    this.FixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat.Equals(input.FixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat))
+                ) && 
+                (
+                    this.FixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat == input.FixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat ||
+                    (this.FixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat != null &&
+                    this.FixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat.Equals(input.FixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat))
                 );
         }
 
@@ -832,6 +952,22 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.ShouldNotAutoIncreaseBefore.GetHashCode();
                 if (this.Reason != null)
                     hashCode = hashCode * 59 + this.Reason.GetHashCode();
+                if (this.PercentFeeCardOrdersPhoneAgent != null)
+                    hashCode = hashCode * 59 + this.PercentFeeCardOrdersPhoneAgent.GetHashCode();
+                if (this.PercentFeeCashOrdersPhoneAgent != null)
+                    hashCode = hashCode * 59 + this.PercentFeeCashOrdersPhoneAgent.GetHashCode();
+                if (this.FixedFeeCardOrdersPhoneAgent != null)
+                    hashCode = hashCode * 59 + this.FixedFeeCardOrdersPhoneAgent.GetHashCode();
+                if (this.FixedFeeCashOrdersPhoneAgent != null)
+                    hashCode = hashCode * 59 + this.FixedFeeCashOrdersPhoneAgent.GetHashCode();
+                if (this.PercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat != null)
+                    hashCode = hashCode * 59 + this.PercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat.GetHashCode();
+                if (this.PercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat != null)
+                    hashCode = hashCode * 59 + this.PercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat.GetHashCode();
+                if (this.FixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat != null)
+                    hashCode = hashCode * 59 + this.FixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat.GetHashCode();
+                if (this.FixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat != null)
+                    hashCode = hashCode * 59 + this.FixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat.GetHashCode();
                 return hashCode;
             }
         }
