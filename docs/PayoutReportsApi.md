@@ -7,10 +7,12 @@ Method | HTTP request | Description
 [**GetPayoutReport3Details**](PayoutReportsApi.md#getpayoutreport3details) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/details | 
 [**GetPayoutReport3Overview**](PayoutReportsApi.md#getpayoutreport3overview) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/overview | 
 [**GetPayoutReport3RefundedOrders**](PayoutReportsApi.md#getpayoutreport3refundedorders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/refundedOrders | 
+[**GetPayoutReport3Stores**](PayoutReportsApi.md#getpayoutreport3stores) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/stores | 
 [**PayoutReport3ExportPayoutChargebacks**](PayoutReportsApi.md#payoutreport3exportpayoutchargebacks) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/chargebacks | 
 [**PayoutReport3ExportPayoutOrders**](PayoutReportsApi.md#payoutreport3exportpayoutorders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/orders | 
 [**PayoutReport3ExportPayoutPosSales**](PayoutReportsApi.md#payoutreport3exportpayoutpossales) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/possales | 
 [**PayoutReport3ExportPayoutRefundedOrders**](PayoutReportsApi.md#payoutreport3exportpayoutrefundedorders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/refundedOrders | 
+[**PayoutReport3ExportPayoutStores**](PayoutReportsApi.md#payoutreport3exportpayoutstores) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/stores | 
 
 
 <a name="getpayoutreport3details"></a>
@@ -204,6 +206,73 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiPaginationResultPayoutReport3RefundedOrder**](RestApiPaginationResultPayoutReport3RefundedOrder.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getpayoutreport3stores"></a>
+# **GetPayoutReport3Stores**
+> RestApiResultPayoutReport3StorePayouts GetPayoutReport3Stores (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetPayoutReport3StoresExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new PayoutReportsApi();
+            var appId = appId_example;  // string | 
+            var bankAccountId = 56;  // int? | 
+            var payoutId = 56;  // int? | 
+            var stores = new List<int?>(); // List<int?> |  (optional) 
+
+            try
+            {
+                RestApiResultPayoutReport3StorePayouts result = apiInstance.GetPayoutReport3Stores(appId, bankAccountId, payoutId, stores);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PayoutReportsApi.GetPayoutReport3Stores: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **bankAccountId** | **int?**|  | 
+ **payoutId** | **int?**|  | 
+ **stores** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
+
+### Return type
+
+[**RestApiResultPayoutReport3StorePayouts**](RestApiResultPayoutReport3StorePayouts.md)
 
 ### Authorization
 
@@ -454,6 +523,73 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling PayoutReportsApi.PayoutReport3ExportPayoutRefundedOrders: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **bankAccountId** | **int?**|  | 
+ **payoutId** | **int?**|  | 
+ **stores** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
+
+### Return type
+
+[**RestApiResultFileCreationResult**](RestApiResultFileCreationResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="payoutreport3exportpayoutstores"></a>
+# **PayoutReport3ExportPayoutStores**
+> RestApiResultFileCreationResult PayoutReport3ExportPayoutStores (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class PayoutReport3ExportPayoutStoresExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new PayoutReportsApi();
+            var appId = appId_example;  // string | 
+            var bankAccountId = 56;  // int? | 
+            var payoutId = 56;  // int? | 
+            var stores = new List<int?>(); // List<int?> |  (optional) 
+
+            try
+            {
+                RestApiResultFileCreationResult result = apiInstance.PayoutReport3ExportPayoutStores(appId, bankAccountId, payoutId, stores);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PayoutReportsApi.PayoutReport3ExportPayoutStores: " + e.Message );
             }
         }
     }
