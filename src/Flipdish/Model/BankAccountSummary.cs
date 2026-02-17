@@ -115,6 +115,8 @@ namespace Flipdish.Model
         /// <param name="accountState">Status of Account.</param>
         /// <param name="currencyCode">Currency of Account.</param>
         /// <param name="vatNumber">Account Holders Vat Number.</param>
+        /// <param name="accountHolderAddress">Account Holders Address.</param>
+        /// <param name="accountHolderCountryCode">Account Holders Country Code.</param>
         /// <param name="stripeConnectedAccountInfo">Information about the Stripe connected account associated with this bank account (if any).</param>
         /// <param name="accountName">Name of this account.</param>
         /// <param name="iban">IBAN of this account.</param>
@@ -123,7 +125,7 @@ namespace Flipdish.Model
         /// <param name="populatedAccountFields">A list of one or more populated account fields (field key-value pairs).  If this list contains at least one item, the Iban, Swift and NationalClearingCode fields will be ignored..</param>
         /// <param name="rejectionReason">Reason for Rejection.</param>
         /// <param name="businessType">Business Type.</param>
-        public BankAccountSummary(int? id = default(int?), List<string> storeNames = default(List<string>), List<int?> storeIds = default(List<int?>), AccountStateEnum? accountState = default(AccountStateEnum?), string currencyCode = default(string), string vatNumber = default(string), StripeConnectedAccountInfo stripeConnectedAccountInfo = default(StripeConnectedAccountInfo), string accountName = default(string), string iban = default(string), string swift = default(string), string nationalClearingCode = default(string), List<AccountFieldKeyValuePair> populatedAccountFields = default(List<AccountFieldKeyValuePair>), string rejectionReason = default(string), BusinessTypeEnum? businessType = default(BusinessTypeEnum?))
+        public BankAccountSummary(int? id = default(int?), List<string> storeNames = default(List<string>), List<int?> storeIds = default(List<int?>), AccountStateEnum? accountState = default(AccountStateEnum?), string currencyCode = default(string), string vatNumber = default(string), string accountHolderAddress = default(string), string accountHolderCountryCode = default(string), StripeConnectedAccountInfo stripeConnectedAccountInfo = default(StripeConnectedAccountInfo), string accountName = default(string), string iban = default(string), string swift = default(string), string nationalClearingCode = default(string), List<AccountFieldKeyValuePair> populatedAccountFields = default(List<AccountFieldKeyValuePair>), string rejectionReason = default(string), BusinessTypeEnum? businessType = default(BusinessTypeEnum?))
         {
             this.Id = id;
             this.StoreNames = storeNames;
@@ -131,6 +133,8 @@ namespace Flipdish.Model
             this.AccountState = accountState;
             this.CurrencyCode = currencyCode;
             this.VatNumber = vatNumber;
+            this.AccountHolderAddress = accountHolderAddress;
+            this.AccountHolderCountryCode = accountHolderCountryCode;
             this.StripeConnectedAccountInfo = stripeConnectedAccountInfo;
             this.AccountName = accountName;
             this.Iban = iban;
@@ -176,6 +180,20 @@ namespace Flipdish.Model
         /// <value>Account Holders Vat Number</value>
         [DataMember(Name="VatNumber", EmitDefaultValue=false)]
         public string VatNumber { get; set; }
+
+        /// <summary>
+        /// Account Holders Address
+        /// </summary>
+        /// <value>Account Holders Address</value>
+        [DataMember(Name="AccountHolderAddress", EmitDefaultValue=false)]
+        public string AccountHolderAddress { get; set; }
+
+        /// <summary>
+        /// Account Holders Country Code
+        /// </summary>
+        /// <value>Account Holders Country Code</value>
+        [DataMember(Name="AccountHolderCountryCode", EmitDefaultValue=false)]
+        public string AccountHolderCountryCode { get; set; }
 
         /// <summary>
         /// Information about the Stripe connected account associated with this bank account (if any)
@@ -241,6 +259,8 @@ namespace Flipdish.Model
             sb.Append("  AccountState: ").Append(AccountState).Append("\n");
             sb.Append("  CurrencyCode: ").Append(CurrencyCode).Append("\n");
             sb.Append("  VatNumber: ").Append(VatNumber).Append("\n");
+            sb.Append("  AccountHolderAddress: ").Append(AccountHolderAddress).Append("\n");
+            sb.Append("  AccountHolderCountryCode: ").Append(AccountHolderCountryCode).Append("\n");
             sb.Append("  StripeConnectedAccountInfo: ").Append(StripeConnectedAccountInfo).Append("\n");
             sb.Append("  AccountName: ").Append(AccountName).Append("\n");
             sb.Append("  Iban: ").Append(Iban).Append("\n");
@@ -314,6 +334,16 @@ namespace Flipdish.Model
                     this.VatNumber.Equals(input.VatNumber))
                 ) && 
                 (
+                    this.AccountHolderAddress == input.AccountHolderAddress ||
+                    (this.AccountHolderAddress != null &&
+                    this.AccountHolderAddress.Equals(input.AccountHolderAddress))
+                ) && 
+                (
+                    this.AccountHolderCountryCode == input.AccountHolderCountryCode ||
+                    (this.AccountHolderCountryCode != null &&
+                    this.AccountHolderCountryCode.Equals(input.AccountHolderCountryCode))
+                ) && 
+                (
                     this.StripeConnectedAccountInfo == input.StripeConnectedAccountInfo ||
                     (this.StripeConnectedAccountInfo != null &&
                     this.StripeConnectedAccountInfo.Equals(input.StripeConnectedAccountInfo))
@@ -376,6 +406,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.CurrencyCode.GetHashCode();
                 if (this.VatNumber != null)
                     hashCode = hashCode * 59 + this.VatNumber.GetHashCode();
+                if (this.AccountHolderAddress != null)
+                    hashCode = hashCode * 59 + this.AccountHolderAddress.GetHashCode();
+                if (this.AccountHolderCountryCode != null)
+                    hashCode = hashCode * 59 + this.AccountHolderCountryCode.GetHashCode();
                 if (this.StripeConnectedAccountInfo != null)
                     hashCode = hashCode * 59 + this.StripeConnectedAccountInfo.GetHashCode();
                 if (this.AccountName != null)

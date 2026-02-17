@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **AccountState** | **string** | Status of Account | [optional] 
 **CurrencyCode** | **string** | Currency of Account | [optional] 
 **VatNumber** | **string** | Account Holders Vat Number | [optional] 
+**AccountHolderAddress** | **string** | Account Holders Address | [optional] 
+**AccountHolderCountryCode** | **string** | Account Holders Country Code | [optional] 
 **StripeConnectedAccountInfo** | [**StripeConnectedAccountInfo**](StripeConnectedAccountInfo.md) | Information about the Stripe connected account associated with this bank account (if any) | [optional] 
 **AccountName** | **string** | Name of this account | [optional] 
 **Iban** | **string** | IBAN of this account | [optional] 
