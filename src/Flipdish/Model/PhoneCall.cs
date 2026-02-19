@@ -101,6 +101,7 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="PhoneCall" /> class.
         /// </summary>
         /// <param name="phoneCallId">Phone call id.</param>
+        /// <param name="callSid">Twilio Call SID.</param>
         /// <param name="timeOfCall">Time of the call.</param>
         /// <param name="timeOfCallLocal">Time of the call, local to the store to which the call was made.</param>
         /// <param name="storeId">ID of the store that the call was TO.</param>
@@ -110,9 +111,10 @@ namespace Flipdish.Model
         /// <param name="callerNumber">Phone number of the caller.</param>
         /// <param name="callLengthInSeconds">The amount of time the call took.</param>
         /// <param name="callStatus">The status of the call.</param>
-        public PhoneCall(int? phoneCallId = default(int?), DateTime? timeOfCall = default(DateTime?), DateTime? timeOfCallLocal = default(DateTime?), int? storeId = default(int?), string storeName = default(string), string callerName = default(string), int? callerUserId = default(int?), string callerNumber = default(string), int? callLengthInSeconds = default(int?), CallStatusEnum? callStatus = default(CallStatusEnum?))
+        public PhoneCall(int? phoneCallId = default(int?), string callSid = default(string), DateTime? timeOfCall = default(DateTime?), DateTime? timeOfCallLocal = default(DateTime?), int? storeId = default(int?), string storeName = default(string), string callerName = default(string), int? callerUserId = default(int?), string callerNumber = default(string), int? callLengthInSeconds = default(int?), CallStatusEnum? callStatus = default(CallStatusEnum?))
         {
             this.PhoneCallId = phoneCallId;
+            this.CallSid = callSid;
             this.TimeOfCall = timeOfCall;
             this.TimeOfCallLocal = timeOfCallLocal;
             this.StoreId = storeId;
@@ -130,6 +132,13 @@ namespace Flipdish.Model
         /// <value>Phone call id</value>
         [DataMember(Name="PhoneCallId", EmitDefaultValue=false)]
         public int? PhoneCallId { get; set; }
+
+        /// <summary>
+        /// Twilio Call SID
+        /// </summary>
+        /// <value>Twilio Call SID</value>
+        [DataMember(Name="CallSid", EmitDefaultValue=false)]
+        public string CallSid { get; set; }
 
         /// <summary>
         /// Time of the call
@@ -197,6 +206,7 @@ namespace Flipdish.Model
             var sb = new StringBuilder();
             sb.Append("class PhoneCall {\n");
             sb.Append("  PhoneCallId: ").Append(PhoneCallId).Append("\n");
+            sb.Append("  CallSid: ").Append(CallSid).Append("\n");
             sb.Append("  TimeOfCall: ").Append(TimeOfCall).Append("\n");
             sb.Append("  TimeOfCallLocal: ").Append(TimeOfCallLocal).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
@@ -244,6 +254,11 @@ namespace Flipdish.Model
                     this.PhoneCallId == input.PhoneCallId ||
                     (this.PhoneCallId != null &&
                     this.PhoneCallId.Equals(input.PhoneCallId))
+                ) && 
+                (
+                    this.CallSid == input.CallSid ||
+                    (this.CallSid != null &&
+                    this.CallSid.Equals(input.CallSid))
                 ) && 
                 (
                     this.TimeOfCall == input.TimeOfCall ||
@@ -303,6 +318,8 @@ namespace Flipdish.Model
                 int hashCode = 41;
                 if (this.PhoneCallId != null)
                     hashCode = hashCode * 59 + this.PhoneCallId.GetHashCode();
+                if (this.CallSid != null)
+                    hashCode = hashCode * 59 + this.CallSid.GetHashCode();
                 if (this.TimeOfCall != null)
                     hashCode = hashCode * 59 + this.TimeOfCall.GetHashCode();
                 if (this.TimeOfCallLocal != null)
