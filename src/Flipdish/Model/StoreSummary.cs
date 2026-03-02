@@ -737,7 +737,8 @@ namespace Flipdish.Model
         /// <param name="taxId">VAT number or generic Tax ID of the store.</param>
         /// <param name="prettyAddress">Address of the store.</param>
         /// <param name="countryCode">Country code of the store address (ISO 3166-1 alpha-2).</param>
-        public StoreSummary(int? id = default(int?), string name = default(string), int? menuId = default(int?), Guid? menuPublishId = default(Guid?), Dictionary<string, string> metadata = default(Dictionary<string, string>), CurrencyEnum? currency = default(CurrencyEnum?), Coordinates coordinates = default(Coordinates), string storeTimezone = default(string), string storeIanaTimezone = default(string), int? storeGroupId = default(int?), string taxId = default(string), string prettyAddress = default(string), string countryCode = default(string))
+        /// <param name="propertyId">Property identifier.</param>
+        public StoreSummary(int? id = default(int?), string name = default(string), int? menuId = default(int?), Guid? menuPublishId = default(Guid?), Dictionary<string, string> metadata = default(Dictionary<string, string>), CurrencyEnum? currency = default(CurrencyEnum?), Coordinates coordinates = default(Coordinates), string storeTimezone = default(string), string storeIanaTimezone = default(string), int? storeGroupId = default(int?), string taxId = default(string), string prettyAddress = default(string), string countryCode = default(string), string propertyId = default(string))
         {
             this.Id = id;
             this.Name = name;
@@ -752,6 +753,7 @@ namespace Flipdish.Model
             this.TaxId = taxId;
             this.PrettyAddress = prettyAddress;
             this.CountryCode = countryCode;
+            this.PropertyId = propertyId;
         }
         
         /// <summary>
@@ -840,6 +842,13 @@ namespace Flipdish.Model
         public string CountryCode { get; set; }
 
         /// <summary>
+        /// Property identifier
+        /// </summary>
+        /// <value>Property identifier</value>
+        [DataMember(Name="PropertyId", EmitDefaultValue=false)]
+        public string PropertyId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -860,6 +869,7 @@ namespace Flipdish.Model
             sb.Append("  TaxId: ").Append(TaxId).Append("\n");
             sb.Append("  PrettyAddress: ").Append(PrettyAddress).Append("\n");
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
+            sb.Append("  PropertyId: ").Append(PropertyId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -958,6 +968,11 @@ namespace Flipdish.Model
                     this.CountryCode == input.CountryCode ||
                     (this.CountryCode != null &&
                     this.CountryCode.Equals(input.CountryCode))
+                ) && 
+                (
+                    this.PropertyId == input.PropertyId ||
+                    (this.PropertyId != null &&
+                    this.PropertyId.Equals(input.PropertyId))
                 );
         }
 
@@ -996,6 +1011,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PrettyAddress.GetHashCode();
                 if (this.CountryCode != null)
                     hashCode = hashCode * 59 + this.CountryCode.GetHashCode();
+                if (this.PropertyId != null)
+                    hashCode = hashCode * 59 + this.PropertyId.GetHashCode();
                 return hashCode;
             }
         }
