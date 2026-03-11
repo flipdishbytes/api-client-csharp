@@ -35,18 +35,20 @@ namespace Flipdish.Model
         /// <param name="description">Description.</param>
         /// <param name="storeId">Store Id.</param>
         /// <param name="telephonyConfig">The telephony config.</param>
+        /// <param name="propertyId">Property Id.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
         /// <param name="orgId">Org id.</param>
         /// <param name="ipAddress">Ip Address.</param>
-        public TelephonyConfigUpdatedEvent(string eventName = default(string), string description = default(string), int? storeId = default(int?), TelephonyConfig telephonyConfig = default(TelephonyConfig), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string orgId = default(string), string ipAddress = default(string))
+        public TelephonyConfigUpdatedEvent(string eventName = default(string), string description = default(string), int? storeId = default(int?), TelephonyConfig telephonyConfig = default(TelephonyConfig), string propertyId = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string orgId = default(string), string ipAddress = default(string))
         {
             this.EventName = eventName;
             this.Description = description;
             this.StoreId = storeId;
             this.TelephonyConfig = telephonyConfig;
+            this.PropertyId = propertyId;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
             this.Position = position;
@@ -82,6 +84,13 @@ namespace Flipdish.Model
         /// <value>The telephony config</value>
         [DataMember(Name="TelephonyConfig", EmitDefaultValue=false)]
         public TelephonyConfig TelephonyConfig { get; set; }
+
+        /// <summary>
+        /// Property Id
+        /// </summary>
+        /// <value>Property Id</value>
+        [DataMember(Name="PropertyId", EmitDefaultValue=false)]
+        public string PropertyId { get; set; }
 
         /// <summary>
         /// The identitfier of the event
@@ -137,6 +146,7 @@ namespace Flipdish.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  TelephonyConfig: ").Append(TelephonyConfig).Append("\n");
+            sb.Append("  PropertyId: ").Append(PropertyId).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -198,6 +208,11 @@ namespace Flipdish.Model
                     this.TelephonyConfig.Equals(input.TelephonyConfig))
                 ) && 
                 (
+                    this.PropertyId == input.PropertyId ||
+                    (this.PropertyId != null &&
+                    this.PropertyId.Equals(input.PropertyId))
+                ) && 
+                (
                     this.FlipdishEventId == input.FlipdishEventId ||
                     (this.FlipdishEventId != null &&
                     this.FlipdishEventId.Equals(input.FlipdishEventId))
@@ -246,6 +261,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StoreId.GetHashCode();
                 if (this.TelephonyConfig != null)
                     hashCode = hashCode * 59 + this.TelephonyConfig.GetHashCode();
+                if (this.PropertyId != null)
+                    hashCode = hashCode * 59 + this.PropertyId.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)

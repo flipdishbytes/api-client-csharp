@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Description** | **string** | Description | [optional] 
 **StoreId** | **int?** | Store Id | [optional] 
 **TelephonyConfig** | [**TelephonyConfig**](TelephonyConfig.md) | The telephony config | [optional] 
+**PropertyId** | **string** | Property Id | [optional] 
 **FlipdishEventId** | **Guid?** | The identitfier of the event | [optional] 
 **CreateTime** | **DateTime?** | The time of creation of the event | [optional] 
 **Position** | **int?** | Position | [optional] 
