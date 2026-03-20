@@ -100,7 +100,9 @@ namespace Flipdish.Model
         /// <param name="position">Position.</param>
         /// <param name="appId">App id.</param>
         /// <param name="ipAddress">Ip Address.</param>
-        public StoreOpeningHoursUpdatedEvent(string eventName = default(string), string orgId = default(string), int? storeId = default(int?), int? storeGroupId = default(int?), UserEventInfo user = default(UserEventInfo), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), DeliveryTypeStringEnum? deliveryTypeString = default(DeliveryTypeStringEnum?), BusinessHoursPeriod businessHoursPeriodOld = default(BusinessHoursPeriod), BusinessHoursPeriod businessHoursPeriod = default(BusinessHoursPeriod), string description = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string))
+        /// <param name="activityId">Activity Id.</param>
+        /// <param name="activityType">Activity Type.</param>
+        public StoreOpeningHoursUpdatedEvent(string eventName = default(string), string orgId = default(string), int? storeId = default(int?), int? storeGroupId = default(int?), UserEventInfo user = default(UserEventInfo), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), DeliveryTypeStringEnum? deliveryTypeString = default(DeliveryTypeStringEnum?), BusinessHoursPeriod businessHoursPeriodOld = default(BusinessHoursPeriod), BusinessHoursPeriod businessHoursPeriod = default(BusinessHoursPeriod), string description = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string ipAddress = default(string), string activityId = default(string), string activityType = default(string))
         {
             this.EventName = eventName;
             this.OrgId = orgId;
@@ -117,6 +119,8 @@ namespace Flipdish.Model
             this.Position = position;
             this.AppId = appId;
             this.IpAddress = ipAddress;
+            this.ActivityId = activityId;
+            this.ActivityType = activityType;
         }
         
         /// <summary>
@@ -213,6 +217,20 @@ namespace Flipdish.Model
         public string IpAddress { get; set; }
 
         /// <summary>
+        /// Activity Id
+        /// </summary>
+        /// <value>Activity Id</value>
+        [DataMember(Name="ActivityId", EmitDefaultValue=false)]
+        public string ActivityId { get; set; }
+
+        /// <summary>
+        /// Activity Type
+        /// </summary>
+        /// <value>Activity Type</value>
+        [DataMember(Name="ActivityType", EmitDefaultValue=false)]
+        public string ActivityType { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -235,6 +253,8 @@ namespace Flipdish.Model
             sb.Append("  Position: ").Append(Position).Append("\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("  IpAddress: ").Append(IpAddress).Append("\n");
+            sb.Append("  ActivityId: ").Append(ActivityId).Append("\n");
+            sb.Append("  ActivityType: ").Append(ActivityType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -343,6 +363,16 @@ namespace Flipdish.Model
                     this.IpAddress == input.IpAddress ||
                     (this.IpAddress != null &&
                     this.IpAddress.Equals(input.IpAddress))
+                ) && 
+                (
+                    this.ActivityId == input.ActivityId ||
+                    (this.ActivityId != null &&
+                    this.ActivityId.Equals(input.ActivityId))
+                ) && 
+                (
+                    this.ActivityType == input.ActivityType ||
+                    (this.ActivityType != null &&
+                    this.ActivityType.Equals(input.ActivityType))
                 );
         }
 
@@ -385,6 +415,10 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.AppId.GetHashCode();
                 if (this.IpAddress != null)
                     hashCode = hashCode * 59 + this.IpAddress.GetHashCode();
+                if (this.ActivityId != null)
+                    hashCode = hashCode * 59 + this.ActivityId.GetHashCode();
+                if (this.ActivityType != null)
+                    hashCode = hashCode * 59 + this.ActivityType.GetHashCode();
                 return hashCode;
             }
         }

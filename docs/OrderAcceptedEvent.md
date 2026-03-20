@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **Position** | **int?** | Position | [optional] 
 **AppId** | **string** | App id | [optional] 
 **IpAddress** | **string** | Ip Address | [optional] 
+**ActivityId** | **string** | Activity Id | [optional] 
+**ActivityType** | **string** | Activity Type | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
