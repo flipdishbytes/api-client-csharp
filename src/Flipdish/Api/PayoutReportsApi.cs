@@ -35,9 +35,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="storeIds"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>RestApiResultPayoutReport3Details</returns>
-        RestApiResultPayoutReport3Details GetPayoutReport3Details (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, List<string> propertyIds = null);
+        RestApiResultPayoutReport3Details GetPayoutReport3Details (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
 
         /// <summary>
         /// 
@@ -50,9 +49,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="storeIds"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultPayoutReport3Details</returns>
-        ApiResponse<RestApiResultPayoutReport3Details> GetPayoutReport3DetailsWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, List<string> propertyIds = null);
+        ApiResponse<RestApiResultPayoutReport3Details> GetPayoutReport3DetailsWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
         /// <summary>
         /// 
         /// </summary>
@@ -89,11 +87,10 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="storeIds"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultPayoutReport3RefundedOrder</returns>
-        RestApiPaginationResultPayoutReport3RefundedOrder GetPayoutReport3RefundedOrders (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, List<string> propertyIds = null, int? page = null, int? limit = null);
+        RestApiPaginationResultPayoutReport3RefundedOrder GetPayoutReport3RefundedOrders (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// 
@@ -106,11 +103,10 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="storeIds"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultPayoutReport3RefundedOrder</returns>
-        ApiResponse<RestApiPaginationResultPayoutReport3RefundedOrder> GetPayoutReport3RefundedOrdersWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, List<string> propertyIds = null, int? page = null, int? limit = null);
+        ApiResponse<RestApiPaginationResultPayoutReport3RefundedOrder> GetPayoutReport3RefundedOrdersWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, int? page = null, int? limit = null);
         /// <summary>
         /// 
         /// </summary>
@@ -122,9 +118,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>RestApiResultPayoutReport3StorePayouts</returns>
-        RestApiResultPayoutReport3StorePayouts GetPayoutReport3Stores (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        RestApiResultPayoutReport3StorePayouts GetPayoutReport3Stores (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
 
         /// <summary>
         /// 
@@ -137,9 +132,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultPayoutReport3StorePayouts</returns>
-        ApiResponse<RestApiResultPayoutReport3StorePayouts> GetPayoutReport3StoresWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        ApiResponse<RestApiResultPayoutReport3StorePayouts> GetPayoutReport3StoresWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
         /// <summary>
         /// 
         /// </summary>
@@ -151,9 +145,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>RestApiResultFileCreationResult</returns>
-        RestApiResultFileCreationResult PayoutReport3ExportPayoutChargebacks (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        RestApiResultFileCreationResult PayoutReport3ExportPayoutChargebacks (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
 
         /// <summary>
         /// 
@@ -166,9 +159,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultFileCreationResult</returns>
-        ApiResponse<RestApiResultFileCreationResult> PayoutReport3ExportPayoutChargebacksWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        ApiResponse<RestApiResultFileCreationResult> PayoutReport3ExportPayoutChargebacksWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
         /// <summary>
         /// 
         /// </summary>
@@ -180,9 +172,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>RestApiResultFileCreationResult</returns>
-        RestApiResultFileCreationResult PayoutReport3ExportPayoutOrders (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        RestApiResultFileCreationResult PayoutReport3ExportPayoutOrders (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
 
         /// <summary>
         /// 
@@ -195,9 +186,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultFileCreationResult</returns>
-        ApiResponse<RestApiResultFileCreationResult> PayoutReport3ExportPayoutOrdersWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        ApiResponse<RestApiResultFileCreationResult> PayoutReport3ExportPayoutOrdersWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
         /// <summary>
         /// 
         /// </summary>
@@ -209,9 +199,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>RestApiResultFileCreationResult</returns>
-        RestApiResultFileCreationResult PayoutReport3ExportPayoutPosSales (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        RestApiResultFileCreationResult PayoutReport3ExportPayoutPosSales (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
 
         /// <summary>
         /// 
@@ -224,9 +213,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultFileCreationResult</returns>
-        ApiResponse<RestApiResultFileCreationResult> PayoutReport3ExportPayoutPosSalesWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        ApiResponse<RestApiResultFileCreationResult> PayoutReport3ExportPayoutPosSalesWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
         /// <summary>
         /// 
         /// </summary>
@@ -238,9 +226,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>RestApiResultFileCreationResult</returns>
-        RestApiResultFileCreationResult PayoutReport3ExportPayoutRefundedOrders (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        RestApiResultFileCreationResult PayoutReport3ExportPayoutRefundedOrders (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
 
         /// <summary>
         /// 
@@ -253,9 +240,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultFileCreationResult</returns>
-        ApiResponse<RestApiResultFileCreationResult> PayoutReport3ExportPayoutRefundedOrdersWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        ApiResponse<RestApiResultFileCreationResult> PayoutReport3ExportPayoutRefundedOrdersWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
         /// <summary>
         /// 
         /// </summary>
@@ -267,9 +253,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>RestApiResultFileCreationResult</returns>
-        RestApiResultFileCreationResult PayoutReport3ExportPayoutStores (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        RestApiResultFileCreationResult PayoutReport3ExportPayoutStores (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
 
         /// <summary>
         /// 
@@ -282,9 +267,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultFileCreationResult</returns>
-        ApiResponse<RestApiResultFileCreationResult> PayoutReport3ExportPayoutStoresWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        ApiResponse<RestApiResultFileCreationResult> PayoutReport3ExportPayoutStoresWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -298,9 +282,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="storeIds"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of RestApiResultPayoutReport3Details</returns>
-        System.Threading.Tasks.Task<RestApiResultPayoutReport3Details> GetPayoutReport3DetailsAsync (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, List<string> propertyIds = null);
+        System.Threading.Tasks.Task<RestApiResultPayoutReport3Details> GetPayoutReport3DetailsAsync (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
 
         /// <summary>
         /// 
@@ -313,9 +296,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="storeIds"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultPayoutReport3Details)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultPayoutReport3Details>> GetPayoutReport3DetailsAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, List<string> propertyIds = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultPayoutReport3Details>> GetPayoutReport3DetailsAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null);
         /// <summary>
         /// 
         /// </summary>
@@ -352,11 +334,10 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="storeIds"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultPayoutReport3RefundedOrder</returns>
-        System.Threading.Tasks.Task<RestApiPaginationResultPayoutReport3RefundedOrder> GetPayoutReport3RefundedOrdersAsync (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, List<string> propertyIds = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<RestApiPaginationResultPayoutReport3RefundedOrder> GetPayoutReport3RefundedOrdersAsync (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// 
@@ -369,11 +350,10 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="storeIds"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultPayoutReport3RefundedOrder)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPayoutReport3RefundedOrder>> GetPayoutReport3RefundedOrdersAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, List<string> propertyIds = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPayoutReport3RefundedOrder>> GetPayoutReport3RefundedOrdersAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, int? page = null, int? limit = null);
         /// <summary>
         /// 
         /// </summary>
@@ -385,9 +365,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of RestApiResultPayoutReport3StorePayouts</returns>
-        System.Threading.Tasks.Task<RestApiResultPayoutReport3StorePayouts> GetPayoutReport3StoresAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        System.Threading.Tasks.Task<RestApiResultPayoutReport3StorePayouts> GetPayoutReport3StoresAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
 
         /// <summary>
         /// 
@@ -400,9 +379,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultPayoutReport3StorePayouts)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultPayoutReport3StorePayouts>> GetPayoutReport3StoresAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultPayoutReport3StorePayouts>> GetPayoutReport3StoresAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
         /// <summary>
         /// 
         /// </summary>
@@ -414,9 +392,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of RestApiResultFileCreationResult</returns>
-        System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutChargebacksAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutChargebacksAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
 
         /// <summary>
         /// 
@@ -429,9 +406,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultFileCreationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutChargebacksAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutChargebacksAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
         /// <summary>
         /// 
         /// </summary>
@@ -443,9 +419,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of RestApiResultFileCreationResult</returns>
-        System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutOrdersAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutOrdersAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
 
         /// <summary>
         /// 
@@ -458,9 +433,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultFileCreationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutOrdersAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutOrdersAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
         /// <summary>
         /// 
         /// </summary>
@@ -472,9 +446,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of RestApiResultFileCreationResult</returns>
-        System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutPosSalesAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutPosSalesAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
 
         /// <summary>
         /// 
@@ -487,9 +460,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultFileCreationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutPosSalesAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutPosSalesAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
         /// <summary>
         /// 
         /// </summary>
@@ -501,9 +473,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of RestApiResultFileCreationResult</returns>
-        System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutRefundedOrdersAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutRefundedOrdersAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
 
         /// <summary>
         /// 
@@ -516,9 +487,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultFileCreationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutRefundedOrdersAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutRefundedOrdersAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
         /// <summary>
         /// 
         /// </summary>
@@ -530,9 +500,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of RestApiResultFileCreationResult</returns>
-        System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutStoresAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutStoresAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
 
         /// <summary>
         /// 
@@ -545,9 +514,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultFileCreationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutStoresAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutStoresAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null);
         #endregion Asynchronous Operations
     }
 
@@ -656,11 +624,10 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="storeIds"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>RestApiResultPayoutReport3Details</returns>
-        public RestApiResultPayoutReport3Details GetPayoutReport3Details (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, List<string> propertyIds = null)
+        public RestApiResultPayoutReport3Details GetPayoutReport3Details (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null)
         {
-             ApiResponse<RestApiResultPayoutReport3Details> localVarResponse = GetPayoutReport3DetailsWithHttpInfo(appId, bankAccountId, payoutId, storeIds, propertyIds);
+             ApiResponse<RestApiResultPayoutReport3Details> localVarResponse = GetPayoutReport3DetailsWithHttpInfo(appId, bankAccountId, payoutId, storeIds);
              return localVarResponse.Data;
         }
 
@@ -672,9 +639,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="storeIds"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultPayoutReport3Details</returns>
-        public ApiResponse< RestApiResultPayoutReport3Details > GetPayoutReport3DetailsWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, List<string> propertyIds = null)
+        public ApiResponse< RestApiResultPayoutReport3Details > GetPayoutReport3DetailsWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -714,7 +680,6 @@ namespace Flipdish.Api
             if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
             if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
             if (storeIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeIds", storeIds)); // query parameter
-            if (propertyIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "propertyIds", propertyIds)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -749,11 +714,10 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="storeIds"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of RestApiResultPayoutReport3Details</returns>
-        public async System.Threading.Tasks.Task<RestApiResultPayoutReport3Details> GetPayoutReport3DetailsAsync (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, List<string> propertyIds = null)
+        public async System.Threading.Tasks.Task<RestApiResultPayoutReport3Details> GetPayoutReport3DetailsAsync (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null)
         {
-             ApiResponse<RestApiResultPayoutReport3Details> localVarResponse = await GetPayoutReport3DetailsAsyncWithHttpInfo(appId, bankAccountId, payoutId, storeIds, propertyIds);
+             ApiResponse<RestApiResultPayoutReport3Details> localVarResponse = await GetPayoutReport3DetailsAsyncWithHttpInfo(appId, bankAccountId, payoutId, storeIds);
              return localVarResponse.Data;
 
         }
@@ -766,9 +730,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="storeIds"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultPayoutReport3Details)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultPayoutReport3Details>> GetPayoutReport3DetailsAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, List<string> propertyIds = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultPayoutReport3Details>> GetPayoutReport3DetailsAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -808,7 +771,6 @@ namespace Flipdish.Api
             if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
             if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
             if (storeIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeIds", storeIds)); // query parameter
-            if (propertyIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "propertyIds", propertyIds)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1018,13 +980,12 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="storeIds"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>RestApiPaginationResultPayoutReport3RefundedOrder</returns>
-        public RestApiPaginationResultPayoutReport3RefundedOrder GetPayoutReport3RefundedOrders (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, List<string> propertyIds = null, int? page = null, int? limit = null)
+        public RestApiPaginationResultPayoutReport3RefundedOrder GetPayoutReport3RefundedOrders (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultPayoutReport3RefundedOrder> localVarResponse = GetPayoutReport3RefundedOrdersWithHttpInfo(appId, bankAccountId, payoutId, storeIds, propertyIds, page, limit);
+             ApiResponse<RestApiPaginationResultPayoutReport3RefundedOrder> localVarResponse = GetPayoutReport3RefundedOrdersWithHttpInfo(appId, bankAccountId, payoutId, storeIds, page, limit);
              return localVarResponse.Data;
         }
 
@@ -1036,11 +997,10 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="storeIds"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>ApiResponse of RestApiPaginationResultPayoutReport3RefundedOrder</returns>
-        public ApiResponse< RestApiPaginationResultPayoutReport3RefundedOrder > GetPayoutReport3RefundedOrdersWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, List<string> propertyIds = null, int? page = null, int? limit = null)
+        public ApiResponse< RestApiPaginationResultPayoutReport3RefundedOrder > GetPayoutReport3RefundedOrdersWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1080,7 +1040,6 @@ namespace Flipdish.Api
             if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
             if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
             if (storeIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeIds", storeIds)); // query parameter
-            if (propertyIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "propertyIds", propertyIds)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
@@ -1117,13 +1076,12 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="storeIds"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of RestApiPaginationResultPayoutReport3RefundedOrder</returns>
-        public async System.Threading.Tasks.Task<RestApiPaginationResultPayoutReport3RefundedOrder> GetPayoutReport3RefundedOrdersAsync (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, List<string> propertyIds = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<RestApiPaginationResultPayoutReport3RefundedOrder> GetPayoutReport3RefundedOrdersAsync (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, int? page = null, int? limit = null)
         {
-             ApiResponse<RestApiPaginationResultPayoutReport3RefundedOrder> localVarResponse = await GetPayoutReport3RefundedOrdersAsyncWithHttpInfo(appId, bankAccountId, payoutId, storeIds, propertyIds, page, limit);
+             ApiResponse<RestApiPaginationResultPayoutReport3RefundedOrder> localVarResponse = await GetPayoutReport3RefundedOrdersAsyncWithHttpInfo(appId, bankAccountId, payoutId, storeIds, page, limit);
              return localVarResponse.Data;
 
         }
@@ -1136,11 +1094,10 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="storeIds"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiPaginationResultPayoutReport3RefundedOrder)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPayoutReport3RefundedOrder>> GetPayoutReport3RefundedOrdersAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, List<string> propertyIds = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPayoutReport3RefundedOrder>> GetPayoutReport3RefundedOrdersAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1180,7 +1137,6 @@ namespace Flipdish.Api
             if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
             if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
             if (storeIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeIds", storeIds)); // query parameter
-            if (propertyIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "propertyIds", propertyIds)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
@@ -1217,11 +1173,10 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>RestApiResultPayoutReport3StorePayouts</returns>
-        public RestApiResultPayoutReport3StorePayouts GetPayoutReport3Stores (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public RestApiResultPayoutReport3StorePayouts GetPayoutReport3Stores (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
-             ApiResponse<RestApiResultPayoutReport3StorePayouts> localVarResponse = GetPayoutReport3StoresWithHttpInfo(appId, bankAccountId, payoutId, stores, propertyIds);
+             ApiResponse<RestApiResultPayoutReport3StorePayouts> localVarResponse = GetPayoutReport3StoresWithHttpInfo(appId, bankAccountId, payoutId, stores);
              return localVarResponse.Data;
         }
 
@@ -1233,9 +1188,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultPayoutReport3StorePayouts</returns>
-        public ApiResponse< RestApiResultPayoutReport3StorePayouts > GetPayoutReport3StoresWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public ApiResponse< RestApiResultPayoutReport3StorePayouts > GetPayoutReport3StoresWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1275,7 +1229,6 @@ namespace Flipdish.Api
             if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
             if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
             if (stores != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "stores", stores)); // query parameter
-            if (propertyIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "propertyIds", propertyIds)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1310,11 +1263,10 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of RestApiResultPayoutReport3StorePayouts</returns>
-        public async System.Threading.Tasks.Task<RestApiResultPayoutReport3StorePayouts> GetPayoutReport3StoresAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public async System.Threading.Tasks.Task<RestApiResultPayoutReport3StorePayouts> GetPayoutReport3StoresAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
-             ApiResponse<RestApiResultPayoutReport3StorePayouts> localVarResponse = await GetPayoutReport3StoresAsyncWithHttpInfo(appId, bankAccountId, payoutId, stores, propertyIds);
+             ApiResponse<RestApiResultPayoutReport3StorePayouts> localVarResponse = await GetPayoutReport3StoresAsyncWithHttpInfo(appId, bankAccountId, payoutId, stores);
              return localVarResponse.Data;
 
         }
@@ -1327,9 +1279,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultPayoutReport3StorePayouts)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultPayoutReport3StorePayouts>> GetPayoutReport3StoresAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultPayoutReport3StorePayouts>> GetPayoutReport3StoresAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1369,7 +1320,6 @@ namespace Flipdish.Api
             if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
             if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
             if (stores != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "stores", stores)); // query parameter
-            if (propertyIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "propertyIds", propertyIds)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1404,11 +1354,10 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>RestApiResultFileCreationResult</returns>
-        public RestApiResultFileCreationResult PayoutReport3ExportPayoutChargebacks (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public RestApiResultFileCreationResult PayoutReport3ExportPayoutChargebacks (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
-             ApiResponse<RestApiResultFileCreationResult> localVarResponse = PayoutReport3ExportPayoutChargebacksWithHttpInfo(appId, bankAccountId, payoutId, stores, propertyIds);
+             ApiResponse<RestApiResultFileCreationResult> localVarResponse = PayoutReport3ExportPayoutChargebacksWithHttpInfo(appId, bankAccountId, payoutId, stores);
              return localVarResponse.Data;
         }
 
@@ -1420,9 +1369,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultFileCreationResult</returns>
-        public ApiResponse< RestApiResultFileCreationResult > PayoutReport3ExportPayoutChargebacksWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public ApiResponse< RestApiResultFileCreationResult > PayoutReport3ExportPayoutChargebacksWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1462,7 +1410,6 @@ namespace Flipdish.Api
             if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
             if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
             if (stores != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "stores", stores)); // query parameter
-            if (propertyIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "propertyIds", propertyIds)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1497,11 +1444,10 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of RestApiResultFileCreationResult</returns>
-        public async System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutChargebacksAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public async System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutChargebacksAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
-             ApiResponse<RestApiResultFileCreationResult> localVarResponse = await PayoutReport3ExportPayoutChargebacksAsyncWithHttpInfo(appId, bankAccountId, payoutId, stores, propertyIds);
+             ApiResponse<RestApiResultFileCreationResult> localVarResponse = await PayoutReport3ExportPayoutChargebacksAsyncWithHttpInfo(appId, bankAccountId, payoutId, stores);
              return localVarResponse.Data;
 
         }
@@ -1514,9 +1460,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultFileCreationResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutChargebacksAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutChargebacksAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1556,7 +1501,6 @@ namespace Flipdish.Api
             if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
             if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
             if (stores != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "stores", stores)); // query parameter
-            if (propertyIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "propertyIds", propertyIds)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1591,11 +1535,10 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>RestApiResultFileCreationResult</returns>
-        public RestApiResultFileCreationResult PayoutReport3ExportPayoutOrders (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public RestApiResultFileCreationResult PayoutReport3ExportPayoutOrders (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
-             ApiResponse<RestApiResultFileCreationResult> localVarResponse = PayoutReport3ExportPayoutOrdersWithHttpInfo(appId, bankAccountId, payoutId, stores, propertyIds);
+             ApiResponse<RestApiResultFileCreationResult> localVarResponse = PayoutReport3ExportPayoutOrdersWithHttpInfo(appId, bankAccountId, payoutId, stores);
              return localVarResponse.Data;
         }
 
@@ -1607,9 +1550,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultFileCreationResult</returns>
-        public ApiResponse< RestApiResultFileCreationResult > PayoutReport3ExportPayoutOrdersWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public ApiResponse< RestApiResultFileCreationResult > PayoutReport3ExportPayoutOrdersWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1649,7 +1591,6 @@ namespace Flipdish.Api
             if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
             if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
             if (stores != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "stores", stores)); // query parameter
-            if (propertyIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "propertyIds", propertyIds)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1684,11 +1625,10 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of RestApiResultFileCreationResult</returns>
-        public async System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutOrdersAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public async System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutOrdersAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
-             ApiResponse<RestApiResultFileCreationResult> localVarResponse = await PayoutReport3ExportPayoutOrdersAsyncWithHttpInfo(appId, bankAccountId, payoutId, stores, propertyIds);
+             ApiResponse<RestApiResultFileCreationResult> localVarResponse = await PayoutReport3ExportPayoutOrdersAsyncWithHttpInfo(appId, bankAccountId, payoutId, stores);
              return localVarResponse.Data;
 
         }
@@ -1701,9 +1641,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultFileCreationResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutOrdersAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutOrdersAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1743,7 +1682,6 @@ namespace Flipdish.Api
             if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
             if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
             if (stores != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "stores", stores)); // query parameter
-            if (propertyIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "propertyIds", propertyIds)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1778,11 +1716,10 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>RestApiResultFileCreationResult</returns>
-        public RestApiResultFileCreationResult PayoutReport3ExportPayoutPosSales (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public RestApiResultFileCreationResult PayoutReport3ExportPayoutPosSales (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
-             ApiResponse<RestApiResultFileCreationResult> localVarResponse = PayoutReport3ExportPayoutPosSalesWithHttpInfo(appId, bankAccountId, payoutId, stores, propertyIds);
+             ApiResponse<RestApiResultFileCreationResult> localVarResponse = PayoutReport3ExportPayoutPosSalesWithHttpInfo(appId, bankAccountId, payoutId, stores);
              return localVarResponse.Data;
         }
 
@@ -1794,9 +1731,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultFileCreationResult</returns>
-        public ApiResponse< RestApiResultFileCreationResult > PayoutReport3ExportPayoutPosSalesWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public ApiResponse< RestApiResultFileCreationResult > PayoutReport3ExportPayoutPosSalesWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1836,7 +1772,6 @@ namespace Flipdish.Api
             if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
             if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
             if (stores != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "stores", stores)); // query parameter
-            if (propertyIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "propertyIds", propertyIds)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1871,11 +1806,10 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of RestApiResultFileCreationResult</returns>
-        public async System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutPosSalesAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public async System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutPosSalesAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
-             ApiResponse<RestApiResultFileCreationResult> localVarResponse = await PayoutReport3ExportPayoutPosSalesAsyncWithHttpInfo(appId, bankAccountId, payoutId, stores, propertyIds);
+             ApiResponse<RestApiResultFileCreationResult> localVarResponse = await PayoutReport3ExportPayoutPosSalesAsyncWithHttpInfo(appId, bankAccountId, payoutId, stores);
              return localVarResponse.Data;
 
         }
@@ -1888,9 +1822,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultFileCreationResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutPosSalesAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutPosSalesAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1930,7 +1863,6 @@ namespace Flipdish.Api
             if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
             if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
             if (stores != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "stores", stores)); // query parameter
-            if (propertyIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "propertyIds", propertyIds)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1965,11 +1897,10 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>RestApiResultFileCreationResult</returns>
-        public RestApiResultFileCreationResult PayoutReport3ExportPayoutRefundedOrders (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public RestApiResultFileCreationResult PayoutReport3ExportPayoutRefundedOrders (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
-             ApiResponse<RestApiResultFileCreationResult> localVarResponse = PayoutReport3ExportPayoutRefundedOrdersWithHttpInfo(appId, bankAccountId, payoutId, stores, propertyIds);
+             ApiResponse<RestApiResultFileCreationResult> localVarResponse = PayoutReport3ExportPayoutRefundedOrdersWithHttpInfo(appId, bankAccountId, payoutId, stores);
              return localVarResponse.Data;
         }
 
@@ -1981,9 +1912,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultFileCreationResult</returns>
-        public ApiResponse< RestApiResultFileCreationResult > PayoutReport3ExportPayoutRefundedOrdersWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public ApiResponse< RestApiResultFileCreationResult > PayoutReport3ExportPayoutRefundedOrdersWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -2023,7 +1953,6 @@ namespace Flipdish.Api
             if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
             if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
             if (stores != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "stores", stores)); // query parameter
-            if (propertyIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "propertyIds", propertyIds)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -2058,11 +1987,10 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of RestApiResultFileCreationResult</returns>
-        public async System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutRefundedOrdersAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public async System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutRefundedOrdersAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
-             ApiResponse<RestApiResultFileCreationResult> localVarResponse = await PayoutReport3ExportPayoutRefundedOrdersAsyncWithHttpInfo(appId, bankAccountId, payoutId, stores, propertyIds);
+             ApiResponse<RestApiResultFileCreationResult> localVarResponse = await PayoutReport3ExportPayoutRefundedOrdersAsyncWithHttpInfo(appId, bankAccountId, payoutId, stores);
              return localVarResponse.Data;
 
         }
@@ -2075,9 +2003,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultFileCreationResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutRefundedOrdersAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutRefundedOrdersAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -2117,7 +2044,6 @@ namespace Flipdish.Api
             if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
             if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
             if (stores != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "stores", stores)); // query parameter
-            if (propertyIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "propertyIds", propertyIds)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -2152,11 +2078,10 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>RestApiResultFileCreationResult</returns>
-        public RestApiResultFileCreationResult PayoutReport3ExportPayoutStores (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public RestApiResultFileCreationResult PayoutReport3ExportPayoutStores (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
-             ApiResponse<RestApiResultFileCreationResult> localVarResponse = PayoutReport3ExportPayoutStoresWithHttpInfo(appId, bankAccountId, payoutId, stores, propertyIds);
+             ApiResponse<RestApiResultFileCreationResult> localVarResponse = PayoutReport3ExportPayoutStoresWithHttpInfo(appId, bankAccountId, payoutId, stores);
              return localVarResponse.Data;
         }
 
@@ -2168,9 +2093,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>ApiResponse of RestApiResultFileCreationResult</returns>
-        public ApiResponse< RestApiResultFileCreationResult > PayoutReport3ExportPayoutStoresWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public ApiResponse< RestApiResultFileCreationResult > PayoutReport3ExportPayoutStoresWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -2210,7 +2134,6 @@ namespace Flipdish.Api
             if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
             if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
             if (stores != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "stores", stores)); // query parameter
-            if (propertyIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "propertyIds", propertyIds)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -2245,11 +2168,10 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of RestApiResultFileCreationResult</returns>
-        public async System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutStoresAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public async System.Threading.Tasks.Task<RestApiResultFileCreationResult> PayoutReport3ExportPayoutStoresAsync (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
-             ApiResponse<RestApiResultFileCreationResult> localVarResponse = await PayoutReport3ExportPayoutStoresAsyncWithHttpInfo(appId, bankAccountId, payoutId, stores, propertyIds);
+             ApiResponse<RestApiResultFileCreationResult> localVarResponse = await PayoutReport3ExportPayoutStoresAsyncWithHttpInfo(appId, bankAccountId, payoutId, stores);
              return localVarResponse.Data;
 
         }
@@ -2262,9 +2184,8 @@ namespace Flipdish.Api
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
         /// <param name="stores"> (optional)</param>
-        /// <param name="propertyIds"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiResultFileCreationResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutStoresAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultFileCreationResult>> PayoutReport3ExportPayoutStoresAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -2304,7 +2225,6 @@ namespace Flipdish.Api
             if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
             if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
             if (stores != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "stores", stores)); // query parameter
-            if (propertyIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "propertyIds", propertyIds)); // query parameter
 
             // authentication (oauth2) required
             // oauth required

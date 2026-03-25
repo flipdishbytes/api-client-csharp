@@ -33,12 +33,10 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="payoutReport3OverviewHeader">payoutReport3OverviewHeader.</param>
         /// <param name="payoutStores">payoutStores.</param>
-        /// <param name="payoutProperties">payoutProperties.</param>
-        public PayoutReport3Overview(PayoutReport3OverviewHeader payoutReport3OverviewHeader = default(PayoutReport3OverviewHeader), List<PayoutReport3Store> payoutStores = default(List<PayoutReport3Store>), List<PayoutReport3Property> payoutProperties = default(List<PayoutReport3Property>))
+        public PayoutReport3Overview(PayoutReport3OverviewHeader payoutReport3OverviewHeader = default(PayoutReport3OverviewHeader), List<PayoutReport3Store> payoutStores = default(List<PayoutReport3Store>))
         {
             this.PayoutReport3OverviewHeader = payoutReport3OverviewHeader;
             this.PayoutStores = payoutStores;
-            this.PayoutProperties = payoutProperties;
         }
         
         /// <summary>
@@ -54,12 +52,6 @@ namespace Flipdish.Model
         public List<PayoutReport3Store> PayoutStores { get; set; }
 
         /// <summary>
-        /// Gets or Sets PayoutProperties
-        /// </summary>
-        [DataMember(Name="PayoutProperties", EmitDefaultValue=false)]
-        public List<PayoutReport3Property> PayoutProperties { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -69,7 +61,6 @@ namespace Flipdish.Model
             sb.Append("class PayoutReport3Overview {\n");
             sb.Append("  PayoutReport3OverviewHeader: ").Append(PayoutReport3OverviewHeader).Append("\n");
             sb.Append("  PayoutStores: ").Append(PayoutStores).Append("\n");
-            sb.Append("  PayoutProperties: ").Append(PayoutProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -113,11 +104,6 @@ namespace Flipdish.Model
                     this.PayoutStores == input.PayoutStores ||
                     this.PayoutStores != null &&
                     this.PayoutStores.SequenceEqual(input.PayoutStores)
-                ) && 
-                (
-                    this.PayoutProperties == input.PayoutProperties ||
-                    this.PayoutProperties != null &&
-                    this.PayoutProperties.SequenceEqual(input.PayoutProperties)
                 );
         }
 
@@ -134,8 +120,6 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PayoutReport3OverviewHeader.GetHashCode();
                 if (this.PayoutStores != null)
                     hashCode = hashCode * 59 + this.PayoutStores.GetHashCode();
-                if (this.PayoutProperties != null)
-                    hashCode = hashCode * 59 + this.PayoutProperties.GetHashCode();
                 return hashCode;
             }
         }
