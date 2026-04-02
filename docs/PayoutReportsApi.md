@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a name="getpayoutreport3details"></a>
 # **GetPayoutReport3Details**
-> RestApiResultPayoutReport3Details GetPayoutReport3Details (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, List<string> propertyIds = null)
+> RestApiResultPayoutReport3Details GetPayoutReport3Details (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null)
 
 
 
@@ -43,11 +43,10 @@ namespace Example
             var bankAccountId = 56;  // int? | 
             var payoutId = 56;  // int? | 
             var storeIds = new List<int?>(); // List<int?> |  (optional) 
-            var propertyIds = new List<string>(); // List<string> |  (optional) 
 
             try
             {
-                RestApiResultPayoutReport3Details result = apiInstance.GetPayoutReport3Details(appId, bankAccountId, payoutId, storeIds, propertyIds);
+                RestApiResultPayoutReport3Details result = apiInstance.GetPayoutReport3Details(appId, bankAccountId, payoutId, storeIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -67,7 +66,6 @@ Name | Type | Description  | Notes
  **bankAccountId** | **int?**|  | 
  **payoutId** | **int?**|  | 
  **storeIds** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
- **propertyIds** | [**List&lt;string&gt;**](string.md)|  | [optional] 
 
 ### Return type
 
@@ -151,7 +149,7 @@ Name | Type | Description  | Notes
 
 <a name="getpayoutreport3refundedorders"></a>
 # **GetPayoutReport3RefundedOrders**
-> RestApiPaginationResultPayoutReport3RefundedOrder GetPayoutReport3RefundedOrders (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, List<string> propertyIds = null, int? page = null, int? limit = null)
+> RestApiPaginationResultPayoutReport3RefundedOrder GetPayoutReport3RefundedOrders (string appId, int? bankAccountId, int? payoutId, List<int?> storeIds = null, int? page = null, int? limit = null)
 
 
 
@@ -177,13 +175,12 @@ namespace Example
             var bankAccountId = 56;  // int? | 
             var payoutId = 56;  // int? | 
             var storeIds = new List<int?>(); // List<int?> |  (optional) 
-            var propertyIds = new List<string>(); // List<string> |  (optional) 
             var page = 56;  // int? |  (optional) 
             var limit = 56;  // int? |  (optional) 
 
             try
             {
-                RestApiPaginationResultPayoutReport3RefundedOrder result = apiInstance.GetPayoutReport3RefundedOrders(appId, bankAccountId, payoutId, storeIds, propertyIds, page, limit);
+                RestApiPaginationResultPayoutReport3RefundedOrder result = apiInstance.GetPayoutReport3RefundedOrders(appId, bankAccountId, payoutId, storeIds, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -203,7 +200,6 @@ Name | Type | Description  | Notes
  **bankAccountId** | **int?**|  | 
  **payoutId** | **int?**|  | 
  **storeIds** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
- **propertyIds** | [**List&lt;string&gt;**](string.md)|  | [optional] 
  **page** | **int?**|  | [optional] 
  **limit** | **int?**|  | [optional] 
 
@@ -224,7 +220,7 @@ Name | Type | Description  | Notes
 
 <a name="getpayoutreport3stores"></a>
 # **GetPayoutReport3Stores**
-> RestApiResultPayoutReport3StorePayouts GetPayoutReport3Stores (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+> RestApiResultPayoutReport3StorePayouts GetPayoutReport3Stores (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
 
 
 
@@ -250,11 +246,10 @@ namespace Example
             var bankAccountId = 56;  // int? | 
             var payoutId = 56;  // int? | 
             var stores = new List<int?>(); // List<int?> |  (optional) 
-            var propertyIds = new List<string>(); // List<string> |  (optional) 
 
             try
             {
-                RestApiResultPayoutReport3StorePayouts result = apiInstance.GetPayoutReport3Stores(appId, bankAccountId, payoutId, stores, propertyIds);
+                RestApiResultPayoutReport3StorePayouts result = apiInstance.GetPayoutReport3Stores(appId, bankAccountId, payoutId, stores);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -274,7 +269,6 @@ Name | Type | Description  | Notes
  **bankAccountId** | **int?**|  | 
  **payoutId** | **int?**|  | 
  **stores** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
- **propertyIds** | [**List&lt;string&gt;**](string.md)|  | [optional] 
 
 ### Return type
 
@@ -293,7 +287,7 @@ Name | Type | Description  | Notes
 
 <a name="payoutreport3exportpayoutchargebacks"></a>
 # **PayoutReport3ExportPayoutChargebacks**
-> RestApiResultFileCreationResult PayoutReport3ExportPayoutChargebacks (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+> RestApiResultFileCreationResult PayoutReport3ExportPayoutChargebacks (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
 
 
 
@@ -319,11 +313,10 @@ namespace Example
             var bankAccountId = 56;  // int? | 
             var payoutId = 56;  // int? | 
             var stores = new List<int?>(); // List<int?> |  (optional) 
-            var propertyIds = new List<string>(); // List<string> |  (optional) 
 
             try
             {
-                RestApiResultFileCreationResult result = apiInstance.PayoutReport3ExportPayoutChargebacks(appId, bankAccountId, payoutId, stores, propertyIds);
+                RestApiResultFileCreationResult result = apiInstance.PayoutReport3ExportPayoutChargebacks(appId, bankAccountId, payoutId, stores);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -343,7 +336,6 @@ Name | Type | Description  | Notes
  **bankAccountId** | **int?**|  | 
  **payoutId** | **int?**|  | 
  **stores** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
- **propertyIds** | [**List&lt;string&gt;**](string.md)|  | [optional] 
 
 ### Return type
 
@@ -362,7 +354,7 @@ Name | Type | Description  | Notes
 
 <a name="payoutreport3exportpayoutorders"></a>
 # **PayoutReport3ExportPayoutOrders**
-> RestApiResultFileCreationResult PayoutReport3ExportPayoutOrders (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+> RestApiResultFileCreationResult PayoutReport3ExportPayoutOrders (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
 
 
 
@@ -388,11 +380,10 @@ namespace Example
             var bankAccountId = 56;  // int? | 
             var payoutId = 56;  // int? | 
             var stores = new List<int?>(); // List<int?> |  (optional) 
-            var propertyIds = new List<string>(); // List<string> |  (optional) 
 
             try
             {
-                RestApiResultFileCreationResult result = apiInstance.PayoutReport3ExportPayoutOrders(appId, bankAccountId, payoutId, stores, propertyIds);
+                RestApiResultFileCreationResult result = apiInstance.PayoutReport3ExportPayoutOrders(appId, bankAccountId, payoutId, stores);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -412,7 +403,6 @@ Name | Type | Description  | Notes
  **bankAccountId** | **int?**|  | 
  **payoutId** | **int?**|  | 
  **stores** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
- **propertyIds** | [**List&lt;string&gt;**](string.md)|  | [optional] 
 
 ### Return type
 
@@ -431,7 +421,7 @@ Name | Type | Description  | Notes
 
 <a name="payoutreport3exportpayoutpossales"></a>
 # **PayoutReport3ExportPayoutPosSales**
-> RestApiResultFileCreationResult PayoutReport3ExportPayoutPosSales (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+> RestApiResultFileCreationResult PayoutReport3ExportPayoutPosSales (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
 
 
 
@@ -457,11 +447,10 @@ namespace Example
             var bankAccountId = 56;  // int? | 
             var payoutId = 56;  // int? | 
             var stores = new List<int?>(); // List<int?> |  (optional) 
-            var propertyIds = new List<string>(); // List<string> |  (optional) 
 
             try
             {
-                RestApiResultFileCreationResult result = apiInstance.PayoutReport3ExportPayoutPosSales(appId, bankAccountId, payoutId, stores, propertyIds);
+                RestApiResultFileCreationResult result = apiInstance.PayoutReport3ExportPayoutPosSales(appId, bankAccountId, payoutId, stores);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -481,7 +470,6 @@ Name | Type | Description  | Notes
  **bankAccountId** | **int?**|  | 
  **payoutId** | **int?**|  | 
  **stores** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
- **propertyIds** | [**List&lt;string&gt;**](string.md)|  | [optional] 
 
 ### Return type
 
@@ -500,7 +488,7 @@ Name | Type | Description  | Notes
 
 <a name="payoutreport3exportpayoutrefundedorders"></a>
 # **PayoutReport3ExportPayoutRefundedOrders**
-> RestApiResultFileCreationResult PayoutReport3ExportPayoutRefundedOrders (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+> RestApiResultFileCreationResult PayoutReport3ExportPayoutRefundedOrders (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
 
 
 
@@ -526,11 +514,10 @@ namespace Example
             var bankAccountId = 56;  // int? | 
             var payoutId = 56;  // int? | 
             var stores = new List<int?>(); // List<int?> |  (optional) 
-            var propertyIds = new List<string>(); // List<string> |  (optional) 
 
             try
             {
-                RestApiResultFileCreationResult result = apiInstance.PayoutReport3ExportPayoutRefundedOrders(appId, bankAccountId, payoutId, stores, propertyIds);
+                RestApiResultFileCreationResult result = apiInstance.PayoutReport3ExportPayoutRefundedOrders(appId, bankAccountId, payoutId, stores);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -550,7 +537,6 @@ Name | Type | Description  | Notes
  **bankAccountId** | **int?**|  | 
  **payoutId** | **int?**|  | 
  **stores** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
- **propertyIds** | [**List&lt;string&gt;**](string.md)|  | [optional] 
 
 ### Return type
 
@@ -569,7 +555,7 @@ Name | Type | Description  | Notes
 
 <a name="payoutreport3exportpayoutstores"></a>
 # **PayoutReport3ExportPayoutStores**
-> RestApiResultFileCreationResult PayoutReport3ExportPayoutStores (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null, List<string> propertyIds = null)
+> RestApiResultFileCreationResult PayoutReport3ExportPayoutStores (string appId, int? bankAccountId, int? payoutId, List<int?> stores = null)
 
 
 
@@ -595,11 +581,10 @@ namespace Example
             var bankAccountId = 56;  // int? | 
             var payoutId = 56;  // int? | 
             var stores = new List<int?>(); // List<int?> |  (optional) 
-            var propertyIds = new List<string>(); // List<string> |  (optional) 
 
             try
             {
-                RestApiResultFileCreationResult result = apiInstance.PayoutReport3ExportPayoutStores(appId, bankAccountId, payoutId, stores, propertyIds);
+                RestApiResultFileCreationResult result = apiInstance.PayoutReport3ExportPayoutStores(appId, bankAccountId, payoutId, stores);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -619,7 +604,6 @@ Name | Type | Description  | Notes
  **bankAccountId** | **int?**|  | 
  **payoutId** | **int?**|  | 
  **stores** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
- **propertyIds** | [**List&lt;string&gt;**](string.md)|  | [optional] 
 
 ### Return type
 

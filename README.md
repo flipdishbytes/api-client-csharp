@@ -1036,7 +1036,6 @@ Class | Method | HTTP request | Description
  - [Model.PayoutReport3DetailsSummary](docs/PayoutReport3DetailsSummary.md)
  - [Model.PayoutReport3Overview](docs/PayoutReport3Overview.md)
  - [Model.PayoutReport3OverviewHeader](docs/PayoutReport3OverviewHeader.md)
- - [Model.PayoutReport3Property](docs/PayoutReport3Property.md)
  - [Model.PayoutReport3RefundedOrder](docs/PayoutReport3RefundedOrder.md)
  - [Model.PayoutReport3Store](docs/PayoutReport3Store.md)
  - [Model.PayoutReport3StorePayout](docs/PayoutReport3StorePayout.md)
