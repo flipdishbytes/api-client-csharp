@@ -22,6 +22,7 @@ Method | HTTP request | Description
 [**SetAppStoreName**](AppsApi.md#setappstorename) | **POST** /api/v1.0/apps/{appId}/appstorename | 
 [**SetCompliance**](AppsApi.md#setcompliance) | **POST** /api/v1.0/apps/{appId}/compliance | 
 [**SetPanaceaVanityUrl**](AppsApi.md#setpanaceavanityurl) | **POST** /api/v1.0/apps/{appId}/panacea/url | 
+[**SetThirdPartyIntegrations**](AppsApi.md#setthirdpartyintegrations) | **POST** /api/v1.0/apps/{appId}/third-party-integrations | 
 [**ToggleNextGenWeb**](AppsApi.md#togglenextgenweb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | 
 [**UploadAppLogo**](AppsApi.md#uploadapplogo) | **POST** /api/v1.0/apps/{appId}/logo | 
 
@@ -1132,6 +1133,68 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiStringResult**](RestApiStringResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="setthirdpartyintegrations"></a>
+# **SetThirdPartyIntegrations**
+> void SetThirdPartyIntegrations (string appId, bool? enabled)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class SetThirdPartyIntegrationsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AppsApi();
+            var appId = appId_example;  // string | 
+            var enabled = true;  // bool? | 
+
+            try
+            {
+                apiInstance.SetThirdPartyIntegrations(appId, enabled);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AppsApi.SetThirdPartyIntegrations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **enabled** | **bool?**|  | 
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
