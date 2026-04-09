@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetPayoutReport3Details**](PayoutReportsApi.md#getpayoutreport3details) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/details | 
 [**GetPayoutReport3Overview**](PayoutReportsApi.md#getpayoutreport3overview) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/overview | 
+[**GetPayoutReport3PropertyDetails**](PayoutReportsApi.md#getpayoutreport3propertydetails) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/properties | 
 [**GetPayoutReport3RefundedOrders**](PayoutReportsApi.md#getpayoutreport3refundedorders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/refundedOrders | 
 [**GetPayoutReport3Stores**](PayoutReportsApi.md#getpayoutreport3stores) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/stores | 
 [**PayoutReport3ExportPayoutChargebacks**](PayoutReportsApi.md#payoutreport3exportpayoutchargebacks) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/chargebacks | 
@@ -135,6 +136,75 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultPayoutReport3Overview**](RestApiResultPayoutReport3Overview.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getpayoutreport3propertydetails"></a>
+# **GetPayoutReport3PropertyDetails**
+> RestApiResultPayoutReport3PropertyDetails GetPayoutReport3PropertyDetails (string appId, int? bankAccountId, int? payoutId, List<string> propertyIds = null, List<int?> storeIds = null)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetPayoutReport3PropertyDetailsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new PayoutReportsApi();
+            var appId = appId_example;  // string | 
+            var bankAccountId = 56;  // int? | 
+            var payoutId = 56;  // int? | 
+            var propertyIds = new List<string>(); // List<string> |  (optional) 
+            var storeIds = new List<int?>(); // List<int?> |  (optional) 
+
+            try
+            {
+                RestApiResultPayoutReport3PropertyDetails result = apiInstance.GetPayoutReport3PropertyDetails(appId, bankAccountId, payoutId, propertyIds, storeIds);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PayoutReportsApi.GetPayoutReport3PropertyDetails: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **bankAccountId** | **int?**|  | 
+ **payoutId** | **int?**|  | 
+ **propertyIds** | [**List&lt;string&gt;**](string.md)|  | [optional] 
+ **storeIds** | [**List&lt;int?&gt;**](int?.md)|  | [optional] 
+
+### Return type
+
+[**RestApiResultPayoutReport3PropertyDetails**](RestApiResultPayoutReport3PropertyDetails.md)
 
 ### Authorization
 

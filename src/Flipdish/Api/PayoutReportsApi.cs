@@ -86,6 +86,35 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="bankAccountId"></param>
         /// <param name="payoutId"></param>
+        /// <param name="propertyIds"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <returns>RestApiResultPayoutReport3PropertyDetails</returns>
+        RestApiResultPayoutReport3PropertyDetails GetPayoutReport3PropertyDetails (string appId, int? bankAccountId, int? payoutId, List<string> propertyIds = null, List<int?> storeIds = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="propertyIds"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <returns>ApiResponse of RestApiResultPayoutReport3PropertyDetails</returns>
+        ApiResponse<RestApiResultPayoutReport3PropertyDetails> GetPayoutReport3PropertyDetailsWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<string> propertyIds = null, List<int?> storeIds = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
         /// <param name="storeIds"> (optional)</param>
         /// <param name="page"> (optional)</param>
         /// <param name="limit"> (optional)</param>
@@ -323,6 +352,35 @@ namespace Flipdish.Api
         /// <param name="payoutId"></param>
         /// <returns>Task of ApiResponse (RestApiResultPayoutReport3Overview)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultPayoutReport3Overview>> GetPayoutReport3OverviewAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="propertyIds"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <returns>Task of RestApiResultPayoutReport3PropertyDetails</returns>
+        System.Threading.Tasks.Task<RestApiResultPayoutReport3PropertyDetails> GetPayoutReport3PropertyDetailsAsync (string appId, int? bankAccountId, int? payoutId, List<string> propertyIds = null, List<int?> storeIds = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="propertyIds"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiResultPayoutReport3PropertyDetails)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultPayoutReport3PropertyDetails>> GetPayoutReport3PropertyDetailsAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<string> propertyIds = null, List<int?> storeIds = null);
         /// <summary>
         /// 
         /// </summary>
@@ -970,6 +1028,193 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultPayoutReport3Overview>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultPayoutReport3Overview) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultPayoutReport3Overview)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="propertyIds"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <returns>RestApiResultPayoutReport3PropertyDetails</returns>
+        public RestApiResultPayoutReport3PropertyDetails GetPayoutReport3PropertyDetails (string appId, int? bankAccountId, int? payoutId, List<string> propertyIds = null, List<int?> storeIds = null)
+        {
+             ApiResponse<RestApiResultPayoutReport3PropertyDetails> localVarResponse = GetPayoutReport3PropertyDetailsWithHttpInfo(appId, bankAccountId, payoutId, propertyIds, storeIds);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="propertyIds"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <returns>ApiResponse of RestApiResultPayoutReport3PropertyDetails</returns>
+        public ApiResponse< RestApiResultPayoutReport3PropertyDetails > GetPayoutReport3PropertyDetailsWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<string> propertyIds = null, List<int?> storeIds = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling PayoutReportsApi->GetPayoutReport3PropertyDetails");
+            // verify the required parameter 'bankAccountId' is set
+            if (bankAccountId == null)
+                throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling PayoutReportsApi->GetPayoutReport3PropertyDetails");
+            // verify the required parameter 'payoutId' is set
+            if (payoutId == null)
+                throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutReportsApi->GetPayoutReport3PropertyDetails");
+
+            var localVarPath = "./api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/properties";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
+            if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
+            if (propertyIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "propertyIds", propertyIds)); // query parameter
+            if (storeIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeIds", storeIds)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPayoutReport3PropertyDetails", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultPayoutReport3PropertyDetails>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultPayoutReport3PropertyDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultPayoutReport3PropertyDetails)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="propertyIds"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <returns>Task of RestApiResultPayoutReport3PropertyDetails</returns>
+        public async System.Threading.Tasks.Task<RestApiResultPayoutReport3PropertyDetails> GetPayoutReport3PropertyDetailsAsync (string appId, int? bankAccountId, int? payoutId, List<string> propertyIds = null, List<int?> storeIds = null)
+        {
+             ApiResponse<RestApiResultPayoutReport3PropertyDetails> localVarResponse = await GetPayoutReport3PropertyDetailsAsyncWithHttpInfo(appId, bankAccountId, payoutId, propertyIds, storeIds);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
+        /// <param name="payoutId"></param>
+        /// <param name="propertyIds"> (optional)</param>
+        /// <param name="storeIds"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiResultPayoutReport3PropertyDetails)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultPayoutReport3PropertyDetails>> GetPayoutReport3PropertyDetailsAsyncWithHttpInfo (string appId, int? bankAccountId, int? payoutId, List<string> propertyIds = null, List<int?> storeIds = null)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling PayoutReportsApi->GetPayoutReport3PropertyDetails");
+            // verify the required parameter 'bankAccountId' is set
+            if (bankAccountId == null)
+                throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling PayoutReportsApi->GetPayoutReport3PropertyDetails");
+            // verify the required parameter 'payoutId' is set
+            if (payoutId == null)
+                throw new ApiException(400, "Missing required parameter 'payoutId' when calling PayoutReportsApi->GetPayoutReport3PropertyDetails");
+
+            var localVarPath = "./api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/properties";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
+            if (payoutId != null) localVarPathParams.Add("payoutId", this.Configuration.ApiClient.ParameterToString(payoutId)); // path parameter
+            if (propertyIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "propertyIds", propertyIds)); // query parameter
+            if (storeIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "storeIds", storeIds)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPayoutReport3PropertyDetails", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultPayoutReport3PropertyDetails>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultPayoutReport3PropertyDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultPayoutReport3PropertyDetails)));
         }
 
         /// <summary>
