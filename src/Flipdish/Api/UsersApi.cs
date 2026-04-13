@@ -120,6 +120,29 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        RestApiDefaultResponse CreateUserDeliveryLocation (int? userId, CreateUserDeliveryLocationRequest request);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        ApiResponse<RestApiDefaultResponse> CreateUserDeliveryLocationWithHttpInfo (int? userId, CreateUserDeliveryLocationRequest request);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
         /// <param name="storeId"></param>
         /// <returns>RestApiStringResult</returns>
         RestApiStringResult GetPreviousOrderCountForStore (int? userId, int? storeId);
@@ -246,6 +269,29 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
+        /// <param name="whiteLabelId"> (optional)</param>
+        /// <returns>RestApiArrayResultUserDeliveryLocationAdmin</returns>
+        RestApiArrayResultUserDeliveryLocationAdmin GetUserDeliveryLocationsForAdmin (int? userId, int? whiteLabelId = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="whiteLabelId"> (optional)</param>
+        /// <returns>ApiResponse of RestApiArrayResultUserDeliveryLocationAdmin</returns>
+        ApiResponse<RestApiArrayResultUserDeliveryLocationAdmin> GetUserDeliveryLocationsForAdminWithHttpInfo (int? userId, int? whiteLabelId = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
         /// <returns>RestApiArrayResultUserNote</returns>
         RestApiArrayResultUserNote GetUserNotes (int? userId);
 
@@ -259,6 +305,102 @@ namespace Flipdish.Api
         /// <param name="userId"></param>
         /// <returns>ApiResponse of RestApiArrayResultUserNote</returns>
         ApiResponse<RestApiArrayResultUserNote> GetUserNotesWithHttpInfo (int? userId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="orderId"></param>
+        /// <returns>RestApiResultOrder</returns>
+        RestApiResultOrder GetUserOrderByIdForAdmin (int? userId, int? orderId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="orderId"></param>
+        /// <returns>ApiResponse of RestApiResultOrder</returns>
+        ApiResponse<RestApiResultOrder> GetUserOrderByIdForAdminWithHttpInfo (int? userId, int? orderId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="skip"> (optional)</param>
+        /// <param name="take"> (optional)</param>
+        /// <param name="whiteLabelId"> (optional)</param>
+        /// <returns>RestApiArrayResultUserOrderSummary</returns>
+        RestApiArrayResultUserOrderSummary GetUserOrdersForAdmin (int? userId, int? skip = null, int? take = null, int? whiteLabelId = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="skip"> (optional)</param>
+        /// <param name="take"> (optional)</param>
+        /// <param name="whiteLabelId"> (optional)</param>
+        /// <returns>ApiResponse of RestApiArrayResultUserOrderSummary</returns>
+        ApiResponse<RestApiArrayResultUserOrderSummary> GetUserOrdersForAdminWithHttpInfo (int? userId, int? skip = null, int? take = null, int? whiteLabelId = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="mostRecentCount"> (optional)</param>
+        /// <returns>RestApiArrayResultUserSmsChatItem</returns>
+        RestApiArrayResultUserSmsChatItem GetUserSmsConversationItems (int? userId, int? mostRecentCount = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="mostRecentCount"> (optional)</param>
+        /// <returns>ApiResponse of RestApiArrayResultUserSmsChatItem</returns>
+        ApiResponse<RestApiArrayResultUserSmsChatItem> GetUserSmsConversationItemsWithHttpInfo (int? userId, int? mostRecentCount = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        RestApiDefaultResponse HideUserDeliveryLocation (int? userId, int? deliveryLocationId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        ApiResponse<RestApiDefaultResponse> HideUserDeliveryLocationWithHttpInfo (int? userId, int? deliveryLocationId);
         /// <summary>
         /// 
         /// </summary>
@@ -428,6 +570,52 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>RestApiResultUserPushNotificationSentResult</returns>
+        RestApiResultUserPushNotificationSentResult SendUserPushNotification (int? userId, SendUserPushNotificationRequest request);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of RestApiResultUserPushNotificationSentResult</returns>
+        ApiResponse<RestApiResultUserPushNotificationSentResult> SendUserPushNotificationWithHttpInfo (int? userId, SendUserPushNotificationRequest request);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        RestApiDefaultResponse SendUserSms (int? userId, SendUserSmsRequest request);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        ApiResponse<RestApiDefaultResponse> SendUserSmsWithHttpInfo (int? userId, SendUserSmsRequest request);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
         /// <param name="customerName"></param>
         /// <returns>RestApiDefaultResponse</returns>
         RestApiDefaultResponse SetCustomerName (int? userId, string customerName);
@@ -466,6 +654,56 @@ namespace Flipdish.Api
         /// <param name="accountId"></param>
         /// <returns>ApiResponse of RestApiDefaultResponse</returns>
         ApiResponse<RestApiDefaultResponse> SetFlipdishAccountIdForUserWithHttpInfo (int? userId, int? accountId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <param name="request"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        RestApiDefaultResponse SetUserDeliveryLocationCoordinates (int? userId, int? deliveryLocationId, SetUserDeliveryLocationCoordinatesRequest request);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        ApiResponse<RestApiDefaultResponse> SetUserDeliveryLocationCoordinatesWithHttpInfo (int? userId, int? deliveryLocationId, SetUserDeliveryLocationCoordinatesRequest request);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <param name="request"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        RestApiDefaultResponse SetUserDeliveryLocationField (int? userId, int? deliveryLocationId, SetUserDeliveryLocationFieldRequest request);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        ApiResponse<RestApiDefaultResponse> SetUserDeliveryLocationFieldWithHttpInfo (int? userId, int? deliveryLocationId, SetUserDeliveryLocationFieldRequest request);
         /// <summary>
         /// 
         /// </summary>
@@ -608,6 +846,29 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        System.Threading.Tasks.Task<RestApiDefaultResponse> CreateUserDeliveryLocationAsync (int? userId, CreateUserDeliveryLocationRequest request);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> CreateUserDeliveryLocationAsyncWithHttpInfo (int? userId, CreateUserDeliveryLocationRequest request);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
         /// <param name="storeId"></param>
         /// <returns>Task of RestApiStringResult</returns>
         System.Threading.Tasks.Task<RestApiStringResult> GetPreviousOrderCountForStoreAsync (int? userId, int? storeId);
@@ -734,6 +995,29 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
+        /// <param name="whiteLabelId"> (optional)</param>
+        /// <returns>Task of RestApiArrayResultUserDeliveryLocationAdmin</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultUserDeliveryLocationAdmin> GetUserDeliveryLocationsForAdminAsync (int? userId, int? whiteLabelId = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="whiteLabelId"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultUserDeliveryLocationAdmin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultUserDeliveryLocationAdmin>> GetUserDeliveryLocationsForAdminAsyncWithHttpInfo (int? userId, int? whiteLabelId = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
         /// <returns>Task of RestApiArrayResultUserNote</returns>
         System.Threading.Tasks.Task<RestApiArrayResultUserNote> GetUserNotesAsync (int? userId);
 
@@ -747,6 +1031,102 @@ namespace Flipdish.Api
         /// <param name="userId"></param>
         /// <returns>Task of ApiResponse (RestApiArrayResultUserNote)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultUserNote>> GetUserNotesAsyncWithHttpInfo (int? userId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="orderId"></param>
+        /// <returns>Task of RestApiResultOrder</returns>
+        System.Threading.Tasks.Task<RestApiResultOrder> GetUserOrderByIdForAdminAsync (int? userId, int? orderId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="orderId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultOrder)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultOrder>> GetUserOrderByIdForAdminAsyncWithHttpInfo (int? userId, int? orderId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="skip"> (optional)</param>
+        /// <param name="take"> (optional)</param>
+        /// <param name="whiteLabelId"> (optional)</param>
+        /// <returns>Task of RestApiArrayResultUserOrderSummary</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultUserOrderSummary> GetUserOrdersForAdminAsync (int? userId, int? skip = null, int? take = null, int? whiteLabelId = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="skip"> (optional)</param>
+        /// <param name="take"> (optional)</param>
+        /// <param name="whiteLabelId"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultUserOrderSummary)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultUserOrderSummary>> GetUserOrdersForAdminAsyncWithHttpInfo (int? userId, int? skip = null, int? take = null, int? whiteLabelId = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="mostRecentCount"> (optional)</param>
+        /// <returns>Task of RestApiArrayResultUserSmsChatItem</returns>
+        System.Threading.Tasks.Task<RestApiArrayResultUserSmsChatItem> GetUserSmsConversationItemsAsync (int? userId, int? mostRecentCount = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="mostRecentCount"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultUserSmsChatItem)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultUserSmsChatItem>> GetUserSmsConversationItemsAsyncWithHttpInfo (int? userId, int? mostRecentCount = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        System.Threading.Tasks.Task<RestApiDefaultResponse> HideUserDeliveryLocationAsync (int? userId, int? deliveryLocationId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> HideUserDeliveryLocationAsyncWithHttpInfo (int? userId, int? deliveryLocationId);
         /// <summary>
         /// 
         /// </summary>
@@ -916,6 +1296,52 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>Task of RestApiResultUserPushNotificationSentResult</returns>
+        System.Threading.Tasks.Task<RestApiResultUserPushNotificationSentResult> SendUserPushNotificationAsync (int? userId, SendUserPushNotificationRequest request);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (RestApiResultUserPushNotificationSentResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultUserPushNotificationSentResult>> SendUserPushNotificationAsyncWithHttpInfo (int? userId, SendUserPushNotificationRequest request);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        System.Threading.Tasks.Task<RestApiDefaultResponse> SendUserSmsAsync (int? userId, SendUserSmsRequest request);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> SendUserSmsAsyncWithHttpInfo (int? userId, SendUserSmsRequest request);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
         /// <param name="customerName"></param>
         /// <returns>Task of RestApiDefaultResponse</returns>
         System.Threading.Tasks.Task<RestApiDefaultResponse> SetCustomerNameAsync (int? userId, string customerName);
@@ -954,6 +1380,56 @@ namespace Flipdish.Api
         /// <param name="accountId"></param>
         /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> SetFlipdishAccountIdForUserAsyncWithHttpInfo (int? userId, int? accountId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <param name="request"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        System.Threading.Tasks.Task<RestApiDefaultResponse> SetUserDeliveryLocationCoordinatesAsync (int? userId, int? deliveryLocationId, SetUserDeliveryLocationCoordinatesRequest request);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> SetUserDeliveryLocationCoordinatesAsyncWithHttpInfo (int? userId, int? deliveryLocationId, SetUserDeliveryLocationCoordinatesRequest request);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <param name="request"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        System.Threading.Tasks.Task<RestApiDefaultResponse> SetUserDeliveryLocationFieldAsync (int? userId, int? deliveryLocationId, SetUserDeliveryLocationFieldRequest request);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> SetUserDeliveryLocationFieldAsyncWithHttpInfo (int? userId, int? deliveryLocationId, SetUserDeliveryLocationFieldRequest request);
         /// <summary>
         /// 
         /// </summary>
@@ -1742,6 +2218,193 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("BlockUserPhoneNumber", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        public RestApiDefaultResponse CreateUserDeliveryLocation (int? userId, CreateUserDeliveryLocationRequest request)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = CreateUserDeliveryLocationWithHttpInfo(userId, request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        public ApiResponse< RestApiDefaultResponse > CreateUserDeliveryLocationWithHttpInfo (int? userId, CreateUserDeliveryLocationRequest request)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->CreateUserDeliveryLocation");
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling UsersApi->CreateUserDeliveryLocation");
+
+            var localVarPath = "./api/v1.0/users/{userId}/deliveryLocations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateUserDeliveryLocation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiDefaultResponse> CreateUserDeliveryLocationAsync (int? userId, CreateUserDeliveryLocationRequest request)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = await CreateUserDeliveryLocationAsyncWithHttpInfo(userId, request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> CreateUserDeliveryLocationAsyncWithHttpInfo (int? userId, CreateUserDeliveryLocationRequest request)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->CreateUserDeliveryLocation");
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling UsersApi->CreateUserDeliveryLocation");
+
+            var localVarPath = "./api/v1.0/users/{userId}/deliveryLocations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateUserDeliveryLocation", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2661,6 +3324,163 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
+        /// <param name="whiteLabelId"> (optional)</param>
+        /// <returns>RestApiArrayResultUserDeliveryLocationAdmin</returns>
+        public RestApiArrayResultUserDeliveryLocationAdmin GetUserDeliveryLocationsForAdmin (int? userId, int? whiteLabelId = null)
+        {
+             ApiResponse<RestApiArrayResultUserDeliveryLocationAdmin> localVarResponse = GetUserDeliveryLocationsForAdminWithHttpInfo(userId, whiteLabelId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="whiteLabelId"> (optional)</param>
+        /// <returns>ApiResponse of RestApiArrayResultUserDeliveryLocationAdmin</returns>
+        public ApiResponse< RestApiArrayResultUserDeliveryLocationAdmin > GetUserDeliveryLocationsForAdminWithHttpInfo (int? userId, int? whiteLabelId = null)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserDeliveryLocationsForAdmin");
+
+            var localVarPath = "./api/v1.0/users/{userId}/deliveryLocations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (whiteLabelId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "whiteLabelId", whiteLabelId)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUserDeliveryLocationsForAdmin", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultUserDeliveryLocationAdmin>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiArrayResultUserDeliveryLocationAdmin) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultUserDeliveryLocationAdmin)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="whiteLabelId"> (optional)</param>
+        /// <returns>Task of RestApiArrayResultUserDeliveryLocationAdmin</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultUserDeliveryLocationAdmin> GetUserDeliveryLocationsForAdminAsync (int? userId, int? whiteLabelId = null)
+        {
+             ApiResponse<RestApiArrayResultUserDeliveryLocationAdmin> localVarResponse = await GetUserDeliveryLocationsForAdminAsyncWithHttpInfo(userId, whiteLabelId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="whiteLabelId"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultUserDeliveryLocationAdmin)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultUserDeliveryLocationAdmin>> GetUserDeliveryLocationsForAdminAsyncWithHttpInfo (int? userId, int? whiteLabelId = null)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserDeliveryLocationsForAdmin");
+
+            var localVarPath = "./api/v1.0/users/{userId}/deliveryLocations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (whiteLabelId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "whiteLabelId", whiteLabelId)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUserDeliveryLocationsForAdmin", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultUserDeliveryLocationAdmin>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiArrayResultUserDeliveryLocationAdmin) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultUserDeliveryLocationAdmin)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
         /// <returns>RestApiArrayResultUserNote</returns>
         public RestApiArrayResultUserNote GetUserNotes (int? userId)
         {
@@ -2805,6 +3625,658 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiArrayResultUserNote>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiArrayResultUserNote) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultUserNote)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="orderId"></param>
+        /// <returns>RestApiResultOrder</returns>
+        public RestApiResultOrder GetUserOrderByIdForAdmin (int? userId, int? orderId)
+        {
+             ApiResponse<RestApiResultOrder> localVarResponse = GetUserOrderByIdForAdminWithHttpInfo(userId, orderId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="orderId"></param>
+        /// <returns>ApiResponse of RestApiResultOrder</returns>
+        public ApiResponse< RestApiResultOrder > GetUserOrderByIdForAdminWithHttpInfo (int? userId, int? orderId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserOrderByIdForAdmin");
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new ApiException(400, "Missing required parameter 'orderId' when calling UsersApi->GetUserOrderByIdForAdmin");
+
+            var localVarPath = "./api/v1.0/users/{userId}/orders/{orderId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (orderId != null) localVarPathParams.Add("orderId", this.Configuration.ApiClient.ParameterToString(orderId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUserOrderByIdForAdmin", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultOrder>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultOrder) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOrder)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="orderId"></param>
+        /// <returns>Task of RestApiResultOrder</returns>
+        public async System.Threading.Tasks.Task<RestApiResultOrder> GetUserOrderByIdForAdminAsync (int? userId, int? orderId)
+        {
+             ApiResponse<RestApiResultOrder> localVarResponse = await GetUserOrderByIdForAdminAsyncWithHttpInfo(userId, orderId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="orderId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultOrder)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOrder>> GetUserOrderByIdForAdminAsyncWithHttpInfo (int? userId, int? orderId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserOrderByIdForAdmin");
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new ApiException(400, "Missing required parameter 'orderId' when calling UsersApi->GetUserOrderByIdForAdmin");
+
+            var localVarPath = "./api/v1.0/users/{userId}/orders/{orderId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (orderId != null) localVarPathParams.Add("orderId", this.Configuration.ApiClient.ParameterToString(orderId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUserOrderByIdForAdmin", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultOrder>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultOrder) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOrder)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="skip"> (optional)</param>
+        /// <param name="take"> (optional)</param>
+        /// <param name="whiteLabelId"> (optional)</param>
+        /// <returns>RestApiArrayResultUserOrderSummary</returns>
+        public RestApiArrayResultUserOrderSummary GetUserOrdersForAdmin (int? userId, int? skip = null, int? take = null, int? whiteLabelId = null)
+        {
+             ApiResponse<RestApiArrayResultUserOrderSummary> localVarResponse = GetUserOrdersForAdminWithHttpInfo(userId, skip, take, whiteLabelId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="skip"> (optional)</param>
+        /// <param name="take"> (optional)</param>
+        /// <param name="whiteLabelId"> (optional)</param>
+        /// <returns>ApiResponse of RestApiArrayResultUserOrderSummary</returns>
+        public ApiResponse< RestApiArrayResultUserOrderSummary > GetUserOrdersForAdminWithHttpInfo (int? userId, int? skip = null, int? take = null, int? whiteLabelId = null)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserOrdersForAdmin");
+
+            var localVarPath = "./api/v1.0/users/{userId}/orders";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (skip != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "skip", skip)); // query parameter
+            if (take != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "take", take)); // query parameter
+            if (whiteLabelId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "whiteLabelId", whiteLabelId)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUserOrdersForAdmin", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultUserOrderSummary>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiArrayResultUserOrderSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultUserOrderSummary)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="skip"> (optional)</param>
+        /// <param name="take"> (optional)</param>
+        /// <param name="whiteLabelId"> (optional)</param>
+        /// <returns>Task of RestApiArrayResultUserOrderSummary</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultUserOrderSummary> GetUserOrdersForAdminAsync (int? userId, int? skip = null, int? take = null, int? whiteLabelId = null)
+        {
+             ApiResponse<RestApiArrayResultUserOrderSummary> localVarResponse = await GetUserOrdersForAdminAsyncWithHttpInfo(userId, skip, take, whiteLabelId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="skip"> (optional)</param>
+        /// <param name="take"> (optional)</param>
+        /// <param name="whiteLabelId"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultUserOrderSummary)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultUserOrderSummary>> GetUserOrdersForAdminAsyncWithHttpInfo (int? userId, int? skip = null, int? take = null, int? whiteLabelId = null)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserOrdersForAdmin");
+
+            var localVarPath = "./api/v1.0/users/{userId}/orders";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (skip != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "skip", skip)); // query parameter
+            if (take != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "take", take)); // query parameter
+            if (whiteLabelId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "whiteLabelId", whiteLabelId)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUserOrdersForAdmin", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultUserOrderSummary>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiArrayResultUserOrderSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultUserOrderSummary)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="mostRecentCount"> (optional)</param>
+        /// <returns>RestApiArrayResultUserSmsChatItem</returns>
+        public RestApiArrayResultUserSmsChatItem GetUserSmsConversationItems (int? userId, int? mostRecentCount = null)
+        {
+             ApiResponse<RestApiArrayResultUserSmsChatItem> localVarResponse = GetUserSmsConversationItemsWithHttpInfo(userId, mostRecentCount);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="mostRecentCount"> (optional)</param>
+        /// <returns>ApiResponse of RestApiArrayResultUserSmsChatItem</returns>
+        public ApiResponse< RestApiArrayResultUserSmsChatItem > GetUserSmsConversationItemsWithHttpInfo (int? userId, int? mostRecentCount = null)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserSmsConversationItems");
+
+            var localVarPath = "./api/v1.0/users/{userId}/smsConversationItems";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (mostRecentCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "mostRecentCount", mostRecentCount)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUserSmsConversationItems", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultUserSmsChatItem>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiArrayResultUserSmsChatItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultUserSmsChatItem)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="mostRecentCount"> (optional)</param>
+        /// <returns>Task of RestApiArrayResultUserSmsChatItem</returns>
+        public async System.Threading.Tasks.Task<RestApiArrayResultUserSmsChatItem> GetUserSmsConversationItemsAsync (int? userId, int? mostRecentCount = null)
+        {
+             ApiResponse<RestApiArrayResultUserSmsChatItem> localVarResponse = await GetUserSmsConversationItemsAsyncWithHttpInfo(userId, mostRecentCount);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="mostRecentCount"> (optional)</param>
+        /// <returns>Task of ApiResponse (RestApiArrayResultUserSmsChatItem)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultUserSmsChatItem>> GetUserSmsConversationItemsAsyncWithHttpInfo (int? userId, int? mostRecentCount = null)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserSmsConversationItems");
+
+            var localVarPath = "./api/v1.0/users/{userId}/smsConversationItems";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (mostRecentCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "mostRecentCount", mostRecentCount)); // query parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUserSmsConversationItems", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiArrayResultUserSmsChatItem>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiArrayResultUserSmsChatItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultUserSmsChatItem)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        public RestApiDefaultResponse HideUserDeliveryLocation (int? userId, int? deliveryLocationId)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = HideUserDeliveryLocationWithHttpInfo(userId, deliveryLocationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        public ApiResponse< RestApiDefaultResponse > HideUserDeliveryLocationWithHttpInfo (int? userId, int? deliveryLocationId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->HideUserDeliveryLocation");
+            // verify the required parameter 'deliveryLocationId' is set
+            if (deliveryLocationId == null)
+                throw new ApiException(400, "Missing required parameter 'deliveryLocationId' when calling UsersApi->HideUserDeliveryLocation");
+
+            var localVarPath = "./api/v1.0/users/{userId}/deliveryLocations/{deliveryLocationId}/hide";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (deliveryLocationId != null) localVarPathParams.Add("deliveryLocationId", this.Configuration.ApiClient.ParameterToString(deliveryLocationId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("HideUserDeliveryLocation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiDefaultResponse> HideUserDeliveryLocationAsync (int? userId, int? deliveryLocationId)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = await HideUserDeliveryLocationAsyncWithHttpInfo(userId, deliveryLocationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> HideUserDeliveryLocationAsyncWithHttpInfo (int? userId, int? deliveryLocationId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->HideUserDeliveryLocation");
+            // verify the required parameter 'deliveryLocationId' is set
+            if (deliveryLocationId == null)
+                throw new ApiException(400, "Missing required parameter 'deliveryLocationId' when calling UsersApi->HideUserDeliveryLocation");
+
+            var localVarPath = "./api/v1.0/users/{userId}/deliveryLocations/{deliveryLocationId}/hide";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (deliveryLocationId != null) localVarPathParams.Add("deliveryLocationId", this.Configuration.ApiClient.ParameterToString(deliveryLocationId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("HideUserDeliveryLocation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
         }
 
         /// <summary>
@@ -3923,6 +5395,380 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>RestApiResultUserPushNotificationSentResult</returns>
+        public RestApiResultUserPushNotificationSentResult SendUserPushNotification (int? userId, SendUserPushNotificationRequest request)
+        {
+             ApiResponse<RestApiResultUserPushNotificationSentResult> localVarResponse = SendUserPushNotificationWithHttpInfo(userId, request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of RestApiResultUserPushNotificationSentResult</returns>
+        public ApiResponse< RestApiResultUserPushNotificationSentResult > SendUserPushNotificationWithHttpInfo (int? userId, SendUserPushNotificationRequest request)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->SendUserPushNotification");
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling UsersApi->SendUserPushNotification");
+
+            var localVarPath = "./api/v1.0/users/{userId}/pushNotifications";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SendUserPushNotification", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultUserPushNotificationSentResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultUserPushNotificationSentResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultUserPushNotificationSentResult)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>Task of RestApiResultUserPushNotificationSentResult</returns>
+        public async System.Threading.Tasks.Task<RestApiResultUserPushNotificationSentResult> SendUserPushNotificationAsync (int? userId, SendUserPushNotificationRequest request)
+        {
+             ApiResponse<RestApiResultUserPushNotificationSentResult> localVarResponse = await SendUserPushNotificationAsyncWithHttpInfo(userId, request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (RestApiResultUserPushNotificationSentResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultUserPushNotificationSentResult>> SendUserPushNotificationAsyncWithHttpInfo (int? userId, SendUserPushNotificationRequest request)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->SendUserPushNotification");
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling UsersApi->SendUserPushNotification");
+
+            var localVarPath = "./api/v1.0/users/{userId}/pushNotifications";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SendUserPushNotification", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultUserPushNotificationSentResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultUserPushNotificationSentResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultUserPushNotificationSentResult)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        public RestApiDefaultResponse SendUserSms (int? userId, SendUserSmsRequest request)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = SendUserSmsWithHttpInfo(userId, request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        public ApiResponse< RestApiDefaultResponse > SendUserSmsWithHttpInfo (int? userId, SendUserSmsRequest request)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->SendUserSms");
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling UsersApi->SendUserSms");
+
+            var localVarPath = "./api/v1.0/users/{userId}/sms";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SendUserSms", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiDefaultResponse> SendUserSmsAsync (int? userId, SendUserSmsRequest request)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = await SendUserSmsAsyncWithHttpInfo(userId, request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> SendUserSmsAsyncWithHttpInfo (int? userId, SendUserSmsRequest request)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->SendUserSms");
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling UsersApi->SendUserSms");
+
+            var localVarPath = "./api/v1.0/users/{userId}/sms";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SendUserSms", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
         /// <param name="customerName"></param>
         /// <returns>RestApiDefaultResponse</returns>
         public RestApiDefaultResponse SetCustomerName (int? userId, string customerName)
@@ -4260,6 +6106,404 @@ namespace Flipdish.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("SetFlipdishAccountIdForUser", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <param name="request"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        public RestApiDefaultResponse SetUserDeliveryLocationCoordinates (int? userId, int? deliveryLocationId, SetUserDeliveryLocationCoordinatesRequest request)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = SetUserDeliveryLocationCoordinatesWithHttpInfo(userId, deliveryLocationId, request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        public ApiResponse< RestApiDefaultResponse > SetUserDeliveryLocationCoordinatesWithHttpInfo (int? userId, int? deliveryLocationId, SetUserDeliveryLocationCoordinatesRequest request)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->SetUserDeliveryLocationCoordinates");
+            // verify the required parameter 'deliveryLocationId' is set
+            if (deliveryLocationId == null)
+                throw new ApiException(400, "Missing required parameter 'deliveryLocationId' when calling UsersApi->SetUserDeliveryLocationCoordinates");
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling UsersApi->SetUserDeliveryLocationCoordinates");
+
+            var localVarPath = "./api/v1.0/users/{userId}/deliveryLocations/{deliveryLocationId}/coordinates";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (deliveryLocationId != null) localVarPathParams.Add("deliveryLocationId", this.Configuration.ApiClient.ParameterToString(deliveryLocationId)); // path parameter
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetUserDeliveryLocationCoordinates", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <param name="request"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiDefaultResponse> SetUserDeliveryLocationCoordinatesAsync (int? userId, int? deliveryLocationId, SetUserDeliveryLocationCoordinatesRequest request)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = await SetUserDeliveryLocationCoordinatesAsyncWithHttpInfo(userId, deliveryLocationId, request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> SetUserDeliveryLocationCoordinatesAsyncWithHttpInfo (int? userId, int? deliveryLocationId, SetUserDeliveryLocationCoordinatesRequest request)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->SetUserDeliveryLocationCoordinates");
+            // verify the required parameter 'deliveryLocationId' is set
+            if (deliveryLocationId == null)
+                throw new ApiException(400, "Missing required parameter 'deliveryLocationId' when calling UsersApi->SetUserDeliveryLocationCoordinates");
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling UsersApi->SetUserDeliveryLocationCoordinates");
+
+            var localVarPath = "./api/v1.0/users/{userId}/deliveryLocations/{deliveryLocationId}/coordinates";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (deliveryLocationId != null) localVarPathParams.Add("deliveryLocationId", this.Configuration.ApiClient.ParameterToString(deliveryLocationId)); // path parameter
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetUserDeliveryLocationCoordinates", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <param name="request"></param>
+        /// <returns>RestApiDefaultResponse</returns>
+        public RestApiDefaultResponse SetUserDeliveryLocationField (int? userId, int? deliveryLocationId, SetUserDeliveryLocationFieldRequest request)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = SetUserDeliveryLocationFieldWithHttpInfo(userId, deliveryLocationId, request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of RestApiDefaultResponse</returns>
+        public ApiResponse< RestApiDefaultResponse > SetUserDeliveryLocationFieldWithHttpInfo (int? userId, int? deliveryLocationId, SetUserDeliveryLocationFieldRequest request)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->SetUserDeliveryLocationField");
+            // verify the required parameter 'deliveryLocationId' is set
+            if (deliveryLocationId == null)
+                throw new ApiException(400, "Missing required parameter 'deliveryLocationId' when calling UsersApi->SetUserDeliveryLocationField");
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling UsersApi->SetUserDeliveryLocationField");
+
+            var localVarPath = "./api/v1.0/users/{userId}/deliveryLocations/{deliveryLocationId}/fields";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (deliveryLocationId != null) localVarPathParams.Add("deliveryLocationId", this.Configuration.ApiClient.ParameterToString(deliveryLocationId)); // path parameter
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetUserDeliveryLocationField", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiDefaultResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiDefaultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiDefaultResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <param name="request"></param>
+        /// <returns>Task of RestApiDefaultResponse</returns>
+        public async System.Threading.Tasks.Task<RestApiDefaultResponse> SetUserDeliveryLocationFieldAsync (int? userId, int? deliveryLocationId, SetUserDeliveryLocationFieldRequest request)
+        {
+             ApiResponse<RestApiDefaultResponse> localVarResponse = await SetUserDeliveryLocationFieldAsyncWithHttpInfo(userId, deliveryLocationId, request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId"></param>
+        /// <param name="deliveryLocationId"></param>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (RestApiDefaultResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiDefaultResponse>> SetUserDeliveryLocationFieldAsyncWithHttpInfo (int? userId, int? deliveryLocationId, SetUserDeliveryLocationFieldRequest request)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->SetUserDeliveryLocationField");
+            // verify the required parameter 'deliveryLocationId' is set
+            if (deliveryLocationId == null)
+                throw new ApiException(400, "Missing required parameter 'deliveryLocationId' when calling UsersApi->SetUserDeliveryLocationField");
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling UsersApi->SetUserDeliveryLocationField");
+
+            var localVarPath = "./api/v1.0/users/{userId}/deliveryLocations/{deliveryLocationId}/fields";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (deliveryLocationId != null) localVarPathParams.Add("deliveryLocationId", this.Configuration.ApiClient.ParameterToString(deliveryLocationId)); // path parameter
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetUserDeliveryLocationField", localVarResponse);
                 if (exception != null) throw exception;
             }
 
