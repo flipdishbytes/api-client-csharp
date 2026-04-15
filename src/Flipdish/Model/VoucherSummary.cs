@@ -185,7 +185,8 @@ namespace Flipdish.Model
         /// <param name="voucherSubType">Voucher Sub Type.</param>
         /// <param name="description">Voucher Description (Visible on printout).</param>
         /// <param name="isEnabled">Is voucher enabled.</param>
-        public VoucherSummary(int? voucherId = default(int?), string code = default(string), StatusEnum? status = default(StatusEnum?), VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), string description = default(string), bool? isEnabled = default(bool?))
+        /// <param name="storeNames">Store names associated with this voucher.</param>
+        public VoucherSummary(int? voucherId = default(int?), string code = default(string), StatusEnum? status = default(StatusEnum?), VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), string description = default(string), bool? isEnabled = default(bool?), List<string> storeNames = default(List<string>))
         {
             this.VoucherId = voucherId;
             this.Code = code;
@@ -194,6 +195,7 @@ namespace Flipdish.Model
             this.VoucherSubType = voucherSubType;
             this.Description = description;
             this.IsEnabled = isEnabled;
+            this.StoreNames = storeNames;
         }
         
         /// <summary>
@@ -228,6 +230,13 @@ namespace Flipdish.Model
         public bool? IsEnabled { get; set; }
 
         /// <summary>
+        /// Store names associated with this voucher
+        /// </summary>
+        /// <value>Store names associated with this voucher</value>
+        [DataMember(Name="StoreNames", EmitDefaultValue=false)]
+        public List<string> StoreNames { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -242,6 +251,7 @@ namespace Flipdish.Model
             sb.Append("  VoucherSubType: ").Append(VoucherSubType).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
+            sb.Append("  StoreNames: ").Append(StoreNames).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -310,6 +320,11 @@ namespace Flipdish.Model
                     this.IsEnabled == input.IsEnabled ||
                     (this.IsEnabled != null &&
                     this.IsEnabled.Equals(input.IsEnabled))
+                ) && 
+                (
+                    this.StoreNames == input.StoreNames ||
+                    this.StoreNames != null &&
+                    this.StoreNames.SequenceEqual(input.StoreNames)
                 );
         }
 
@@ -336,6 +351,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.IsEnabled != null)
                     hashCode = hashCode * 59 + this.IsEnabled.GetHashCode();
+                if (this.StoreNames != null)
+                    hashCode = hashCode * 59 + this.StoreNames.GetHashCode();
                 return hashCode;
             }
         }
