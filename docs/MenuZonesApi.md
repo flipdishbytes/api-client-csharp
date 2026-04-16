@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 <a name="deletemenuzone"></a>
 # **DeleteMenuZone**
-> void DeleteMenuZone (int? menuZoneId, string menuId)
+> void DeleteMenuZone (int? menuId, int? menuZoneId)
 
 Deletes a menu zone.
 
@@ -105,13 +105,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuZonesApi();
+            var menuId = 56;  // int? | 
             var menuZoneId = 56;  // int? | The menu zone id.
-            var menuId = menuId_example;  // string | 
 
             try
             {
                 // Deletes a menu zone.
-                apiInstance.DeleteMenuZone(menuZoneId, menuId);
+                apiInstance.DeleteMenuZone(menuId, menuZoneId);
             }
             catch (Exception e)
             {
@@ -126,8 +126,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**|  | 
  **menuZoneId** | **int?**| The menu zone id. | 
- **menuId** | **string**|  | 
 
 ### Return type
 
@@ -146,7 +146,7 @@ void (empty response body)
 
 <a name="deletemenuzoneimage"></a>
 # **DeleteMenuZoneImage**
-> void DeleteMenuZoneImage (int? menuZoneId, string menuId)
+> void DeleteMenuZoneImage (int? menuId, int? menuZoneId)
 
 Deletes a menu zone image.
 
@@ -168,13 +168,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuZonesApi();
+            var menuId = 56;  // int? | 
             var menuZoneId = 56;  // int? | The zone Id/
-            var menuId = menuId_example;  // string | 
 
             try
             {
                 // Deletes a menu zone image.
-                apiInstance.DeleteMenuZoneImage(menuZoneId, menuId);
+                apiInstance.DeleteMenuZoneImage(menuId, menuZoneId);
             }
             catch (Exception e)
             {
@@ -189,8 +189,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**|  | 
  **menuZoneId** | **int?**| The zone Id/ | 
- **menuId** | **string**|  | 
 
 ### Return type
 
@@ -209,7 +209,7 @@ void (empty response body)
 
 <a name="flipmenuzones"></a>
 # **FlipMenuZones**
-> void FlipMenuZones (int? menuZoneId, int? menuZoneI2, string menuId)
+> void FlipMenuZones (int? menuId, int? menuZoneId, int? menuZoneI2)
 
 Flips the order of two menu zones.
 
@@ -231,14 +231,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuZonesApi();
+            var menuId = 56;  // int? | 
             var menuZoneId = 56;  // int? | Source.
             var menuZoneI2 = 56;  // int? | Destination.
-            var menuId = menuId_example;  // string | 
 
             try
             {
                 // Flips the order of two menu zones.
-                apiInstance.FlipMenuZones(menuZoneId, menuZoneI2, menuId);
+                apiInstance.FlipMenuZones(menuId, menuZoneId, menuZoneI2);
             }
             catch (Exception e)
             {
@@ -253,9 +253,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**|  | 
  **menuZoneId** | **int?**| Source. | 
  **menuZoneI2** | **int?**| Destination. | 
- **menuId** | **string**|  | 
 
 ### Return type
 
@@ -400,7 +400,7 @@ Name | Type | Description  | Notes
 
 <a name="setmenusectionmenuzone"></a>
 # **SetMenuSectionMenuZone**
-> void SetMenuSectionMenuZone (int? menuZoneId, int? menuSectionId, string menuId)
+> void SetMenuSectionMenuZone (int? menuId, int? menuZoneId, int? menuSectionId)
 
 Assigns a zone to a menu section.
 
@@ -422,14 +422,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuZonesApi();
+            var menuId = 56;  // int? | 
             var menuZoneId = 56;  // int? | The menu id.
             var menuSectionId = 56;  // int? | The menu section id.
-            var menuId = menuId_example;  // string | 
 
             try
             {
                 // Assigns a zone to a menu section.
-                apiInstance.SetMenuSectionMenuZone(menuZoneId, menuSectionId, menuId);
+                apiInstance.SetMenuSectionMenuZone(menuId, menuZoneId, menuSectionId);
             }
             catch (Exception e)
             {
@@ -444,9 +444,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**|  | 
  **menuZoneId** | **int?**| The menu id. | 
  **menuSectionId** | **int?**| The menu section id. | 
- **menuId** | **string**|  | 
 
 ### Return type
 
@@ -465,7 +465,7 @@ void (empty response body)
 
 <a name="setmenuzonedescription"></a>
 # **SetMenuZoneDescription**
-> void SetMenuZoneDescription (int? menuZoneId, string description, string menuId)
+> void SetMenuZoneDescription (int? menuId, int? menuZoneId, string description)
 
 Sets the description of a menu zone.
 
@@ -487,14 +487,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuZonesApi();
+            var menuId = 56;  // int? | 
             var menuZoneId = 56;  // int? | The zone id.
             var description = description_example;  // string | The new description. Add as a raw string in the request, without any JSON wrapper.
-            var menuId = menuId_example;  // string | 
 
             try
             {
                 // Sets the description of a menu zone.
-                apiInstance.SetMenuZoneDescription(menuZoneId, description, menuId);
+                apiInstance.SetMenuZoneDescription(menuId, menuZoneId, description);
             }
             catch (Exception e)
             {
@@ -509,9 +509,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**|  | 
  **menuZoneId** | **int?**| The zone id. | 
  **description** | **string**| The new description. Add as a raw string in the request, without any JSON wrapper. | 
- **menuId** | **string**|  | 
 
 ### Return type
 
@@ -530,7 +530,7 @@ void (empty response body)
 
 <a name="setmenuzonename"></a>
 # **SetMenuZoneName**
-> void SetMenuZoneName (int? menuZoneId, string menuZoneName, string menuId)
+> void SetMenuZoneName (int? menuId, int? menuZoneId, string menuZoneName)
 
 Sets the name of a menu zone.
 
@@ -552,14 +552,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuZonesApi();
+            var menuId = 56;  // int? | 
             var menuZoneId = 56;  // int? | The menu zone id.
             var menuZoneName = menuZoneName_example;  // string | The new name.
-            var menuId = menuId_example;  // string | 
 
             try
             {
                 // Sets the name of a menu zone.
-                apiInstance.SetMenuZoneName(menuZoneId, menuZoneName, menuId);
+                apiInstance.SetMenuZoneName(menuId, menuZoneId, menuZoneName);
             }
             catch (Exception e)
             {
@@ -574,9 +574,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**|  | 
  **menuZoneId** | **int?**| The menu zone id. | 
  **menuZoneName** | **string**| The new name. | 
- **menuId** | **string**|  | 
 
 ### Return type
 
@@ -660,7 +660,7 @@ void (empty response body)
 
 <a name="uploadmenuzoneimage"></a>
 # **UploadMenuZoneImage**
-> void UploadMenuZoneImage (int? menuZoneId, List<HttpPostedFileBase> _file, string menuId)
+> void UploadMenuZoneImage (int? menuId, int? menuZoneId, List<HttpPostedFileBase> _file)
 
 Uploads an image for a menu zone.
 
@@ -682,14 +682,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuZonesApi();
+            var menuId = 56;  // int? | 
             var menuZoneId = 56;  // int? | The zone id.
             var _file = new List<HttpPostedFileBase>(); // List<HttpPostedFileBase> | The file to upload.
-            var menuId = menuId_example;  // string | 
 
             try
             {
                 // Uploads an image for a menu zone.
-                apiInstance.UploadMenuZoneImage(menuZoneId, _file, menuId);
+                apiInstance.UploadMenuZoneImage(menuId, menuZoneId, _file);
             }
             catch (Exception e)
             {
@@ -704,9 +704,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**|  | 
  **menuZoneId** | **int?**| The zone id. | 
  **_file** | [**List&lt;HttpPostedFileBase&gt;**](HttpPostedFileBase.md)| The file to upload. | 
- **menuId** | **string**|  | 
 
 ### Return type
 

@@ -54,10 +54,10 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuId"></param>
+        /// <param name="menuZoneId">The menu zone id.</param>
         /// <returns></returns>
-        void DeleteMenuZone (int? menuZoneId, string menuId);
+        void DeleteMenuZone (int? menuId, int? menuZoneId);
 
         /// <summary>
         /// Deletes a menu zone.
@@ -66,10 +66,10 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The menu zone id.</param>
-        /// <param name="menuId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteMenuZoneWithHttpInfo (int? menuZoneId, string menuId);
+        ApiResponse<Object> DeleteMenuZoneWithHttpInfo (int? menuId, int? menuZoneId);
         /// <summary>
         /// Deletes a menu zone image.
         /// </summary>
@@ -77,10 +77,10 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuZoneId">The zone Id/</param>
         /// <param name="menuId"></param>
+        /// <param name="menuZoneId">The zone Id/</param>
         /// <returns></returns>
-        void DeleteMenuZoneImage (int? menuZoneId, string menuId);
+        void DeleteMenuZoneImage (int? menuId, int? menuZoneId);
 
         /// <summary>
         /// Deletes a menu zone image.
@@ -89,10 +89,10 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuZoneId">The zone Id/</param>
         /// <param name="menuId"></param>
+        /// <param name="menuZoneId">The zone Id/</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteMenuZoneImageWithHttpInfo (int? menuZoneId, string menuId);
+        ApiResponse<Object> DeleteMenuZoneImageWithHttpInfo (int? menuId, int? menuZoneId);
         /// <summary>
         /// Flips the order of two menu zones.
         /// </summary>
@@ -100,11 +100,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">Source.</param>
         /// <param name="menuZoneI2">Destination.</param>
-        /// <param name="menuId"></param>
         /// <returns></returns>
-        void FlipMenuZones (int? menuZoneId, int? menuZoneI2, string menuId);
+        void FlipMenuZones (int? menuId, int? menuZoneId, int? menuZoneI2);
 
         /// <summary>
         /// Flips the order of two menu zones.
@@ -113,11 +113,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">Source.</param>
         /// <param name="menuZoneI2">Destination.</param>
-        /// <param name="menuId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> FlipMenuZonesWithHttpInfo (int? menuZoneId, int? menuZoneI2, string menuId);
+        ApiResponse<Object> FlipMenuZonesWithHttpInfo (int? menuId, int? menuZoneId, int? menuZoneI2);
         /// <summary>
         /// Gets a specific menu zone for a given zone id
         /// </summary>
@@ -169,11 +169,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The menu id.</param>
         /// <param name="menuSectionId">The menu section id.</param>
-        /// <param name="menuId"></param>
         /// <returns></returns>
-        void SetMenuSectionMenuZone (int? menuZoneId, int? menuSectionId, string menuId);
+        void SetMenuSectionMenuZone (int? menuId, int? menuZoneId, int? menuSectionId);
 
         /// <summary>
         /// Assigns a zone to a menu section.
@@ -182,11 +182,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The menu id.</param>
         /// <param name="menuSectionId">The menu section id.</param>
-        /// <param name="menuId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> SetMenuSectionMenuZoneWithHttpInfo (int? menuZoneId, int? menuSectionId, string menuId);
+        ApiResponse<Object> SetMenuSectionMenuZoneWithHttpInfo (int? menuId, int? menuZoneId, int? menuSectionId);
         /// <summary>
         /// Sets the description of a menu zone.
         /// </summary>
@@ -194,11 +194,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="description">The new description. Add as a raw string in the request, without any JSON wrapper.</param>
-        /// <param name="menuId"></param>
         /// <returns></returns>
-        void SetMenuZoneDescription (int? menuZoneId, string description, string menuId);
+        void SetMenuZoneDescription (int? menuId, int? menuZoneId, string description);
 
         /// <summary>
         /// Sets the description of a menu zone.
@@ -207,11 +207,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="description">The new description. Add as a raw string in the request, without any JSON wrapper.</param>
-        /// <param name="menuId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> SetMenuZoneDescriptionWithHttpInfo (int? menuZoneId, string description, string menuId);
+        ApiResponse<Object> SetMenuZoneDescriptionWithHttpInfo (int? menuId, int? menuZoneId, string description);
         /// <summary>
         /// Sets the name of a menu zone.
         /// </summary>
@@ -219,11 +219,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuZoneName">The new name.</param>
-        /// <param name="menuId"></param>
         /// <returns></returns>
-        void SetMenuZoneName (int? menuZoneId, string menuZoneName, string menuId);
+        void SetMenuZoneName (int? menuId, int? menuZoneId, string menuZoneName);
 
         /// <summary>
         /// Sets the name of a menu zone.
@@ -232,11 +232,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuZoneName">The new name.</param>
-        /// <param name="menuId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> SetMenuZoneNameWithHttpInfo (int? menuZoneId, string menuZoneName, string menuId);
+        ApiResponse<Object> SetMenuZoneNameWithHttpInfo (int? menuId, int? menuZoneId, string menuZoneName);
         /// <summary>
         /// Updates a menu zone.
         /// </summary>
@@ -269,11 +269,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="_file">The file to upload.</param>
-        /// <param name="menuId"></param>
         /// <returns></returns>
-        void UploadMenuZoneImage (int? menuZoneId, List<HttpPostedFileBase> _file, string menuId);
+        void UploadMenuZoneImage (int? menuId, int? menuZoneId, List<HttpPostedFileBase> _file);
 
         /// <summary>
         /// Uploads an image for a menu zone.
@@ -282,11 +282,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="_file">The file to upload.</param>
-        /// <param name="menuId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UploadMenuZoneImageWithHttpInfo (int? menuZoneId, List<HttpPostedFileBase> _file, string menuId);
+        ApiResponse<Object> UploadMenuZoneImageWithHttpInfo (int? menuId, int? menuZoneId, List<HttpPostedFileBase> _file);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -319,10 +319,10 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuId"></param>
+        /// <param name="menuZoneId">The menu zone id.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteMenuZoneAsync (int? menuZoneId, string menuId);
+        System.Threading.Tasks.Task DeleteMenuZoneAsync (int? menuId, int? menuZoneId);
 
         /// <summary>
         /// Deletes a menu zone.
@@ -331,10 +331,10 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The menu zone id.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuZoneAsyncWithHttpInfo (int? menuZoneId, string menuId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuZoneAsyncWithHttpInfo (int? menuId, int? menuZoneId);
         /// <summary>
         /// Deletes a menu zone image.
         /// </summary>
@@ -342,10 +342,10 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuZoneId">The zone Id/</param>
         /// <param name="menuId"></param>
+        /// <param name="menuZoneId">The zone Id/</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteMenuZoneImageAsync (int? menuZoneId, string menuId);
+        System.Threading.Tasks.Task DeleteMenuZoneImageAsync (int? menuId, int? menuZoneId);
 
         /// <summary>
         /// Deletes a menu zone image.
@@ -354,10 +354,10 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuZoneId">The zone Id/</param>
         /// <param name="menuId"></param>
+        /// <param name="menuZoneId">The zone Id/</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuZoneImageAsyncWithHttpInfo (int? menuZoneId, string menuId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuZoneImageAsyncWithHttpInfo (int? menuId, int? menuZoneId);
         /// <summary>
         /// Flips the order of two menu zones.
         /// </summary>
@@ -365,11 +365,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">Source.</param>
         /// <param name="menuZoneI2">Destination.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task FlipMenuZonesAsync (int? menuZoneId, int? menuZoneI2, string menuId);
+        System.Threading.Tasks.Task FlipMenuZonesAsync (int? menuId, int? menuZoneId, int? menuZoneI2);
 
         /// <summary>
         /// Flips the order of two menu zones.
@@ -378,11 +378,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">Source.</param>
         /// <param name="menuZoneI2">Destination.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> FlipMenuZonesAsyncWithHttpInfo (int? menuZoneId, int? menuZoneI2, string menuId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> FlipMenuZonesAsyncWithHttpInfo (int? menuId, int? menuZoneId, int? menuZoneI2);
         /// <summary>
         /// Gets a specific menu zone for a given zone id
         /// </summary>
@@ -434,11 +434,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The menu id.</param>
         /// <param name="menuSectionId">The menu section id.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task SetMenuSectionMenuZoneAsync (int? menuZoneId, int? menuSectionId, string menuId);
+        System.Threading.Tasks.Task SetMenuSectionMenuZoneAsync (int? menuId, int? menuZoneId, int? menuSectionId);
 
         /// <summary>
         /// Assigns a zone to a menu section.
@@ -447,11 +447,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The menu id.</param>
         /// <param name="menuSectionId">The menu section id.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SetMenuSectionMenuZoneAsyncWithHttpInfo (int? menuZoneId, int? menuSectionId, string menuId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> SetMenuSectionMenuZoneAsyncWithHttpInfo (int? menuId, int? menuZoneId, int? menuSectionId);
         /// <summary>
         /// Sets the description of a menu zone.
         /// </summary>
@@ -459,11 +459,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="description">The new description. Add as a raw string in the request, without any JSON wrapper.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task SetMenuZoneDescriptionAsync (int? menuZoneId, string description, string menuId);
+        System.Threading.Tasks.Task SetMenuZoneDescriptionAsync (int? menuId, int? menuZoneId, string description);
 
         /// <summary>
         /// Sets the description of a menu zone.
@@ -472,11 +472,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="description">The new description. Add as a raw string in the request, without any JSON wrapper.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SetMenuZoneDescriptionAsyncWithHttpInfo (int? menuZoneId, string description, string menuId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> SetMenuZoneDescriptionAsyncWithHttpInfo (int? menuId, int? menuZoneId, string description);
         /// <summary>
         /// Sets the name of a menu zone.
         /// </summary>
@@ -484,11 +484,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuZoneName">The new name.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task SetMenuZoneNameAsync (int? menuZoneId, string menuZoneName, string menuId);
+        System.Threading.Tasks.Task SetMenuZoneNameAsync (int? menuId, int? menuZoneId, string menuZoneName);
 
         /// <summary>
         /// Sets the name of a menu zone.
@@ -497,11 +497,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuZoneName">The new name.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SetMenuZoneNameAsyncWithHttpInfo (int? menuZoneId, string menuZoneName, string menuId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> SetMenuZoneNameAsyncWithHttpInfo (int? menuId, int? menuZoneId, string menuZoneName);
         /// <summary>
         /// Updates a menu zone.
         /// </summary>
@@ -534,11 +534,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="_file">The file to upload.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UploadMenuZoneImageAsync (int? menuZoneId, List<HttpPostedFileBase> _file, string menuId);
+        System.Threading.Tasks.Task UploadMenuZoneImageAsync (int? menuId, int? menuZoneId, List<HttpPostedFileBase> _file);
 
         /// <summary>
         /// Uploads an image for a menu zone.
@@ -547,11 +547,11 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="_file">The file to upload.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UploadMenuZoneImageAsyncWithHttpInfo (int? menuZoneId, List<HttpPostedFileBase> _file, string menuId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UploadMenuZoneImageAsyncWithHttpInfo (int? menuId, int? menuZoneId, List<HttpPostedFileBase> _file);
         #endregion Asynchronous Operations
     }
 
@@ -843,29 +843,29 @@ namespace Flipdish.Api
         /// Deletes a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuId"></param>
+        /// <param name="menuZoneId">The menu zone id.</param>
         /// <returns></returns>
-        public void DeleteMenuZone (int? menuZoneId, string menuId)
+        public void DeleteMenuZone (int? menuId, int? menuZoneId)
         {
-             DeleteMenuZoneWithHttpInfo(menuZoneId, menuId);
+             DeleteMenuZoneWithHttpInfo(menuId, menuZoneId);
         }
 
         /// <summary>
         /// Deletes a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuId"></param>
+        /// <param name="menuZoneId">The menu zone id.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteMenuZoneWithHttpInfo (int? menuZoneId, string menuId)
+        public ApiResponse<Object> DeleteMenuZoneWithHttpInfo (int? menuId, int? menuZoneId)
         {
-            // verify the required parameter 'menuZoneId' is set
-            if (menuZoneId == null)
-                throw new ApiException(400, "Missing required parameter 'menuZoneId' when calling MenuZonesApi->DeleteMenuZone");
             // verify the required parameter 'menuId' is set
             if (menuId == null)
                 throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->DeleteMenuZone");
+            // verify the required parameter 'menuZoneId' is set
+            if (menuZoneId == null)
+                throw new ApiException(400, "Missing required parameter 'menuZoneId' when calling MenuZonesApi->DeleteMenuZone");
 
             var localVarPath = "./api/v1.0/menus/{menuId}/zones/{menuZoneId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -891,8 +891,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
             if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -923,12 +923,12 @@ namespace Flipdish.Api
         /// Deletes a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuId"></param>
+        /// <param name="menuZoneId">The menu zone id.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteMenuZoneAsync (int? menuZoneId, string menuId)
+        public async System.Threading.Tasks.Task DeleteMenuZoneAsync (int? menuId, int? menuZoneId)
         {
-             await DeleteMenuZoneAsyncWithHttpInfo(menuZoneId, menuId);
+             await DeleteMenuZoneAsyncWithHttpInfo(menuId, menuZoneId);
 
         }
 
@@ -936,17 +936,17 @@ namespace Flipdish.Api
         /// Deletes a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuId"></param>
+        /// <param name="menuZoneId">The menu zone id.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuZoneAsyncWithHttpInfo (int? menuZoneId, string menuId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuZoneAsyncWithHttpInfo (int? menuId, int? menuZoneId)
         {
-            // verify the required parameter 'menuZoneId' is set
-            if (menuZoneId == null)
-                throw new ApiException(400, "Missing required parameter 'menuZoneId' when calling MenuZonesApi->DeleteMenuZone");
             // verify the required parameter 'menuId' is set
             if (menuId == null)
                 throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->DeleteMenuZone");
+            // verify the required parameter 'menuZoneId' is set
+            if (menuZoneId == null)
+                throw new ApiException(400, "Missing required parameter 'menuZoneId' when calling MenuZonesApi->DeleteMenuZone");
 
             var localVarPath = "./api/v1.0/menus/{menuId}/zones/{menuZoneId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -972,8 +972,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
             if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1004,29 +1004,29 @@ namespace Flipdish.Api
         /// Deletes a menu zone image. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuZoneId">The zone Id/</param>
         /// <param name="menuId"></param>
+        /// <param name="menuZoneId">The zone Id/</param>
         /// <returns></returns>
-        public void DeleteMenuZoneImage (int? menuZoneId, string menuId)
+        public void DeleteMenuZoneImage (int? menuId, int? menuZoneId)
         {
-             DeleteMenuZoneImageWithHttpInfo(menuZoneId, menuId);
+             DeleteMenuZoneImageWithHttpInfo(menuId, menuZoneId);
         }
 
         /// <summary>
         /// Deletes a menu zone image. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuZoneId">The zone Id/</param>
         /// <param name="menuId"></param>
+        /// <param name="menuZoneId">The zone Id/</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteMenuZoneImageWithHttpInfo (int? menuZoneId, string menuId)
+        public ApiResponse<Object> DeleteMenuZoneImageWithHttpInfo (int? menuId, int? menuZoneId)
         {
-            // verify the required parameter 'menuZoneId' is set
-            if (menuZoneId == null)
-                throw new ApiException(400, "Missing required parameter 'menuZoneId' when calling MenuZonesApi->DeleteMenuZoneImage");
             // verify the required parameter 'menuId' is set
             if (menuId == null)
                 throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->DeleteMenuZoneImage");
+            // verify the required parameter 'menuZoneId' is set
+            if (menuZoneId == null)
+                throw new ApiException(400, "Missing required parameter 'menuZoneId' when calling MenuZonesApi->DeleteMenuZoneImage");
 
             var localVarPath = "./api/v1.0/menus/{menuId}/zones/{menuZoneId}/image";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1052,8 +1052,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
             if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1084,12 +1084,12 @@ namespace Flipdish.Api
         /// Deletes a menu zone image. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuZoneId">The zone Id/</param>
         /// <param name="menuId"></param>
+        /// <param name="menuZoneId">The zone Id/</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteMenuZoneImageAsync (int? menuZoneId, string menuId)
+        public async System.Threading.Tasks.Task DeleteMenuZoneImageAsync (int? menuId, int? menuZoneId)
         {
-             await DeleteMenuZoneImageAsyncWithHttpInfo(menuZoneId, menuId);
+             await DeleteMenuZoneImageAsyncWithHttpInfo(menuId, menuZoneId);
 
         }
 
@@ -1097,17 +1097,17 @@ namespace Flipdish.Api
         /// Deletes a menu zone image. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuZoneId">The zone Id/</param>
         /// <param name="menuId"></param>
+        /// <param name="menuZoneId">The zone Id/</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuZoneImageAsyncWithHttpInfo (int? menuZoneId, string menuId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuZoneImageAsyncWithHttpInfo (int? menuId, int? menuZoneId)
         {
-            // verify the required parameter 'menuZoneId' is set
-            if (menuZoneId == null)
-                throw new ApiException(400, "Missing required parameter 'menuZoneId' when calling MenuZonesApi->DeleteMenuZoneImage");
             // verify the required parameter 'menuId' is set
             if (menuId == null)
                 throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->DeleteMenuZoneImage");
+            // verify the required parameter 'menuZoneId' is set
+            if (menuZoneId == null)
+                throw new ApiException(400, "Missing required parameter 'menuZoneId' when calling MenuZonesApi->DeleteMenuZoneImage");
 
             var localVarPath = "./api/v1.0/menus/{menuId}/zones/{menuZoneId}/image";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1133,8 +1133,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
             if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1165,34 +1165,34 @@ namespace Flipdish.Api
         /// Flips the order of two menu zones. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">Source.</param>
         /// <param name="menuZoneI2">Destination.</param>
-        /// <param name="menuId"></param>
         /// <returns></returns>
-        public void FlipMenuZones (int? menuZoneId, int? menuZoneI2, string menuId)
+        public void FlipMenuZones (int? menuId, int? menuZoneId, int? menuZoneI2)
         {
-             FlipMenuZonesWithHttpInfo(menuZoneId, menuZoneI2, menuId);
+             FlipMenuZonesWithHttpInfo(menuId, menuZoneId, menuZoneI2);
         }
 
         /// <summary>
         /// Flips the order of two menu zones. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">Source.</param>
         /// <param name="menuZoneI2">Destination.</param>
-        /// <param name="menuId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> FlipMenuZonesWithHttpInfo (int? menuZoneId, int? menuZoneI2, string menuId)
+        public ApiResponse<Object> FlipMenuZonesWithHttpInfo (int? menuId, int? menuZoneId, int? menuZoneI2)
         {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->FlipMenuZones");
             // verify the required parameter 'menuZoneId' is set
             if (menuZoneId == null)
                 throw new ApiException(400, "Missing required parameter 'menuZoneId' when calling MenuZonesApi->FlipMenuZones");
             // verify the required parameter 'menuZoneI2' is set
             if (menuZoneI2 == null)
                 throw new ApiException(400, "Missing required parameter 'menuZoneI2' when calling MenuZonesApi->FlipMenuZones");
-            // verify the required parameter 'menuId' is set
-            if (menuId == null)
-                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->FlipMenuZones");
 
             var localVarPath = "./api/v1.0/menus/{menuId}/zones/{menuZoneId}/flip/{menuZoneI2}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1218,9 +1218,9 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
             if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
             if (menuZoneI2 != null) localVarPathParams.Add("menuZoneI2", this.Configuration.ApiClient.ParameterToString(menuZoneI2)); // path parameter
-            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1251,13 +1251,13 @@ namespace Flipdish.Api
         /// Flips the order of two menu zones. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">Source.</param>
         /// <param name="menuZoneI2">Destination.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task FlipMenuZonesAsync (int? menuZoneId, int? menuZoneI2, string menuId)
+        public async System.Threading.Tasks.Task FlipMenuZonesAsync (int? menuId, int? menuZoneId, int? menuZoneI2)
         {
-             await FlipMenuZonesAsyncWithHttpInfo(menuZoneId, menuZoneI2, menuId);
+             await FlipMenuZonesAsyncWithHttpInfo(menuId, menuZoneId, menuZoneI2);
 
         }
 
@@ -1265,21 +1265,21 @@ namespace Flipdish.Api
         /// Flips the order of two menu zones. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">Source.</param>
         /// <param name="menuZoneI2">Destination.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> FlipMenuZonesAsyncWithHttpInfo (int? menuZoneId, int? menuZoneI2, string menuId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> FlipMenuZonesAsyncWithHttpInfo (int? menuId, int? menuZoneId, int? menuZoneI2)
         {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->FlipMenuZones");
             // verify the required parameter 'menuZoneId' is set
             if (menuZoneId == null)
                 throw new ApiException(400, "Missing required parameter 'menuZoneId' when calling MenuZonesApi->FlipMenuZones");
             // verify the required parameter 'menuZoneI2' is set
             if (menuZoneI2 == null)
                 throw new ApiException(400, "Missing required parameter 'menuZoneI2' when calling MenuZonesApi->FlipMenuZones");
-            // verify the required parameter 'menuId' is set
-            if (menuId == null)
-                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->FlipMenuZones");
 
             var localVarPath = "./api/v1.0/menus/{menuId}/zones/{menuZoneId}/flip/{menuZoneI2}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1305,9 +1305,9 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
             if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
             if (menuZoneI2 != null) localVarPathParams.Add("menuZoneI2", this.Configuration.ApiClient.ParameterToString(menuZoneI2)); // path parameter
-            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1652,34 +1652,34 @@ namespace Flipdish.Api
         /// Assigns a zone to a menu section. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The menu id.</param>
         /// <param name="menuSectionId">The menu section id.</param>
-        /// <param name="menuId"></param>
         /// <returns></returns>
-        public void SetMenuSectionMenuZone (int? menuZoneId, int? menuSectionId, string menuId)
+        public void SetMenuSectionMenuZone (int? menuId, int? menuZoneId, int? menuSectionId)
         {
-             SetMenuSectionMenuZoneWithHttpInfo(menuZoneId, menuSectionId, menuId);
+             SetMenuSectionMenuZoneWithHttpInfo(menuId, menuZoneId, menuSectionId);
         }
 
         /// <summary>
         /// Assigns a zone to a menu section. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The menu id.</param>
         /// <param name="menuSectionId">The menu section id.</param>
-        /// <param name="menuId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> SetMenuSectionMenuZoneWithHttpInfo (int? menuZoneId, int? menuSectionId, string menuId)
+        public ApiResponse<Object> SetMenuSectionMenuZoneWithHttpInfo (int? menuId, int? menuZoneId, int? menuSectionId)
         {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->SetMenuSectionMenuZone");
             // verify the required parameter 'menuZoneId' is set
             if (menuZoneId == null)
                 throw new ApiException(400, "Missing required parameter 'menuZoneId' when calling MenuZonesApi->SetMenuSectionMenuZone");
             // verify the required parameter 'menuSectionId' is set
             if (menuSectionId == null)
                 throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuZonesApi->SetMenuSectionMenuZone");
-            // verify the required parameter 'menuId' is set
-            if (menuId == null)
-                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->SetMenuSectionMenuZone");
 
             var localVarPath = "./api/v1.0/menus/{menuId}/zones/{menuZoneId}/section/{menuSectionId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1705,9 +1705,9 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
             if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
             if (menuSectionId != null) localVarPathParams.Add("menuSectionId", this.Configuration.ApiClient.ParameterToString(menuSectionId)); // path parameter
-            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1738,13 +1738,13 @@ namespace Flipdish.Api
         /// Assigns a zone to a menu section. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The menu id.</param>
         /// <param name="menuSectionId">The menu section id.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task SetMenuSectionMenuZoneAsync (int? menuZoneId, int? menuSectionId, string menuId)
+        public async System.Threading.Tasks.Task SetMenuSectionMenuZoneAsync (int? menuId, int? menuZoneId, int? menuSectionId)
         {
-             await SetMenuSectionMenuZoneAsyncWithHttpInfo(menuZoneId, menuSectionId, menuId);
+             await SetMenuSectionMenuZoneAsyncWithHttpInfo(menuId, menuZoneId, menuSectionId);
 
         }
 
@@ -1752,21 +1752,21 @@ namespace Flipdish.Api
         /// Assigns a zone to a menu section. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The menu id.</param>
         /// <param name="menuSectionId">The menu section id.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetMenuSectionMenuZoneAsyncWithHttpInfo (int? menuZoneId, int? menuSectionId, string menuId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetMenuSectionMenuZoneAsyncWithHttpInfo (int? menuId, int? menuZoneId, int? menuSectionId)
         {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->SetMenuSectionMenuZone");
             // verify the required parameter 'menuZoneId' is set
             if (menuZoneId == null)
                 throw new ApiException(400, "Missing required parameter 'menuZoneId' when calling MenuZonesApi->SetMenuSectionMenuZone");
             // verify the required parameter 'menuSectionId' is set
             if (menuSectionId == null)
                 throw new ApiException(400, "Missing required parameter 'menuSectionId' when calling MenuZonesApi->SetMenuSectionMenuZone");
-            // verify the required parameter 'menuId' is set
-            if (menuId == null)
-                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->SetMenuSectionMenuZone");
 
             var localVarPath = "./api/v1.0/menus/{menuId}/zones/{menuZoneId}/section/{menuSectionId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1792,9 +1792,9 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
             if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
             if (menuSectionId != null) localVarPathParams.Add("menuSectionId", this.Configuration.ApiClient.ParameterToString(menuSectionId)); // path parameter
-            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1825,34 +1825,34 @@ namespace Flipdish.Api
         /// Sets the description of a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="description">The new description. Add as a raw string in the request, without any JSON wrapper.</param>
-        /// <param name="menuId"></param>
         /// <returns></returns>
-        public void SetMenuZoneDescription (int? menuZoneId, string description, string menuId)
+        public void SetMenuZoneDescription (int? menuId, int? menuZoneId, string description)
         {
-             SetMenuZoneDescriptionWithHttpInfo(menuZoneId, description, menuId);
+             SetMenuZoneDescriptionWithHttpInfo(menuId, menuZoneId, description);
         }
 
         /// <summary>
         /// Sets the description of a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="description">The new description. Add as a raw string in the request, without any JSON wrapper.</param>
-        /// <param name="menuId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> SetMenuZoneDescriptionWithHttpInfo (int? menuZoneId, string description, string menuId)
+        public ApiResponse<Object> SetMenuZoneDescriptionWithHttpInfo (int? menuId, int? menuZoneId, string description)
         {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->SetMenuZoneDescription");
             // verify the required parameter 'menuZoneId' is set
             if (menuZoneId == null)
                 throw new ApiException(400, "Missing required parameter 'menuZoneId' when calling MenuZonesApi->SetMenuZoneDescription");
             // verify the required parameter 'description' is set
             if (description == null)
                 throw new ApiException(400, "Missing required parameter 'description' when calling MenuZonesApi->SetMenuZoneDescription");
-            // verify the required parameter 'menuId' is set
-            if (menuId == null)
-                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->SetMenuZoneDescription");
 
             var localVarPath = "./api/v1.0/menus/{menuId}/zones/{menuZoneId}/description";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1883,8 +1883,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
             if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
             if (description != null && description.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(description); // http body (model) parameter
@@ -1923,13 +1923,13 @@ namespace Flipdish.Api
         /// Sets the description of a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="description">The new description. Add as a raw string in the request, without any JSON wrapper.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task SetMenuZoneDescriptionAsync (int? menuZoneId, string description, string menuId)
+        public async System.Threading.Tasks.Task SetMenuZoneDescriptionAsync (int? menuId, int? menuZoneId, string description)
         {
-             await SetMenuZoneDescriptionAsyncWithHttpInfo(menuZoneId, description, menuId);
+             await SetMenuZoneDescriptionAsyncWithHttpInfo(menuId, menuZoneId, description);
 
         }
 
@@ -1937,21 +1937,21 @@ namespace Flipdish.Api
         /// Sets the description of a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="description">The new description. Add as a raw string in the request, without any JSON wrapper.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetMenuZoneDescriptionAsyncWithHttpInfo (int? menuZoneId, string description, string menuId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetMenuZoneDescriptionAsyncWithHttpInfo (int? menuId, int? menuZoneId, string description)
         {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->SetMenuZoneDescription");
             // verify the required parameter 'menuZoneId' is set
             if (menuZoneId == null)
                 throw new ApiException(400, "Missing required parameter 'menuZoneId' when calling MenuZonesApi->SetMenuZoneDescription");
             // verify the required parameter 'description' is set
             if (description == null)
                 throw new ApiException(400, "Missing required parameter 'description' when calling MenuZonesApi->SetMenuZoneDescription");
-            // verify the required parameter 'menuId' is set
-            if (menuId == null)
-                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->SetMenuZoneDescription");
 
             var localVarPath = "./api/v1.0/menus/{menuId}/zones/{menuZoneId}/description";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1982,8 +1982,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
             if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
             if (description != null && description.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(description); // http body (model) parameter
@@ -2022,34 +2022,34 @@ namespace Flipdish.Api
         /// Sets the name of a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuZoneName">The new name.</param>
-        /// <param name="menuId"></param>
         /// <returns></returns>
-        public void SetMenuZoneName (int? menuZoneId, string menuZoneName, string menuId)
+        public void SetMenuZoneName (int? menuId, int? menuZoneId, string menuZoneName)
         {
-             SetMenuZoneNameWithHttpInfo(menuZoneId, menuZoneName, menuId);
+             SetMenuZoneNameWithHttpInfo(menuId, menuZoneId, menuZoneName);
         }
 
         /// <summary>
         /// Sets the name of a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuZoneName">The new name.</param>
-        /// <param name="menuId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> SetMenuZoneNameWithHttpInfo (int? menuZoneId, string menuZoneName, string menuId)
+        public ApiResponse<Object> SetMenuZoneNameWithHttpInfo (int? menuId, int? menuZoneId, string menuZoneName)
         {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->SetMenuZoneName");
             // verify the required parameter 'menuZoneId' is set
             if (menuZoneId == null)
                 throw new ApiException(400, "Missing required parameter 'menuZoneId' when calling MenuZonesApi->SetMenuZoneName");
             // verify the required parameter 'menuZoneName' is set
             if (menuZoneName == null)
                 throw new ApiException(400, "Missing required parameter 'menuZoneName' when calling MenuZonesApi->SetMenuZoneName");
-            // verify the required parameter 'menuId' is set
-            if (menuId == null)
-                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->SetMenuZoneName");
 
             var localVarPath = "./api/v1.0/menus/{menuId}/zones/{menuZoneId}/name/{menuZoneName}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2075,9 +2075,9 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
             if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
             if (menuZoneName != null) localVarPathParams.Add("menuZoneName", this.Configuration.ApiClient.ParameterToString(menuZoneName)); // path parameter
-            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -2108,13 +2108,13 @@ namespace Flipdish.Api
         /// Sets the name of a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuZoneName">The new name.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task SetMenuZoneNameAsync (int? menuZoneId, string menuZoneName, string menuId)
+        public async System.Threading.Tasks.Task SetMenuZoneNameAsync (int? menuId, int? menuZoneId, string menuZoneName)
         {
-             await SetMenuZoneNameAsyncWithHttpInfo(menuZoneId, menuZoneName, menuId);
+             await SetMenuZoneNameAsyncWithHttpInfo(menuId, menuZoneId, menuZoneName);
 
         }
 
@@ -2122,21 +2122,21 @@ namespace Flipdish.Api
         /// Sets the name of a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuZoneName">The new name.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetMenuZoneNameAsyncWithHttpInfo (int? menuZoneId, string menuZoneName, string menuId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetMenuZoneNameAsyncWithHttpInfo (int? menuId, int? menuZoneId, string menuZoneName)
         {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->SetMenuZoneName");
             // verify the required parameter 'menuZoneId' is set
             if (menuZoneId == null)
                 throw new ApiException(400, "Missing required parameter 'menuZoneId' when calling MenuZonesApi->SetMenuZoneName");
             // verify the required parameter 'menuZoneName' is set
             if (menuZoneName == null)
                 throw new ApiException(400, "Missing required parameter 'menuZoneName' when calling MenuZonesApi->SetMenuZoneName");
-            // verify the required parameter 'menuId' is set
-            if (menuId == null)
-                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->SetMenuZoneName");
 
             var localVarPath = "./api/v1.0/menus/{menuId}/zones/{menuZoneId}/name/{menuZoneName}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2162,9 +2162,9 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
             if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
             if (menuZoneName != null) localVarPathParams.Add("menuZoneName", this.Configuration.ApiClient.ParameterToString(menuZoneName)); // path parameter
-            if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -2392,34 +2392,34 @@ namespace Flipdish.Api
         /// Uploads an image for a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="_file">The file to upload.</param>
-        /// <param name="menuId"></param>
         /// <returns></returns>
-        public void UploadMenuZoneImage (int? menuZoneId, List<HttpPostedFileBase> _file, string menuId)
+        public void UploadMenuZoneImage (int? menuId, int? menuZoneId, List<HttpPostedFileBase> _file)
         {
-             UploadMenuZoneImageWithHttpInfo(menuZoneId, _file, menuId);
+             UploadMenuZoneImageWithHttpInfo(menuId, menuZoneId, _file);
         }
 
         /// <summary>
         /// Uploads an image for a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="_file">The file to upload.</param>
-        /// <param name="menuId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UploadMenuZoneImageWithHttpInfo (int? menuZoneId, List<HttpPostedFileBase> _file, string menuId)
+        public ApiResponse<Object> UploadMenuZoneImageWithHttpInfo (int? menuId, int? menuZoneId, List<HttpPostedFileBase> _file)
         {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->UploadMenuZoneImage");
             // verify the required parameter 'menuZoneId' is set
             if (menuZoneId == null)
                 throw new ApiException(400, "Missing required parameter 'menuZoneId' when calling MenuZonesApi->UploadMenuZoneImage");
             // verify the required parameter '_file' is set
             if (_file == null)
                 throw new ApiException(400, "Missing required parameter '_file' when calling MenuZonesApi->UploadMenuZoneImage");
-            // verify the required parameter 'menuId' is set
-            if (menuId == null)
-                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->UploadMenuZoneImage");
 
             var localVarPath = "./api/v1.0/menus/{menuId}/zones/{menuZoneId}/image";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2450,8 +2450,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
             if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
             if (_file != null && _file.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(_file); // http body (model) parameter
@@ -2490,13 +2490,13 @@ namespace Flipdish.Api
         /// Uploads an image for a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="_file">The file to upload.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UploadMenuZoneImageAsync (int? menuZoneId, List<HttpPostedFileBase> _file, string menuId)
+        public async System.Threading.Tasks.Task UploadMenuZoneImageAsync (int? menuId, int? menuZoneId, List<HttpPostedFileBase> _file)
         {
-             await UploadMenuZoneImageAsyncWithHttpInfo(menuZoneId, _file, menuId);
+             await UploadMenuZoneImageAsyncWithHttpInfo(menuId, menuZoneId, _file);
 
         }
 
@@ -2504,21 +2504,21 @@ namespace Flipdish.Api
         /// Uploads an image for a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="_file">The file to upload.</param>
-        /// <param name="menuId"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UploadMenuZoneImageAsyncWithHttpInfo (int? menuZoneId, List<HttpPostedFileBase> _file, string menuId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UploadMenuZoneImageAsyncWithHttpInfo (int? menuId, int? menuZoneId, List<HttpPostedFileBase> _file)
         {
+            // verify the required parameter 'menuId' is set
+            if (menuId == null)
+                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->UploadMenuZoneImage");
             // verify the required parameter 'menuZoneId' is set
             if (menuZoneId == null)
                 throw new ApiException(400, "Missing required parameter 'menuZoneId' when calling MenuZonesApi->UploadMenuZoneImage");
             // verify the required parameter '_file' is set
             if (_file == null)
                 throw new ApiException(400, "Missing required parameter '_file' when calling MenuZonesApi->UploadMenuZoneImage");
-            // verify the required parameter 'menuId' is set
-            if (menuId == null)
-                throw new ApiException(400, "Missing required parameter 'menuId' when calling MenuZonesApi->UploadMenuZoneImage");
 
             var localVarPath = "./api/v1.0/menus/{menuId}/zones/{menuZoneId}/image";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2549,8 +2549,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
             if (menuId != null) localVarPathParams.Add("menuId", this.Configuration.ApiClient.ParameterToString(menuId)); // path parameter
+            if (menuZoneId != null) localVarPathParams.Add("menuZoneId", this.Configuration.ApiClient.ParameterToString(menuZoneId)); // path parameter
             if (_file != null && _file.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(_file); // http body (model) parameter
