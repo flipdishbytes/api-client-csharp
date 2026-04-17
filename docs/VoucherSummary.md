@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **Description** | **string** | Voucher Description (Visible on printout) | [optional] 
 **IsEnabled** | **bool?** | Is voucher enabled | [optional] 
 **StoreNames** | **List&lt;string&gt;** | Store names associated with this voucher | [optional] 
+**IsAvailableOnAllStores** | **bool?** | True if the voucher is available on all active stores in the app | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

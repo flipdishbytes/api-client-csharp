@@ -186,7 +186,8 @@ namespace Flipdish.Model
         /// <param name="description">Voucher Description (Visible on printout).</param>
         /// <param name="isEnabled">Is voucher enabled.</param>
         /// <param name="storeNames">Store names associated with this voucher.</param>
-        public VoucherSummary(int? voucherId = default(int?), string code = default(string), StatusEnum? status = default(StatusEnum?), VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), string description = default(string), bool? isEnabled = default(bool?), List<string> storeNames = default(List<string>))
+        /// <param name="isAvailableOnAllStores">True if the voucher is available on all active stores in the app.</param>
+        public VoucherSummary(int? voucherId = default(int?), string code = default(string), StatusEnum? status = default(StatusEnum?), VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), string description = default(string), bool? isEnabled = default(bool?), List<string> storeNames = default(List<string>), bool? isAvailableOnAllStores = default(bool?))
         {
             this.VoucherId = voucherId;
             this.Code = code;
@@ -196,6 +197,7 @@ namespace Flipdish.Model
             this.Description = description;
             this.IsEnabled = isEnabled;
             this.StoreNames = storeNames;
+            this.IsAvailableOnAllStores = isAvailableOnAllStores;
         }
         
         /// <summary>
@@ -237,6 +239,13 @@ namespace Flipdish.Model
         public List<string> StoreNames { get; set; }
 
         /// <summary>
+        /// True if the voucher is available on all active stores in the app
+        /// </summary>
+        /// <value>True if the voucher is available on all active stores in the app</value>
+        [DataMember(Name="IsAvailableOnAllStores", EmitDefaultValue=false)]
+        public bool? IsAvailableOnAllStores { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -252,6 +261,7 @@ namespace Flipdish.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
             sb.Append("  StoreNames: ").Append(StoreNames).Append("\n");
+            sb.Append("  IsAvailableOnAllStores: ").Append(IsAvailableOnAllStores).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -325,6 +335,11 @@ namespace Flipdish.Model
                     this.StoreNames == input.StoreNames ||
                     this.StoreNames != null &&
                     this.StoreNames.SequenceEqual(input.StoreNames)
+                ) && 
+                (
+                    this.IsAvailableOnAllStores == input.IsAvailableOnAllStores ||
+                    (this.IsAvailableOnAllStores != null &&
+                    this.IsAvailableOnAllStores.Equals(input.IsAvailableOnAllStores))
                 );
         }
 
@@ -353,6 +368,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.IsEnabled.GetHashCode();
                 if (this.StoreNames != null)
                     hashCode = hashCode * 59 + this.StoreNames.GetHashCode();
+                if (this.IsAvailableOnAllStores != null)
+                    hashCode = hashCode * 59 + this.IsAvailableOnAllStores.GetHashCode();
                 return hashCode;
             }
         }
