@@ -105,7 +105,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuZonesApi();
-            var menuId = 56;  // int? | 
+            var menuId = 56;  // int? | Menu id.
             var menuZoneId = 56;  // int? | The menu zone id.
 
             try
@@ -126,7 +126,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
+ **menuId** | **int?**| Menu id. | 
  **menuZoneId** | **int?**| The menu zone id. | 
 
 ### Return type
@@ -168,7 +168,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuZonesApi();
-            var menuId = 56;  // int? | 
+            var menuId = 56;  // int? | Menu id.
             var menuZoneId = 56;  // int? | The zone Id/
 
             try
@@ -189,7 +189,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
+ **menuId** | **int?**| Menu id. | 
  **menuZoneId** | **int?**| The zone Id/ | 
 
 ### Return type
@@ -422,7 +422,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuZonesApi();
-            var menuId = 56;  // int? | 
+            var menuId = 56;  // int? | Menu id.
             var menuZoneId = 56;  // int? | The menu id.
             var menuSectionId = 56;  // int? | The menu section id.
 
@@ -444,7 +444,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
+ **menuId** | **int?**| Menu id. | 
  **menuZoneId** | **int?**| The menu id. | 
  **menuSectionId** | **int?**| The menu section id. | 
 
@@ -487,7 +487,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuZonesApi();
-            var menuId = 56;  // int? | 
+            var menuId = 56;  // int? | Menu id.
             var menuZoneId = 56;  // int? | The zone id.
             var description = description_example;  // string | The new description. Add as a raw string in the request, without any JSON wrapper.
 
@@ -509,7 +509,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
+ **menuId** | **int?**| Menu id. | 
  **menuZoneId** | **int?**| The zone id. | 
  **description** | **string**| The new description. Add as a raw string in the request, without any JSON wrapper. | 
 
@@ -552,7 +552,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuZonesApi();
-            var menuId = 56;  // int? | 
+            var menuId = 56;  // int? | Menu id.
             var menuZoneId = 56;  // int? | The menu zone id.
             var menuZoneName = menuZoneName_example;  // string | The new name.
 
@@ -574,7 +574,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
+ **menuId** | **int?**| Menu id. | 
  **menuZoneId** | **int?**| The menu zone id. | 
  **menuZoneName** | **string**| The new name. | 
 
@@ -682,7 +682,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuZonesApi();
-            var menuId = 56;  // int? | 
+            var menuId = 56;  // int? | Menu id.
             var menuZoneId = 56;  // int? | The zone id.
             var _file = new List<HttpPostedFileBase>(); // List<HttpPostedFileBase> | The file to upload.
 
@@ -704,7 +704,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
+ **menuId** | **int?**| Menu id. | 
  **menuZoneId** | **int?**| The zone id. | 
  **_file** | [**List&lt;HttpPostedFileBase&gt;**](HttpPostedFileBase.md)| The file to upload. | 
 

@@ -54,7 +54,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <returns></returns>
         void DeleteMenuZone (int? menuId, int? menuZoneId);
@@ -66,7 +66,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteMenuZoneWithHttpInfo (int? menuId, int? menuZoneId);
@@ -77,7 +77,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone Id/</param>
         /// <returns></returns>
         void DeleteMenuZoneImage (int? menuId, int? menuZoneId);
@@ -89,7 +89,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone Id/</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteMenuZoneImageWithHttpInfo (int? menuId, int? menuZoneId);
@@ -169,7 +169,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu id.</param>
         /// <param name="menuSectionId">The menu section id.</param>
         /// <returns></returns>
@@ -182,7 +182,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu id.</param>
         /// <param name="menuSectionId">The menu section id.</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -194,7 +194,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="description">The new description. Add as a raw string in the request, without any JSON wrapper.</param>
         /// <returns></returns>
@@ -207,7 +207,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="description">The new description. Add as a raw string in the request, without any JSON wrapper.</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -219,7 +219,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuZoneName">The new name.</param>
         /// <returns></returns>
@@ -232,7 +232,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuZoneName">The new name.</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -269,7 +269,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="_file">The file to upload.</param>
         /// <returns></returns>
@@ -282,7 +282,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="_file">The file to upload.</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -319,7 +319,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteMenuZoneAsync (int? menuId, int? menuZoneId);
@@ -331,7 +331,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuZoneAsyncWithHttpInfo (int? menuId, int? menuZoneId);
@@ -342,7 +342,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone Id/</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteMenuZoneImageAsync (int? menuId, int? menuZoneId);
@@ -354,7 +354,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone Id/</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuZoneImageAsyncWithHttpInfo (int? menuId, int? menuZoneId);
@@ -434,7 +434,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu id.</param>
         /// <param name="menuSectionId">The menu section id.</param>
         /// <returns>Task of void</returns>
@@ -447,7 +447,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu id.</param>
         /// <param name="menuSectionId">The menu section id.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -459,7 +459,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="description">The new description. Add as a raw string in the request, without any JSON wrapper.</param>
         /// <returns>Task of void</returns>
@@ -472,7 +472,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="description">The new description. Add as a raw string in the request, without any JSON wrapper.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -484,7 +484,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuZoneName">The new name.</param>
         /// <returns>Task of void</returns>
@@ -497,7 +497,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuZoneName">The new name.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -534,7 +534,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="_file">The file to upload.</param>
         /// <returns>Task of void</returns>
@@ -547,7 +547,7 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="_file">The file to upload.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -843,7 +843,7 @@ namespace Flipdish.Api
         /// Deletes a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <returns></returns>
         public void DeleteMenuZone (int? menuId, int? menuZoneId)
@@ -855,7 +855,7 @@ namespace Flipdish.Api
         /// Deletes a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteMenuZoneWithHttpInfo (int? menuId, int? menuZoneId)
@@ -923,7 +923,7 @@ namespace Flipdish.Api
         /// Deletes a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteMenuZoneAsync (int? menuId, int? menuZoneId)
@@ -936,7 +936,7 @@ namespace Flipdish.Api
         /// Deletes a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuZoneAsyncWithHttpInfo (int? menuId, int? menuZoneId)
@@ -1004,7 +1004,7 @@ namespace Flipdish.Api
         /// Deletes a menu zone image. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone Id/</param>
         /// <returns></returns>
         public void DeleteMenuZoneImage (int? menuId, int? menuZoneId)
@@ -1016,7 +1016,7 @@ namespace Flipdish.Api
         /// Deletes a menu zone image. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone Id/</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteMenuZoneImageWithHttpInfo (int? menuId, int? menuZoneId)
@@ -1084,7 +1084,7 @@ namespace Flipdish.Api
         /// Deletes a menu zone image. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone Id/</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteMenuZoneImageAsync (int? menuId, int? menuZoneId)
@@ -1097,7 +1097,7 @@ namespace Flipdish.Api
         /// Deletes a menu zone image. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone Id/</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuZoneImageAsyncWithHttpInfo (int? menuId, int? menuZoneId)
@@ -1652,7 +1652,7 @@ namespace Flipdish.Api
         /// Assigns a zone to a menu section. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu id.</param>
         /// <param name="menuSectionId">The menu section id.</param>
         /// <returns></returns>
@@ -1665,7 +1665,7 @@ namespace Flipdish.Api
         /// Assigns a zone to a menu section. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu id.</param>
         /// <param name="menuSectionId">The menu section id.</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1738,7 +1738,7 @@ namespace Flipdish.Api
         /// Assigns a zone to a menu section. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu id.</param>
         /// <param name="menuSectionId">The menu section id.</param>
         /// <returns>Task of void</returns>
@@ -1752,7 +1752,7 @@ namespace Flipdish.Api
         /// Assigns a zone to a menu section. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu id.</param>
         /// <param name="menuSectionId">The menu section id.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1825,7 +1825,7 @@ namespace Flipdish.Api
         /// Sets the description of a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="description">The new description. Add as a raw string in the request, without any JSON wrapper.</param>
         /// <returns></returns>
@@ -1838,7 +1838,7 @@ namespace Flipdish.Api
         /// Sets the description of a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="description">The new description. Add as a raw string in the request, without any JSON wrapper.</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1923,7 +1923,7 @@ namespace Flipdish.Api
         /// Sets the description of a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="description">The new description. Add as a raw string in the request, without any JSON wrapper.</param>
         /// <returns>Task of void</returns>
@@ -1937,7 +1937,7 @@ namespace Flipdish.Api
         /// Sets the description of a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="description">The new description. Add as a raw string in the request, without any JSON wrapper.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2022,7 +2022,7 @@ namespace Flipdish.Api
         /// Sets the name of a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuZoneName">The new name.</param>
         /// <returns></returns>
@@ -2035,7 +2035,7 @@ namespace Flipdish.Api
         /// Sets the name of a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuZoneName">The new name.</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2108,7 +2108,7 @@ namespace Flipdish.Api
         /// Sets the name of a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuZoneName">The new name.</param>
         /// <returns>Task of void</returns>
@@ -2122,7 +2122,7 @@ namespace Flipdish.Api
         /// Sets the name of a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The menu zone id.</param>
         /// <param name="menuZoneName">The new name.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2392,7 +2392,7 @@ namespace Flipdish.Api
         /// Uploads an image for a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="_file">The file to upload.</param>
         /// <returns></returns>
@@ -2405,7 +2405,7 @@ namespace Flipdish.Api
         /// Uploads an image for a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="_file">The file to upload.</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2490,7 +2490,7 @@ namespace Flipdish.Api
         /// Uploads an image for a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="_file">The file to upload.</param>
         /// <returns>Task of void</returns>
@@ -2504,7 +2504,7 @@ namespace Flipdish.Api
         /// Uploads an image for a menu zone. 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId"></param>
+        /// <param name="menuId">Menu id.</param>
         /// <param name="menuZoneId">The zone id.</param>
         /// <param name="_file">The file to upload.</param>
         /// <returns>Task of ApiResponse</returns>
