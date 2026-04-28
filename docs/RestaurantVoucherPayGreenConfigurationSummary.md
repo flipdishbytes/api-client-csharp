@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** |  | [optional] 
-**PayGreenConfigurationId** | **int?** |  | [optional] 
+**Name** | **string** | Name. | [optional] 
+**PayGreenConfigurationId** | **int?** | PayGreenConfigurationId. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

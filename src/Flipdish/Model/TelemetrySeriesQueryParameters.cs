@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// TelemetrySeriesQueryParameters
+    /// TelemetrySeriesQueryParameters.
     /// </summary>
     [DataContract]
     public partial class TelemetrySeriesQueryParameters :  IEquatable<TelemetrySeriesQueryParameters>
@@ -31,10 +31,10 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TelemetrySeriesQueryParameters" /> class.
         /// </summary>
-        /// <param name="kioskId">kioskId.</param>
-        /// <param name="variables">variables.</param>
-        /// <param name="startDate">startDate.</param>
-        /// <param name="endDate">endDate.</param>
+        /// <param name="kioskId">KioskId..</param>
+        /// <param name="variables">Variables..</param>
+        /// <param name="startDate">StartDate..</param>
+        /// <param name="endDate">EndDate..</param>
         public TelemetrySeriesQueryParameters(string kioskId = default(string), List<string> variables = default(List<string>), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?))
         {
             this.KioskId = kioskId;
@@ -44,26 +44,30 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets KioskId
+        /// KioskId.
         /// </summary>
+        /// <value>KioskId.</value>
         [DataMember(Name="KioskId", EmitDefaultValue=false)]
         public string KioskId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Variables
+        /// Variables.
         /// </summary>
+        /// <value>Variables.</value>
         [DataMember(Name="Variables", EmitDefaultValue=false)]
         public List<string> Variables { get; set; }
 
         /// <summary>
-        /// Gets or Sets StartDate
+        /// StartDate.
         /// </summary>
+        /// <value>StartDate.</value>
         [DataMember(Name="StartDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets EndDate
+        /// EndDate.
         /// </summary>
+        /// <value>EndDate.</value>
         [DataMember(Name="EndDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; set; }
 

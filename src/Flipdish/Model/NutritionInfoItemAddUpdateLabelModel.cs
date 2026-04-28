@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// NutritionInfoItemAddUpdateLabelModel
+    /// NutritionInfoItemAddUpdateLabelModel.
     /// </summary>
     [DataContract]
     public partial class NutritionInfoItemAddUpdateLabelModel :  IEquatable<NutritionInfoItemAddUpdateLabelModel>
@@ -31,9 +31,9 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NutritionInfoItemAddUpdateLabelModel" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="values">values.</param>
-        /// <param name="iconUrl">iconUrl.</param>
+        /// <param name="name">Name..</param>
+        /// <param name="values">Values..</param>
+        /// <param name="iconUrl">IconUrl..</param>
         public NutritionInfoItemAddUpdateLabelModel(string name = default(string), List<string> values = default(List<string>), string iconUrl = default(string))
         {
             this.Name = name;
@@ -42,20 +42,23 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Name.
         /// </summary>
+        /// <value>Name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Values
+        /// Values.
         /// </summary>
+        /// <value>Values.</value>
         [DataMember(Name="Values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
 
         /// <summary>
-        /// Gets or Sets IconUrl
+        /// IconUrl.
         /// </summary>
+        /// <value>IconUrl.</value>
         [DataMember(Name="IconUrl", EmitDefaultValue=false)]
         public string IconUrl { get; set; }
 

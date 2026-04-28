@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// UpdatePayGreenConfigurationRequest
+    /// UpdatePayGreenConfigurationRequest.
     /// </summary>
     [DataContract]
     public partial class UpdatePayGreenConfigurationRequest :  IEquatable<UpdatePayGreenConfigurationRequest>
@@ -31,8 +31,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdatePayGreenConfigurationRequest" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="assignedStores">assignedStores.</param>
+        /// <param name="name">Name..</param>
+        /// <param name="assignedStores">AssignedStores..</param>
         public UpdatePayGreenConfigurationRequest(string name = default(string), List<int?> assignedStores = default(List<int?>))
         {
             this.Name = name;
@@ -40,14 +40,16 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Name.
         /// </summary>
+        /// <value>Name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets AssignedStores
+        /// AssignedStores.
         /// </summary>
+        /// <value>AssignedStores.</value>
         [DataMember(Name="AssignedStores", EmitDefaultValue=false)]
         public List<int?> AssignedStores { get; set; }
 

@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// MenuZone
+    /// MenuZone.
     /// </summary>
     [DataContract]
     public partial class MenuZone :  IEquatable<MenuZone>
@@ -31,13 +31,13 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MenuZone" /> class.
         /// </summary>
-        /// <param name="menuZoneId">menuZoneId.</param>
-        /// <param name="menuId">menuId.</param>
-        /// <param name="name">name.</param>
-        /// <param name="description">description.</param>
-        /// <param name="imageName">imageName.</param>
-        /// <param name="displayOrder">displayOrder.</param>
-        /// <param name="imageUrl">imageUrl.</param>
+        /// <param name="menuZoneId">MenuZoneId..</param>
+        /// <param name="menuId">MenuId..</param>
+        /// <param name="name">Name..</param>
+        /// <param name="description">Description..</param>
+        /// <param name="imageName">ImageName..</param>
+        /// <param name="displayOrder">DisplayOrder..</param>
+        /// <param name="imageUrl">ImageUrl..</param>
         public MenuZone(int? menuZoneId = default(int?), int? menuId = default(int?), string name = default(string), string description = default(string), string imageName = default(string), int? displayOrder = default(int?), string imageUrl = default(string))
         {
             this.MenuZoneId = menuZoneId;
@@ -50,44 +50,51 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets MenuZoneId
+        /// MenuZoneId.
         /// </summary>
+        /// <value>MenuZoneId.</value>
         [DataMember(Name="MenuZoneId", EmitDefaultValue=false)]
         public int? MenuZoneId { get; set; }
 
         /// <summary>
-        /// Gets or Sets MenuId
+        /// MenuId.
         /// </summary>
+        /// <value>MenuId.</value>
         [DataMember(Name="MenuId", EmitDefaultValue=false)]
         public int? MenuId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Name.
         /// </summary>
+        /// <value>Name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        /// Description.
         /// </summary>
+        /// <value>Description.</value>
         [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets ImageName
+        /// ImageName.
         /// </summary>
+        /// <value>ImageName.</value>
         [DataMember(Name="ImageName", EmitDefaultValue=false)]
         public string ImageName { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayOrder
+        /// DisplayOrder.
         /// </summary>
+        /// <value>DisplayOrder.</value>
         [DataMember(Name="DisplayOrder", EmitDefaultValue=false)]
         public int? DisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or Sets ImageUrl
+        /// ImageUrl.
         /// </summary>
+        /// <value>ImageUrl.</value>
         [DataMember(Name="ImageUrl", EmitDefaultValue=false)]
         public string ImageUrl { get; set; }
 

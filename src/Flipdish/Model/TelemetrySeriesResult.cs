@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// TelemetrySeriesResult
+    /// TelemetrySeriesResult.
     /// </summary>
     [DataContract]
     public partial class TelemetrySeriesResult :  IEquatable<TelemetrySeriesResult>
@@ -31,8 +31,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TelemetrySeriesResult" /> class.
         /// </summary>
-        /// <param name="timestamps">timestamps.</param>
-        /// <param name="properties">properties.</param>
+        /// <param name="timestamps">Timestamps..</param>
+        /// <param name="properties">Properties..</param>
         public TelemetrySeriesResult(List<DateTime?> timestamps = default(List<DateTime?>), List<TelemetrySeriesProperty> properties = default(List<TelemetrySeriesProperty>))
         {
             this.Timestamps = timestamps;
@@ -40,14 +40,16 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Timestamps
+        /// Timestamps.
         /// </summary>
+        /// <value>Timestamps.</value>
         [DataMember(Name="Timestamps", EmitDefaultValue=false)]
         public List<DateTime?> Timestamps { get; set; }
 
         /// <summary>
-        /// Gets or Sets Properties
+        /// Properties.
         /// </summary>
+        /// <value>Properties.</value>
         [DataMember(Name="Properties", EmitDefaultValue=false)]
         public List<TelemetrySeriesProperty> Properties { get; set; }
 

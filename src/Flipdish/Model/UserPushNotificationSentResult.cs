@@ -31,15 +31,16 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserPushNotificationSentResult" /> class.
         /// </summary>
-        /// <param name="tokenCount">tokenCount.</param>
+        /// <param name="tokenCount">TokenCount..</param>
         public UserPushNotificationSentResult(int? tokenCount = default(int?))
         {
             this.TokenCount = tokenCount;
         }
         
         /// <summary>
-        /// Gets or Sets TokenCount
+        /// TokenCount.
         /// </summary>
+        /// <value>TokenCount.</value>
         [DataMember(Name="TokenCount", EmitDefaultValue=false)]
         public int? TokenCount { get; set; }
 

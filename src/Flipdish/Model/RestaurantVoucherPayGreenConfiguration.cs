@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// RestaurantVoucherPayGreenConfiguration
+    /// RestaurantVoucherPayGreenConfiguration.
     /// </summary>
     [DataContract]
     public partial class RestaurantVoucherPayGreenConfiguration :  IEquatable<RestaurantVoucherPayGreenConfiguration>
@@ -31,10 +31,10 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestaurantVoucherPayGreenConfiguration" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="payGreenId">payGreenId.</param>
-        /// <param name="payGreenConfigurationId">payGreenConfigurationId.</param>
-        /// <param name="assignedStores">assignedStores.</param>
+        /// <param name="name">Name..</param>
+        /// <param name="payGreenId">PayGreenId..</param>
+        /// <param name="payGreenConfigurationId">PayGreenConfigurationId..</param>
+        /// <param name="assignedStores">AssignedStores..</param>
         public RestaurantVoucherPayGreenConfiguration(string name = default(string), string payGreenId = default(string), int? payGreenConfigurationId = default(int?), List<RestaurantVoucherAssignedStore> assignedStores = default(List<RestaurantVoucherAssignedStore>))
         {
             this.Name = name;
@@ -44,26 +44,30 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Name.
         /// </summary>
+        /// <value>Name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets PayGreenId
+        /// PayGreenId.
         /// </summary>
+        /// <value>PayGreenId.</value>
         [DataMember(Name="PayGreenId", EmitDefaultValue=false)]
         public string PayGreenId { get; set; }
 
         /// <summary>
-        /// Gets or Sets PayGreenConfigurationId
+        /// PayGreenConfigurationId.
         /// </summary>
+        /// <value>PayGreenConfigurationId.</value>
         [DataMember(Name="PayGreenConfigurationId", EmitDefaultValue=false)]
         public int? PayGreenConfigurationId { get; set; }
 
         /// <summary>
-        /// Gets or Sets AssignedStores
+        /// AssignedStores.
         /// </summary>
+        /// <value>AssignedStores.</value>
         [DataMember(Name="AssignedStores", EmitDefaultValue=false)]
         public List<RestaurantVoucherAssignedStore> AssignedStores { get; set; }
 

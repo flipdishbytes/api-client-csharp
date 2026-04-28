@@ -23,14 +23,15 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// SmsProviderCredential
+    /// SmsProviderCredential.
     /// </summary>
     [DataContract]
     public partial class SmsProviderCredential :  IEquatable<SmsProviderCredential>
     {
         /// <summary>
-        /// Defines SmsServiceType
+        /// SmsServiceType.
         /// </summary>
+        /// <value>SmsServiceType.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SmsServiceTypeEnum
         {
@@ -61,19 +62,20 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets SmsServiceType
+        /// SmsServiceType.
         /// </summary>
+        /// <value>SmsServiceType.</value>
         [DataMember(Name="SmsServiceType", EmitDefaultValue=false)]
         public SmsServiceTypeEnum? SmsServiceType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsProviderCredential" /> class.
         /// </summary>
-        /// <param name="orgId">orgId.</param>
-        /// <param name="brandId">brandId.</param>
-        /// <param name="smsServiceType">smsServiceType.</param>
-        /// <param name="senderId">senderId.</param>
-        /// <param name="username">username.</param>
-        /// <param name="authToken">authToken.</param>
+        /// <param name="orgId">OrgId..</param>
+        /// <param name="brandId">BrandId..</param>
+        /// <param name="smsServiceType">SmsServiceType..</param>
+        /// <param name="senderId">SenderId..</param>
+        /// <param name="username">Username..</param>
+        /// <param name="authToken">AuthToken..</param>
         public SmsProviderCredential(string orgId = default(string), string brandId = default(string), SmsServiceTypeEnum? smsServiceType = default(SmsServiceTypeEnum?), string senderId = default(string), string username = default(string), string authToken = default(string))
         {
             this.OrgId = orgId;
@@ -85,33 +87,38 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets OrgId
+        /// OrgId.
         /// </summary>
+        /// <value>OrgId.</value>
         [DataMember(Name="OrgId", EmitDefaultValue=false)]
         public string OrgId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BrandId
+        /// BrandId.
         /// </summary>
+        /// <value>BrandId.</value>
         [DataMember(Name="BrandId", EmitDefaultValue=false)]
         public string BrandId { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets SenderId
+        /// SenderId.
         /// </summary>
+        /// <value>SenderId.</value>
         [DataMember(Name="SenderId", EmitDefaultValue=false)]
         public string SenderId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Username
+        /// Username.
         /// </summary>
+        /// <value>Username.</value>
         [DataMember(Name="Username", EmitDefaultValue=false)]
         public string Username { get; set; }
 
         /// <summary>
-        /// Gets or Sets AuthToken
+        /// AuthToken.
         /// </summary>
+        /// <value>AuthToken.</value>
         [DataMember(Name="AuthToken", EmitDefaultValue=false)]
         public string AuthToken { get; set; }
 

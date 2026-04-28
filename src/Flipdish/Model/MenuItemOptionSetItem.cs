@@ -76,8 +76,8 @@ namespace Flipdish.Model
         /// <param name="nextMenuItemOptionSetId">if null, next option set is next. if -1, this is the final option set.</param>
         /// <param name="catalogItemId">Catalog item Id when the OptionSet is associated to a Product.</param>
         /// <param name="taxRateName">Tax rate name.</param>
-        /// <param name="taxRateId">taxRateId.</param>
-        /// <param name="taxValue">taxValue.</param>
+        /// <param name="taxRateId">TaxRateId..</param>
+        /// <param name="taxValue">TaxValue..</param>
         /// <param name="name">Name.</param>
         /// <param name="price">Price.</param>
         /// <param name="depositReturnFee">An optional fee that can be added to the price of the item..</param>
@@ -147,14 +147,16 @@ namespace Flipdish.Model
         public string TaxRateName { get; set; }
 
         /// <summary>
-        /// Gets or Sets TaxRateId
+        /// TaxRateId.
         /// </summary>
+        /// <value>TaxRateId.</value>
         [DataMember(Name="TaxRateId", EmitDefaultValue=false)]
         public int? TaxRateId { get; set; }
 
         /// <summary>
-        /// Gets or Sets TaxValue
+        /// TaxValue.
         /// </summary>
+        /// <value>TaxValue.</value>
         [DataMember(Name="TaxValue", EmitDefaultValue=false)]
         public double? TaxValue { get; set; }
 

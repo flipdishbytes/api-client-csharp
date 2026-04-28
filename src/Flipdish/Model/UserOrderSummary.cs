@@ -31,17 +31,17 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserOrderSummary" /> class.
         /// </summary>
-        /// <param name="orderId">orderId.</param>
-        /// <param name="tsOrderPlacedUtc">tsOrderPlacedUtc.</param>
-        /// <param name="tsUpdateUtc">tsUpdateUtc.</param>
-        /// <param name="restaurantName">restaurantName.</param>
-        /// <param name="foodAmount">foodAmount.</param>
-        /// <param name="tipAmount">tipAmount.</param>
-        /// <param name="totalRestaurantAmount">totalRestaurantAmount.</param>
-        /// <param name="isoCurrency">isoCurrency.</param>
-        /// <param name="deliveryType">deliveryType.</param>
-        /// <param name="orderState">orderState.</param>
-        /// <param name="paymentAccountDescription">paymentAccountDescription.</param>
+        /// <param name="orderId">OrderId..</param>
+        /// <param name="tsOrderPlacedUtc">TsOrderPlacedUtc..</param>
+        /// <param name="tsUpdateUtc">TsUpdateUtc..</param>
+        /// <param name="restaurantName">RestaurantName..</param>
+        /// <param name="foodAmount">FoodAmount..</param>
+        /// <param name="tipAmount">TipAmount..</param>
+        /// <param name="totalRestaurantAmount">TotalRestaurantAmount..</param>
+        /// <param name="isoCurrency">IsoCurrency..</param>
+        /// <param name="deliveryType">DeliveryType..</param>
+        /// <param name="orderState">OrderState..</param>
+        /// <param name="paymentAccountDescription">PaymentAccountDescription..</param>
         public UserOrderSummary(int? orderId = default(int?), DateTime? tsOrderPlacedUtc = default(DateTime?), DateTime? tsUpdateUtc = default(DateTime?), string restaurantName = default(string), double? foodAmount = default(double?), double? tipAmount = default(double?), double? totalRestaurantAmount = default(double?), string isoCurrency = default(string), string deliveryType = default(string), string orderState = default(string), string paymentAccountDescription = default(string))
         {
             this.OrderId = orderId;
@@ -58,68 +58,79 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets OrderId
+        /// OrderId.
         /// </summary>
+        /// <value>OrderId.</value>
         [DataMember(Name="OrderId", EmitDefaultValue=false)]
         public int? OrderId { get; set; }
 
         /// <summary>
-        /// Gets or Sets TsOrderPlacedUtc
+        /// TsOrderPlacedUtc.
         /// </summary>
+        /// <value>TsOrderPlacedUtc.</value>
         [DataMember(Name="TsOrderPlacedUtc", EmitDefaultValue=false)]
         public DateTime? TsOrderPlacedUtc { get; set; }
 
         /// <summary>
-        /// Gets or Sets TsUpdateUtc
+        /// TsUpdateUtc.
         /// </summary>
+        /// <value>TsUpdateUtc.</value>
         [DataMember(Name="TsUpdateUtc", EmitDefaultValue=false)]
         public DateTime? TsUpdateUtc { get; set; }
 
         /// <summary>
-        /// Gets or Sets RestaurantName
+        /// RestaurantName.
         /// </summary>
+        /// <value>RestaurantName.</value>
         [DataMember(Name="RestaurantName", EmitDefaultValue=false)]
         public string RestaurantName { get; set; }
 
         /// <summary>
-        /// Gets or Sets FoodAmount
+        /// FoodAmount.
         /// </summary>
+        /// <value>FoodAmount.</value>
         [DataMember(Name="FoodAmount", EmitDefaultValue=false)]
         public double? FoodAmount { get; set; }
 
         /// <summary>
-        /// Gets or Sets TipAmount
+        /// TipAmount.
         /// </summary>
+        /// <value>TipAmount.</value>
         [DataMember(Name="TipAmount", EmitDefaultValue=false)]
         public double? TipAmount { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalRestaurantAmount
+        /// TotalRestaurantAmount.
         /// </summary>
+        /// <value>TotalRestaurantAmount.</value>
         [DataMember(Name="TotalRestaurantAmount", EmitDefaultValue=false)]
         public double? TotalRestaurantAmount { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsoCurrency
+        /// IsoCurrency.
         /// </summary>
+        /// <value>IsoCurrency.</value>
         [DataMember(Name="IsoCurrency", EmitDefaultValue=false)]
         public string IsoCurrency { get; set; }
 
         /// <summary>
-        /// Gets or Sets DeliveryType
+        /// DeliveryType.
         /// </summary>
+        /// <value>DeliveryType.</value>
         [DataMember(Name="DeliveryType", EmitDefaultValue=false)]
         public string DeliveryType { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrderState
+        /// OrderState.
         /// </summary>
+        /// <value>OrderState.</value>
         [DataMember(Name="OrderState", EmitDefaultValue=false)]
         public string OrderState { get; set; }
 
         /// <summary>
-        /// Gets or Sets PaymentAccountDescription
+        /// PaymentAccountDescription.
         /// </summary>
+        /// <value>PaymentAccountDescription.</value>
         [DataMember(Name="PaymentAccountDescription", EmitDefaultValue=false)]
         public string PaymentAccountDescription { get; set; }
 

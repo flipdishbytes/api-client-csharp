@@ -31,8 +31,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SetUserDeliveryLocationCoordinatesRequest" /> class.
         /// </summary>
-        /// <param name="latitude">latitude.</param>
-        /// <param name="longitude">longitude.</param>
+        /// <param name="latitude">Latitude..</param>
+        /// <param name="longitude">Longitude..</param>
         public SetUserDeliveryLocationCoordinatesRequest(double? latitude = default(double?), double? longitude = default(double?))
         {
             this.Latitude = latitude;
@@ -40,14 +40,16 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Latitude
+        /// Latitude.
         /// </summary>
+        /// <value>Latitude.</value>
         [DataMember(Name="Latitude", EmitDefaultValue=false)]
         public double? Latitude { get; set; }
 
         /// <summary>
-        /// Gets or Sets Longitude
+        /// Longitude.
         /// </summary>
+        /// <value>Longitude.</value>
         [DataMember(Name="Longitude", EmitDefaultValue=false)]
         public double? Longitude { get; set; }
 

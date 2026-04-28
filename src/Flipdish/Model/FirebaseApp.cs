@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// FirebaseApp
+    /// FirebaseApp.
     /// </summary>
     [DataContract]
     public partial class FirebaseApp :  IEquatable<FirebaseApp>
@@ -31,10 +31,10 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FirebaseApp" /> class.
         /// </summary>
-        /// <param name="whitelabelId">whitelabelId.</param>
-        /// <param name="packageId">packageId.</param>
-        /// <param name="firebaseAppId">firebaseAppId.</param>
-        /// <param name="firebaseProjectId">firebaseProjectId.</param>
+        /// <param name="whitelabelId">WhitelabelId..</param>
+        /// <param name="packageId">PackageId..</param>
+        /// <param name="firebaseAppId">FirebaseAppId..</param>
+        /// <param name="firebaseProjectId">FirebaseProjectId..</param>
         public FirebaseApp(int? whitelabelId = default(int?), string packageId = default(string), string firebaseAppId = default(string), string firebaseProjectId = default(string))
         {
             this.WhitelabelId = whitelabelId;
@@ -44,26 +44,30 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets WhitelabelId
+        /// WhitelabelId.
         /// </summary>
+        /// <value>WhitelabelId.</value>
         [DataMember(Name="WhitelabelId", EmitDefaultValue=false)]
         public int? WhitelabelId { get; set; }
 
         /// <summary>
-        /// Gets or Sets PackageId
+        /// PackageId.
         /// </summary>
+        /// <value>PackageId.</value>
         [DataMember(Name="PackageId", EmitDefaultValue=false)]
         public string PackageId { get; set; }
 
         /// <summary>
-        /// Gets or Sets FirebaseAppId
+        /// FirebaseAppId.
         /// </summary>
+        /// <value>FirebaseAppId.</value>
         [DataMember(Name="FirebaseAppId", EmitDefaultValue=false)]
         public string FirebaseAppId { get; set; }
 
         /// <summary>
-        /// Gets or Sets FirebaseProjectId
+        /// FirebaseProjectId.
         /// </summary>
+        /// <value>FirebaseProjectId.</value>
         [DataMember(Name="FirebaseProjectId", EmitDefaultValue=false)]
         public string FirebaseProjectId { get; set; }
 

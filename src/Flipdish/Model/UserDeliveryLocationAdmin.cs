@@ -31,16 +31,16 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserDeliveryLocationAdmin" /> class.
         /// </summary>
-        /// <param name="deliveryLocationId">deliveryLocationId.</param>
-        /// <param name="building">building.</param>
-        /// <param name="street">street.</param>
-        /// <param name="town">town.</param>
-        /// <param name="postCode">postCode.</param>
-        /// <param name="deliveryInstructions">deliveryInstructions.</param>
-        /// <param name="autoSelectThisLocation">autoSelectThisLocation.</param>
-        /// <param name="isDisplayed">isDisplayed.</param>
-        /// <param name="isConfirmed">isConfirmed.</param>
-        /// <param name="coordinates">coordinates.</param>
+        /// <param name="deliveryLocationId">DeliveryLocationId..</param>
+        /// <param name="building">Building..</param>
+        /// <param name="street">Street..</param>
+        /// <param name="town">Town..</param>
+        /// <param name="postCode">PostCode..</param>
+        /// <param name="deliveryInstructions">DeliveryInstructions..</param>
+        /// <param name="autoSelectThisLocation">AutoSelectThisLocation..</param>
+        /// <param name="isDisplayed">IsDisplayed..</param>
+        /// <param name="isConfirmed">IsConfirmed..</param>
+        /// <param name="coordinates">Coordinates..</param>
         public UserDeliveryLocationAdmin(int? deliveryLocationId = default(int?), string building = default(string), string street = default(string), string town = default(string), string postCode = default(string), string deliveryInstructions = default(string), bool? autoSelectThisLocation = default(bool?), bool? isDisplayed = default(bool?), bool? isConfirmed = default(bool?), Coordinates coordinates = default(Coordinates))
         {
             this.DeliveryLocationId = deliveryLocationId;
@@ -56,62 +56,72 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets DeliveryLocationId
+        /// DeliveryLocationId.
         /// </summary>
+        /// <value>DeliveryLocationId.</value>
         [DataMember(Name="DeliveryLocationId", EmitDefaultValue=false)]
         public int? DeliveryLocationId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Building
+        /// Building.
         /// </summary>
+        /// <value>Building.</value>
         [DataMember(Name="Building", EmitDefaultValue=false)]
         public string Building { get; set; }
 
         /// <summary>
-        /// Gets or Sets Street
+        /// Street.
         /// </summary>
+        /// <value>Street.</value>
         [DataMember(Name="Street", EmitDefaultValue=false)]
         public string Street { get; set; }
 
         /// <summary>
-        /// Gets or Sets Town
+        /// Town.
         /// </summary>
+        /// <value>Town.</value>
         [DataMember(Name="Town", EmitDefaultValue=false)]
         public string Town { get; set; }
 
         /// <summary>
-        /// Gets or Sets PostCode
+        /// PostCode.
         /// </summary>
+        /// <value>PostCode.</value>
         [DataMember(Name="PostCode", EmitDefaultValue=false)]
         public string PostCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets DeliveryInstructions
+        /// DeliveryInstructions.
         /// </summary>
+        /// <value>DeliveryInstructions.</value>
         [DataMember(Name="DeliveryInstructions", EmitDefaultValue=false)]
         public string DeliveryInstructions { get; set; }
 
         /// <summary>
-        /// Gets or Sets AutoSelectThisLocation
+        /// AutoSelectThisLocation.
         /// </summary>
+        /// <value>AutoSelectThisLocation.</value>
         [DataMember(Name="AutoSelectThisLocation", EmitDefaultValue=false)]
         public bool? AutoSelectThisLocation { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsDisplayed
+        /// IsDisplayed.
         /// </summary>
+        /// <value>IsDisplayed.</value>
         [DataMember(Name="IsDisplayed", EmitDefaultValue=false)]
         public bool? IsDisplayed { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsConfirmed
+        /// IsConfirmed.
         /// </summary>
+        /// <value>IsConfirmed.</value>
         [DataMember(Name="IsConfirmed", EmitDefaultValue=false)]
         public bool? IsConfirmed { get; set; }
 
         /// <summary>
-        /// Gets or Sets Coordinates
+        /// Coordinates.
         /// </summary>
+        /// <value>Coordinates.</value>
         [DataMember(Name="Coordinates", EmitDefaultValue=false)]
         public Coordinates Coordinates { get; set; }
 

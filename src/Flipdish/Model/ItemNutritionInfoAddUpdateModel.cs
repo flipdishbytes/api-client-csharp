@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// ItemNutritionInfoAddUpdateModel
+    /// ItemNutritionInfoAddUpdateModel.
     /// </summary>
     [DataContract]
     public partial class ItemNutritionInfoAddUpdateModel :  IEquatable<ItemNutritionInfoAddUpdateModel>
@@ -31,15 +31,16 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ItemNutritionInfoAddUpdateModel" /> class.
         /// </summary>
-        /// <param name="labels">labels.</param>
+        /// <param name="labels">Labels..</param>
         public ItemNutritionInfoAddUpdateModel(List<NutritionInfoItemAddUpdateLabelModel> labels = default(List<NutritionInfoItemAddUpdateLabelModel>))
         {
             this.Labels = labels;
         }
         
         /// <summary>
-        /// Gets or Sets Labels
+        /// Labels.
         /// </summary>
+        /// <value>Labels.</value>
         [DataMember(Name="Labels", EmitDefaultValue=false)]
         public List<NutritionInfoItemAddUpdateLabelModel> Labels { get; set; }
 

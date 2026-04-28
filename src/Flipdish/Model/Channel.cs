@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// Channel
+    /// Channel.
     /// </summary>
     [DataContract]
     public partial class Channel :  IEquatable<Channel>

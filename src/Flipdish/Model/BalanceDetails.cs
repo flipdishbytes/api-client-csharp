@@ -31,8 +31,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BalanceDetails" /> class.
         /// </summary>
-        /// <param name="openingBalance">openingBalance.</param>
-        /// <param name="closingBalance">closingBalance.</param>
+        /// <param name="openingBalance">OpeningBalance..</param>
+        /// <param name="closingBalance">ClosingBalance..</param>
         public BalanceDetails(double? openingBalance = default(double?), double? closingBalance = default(double?))
         {
             this.OpeningBalance = openingBalance;
@@ -40,14 +40,16 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets OpeningBalance
+        /// OpeningBalance.
         /// </summary>
+        /// <value>OpeningBalance.</value>
         [DataMember(Name="OpeningBalance", EmitDefaultValue=false)]
         public double? OpeningBalance { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClosingBalance
+        /// ClosingBalance.
         /// </summary>
+        /// <value>ClosingBalance.</value>
         [DataMember(Name="ClosingBalance", EmitDefaultValue=false)]
         public double? ClosingBalance { get; set; }
 

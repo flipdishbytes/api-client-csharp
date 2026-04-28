@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// RestaurantVoucherPayGreenStoreConfiguration
+    /// RestaurantVoucherPayGreenStoreConfiguration.
     /// </summary>
     [DataContract]
     public partial class RestaurantVoucherPayGreenStoreConfiguration :  IEquatable<RestaurantVoucherPayGreenStoreConfiguration>
@@ -31,10 +31,10 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestaurantVoucherPayGreenStoreConfiguration" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="active">active.</param>
-        /// <param name="payGreenId">payGreenId.</param>
-        /// <param name="payGreenConfigurationId">payGreenConfigurationId.</param>
+        /// <param name="name">Name..</param>
+        /// <param name="active">Active..</param>
+        /// <param name="payGreenId">PayGreenId..</param>
+        /// <param name="payGreenConfigurationId">PayGreenConfigurationId..</param>
         public RestaurantVoucherPayGreenStoreConfiguration(string name = default(string), bool? active = default(bool?), string payGreenId = default(string), int? payGreenConfigurationId = default(int?))
         {
             this.Name = name;
@@ -44,26 +44,30 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Name.
         /// </summary>
+        /// <value>Name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Active
+        /// Active.
         /// </summary>
+        /// <value>Active.</value>
         [DataMember(Name="Active", EmitDefaultValue=false)]
         public bool? Active { get; set; }
 
         /// <summary>
-        /// Gets or Sets PayGreenId
+        /// PayGreenId.
         /// </summary>
+        /// <value>PayGreenId.</value>
         [DataMember(Name="PayGreenId", EmitDefaultValue=false)]
         public string PayGreenId { get; set; }
 
         /// <summary>
-        /// Gets or Sets PayGreenConfigurationId
+        /// PayGreenConfigurationId.
         /// </summary>
+        /// <value>PayGreenConfigurationId.</value>
         [DataMember(Name="PayGreenConfigurationId", EmitDefaultValue=false)]
         public int? PayGreenConfigurationId { get; set; }
 

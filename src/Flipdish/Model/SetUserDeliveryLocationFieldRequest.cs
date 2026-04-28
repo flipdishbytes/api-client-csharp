@@ -77,7 +77,7 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="SetUserDeliveryLocationFieldRequest" /> class.
         /// </summary>
         /// <param name="field">Which field to update. Omit or set to null for a validation error..</param>
-        /// <param name="value">value.</param>
+        /// <param name="value">Value..</param>
         public SetUserDeliveryLocationFieldRequest(FieldEnum? field = default(FieldEnum?), string value = default(string))
         {
             this.Field = field;
@@ -86,8 +86,9 @@ namespace Flipdish.Model
         
 
         /// <summary>
-        /// Gets or Sets Value
+        /// Value.
         /// </summary>
+        /// <value>Value.</value>
         [DataMember(Name="Value", EmitDefaultValue=false)]
         public string Value { get; set; }
 

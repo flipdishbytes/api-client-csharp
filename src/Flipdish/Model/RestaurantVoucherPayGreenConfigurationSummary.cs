@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// RestaurantVoucherPayGreenConfigurationSummary
+    /// RestaurantVoucherPayGreenConfigurationSummary.
     /// </summary>
     [DataContract]
     public partial class RestaurantVoucherPayGreenConfigurationSummary :  IEquatable<RestaurantVoucherPayGreenConfigurationSummary>
@@ -31,8 +31,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestaurantVoucherPayGreenConfigurationSummary" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="payGreenConfigurationId">payGreenConfigurationId.</param>
+        /// <param name="name">Name..</param>
+        /// <param name="payGreenConfigurationId">PayGreenConfigurationId..</param>
         public RestaurantVoucherPayGreenConfigurationSummary(string name = default(string), int? payGreenConfigurationId = default(int?))
         {
             this.Name = name;
@@ -40,14 +40,16 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Name.
         /// </summary>
+        /// <value>Name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets PayGreenConfigurationId
+        /// PayGreenConfigurationId.
         /// </summary>
+        /// <value>PayGreenConfigurationId.</value>
         [DataMember(Name="PayGreenConfigurationId", EmitDefaultValue=false)]
         public int? PayGreenConfigurationId { get; set; }
 

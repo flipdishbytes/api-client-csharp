@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// OrderDropOffLocation
+    /// OrderDropOffLocation.
     /// </summary>
     [DataContract]
     public partial class OrderDropOffLocation :  IEquatable<OrderDropOffLocation>
@@ -31,12 +31,12 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderDropOffLocation" /> class.
         /// </summary>
-        /// <param name="orderId">orderId.</param>
-        /// <param name="locationName">locationName.</param>
-        /// <param name="locationAreaName">locationAreaName.</param>
-        /// <param name="locationId">locationId.</param>
-        /// <param name="locationAreaId">locationAreaId.</param>
-        /// <param name="externalLocationId">externalLocationId.</param>
+        /// <param name="orderId">OrderId..</param>
+        /// <param name="locationName">LocationName..</param>
+        /// <param name="locationAreaName">LocationAreaName..</param>
+        /// <param name="locationId">LocationId..</param>
+        /// <param name="locationAreaId">LocationAreaId..</param>
+        /// <param name="externalLocationId">ExternalLocationId..</param>
         public OrderDropOffLocation(int? orderId = default(int?), string locationName = default(string), string locationAreaName = default(string), int? locationId = default(int?), int? locationAreaId = default(int?), string externalLocationId = default(string))
         {
             this.OrderId = orderId;
@@ -48,38 +48,44 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets OrderId
+        /// OrderId.
         /// </summary>
+        /// <value>OrderId.</value>
         [DataMember(Name="OrderId", EmitDefaultValue=false)]
         public int? OrderId { get; set; }
 
         /// <summary>
-        /// Gets or Sets LocationName
+        /// LocationName.
         /// </summary>
+        /// <value>LocationName.</value>
         [DataMember(Name="LocationName", EmitDefaultValue=false)]
         public string LocationName { get; set; }
 
         /// <summary>
-        /// Gets or Sets LocationAreaName
+        /// LocationAreaName.
         /// </summary>
+        /// <value>LocationAreaName.</value>
         [DataMember(Name="LocationAreaName", EmitDefaultValue=false)]
         public string LocationAreaName { get; set; }
 
         /// <summary>
-        /// Gets or Sets LocationId
+        /// LocationId.
         /// </summary>
+        /// <value>LocationId.</value>
         [DataMember(Name="LocationId", EmitDefaultValue=false)]
         public int? LocationId { get; set; }
 
         /// <summary>
-        /// Gets or Sets LocationAreaId
+        /// LocationAreaId.
         /// </summary>
+        /// <value>LocationAreaId.</value>
         [DataMember(Name="LocationAreaId", EmitDefaultValue=false)]
         public int? LocationAreaId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ExternalLocationId
+        /// ExternalLocationId.
         /// </summary>
+        /// <value>ExternalLocationId.</value>
         [DataMember(Name="ExternalLocationId", EmitDefaultValue=false)]
         public string ExternalLocationId { get; set; }
 

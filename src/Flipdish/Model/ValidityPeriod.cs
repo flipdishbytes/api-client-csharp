@@ -23,14 +23,15 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// ValidityPeriod
+    /// ValidityPeriod.
     /// </summary>
     [DataContract]
     public partial class ValidityPeriod :  IEquatable<ValidityPeriod>
     {
         /// <summary>
-        /// Defines DayOfWeek
+        /// DayOfWeek.
         /// </summary>
+        /// <value>DayOfWeek.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DayOfWeekEnum
         {
@@ -79,16 +80,17 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Gets or Sets DayOfWeek
+        /// DayOfWeek.
         /// </summary>
+        /// <value>DayOfWeek.</value>
         [DataMember(Name="DayOfWeek", EmitDefaultValue=false)]
         public DayOfWeekEnum? DayOfWeek { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidityPeriod" /> class.
         /// </summary>
-        /// <param name="dayOfWeek">dayOfWeek.</param>
-        /// <param name="startTime">startTime.</param>
-        /// <param name="endTime">endTime.</param>
+        /// <param name="dayOfWeek">DayOfWeek..</param>
+        /// <param name="startTime">StartTime..</param>
+        /// <param name="endTime">EndTime..</param>
         public ValidityPeriod(DayOfWeekEnum? dayOfWeek = default(DayOfWeekEnum?), string startTime = default(string), string endTime = default(string))
         {
             this.DayOfWeek = dayOfWeek;
@@ -98,14 +100,16 @@ namespace Flipdish.Model
         
 
         /// <summary>
-        /// Gets or Sets StartTime
+        /// StartTime.
         /// </summary>
+        /// <value>StartTime.</value>
         [DataMember(Name="StartTime", EmitDefaultValue=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets EndTime
+        /// EndTime.
         /// </summary>
+        /// <value>EndTime.</value>
         [DataMember(Name="EndTime", EmitDefaultValue=false)]
         public string EndTime { get; set; }
 

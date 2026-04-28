@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// CreatePayGreenConfigurationRequest
+    /// CreatePayGreenConfigurationRequest.
     /// </summary>
     [DataContract]
     public partial class CreatePayGreenConfigurationRequest :  IEquatable<CreatePayGreenConfigurationRequest>
@@ -31,10 +31,10 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreatePayGreenConfigurationRequest" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="payGreenId">payGreenId.</param>
-        /// <param name="payGreenPrivateKey">payGreenPrivateKey.</param>
-        /// <param name="assignedStores">assignedStores.</param>
+        /// <param name="name">Name..</param>
+        /// <param name="payGreenId">PayGreenId..</param>
+        /// <param name="payGreenPrivateKey">PayGreenPrivateKey..</param>
+        /// <param name="assignedStores">AssignedStores..</param>
         public CreatePayGreenConfigurationRequest(string name = default(string), string payGreenId = default(string), string payGreenPrivateKey = default(string), List<int?> assignedStores = default(List<int?>))
         {
             this.Name = name;
@@ -44,26 +44,30 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Name.
         /// </summary>
+        /// <value>Name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets PayGreenId
+        /// PayGreenId.
         /// </summary>
+        /// <value>PayGreenId.</value>
         [DataMember(Name="PayGreenId", EmitDefaultValue=false)]
         public string PayGreenId { get; set; }
 
         /// <summary>
-        /// Gets or Sets PayGreenPrivateKey
+        /// PayGreenPrivateKey.
         /// </summary>
+        /// <value>PayGreenPrivateKey.</value>
         [DataMember(Name="PayGreenPrivateKey", EmitDefaultValue=false)]
         public string PayGreenPrivateKey { get; set; }
 
         /// <summary>
-        /// Gets or Sets AssignedStores
+        /// AssignedStores.
         /// </summary>
+        /// <value>AssignedStores.</value>
         [DataMember(Name="AssignedStores", EmitDefaultValue=false)]
         public List<int?> AssignedStores { get; set; }
 

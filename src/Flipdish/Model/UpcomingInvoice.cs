@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// UpcomingInvoice
+    /// UpcomingInvoice.
     /// </summary>
     [DataContract]
     public partial class UpcomingInvoice :  IEquatable<UpcomingInvoice>

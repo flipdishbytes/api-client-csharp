@@ -31,11 +31,11 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserSmsChatItem" /> class.
         /// </summary>
-        /// <param name="smsConversationItemId">smsConversationItemId.</param>
-        /// <param name="direction">direction.</param>
-        /// <param name="from">from.</param>
-        /// <param name="text">text.</param>
-        /// <param name="tsSentReceivedUtc">tsSentReceivedUtc.</param>
+        /// <param name="smsConversationItemId">SmsConversationItemId..</param>
+        /// <param name="direction">Direction..</param>
+        /// <param name="from">From..</param>
+        /// <param name="text">Text..</param>
+        /// <param name="tsSentReceivedUtc">TsSentReceivedUtc..</param>
         public UserSmsChatItem(int? smsConversationItemId = default(int?), string direction = default(string), string from = default(string), string text = default(string), DateTime? tsSentReceivedUtc = default(DateTime?))
         {
             this.SmsConversationItemId = smsConversationItemId;
@@ -46,32 +46,37 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets SmsConversationItemId
+        /// SmsConversationItemId.
         /// </summary>
+        /// <value>SmsConversationItemId.</value>
         [DataMember(Name="SmsConversationItemId", EmitDefaultValue=false)]
         public int? SmsConversationItemId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Direction
+        /// Direction.
         /// </summary>
+        /// <value>Direction.</value>
         [DataMember(Name="Direction", EmitDefaultValue=false)]
         public string Direction { get; set; }
 
         /// <summary>
-        /// Gets or Sets From
+        /// From.
         /// </summary>
+        /// <value>From.</value>
         [DataMember(Name="From", EmitDefaultValue=false)]
         public string From { get; set; }
 
         /// <summary>
-        /// Gets or Sets Text
+        /// Text.
         /// </summary>
+        /// <value>Text.</value>
         [DataMember(Name="Text", EmitDefaultValue=false)]
         public string Text { get; set; }
 
         /// <summary>
-        /// Gets or Sets TsSentReceivedUtc
+        /// TsSentReceivedUtc.
         /// </summary>
+        /// <value>TsSentReceivedUtc.</value>
         [DataMember(Name="TsSentReceivedUtc", EmitDefaultValue=false)]
         public DateTime? TsSentReceivedUtc { get; set; }
 

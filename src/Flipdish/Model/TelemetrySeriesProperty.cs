@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// TelemetrySeriesProperty
+    /// TelemetrySeriesProperty.
     /// </summary>
     [DataContract]
     public partial class TelemetrySeriesProperty :  IEquatable<TelemetrySeriesProperty>
@@ -31,11 +31,11 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TelemetrySeriesProperty" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="type">type.</param>
-        /// <param name="intValues">intValues.</param>
-        /// <param name="stringValues">stringValues.</param>
-        /// <param name="doubleValues">doubleValues.</param>
+        /// <param name="name">Name..</param>
+        /// <param name="type">Type..</param>
+        /// <param name="intValues">IntValues..</param>
+        /// <param name="stringValues">StringValues..</param>
+        /// <param name="doubleValues">DoubleValues..</param>
         public TelemetrySeriesProperty(string name = default(string), string type = default(string), List<int?> intValues = default(List<int?>), List<string> stringValues = default(List<string>), List<double?> doubleValues = default(List<double?>))
         {
             this.Name = name;
@@ -46,32 +46,37 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Name.
         /// </summary>
+        /// <value>Name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Type
+        /// Type.
         /// </summary>
+        /// <value>Type.</value>
         [DataMember(Name="Type", EmitDefaultValue=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// Gets or Sets IntValues
+        /// IntValues.
         /// </summary>
+        /// <value>IntValues.</value>
         [DataMember(Name="IntValues", EmitDefaultValue=false)]
         public List<int?> IntValues { get; set; }
 
         /// <summary>
-        /// Gets or Sets StringValues
+        /// StringValues.
         /// </summary>
+        /// <value>StringValues.</value>
         [DataMember(Name="StringValues", EmitDefaultValue=false)]
         public List<string> StringValues { get; set; }
 
         /// <summary>
-        /// Gets or Sets DoubleValues
+        /// DoubleValues.
         /// </summary>
+        /// <value>DoubleValues.</value>
         [DataMember(Name="DoubleValues", EmitDefaultValue=false)]
         public List<double?> DoubleValues { get; set; }
 

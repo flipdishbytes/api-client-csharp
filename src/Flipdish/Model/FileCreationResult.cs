@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// FileCreationResult
+    /// FileCreationResult.
     /// </summary>
     [DataContract]
     public partial class FileCreationResult :  IEquatable<FileCreationResult>
@@ -31,8 +31,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FileCreationResult" /> class.
         /// </summary>
-        /// <param name="fileId">fileId.</param>
-        /// <param name="location">location.</param>
+        /// <param name="fileId">FileId..</param>
+        /// <param name="location">Location..</param>
         public FileCreationResult(string fileId = default(string), string location = default(string))
         {
             this.FileId = fileId;
@@ -40,14 +40,16 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets FileId
+        /// FileId.
         /// </summary>
+        /// <value>FileId.</value>
         [DataMember(Name="FileId", EmitDefaultValue=false)]
         public string FileId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Location
+        /// Location.
         /// </summary>
+        /// <value>Location.</value>
         [DataMember(Name="Location", EmitDefaultValue=false)]
         public string Location { get; set; }
 

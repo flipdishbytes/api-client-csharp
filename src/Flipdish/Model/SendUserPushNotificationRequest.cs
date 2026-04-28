@@ -31,8 +31,8 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SendUserPushNotificationRequest" /> class.
         /// </summary>
-        /// <param name="whiteLabelId">whiteLabelId.</param>
-        /// <param name="message">message.</param>
+        /// <param name="whiteLabelId">WhiteLabelId..</param>
+        /// <param name="message">Message..</param>
         public SendUserPushNotificationRequest(int? whiteLabelId = default(int?), string message = default(string))
         {
             this.WhiteLabelId = whiteLabelId;
@@ -40,14 +40,16 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets WhiteLabelId
+        /// WhiteLabelId.
         /// </summary>
+        /// <value>WhiteLabelId.</value>
         [DataMember(Name="WhiteLabelId", EmitDefaultValue=false)]
         public int? WhiteLabelId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Message
+        /// Message.
         /// </summary>
+        /// <value>Message.</value>
         [DataMember(Name="Message", EmitDefaultValue=false)]
         public string Message { get; set; }
 

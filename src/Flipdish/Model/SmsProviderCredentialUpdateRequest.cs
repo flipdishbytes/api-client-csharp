@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// SmsProviderCredentialUpdateRequest
+    /// SmsProviderCredentialUpdateRequest.
     /// </summary>
     [DataContract]
     public partial class SmsProviderCredentialUpdateRequest :  IEquatable<SmsProviderCredentialUpdateRequest>
@@ -31,9 +31,9 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsProviderCredentialUpdateRequest" /> class.
         /// </summary>
-        /// <param name="senderId">senderId.</param>
-        /// <param name="username">username.</param>
-        /// <param name="authToken">authToken.</param>
+        /// <param name="senderId">SenderId..</param>
+        /// <param name="username">Username..</param>
+        /// <param name="authToken">AuthToken..</param>
         public SmsProviderCredentialUpdateRequest(string senderId = default(string), string username = default(string), string authToken = default(string))
         {
             this.SenderId = senderId;
@@ -42,20 +42,23 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets SenderId
+        /// SenderId.
         /// </summary>
+        /// <value>SenderId.</value>
         [DataMember(Name="SenderId", EmitDefaultValue=false)]
         public string SenderId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Username
+        /// Username.
         /// </summary>
+        /// <value>Username.</value>
         [DataMember(Name="Username", EmitDefaultValue=false)]
         public string Username { get; set; }
 
         /// <summary>
-        /// Gets or Sets AuthToken
+        /// AuthToken.
         /// </summary>
+        /// <value>AuthToken.</value>
         [DataMember(Name="AuthToken", EmitDefaultValue=false)]
         public string AuthToken { get; set; }
 

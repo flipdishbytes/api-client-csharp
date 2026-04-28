@@ -23,7 +23,7 @@ using SwaggerDateConverter = Flipdish.Client.SwaggerDateConverter;
 namespace Flipdish.Model
 {
     /// <summary>
-    /// MenuNutritionInfoHeader
+    /// MenuNutritionInfoHeader.
     /// </summary>
     [DataContract]
     public partial class MenuNutritionInfoHeader :  IEquatable<MenuNutritionInfoHeader>

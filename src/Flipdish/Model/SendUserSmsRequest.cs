@@ -31,9 +31,9 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SendUserSmsRequest" /> class.
         /// </summary>
-        /// <param name="message">message.</param>
-        /// <param name="whiteLabelId">whiteLabelId.</param>
-        /// <param name="fromNumber">fromNumber.</param>
+        /// <param name="message">Message..</param>
+        /// <param name="whiteLabelId">WhiteLabelId..</param>
+        /// <param name="fromNumber">FromNumber..</param>
         public SendUserSmsRequest(string message = default(string), int? whiteLabelId = default(int?), string fromNumber = default(string))
         {
             this.Message = message;
@@ -42,20 +42,23 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Message
+        /// Message.
         /// </summary>
+        /// <value>Message.</value>
         [DataMember(Name="Message", EmitDefaultValue=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Gets or Sets WhiteLabelId
+        /// WhiteLabelId.
         /// </summary>
+        /// <value>WhiteLabelId.</value>
         [DataMember(Name="WhiteLabelId", EmitDefaultValue=false)]
         public int? WhiteLabelId { get; set; }
 
         /// <summary>
-        /// Gets or Sets FromNumber
+        /// FromNumber.
         /// </summary>
+        /// <value>FromNumber.</value>
         [DataMember(Name="FromNumber", EmitDefaultValue=false)]
         public string FromNumber { get; set; }
 

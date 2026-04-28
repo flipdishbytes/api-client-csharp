@@ -31,13 +31,13 @@ namespace Flipdish.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateUserDeliveryLocationRequest" /> class.
         /// </summary>
-        /// <param name="building">building.</param>
-        /// <param name="street">street.</param>
-        /// <param name="town">town.</param>
-        /// <param name="postCode">postCode.</param>
-        /// <param name="fullAddressJson">fullAddressJson.</param>
-        /// <param name="deliveryInstructions">deliveryInstructions.</param>
-        /// <param name="coordinates">coordinates.</param>
+        /// <param name="building">Building..</param>
+        /// <param name="street">Street..</param>
+        /// <param name="town">Town..</param>
+        /// <param name="postCode">PostCode..</param>
+        /// <param name="fullAddressJson">FullAddressJson..</param>
+        /// <param name="deliveryInstructions">DeliveryInstructions..</param>
+        /// <param name="coordinates">Coordinates..</param>
         /// <param name="isDisplayed">Passed through to the same parameter position as legacy admin MVC (maps to IsCustomAddress in map service)..</param>
         public CreateUserDeliveryLocationRequest(string building = default(string), string street = default(string), string town = default(string), string postCode = default(string), string fullAddressJson = default(string), string deliveryInstructions = default(string), Coordinates coordinates = default(Coordinates), bool? isDisplayed = default(bool?))
         {
@@ -52,44 +52,51 @@ namespace Flipdish.Model
         }
         
         /// <summary>
-        /// Gets or Sets Building
+        /// Building.
         /// </summary>
+        /// <value>Building.</value>
         [DataMember(Name="Building", EmitDefaultValue=false)]
         public string Building { get; set; }
 
         /// <summary>
-        /// Gets or Sets Street
+        /// Street.
         /// </summary>
+        /// <value>Street.</value>
         [DataMember(Name="Street", EmitDefaultValue=false)]
         public string Street { get; set; }
 
         /// <summary>
-        /// Gets or Sets Town
+        /// Town.
         /// </summary>
+        /// <value>Town.</value>
         [DataMember(Name="Town", EmitDefaultValue=false)]
         public string Town { get; set; }
 
         /// <summary>
-        /// Gets or Sets PostCode
+        /// PostCode.
         /// </summary>
+        /// <value>PostCode.</value>
         [DataMember(Name="PostCode", EmitDefaultValue=false)]
         public string PostCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets FullAddressJson
+        /// FullAddressJson.
         /// </summary>
+        /// <value>FullAddressJson.</value>
         [DataMember(Name="FullAddressJson", EmitDefaultValue=false)]
         public string FullAddressJson { get; set; }
 
         /// <summary>
-        /// Gets or Sets DeliveryInstructions
+        /// DeliveryInstructions.
         /// </summary>
+        /// <value>DeliveryInstructions.</value>
         [DataMember(Name="DeliveryInstructions", EmitDefaultValue=false)]
         public string DeliveryInstructions { get; set; }
 
         /// <summary>
-        /// Gets or Sets Coordinates
+        /// Coordinates.
         /// </summary>
+        /// <value>Coordinates.</value>
         [DataMember(Name="Coordinates", EmitDefaultValue=false)]
         public Coordinates Coordinates { get; set; }
 
