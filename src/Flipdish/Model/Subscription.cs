@@ -793,7 +793,7 @@ namespace Flipdish.Model
         /// <param name="upcomingInvoiceDiscounts">Upcoming invoice discounts.</param>
         /// <param name="upcomingInvoice">Upcoming invoice.</param>
         /// <param name="subscriptionId">The subscription identifier (required).</param>
-        /// <param name="name">name (required).</param>
+        /// <param name="name">Name (required).</param>
         /// <param name="status">Status (required).</param>
         /// <param name="currency">Currency (required).</param>
         /// <param name="user">User (required).</param>
@@ -916,8 +916,9 @@ namespace Flipdish.Model
         public string SubscriptionId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Name
         /// </summary>
+        /// <value>Name</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 

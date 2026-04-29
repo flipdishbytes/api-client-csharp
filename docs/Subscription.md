@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **UpcomingInvoiceDiscounts** | [**List&lt;InvoiceDiscount&gt;**](InvoiceDiscount.md) | Upcoming invoice discounts | [optional] 
 **UpcomingInvoice** | [**UpcomingInvoice**](UpcomingInvoice.md) | Upcoming invoice | [optional] 
 **SubscriptionId** | **string** | The subscription identifier | 
-**Name** | **string** |  | 
+**Name** | **string** | Name | 
 **Status** | **string** | Status | 
 **Currency** | **string** | Currency | 
 **User** | **string** | User | 
