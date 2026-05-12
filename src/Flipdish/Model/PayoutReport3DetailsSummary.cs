@@ -33,15 +33,17 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="revenue">revenue.</param>
         /// <param name="revenueOfWhichCash">revenueOfWhichCash.</param>
+        /// <param name="unpaidRevenue">unpaidRevenue.</param>
         /// <param name="revenueForFeeCalculations">revenueForFeeCalculations.</param>
         /// <param name="flipdishFees">flipdishFees.</param>
         /// <param name="adjustments">adjustments.</param>
         /// <param name="thirdPartyIntegrationFeesAndTips">thirdPartyIntegrationFeesAndTips.</param>
         /// <param name="total">total.</param>
-        public PayoutReport3DetailsSummary(double? revenue = default(double?), double? revenueOfWhichCash = default(double?), double? revenueForFeeCalculations = default(double?), double? flipdishFees = default(double?), double? adjustments = default(double?), double? thirdPartyIntegrationFeesAndTips = default(double?), double? total = default(double?))
+        public PayoutReport3DetailsSummary(double? revenue = default(double?), double? revenueOfWhichCash = default(double?), double? unpaidRevenue = default(double?), double? revenueForFeeCalculations = default(double?), double? flipdishFees = default(double?), double? adjustments = default(double?), double? thirdPartyIntegrationFeesAndTips = default(double?), double? total = default(double?))
         {
             this.Revenue = revenue;
             this.RevenueOfWhichCash = revenueOfWhichCash;
+            this.UnpaidRevenue = unpaidRevenue;
             this.RevenueForFeeCalculations = revenueForFeeCalculations;
             this.FlipdishFees = flipdishFees;
             this.Adjustments = adjustments;
@@ -60,6 +62,12 @@ namespace Flipdish.Model
         /// </summary>
         [DataMember(Name="RevenueOfWhichCash", EmitDefaultValue=false)]
         public double? RevenueOfWhichCash { get; set; }
+
+        /// <summary>
+        /// Gets or Sets UnpaidRevenue
+        /// </summary>
+        [DataMember(Name="UnpaidRevenue", EmitDefaultValue=false)]
+        public double? UnpaidRevenue { get; set; }
 
         /// <summary>
         /// Gets or Sets RevenueForFeeCalculations
@@ -101,6 +109,7 @@ namespace Flipdish.Model
             sb.Append("class PayoutReport3DetailsSummary {\n");
             sb.Append("  Revenue: ").Append(Revenue).Append("\n");
             sb.Append("  RevenueOfWhichCash: ").Append(RevenueOfWhichCash).Append("\n");
+            sb.Append("  UnpaidRevenue: ").Append(UnpaidRevenue).Append("\n");
             sb.Append("  RevenueForFeeCalculations: ").Append(RevenueForFeeCalculations).Append("\n");
             sb.Append("  FlipdishFees: ").Append(FlipdishFees).Append("\n");
             sb.Append("  Adjustments: ").Append(Adjustments).Append("\n");
@@ -151,6 +160,11 @@ namespace Flipdish.Model
                     this.RevenueOfWhichCash.Equals(input.RevenueOfWhichCash))
                 ) && 
                 (
+                    this.UnpaidRevenue == input.UnpaidRevenue ||
+                    (this.UnpaidRevenue != null &&
+                    this.UnpaidRevenue.Equals(input.UnpaidRevenue))
+                ) && 
+                (
                     this.RevenueForFeeCalculations == input.RevenueForFeeCalculations ||
                     (this.RevenueForFeeCalculations != null &&
                     this.RevenueForFeeCalculations.Equals(input.RevenueForFeeCalculations))
@@ -190,6 +204,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Revenue.GetHashCode();
                 if (this.RevenueOfWhichCash != null)
                     hashCode = hashCode * 59 + this.RevenueOfWhichCash.GetHashCode();
+                if (this.UnpaidRevenue != null)
+                    hashCode = hashCode * 59 + this.UnpaidRevenue.GetHashCode();
                 if (this.RevenueForFeeCalculations != null)
                     hashCode = hashCode * 59 + this.RevenueForFeeCalculations.GetHashCode();
                 if (this.FlipdishFees != null)
