@@ -338,9 +338,9 @@ namespace Flipdish.Api
         /// <param name="userId"></param>
         /// <param name="skip"> (optional)</param>
         /// <param name="take"> (optional)</param>
-        /// <param name="whiteLabelId"> (optional)</param>
+        /// <param name="brandId"> (optional)</param>
         /// <returns>RestApiArrayResultUserOrderSummary</returns>
-        RestApiArrayResultUserOrderSummary GetUserOrdersForAdmin (int? userId, int? skip = null, int? take = null, int? whiteLabelId = null);
+        RestApiArrayResultUserOrderSummary GetUserOrdersForAdmin (int? userId, int? skip = null, int? take = null, string brandId = null);
 
         /// <summary>
         /// 
@@ -352,9 +352,9 @@ namespace Flipdish.Api
         /// <param name="userId"></param>
         /// <param name="skip"> (optional)</param>
         /// <param name="take"> (optional)</param>
-        /// <param name="whiteLabelId"> (optional)</param>
+        /// <param name="brandId"> (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultUserOrderSummary</returns>
-        ApiResponse<RestApiArrayResultUserOrderSummary> GetUserOrdersForAdminWithHttpInfo (int? userId, int? skip = null, int? take = null, int? whiteLabelId = null);
+        ApiResponse<RestApiArrayResultUserOrderSummary> GetUserOrdersForAdminWithHttpInfo (int? userId, int? skip = null, int? take = null, string brandId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1064,9 +1064,9 @@ namespace Flipdish.Api
         /// <param name="userId"></param>
         /// <param name="skip"> (optional)</param>
         /// <param name="take"> (optional)</param>
-        /// <param name="whiteLabelId"> (optional)</param>
+        /// <param name="brandId"> (optional)</param>
         /// <returns>Task of RestApiArrayResultUserOrderSummary</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultUserOrderSummary> GetUserOrdersForAdminAsync (int? userId, int? skip = null, int? take = null, int? whiteLabelId = null);
+        System.Threading.Tasks.Task<RestApiArrayResultUserOrderSummary> GetUserOrdersForAdminAsync (int? userId, int? skip = null, int? take = null, string brandId = null);
 
         /// <summary>
         /// 
@@ -1078,9 +1078,9 @@ namespace Flipdish.Api
         /// <param name="userId"></param>
         /// <param name="skip"> (optional)</param>
         /// <param name="take"> (optional)</param>
-        /// <param name="whiteLabelId"> (optional)</param>
+        /// <param name="brandId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultUserOrderSummary)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultUserOrderSummary>> GetUserOrdersForAdminAsyncWithHttpInfo (int? userId, int? skip = null, int? take = null, int? whiteLabelId = null);
+        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultUserOrderSummary>> GetUserOrdersForAdminAsyncWithHttpInfo (int? userId, int? skip = null, int? take = null, string brandId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -3797,11 +3797,11 @@ namespace Flipdish.Api
         /// <param name="userId"></param>
         /// <param name="skip"> (optional)</param>
         /// <param name="take"> (optional)</param>
-        /// <param name="whiteLabelId"> (optional)</param>
+        /// <param name="brandId"> (optional)</param>
         /// <returns>RestApiArrayResultUserOrderSummary</returns>
-        public RestApiArrayResultUserOrderSummary GetUserOrdersForAdmin (int? userId, int? skip = null, int? take = null, int? whiteLabelId = null)
+        public RestApiArrayResultUserOrderSummary GetUserOrdersForAdmin (int? userId, int? skip = null, int? take = null, string brandId = null)
         {
-             ApiResponse<RestApiArrayResultUserOrderSummary> localVarResponse = GetUserOrdersForAdminWithHttpInfo(userId, skip, take, whiteLabelId);
+             ApiResponse<RestApiArrayResultUserOrderSummary> localVarResponse = GetUserOrdersForAdminWithHttpInfo(userId, skip, take, brandId);
              return localVarResponse.Data;
         }
 
@@ -3812,9 +3812,9 @@ namespace Flipdish.Api
         /// <param name="userId"></param>
         /// <param name="skip"> (optional)</param>
         /// <param name="take"> (optional)</param>
-        /// <param name="whiteLabelId"> (optional)</param>
+        /// <param name="brandId"> (optional)</param>
         /// <returns>ApiResponse of RestApiArrayResultUserOrderSummary</returns>
-        public ApiResponse< RestApiArrayResultUserOrderSummary > GetUserOrdersForAdminWithHttpInfo (int? userId, int? skip = null, int? take = null, int? whiteLabelId = null)
+        public ApiResponse< RestApiArrayResultUserOrderSummary > GetUserOrdersForAdminWithHttpInfo (int? userId, int? skip = null, int? take = null, string brandId = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -3847,7 +3847,7 @@ namespace Flipdish.Api
             if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
             if (skip != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "skip", skip)); // query parameter
             if (take != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "take", take)); // query parameter
-            if (whiteLabelId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "whiteLabelId", whiteLabelId)); // query parameter
+            if (brandId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "brandId", brandId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -3881,11 +3881,11 @@ namespace Flipdish.Api
         /// <param name="userId"></param>
         /// <param name="skip"> (optional)</param>
         /// <param name="take"> (optional)</param>
-        /// <param name="whiteLabelId"> (optional)</param>
+        /// <param name="brandId"> (optional)</param>
         /// <returns>Task of RestApiArrayResultUserOrderSummary</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultUserOrderSummary> GetUserOrdersForAdminAsync (int? userId, int? skip = null, int? take = null, int? whiteLabelId = null)
+        public async System.Threading.Tasks.Task<RestApiArrayResultUserOrderSummary> GetUserOrdersForAdminAsync (int? userId, int? skip = null, int? take = null, string brandId = null)
         {
-             ApiResponse<RestApiArrayResultUserOrderSummary> localVarResponse = await GetUserOrdersForAdminAsyncWithHttpInfo(userId, skip, take, whiteLabelId);
+             ApiResponse<RestApiArrayResultUserOrderSummary> localVarResponse = await GetUserOrdersForAdminAsyncWithHttpInfo(userId, skip, take, brandId);
              return localVarResponse.Data;
 
         }
@@ -3897,9 +3897,9 @@ namespace Flipdish.Api
         /// <param name="userId"></param>
         /// <param name="skip"> (optional)</param>
         /// <param name="take"> (optional)</param>
-        /// <param name="whiteLabelId"> (optional)</param>
+        /// <param name="brandId"> (optional)</param>
         /// <returns>Task of ApiResponse (RestApiArrayResultUserOrderSummary)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultUserOrderSummary>> GetUserOrdersForAdminAsyncWithHttpInfo (int? userId, int? skip = null, int? take = null, int? whiteLabelId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultUserOrderSummary>> GetUserOrdersForAdminAsyncWithHttpInfo (int? userId, int? skip = null, int? take = null, string brandId = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -3932,7 +3932,7 @@ namespace Flipdish.Api
             if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
             if (skip != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "skip", skip)); // query parameter
             if (take != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "take", take)); // query parameter
-            if (whiteLabelId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "whiteLabelId", whiteLabelId)); // query parameter
+            if (brandId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "brandId", brandId)); // query parameter
 
             // authentication (oauth2) required
             // oauth required

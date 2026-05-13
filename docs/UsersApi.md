@@ -902,7 +902,7 @@ Name | Type | Description  | Notes
 
 <a name="getuserordersforadmin"></a>
 # **GetUserOrdersForAdmin**
-> RestApiArrayResultUserOrderSummary GetUserOrdersForAdmin (int? userId, int? skip = null, int? take = null, int? whiteLabelId = null)
+> RestApiArrayResultUserOrderSummary GetUserOrdersForAdmin (int? userId, int? skip = null, int? take = null, string brandId = null)
 
 
 
@@ -927,11 +927,11 @@ namespace Example
             var userId = 56;  // int? | 
             var skip = 56;  // int? |  (optional) 
             var take = 56;  // int? |  (optional) 
-            var whiteLabelId = 56;  // int? |  (optional) 
+            var brandId = brandId_example;  // string |  (optional) 
 
             try
             {
-                RestApiArrayResultUserOrderSummary result = apiInstance.GetUserOrdersForAdmin(userId, skip, take, whiteLabelId);
+                RestApiArrayResultUserOrderSummary result = apiInstance.GetUserOrdersForAdmin(userId, skip, take, brandId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -950,7 +950,7 @@ Name | Type | Description  | Notes
  **userId** | **int?**|  | 
  **skip** | **int?**|  | [optional] 
  **take** | **int?**|  | [optional] 
- **whiteLabelId** | **int?**|  | [optional] 
+ **brandId** | **string**|  | [optional] 
 
 ### Return type
 
