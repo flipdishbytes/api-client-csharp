@@ -25,99 +25,99 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Add or update menuitem nutrition info by menu item&#39;s publicId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="publicId">Menu item&#39;s publicId</param>
+        /// <param name="menuId"></param>
+        /// <param name="publicId"></param>
         /// <param name="addOrUpdateModel"></param>
         /// <returns>RestApiResultMenuNutritionInfoHeader</returns>
         RestApiResultMenuNutritionInfoHeader AddOrUpdateMenuItemNutritionInfo (int? menuId, string publicId, ItemNutritionInfoAddUpdateModel addOrUpdateModel);
 
         /// <summary>
-        /// Add or update menuitem nutrition info by menu item&#39;s publicId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="publicId">Menu item&#39;s publicId</param>
+        /// <param name="menuId"></param>
+        /// <param name="publicId"></param>
         /// <param name="addOrUpdateModel"></param>
         /// <returns>ApiResponse of RestApiResultMenuNutritionInfoHeader</returns>
         ApiResponse<RestApiResultMenuNutritionInfoHeader> AddOrUpdateMenuItemNutritionInfoWithHttpInfo (int? menuId, string publicId, ItemNutritionInfoAddUpdateModel addOrUpdateModel);
         /// <summary>
-        /// Add or update menuitem optionsetitem nutrition info its publicId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="publicId">Menu item&#39;s publicId</param>
+        /// <param name="menuId"></param>
+        /// <param name="publicId"></param>
         /// <param name="addOrUpdateModel"></param>
         /// <returns>RestApiResultMenuNutritionInfoHeader</returns>
         RestApiResultMenuNutritionInfoHeader AddOrUpdateMenuItemOptionSetItemNutritionInfo (int? menuId, Guid? publicId, ItemNutritionInfoAddUpdateModel addOrUpdateModel);
 
         /// <summary>
-        /// Add or update menuitem optionsetitem nutrition info its publicId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="publicId">Menu item&#39;s publicId</param>
+        /// <param name="menuId"></param>
+        /// <param name="publicId"></param>
         /// <param name="addOrUpdateModel"></param>
         /// <returns>ApiResponse of RestApiResultMenuNutritionInfoHeader</returns>
         ApiResponse<RestApiResultMenuNutritionInfoHeader> AddOrUpdateMenuItemOptionSetItemNutritionInfoWithHttpInfo (int? menuId, Guid? publicId, ItemNutritionInfoAddUpdateModel addOrUpdateModel);
         /// <summary>
-        /// Add or update menu nutrition by identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>RestApiResultMenuNutritionInfoHeader</returns>
         RestApiResultMenuNutritionInfoHeader AddOrUpdateMenuNutritionInfoByMenuId (int? menuId);
 
         /// <summary>
-        /// Add or update menu nutrition by identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>ApiResponse of RestApiResultMenuNutritionInfoHeader</returns>
         ApiResponse<RestApiResultMenuNutritionInfoHeader> AddOrUpdateMenuNutritionInfoByMenuIdWithHttpInfo (int? menuId);
         /// <summary>
-        /// Delete menu nutrition information by menuId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>Object</returns>
         Object DeleteMenuNutritionInfoByMenuId (int? menuId);
 
         /// <summary>
-        /// Delete menu nutrition information by menuId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> DeleteMenuNutritionInfoByMenuIdWithHttpInfo (int? menuId);
         /// <summary>
-        /// Get allergens
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -129,7 +129,7 @@ namespace Flipdish.Api
         RestApiArrayResultAllergen GetAllergens (string appId, string languageId = null);
 
         /// <summary>
-        /// Get allergens
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -140,122 +140,122 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultAllergen</returns>
         ApiResponse<RestApiArrayResultAllergen> GetAllergensWithHttpInfo (string appId, string languageId = null);
         /// <summary>
-        /// Get menu nutrition by menuId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>RestApiResultNutritionInfo</returns>
         RestApiResultNutritionInfo GetMenuNutritionInfoByMenuId (int? menuId);
 
         /// <summary>
-        /// Get menu nutrition by menuId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>ApiResponse of RestApiResultNutritionInfo</returns>
         ApiResponse<RestApiResultNutritionInfo> GetMenuNutritionInfoByMenuIdWithHttpInfo (int? menuId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Add or update menuitem nutrition info by menu item&#39;s publicId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="publicId">Menu item&#39;s publicId</param>
+        /// <param name="menuId"></param>
+        /// <param name="publicId"></param>
         /// <param name="addOrUpdateModel"></param>
         /// <returns>Task of RestApiResultMenuNutritionInfoHeader</returns>
         System.Threading.Tasks.Task<RestApiResultMenuNutritionInfoHeader> AddOrUpdateMenuItemNutritionInfoAsync (int? menuId, string publicId, ItemNutritionInfoAddUpdateModel addOrUpdateModel);
 
         /// <summary>
-        /// Add or update menuitem nutrition info by menu item&#39;s publicId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="publicId">Menu item&#39;s publicId</param>
+        /// <param name="menuId"></param>
+        /// <param name="publicId"></param>
         /// <param name="addOrUpdateModel"></param>
         /// <returns>Task of ApiResponse (RestApiResultMenuNutritionInfoHeader)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultMenuNutritionInfoHeader>> AddOrUpdateMenuItemNutritionInfoAsyncWithHttpInfo (int? menuId, string publicId, ItemNutritionInfoAddUpdateModel addOrUpdateModel);
         /// <summary>
-        /// Add or update menuitem optionsetitem nutrition info its publicId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="publicId">Menu item&#39;s publicId</param>
+        /// <param name="menuId"></param>
+        /// <param name="publicId"></param>
         /// <param name="addOrUpdateModel"></param>
         /// <returns>Task of RestApiResultMenuNutritionInfoHeader</returns>
         System.Threading.Tasks.Task<RestApiResultMenuNutritionInfoHeader> AddOrUpdateMenuItemOptionSetItemNutritionInfoAsync (int? menuId, Guid? publicId, ItemNutritionInfoAddUpdateModel addOrUpdateModel);
 
         /// <summary>
-        /// Add or update menuitem optionsetitem nutrition info its publicId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="publicId">Menu item&#39;s publicId</param>
+        /// <param name="menuId"></param>
+        /// <param name="publicId"></param>
         /// <param name="addOrUpdateModel"></param>
         /// <returns>Task of ApiResponse (RestApiResultMenuNutritionInfoHeader)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultMenuNutritionInfoHeader>> AddOrUpdateMenuItemOptionSetItemNutritionInfoAsyncWithHttpInfo (int? menuId, Guid? publicId, ItemNutritionInfoAddUpdateModel addOrUpdateModel);
         /// <summary>
-        /// Add or update menu nutrition by identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>Task of RestApiResultMenuNutritionInfoHeader</returns>
         System.Threading.Tasks.Task<RestApiResultMenuNutritionInfoHeader> AddOrUpdateMenuNutritionInfoByMenuIdAsync (int? menuId);
 
         /// <summary>
-        /// Add or update menu nutrition by identifier
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>Task of ApiResponse (RestApiResultMenuNutritionInfoHeader)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultMenuNutritionInfoHeader>> AddOrUpdateMenuNutritionInfoByMenuIdAsyncWithHttpInfo (int? menuId);
         /// <summary>
-        /// Delete menu nutrition information by menuId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> DeleteMenuNutritionInfoByMenuIdAsync (int? menuId);
 
         /// <summary>
-        /// Delete menu nutrition information by menuId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuNutritionInfoByMenuIdAsyncWithHttpInfo (int? menuId);
         /// <summary>
-        /// Get allergens
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -267,7 +267,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultAllergen> GetAllergensAsync (string appId, string languageId = null);
 
         /// <summary>
-        /// Get allergens
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -278,24 +278,24 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultAllergen)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultAllergen>> GetAllergensAsyncWithHttpInfo (string appId, string languageId = null);
         /// <summary>
-        /// Get menu nutrition by menuId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>Task of RestApiResultNutritionInfo</returns>
         System.Threading.Tasks.Task<RestApiResultNutritionInfo> GetMenuNutritionInfoByMenuIdAsync (int? menuId);
 
         /// <summary>
-        /// Get menu nutrition by menuId
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>Task of ApiResponse (RestApiResultNutritionInfo)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultNutritionInfo>> GetMenuNutritionInfoByMenuIdAsyncWithHttpInfo (int? menuId);
         #endregion Asynchronous Operations
@@ -399,11 +399,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add or update menuitem nutrition info by menu item&#39;s publicId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="publicId">Menu item&#39;s publicId</param>
+        /// <param name="menuId"></param>
+        /// <param name="publicId"></param>
         /// <param name="addOrUpdateModel"></param>
         /// <returns>RestApiResultMenuNutritionInfoHeader</returns>
         public RestApiResultMenuNutritionInfoHeader AddOrUpdateMenuItemNutritionInfo (int? menuId, string publicId, ItemNutritionInfoAddUpdateModel addOrUpdateModel)
@@ -413,11 +413,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add or update menuitem nutrition info by menu item&#39;s publicId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="publicId">Menu item&#39;s publicId</param>
+        /// <param name="menuId"></param>
+        /// <param name="publicId"></param>
         /// <param name="addOrUpdateModel"></param>
         /// <returns>ApiResponse of RestApiResultMenuNutritionInfoHeader</returns>
         public ApiResponse< RestApiResultMenuNutritionInfoHeader > AddOrUpdateMenuItemNutritionInfoWithHttpInfo (int? menuId, string publicId, ItemNutritionInfoAddUpdateModel addOrUpdateModel)
@@ -498,11 +498,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add or update menuitem nutrition info by menu item&#39;s publicId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="publicId">Menu item&#39;s publicId</param>
+        /// <param name="menuId"></param>
+        /// <param name="publicId"></param>
         /// <param name="addOrUpdateModel"></param>
         /// <returns>Task of RestApiResultMenuNutritionInfoHeader</returns>
         public async System.Threading.Tasks.Task<RestApiResultMenuNutritionInfoHeader> AddOrUpdateMenuItemNutritionInfoAsync (int? menuId, string publicId, ItemNutritionInfoAddUpdateModel addOrUpdateModel)
@@ -513,11 +513,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add or update menuitem nutrition info by menu item&#39;s publicId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="publicId">Menu item&#39;s publicId</param>
+        /// <param name="menuId"></param>
+        /// <param name="publicId"></param>
         /// <param name="addOrUpdateModel"></param>
         /// <returns>Task of ApiResponse (RestApiResultMenuNutritionInfoHeader)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultMenuNutritionInfoHeader>> AddOrUpdateMenuItemNutritionInfoAsyncWithHttpInfo (int? menuId, string publicId, ItemNutritionInfoAddUpdateModel addOrUpdateModel)
@@ -598,11 +598,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add or update menuitem optionsetitem nutrition info its publicId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="publicId">Menu item&#39;s publicId</param>
+        /// <param name="menuId"></param>
+        /// <param name="publicId"></param>
         /// <param name="addOrUpdateModel"></param>
         /// <returns>RestApiResultMenuNutritionInfoHeader</returns>
         public RestApiResultMenuNutritionInfoHeader AddOrUpdateMenuItemOptionSetItemNutritionInfo (int? menuId, Guid? publicId, ItemNutritionInfoAddUpdateModel addOrUpdateModel)
@@ -612,11 +612,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add or update menuitem optionsetitem nutrition info its publicId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="publicId">Menu item&#39;s publicId</param>
+        /// <param name="menuId"></param>
+        /// <param name="publicId"></param>
         /// <param name="addOrUpdateModel"></param>
         /// <returns>ApiResponse of RestApiResultMenuNutritionInfoHeader</returns>
         public ApiResponse< RestApiResultMenuNutritionInfoHeader > AddOrUpdateMenuItemOptionSetItemNutritionInfoWithHttpInfo (int? menuId, Guid? publicId, ItemNutritionInfoAddUpdateModel addOrUpdateModel)
@@ -697,11 +697,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add or update menuitem optionsetitem nutrition info its publicId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="publicId">Menu item&#39;s publicId</param>
+        /// <param name="menuId"></param>
+        /// <param name="publicId"></param>
         /// <param name="addOrUpdateModel"></param>
         /// <returns>Task of RestApiResultMenuNutritionInfoHeader</returns>
         public async System.Threading.Tasks.Task<RestApiResultMenuNutritionInfoHeader> AddOrUpdateMenuItemOptionSetItemNutritionInfoAsync (int? menuId, Guid? publicId, ItemNutritionInfoAddUpdateModel addOrUpdateModel)
@@ -712,11 +712,11 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add or update menuitem optionsetitem nutrition info its publicId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="publicId">Menu item&#39;s publicId</param>
+        /// <param name="menuId"></param>
+        /// <param name="publicId"></param>
         /// <param name="addOrUpdateModel"></param>
         /// <returns>Task of ApiResponse (RestApiResultMenuNutritionInfoHeader)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultMenuNutritionInfoHeader>> AddOrUpdateMenuItemOptionSetItemNutritionInfoAsyncWithHttpInfo (int? menuId, Guid? publicId, ItemNutritionInfoAddUpdateModel addOrUpdateModel)
@@ -797,10 +797,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add or update menu nutrition by identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>RestApiResultMenuNutritionInfoHeader</returns>
         public RestApiResultMenuNutritionInfoHeader AddOrUpdateMenuNutritionInfoByMenuId (int? menuId)
         {
@@ -809,10 +809,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add or update menu nutrition by identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>ApiResponse of RestApiResultMenuNutritionInfoHeader</returns>
         public ApiResponse< RestApiResultMenuNutritionInfoHeader > AddOrUpdateMenuNutritionInfoByMenuIdWithHttpInfo (int? menuId)
         {
@@ -872,10 +872,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add or update menu nutrition by identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>Task of RestApiResultMenuNutritionInfoHeader</returns>
         public async System.Threading.Tasks.Task<RestApiResultMenuNutritionInfoHeader> AddOrUpdateMenuNutritionInfoByMenuIdAsync (int? menuId)
         {
@@ -885,10 +885,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Add or update menu nutrition by identifier 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>Task of ApiResponse (RestApiResultMenuNutritionInfoHeader)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultMenuNutritionInfoHeader>> AddOrUpdateMenuNutritionInfoByMenuIdAsyncWithHttpInfo (int? menuId)
         {
@@ -948,10 +948,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete menu nutrition information by menuId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>Object</returns>
         public Object DeleteMenuNutritionInfoByMenuId (int? menuId)
         {
@@ -960,10 +960,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete menu nutrition information by menuId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > DeleteMenuNutritionInfoByMenuIdWithHttpInfo (int? menuId)
         {
@@ -1023,10 +1023,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete menu nutrition information by menuId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> DeleteMenuNutritionInfoByMenuIdAsync (int? menuId)
         {
@@ -1036,10 +1036,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete menu nutrition information by menuId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuNutritionInfoByMenuIdAsyncWithHttpInfo (int? menuId)
         {
@@ -1099,7 +1099,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get allergens 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1112,7 +1112,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get allergens 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1177,7 +1177,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get allergens 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1191,7 +1191,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get allergens 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1256,10 +1256,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get menu nutrition by menuId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>RestApiResultNutritionInfo</returns>
         public RestApiResultNutritionInfo GetMenuNutritionInfoByMenuId (int? menuId)
         {
@@ -1268,10 +1268,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get menu nutrition by menuId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>ApiResponse of RestApiResultNutritionInfo</returns>
         public ApiResponse< RestApiResultNutritionInfo > GetMenuNutritionInfoByMenuIdWithHttpInfo (int? menuId)
         {
@@ -1331,10 +1331,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get menu nutrition by menuId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>Task of RestApiResultNutritionInfo</returns>
         public async System.Threading.Tasks.Task<RestApiResultNutritionInfo> GetMenuNutritionInfoByMenuIdAsync (int? menuId)
         {
@@ -1344,10 +1344,10 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get menu nutrition by menuId 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
+        /// <param name="menuId"></param>
         /// <returns>Task of ApiResponse (RestApiResultNutritionInfo)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultNutritionInfo>> GetMenuNutritionInfoByMenuIdAsyncWithHttpInfo (int? menuId)
         {

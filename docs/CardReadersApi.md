@@ -6,9 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CancelCurrentlyInitiatedBluetoothDeviceUpdate**](CardReadersApi.md#cancelcurrentlyinitiatedbluetoothdeviceupdate) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/cancelUpdate | 
 [**CancelReaderAction**](CardReadersApi.md#cancelreaderaction) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action | 
-[**CardReadersGetReader**](CardReadersApi.md#cardreadersgetreader) | **GET** /api/v1.0/{appId}/payments/terminals/stripe/{readerId} | 
 [**GenerateStripeTerminalLocation**](CardReadersApi.md#generatestripeterminallocation) | **POST** /api/v1.0/{appId}/stripeterminal/location | 
 [**GetBluetoothTerminalStatus**](CardReadersApi.md#getbluetoothterminalstatus) | **GET** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status | 
+[**GetReader**](CardReadersApi.md#getreader) | **GET** /api/v1.0/{appId}/payments/terminals/stripe/{readerId} | 
 [**GetStripeConnectionToken**](CardReadersApi.md#getstripeconnectiontoken) | **GET** /api/v1.0/{appId}/stripeterminal/connectiontoken | 
 [**InitiateBluetoothTerminalDeviceUpdateCheck**](CardReadersApi.md#initiatebluetoothterminaldeviceupdatecheck) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate | 
 [**InitiateKioskBluetoothPairingMode**](CardReadersApi.md#initiatekioskbluetoothpairingmode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | 
@@ -118,69 +118,6 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling CardReadersApi.CancelReaderAction: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **readerId** | **string**|  | 
- **appId** | **string**|  | 
-
-### Return type
-
-[**RestApiResultCardReader**](RestApiResultCardReader.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="cardreadersgetreader"></a>
-# **CardReadersGetReader**
-> RestApiResultCardReader CardReadersGetReader (string readerId, string appId)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class CardReadersGetReaderExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new CardReadersApi();
-            var readerId = readerId_example;  // string | 
-            var appId = appId_example;  // string | 
-
-            try
-            {
-                RestApiResultCardReader result = apiInstance.CardReadersGetReader(readerId, appId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling CardReadersApi.CardReadersGetReader: " + e.Message );
             }
         }
     }
@@ -323,6 +260,69 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultBluetoothTerminalStatus**](RestApiResultBluetoothTerminalStatus.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getreader"></a>
+# **GetReader**
+> RestApiResultCardReader GetReader (string readerId, string appId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetReaderExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new CardReadersApi();
+            var readerId = readerId_example;  // string | 
+            var appId = appId_example;  // string | 
+
+            try
+            {
+                RestApiResultCardReader result = apiInstance.GetReader(readerId, appId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CardReadersApi.GetReader: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **readerId** | **string**|  | 
+ **appId** | **string**|  | 
+
+### Return type
+
+[**RestApiResultCardReader**](RestApiResultCardReader.md)
 
 ### Authorization
 

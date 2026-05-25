@@ -5,13 +5,13 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AddTestimonial**](WebsiteApi.md#addtestimonial) | **POST** /api/v1.0/{appId}/website/testimonial | 
+[**CheckNow**](WebsiteApi.md#checknow) | **GET** /api/v1.0/{appId}/website/dnscheck | 
 [**DeleteTestimonial**](WebsiteApi.md#deletetestimonial) | **DELETE** /api/v1.0/{appId}/website/testimonial/{testimonialId} | 
 [**DeleteWebsiteImage**](WebsiteApi.md#deletewebsiteimage) | **DELETE** /api/v1.0/{appId}/website/image/{imageId} | 
 [**EditTestimonial**](WebsiteApi.md#edittestimonial) | **POST** /api/v1.0/{appId}/website/testimonial/{testimonialId} | 
 [**GetIndexConfiguration**](WebsiteApi.md#getindexconfiguration) | **GET** /api/v1.0/{appId}/website/index | 
 [**SetIndexConfiguration**](WebsiteApi.md#setindexconfiguration) | **POST** /api/v1.0/{appId}/website/index | 
 [**UploadWebsiteImage**](WebsiteApi.md#uploadwebsiteimage) | **POST** /api/v1.0/{appId}/website/image/{imageLocation} | 
-[**WebsiteCheckNow**](WebsiteApi.md#websitechecknow) | **GET** /api/v1.0/{appId}/website/dnscheck | 
 
 
 <a name="addtestimonial"></a>
@@ -73,6 +73,66 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="checknow"></a>
+# **CheckNow**
+> void CheckNow (string appId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class CheckNowExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new WebsiteApi();
+            var appId = appId_example;  // string | 
+
+            try
+            {
+                apiInstance.CheckNow(appId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WebsiteApi.CheckNow: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -451,66 +511,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="websitechecknow"></a>
-# **WebsiteCheckNow**
-> void WebsiteCheckNow (string appId)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class WebsiteCheckNowExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new WebsiteApi();
-            var appId = appId_example;  // string | 
-
-            try
-            {
-                apiInstance.WebsiteCheckNow(appId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WebsiteApi.WebsiteCheckNow: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

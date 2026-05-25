@@ -79,29 +79,6 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="readerId"></param>
-        /// <param name="appId"></param>
-        /// <returns>RestApiResultCardReader</returns>
-        RestApiResultCardReader CardReadersGetReader (string readerId, string appId);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="readerId"></param>
-        /// <param name="appId"></param>
-        /// <returns>ApiResponse of RestApiResultCardReader</returns>
-        ApiResponse<RestApiResultCardReader> CardReadersGetReaderWithHttpInfo (string readerId, string appId);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geoPointRequest"></param>
         /// <param name="appId"></param>
         /// <returns>RestApiResultStripeTerminalLocation</returns>
@@ -141,6 +118,29 @@ namespace Flipdish.Api
         /// <param name="deviceId"></param>
         /// <returns>ApiResponse of RestApiResultBluetoothTerminalStatus</returns>
         ApiResponse<RestApiResultBluetoothTerminalStatus> GetBluetoothTerminalStatusWithHttpInfo (string appId, string deviceId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="readerId"></param>
+        /// <param name="appId"></param>
+        /// <returns>RestApiResultCardReader</returns>
+        RestApiResultCardReader GetReader (string readerId, string appId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="readerId"></param>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiResultCardReader</returns>
+        ApiResponse<RestApiResultCardReader> GetReaderWithHttpInfo (string readerId, string appId);
         /// <summary>
         /// 
         /// </summary>
@@ -388,29 +388,6 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="readerId"></param>
-        /// <param name="appId"></param>
-        /// <returns>Task of RestApiResultCardReader</returns>
-        System.Threading.Tasks.Task<RestApiResultCardReader> CardReadersGetReaderAsync (string readerId, string appId);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="readerId"></param>
-        /// <param name="appId"></param>
-        /// <returns>Task of ApiResponse (RestApiResultCardReader)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultCardReader>> CardReadersGetReaderAsyncWithHttpInfo (string readerId, string appId);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geoPointRequest"></param>
         /// <param name="appId"></param>
         /// <returns>Task of RestApiResultStripeTerminalLocation</returns>
@@ -450,6 +427,29 @@ namespace Flipdish.Api
         /// <param name="deviceId"></param>
         /// <returns>Task of ApiResponse (RestApiResultBluetoothTerminalStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultBluetoothTerminalStatus>> GetBluetoothTerminalStatusAsyncWithHttpInfo (string appId, string deviceId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="readerId"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiResultCardReader</returns>
+        System.Threading.Tasks.Task<RestApiResultCardReader> GetReaderAsync (string readerId, string appId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="readerId"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultCardReader)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultCardReader>> GetReaderAsyncWithHttpInfo (string readerId, string appId);
         /// <summary>
         /// 
         /// </summary>
@@ -1080,169 +1080,6 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="readerId"></param>
-        /// <param name="appId"></param>
-        /// <returns>RestApiResultCardReader</returns>
-        public RestApiResultCardReader CardReadersGetReader (string readerId, string appId)
-        {
-             ApiResponse<RestApiResultCardReader> localVarResponse = CardReadersGetReaderWithHttpInfo(readerId, appId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="readerId"></param>
-        /// <param name="appId"></param>
-        /// <returns>ApiResponse of RestApiResultCardReader</returns>
-        public ApiResponse< RestApiResultCardReader > CardReadersGetReaderWithHttpInfo (string readerId, string appId)
-        {
-            // verify the required parameter 'readerId' is set
-            if (readerId == null)
-                throw new ApiException(400, "Missing required parameter 'readerId' when calling CardReadersApi->CardReadersGetReader");
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->CardReadersGetReader");
-
-            var localVarPath = "./api/v1.0/{appId}/payments/terminals/stripe/{readerId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (readerId != null) localVarPathParams.Add("readerId", this.Configuration.ApiClient.ParameterToString(readerId)); // path parameter
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("CardReadersGetReader", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RestApiResultCardReader>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiResultCardReader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCardReader)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="readerId"></param>
-        /// <param name="appId"></param>
-        /// <returns>Task of RestApiResultCardReader</returns>
-        public async System.Threading.Tasks.Task<RestApiResultCardReader> CardReadersGetReaderAsync (string readerId, string appId)
-        {
-             ApiResponse<RestApiResultCardReader> localVarResponse = await CardReadersGetReaderAsyncWithHttpInfo(readerId, appId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="readerId"></param>
-        /// <param name="appId"></param>
-        /// <returns>Task of ApiResponse (RestApiResultCardReader)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultCardReader>> CardReadersGetReaderAsyncWithHttpInfo (string readerId, string appId)
-        {
-            // verify the required parameter 'readerId' is set
-            if (readerId == null)
-                throw new ApiException(400, "Missing required parameter 'readerId' when calling CardReadersApi->CardReadersGetReader");
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->CardReadersGetReader");
-
-            var localVarPath = "./api/v1.0/{appId}/payments/terminals/stripe/{readerId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (readerId != null) localVarPathParams.Add("readerId", this.Configuration.ApiClient.ParameterToString(readerId)); // path parameter
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("CardReadersGetReader", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RestApiResultCardReader>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiResultCardReader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCardReader)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geoPointRequest"></param>
         /// <param name="appId"></param>
         /// <returns>RestApiResultStripeTerminalLocation</returns>
@@ -1587,6 +1424,169 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultBluetoothTerminalStatus>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultBluetoothTerminalStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBluetoothTerminalStatus)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="readerId"></param>
+        /// <param name="appId"></param>
+        /// <returns>RestApiResultCardReader</returns>
+        public RestApiResultCardReader GetReader (string readerId, string appId)
+        {
+             ApiResponse<RestApiResultCardReader> localVarResponse = GetReaderWithHttpInfo(readerId, appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="readerId"></param>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiResultCardReader</returns>
+        public ApiResponse< RestApiResultCardReader > GetReaderWithHttpInfo (string readerId, string appId)
+        {
+            // verify the required parameter 'readerId' is set
+            if (readerId == null)
+                throw new ApiException(400, "Missing required parameter 'readerId' when calling CardReadersApi->GetReader");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->GetReader");
+
+            var localVarPath = "./api/v1.0/{appId}/payments/terminals/stripe/{readerId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (readerId != null) localVarPathParams.Add("readerId", this.Configuration.ApiClient.ParameterToString(readerId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetReader", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultCardReader>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultCardReader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCardReader)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="readerId"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiResultCardReader</returns>
+        public async System.Threading.Tasks.Task<RestApiResultCardReader> GetReaderAsync (string readerId, string appId)
+        {
+             ApiResponse<RestApiResultCardReader> localVarResponse = await GetReaderAsyncWithHttpInfo(readerId, appId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="readerId"></param>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultCardReader)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultCardReader>> GetReaderAsyncWithHttpInfo (string readerId, string appId)
+        {
+            // verify the required parameter 'readerId' is set
+            if (readerId == null)
+                throw new ApiException(400, "Missing required parameter 'readerId' when calling CardReadersApi->GetReader");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->GetReader");
+
+            var localVarPath = "./api/v1.0/{appId}/payments/terminals/stripe/{readerId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (readerId != null) localVarPathParams.Add("readerId", this.Configuration.ApiClient.ParameterToString(readerId)); // path parameter
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetReader", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultCardReader>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultCardReader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultCardReader)));
         }
 
         /// <summary>

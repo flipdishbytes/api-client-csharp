@@ -4,15 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**StuartCancelJob**](StuartApi.md#stuartcanceljob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | 
-[**StuartGetJob**](StuartApi.md#stuartgetjob) | **GET** /api/v1.0/stuart/jobs/{jobId} | 
-[**StuartGetStuartSettings**](StuartApi.md#stuartgetstuartsettings) | **GET** /api/v1.0/stuart/settings/{storeId} | 
-[**StuartPostStuartSettings**](StuartApi.md#stuartpoststuartsettings) | **POST** /api/v1.0/stuart/settings/{storeId} | 
+[**CancelJob**](StuartApi.md#canceljob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | 
+[**GetJob**](StuartApi.md#getjob) | **GET** /api/v1.0/stuart/jobs/{jobId} | 
+[**GetStuartSettings**](StuartApi.md#getstuartsettings) | **GET** /api/v1.0/stuart/settings/{storeId} | 
+[**PostStuartSettings**](StuartApi.md#poststuartsettings) | **POST** /api/v1.0/stuart/settings/{storeId} | 
 
 
-<a name="stuartcanceljob"></a>
-# **StuartCancelJob**
-> Object StuartCancelJob (int? jobId, int? storeId)
+<a name="canceljob"></a>
+# **CancelJob**
+> void CancelJob (int? jobId, int? storeId)
 
 
 
@@ -26,7 +26,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class StuartCancelJobExample
+    public class CancelJobExample
     {
         public void main()
         {
@@ -39,12 +39,11 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.StuartCancelJob(jobId, storeId);
-                Debug.WriteLine(result);
+                apiInstance.CancelJob(jobId, storeId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling StuartApi.StuartCancelJob: " + e.Message );
+                Debug.Print("Exception when calling StuartApi.CancelJob: " + e.Message );
             }
         }
     }
@@ -60,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+void (empty response body)
 
 ### Authorization
 
@@ -73,9 +72,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="stuartgetjob"></a>
-# **StuartGetJob**
-> RestApiResultJobResponse StuartGetJob (int? jobId, int? storeId)
+<a name="getjob"></a>
+# **GetJob**
+> RestApiResultJobResponse GetJob (int? jobId, int? storeId)
 
 
 
@@ -89,7 +88,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class StuartGetJobExample
+    public class GetJobExample
     {
         public void main()
         {
@@ -102,12 +101,12 @@ namespace Example
 
             try
             {
-                RestApiResultJobResponse result = apiInstance.StuartGetJob(jobId, storeId);
+                RestApiResultJobResponse result = apiInstance.GetJob(jobId, storeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling StuartApi.StuartGetJob: " + e.Message );
+                Debug.Print("Exception when calling StuartApi.GetJob: " + e.Message );
             }
         }
     }
@@ -136,9 +135,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="stuartgetstuartsettings"></a>
-# **StuartGetStuartSettings**
-> RestApiResultStuartSettings StuartGetStuartSettings (int? storeId)
+<a name="getstuartsettings"></a>
+# **GetStuartSettings**
+> RestApiResultStuartSettings GetStuartSettings (int? storeId)
 
 
 
@@ -152,7 +151,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class StuartGetStuartSettingsExample
+    public class GetStuartSettingsExample
     {
         public void main()
         {
@@ -164,12 +163,12 @@ namespace Example
 
             try
             {
-                RestApiResultStuartSettings result = apiInstance.StuartGetStuartSettings(storeId);
+                RestApiResultStuartSettings result = apiInstance.GetStuartSettings(storeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling StuartApi.StuartGetStuartSettings: " + e.Message );
+                Debug.Print("Exception when calling StuartApi.GetStuartSettings: " + e.Message );
             }
         }
     }
@@ -197,9 +196,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="stuartpoststuartsettings"></a>
-# **StuartPostStuartSettings**
-> Object StuartPostStuartSettings (int? storeId, StuartSettings stuartSettings)
+<a name="poststuartsettings"></a>
+# **PostStuartSettings**
+> Object PostStuartSettings (int? storeId, StuartSettings stuartSettings)
 
 
 
@@ -213,7 +212,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class StuartPostStuartSettingsExample
+    public class PostStuartSettingsExample
     {
         public void main()
         {
@@ -226,12 +225,12 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.StuartPostStuartSettings(storeId, stuartSettings);
+                Object result = apiInstance.PostStuartSettings(storeId, stuartSettings);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling StuartApi.StuartPostStuartSettings: " + e.Message );
+                Debug.Print("Exception when calling StuartApi.PostStuartSettings: " + e.Message );
             }
         }
     }

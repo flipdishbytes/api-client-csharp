@@ -8,13 +8,13 @@ Method | HTTP request | Description
 [**CreateMenuAvailabilityForDay**](MenuSectionsApi.md#createmenuavailabilityforday) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability/times/{dayOfWeek} | Set/update menu section availability hours.
 [**CreateMenuSection**](MenuSectionsApi.md#createmenusection) | **POST** /api/v1.0/menus/{menuId}/sections | Create menu section
 [**CreateMenuSectionAvailability**](MenuSectionsApi.md#createmenusectionavailability) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability | Create menu availability type
-[**DeleteMenuSection**](MenuSectionsApi.md#deletemenusection) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Delete menu section
-[**DeleteMenuSectionImage**](MenuSectionsApi.md#deletemenusectionimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Delete menu section image
+[**DeleteMenuSection**](MenuSectionsApi.md#deletemenusection) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | 
+[**DeleteMenuSectionImage**](MenuSectionsApi.md#deletemenusectionimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | 
 [**GetMenuSectionById**](MenuSectionsApi.md#getmenusectionbyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Get menu section by identifier
 [**GetMenuSections**](MenuSectionsApi.md#getmenusections) | **GET** /api/v1.0/menus/{menuId}/sections | Get menu sections
-[**MenuSectionsSetItemDisplayOrders**](MenuSectionsApi.md#menusectionssetitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitemdisplayorders | Re-arrange Items within a Section
+[**SetItemDisplayOrders**](MenuSectionsApi.md#setitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitemdisplayorders | 
 [**UpdateMenuSection**](MenuSectionsApi.md#updatemenusection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Update menu section
-[**UploadMenuSectionImage**](MenuSectionsApi.md#uploadmenusectionimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Upload menu section image
+[**UploadMenuSectionImage**](MenuSectionsApi.md#uploadmenusectionimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | 
 
 
 <a name="clonemenusection"></a>
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 # **DeleteMenuSection**
 > void DeleteMenuSection (int? menuId, int? menuSectionId)
 
-Delete menu section
+
 
 ### Example
 ```csharp
@@ -303,12 +303,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuSectionsApi();
-            var menuId = 56;  // int? | Menu identifier
-            var menuSectionId = 56;  // int? | Menu section identifier
+            var menuId = 56;  // int? | 
+            var menuSectionId = 56;  // int? | 
 
             try
             {
-                // Delete menu section
                 apiInstance.DeleteMenuSection(menuId, menuSectionId);
             }
             catch (Exception e)
@@ -324,8 +323,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**| Menu identifier | 
- **menuSectionId** | **int?**| Menu section identifier | 
+ **menuId** | **int?**|  | 
+ **menuSectionId** | **int?**|  | 
 
 ### Return type
 
@@ -346,7 +345,7 @@ void (empty response body)
 # **DeleteMenuSectionImage**
 > void DeleteMenuSectionImage (int? menuId, int? menuSectionId)
 
-Delete menu section image
+
 
 ### Example
 ```csharp
@@ -366,12 +365,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuSectionsApi();
-            var menuId = 56;  // int? | Menu identifier
-            var menuSectionId = 56;  // int? | Menu section identifier
+            var menuId = 56;  // int? | 
+            var menuSectionId = 56;  // int? | 
 
             try
             {
-                // Delete menu section image
                 apiInstance.DeleteMenuSectionImage(menuId, menuSectionId);
             }
             catch (Exception e)
@@ -387,8 +385,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**| Menu identifier | 
- **menuSectionId** | **int?**| Menu section identifier | 
+ **menuId** | **int?**|  | 
+ **menuSectionId** | **int?**|  | 
 
 ### Return type
 
@@ -531,11 +529,11 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="menusectionssetitemdisplayorders"></a>
-# **MenuSectionsSetItemDisplayOrders**
-> void MenuSectionsSetItemDisplayOrders (int? menuId, int? menuSectionId, MenuObjectDisplayOrders displayOrders)
+<a name="setitemdisplayorders"></a>
+# **SetItemDisplayOrders**
+> void SetItemDisplayOrders (int? menuId, int? menuSectionId, MenuObjectDisplayOrders displayOrders)
 
-Re-arrange Items within a Section
+
 
 ### Example
 ```csharp
@@ -547,7 +545,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class MenuSectionsSetItemDisplayOrdersExample
+    public class SetItemDisplayOrdersExample
     {
         public void main()
         {
@@ -555,18 +553,17 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuSectionsApi();
-            var menuId = 56;  // int? | Menu identifier
-            var menuSectionId = 56;  // int? | Menu section identifier
-            var displayOrders = new MenuObjectDisplayOrders(); // MenuObjectDisplayOrders | Item Ids and their new display order
+            var menuId = 56;  // int? | 
+            var menuSectionId = 56;  // int? | 
+            var displayOrders = new MenuObjectDisplayOrders(); // MenuObjectDisplayOrders | 
 
             try
             {
-                // Re-arrange Items within a Section
-                apiInstance.MenuSectionsSetItemDisplayOrders(menuId, menuSectionId, displayOrders);
+                apiInstance.SetItemDisplayOrders(menuId, menuSectionId, displayOrders);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MenuSectionsApi.MenuSectionsSetItemDisplayOrders: " + e.Message );
+                Debug.Print("Exception when calling MenuSectionsApi.SetItemDisplayOrders: " + e.Message );
             }
         }
     }
@@ -577,9 +574,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**| Menu identifier | 
- **menuSectionId** | **int?**| Menu section identifier | 
- **displayOrders** | [**MenuObjectDisplayOrders**](MenuObjectDisplayOrders.md)| Item Ids and their new display order | 
+ **menuId** | **int?**|  | 
+ **menuSectionId** | **int?**|  | 
+ **displayOrders** | [**MenuObjectDisplayOrders**](MenuObjectDisplayOrders.md)|  | 
 
 ### Return type
 
@@ -667,7 +664,7 @@ void (empty response body)
 # **UploadMenuSectionImage**
 > RestApiStringResult UploadMenuSectionImage (int? menuId, int? menuSectionId, System.IO.Stream image)
 
-Upload menu section image
+
 
 ### Example
 ```csharp
@@ -687,13 +684,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuSectionsApi();
-            var menuId = 56;  // int? | Menu identifier
-            var menuSectionId = 56;  // int? | Menu section identifier
+            var menuId = 56;  // int? | 
+            var menuSectionId = 56;  // int? | 
             var image = new System.IO.Stream(); // System.IO.Stream | Menu section image
 
             try
             {
-                // Upload menu section image
                 RestApiStringResult result = apiInstance.UploadMenuSectionImage(menuId, menuSectionId, image);
                 Debug.WriteLine(result);
             }
@@ -710,8 +706,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**| Menu identifier | 
- **menuSectionId** | **int?**| Menu section identifier | 
+ **menuId** | **int?**|  | 
+ **menuSectionId** | **int?**|  | 
  **image** | **System.IO.Stream**| Menu section image | 
 
 ### Return type

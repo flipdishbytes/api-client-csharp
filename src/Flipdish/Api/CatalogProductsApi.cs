@@ -25,10 +25,10 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Archive Product
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -37,10 +37,10 @@ namespace Flipdish.Api
         void ArchiveProduct (string appId, string catalogItemId);
 
         /// <summary>
-        /// Archive Product
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -48,10 +48,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ArchiveProductWithHttpInfo (string appId, string catalogItemId);
         /// <summary>
-        /// Create a Product
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -60,10 +60,10 @@ namespace Flipdish.Api
         RestApiResultProduct CreateProduct (string appId, CreateProduct createProduct);
 
         /// <summary>
-        /// Create a Product
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -71,10 +71,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiResultProduct</returns>
         ApiResponse<RestApiResultProduct> CreateProductWithHttpInfo (string appId, CreateProduct createProduct);
         /// <summary>
-        /// Duplicate Product
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -83,10 +83,10 @@ namespace Flipdish.Api
         void DuplicateProduct (string appId, string catalogItemId);
 
         /// <summary>
-        /// Duplicate Product
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -94,10 +94,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DuplicateProductWithHttpInfo (string appId, string catalogItemId);
         /// <summary>
-        /// Get Product by Id
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -106,10 +106,10 @@ namespace Flipdish.Api
         Product GetProductById (string appId, string catalogItemId);
 
         /// <summary>
-        /// Get Product by Id
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -117,10 +117,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of Product</returns>
         ApiResponse<Product> GetProductByIdWithHttpInfo (string appId, string catalogItemId);
         /// <summary>
-        /// Get paginated products by app name id filtered by types
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -132,10 +132,10 @@ namespace Flipdish.Api
         RestApiPaginationResultProduct GetProducts (string appId, List<string> productTypes, string searchTerm = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get paginated products by app name id filtered by types
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -146,10 +146,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiPaginationResultProduct</returns>
         ApiResponse<RestApiPaginationResultProduct> GetProductsWithHttpInfo (string appId, List<string> productTypes, string searchTerm = null, int? page = null, int? limit = null);
         /// <summary>
-        /// Update Product
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -159,10 +159,10 @@ namespace Flipdish.Api
         void UpdateProduct (string appId, string catalogItemId, UpdateProduct updateProduct);
 
         /// <summary>
-        /// Update Product
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -173,10 +173,10 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Archive Product
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -185,10 +185,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task ArchiveProductAsync (string appId, string catalogItemId);
 
         /// <summary>
-        /// Archive Product
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -196,10 +196,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ArchiveProductAsyncWithHttpInfo (string appId, string catalogItemId);
         /// <summary>
-        /// Create a Product
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -208,10 +208,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiResultProduct> CreateProductAsync (string appId, CreateProduct createProduct);
 
         /// <summary>
-        /// Create a Product
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -219,10 +219,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiResultProduct)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultProduct>> CreateProductAsyncWithHttpInfo (string appId, CreateProduct createProduct);
         /// <summary>
-        /// Duplicate Product
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -231,10 +231,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task DuplicateProductAsync (string appId, string catalogItemId);
 
         /// <summary>
-        /// Duplicate Product
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -242,10 +242,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DuplicateProductAsyncWithHttpInfo (string appId, string catalogItemId);
         /// <summary>
-        /// Get Product by Id
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -254,10 +254,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<Product> GetProductByIdAsync (string appId, string catalogItemId);
 
         /// <summary>
-        /// Get Product by Id
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -265,10 +265,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (Product)</returns>
         System.Threading.Tasks.Task<ApiResponse<Product>> GetProductByIdAsyncWithHttpInfo (string appId, string catalogItemId);
         /// <summary>
-        /// Get paginated products by app name id filtered by types
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -280,10 +280,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiPaginationResultProduct> GetProductsAsync (string appId, List<string> productTypes, string searchTerm = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get paginated products by app name id filtered by types
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -294,10 +294,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiPaginationResultProduct)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultProduct>> GetProductsAsyncWithHttpInfo (string appId, List<string> productTypes, string searchTerm = null, int? page = null, int? limit = null);
         /// <summary>
-        /// Update Product
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -307,10 +307,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task UpdateProductAsync (string appId, string catalogItemId, UpdateProduct updateProduct);
 
         /// <summary>
-        /// Update Product
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -419,7 +419,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Archive Product [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -431,7 +431,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Archive Product [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -499,7 +499,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Archive Product [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -512,7 +512,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Archive Product [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -580,7 +580,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a Product [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -593,7 +593,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a Product [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -673,7 +673,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a Product [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -687,7 +687,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create a Product [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -767,7 +767,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Duplicate Product [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -779,7 +779,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Duplicate Product [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -847,7 +847,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Duplicate Product [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -860,7 +860,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Duplicate Product [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -928,7 +928,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Product by Id [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -941,7 +941,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Product by Id [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1009,7 +1009,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Product by Id [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1023,7 +1023,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get Product by Id [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1091,7 +1091,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get paginated products by app name id filtered by types [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1107,7 +1107,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get paginated products by app name id filtered by types [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1181,7 +1181,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get paginated products by app name id filtered by types [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1198,7 +1198,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Get paginated products by app name id filtered by types [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1272,7 +1272,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update Product [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1285,7 +1285,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update Product [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1370,7 +1370,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update Product [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -1384,7 +1384,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update Product [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>

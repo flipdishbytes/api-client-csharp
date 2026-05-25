@@ -762,6 +762,29 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
+        /// <param name="propertyId"></param>
+        /// <returns></returns>
+        void SetPropertyId (int? storeId, string propertyId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="propertyId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> SetPropertyIdWithHttpInfo (int? storeId, string propertyId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
         /// <param name="settings"></param>
         /// <param name="inheritFromProperty"> (optional)</param>
         /// <returns>RestApiResultRestApiDefaultResponse</returns>
@@ -802,29 +825,6 @@ namespace Flipdish.Api
         /// <param name="leadTime"></param>
         /// <returns>ApiResponse of RestApiResultOrderLeadTimes</returns>
         ApiResponse<RestApiResultOrderLeadTimes> SetStoreLeadTimesWithHttpInfo (int? storeId, LeadTime leadTime);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId"></param>
-        /// <param name="propertyId"></param>
-        /// <returns>Object</returns>
-        Object StoresSetPropertyId (int? storeId, string propertyId);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId"></param>
-        /// <param name="propertyId"></param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> StoresSetPropertyIdWithHttpInfo (int? storeId, string propertyId);
         /// <summary>
         /// 
         /// </summary>
@@ -976,8 +976,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="address"></param>
-        /// <returns>Object</returns>
-        Object UpdateStoreAddressForm (int? storeId, StoreAddressForm address);
+        /// <returns></returns>
+        void UpdateStoreAddressForm (int? storeId, StoreAddressForm address);
 
         /// <summary>
         /// 
@@ -988,7 +988,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="address"></param>
-        /// <returns>ApiResponse of Object</returns>
+        /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateStoreAddressFormWithHttpInfo (int? storeId, StoreAddressForm address);
         #endregion Synchronous Operations
         #region Asynchronous Operations
@@ -1730,6 +1730,29 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
+        /// <param name="propertyId"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task SetPropertyIdAsync (int? storeId, string propertyId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="propertyId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> SetPropertyIdAsyncWithHttpInfo (int? storeId, string propertyId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
         /// <param name="settings"></param>
         /// <param name="inheritFromProperty"> (optional)</param>
         /// <returns>Task of RestApiResultRestApiDefaultResponse</returns>
@@ -1770,29 +1793,6 @@ namespace Flipdish.Api
         /// <param name="leadTime"></param>
         /// <returns>Task of ApiResponse (RestApiResultOrderLeadTimes)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultOrderLeadTimes>> SetStoreLeadTimesAsyncWithHttpInfo (int? storeId, LeadTime leadTime);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId"></param>
-        /// <param name="propertyId"></param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> StoresSetPropertyIdAsync (int? storeId, string propertyId);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId"></param>
-        /// <param name="propertyId"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> StoresSetPropertyIdAsyncWithHttpInfo (int? storeId, string propertyId);
         /// <summary>
         /// 
         /// </summary>
@@ -1944,8 +1944,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="address"></param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> UpdateStoreAddressFormAsync (int? storeId, StoreAddressForm address);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task UpdateStoreAddressFormAsync (int? storeId, StoreAddressForm address);
 
         /// <summary>
         /// 
@@ -1956,7 +1956,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="address"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateStoreAddressFormAsyncWithHttpInfo (int? storeId, StoreAddressForm address);
         #endregion Asynchronous Operations
     }
@@ -7173,6 +7173,167 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
+        /// <param name="propertyId"></param>
+        /// <returns></returns>
+        public void SetPropertyId (int? storeId, string propertyId)
+        {
+             SetPropertyIdWithHttpInfo(storeId, propertyId);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="propertyId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> SetPropertyIdWithHttpInfo (int? storeId, string propertyId)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->SetPropertyId");
+            // verify the required parameter 'propertyId' is set
+            if (propertyId == null)
+                throw new ApiException(400, "Missing required parameter 'propertyId' when calling StoresApi->SetPropertyId");
+
+            var localVarPath = "./api/v1.0/stores/{storeId}/propertyId/{propertyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (propertyId != null) localVarPathParams.Add("propertyId", this.Configuration.ApiClient.ParameterToString(propertyId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetPropertyId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="propertyId"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task SetPropertyIdAsync (int? storeId, string propertyId)
+        {
+             await SetPropertyIdAsyncWithHttpInfo(storeId, propertyId);
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
+        /// <param name="propertyId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetPropertyIdAsyncWithHttpInfo (int? storeId, string propertyId)
+        {
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->SetPropertyId");
+            // verify the required parameter 'propertyId' is set
+            if (propertyId == null)
+                throw new ApiException(400, "Missing required parameter 'propertyId' when calling StoresApi->SetPropertyId");
+
+            var localVarPath = "./api/v1.0/stores/{storeId}/propertyId/{propertyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (propertyId != null) localVarPathParams.Add("propertyId", this.Configuration.ApiClient.ParameterToString(propertyId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetPropertyId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storeId"></param>
         /// <param name="settings"></param>
         /// <param name="inheritFromProperty"> (optional)</param>
         /// <returns>RestApiResultRestApiDefaultResponse</returns>
@@ -7546,169 +7707,6 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultOrderLeadTimes>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultOrderLeadTimes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOrderLeadTimes)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId"></param>
-        /// <param name="propertyId"></param>
-        /// <returns>Object</returns>
-        public Object StoresSetPropertyId (int? storeId, string propertyId)
-        {
-             ApiResponse<Object> localVarResponse = StoresSetPropertyIdWithHttpInfo(storeId, propertyId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId"></param>
-        /// <param name="propertyId"></param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > StoresSetPropertyIdWithHttpInfo (int? storeId, string propertyId)
-        {
-            // verify the required parameter 'storeId' is set
-            if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->StoresSetPropertyId");
-            // verify the required parameter 'propertyId' is set
-            if (propertyId == null)
-                throw new ApiException(400, "Missing required parameter 'propertyId' when calling StoresApi->StoresSetPropertyId");
-
-            var localVarPath = "./api/v1.0/stores/{storeId}/propertyId/{propertyId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
-            if (propertyId != null) localVarPathParams.Add("propertyId", this.Configuration.ApiClient.ParameterToString(propertyId)); // path parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("StoresSetPropertyId", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId"></param>
-        /// <param name="propertyId"></param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> StoresSetPropertyIdAsync (int? storeId, string propertyId)
-        {
-             ApiResponse<Object> localVarResponse = await StoresSetPropertyIdAsyncWithHttpInfo(storeId, propertyId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storeId"></param>
-        /// <param name="propertyId"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> StoresSetPropertyIdAsyncWithHttpInfo (int? storeId, string propertyId)
-        {
-            // verify the required parameter 'storeId' is set
-            if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling StoresApi->StoresSetPropertyId");
-            // verify the required parameter 'propertyId' is set
-            if (propertyId == null)
-                throw new ApiException(400, "Missing required parameter 'propertyId' when calling StoresApi->StoresSetPropertyId");
-
-            var localVarPath = "./api/v1.0/stores/{storeId}/propertyId/{propertyId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
-            if (propertyId != null) localVarPathParams.Add("propertyId", this.Configuration.ApiClient.ParameterToString(propertyId)); // path parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("StoresSetPropertyId", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -8829,11 +8827,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="address"></param>
-        /// <returns>Object</returns>
-        public Object UpdateStoreAddressForm (int? storeId, StoreAddressForm address)
+        /// <returns></returns>
+        public void UpdateStoreAddressForm (int? storeId, StoreAddressForm address)
         {
-             ApiResponse<Object> localVarResponse = UpdateStoreAddressFormWithHttpInfo(storeId, address);
-             return localVarResponse.Data;
+             UpdateStoreAddressFormWithHttpInfo(storeId, address);
         }
 
         /// <summary>
@@ -8842,8 +8839,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="address"></param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > UpdateStoreAddressFormWithHttpInfo (int? storeId, StoreAddressForm address)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> UpdateStoreAddressFormWithHttpInfo (int? storeId, StoreAddressForm address)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
@@ -8913,7 +8910,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
         /// <summary>
@@ -8922,11 +8919,10 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="address"></param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> UpdateStoreAddressFormAsync (int? storeId, StoreAddressForm address)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task UpdateStoreAddressFormAsync (int? storeId, StoreAddressForm address)
         {
-             ApiResponse<Object> localVarResponse = await UpdateStoreAddressFormAsyncWithHttpInfo(storeId, address);
-             return localVarResponse.Data;
+             await UpdateStoreAddressFormAsyncWithHttpInfo(storeId, address);
 
         }
 
@@ -8936,7 +8932,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <param name="address"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateStoreAddressFormAsyncWithHttpInfo (int? storeId, StoreAddressForm address)
         {
             // verify the required parameter 'storeId' is set
@@ -9007,7 +9003,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
         }
 
     }

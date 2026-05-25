@@ -25,128 +25,128 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Clone menu section item
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns>RestApiResultMenuSectionItem</returns>
         RestApiResultMenuSectionItem CloneMenuSectionItem (int? menuId, int? menuSectionId, int? menuSectionItemId);
 
         /// <summary>
-        /// Clone menu section item
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns>ApiResponse of RestApiResultMenuSectionItem</returns>
         ApiResponse<RestApiResultMenuSectionItem> CloneMenuSectionItemWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId);
         /// <summary>
-        /// Create menu section item
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItem">Menu section item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItem"></param>
         /// <returns>Object</returns>
         Object CreateMenuSectionItem (int? menuId, int? menuSectionId, MenuSectionItemBase menuSectionItem);
 
         /// <summary>
-        /// Create menu section item
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItem">Menu section item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItem"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> CreateMenuSectionItemWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionItemBase menuSectionItem);
         /// <summary>
-        /// Create menu section items from a list of Catalog Items
+        /// 
         /// </summary>
         /// <remarks>
-        /// BETA - this endpoint is under development, do not use it in your production system
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="createFromCatalogItems">Information to create the new MenuSectionItems</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="createFromCatalogItems"></param>
         /// <returns>Object</returns>
         Object CreateMenuSectionItemFromCatalogItems (int? menuId, int? menuSectionId, CreateMenuSectionItemFromCatalogItems createFromCatalogItems);
 
         /// <summary>
-        /// Create menu section items from a list of Catalog Items
-        /// </summary>
-        /// <remarks>
-        /// BETA - this endpoint is under development, do not use it in your production system
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="createFromCatalogItems">Information to create the new MenuSectionItems</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> CreateMenuSectionItemFromCatalogItemsWithHttpInfo (int? menuId, int? menuSectionId, CreateMenuSectionItemFromCatalogItems createFromCatalogItems);
-        /// <summary>
-        /// Delete menu section item
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="createFromCatalogItems"></param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> CreateMenuSectionItemFromCatalogItemsWithHttpInfo (int? menuId, int? menuSectionId, CreateMenuSectionItemFromCatalogItems createFromCatalogItems);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns></returns>
         void DeleteMenuSectionItem (int? menuId, int? menuSectionId, int? menuSectionItemId);
 
         /// <summary>
-        /// Delete menu section item
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteMenuSectionItemWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId);
         /// <summary>
-        /// Delete menu section item image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns></returns>
         void DeleteMenuSectionItemImage (int? menuId, int? menuSectionId, int? menuSectionItemId);
 
         /// <summary>
-        /// Delete menu section item image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteMenuSectionItemImageWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId);
         /// <summary>
@@ -198,240 +198,240 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultMenuSectionItem</returns>
         ApiResponse<RestApiArrayResultMenuSectionItem> GetMenuItemsWithHttpInfo (int? menuId, int? menuSectionId);
         /// <summary>
-        /// Move an Item within a menu
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
-        /// <param name="menuSectionItemId">ID of Item to be moved</param>
-        /// <param name="destinationDisplayOrder">New Display Order of item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="destinationDisplayOrder"></param>
         /// <returns></returns>
         void MoveMenuItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder);
 
         /// <summary>
-        /// Move an Item within a menu
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
-        /// <param name="menuSectionItemId">ID of Item to be moved</param>
-        /// <param name="destinationDisplayOrder">New Display Order of item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="destinationDisplayOrder"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> MoveMenuItemWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder);
         /// <summary>
-        /// Set tax rate for menu item
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
-        /// <param name="menuSectionItemId">ID of Item to be moved</param>
-        /// <param name="taxRateId">tax rate to be set against item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="taxRateId"></param>
         /// <returns></returns>
         void SetSectionItemTax (int? menuId, int? menuSectionId, int? menuSectionItemId, int? taxRateId);
 
         /// <summary>
-        /// Set tax rate for menu item
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
-        /// <param name="menuSectionItemId">ID of Item to be moved</param>
-        /// <param name="taxRateId">tax rate to be set against item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="taxRateId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> SetSectionItemTaxWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? taxRateId);
         /// <summary>
-        /// Update menu section item
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuSectionItem">Menu section item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone (optional)</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuSectionItem"></param>
+        /// <param name="undoAfter"> (optional)</param>
         /// <returns></returns>
         void UpdateMenuSectionItem (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuSectionItemBase menuSectionItem, double? undoAfter = null);
 
         /// <summary>
-        /// Update menu section item
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuSectionItem">Menu section item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone (optional)</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuSectionItem"></param>
+        /// <param name="undoAfter"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateMenuSectionItemWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuSectionItemBase menuSectionItem, double? undoAfter = null);
         /// <summary>
-        /// Upload menu section item image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <param name="image">Menu section item image</param>
         /// <returns>RestApiStringResult</returns>
         RestApiStringResult UploadMenuSectionItemImage (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image);
 
         /// <summary>
-        /// Upload menu section item image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <param name="image">Menu section item image</param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
         ApiResponse<RestApiStringResult> UploadMenuSectionItemImageWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Clone menu section item
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns>Task of RestApiResultMenuSectionItem</returns>
         System.Threading.Tasks.Task<RestApiResultMenuSectionItem> CloneMenuSectionItemAsync (int? menuId, int? menuSectionId, int? menuSectionItemId);
 
         /// <summary>
-        /// Clone menu section item
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns>Task of ApiResponse (RestApiResultMenuSectionItem)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultMenuSectionItem>> CloneMenuSectionItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId);
         /// <summary>
-        /// Create menu section item
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItem">Menu section item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItem"></param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> CreateMenuSectionItemAsync (int? menuId, int? menuSectionId, MenuSectionItemBase menuSectionItem);
 
         /// <summary>
-        /// Create menu section item
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItem">Menu section item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItem"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSectionItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionItemBase menuSectionItem);
         /// <summary>
-        /// Create menu section items from a list of Catalog Items
+        /// 
         /// </summary>
         /// <remarks>
-        /// BETA - this endpoint is under development, do not use it in your production system
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="createFromCatalogItems">Information to create the new MenuSectionItems</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="createFromCatalogItems"></param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> CreateMenuSectionItemFromCatalogItemsAsync (int? menuId, int? menuSectionId, CreateMenuSectionItemFromCatalogItems createFromCatalogItems);
 
         /// <summary>
-        /// Create menu section items from a list of Catalog Items
-        /// </summary>
-        /// <remarks>
-        /// BETA - this endpoint is under development, do not use it in your production system
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="createFromCatalogItems">Information to create the new MenuSectionItems</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSectionItemFromCatalogItemsAsyncWithHttpInfo (int? menuId, int? menuSectionId, CreateMenuSectionItemFromCatalogItems createFromCatalogItems);
-        /// <summary>
-        /// Delete menu section item
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="createFromCatalogItems"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSectionItemFromCatalogItemsAsyncWithHttpInfo (int? menuId, int? menuSectionId, CreateMenuSectionItemFromCatalogItems createFromCatalogItems);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteMenuSectionItemAsync (int? menuId, int? menuSectionId, int? menuSectionItemId);
 
         /// <summary>
-        /// Delete menu section item
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuSectionItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId);
         /// <summary>
-        /// Delete menu section item image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteMenuSectionItemImageAsync (int? menuId, int? menuSectionId, int? menuSectionItemId);
 
         /// <summary>
-        /// Delete menu section item image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuSectionItemImageAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId);
         /// <summary>
@@ -483,112 +483,112 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultMenuSectionItem)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuSectionItem>> GetMenuItemsAsyncWithHttpInfo (int? menuId, int? menuSectionId);
         /// <summary>
-        /// Move an Item within a menu
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
-        /// <param name="menuSectionItemId">ID of Item to be moved</param>
-        /// <param name="destinationDisplayOrder">New Display Order of item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="destinationDisplayOrder"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task MoveMenuItemAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder);
 
         /// <summary>
-        /// Move an Item within a menu
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
-        /// <param name="menuSectionItemId">ID of Item to be moved</param>
-        /// <param name="destinationDisplayOrder">New Display Order of item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="destinationDisplayOrder"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> MoveMenuItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder);
         /// <summary>
-        /// Set tax rate for menu item
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
-        /// <param name="menuSectionItemId">ID of Item to be moved</param>
-        /// <param name="taxRateId">tax rate to be set against item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="taxRateId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task SetSectionItemTaxAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, int? taxRateId);
 
         /// <summary>
-        /// Set tax rate for menu item
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
-        /// <param name="menuSectionItemId">ID of Item to be moved</param>
-        /// <param name="taxRateId">tax rate to be set against item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="taxRateId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> SetSectionItemTaxAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? taxRateId);
         /// <summary>
-        /// Update menu section item
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuSectionItem">Menu section item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone (optional)</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuSectionItem"></param>
+        /// <param name="undoAfter"> (optional)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UpdateMenuSectionItemAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuSectionItemBase menuSectionItem, double? undoAfter = null);
 
         /// <summary>
-        /// Update menu section item
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuSectionItem">Menu section item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone (optional)</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuSectionItem"></param>
+        /// <param name="undoAfter"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateMenuSectionItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuSectionItemBase menuSectionItem, double? undoAfter = null);
         /// <summary>
-        /// Upload menu section item image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <param name="image">Menu section item image</param>
         /// <returns>Task of RestApiStringResult</returns>
         System.Threading.Tasks.Task<RestApiStringResult> UploadMenuSectionItemImageAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image);
 
         /// <summary>
-        /// Upload menu section item image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <param name="image">Menu section item image</param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> UploadMenuSectionItemImageAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image);
@@ -693,12 +693,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Clone menu section item 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns>RestApiResultMenuSectionItem</returns>
         public RestApiResultMenuSectionItem CloneMenuSectionItem (int? menuId, int? menuSectionId, int? menuSectionItemId)
         {
@@ -707,12 +707,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Clone menu section item 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns>ApiResponse of RestApiResultMenuSectionItem</returns>
         public ApiResponse< RestApiResultMenuSectionItem > CloneMenuSectionItemWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId)
         {
@@ -780,12 +780,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Clone menu section item 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns>Task of RestApiResultMenuSectionItem</returns>
         public async System.Threading.Tasks.Task<RestApiResultMenuSectionItem> CloneMenuSectionItemAsync (int? menuId, int? menuSectionId, int? menuSectionItemId)
         {
@@ -795,12 +795,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Clone menu section item 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns>Task of ApiResponse (RestApiResultMenuSectionItem)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiResultMenuSectionItem>> CloneMenuSectionItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId)
         {
@@ -868,12 +868,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create menu section item 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItem">Menu section item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItem"></param>
         /// <returns>Object</returns>
         public Object CreateMenuSectionItem (int? menuId, int? menuSectionId, MenuSectionItemBase menuSectionItem)
         {
@@ -882,12 +882,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create menu section item 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItem">Menu section item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItem"></param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > CreateMenuSectionItemWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionItemBase menuSectionItem)
         {
@@ -967,12 +967,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create menu section item 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItem">Menu section item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItem"></param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> CreateMenuSectionItemAsync (int? menuId, int? menuSectionId, MenuSectionItemBase menuSectionItem)
         {
@@ -982,12 +982,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create menu section item 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItem">Menu section item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItem"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSectionItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, MenuSectionItemBase menuSectionItem)
         {
@@ -1067,12 +1067,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create menu section items from a list of Catalog Items BETA - this endpoint is under development, do not use it in your production system
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="createFromCatalogItems">Information to create the new MenuSectionItems</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="createFromCatalogItems"></param>
         /// <returns>Object</returns>
         public Object CreateMenuSectionItemFromCatalogItems (int? menuId, int? menuSectionId, CreateMenuSectionItemFromCatalogItems createFromCatalogItems)
         {
@@ -1081,12 +1081,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create menu section items from a list of Catalog Items BETA - this endpoint is under development, do not use it in your production system
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="createFromCatalogItems">Information to create the new MenuSectionItems</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="createFromCatalogItems"></param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > CreateMenuSectionItemFromCatalogItemsWithHttpInfo (int? menuId, int? menuSectionId, CreateMenuSectionItemFromCatalogItems createFromCatalogItems)
         {
@@ -1166,12 +1166,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create menu section items from a list of Catalog Items BETA - this endpoint is under development, do not use it in your production system
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="createFromCatalogItems">Information to create the new MenuSectionItems</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="createFromCatalogItems"></param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> CreateMenuSectionItemFromCatalogItemsAsync (int? menuId, int? menuSectionId, CreateMenuSectionItemFromCatalogItems createFromCatalogItems)
         {
@@ -1181,12 +1181,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create menu section items from a list of Catalog Items BETA - this endpoint is under development, do not use it in your production system
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="createFromCatalogItems">Information to create the new MenuSectionItems</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="createFromCatalogItems"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuSectionItemFromCatalogItemsAsyncWithHttpInfo (int? menuId, int? menuSectionId, CreateMenuSectionItemFromCatalogItems createFromCatalogItems)
         {
@@ -1266,12 +1266,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete menu section item 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns></returns>
         public void DeleteMenuSectionItem (int? menuId, int? menuSectionId, int? menuSectionItemId)
         {
@@ -1279,12 +1279,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete menu section item 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteMenuSectionItemWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId)
         {
@@ -1352,12 +1352,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete menu section item 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteMenuSectionItemAsync (int? menuId, int? menuSectionId, int? menuSectionItemId)
         {
@@ -1366,12 +1366,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete menu section item 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuSectionItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId)
         {
@@ -1439,12 +1439,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete menu section item image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns></returns>
         public void DeleteMenuSectionItemImage (int? menuId, int? menuSectionId, int? menuSectionItemId)
         {
@@ -1452,12 +1452,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete menu section item image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteMenuSectionItemImageWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId)
         {
@@ -1525,12 +1525,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete menu section item image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteMenuSectionItemImageAsync (int? menuId, int? menuSectionId, int? menuSectionItemId)
         {
@@ -1539,12 +1539,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete menu section item image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuSectionItemImageAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId)
         {
@@ -1950,13 +1950,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Move an Item within a menu 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
-        /// <param name="menuSectionItemId">ID of Item to be moved</param>
-        /// <param name="destinationDisplayOrder">New Display Order of item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="destinationDisplayOrder"></param>
         /// <returns></returns>
         public void MoveMenuItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder)
         {
@@ -1964,13 +1964,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Move an Item within a menu 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
-        /// <param name="menuSectionItemId">ID of Item to be moved</param>
-        /// <param name="destinationDisplayOrder">New Display Order of item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="destinationDisplayOrder"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> MoveMenuItemWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder)
         {
@@ -2042,13 +2042,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Move an Item within a menu 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
-        /// <param name="menuSectionItemId">ID of Item to be moved</param>
-        /// <param name="destinationDisplayOrder">New Display Order of item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="destinationDisplayOrder"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task MoveMenuItemAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder)
         {
@@ -2057,13 +2057,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Move an Item within a menu 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
-        /// <param name="menuSectionItemId">ID of Item to be moved</param>
-        /// <param name="destinationDisplayOrder">New Display Order of item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="destinationDisplayOrder"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> MoveMenuItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? destinationDisplayOrder)
         {
@@ -2135,13 +2135,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set tax rate for menu item 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
-        /// <param name="menuSectionItemId">ID of Item to be moved</param>
-        /// <param name="taxRateId">tax rate to be set against item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="taxRateId"></param>
         /// <returns></returns>
         public void SetSectionItemTax (int? menuId, int? menuSectionId, int? menuSectionItemId, int? taxRateId)
         {
@@ -2149,13 +2149,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set tax rate for menu item 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
-        /// <param name="menuSectionItemId">ID of Item to be moved</param>
-        /// <param name="taxRateId">tax rate to be set against item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="taxRateId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> SetSectionItemTaxWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? taxRateId)
         {
@@ -2227,13 +2227,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set tax rate for menu item 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
-        /// <param name="menuSectionItemId">ID of Item to be moved</param>
-        /// <param name="taxRateId">tax rate to be set against item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="taxRateId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task SetSectionItemTaxAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, int? taxRateId)
         {
@@ -2242,13 +2242,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Set tax rate for menu item 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Section to put item in (will usually be original section)</param>
-        /// <param name="menuSectionItemId">ID of Item to be moved</param>
-        /// <param name="taxRateId">tax rate to be set against item</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="taxRateId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> SetSectionItemTaxAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? taxRateId)
         {
@@ -2320,14 +2320,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update menu section item 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuSectionItem">Menu section item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone (optional)</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuSectionItem"></param>
+        /// <param name="undoAfter"> (optional)</param>
         /// <returns></returns>
         public void UpdateMenuSectionItem (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuSectionItemBase menuSectionItem, double? undoAfter = null)
         {
@@ -2335,14 +2335,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update menu section item 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuSectionItem">Menu section item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone (optional)</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuSectionItem"></param>
+        /// <param name="undoAfter"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> UpdateMenuSectionItemWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuSectionItemBase menuSectionItem, double? undoAfter = null)
         {
@@ -2427,14 +2427,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update menu section item 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuSectionItem">Menu section item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone (optional)</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuSectionItem"></param>
+        /// <param name="undoAfter"> (optional)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UpdateMenuSectionItemAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuSectionItemBase menuSectionItem, double? undoAfter = null)
         {
@@ -2443,14 +2443,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update menu section item 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuSectionItem">Menu section item (delta)</param>
-        /// <param name="undoAfter">An optional time period, in hours, after which the hide-section operation will be undone (optional)</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuSectionItem"></param>
+        /// <param name="undoAfter"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateMenuSectionItemAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuSectionItemBase menuSectionItem, double? undoAfter = null)
         {
@@ -2535,12 +2535,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload menu section item image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <param name="image">Menu section item image</param>
         /// <returns>RestApiStringResult</returns>
         public RestApiStringResult UploadMenuSectionItemImage (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image)
@@ -2550,12 +2550,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload menu section item image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <param name="image">Menu section item image</param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
         public ApiResponse< RestApiStringResult > UploadMenuSectionItemImageWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image)
@@ -2629,12 +2629,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload menu section item image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <param name="image">Menu section item image</param>
         /// <returns>Task of RestApiStringResult</returns>
         public async System.Threading.Tasks.Task<RestApiStringResult> UploadMenuSectionItemImageAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image)
@@ -2645,12 +2645,12 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload menu section item image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
         /// <param name="image">Menu section item image</param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> UploadMenuSectionItemImageAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, System.IO.Stream image)

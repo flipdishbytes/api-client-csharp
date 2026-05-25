@@ -25,10 +25,10 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Upload a Catalog Image
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -37,10 +37,10 @@ namespace Flipdish.Api
         CatalogImage UploadCatalogImage (string appId, System.IO.Stream image);
 
         /// <summary>
-        /// Upload a Catalog Image
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -50,10 +50,10 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Upload a Catalog Image
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -62,10 +62,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<CatalogImage> UploadCatalogImageAsync (string appId, System.IO.Stream image);
 
         /// <summary>
-        /// Upload a Catalog Image
+        /// 
         /// </summary>
         /// <remarks>
-        /// [BETA - this endpoint is under development, do not use it in your production system]
+        /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -173,7 +173,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload a Catalog Image [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -186,7 +186,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload a Catalog Image [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -255,7 +255,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload a Catalog Image [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -269,7 +269,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload a Catalog Image [BETA - this endpoint is under development, do not use it in your production system]
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>

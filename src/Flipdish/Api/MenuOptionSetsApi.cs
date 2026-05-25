@@ -25,84 +25,84 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create menu item option set
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuItemOptionSet">Menu item option set</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuItemOptionSet"></param>
         /// <returns>Object</returns>
         Object CreateMenuItemOptionSet (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuItemOptionSetBase menuItemOptionSet);
 
         /// <summary>
-        /// Create menu item option set
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuItemOptionSet">Menu item option set</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuItemOptionSet"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> CreateMenuItemOptionSetWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuItemOptionSetBase menuItemOptionSet);
         /// <summary>
-        /// Delete menu item option set
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="optionSetId"></param>
         /// <returns></returns>
         void DeleteMenuItemOptionSet (int? menuId, int? menuSectionItemId, int? menuSectionId, int? optionSetId);
 
         /// <summary>
-        /// Delete menu item option set
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="optionSetId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteMenuItemOptionSetWithHttpInfo (int? menuId, int? menuSectionItemId, int? menuSectionId, int? optionSetId);
         /// <summary>
-        /// Delete option set image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
         /// <returns></returns>
         void DeleteOptionSetImage (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId);
 
         /// <summary>
-        /// Delete option set image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteOptionSetImageWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId);
         /// <summary>
@@ -158,144 +158,144 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultMenuItemOptionSet</returns>
         ApiResponse<RestApiArrayResultMenuItemOptionSet> GetMenuItemOptionSetsWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId);
         /// <summary>
-        /// Update menu item option set
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
-        /// <param name="menuItemOptionSet">Menu item option set (delta)</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
+        /// <param name="menuItemOptionSet"></param>
         /// <returns></returns>
         void UpdateMenuItemOptionSet (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, MenuItemOptionSetBase menuItemOptionSet);
 
         /// <summary>
-        /// Update menu item option set
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
-        /// <param name="menuItemOptionSet">Menu item option set (delta)</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
+        /// <param name="menuItemOptionSet"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateMenuItemOptionSetWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, MenuItemOptionSetBase menuItemOptionSet);
         /// <summary>
-        /// Upload menu item option set image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
         /// <param name="image">Option set image</param>
         /// <returns>RestApiStringResult</returns>
         RestApiStringResult UploadOptionSetImage (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, System.IO.Stream image);
 
         /// <summary>
-        /// Upload menu item option set image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
         /// <param name="image">Option set image</param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
         ApiResponse<RestApiStringResult> UploadOptionSetImageWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, System.IO.Stream image);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create menu item option set
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuItemOptionSet">Menu item option set</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuItemOptionSet"></param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> CreateMenuItemOptionSetAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuItemOptionSetBase menuItemOptionSet);
 
         /// <summary>
-        /// Create menu item option set
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuItemOptionSet">Menu item option set</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuItemOptionSet"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuItemOptionSetAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuItemOptionSetBase menuItemOptionSet);
         /// <summary>
-        /// Delete menu item option set
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="optionSetId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteMenuItemOptionSetAsync (int? menuId, int? menuSectionItemId, int? menuSectionId, int? optionSetId);
 
         /// <summary>
-        /// Delete menu item option set
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="optionSetId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuItemOptionSetAsyncWithHttpInfo (int? menuId, int? menuSectionItemId, int? menuSectionId, int? optionSetId);
         /// <summary>
-        /// Delete option set image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteOptionSetImageAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId);
 
         /// <summary>
-        /// Delete option set image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOptionSetImageAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId);
         /// <summary>
@@ -351,60 +351,60 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultMenuItemOptionSet)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultMenuItemOptionSet>> GetMenuItemOptionSetsAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId);
         /// <summary>
-        /// Update menu item option set
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
-        /// <param name="menuItemOptionSet">Menu item option set (delta)</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
+        /// <param name="menuItemOptionSet"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UpdateMenuItemOptionSetAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, MenuItemOptionSetBase menuItemOptionSet);
 
         /// <summary>
-        /// Update menu item option set
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
-        /// <param name="menuItemOptionSet">Menu item option set (delta)</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
+        /// <param name="menuItemOptionSet"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateMenuItemOptionSetAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, MenuItemOptionSetBase menuItemOptionSet);
         /// <summary>
-        /// Upload menu item option set image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
         /// <param name="image">Option set image</param>
         /// <returns>Task of RestApiStringResult</returns>
         System.Threading.Tasks.Task<RestApiStringResult> UploadOptionSetImageAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, System.IO.Stream image);
 
         /// <summary>
-        /// Upload menu item option set image
+        /// 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
         /// <param name="image">Option set image</param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> UploadOptionSetImageAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, System.IO.Stream image);
@@ -509,13 +509,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create menu item option set 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuItemOptionSet">Menu item option set</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuItemOptionSet"></param>
         /// <returns>Object</returns>
         public Object CreateMenuItemOptionSet (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuItemOptionSetBase menuItemOptionSet)
         {
@@ -524,13 +524,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create menu item option set 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuItemOptionSet">Menu item option set</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuItemOptionSet"></param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > CreateMenuItemOptionSetWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuItemOptionSetBase menuItemOptionSet)
         {
@@ -614,13 +614,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create menu item option set 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuItemOptionSet">Menu item option set</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuItemOptionSet"></param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> CreateMenuItemOptionSetAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuItemOptionSetBase menuItemOptionSet)
         {
@@ -630,13 +630,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Create menu item option set 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuItemOptionSet">Menu item option set</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuItemOptionSet"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateMenuItemOptionSetAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuItemOptionSetBase menuItemOptionSet)
         {
@@ -720,13 +720,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete menu item option set 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="optionSetId"></param>
         /// <returns></returns>
         public void DeleteMenuItemOptionSet (int? menuId, int? menuSectionItemId, int? menuSectionId, int? optionSetId)
         {
@@ -734,13 +734,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete menu item option set 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="optionSetId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteMenuItemOptionSetWithHttpInfo (int? menuId, int? menuSectionItemId, int? menuSectionId, int? optionSetId)
         {
@@ -812,13 +812,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete menu item option set 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="optionSetId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteMenuItemOptionSetAsync (int? menuId, int? menuSectionItemId, int? menuSectionId, int? optionSetId)
         {
@@ -827,13 +827,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete menu item option set 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="optionSetId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMenuItemOptionSetAsyncWithHttpInfo (int? menuId, int? menuSectionItemId, int? menuSectionId, int? optionSetId)
         {
@@ -905,13 +905,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete option set image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
         /// <returns></returns>
         public void DeleteOptionSetImage (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId)
         {
@@ -919,13 +919,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete option set image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteOptionSetImageWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId)
         {
@@ -997,13 +997,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete option set image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteOptionSetImageAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId)
         {
@@ -1012,13 +1012,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Delete option set image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOptionSetImageAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId)
         {
@@ -1452,14 +1452,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update menu item option set 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
-        /// <param name="menuItemOptionSet">Menu item option set (delta)</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
+        /// <param name="menuItemOptionSet"></param>
         /// <returns></returns>
         public void UpdateMenuItemOptionSet (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, MenuItemOptionSetBase menuItemOptionSet)
         {
@@ -1467,14 +1467,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update menu item option set 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
-        /// <param name="menuItemOptionSet">Menu item option set (delta)</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
+        /// <param name="menuItemOptionSet"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> UpdateMenuItemOptionSetWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, MenuItemOptionSetBase menuItemOptionSet)
         {
@@ -1562,14 +1562,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update menu item option set 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
-        /// <param name="menuItemOptionSet">Menu item option set (delta)</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
+        /// <param name="menuItemOptionSet"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UpdateMenuItemOptionSetAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, MenuItemOptionSetBase menuItemOptionSet)
         {
@@ -1578,14 +1578,14 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Update menu item option set 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
-        /// <param name="menuItemOptionSet">Menu item option set (delta)</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
+        /// <param name="menuItemOptionSet"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateMenuItemOptionSetAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, MenuItemOptionSetBase menuItemOptionSet)
         {
@@ -1673,13 +1673,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload menu item option set image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
         /// <param name="image">Option set image</param>
         /// <returns>RestApiStringResult</returns>
         public RestApiStringResult UploadOptionSetImage (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, System.IO.Stream image)
@@ -1689,13 +1689,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload menu item option set image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
         /// <param name="image">Option set image</param>
         /// <returns>ApiResponse of RestApiStringResult</returns>
         public ApiResponse< RestApiStringResult > UploadOptionSetImageWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, System.IO.Stream image)
@@ -1773,13 +1773,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload menu item option set image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
         /// <param name="image">Option set image</param>
         /// <returns>Task of RestApiStringResult</returns>
         public async System.Threading.Tasks.Task<RestApiStringResult> UploadOptionSetImageAsync (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, System.IO.Stream image)
@@ -1790,13 +1790,13 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        /// Upload menu item option set image 
+        ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="menuId">Menu identifier</param>
-        /// <param name="menuSectionId">Menu section identifier</param>
-        /// <param name="menuSectionItemId">Menu section item identifier</param>
-        /// <param name="optionSetId">Option set identifier</param>
+        /// <param name="menuId"></param>
+        /// <param name="menuSectionId"></param>
+        /// <param name="menuSectionItemId"></param>
+        /// <param name="optionSetId"></param>
         /// <param name="image">Option set image</param>
         /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> UploadOptionSetImageAsyncWithHttpInfo (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, System.IO.Stream image)

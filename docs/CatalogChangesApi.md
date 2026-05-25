@@ -4,18 +4,16 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetPendingMenuChanges**](CatalogChangesApi.md#getpendingmenuchanges) | **GET** /api/v1.0/{appId}/menus/catalog-changes | Get menu pending changes from Catalog groups and items
-[**GetPendingMenuChangesSummaries**](CatalogChangesApi.md#getpendingmenuchangessummaries) | **GET** /api/v1.0/{appId}/menus/catalog-changes/summaries | Get menu pending changes summaries by appId
-[**PublishPendingMenuChanges**](CatalogChangesApi.md#publishpendingmenuchanges) | **POST** /api/v1.0/{appId}/menus/catalog-changes/publish | Update menus with the pending changes from Catalog groups and items
+[**GetPendingMenuChanges**](CatalogChangesApi.md#getpendingmenuchanges) | **GET** /api/v1.0/{appId}/menus/catalog-changes | 
+[**GetPendingMenuChangesSummaries**](CatalogChangesApi.md#getpendingmenuchangessummaries) | **GET** /api/v1.0/{appId}/menus/catalog-changes/summaries | 
+[**PublishPendingMenuChanges**](CatalogChangesApi.md#publishpendingmenuchanges) | **POST** /api/v1.0/{appId}/menus/catalog-changes/publish | 
 
 
 <a name="getpendingmenuchanges"></a>
 # **GetPendingMenuChanges**
 > RestApiPaginationResultPendingMenuChanges GetPendingMenuChanges (string appId, int? menuId = null, string catalogItemId = null, int? page = null, int? limit = null)
 
-Get menu pending changes from Catalog groups and items
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -43,7 +41,6 @@ namespace Example
 
             try
             {
-                // Get menu pending changes from Catalog groups and items
                 RestApiPaginationResultPendingMenuChanges result = apiInstance.GetPendingMenuChanges(appId, menuId, catalogItemId, page, limit);
                 Debug.WriteLine(result);
             }
@@ -85,7 +82,7 @@ Name | Type | Description  | Notes
 # **GetPendingMenuChangesSummaries**
 > RestApiArrayResultPendingMenuChangesSummaries GetPendingMenuChangesSummaries (string appId)
 
-Get menu pending changes summaries by appId
+
 
 ### Example
 ```csharp
@@ -109,7 +106,6 @@ namespace Example
 
             try
             {
-                // Get menu pending changes summaries by appId
                 RestApiArrayResultPendingMenuChangesSummaries result = apiInstance.GetPendingMenuChangesSummaries(appId);
                 Debug.WriteLine(result);
             }
@@ -147,9 +143,7 @@ Name | Type | Description  | Notes
 # **PublishPendingMenuChanges**
 > void PublishPendingMenuChanges (string appId, PublishMenuChanges publishMenuChanges)
 
-Update menus with the pending changes from Catalog groups and items
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -174,7 +168,6 @@ namespace Example
 
             try
             {
-                // Update menus with the pending changes from Catalog groups and items
                 apiInstance.PublishPendingMenuChanges(appId, publishMenuChanges);
             }
             catch (Exception e)

@@ -4,19 +4,19 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**OnboardingGetOnboardingConfig**](OnboardingApi.md#onboardinggetonboardingconfig) | **GET** /api/v1.0/clients/{appId}/onboarding/config | 
-[**OnboardingGetOnboardingConfigs**](OnboardingApi.md#onboardinggetonboardingconfigs) | **GET** /api/v1.0/clients/{appId}/onboarding/configs | 
-[**OnboardingGetOnboardingItems**](OnboardingApi.md#onboardinggetonboardingitems) | **GET** /api/v1.0/clients/{appId}/onboarding/stores/{storeId} | 
-[**OnboardingGetOnboardingItemsV2**](OnboardingApi.md#onboardinggetonboardingitemsv2) | **GET** /api/v1.0/clients/{appId}/onboarding/stores | 
-[**OnboardingUpdateOnboardingConfig**](OnboardingApi.md#onboardingupdateonboardingconfig) | **POST** /api/v1.0/clients/{appId}/onboarding/config | 
-[**OnboardingUpdateOnboardingConfigById**](OnboardingApi.md#onboardingupdateonboardingconfigbyid) | **POST** /api/v1.0/clients/{appId}/onboarding/config/{configId} | 
-[**OnboardingUpdateOnboardingItem**](OnboardingApi.md#onboardingupdateonboardingitem) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId} | 
-[**OnboardingUpdateOnboardingItemV2**](OnboardingApi.md#onboardingupdateonboardingitemv2) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/items/{onboardingItemId} | 
+[**GetOnboardingConfig**](OnboardingApi.md#getonboardingconfig) | **GET** /api/v1.0/clients/{appId}/onboarding/config | 
+[**GetOnboardingConfigs**](OnboardingApi.md#getonboardingconfigs) | **GET** /api/v1.0/clients/{appId}/onboarding/configs | 
+[**GetOnboardingItems**](OnboardingApi.md#getonboardingitems) | **GET** /api/v1.0/clients/{appId}/onboarding/stores/{storeId} | 
+[**GetOnboardingItemsV2**](OnboardingApi.md#getonboardingitemsv2) | **GET** /api/v1.0/clients/{appId}/onboarding/stores | 
+[**UpdateOnboardingConfig**](OnboardingApi.md#updateonboardingconfig) | **POST** /api/v1.0/clients/{appId}/onboarding/config | 
+[**UpdateOnboardingConfigById**](OnboardingApi.md#updateonboardingconfigbyid) | **POST** /api/v1.0/clients/{appId}/onboarding/config/{configId} | 
+[**UpdateOnboardingItem**](OnboardingApi.md#updateonboardingitem) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId} | 
+[**UpdateOnboardingItemV2**](OnboardingApi.md#updateonboardingitemv2) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/items/{onboardingItemId} | 
 
 
-<a name="onboardinggetonboardingconfig"></a>
-# **OnboardingGetOnboardingConfig**
-> Object OnboardingGetOnboardingConfig (string appId)
+<a name="getonboardingconfig"></a>
+# **GetOnboardingConfig**
+> RestApiResultOnboardingConfig GetOnboardingConfig (string appId)
 
 
 
@@ -30,7 +30,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class OnboardingGetOnboardingConfigExample
+    public class GetOnboardingConfigExample
     {
         public void main()
         {
@@ -42,12 +42,12 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.OnboardingGetOnboardingConfig(appId);
+                RestApiResultOnboardingConfig result = apiInstance.GetOnboardingConfig(appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OnboardingApi.OnboardingGetOnboardingConfig: " + e.Message );
+                Debug.Print("Exception when calling OnboardingApi.GetOnboardingConfig: " + e.Message );
             }
         }
     }
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**RestApiResultOnboardingConfig**](RestApiResultOnboardingConfig.md)
 
 ### Authorization
 
@@ -75,9 +75,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="onboardinggetonboardingconfigs"></a>
-# **OnboardingGetOnboardingConfigs**
-> Object OnboardingGetOnboardingConfigs (string appId)
+<a name="getonboardingconfigs"></a>
+# **GetOnboardingConfigs**
+> RestApiArrayResultOnboardingConfig GetOnboardingConfigs (string appId)
 
 
 
@@ -91,7 +91,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class OnboardingGetOnboardingConfigsExample
+    public class GetOnboardingConfigsExample
     {
         public void main()
         {
@@ -103,12 +103,12 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.OnboardingGetOnboardingConfigs(appId);
+                RestApiArrayResultOnboardingConfig result = apiInstance.GetOnboardingConfigs(appId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OnboardingApi.OnboardingGetOnboardingConfigs: " + e.Message );
+                Debug.Print("Exception when calling OnboardingApi.GetOnboardingConfigs: " + e.Message );
             }
         }
     }
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**RestApiArrayResultOnboardingConfig**](RestApiArrayResultOnboardingConfig.md)
 
 ### Authorization
 
@@ -136,9 +136,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="onboardinggetonboardingitems"></a>
-# **OnboardingGetOnboardingItems**
-> Object OnboardingGetOnboardingItems (string appId, int? storeId, int? milestoneId = null)
+<a name="getonboardingitems"></a>
+# **GetOnboardingItems**
+> RestApiResultOnboardingProcess GetOnboardingItems (string appId, int? storeId, int? milestoneId = null)
 
 
 
@@ -152,7 +152,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class OnboardingGetOnboardingItemsExample
+    public class GetOnboardingItemsExample
     {
         public void main()
         {
@@ -166,12 +166,12 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.OnboardingGetOnboardingItems(appId, storeId, milestoneId);
+                RestApiResultOnboardingProcess result = apiInstance.GetOnboardingItems(appId, storeId, milestoneId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OnboardingApi.OnboardingGetOnboardingItems: " + e.Message );
+                Debug.Print("Exception when calling OnboardingApi.GetOnboardingItems: " + e.Message );
             }
         }
     }
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**RestApiResultOnboardingProcess**](RestApiResultOnboardingProcess.md)
 
 ### Authorization
 
@@ -201,9 +201,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="onboardinggetonboardingitemsv2"></a>
-# **OnboardingGetOnboardingItemsV2**
-> Object OnboardingGetOnboardingItemsV2 (string appId, int? storeId = null, int? milestoneId = null)
+<a name="getonboardingitemsv2"></a>
+# **GetOnboardingItemsV2**
+> RestApiResultOnboardingProcess GetOnboardingItemsV2 (string appId, int? storeId = null, int? milestoneId = null)
 
 
 
@@ -217,7 +217,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class OnboardingGetOnboardingItemsV2Example
+    public class GetOnboardingItemsV2Example
     {
         public void main()
         {
@@ -231,12 +231,12 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.OnboardingGetOnboardingItemsV2(appId, storeId, milestoneId);
+                RestApiResultOnboardingProcess result = apiInstance.GetOnboardingItemsV2(appId, storeId, milestoneId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OnboardingApi.OnboardingGetOnboardingItemsV2: " + e.Message );
+                Debug.Print("Exception when calling OnboardingApi.GetOnboardingItemsV2: " + e.Message );
             }
         }
     }
@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**RestApiResultOnboardingProcess**](RestApiResultOnboardingProcess.md)
 
 ### Authorization
 
@@ -266,9 +266,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="onboardingupdateonboardingconfig"></a>
-# **OnboardingUpdateOnboardingConfig**
-> Object OnboardingUpdateOnboardingConfig (string appId, OnboardingConfigUpdate configUpdate)
+<a name="updateonboardingconfig"></a>
+# **UpdateOnboardingConfig**
+> void UpdateOnboardingConfig (string appId, OnboardingConfigUpdate configUpdate)
 
 
 
@@ -282,7 +282,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class OnboardingUpdateOnboardingConfigExample
+    public class UpdateOnboardingConfigExample
     {
         public void main()
         {
@@ -295,12 +295,11 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.OnboardingUpdateOnboardingConfig(appId, configUpdate);
-                Debug.WriteLine(result);
+                apiInstance.UpdateOnboardingConfig(appId, configUpdate);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OnboardingApi.OnboardingUpdateOnboardingConfig: " + e.Message );
+                Debug.Print("Exception when calling OnboardingApi.UpdateOnboardingConfig: " + e.Message );
             }
         }
     }
@@ -316,7 +315,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+void (empty response body)
 
 ### Authorization
 
@@ -329,9 +328,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="onboardingupdateonboardingconfigbyid"></a>
-# **OnboardingUpdateOnboardingConfigById**
-> Object OnboardingUpdateOnboardingConfigById (string appId, int? configId, OnboardingConfigUpdate configUpdate)
+<a name="updateonboardingconfigbyid"></a>
+# **UpdateOnboardingConfigById**
+> void UpdateOnboardingConfigById (string appId, int? configId, OnboardingConfigUpdate configUpdate)
 
 
 
@@ -345,7 +344,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class OnboardingUpdateOnboardingConfigByIdExample
+    public class UpdateOnboardingConfigByIdExample
     {
         public void main()
         {
@@ -359,12 +358,11 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.OnboardingUpdateOnboardingConfigById(appId, configId, configUpdate);
-                Debug.WriteLine(result);
+                apiInstance.UpdateOnboardingConfigById(appId, configId, configUpdate);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OnboardingApi.OnboardingUpdateOnboardingConfigById: " + e.Message );
+                Debug.Print("Exception when calling OnboardingApi.UpdateOnboardingConfigById: " + e.Message );
             }
         }
     }
@@ -381,7 +379,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+void (empty response body)
 
 ### Authorization
 
@@ -394,9 +392,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="onboardingupdateonboardingitem"></a>
-# **OnboardingUpdateOnboardingItem**
-> Object OnboardingUpdateOnboardingItem (string appId, int? storeId, int? onboardingItemId, OnboardingItemUpdate itemUpdate)
+<a name="updateonboardingitem"></a>
+# **UpdateOnboardingItem**
+> void UpdateOnboardingItem (string appId, int? storeId, int? onboardingItemId, OnboardingItemUpdate itemUpdate)
 
 
 
@@ -410,7 +408,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class OnboardingUpdateOnboardingItemExample
+    public class UpdateOnboardingItemExample
     {
         public void main()
         {
@@ -425,12 +423,11 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.OnboardingUpdateOnboardingItem(appId, storeId, onboardingItemId, itemUpdate);
-                Debug.WriteLine(result);
+                apiInstance.UpdateOnboardingItem(appId, storeId, onboardingItemId, itemUpdate);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OnboardingApi.OnboardingUpdateOnboardingItem: " + e.Message );
+                Debug.Print("Exception when calling OnboardingApi.UpdateOnboardingItem: " + e.Message );
             }
         }
     }
@@ -448,7 +445,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+void (empty response body)
 
 ### Authorization
 
@@ -461,9 +458,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="onboardingupdateonboardingitemv2"></a>
-# **OnboardingUpdateOnboardingItemV2**
-> Object OnboardingUpdateOnboardingItemV2 (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null)
+<a name="updateonboardingitemv2"></a>
+# **UpdateOnboardingItemV2**
+> void UpdateOnboardingItemV2 (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null)
 
 
 
@@ -477,7 +474,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class OnboardingUpdateOnboardingItemV2Example
+    public class UpdateOnboardingItemV2Example
     {
         public void main()
         {
@@ -492,12 +489,11 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.OnboardingUpdateOnboardingItemV2(appId, onboardingItemId, itemUpdate, storeId);
-                Debug.WriteLine(result);
+                apiInstance.UpdateOnboardingItemV2(appId, onboardingItemId, itemUpdate, storeId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OnboardingApi.OnboardingUpdateOnboardingItemV2: " + e.Message );
+                Debug.Print("Exception when calling OnboardingApi.UpdateOnboardingItemV2: " + e.Message );
             }
         }
     }
@@ -515,7 +511,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+void (empty response body)
 
 ### Authorization
 

@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 <a name="attachstoretosaleschannel"></a>
 # **AttachStoreToSalesChannel**
-> Object AttachStoreToSalesChannel (string appId, int? channelId, int? storeId)
+> void AttachStoreToSalesChannel (string appId, int? channelId, int? storeId)
 
 
 
@@ -176,8 +176,7 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.AttachStoreToSalesChannel(appId, channelId, storeId);
-                Debug.WriteLine(result);
+                apiInstance.AttachStoreToSalesChannel(appId, channelId, storeId);
             }
             catch (Exception e)
             {
@@ -198,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+void (empty response body)
 
 ### Authorization
 
@@ -213,7 +212,7 @@ Name | Type | Description  | Notes
 
 <a name="detachallstoresfromsaleschannel"></a>
 # **DetachAllStoresFromSalesChannel**
-> Object DetachAllStoresFromSalesChannel (string appId, int? channelId)
+> void DetachAllStoresFromSalesChannel (string appId, int? channelId)
 
 
 
@@ -240,8 +239,7 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.DetachAllStoresFromSalesChannel(appId, channelId);
-                Debug.WriteLine(result);
+                apiInstance.DetachAllStoresFromSalesChannel(appId, channelId);
             }
             catch (Exception e)
             {
@@ -261,7 +259,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+void (empty response body)
 
 ### Authorization
 
@@ -276,7 +274,7 @@ Name | Type | Description  | Notes
 
 <a name="detachstorefromsaleschannel"></a>
 # **DetachStoreFromSalesChannel**
-> Object DetachStoreFromSalesChannel (string appId, int? channelId, int? storeId)
+> void DetachStoreFromSalesChannel (string appId, int? channelId, int? storeId)
 
 
 
@@ -304,8 +302,7 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.DetachStoreFromSalesChannel(appId, channelId, storeId);
-                Debug.WriteLine(result);
+                apiInstance.DetachStoreFromSalesChannel(appId, channelId, storeId);
             }
             catch (Exception e)
             {
@@ -326,7 +323,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+void (empty response body)
 
 ### Authorization
 

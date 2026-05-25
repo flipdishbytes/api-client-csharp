@@ -4,17 +4,137 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**AcceptInvitation**](TeammatesApi.md#acceptinvitation) | **GET** /api/v1.0/{appId}/teammates/accept/{otc} | 
+[**AcceptInvitations**](TeammatesApi.md#acceptinvitations) | **POST** /api/v1.0/teammates/acceptInvitations | 
 [**CreateTeammate**](TeammatesApi.md#createteammate) | **POST** /api/v1.0/{appId}/teammates | 
 [**DeleteTeammate**](TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | 
 [**GetTeammateByAppIdAndTeammateId**](TeammatesApi.md#getteammatebyappidandteammateid) | **GET** /api/v1.0/{appId}/teammates/{id} | 
 [**GetTeammatesByAppId**](TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | 
 [**Grantaccess**](TeammatesApi.md#grantaccess) | **POST** /api/v1.0/{appId}/teammates/grantaccess | 
+[**PendingInvitations**](TeammatesApi.md#pendinginvitations) | **GET** /api/v1.0/teammates/pending-invitations | 
 [**RedeemInvitation**](TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
-[**TeammatesAcceptInvitation**](TeammatesApi.md#teammatesacceptinvitation) | **GET** /api/v1.0/{appId}/teammates/accept/{otc} | 
-[**TeammatesAcceptInvitations**](TeammatesApi.md#teammatesacceptinvitations) | **POST** /api/v1.0/teammates/acceptInvitations | 
-[**TeammatesPendingInvitations**](TeammatesApi.md#teammatespendinginvitations) | **GET** /api/v1.0/teammates/pending-invitations | 
 [**UpdateTeammate**](TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{id} | 
 
+
+<a name="acceptinvitation"></a>
+# **AcceptInvitation**
+> RestApiResultAcceptInvitationResult AcceptInvitation (string otc, string appId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class AcceptInvitationExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new TeammatesApi();
+            var otc = otc_example;  // string | 
+            var appId = appId_example;  // string | 
+
+            try
+            {
+                RestApiResultAcceptInvitationResult result = apiInstance.AcceptInvitation(otc, appId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TeammatesApi.AcceptInvitation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **otc** | **string**|  | 
+ **appId** | **string**|  | 
+
+### Return type
+
+[**RestApiResultAcceptInvitationResult**](RestApiResultAcceptInvitationResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="acceptinvitations"></a>
+# **AcceptInvitations**
+> RestApiArrayResultRedeemInvitationResult AcceptInvitations ()
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class AcceptInvitationsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new TeammatesApi();
+
+            try
+            {
+                RestApiArrayResultRedeemInvitationResult result = apiInstance.AcceptInvitations();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TeammatesApi.AcceptInvitations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**RestApiArrayResultRedeemInvitationResult**](RestApiArrayResultRedeemInvitationResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="createteammate"></a>
 # **CreateTeammate**
@@ -267,7 +387,7 @@ Name | Type | Description  | Notes
 
 <a name="grantaccess"></a>
 # **Grantaccess**
-> Object Grantaccess (string appId, CreateTeammate teammate)
+> RestApiResultTeammate Grantaccess (string appId, CreateTeammate teammate)
 
 
 
@@ -294,7 +414,7 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.Grantaccess(appId, teammate);
+                RestApiResultTeammate result = apiInstance.Grantaccess(appId, teammate);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -315,7 +435,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**RestApiResultTeammate**](RestApiResultTeammate.md)
 
 ### Authorization
 
@@ -324,6 +444,63 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="pendinginvitations"></a>
+# **PendingInvitations**
+> RestApiArrayResultPendingInvitation PendingInvitations ()
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class PendingInvitationsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new TeammatesApi();
+
+            try
+            {
+                RestApiArrayResultPendingInvitation result = apiInstance.PendingInvitations();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TeammatesApi.PendingInvitations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**RestApiArrayResultPendingInvitation**](RestApiArrayResultPendingInvitation.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -379,183 +556,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultRedeemInvitationResult**](RestApiResultRedeemInvitationResult.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="teammatesacceptinvitation"></a>
-# **TeammatesAcceptInvitation**
-> RestApiResultAcceptInvitationResult TeammatesAcceptInvitation (string otc, string appId)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class TeammatesAcceptInvitationExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new TeammatesApi();
-            var otc = otc_example;  // string | 
-            var appId = appId_example;  // string | 
-
-            try
-            {
-                RestApiResultAcceptInvitationResult result = apiInstance.TeammatesAcceptInvitation(otc, appId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TeammatesApi.TeammatesAcceptInvitation: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **otc** | **string**|  | 
- **appId** | **string**|  | 
-
-### Return type
-
-[**RestApiResultAcceptInvitationResult**](RestApiResultAcceptInvitationResult.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="teammatesacceptinvitations"></a>
-# **TeammatesAcceptInvitations**
-> RestApiArrayResultRedeemInvitationResult TeammatesAcceptInvitations ()
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class TeammatesAcceptInvitationsExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new TeammatesApi();
-
-            try
-            {
-                RestApiArrayResultRedeemInvitationResult result = apiInstance.TeammatesAcceptInvitations();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TeammatesApi.TeammatesAcceptInvitations: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**RestApiArrayResultRedeemInvitationResult**](RestApiArrayResultRedeemInvitationResult.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="teammatespendinginvitations"></a>
-# **TeammatesPendingInvitations**
-> RestApiArrayResultPendingInvitation TeammatesPendingInvitations ()
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class TeammatesPendingInvitationsExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new TeammatesApi();
-
-            try
-            {
-                RestApiArrayResultPendingInvitation result = apiInstance.TeammatesPendingInvitations();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TeammatesApi.TeammatesPendingInvitations: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**RestApiArrayResultPendingInvitation**](RestApiArrayResultPendingInvitation.md)
 
 ### Authorization
 

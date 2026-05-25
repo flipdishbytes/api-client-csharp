@@ -4,21 +4,19 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ArchiveGroup**](CatalogGroupsApi.md#archivegroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/archive | Archive Catalog Group
-[**CreateGroup**](CatalogGroupsApi.md#creategroup) | **POST** /api/v1.0/{appId}/catalog/groups | Create a Catalog Group
-[**DuplicateGroup**](CatalogGroupsApi.md#duplicategroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/duplicate | Duplicate Catalog Group
-[**GetGroupById**](CatalogGroupsApi.md#getgroupbyid) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | Get group by Id
-[**GetGroups**](CatalogGroupsApi.md#getgroups) | **GET** /api/v1.0/{appId}/catalog/groups | Get paginated groups by app name id filtered by types
-[**UpdateGroup**](CatalogGroupsApi.md#updategroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | Update Catalog Group
+[**ArchiveGroup**](CatalogGroupsApi.md#archivegroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/archive | 
+[**CreateGroup**](CatalogGroupsApi.md#creategroup) | **POST** /api/v1.0/{appId}/catalog/groups | 
+[**DuplicateGroup**](CatalogGroupsApi.md#duplicategroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/duplicate | 
+[**GetGroupById**](CatalogGroupsApi.md#getgroupbyid) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | 
+[**GetGroups**](CatalogGroupsApi.md#getgroups) | **GET** /api/v1.0/{appId}/catalog/groups | 
+[**UpdateGroup**](CatalogGroupsApi.md#updategroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | 
 
 
 <a name="archivegroup"></a>
 # **ArchiveGroup**
 > void ArchiveGroup (string appId, string catalogItemId)
 
-Archive Catalog Group
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -43,7 +41,6 @@ namespace Example
 
             try
             {
-                // Archive Catalog Group
                 apiInstance.ArchiveGroup(appId, catalogItemId);
             }
             catch (Exception e)
@@ -81,9 +78,7 @@ void (empty response body)
 # **CreateGroup**
 > RestApiResultGroup CreateGroup (string appId, CreateGroup createGroup)
 
-Create a Catalog Group
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -108,7 +103,6 @@ namespace Example
 
             try
             {
-                // Create a Catalog Group
                 RestApiResultGroup result = apiInstance.CreateGroup(appId, createGroup);
                 Debug.WriteLine(result);
             }
@@ -147,9 +141,7 @@ Name | Type | Description  | Notes
 # **DuplicateGroup**
 > void DuplicateGroup (string appId, string catalogItemId)
 
-Duplicate Catalog Group
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -174,7 +166,6 @@ namespace Example
 
             try
             {
-                // Duplicate Catalog Group
                 apiInstance.DuplicateGroup(appId, catalogItemId);
             }
             catch (Exception e)
@@ -212,9 +203,7 @@ void (empty response body)
 # **GetGroupById**
 > Group GetGroupById (string appId, string catalogItemId)
 
-Get group by Id
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -239,7 +228,6 @@ namespace Example
 
             try
             {
-                // Get group by Id
                 Group result = apiInstance.GetGroupById(appId, catalogItemId);
                 Debug.WriteLine(result);
             }
@@ -278,9 +266,7 @@ Name | Type | Description  | Notes
 # **GetGroups**
 > RestApiPaginationResultGroup GetGroups (string appId, List<string> groupTypes, string searchTerm = null, int? page = null, int? limit = null)
 
-Get paginated groups by app name id filtered by types
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -308,7 +294,6 @@ namespace Example
 
             try
             {
-                // Get paginated groups by app name id filtered by types
                 RestApiPaginationResultGroup result = apiInstance.GetGroups(appId, groupTypes, searchTerm, page, limit);
                 Debug.WriteLine(result);
             }
@@ -350,9 +335,7 @@ Name | Type | Description  | Notes
 # **UpdateGroup**
 > void UpdateGroup (string appId, string catalogItemId, UpdateGroup updateGroup)
 
-Update Catalog Group
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -378,7 +361,6 @@ namespace Example
 
             try
             {
-                // Update Catalog Group
                 apiInstance.UpdateGroup(appId, catalogItemId, updateGroup);
             }
             catch (Exception e)

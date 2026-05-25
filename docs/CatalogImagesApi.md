@@ -4,16 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UploadCatalogImage**](CatalogImagesApi.md#uploadcatalogimage) | **POST** /api/v1.0/{appId}/catalog/images | Upload a Catalog Image
+[**UploadCatalogImage**](CatalogImagesApi.md#uploadcatalogimage) | **POST** /api/v1.0/{appId}/catalog/images | 
 
 
 <a name="uploadcatalogimage"></a>
 # **UploadCatalogImage**
 > CatalogImage UploadCatalogImage (string appId, System.IO.Stream image)
 
-Upload a Catalog Image
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -38,7 +36,6 @@ namespace Example
 
             try
             {
-                // Upload a Catalog Image
                 CatalogImage result = apiInstance.UploadCatalogImage(appId, image);
                 Debug.WriteLine(result);
             }

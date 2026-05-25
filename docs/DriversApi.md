@@ -4,22 +4,22 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DriversAddDriverNotificationToken**](DriversApi.md#driversadddrivernotificationtoken) | **POST** /api/v1.0/drivers/token | 
-[**DriversDeleteDriverProfileImage**](DriversApi.md#driversdeletedriverprofileimage) | **DELETE** /api/v1.0/drivers/profile/image | 
-[**DriversDriverLogin**](DriversApi.md#driversdriverlogin) | **POST** /api/v1.0/drivers/login | 
-[**DriversDriverRequestLoginCodeSms**](DriversApi.md#driversdriverrequestlogincodesms) | **POST** /api/v1.0/drivers/pin | 
-[**DriversGetDriverProfile**](DriversApi.md#driversgetdriverprofile) | **GET** /api/v1.0/drivers/profile | 
-[**DriversGetStoresForDriver**](DriversApi.md#driversgetstoresfordriver) | **GET** /api/v1.0/drivers/assignedstores | 
-[**DriversRemoveDriverNotificationToken**](DriversApi.md#driversremovedrivernotificationtoken) | **DELETE** /api/v1.0/drivers/token | 
-[**DriversSetDriverPresenceForStore**](DriversApi.md#driverssetdriverpresenceforstore) | **POST** /api/v1.0/drivers/stores/{storeId}/presence/{presence} | 
-[**DriversSetDriverProfileImage**](DriversApi.md#driverssetdriverprofileimage) | **POST** /api/v1.0/drivers/profile/image | 
-[**DriversUpdateDeliveryTrackingStatus**](DriversApi.md#driversupdatedeliverytrackingstatus) | **POST** /api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus} | 
-[**DriversUpdateDriverProfile**](DriversApi.md#driversupdatedriverprofile) | **POST** /api/v1.0/drivers/profile | 
+[**AddDriverNotificationToken**](DriversApi.md#adddrivernotificationtoken) | **POST** /api/v1.0/drivers/token | 
+[**DeleteDriverProfileImage**](DriversApi.md#deletedriverprofileimage) | **DELETE** /api/v1.0/drivers/profile/image | 
+[**DriverLogin**](DriversApi.md#driverlogin) | **POST** /api/v1.0/drivers/login | 
+[**DriverRequestLoginCodeSms**](DriversApi.md#driverrequestlogincodesms) | **POST** /api/v1.0/drivers/pin | 
+[**GetDriverProfile**](DriversApi.md#getdriverprofile) | **GET** /api/v1.0/drivers/profile | 
+[**GetStoresForDriver**](DriversApi.md#getstoresfordriver) | **GET** /api/v1.0/drivers/assignedstores | 
+[**RemoveDriverNotificationToken**](DriversApi.md#removedrivernotificationtoken) | **DELETE** /api/v1.0/drivers/token | 
+[**SetDriverPresenceForStore**](DriversApi.md#setdriverpresenceforstore) | **POST** /api/v1.0/drivers/stores/{storeId}/presence/{presence} | 
+[**SetDriverProfileImage**](DriversApi.md#setdriverprofileimage) | **POST** /api/v1.0/drivers/profile/image | 
+[**UpdateDeliveryTrackingStatus**](DriversApi.md#updatedeliverytrackingstatus) | **POST** /api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus} | 
+[**UpdateDriverProfile**](DriversApi.md#updatedriverprofile) | **POST** /api/v1.0/drivers/profile | 
 
 
-<a name="driversadddrivernotificationtoken"></a>
-# **DriversAddDriverNotificationToken**
-> Object DriversAddDriverNotificationToken (UpdateDriverNotificationToken updateDriverToken)
+<a name="adddrivernotificationtoken"></a>
+# **AddDriverNotificationToken**
+> Object AddDriverNotificationToken (UpdateDriverNotificationToken updateDriverToken)
 
 
 
@@ -33,7 +33,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class DriversAddDriverNotificationTokenExample
+    public class AddDriverNotificationTokenExample
     {
         public void main()
         {
@@ -45,12 +45,12 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.DriversAddDriverNotificationToken(updateDriverToken);
+                Object result = apiInstance.AddDriverNotificationToken(updateDriverToken);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DriversApi.DriversAddDriverNotificationToken: " + e.Message );
+                Debug.Print("Exception when calling DriversApi.AddDriverNotificationToken: " + e.Message );
             }
         }
     }
@@ -78,9 +78,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="driversdeletedriverprofileimage"></a>
-# **DriversDeleteDriverProfileImage**
-> Object DriversDeleteDriverProfileImage ()
+<a name="deletedriverprofileimage"></a>
+# **DeleteDriverProfileImage**
+> Object DeleteDriverProfileImage ()
 
 
 
@@ -94,7 +94,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class DriversDeleteDriverProfileImageExample
+    public class DeleteDriverProfileImageExample
     {
         public void main()
         {
@@ -105,12 +105,12 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.DriversDeleteDriverProfileImage();
+                Object result = apiInstance.DeleteDriverProfileImage();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DriversApi.DriversDeleteDriverProfileImage: " + e.Message );
+                Debug.Print("Exception when calling DriversApi.DeleteDriverProfileImage: " + e.Message );
             }
         }
     }
@@ -135,9 +135,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="driversdriverlogin"></a>
-# **DriversDriverLogin**
-> Object DriversDriverLogin (DriverLoginModel driverLoginModel)
+<a name="driverlogin"></a>
+# **DriverLogin**
+> Object DriverLogin (DriverLoginModel driverLoginModel)
 
 
 
@@ -151,7 +151,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class DriversDriverLoginExample
+    public class DriverLoginExample
     {
         public void main()
         {
@@ -163,12 +163,12 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.DriversDriverLogin(driverLoginModel);
+                Object result = apiInstance.DriverLogin(driverLoginModel);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DriversApi.DriversDriverLogin: " + e.Message );
+                Debug.Print("Exception when calling DriversApi.DriverLogin: " + e.Message );
             }
         }
     }
@@ -196,9 +196,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="driversdriverrequestlogincodesms"></a>
-# **DriversDriverRequestLoginCodeSms**
-> Object DriversDriverRequestLoginCodeSms (DriverRequestLoginPinModel driverRequestLoginPinModel)
+<a name="driverrequestlogincodesms"></a>
+# **DriverRequestLoginCodeSms**
+> Object DriverRequestLoginCodeSms (DriverRequestLoginPinModel driverRequestLoginPinModel)
 
 
 
@@ -212,7 +212,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class DriversDriverRequestLoginCodeSmsExample
+    public class DriverRequestLoginCodeSmsExample
     {
         public void main()
         {
@@ -224,12 +224,12 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.DriversDriverRequestLoginCodeSms(driverRequestLoginPinModel);
+                Object result = apiInstance.DriverRequestLoginCodeSms(driverRequestLoginPinModel);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DriversApi.DriversDriverRequestLoginCodeSms: " + e.Message );
+                Debug.Print("Exception when calling DriversApi.DriverRequestLoginCodeSms: " + e.Message );
             }
         }
     }
@@ -257,9 +257,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="driversgetdriverprofile"></a>
-# **DriversGetDriverProfile**
-> Object DriversGetDriverProfile ()
+<a name="getdriverprofile"></a>
+# **GetDriverProfile**
+> Object GetDriverProfile ()
 
 
 
@@ -273,7 +273,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class DriversGetDriverProfileExample
+    public class GetDriverProfileExample
     {
         public void main()
         {
@@ -284,12 +284,12 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.DriversGetDriverProfile();
+                Object result = apiInstance.GetDriverProfile();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DriversApi.DriversGetDriverProfile: " + e.Message );
+                Debug.Print("Exception when calling DriversApi.GetDriverProfile: " + e.Message );
             }
         }
     }
@@ -314,9 +314,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="driversgetstoresfordriver"></a>
-# **DriversGetStoresForDriver**
-> Object DriversGetStoresForDriver ()
+<a name="getstoresfordriver"></a>
+# **GetStoresForDriver**
+> Object GetStoresForDriver ()
 
 
 
@@ -330,7 +330,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class DriversGetStoresForDriverExample
+    public class GetStoresForDriverExample
     {
         public void main()
         {
@@ -341,12 +341,12 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.DriversGetStoresForDriver();
+                Object result = apiInstance.GetStoresForDriver();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DriversApi.DriversGetStoresForDriver: " + e.Message );
+                Debug.Print("Exception when calling DriversApi.GetStoresForDriver: " + e.Message );
             }
         }
     }
@@ -371,9 +371,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="driversremovedrivernotificationtoken"></a>
-# **DriversRemoveDriverNotificationToken**
-> Object DriversRemoveDriverNotificationToken (UpdateDriverNotificationToken removeDriverToken)
+<a name="removedrivernotificationtoken"></a>
+# **RemoveDriverNotificationToken**
+> Object RemoveDriverNotificationToken (UpdateDriverNotificationToken removeDriverToken)
 
 
 
@@ -387,7 +387,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class DriversRemoveDriverNotificationTokenExample
+    public class RemoveDriverNotificationTokenExample
     {
         public void main()
         {
@@ -399,12 +399,12 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.DriversRemoveDriverNotificationToken(removeDriverToken);
+                Object result = apiInstance.RemoveDriverNotificationToken(removeDriverToken);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DriversApi.DriversRemoveDriverNotificationToken: " + e.Message );
+                Debug.Print("Exception when calling DriversApi.RemoveDriverNotificationToken: " + e.Message );
             }
         }
     }
@@ -432,9 +432,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="driverssetdriverpresenceforstore"></a>
-# **DriversSetDriverPresenceForStore**
-> Object DriversSetDriverPresenceForStore (int? storeId, string presence)
+<a name="setdriverpresenceforstore"></a>
+# **SetDriverPresenceForStore**
+> Object SetDriverPresenceForStore (int? storeId, string presence)
 
 
 
@@ -448,7 +448,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class DriversSetDriverPresenceForStoreExample
+    public class SetDriverPresenceForStoreExample
     {
         public void main()
         {
@@ -461,12 +461,12 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.DriversSetDriverPresenceForStore(storeId, presence);
+                Object result = apiInstance.SetDriverPresenceForStore(storeId, presence);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DriversApi.DriversSetDriverPresenceForStore: " + e.Message );
+                Debug.Print("Exception when calling DriversApi.SetDriverPresenceForStore: " + e.Message );
             }
         }
     }
@@ -495,9 +495,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="driverssetdriverprofileimage"></a>
-# **DriversSetDriverProfileImage**
-> Object DriversSetDriverProfileImage ()
+<a name="setdriverprofileimage"></a>
+# **SetDriverProfileImage**
+> Object SetDriverProfileImage ()
 
 
 
@@ -511,7 +511,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class DriversSetDriverProfileImageExample
+    public class SetDriverProfileImageExample
     {
         public void main()
         {
@@ -522,12 +522,12 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.DriversSetDriverProfileImage();
+                Object result = apiInstance.SetDriverProfileImage();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DriversApi.DriversSetDriverProfileImage: " + e.Message );
+                Debug.Print("Exception when calling DriversApi.SetDriverProfileImage: " + e.Message );
             }
         }
     }
@@ -552,9 +552,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="driversupdatedeliverytrackingstatus"></a>
-# **DriversUpdateDeliveryTrackingStatus**
-> Object DriversUpdateDeliveryTrackingStatus (int? orderId, string deliveryTrackingStatus)
+<a name="updatedeliverytrackingstatus"></a>
+# **UpdateDeliveryTrackingStatus**
+> Object UpdateDeliveryTrackingStatus (int? orderId, string deliveryTrackingStatus)
 
 
 
@@ -568,7 +568,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class DriversUpdateDeliveryTrackingStatusExample
+    public class UpdateDeliveryTrackingStatusExample
     {
         public void main()
         {
@@ -581,12 +581,12 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.DriversUpdateDeliveryTrackingStatus(orderId, deliveryTrackingStatus);
+                Object result = apiInstance.UpdateDeliveryTrackingStatus(orderId, deliveryTrackingStatus);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DriversApi.DriversUpdateDeliveryTrackingStatus: " + e.Message );
+                Debug.Print("Exception when calling DriversApi.UpdateDeliveryTrackingStatus: " + e.Message );
             }
         }
     }
@@ -615,9 +615,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="driversupdatedriverprofile"></a>
-# **DriversUpdateDriverProfile**
-> Object DriversUpdateDriverProfile (UpdateDriverProfileModel updateDriverProfile)
+<a name="updatedriverprofile"></a>
+# **UpdateDriverProfile**
+> Object UpdateDriverProfile (UpdateDriverProfileModel updateDriverProfile)
 
 
 
@@ -631,7 +631,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class DriversUpdateDriverProfileExample
+    public class UpdateDriverProfileExample
     {
         public void main()
         {
@@ -643,12 +643,12 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.DriversUpdateDriverProfile(updateDriverProfile);
+                Object result = apiInstance.UpdateDriverProfile(updateDriverProfile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DriversApi.DriversUpdateDriverProfile: " + e.Message );
+                Debug.Print("Exception when calling DriversApi.UpdateDriverProfile: " + e.Message );
             }
         }
     }

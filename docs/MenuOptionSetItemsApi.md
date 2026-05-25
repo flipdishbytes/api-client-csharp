@@ -4,21 +4,21 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#addmenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Create menu item option set item
-[**DeleteOptionSetItemImage**](MenuOptionSetItemsApi.md#deleteoptionsetitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Delete menu item option set item image
+[**AddMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#addmenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | 
+[**DeleteOptionSetItemImage**](MenuOptionSetItemsApi.md#deleteoptionsetitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | 
 [**GetMenuItemOptionSetItemById**](MenuOptionSetItemsApi.md#getmenuitemoptionsetitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Get menu item option set item by identifier
 [**GetMenuItemOptionSetItems**](MenuOptionSetItemsApi.md#getmenuitemoptionsetitems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Get menu item option set items
-[**RemoveMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#removemenuitemoptionsetitem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Delete menu item option set item
-[**SetOptionSetItemTax**](MenuOptionSetItemsApi.md#setoptionsetitemtax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/taxrate/{taxRateId} | Set Tax Rate on OptionSetItem
-[**UpdateMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#updatemenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Update menu item option set item
-[**UploadOptionSetItemImage**](MenuOptionSetItemsApi.md#uploadoptionsetitemimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Upload menu item option set item image
+[**RemoveMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#removemenuitemoptionsetitem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | 
+[**SetOptionSetItemTax**](MenuOptionSetItemsApi.md#setoptionsetitemtax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/taxrate/{taxRateId} | 
+[**UpdateMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#updatemenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | 
+[**UploadOptionSetItemImage**](MenuOptionSetItemsApi.md#uploadoptionsetitemimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | 
 
 
 <a name="addmenuitemoptionsetitem"></a>
 # **AddMenuItemOptionSetItem**
 > Object AddMenuItemOptionSetItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, MenuItemOptionSetItemBase menuItemOptionSetItem)
 
-Create menu item option set item
+
 
 ### Example
 ```csharp
@@ -38,15 +38,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuOptionSetItemsApi();
-            var menuId = 56;  // int? | Menu identifier
-            var menuSectionId = 56;  // int? | Menu section identifier
-            var menuSectionItemId = 56;  // int? | Menu section item identifier
-            var optionSetId = 56;  // int? | Option set identifier
-            var menuItemOptionSetItem = new MenuItemOptionSetItemBase(); // MenuItemOptionSetItemBase | Option set item
+            var menuId = 56;  // int? | 
+            var menuSectionId = 56;  // int? | 
+            var menuSectionItemId = 56;  // int? | 
+            var optionSetId = 56;  // int? | 
+            var menuItemOptionSetItem = new MenuItemOptionSetItemBase(); // MenuItemOptionSetItemBase | 
 
             try
             {
-                // Create menu item option set item
                 Object result = apiInstance.AddMenuItemOptionSetItem(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItem);
                 Debug.WriteLine(result);
             }
@@ -63,11 +62,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**| Menu identifier | 
- **menuSectionId** | **int?**| Menu section identifier | 
- **menuSectionItemId** | **int?**| Menu section item identifier | 
- **optionSetId** | **int?**| Option set identifier | 
- **menuItemOptionSetItem** | [**MenuItemOptionSetItemBase**](MenuItemOptionSetItemBase.md)| Option set item | 
+ **menuId** | **int?**|  | 
+ **menuSectionId** | **int?**|  | 
+ **menuSectionItemId** | **int?**|  | 
+ **optionSetId** | **int?**|  | 
+ **menuItemOptionSetItem** | [**MenuItemOptionSetItemBase**](MenuItemOptionSetItemBase.md)|  | 
 
 ### Return type
 
@@ -88,7 +87,7 @@ Name | Type | Description  | Notes
 # **DeleteOptionSetItemImage**
 > void DeleteOptionSetItemImage (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId)
 
-Delete menu item option set item image
+
 
 ### Example
 ```csharp
@@ -108,15 +107,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuOptionSetItemsApi();
-            var menuId = 56;  // int? | Menu identifier
-            var menuSectionId = 56;  // int? | Menu section identifier
-            var menuSectionItemId = 56;  // int? | Menu section item identifier
-            var optionSetId = 56;  // int? | Option set identifier
-            var menuItemOptionSetItemId = 56;  // int? | Option set item identifier
+            var menuId = 56;  // int? | 
+            var menuSectionId = 56;  // int? | 
+            var menuSectionItemId = 56;  // int? | 
+            var optionSetId = 56;  // int? | 
+            var menuItemOptionSetItemId = 56;  // int? | 
 
             try
             {
-                // Delete menu item option set item image
                 apiInstance.DeleteOptionSetItemImage(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId);
             }
             catch (Exception e)
@@ -132,11 +130,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**| Menu identifier | 
- **menuSectionId** | **int?**| Menu section identifier | 
- **menuSectionItemId** | **int?**| Menu section item identifier | 
- **optionSetId** | **int?**| Option set identifier | 
- **menuItemOptionSetItemId** | **int?**| Option set item identifier | 
+ **menuId** | **int?**|  | 
+ **menuSectionId** | **int?**|  | 
+ **menuSectionItemId** | **int?**|  | 
+ **optionSetId** | **int?**|  | 
+ **menuItemOptionSetItemId** | **int?**|  | 
 
 ### Return type
 
@@ -295,7 +293,7 @@ Name | Type | Description  | Notes
 # **RemoveMenuItemOptionSetItem**
 > void RemoveMenuItemOptionSetItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId)
 
-Delete menu item option set item
+
 
 ### Example
 ```csharp
@@ -315,15 +313,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuOptionSetItemsApi();
-            var menuId = 56;  // int? | Menu identifier
-            var menuSectionId = 56;  // int? | Menu section identifier
-            var menuSectionItemId = 56;  // int? | Menu section item identifier
-            var optionSetId = 56;  // int? | Option set identifier
-            var menuItemOptionSetItemId = 56;  // int? | Option set item identifier
+            var menuId = 56;  // int? | 
+            var menuSectionId = 56;  // int? | 
+            var menuSectionItemId = 56;  // int? | 
+            var optionSetId = 56;  // int? | 
+            var menuItemOptionSetItemId = 56;  // int? | 
 
             try
             {
-                // Delete menu item option set item
                 apiInstance.RemoveMenuItemOptionSetItem(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId);
             }
             catch (Exception e)
@@ -339,11 +336,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**| Menu identifier | 
- **menuSectionId** | **int?**| Menu section identifier | 
- **menuSectionItemId** | **int?**| Menu section item identifier | 
- **optionSetId** | **int?**| Option set identifier | 
- **menuItemOptionSetItemId** | **int?**| Option set item identifier | 
+ **menuId** | **int?**|  | 
+ **menuSectionId** | **int?**|  | 
+ **menuSectionItemId** | **int?**|  | 
+ **optionSetId** | **int?**|  | 
+ **menuItemOptionSetItemId** | **int?**|  | 
 
 ### Return type
 
@@ -364,7 +361,7 @@ void (empty response body)
 # **SetOptionSetItemTax**
 > void SetOptionSetItemTax (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, int? taxRateId)
 
-Set Tax Rate on OptionSetItem
+
 
 ### Example
 ```csharp
@@ -384,16 +381,15 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuOptionSetItemsApi();
-            var menuId = 56;  // int? | Menu identifier
+            var menuId = 56;  // int? | 
             var menuSectionId = 56;  // int? | 
             var menuSectionItemId = 56;  // int? | 
             var optionSetId = 56;  // int? | 
-            var menuItemOptionSetItemId = 56;  // int? | Option set item identifier
-            var taxRateId = 56;  // int? | Tax Rate to use
+            var menuItemOptionSetItemId = 56;  // int? | 
+            var taxRateId = 56;  // int? | 
 
             try
             {
-                // Set Tax Rate on OptionSetItem
                 apiInstance.SetOptionSetItemTax(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, taxRateId);
             }
             catch (Exception e)
@@ -409,12 +405,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**| Menu identifier | 
+ **menuId** | **int?**|  | 
  **menuSectionId** | **int?**|  | 
  **menuSectionItemId** | **int?**|  | 
  **optionSetId** | **int?**|  | 
- **menuItemOptionSetItemId** | **int?**| Option set item identifier | 
- **taxRateId** | **int?**| Tax Rate to use | 
+ **menuItemOptionSetItemId** | **int?**|  | 
+ **taxRateId** | **int?**|  | 
 
 ### Return type
 
@@ -435,7 +431,7 @@ void (empty response body)
 # **UpdateMenuItemOptionSetItem**
 > void UpdateMenuItemOptionSetItem (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, MenuItemOptionSetItemBase menuItemOptionSetItem, double? undoAfter = null)
 
-Update menu item option set item
+
 
 ### Example
 ```csharp
@@ -455,17 +451,16 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuOptionSetItemsApi();
-            var menuId = 56;  // int? | Menu identifier
-            var menuSectionId = 56;  // int? | Menu section identifier
-            var menuSectionItemId = 56;  // int? | Menu section item identifier
-            var optionSetId = 56;  // int? | Option set identifier
-            var menuItemOptionSetItemId = 56;  // int? | Option set item identifier
-            var menuItemOptionSetItem = new MenuItemOptionSetItemBase(); // MenuItemOptionSetItemBase | Option set item (delta)
-            var undoAfter = 1.2;  // double? | An optional time period, in hours, after which the hide-section operation will be undone. (optional) 
+            var menuId = 56;  // int? | 
+            var menuSectionId = 56;  // int? | 
+            var menuSectionItemId = 56;  // int? | 
+            var optionSetId = 56;  // int? | 
+            var menuItemOptionSetItemId = 56;  // int? | 
+            var menuItemOptionSetItem = new MenuItemOptionSetItemBase(); // MenuItemOptionSetItemBase | 
+            var undoAfter = 1.2;  // double? |  (optional) 
 
             try
             {
-                // Update menu item option set item
                 apiInstance.UpdateMenuItemOptionSetItem(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, menuItemOptionSetItem, undoAfter);
             }
             catch (Exception e)
@@ -481,13 +476,13 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**| Menu identifier | 
- **menuSectionId** | **int?**| Menu section identifier | 
- **menuSectionItemId** | **int?**| Menu section item identifier | 
- **optionSetId** | **int?**| Option set identifier | 
- **menuItemOptionSetItemId** | **int?**| Option set item identifier | 
- **menuItemOptionSetItem** | [**MenuItemOptionSetItemBase**](MenuItemOptionSetItemBase.md)| Option set item (delta) | 
- **undoAfter** | **double?**| An optional time period, in hours, after which the hide-section operation will be undone. | [optional] 
+ **menuId** | **int?**|  | 
+ **menuSectionId** | **int?**|  | 
+ **menuSectionItemId** | **int?**|  | 
+ **optionSetId** | **int?**|  | 
+ **menuItemOptionSetItemId** | **int?**|  | 
+ **menuItemOptionSetItem** | [**MenuItemOptionSetItemBase**](MenuItemOptionSetItemBase.md)|  | 
+ **undoAfter** | **double?**|  | [optional] 
 
 ### Return type
 
@@ -508,7 +503,7 @@ void (empty response body)
 # **UploadOptionSetItemImage**
 > RestApiStringResult UploadOptionSetItemImage (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, int? menuItemOptionSetItemId, System.IO.Stream image)
 
-Upload menu item option set item image
+
 
 ### Example
 ```csharp
@@ -528,16 +523,15 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuOptionSetItemsApi();
-            var menuId = 56;  // int? | Menu identifier
-            var menuSectionId = 56;  // int? | Menu section identifier
-            var menuSectionItemId = 56;  // int? | Menu section item identifier
-            var optionSetId = 56;  // int? | Option set identifier
-            var menuItemOptionSetItemId = 56;  // int? | Option set item identifier
+            var menuId = 56;  // int? | 
+            var menuSectionId = 56;  // int? | 
+            var menuSectionItemId = 56;  // int? | 
+            var optionSetId = 56;  // int? | 
+            var menuItemOptionSetItemId = 56;  // int? | 
             var image = new System.IO.Stream(); // System.IO.Stream | Option set item image
 
             try
             {
-                // Upload menu item option set item image
                 RestApiStringResult result = apiInstance.UploadOptionSetItemImage(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, image);
                 Debug.WriteLine(result);
             }
@@ -554,11 +548,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**| Menu identifier | 
- **menuSectionId** | **int?**| Menu section identifier | 
- **menuSectionItemId** | **int?**| Menu section item identifier | 
- **optionSetId** | **int?**| Option set identifier | 
- **menuItemOptionSetItemId** | **int?**| Option set item identifier | 
+ **menuId** | **int?**|  | 
+ **menuSectionId** | **int?**|  | 
+ **menuSectionItemId** | **int?**|  | 
+ **optionSetId** | **int?**|  | 
+ **menuItemOptionSetItemId** | **int?**|  | 
  **image** | **System.IO.Stream**| Option set item image | 
 
 ### Return type

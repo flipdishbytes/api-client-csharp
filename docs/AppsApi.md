@@ -4,7 +4,6 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AppsSetPropertyId**](AppsApi.md#appssetpropertyid) | **POST** /api/v1.0/apps/{appId}/orgId/{orgId} | 
 [**CreateApp**](AppsApi.md#createapp) | **POST** /api/v1.0/apps | 
 [**GetApp**](AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | 
 [**GetAppHostnameStatus**](AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
@@ -22,73 +21,11 @@ Method | HTTP request | Description
 [**SetAppStoreName**](AppsApi.md#setappstorename) | **POST** /api/v1.0/apps/{appId}/appstorename | 
 [**SetCompliance**](AppsApi.md#setcompliance) | **POST** /api/v1.0/apps/{appId}/compliance | 
 [**SetPanaceaVanityUrl**](AppsApi.md#setpanaceavanityurl) | **POST** /api/v1.0/apps/{appId}/panacea/url | 
+[**SetPropertyId**](AppsApi.md#setpropertyid) | **POST** /api/v1.0/apps/{appId}/orgId/{orgId} | 
 [**SetThirdPartyIntegrations**](AppsApi.md#setthirdpartyintegrations) | **POST** /api/v1.0/apps/{appId}/third-party-integrations | 
 [**ToggleNextGenWeb**](AppsApi.md#togglenextgenweb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | 
 [**UploadAppLogo**](AppsApi.md#uploadapplogo) | **POST** /api/v1.0/apps/{appId}/logo | 
 
-
-<a name="appssetpropertyid"></a>
-# **AppsSetPropertyId**
-> Object AppsSetPropertyId (string appId, string orgId)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class AppsSetPropertyIdExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new AppsApi();
-            var appId = appId_example;  // string | 
-            var orgId = orgId_example;  // string | 
-
-            try
-            {
-                Object result = apiInstance.AppsSetPropertyId(appId, orgId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AppsApi.AppsSetPropertyId: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
- **orgId** | **string**|  | 
-
-### Return type
-
-**Object**
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="createapp"></a>
 # **CreateApp**
@@ -1133,6 +1070,68 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiStringResult**](RestApiStringResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="setpropertyid"></a>
+# **SetPropertyId**
+> void SetPropertyId (string appId, string orgId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class SetPropertyIdExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AppsApi();
+            var appId = appId_example;  // string | 
+            var orgId = orgId_example;  // string | 
+
+            try
+            {
+                apiInstance.SetPropertyId(appId, orgId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AppsApi.SetPropertyId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **orgId** | **string**|  | 
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

@@ -4,20 +4,20 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateMenuItemOptionSet**](MenuOptionSetsApi.md#createmenuitemoptionset) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets | Create menu item option set
-[**DeleteMenuItemOptionSet**](MenuOptionSetsApi.md#deletemenuitemoptionset) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | Delete menu item option set
-[**DeleteOptionSetImage**](MenuOptionSetsApi.md#deleteoptionsetimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image | Delete option set image
+[**CreateMenuItemOptionSet**](MenuOptionSetsApi.md#createmenuitemoptionset) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets | 
+[**DeleteMenuItemOptionSet**](MenuOptionSetsApi.md#deletemenuitemoptionset) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | 
+[**DeleteOptionSetImage**](MenuOptionSetsApi.md#deleteoptionsetimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image | 
 [**GetMenuItemOptionSetById**](MenuOptionSetsApi.md#getmenuitemoptionsetbyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | Get menu item option set by identifier
 [**GetMenuItemOptionSets**](MenuOptionSetsApi.md#getmenuitemoptionsets) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets | Get menu item option sets
-[**UpdateMenuItemOptionSet**](MenuOptionSetsApi.md#updatemenuitemoptionset) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | Update menu item option set
-[**UploadOptionSetImage**](MenuOptionSetsApi.md#uploadoptionsetimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image | Upload menu item option set image
+[**UpdateMenuItemOptionSet**](MenuOptionSetsApi.md#updatemenuitemoptionset) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | 
+[**UploadOptionSetImage**](MenuOptionSetsApi.md#uploadoptionsetimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image | 
 
 
 <a name="createmenuitemoptionset"></a>
 # **CreateMenuItemOptionSet**
 > Object CreateMenuItemOptionSet (int? menuId, int? menuSectionId, int? menuSectionItemId, MenuItemOptionSetBase menuItemOptionSet)
 
-Create menu item option set
+
 
 ### Example
 ```csharp
@@ -37,14 +37,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuOptionSetsApi();
-            var menuId = 56;  // int? | Menu identifier
-            var menuSectionId = 56;  // int? | Menu section identifier
-            var menuSectionItemId = 56;  // int? | Menu section item identifier
-            var menuItemOptionSet = new MenuItemOptionSetBase(); // MenuItemOptionSetBase | Menu item option set
+            var menuId = 56;  // int? | 
+            var menuSectionId = 56;  // int? | 
+            var menuSectionItemId = 56;  // int? | 
+            var menuItemOptionSet = new MenuItemOptionSetBase(); // MenuItemOptionSetBase | 
 
             try
             {
-                // Create menu item option set
                 Object result = apiInstance.CreateMenuItemOptionSet(menuId, menuSectionId, menuSectionItemId, menuItemOptionSet);
                 Debug.WriteLine(result);
             }
@@ -61,10 +60,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**| Menu identifier | 
- **menuSectionId** | **int?**| Menu section identifier | 
- **menuSectionItemId** | **int?**| Menu section item identifier | 
- **menuItemOptionSet** | [**MenuItemOptionSetBase**](MenuItemOptionSetBase.md)| Menu item option set | 
+ **menuId** | **int?**|  | 
+ **menuSectionId** | **int?**|  | 
+ **menuSectionItemId** | **int?**|  | 
+ **menuItemOptionSet** | [**MenuItemOptionSetBase**](MenuItemOptionSetBase.md)|  | 
 
 ### Return type
 
@@ -85,7 +84,7 @@ Name | Type | Description  | Notes
 # **DeleteMenuItemOptionSet**
 > void DeleteMenuItemOptionSet (int? menuId, int? menuSectionItemId, int? menuSectionId, int? optionSetId)
 
-Delete menu item option set
+
 
 ### Example
 ```csharp
@@ -105,14 +104,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuOptionSetsApi();
-            var menuId = 56;  // int? | Menu identifier
-            var menuSectionItemId = 56;  // int? | Menu section item identifier
-            var menuSectionId = 56;  // int? | Menu section identifier
-            var optionSetId = 56;  // int? | Option set identifier
+            var menuId = 56;  // int? | 
+            var menuSectionItemId = 56;  // int? | 
+            var menuSectionId = 56;  // int? | 
+            var optionSetId = 56;  // int? | 
 
             try
             {
-                // Delete menu item option set
                 apiInstance.DeleteMenuItemOptionSet(menuId, menuSectionItemId, menuSectionId, optionSetId);
             }
             catch (Exception e)
@@ -128,10 +126,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**| Menu identifier | 
- **menuSectionItemId** | **int?**| Menu section item identifier | 
- **menuSectionId** | **int?**| Menu section identifier | 
- **optionSetId** | **int?**| Option set identifier | 
+ **menuId** | **int?**|  | 
+ **menuSectionItemId** | **int?**|  | 
+ **menuSectionId** | **int?**|  | 
+ **optionSetId** | **int?**|  | 
 
 ### Return type
 
@@ -152,7 +150,7 @@ void (empty response body)
 # **DeleteOptionSetImage**
 > void DeleteOptionSetImage (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId)
 
-Delete option set image
+
 
 ### Example
 ```csharp
@@ -172,14 +170,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuOptionSetsApi();
-            var menuId = 56;  // int? | Menu identifier
-            var menuSectionId = 56;  // int? | Menu section identifier
-            var menuSectionItemId = 56;  // int? | Menu section item identifier
-            var optionSetId = 56;  // int? | Option set identifier
+            var menuId = 56;  // int? | 
+            var menuSectionId = 56;  // int? | 
+            var menuSectionItemId = 56;  // int? | 
+            var optionSetId = 56;  // int? | 
 
             try
             {
-                // Delete option set image
                 apiInstance.DeleteOptionSetImage(menuId, menuSectionId, menuSectionItemId, optionSetId);
             }
             catch (Exception e)
@@ -195,10 +192,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**| Menu identifier | 
- **menuSectionId** | **int?**| Menu section identifier | 
- **menuSectionItemId** | **int?**| Menu section item identifier | 
- **optionSetId** | **int?**| Option set identifier | 
+ **menuId** | **int?**|  | 
+ **menuSectionId** | **int?**|  | 
+ **menuSectionItemId** | **int?**|  | 
+ **optionSetId** | **int?**|  | 
 
 ### Return type
 
@@ -353,7 +350,7 @@ Name | Type | Description  | Notes
 # **UpdateMenuItemOptionSet**
 > void UpdateMenuItemOptionSet (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, MenuItemOptionSetBase menuItemOptionSet)
 
-Update menu item option set
+
 
 ### Example
 ```csharp
@@ -373,15 +370,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuOptionSetsApi();
-            var menuId = 56;  // int? | Menu identifier
-            var menuSectionId = 56;  // int? | Menu section identifier
-            var menuSectionItemId = 56;  // int? | Menu section item identifier
-            var optionSetId = 56;  // int? | Option set identifier
-            var menuItemOptionSet = new MenuItemOptionSetBase(); // MenuItemOptionSetBase | Menu item option set (delta)
+            var menuId = 56;  // int? | 
+            var menuSectionId = 56;  // int? | 
+            var menuSectionItemId = 56;  // int? | 
+            var optionSetId = 56;  // int? | 
+            var menuItemOptionSet = new MenuItemOptionSetBase(); // MenuItemOptionSetBase | 
 
             try
             {
-                // Update menu item option set
                 apiInstance.UpdateMenuItemOptionSet(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSet);
             }
             catch (Exception e)
@@ -397,11 +393,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**| Menu identifier | 
- **menuSectionId** | **int?**| Menu section identifier | 
- **menuSectionItemId** | **int?**| Menu section item identifier | 
- **optionSetId** | **int?**| Option set identifier | 
- **menuItemOptionSet** | [**MenuItemOptionSetBase**](MenuItemOptionSetBase.md)| Menu item option set (delta) | 
+ **menuId** | **int?**|  | 
+ **menuSectionId** | **int?**|  | 
+ **menuSectionItemId** | **int?**|  | 
+ **optionSetId** | **int?**|  | 
+ **menuItemOptionSet** | [**MenuItemOptionSetBase**](MenuItemOptionSetBase.md)|  | 
 
 ### Return type
 
@@ -422,7 +418,7 @@ void (empty response body)
 # **UploadOptionSetImage**
 > RestApiStringResult UploadOptionSetImage (int? menuId, int? menuSectionId, int? menuSectionItemId, int? optionSetId, System.IO.Stream image)
 
-Upload menu item option set image
+
 
 ### Example
 ```csharp
@@ -442,15 +438,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenuOptionSetsApi();
-            var menuId = 56;  // int? | Menu identifier
-            var menuSectionId = 56;  // int? | Menu section identifier
-            var menuSectionItemId = 56;  // int? | Menu section item identifier
-            var optionSetId = 56;  // int? | Option set identifier
+            var menuId = 56;  // int? | 
+            var menuSectionId = 56;  // int? | 
+            var menuSectionItemId = 56;  // int? | 
+            var optionSetId = 56;  // int? | 
             var image = new System.IO.Stream(); // System.IO.Stream | Option set image
 
             try
             {
-                // Upload menu item option set image
                 RestApiStringResult result = apiInstance.UploadOptionSetImage(menuId, menuSectionId, menuSectionItemId, optionSetId, image);
                 Debug.WriteLine(result);
             }
@@ -467,10 +462,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**| Menu identifier | 
- **menuSectionId** | **int?**| Menu section identifier | 
- **menuSectionItemId** | **int?**| Menu section item identifier | 
- **optionSetId** | **int?**| Option set identifier | 
+ **menuId** | **int?**|  | 
+ **menuSectionId** | **int?**|  | 
+ **menuSectionItemId** | **int?**|  | 
+ **optionSetId** | **int?**|  | 
  **image** | **System.IO.Stream**| Option set image | 
 
 ### Return type

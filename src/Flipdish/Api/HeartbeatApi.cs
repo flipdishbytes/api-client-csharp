@@ -31,8 +31,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Object</returns>
-        Object HeadHostname ();
+        /// <returns>RestApiStringResult</returns>
+        RestApiStringResult HeadHostname ();
 
         /// <summary>
         /// 
@@ -41,8 +41,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> HeadHostnameWithHttpInfo ();
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        ApiResponse<RestApiStringResult> HeadHostnameWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -69,8 +69,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Object</returns>
-        Object Hostname ();
+        /// <returns>RestApiStringResult</returns>
+        RestApiStringResult Hostname ();
 
         /// <summary>
         /// 
@@ -79,8 +79,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> HostnameWithHttpInfo ();
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        ApiResponse<RestApiStringResult> HostnameWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -109,8 +109,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> HeadHostnameAsync ();
+        /// <returns>Task of RestApiStringResult</returns>
+        System.Threading.Tasks.Task<RestApiStringResult> HeadHostnameAsync ();
 
         /// <summary>
         /// 
@@ -119,8 +119,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadHostnameAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> HeadHostnameAsyncWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -147,8 +147,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> HostnameAsync ();
+        /// <returns>Task of RestApiStringResult</returns>
+        System.Threading.Tasks.Task<RestApiStringResult> HostnameAsync ();
 
         /// <summary>
         /// 
@@ -157,8 +157,8 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HostnameAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> HostnameAsyncWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -282,10 +282,10 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Object</returns>
-        public Object HeadHostname ()
+        /// <returns>RestApiStringResult</returns>
+        public RestApiStringResult HeadHostname ()
         {
-             ApiResponse<Object> localVarResponse = HeadHostnameWithHttpInfo();
+             ApiResponse<RestApiStringResult> localVarResponse = HeadHostnameWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -293,8 +293,8 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > HeadHostnameWithHttpInfo ()
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        public ApiResponse< RestApiStringResult > HeadHostnameWithHttpInfo ()
         {
 
             var localVarPath = "./api/v1.0/heartbeat/Hostname";
@@ -342,19 +342,19 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> HeadHostnameAsync ()
+        /// <returns>Task of RestApiStringResult</returns>
+        public async System.Threading.Tasks.Task<RestApiStringResult> HeadHostnameAsync ()
         {
-             ApiResponse<Object> localVarResponse = await HeadHostnameAsyncWithHttpInfo();
+             ApiResponse<RestApiStringResult> localVarResponse = await HeadHostnameAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -363,8 +363,8 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadHostnameAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> HeadHostnameAsyncWithHttpInfo ()
         {
 
             var localVarPath = "./api/v1.0/heartbeat/Hostname";
@@ -412,9 +412,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
         }
 
         /// <summary>
@@ -560,10 +560,10 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Object</returns>
-        public Object Hostname ()
+        /// <returns>RestApiStringResult</returns>
+        public RestApiStringResult Hostname ()
         {
-             ApiResponse<Object> localVarResponse = HostnameWithHttpInfo();
+             ApiResponse<RestApiStringResult> localVarResponse = HostnameWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -571,8 +571,8 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > HostnameWithHttpInfo ()
+        /// <returns>ApiResponse of RestApiStringResult</returns>
+        public ApiResponse< RestApiStringResult > HostnameWithHttpInfo ()
         {
 
             var localVarPath = "./api/v1.0/heartbeat/Hostname";
@@ -620,19 +620,19 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> HostnameAsync ()
+        /// <returns>Task of RestApiStringResult</returns>
+        public async System.Threading.Tasks.Task<RestApiStringResult> HostnameAsync ()
         {
-             ApiResponse<Object> localVarResponse = await HostnameAsyncWithHttpInfo();
+             ApiResponse<RestApiStringResult> localVarResponse = await HostnameAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -641,8 +641,8 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HostnameAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (RestApiStringResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiStringResult>> HostnameAsyncWithHttpInfo ()
         {
 
             var localVarPath = "./api/v1.0/heartbeat/Hostname";
@@ -690,9 +690,9 @@ namespace Flipdish.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<RestApiStringResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (RestApiStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiStringResult)));
         }
 
         /// <summary>
