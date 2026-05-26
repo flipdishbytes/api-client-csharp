@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GenerateMenu**](LightspeedApi.md#generatemenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
-[**GetStoreSettings**](LightspeedApi.md#getstoresettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
-[**SaveStoreSettings**](LightspeedApi.md#savestoresettings) | **POST** /api/v1.0/lightspeed/{storeId}/settings | 
+[**LightspeedGenerateMenu**](LightspeedApi.md#lightspeedgeneratemenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
+[**LightspeedGetStoreSettings**](LightspeedApi.md#lightspeedgetstoresettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
+[**LightspeedSaveStoreSettings**](LightspeedApi.md#lightspeedsavestoresettings) | **POST** /api/v1.0/lightspeed/{storeId}/settings | 
 
 
-<a name="generatemenu"></a>
-# **GenerateMenu**
-> void GenerateMenu (int? storeId)
+<a name="lightspeedgeneratemenu"></a>
+# **LightspeedGenerateMenu**
+> Object LightspeedGenerateMenu (int? storeId)
 
 
 
@@ -25,7 +25,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class GenerateMenuExample
+    public class LightspeedGenerateMenuExample
     {
         public void main()
         {
@@ -37,11 +37,12 @@ namespace Example
 
             try
             {
-                apiInstance.GenerateMenu(storeId);
+                Object result = apiInstance.LightspeedGenerateMenu(storeId);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling LightspeedApi.GenerateMenu: " + e.Message );
+                Debug.Print("Exception when calling LightspeedApi.LightspeedGenerateMenu: " + e.Message );
             }
         }
     }
@@ -56,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**Object**
 
 ### Authorization
 
@@ -69,9 +70,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getstoresettings"></a>
-# **GetStoreSettings**
-> RestApiResultLightspeedSettings GetStoreSettings (int? storeId)
+<a name="lightspeedgetstoresettings"></a>
+# **LightspeedGetStoreSettings**
+> RestApiResultLightspeedSettings LightspeedGetStoreSettings (int? storeId)
 
 
 
@@ -85,7 +86,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class GetStoreSettingsExample
+    public class LightspeedGetStoreSettingsExample
     {
         public void main()
         {
@@ -97,12 +98,12 @@ namespace Example
 
             try
             {
-                RestApiResultLightspeedSettings result = apiInstance.GetStoreSettings(storeId);
+                RestApiResultLightspeedSettings result = apiInstance.LightspeedGetStoreSettings(storeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling LightspeedApi.GetStoreSettings: " + e.Message );
+                Debug.Print("Exception when calling LightspeedApi.LightspeedGetStoreSettings: " + e.Message );
             }
         }
     }
@@ -130,9 +131,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="savestoresettings"></a>
-# **SaveStoreSettings**
-> RestApiResultLightspeedSettings SaveStoreSettings (int? storeId, LightspeedSettings lightspeedSettings)
+<a name="lightspeedsavestoresettings"></a>
+# **LightspeedSaveStoreSettings**
+> RestApiResultLightspeedSettings LightspeedSaveStoreSettings (int? storeId, LightspeedSettings lightspeedSettings)
 
 
 
@@ -146,7 +147,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class SaveStoreSettingsExample
+    public class LightspeedSaveStoreSettingsExample
     {
         public void main()
         {
@@ -159,12 +160,12 @@ namespace Example
 
             try
             {
-                RestApiResultLightspeedSettings result = apiInstance.SaveStoreSettings(storeId, lightspeedSettings);
+                RestApiResultLightspeedSettings result = apiInstance.LightspeedSaveStoreSettings(storeId, lightspeedSettings);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling LightspeedApi.SaveStoreSettings: " + e.Message );
+                Debug.Print("Exception when calling LightspeedApi.LightspeedSaveStoreSettings: " + e.Message );
             }
         }
     }

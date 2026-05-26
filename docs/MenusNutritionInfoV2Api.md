@@ -4,17 +4,17 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddOrUpdateMenuItemNutritionInfoV2**](MenusNutritionInfoV2Api.md#addorupdatemenuitemnutritioninfov2) | **POST** /api/v1.0/{appId}/menus/{menuId}/menuItem/{publicId}/nutritionv2 | 
-[**AddOrUpdateMenuItemOptionSetItemNutritionInfoV2**](MenusNutritionInfoV2Api.md#addorupdatemenuitemoptionsetitemnutritioninfov2) | **POST** /api/v1.0/{appId}/menus/{menuId}/menuItemOption/{publicId}/nutritionv2 | 
-[**GetAllergensV2**](MenusNutritionInfoV2Api.md#getallergensv2) | **GET** /api/v1.0/{appId}/menus/nutritionv2/allergens | 
-[**GetMenuNutritionInfoV2ByMenuId**](MenusNutritionInfoV2Api.md#getmenunutritioninfov2bymenuid) | **GET** /api/v1.0/{appId}/menus/{menuId}/nutritionv2 | 
+[**AddOrUpdateMenuItemNutritionInfoV2**](MenusNutritionInfoV2Api.md#addorupdatemenuitemnutritioninfov2) | **POST** /api/v1.0/{appId}/menus/{menuId}/menuItem/{publicId}/nutritionv2 | Add or update menuitem nutrition info by menu item&#39;s publicId
+[**AddOrUpdateMenuItemOptionSetItemNutritionInfoV2**](MenusNutritionInfoV2Api.md#addorupdatemenuitemoptionsetitemnutritioninfov2) | **POST** /api/v1.0/{appId}/menus/{menuId}/menuItemOption/{publicId}/nutritionv2 | Add or update menuitem option set item&#39;s nutrition info by its publicId
+[**GetAllergensV2**](MenusNutritionInfoV2Api.md#getallergensv2) | **GET** /api/v1.0/{appId}/menus/nutritionv2/allergens | Get allergens
+[**GetMenuNutritionInfoV2ByMenuId**](MenusNutritionInfoV2Api.md#getmenunutritioninfov2bymenuid) | **GET** /api/v1.0/{appId}/menus/{menuId}/nutritionv2 | Get menu nutrition by menuId
 
 
 <a name="addorupdatemenuitemnutritioninfov2"></a>
 # **AddOrUpdateMenuItemNutritionInfoV2**
 > Object AddOrUpdateMenuItemNutritionInfoV2 (int? menuId, string publicId, ItemNutritionInfoV2AddUpdateModel addOrUpdateModel, string appId)
 
-
+Add or update menuitem nutrition info by menu item's publicId
 
 ### Example
 ```csharp
@@ -34,13 +34,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenusNutritionInfoV2Api();
-            var menuId = 56;  // int? | 
-            var publicId = publicId_example;  // string | 
-            var addOrUpdateModel = new ItemNutritionInfoV2AddUpdateModel(); // ItemNutritionInfoV2AddUpdateModel | 
+            var menuId = 56;  // int? | Menu identifier
+            var publicId = publicId_example;  // string | Menu item's publicId
+            var addOrUpdateModel = new ItemNutritionInfoV2AddUpdateModel(); // ItemNutritionInfoV2AddUpdateModel | Allergen ids
             var appId = appId_example;  // string | 
 
             try
             {
+                // Add or update menuitem nutrition info by menu item's publicId
                 Object result = apiInstance.AddOrUpdateMenuItemNutritionInfoV2(menuId, publicId, addOrUpdateModel, appId);
                 Debug.WriteLine(result);
             }
@@ -57,9 +58,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
- **publicId** | **string**|  | 
- **addOrUpdateModel** | [**ItemNutritionInfoV2AddUpdateModel**](ItemNutritionInfoV2AddUpdateModel.md)|  | 
+ **menuId** | **int?**| Menu identifier | 
+ **publicId** | **string**| Menu item&#39;s publicId | 
+ **addOrUpdateModel** | [**ItemNutritionInfoV2AddUpdateModel**](ItemNutritionInfoV2AddUpdateModel.md)| Allergen ids | 
  **appId** | **string**|  | 
 
 ### Return type
@@ -81,7 +82,7 @@ Name | Type | Description  | Notes
 # **AddOrUpdateMenuItemOptionSetItemNutritionInfoV2**
 > Object AddOrUpdateMenuItemOptionSetItemNutritionInfoV2 (int? menuId, string publicId, ItemNutritionInfoV2AddUpdateModel addOrUpdateModel, string appId)
 
-
+Add or update menuitem option set item's nutrition info by its publicId
 
 ### Example
 ```csharp
@@ -101,13 +102,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenusNutritionInfoV2Api();
-            var menuId = 56;  // int? | 
-            var publicId = publicId_example;  // string | 
-            var addOrUpdateModel = new ItemNutritionInfoV2AddUpdateModel(); // ItemNutritionInfoV2AddUpdateModel | 
+            var menuId = 56;  // int? | Menu identifier
+            var publicId = publicId_example;  // string | Menu item option set item's publicId
+            var addOrUpdateModel = new ItemNutritionInfoV2AddUpdateModel(); // ItemNutritionInfoV2AddUpdateModel | Allergen ids
             var appId = appId_example;  // string | 
 
             try
             {
+                // Add or update menuitem option set item's nutrition info by its publicId
                 Object result = apiInstance.AddOrUpdateMenuItemOptionSetItemNutritionInfoV2(menuId, publicId, addOrUpdateModel, appId);
                 Debug.WriteLine(result);
             }
@@ -124,9 +126,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
- **publicId** | **string**|  | 
- **addOrUpdateModel** | [**ItemNutritionInfoV2AddUpdateModel**](ItemNutritionInfoV2AddUpdateModel.md)|  | 
+ **menuId** | **int?**| Menu identifier | 
+ **publicId** | **string**| Menu item option set item&#39;s publicId | 
+ **addOrUpdateModel** | [**ItemNutritionInfoV2AddUpdateModel**](ItemNutritionInfoV2AddUpdateModel.md)| Allergen ids | 
  **appId** | **string**|  | 
 
 ### Return type
@@ -148,7 +150,7 @@ Name | Type | Description  | Notes
 # **GetAllergensV2**
 > RestApiArrayResultAllergen GetAllergensV2 (string appId, string languageId = null)
 
-
+Get allergens
 
 ### Example
 ```csharp
@@ -173,6 +175,7 @@ namespace Example
 
             try
             {
+                // Get allergens
                 RestApiArrayResultAllergen result = apiInstance.GetAllergensV2(appId, languageId);
                 Debug.WriteLine(result);
             }
@@ -211,7 +214,7 @@ Name | Type | Description  | Notes
 # **GetMenuNutritionInfoV2ByMenuId**
 > RestApiResultNutritionInfoV2 GetMenuNutritionInfoV2ByMenuId (string appId, int? menuId, string languageId = null)
 
-
+Get menu nutrition by menuId
 
 ### Example
 ```csharp
@@ -232,11 +235,12 @@ namespace Example
 
             var apiInstance = new MenusNutritionInfoV2Api();
             var appId = appId_example;  // string | 
-            var menuId = 56;  // int? | 
+            var menuId = 56;  // int? | Menu identifier
             var languageId = languageId_example;  // string |  (optional) 
 
             try
             {
+                // Get menu nutrition by menuId
                 RestApiResultNutritionInfoV2 result = apiInstance.GetMenuNutritionInfoV2ByMenuId(appId, menuId, languageId);
                 Debug.WriteLine(result);
             }
@@ -254,7 +258,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **string**|  | 
- **menuId** | **int?**|  | 
+ **menuId** | **int?**| Menu identifier | 
  **languageId** | **string**|  | [optional] 
 
 ### Return type

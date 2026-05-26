@@ -32,8 +32,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns></returns>
-        void GenerateMenu (int? storeId);
+        /// <returns>Object</returns>
+        Object LightspeedGenerateMenu (int? storeId);
 
         /// <summary>
         /// 
@@ -43,8 +43,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GenerateMenuWithHttpInfo (int? storeId);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> LightspeedGenerateMenuWithHttpInfo (int? storeId);
         /// <summary>
         /// 
         /// </summary>
@@ -54,7 +54,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <returns>RestApiResultLightspeedSettings</returns>
-        RestApiResultLightspeedSettings GetStoreSettings (int? storeId);
+        RestApiResultLightspeedSettings LightspeedGetStoreSettings (int? storeId);
 
         /// <summary>
         /// 
@@ -65,7 +65,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultLightspeedSettings</returns>
-        ApiResponse<RestApiResultLightspeedSettings> GetStoreSettingsWithHttpInfo (int? storeId);
+        ApiResponse<RestApiResultLightspeedSettings> LightspeedGetStoreSettingsWithHttpInfo (int? storeId);
         /// <summary>
         /// 
         /// </summary>
@@ -76,7 +76,7 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="lightspeedSettings"></param>
         /// <returns>RestApiResultLightspeedSettings</returns>
-        RestApiResultLightspeedSettings SaveStoreSettings (int? storeId, LightspeedSettings lightspeedSettings);
+        RestApiResultLightspeedSettings LightspeedSaveStoreSettings (int? storeId, LightspeedSettings lightspeedSettings);
 
         /// <summary>
         /// 
@@ -88,7 +88,7 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="lightspeedSettings"></param>
         /// <returns>ApiResponse of RestApiResultLightspeedSettings</returns>
-        ApiResponse<RestApiResultLightspeedSettings> SaveStoreSettingsWithHttpInfo (int? storeId, LightspeedSettings lightspeedSettings);
+        ApiResponse<RestApiResultLightspeedSettings> LightspeedSaveStoreSettingsWithHttpInfo (int? storeId, LightspeedSettings lightspeedSettings);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -99,8 +99,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GenerateMenuAsync (int? storeId);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> LightspeedGenerateMenuAsync (int? storeId);
 
         /// <summary>
         /// 
@@ -110,8 +110,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GenerateMenuAsyncWithHttpInfo (int? storeId);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> LightspeedGenerateMenuAsyncWithHttpInfo (int? storeId);
         /// <summary>
         /// 
         /// </summary>
@@ -121,7 +121,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <returns>Task of RestApiResultLightspeedSettings</returns>
-        System.Threading.Tasks.Task<RestApiResultLightspeedSettings> GetStoreSettingsAsync (int? storeId);
+        System.Threading.Tasks.Task<RestApiResultLightspeedSettings> LightspeedGetStoreSettingsAsync (int? storeId);
 
         /// <summary>
         /// 
@@ -132,7 +132,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultLightspeedSettings)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultLightspeedSettings>> GetStoreSettingsAsyncWithHttpInfo (int? storeId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultLightspeedSettings>> LightspeedGetStoreSettingsAsyncWithHttpInfo (int? storeId);
         /// <summary>
         /// 
         /// </summary>
@@ -143,7 +143,7 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="lightspeedSettings"></param>
         /// <returns>Task of RestApiResultLightspeedSettings</returns>
-        System.Threading.Tasks.Task<RestApiResultLightspeedSettings> SaveStoreSettingsAsync (int? storeId, LightspeedSettings lightspeedSettings);
+        System.Threading.Tasks.Task<RestApiResultLightspeedSettings> LightspeedSaveStoreSettingsAsync (int? storeId, LightspeedSettings lightspeedSettings);
 
         /// <summary>
         /// 
@@ -155,7 +155,7 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="lightspeedSettings"></param>
         /// <returns>Task of ApiResponse (RestApiResultLightspeedSettings)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultLightspeedSettings>> SaveStoreSettingsAsyncWithHttpInfo (int? storeId, LightspeedSettings lightspeedSettings);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultLightspeedSettings>> LightspeedSaveStoreSettingsAsyncWithHttpInfo (int? storeId, LightspeedSettings lightspeedSettings);
         #endregion Asynchronous Operations
     }
 
@@ -261,10 +261,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns></returns>
-        public void GenerateMenu (int? storeId)
+        /// <returns>Object</returns>
+        public Object LightspeedGenerateMenu (int? storeId)
         {
-             GenerateMenuWithHttpInfo(storeId);
+             ApiResponse<Object> localVarResponse = LightspeedGenerateMenuWithHttpInfo(storeId);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -272,12 +273,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GenerateMenuWithHttpInfo (int? storeId)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > LightspeedGenerateMenuWithHttpInfo (int? storeId)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling LightspeedApi->GenerateMenu");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling LightspeedApi->LightspeedGenerateMenu");
 
             var localVarPath = "./api/v1.0/lightspeed/{storeId}/menu/generate";
             var localVarPathParams = new Dictionary<String, String>();
@@ -321,13 +322,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GenerateMenu", localVarResponse);
+                Exception exception = ExceptionFactory("LightspeedGenerateMenu", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -335,10 +336,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GenerateMenuAsync (int? storeId)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> LightspeedGenerateMenuAsync (int? storeId)
         {
-             await GenerateMenuAsyncWithHttpInfo(storeId);
+             ApiResponse<Object> localVarResponse = await LightspeedGenerateMenuAsyncWithHttpInfo(storeId);
+             return localVarResponse.Data;
 
         }
 
@@ -347,12 +349,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GenerateMenuAsyncWithHttpInfo (int? storeId)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> LightspeedGenerateMenuAsyncWithHttpInfo (int? storeId)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling LightspeedApi->GenerateMenu");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling LightspeedApi->LightspeedGenerateMenu");
 
             var localVarPath = "./api/v1.0/lightspeed/{storeId}/menu/generate";
             var localVarPathParams = new Dictionary<String, String>();
@@ -396,13 +398,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GenerateMenu", localVarResponse);
+                Exception exception = ExceptionFactory("LightspeedGenerateMenu", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -411,9 +413,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <returns>RestApiResultLightspeedSettings</returns>
-        public RestApiResultLightspeedSettings GetStoreSettings (int? storeId)
+        public RestApiResultLightspeedSettings LightspeedGetStoreSettings (int? storeId)
         {
-             ApiResponse<RestApiResultLightspeedSettings> localVarResponse = GetStoreSettingsWithHttpInfo(storeId);
+             ApiResponse<RestApiResultLightspeedSettings> localVarResponse = LightspeedGetStoreSettingsWithHttpInfo(storeId);
              return localVarResponse.Data;
         }
 
@@ -423,11 +425,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultLightspeedSettings</returns>
-        public ApiResponse< RestApiResultLightspeedSettings > GetStoreSettingsWithHttpInfo (int? storeId)
+        public ApiResponse< RestApiResultLightspeedSettings > LightspeedGetStoreSettingsWithHttpInfo (int? storeId)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling LightspeedApi->GetStoreSettings");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling LightspeedApi->LightspeedGetStoreSettings");
 
             var localVarPath = "./api/v1.0/lightspeed/{storeId}/settings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -471,7 +473,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetStoreSettings", localVarResponse);
+                Exception exception = ExceptionFactory("LightspeedGetStoreSettings", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -486,9 +488,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <returns>Task of RestApiResultLightspeedSettings</returns>
-        public async System.Threading.Tasks.Task<RestApiResultLightspeedSettings> GetStoreSettingsAsync (int? storeId)
+        public async System.Threading.Tasks.Task<RestApiResultLightspeedSettings> LightspeedGetStoreSettingsAsync (int? storeId)
         {
-             ApiResponse<RestApiResultLightspeedSettings> localVarResponse = await GetStoreSettingsAsyncWithHttpInfo(storeId);
+             ApiResponse<RestApiResultLightspeedSettings> localVarResponse = await LightspeedGetStoreSettingsAsyncWithHttpInfo(storeId);
              return localVarResponse.Data;
 
         }
@@ -499,11 +501,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultLightspeedSettings)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultLightspeedSettings>> GetStoreSettingsAsyncWithHttpInfo (int? storeId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultLightspeedSettings>> LightspeedGetStoreSettingsAsyncWithHttpInfo (int? storeId)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling LightspeedApi->GetStoreSettings");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling LightspeedApi->LightspeedGetStoreSettings");
 
             var localVarPath = "./api/v1.0/lightspeed/{storeId}/settings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -547,7 +549,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetStoreSettings", localVarResponse);
+                Exception exception = ExceptionFactory("LightspeedGetStoreSettings", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -563,9 +565,9 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="lightspeedSettings"></param>
         /// <returns>RestApiResultLightspeedSettings</returns>
-        public RestApiResultLightspeedSettings SaveStoreSettings (int? storeId, LightspeedSettings lightspeedSettings)
+        public RestApiResultLightspeedSettings LightspeedSaveStoreSettings (int? storeId, LightspeedSettings lightspeedSettings)
         {
-             ApiResponse<RestApiResultLightspeedSettings> localVarResponse = SaveStoreSettingsWithHttpInfo(storeId, lightspeedSettings);
+             ApiResponse<RestApiResultLightspeedSettings> localVarResponse = LightspeedSaveStoreSettingsWithHttpInfo(storeId, lightspeedSettings);
              return localVarResponse.Data;
         }
 
@@ -576,14 +578,14 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="lightspeedSettings"></param>
         /// <returns>ApiResponse of RestApiResultLightspeedSettings</returns>
-        public ApiResponse< RestApiResultLightspeedSettings > SaveStoreSettingsWithHttpInfo (int? storeId, LightspeedSettings lightspeedSettings)
+        public ApiResponse< RestApiResultLightspeedSettings > LightspeedSaveStoreSettingsWithHttpInfo (int? storeId, LightspeedSettings lightspeedSettings)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling LightspeedApi->SaveStoreSettings");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling LightspeedApi->LightspeedSaveStoreSettings");
             // verify the required parameter 'lightspeedSettings' is set
             if (lightspeedSettings == null)
-                throw new ApiException(400, "Missing required parameter 'lightspeedSettings' when calling LightspeedApi->SaveStoreSettings");
+                throw new ApiException(400, "Missing required parameter 'lightspeedSettings' when calling LightspeedApi->LightspeedSaveStoreSettings");
 
             var localVarPath = "./api/v1.0/lightspeed/{storeId}/settings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -640,7 +642,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SaveStoreSettings", localVarResponse);
+                Exception exception = ExceptionFactory("LightspeedSaveStoreSettings", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -656,9 +658,9 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="lightspeedSettings"></param>
         /// <returns>Task of RestApiResultLightspeedSettings</returns>
-        public async System.Threading.Tasks.Task<RestApiResultLightspeedSettings> SaveStoreSettingsAsync (int? storeId, LightspeedSettings lightspeedSettings)
+        public async System.Threading.Tasks.Task<RestApiResultLightspeedSettings> LightspeedSaveStoreSettingsAsync (int? storeId, LightspeedSettings lightspeedSettings)
         {
-             ApiResponse<RestApiResultLightspeedSettings> localVarResponse = await SaveStoreSettingsAsyncWithHttpInfo(storeId, lightspeedSettings);
+             ApiResponse<RestApiResultLightspeedSettings> localVarResponse = await LightspeedSaveStoreSettingsAsyncWithHttpInfo(storeId, lightspeedSettings);
              return localVarResponse.Data;
 
         }
@@ -670,14 +672,14 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="lightspeedSettings"></param>
         /// <returns>Task of ApiResponse (RestApiResultLightspeedSettings)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultLightspeedSettings>> SaveStoreSettingsAsyncWithHttpInfo (int? storeId, LightspeedSettings lightspeedSettings)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultLightspeedSettings>> LightspeedSaveStoreSettingsAsyncWithHttpInfo (int? storeId, LightspeedSettings lightspeedSettings)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling LightspeedApi->SaveStoreSettings");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling LightspeedApi->LightspeedSaveStoreSettings");
             // verify the required parameter 'lightspeedSettings' is set
             if (lightspeedSettings == null)
-                throw new ApiException(400, "Missing required parameter 'lightspeedSettings' when calling LightspeedApi->SaveStoreSettings");
+                throw new ApiException(400, "Missing required parameter 'lightspeedSettings' when calling LightspeedApi->LightspeedSaveStoreSettings");
 
             var localVarPath = "./api/v1.0/lightspeed/{storeId}/settings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -734,7 +736,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SaveStoreSettings", localVarResponse);
+                Exception exception = ExceptionFactory("LightspeedSaveStoreSettings", localVarResponse);
                 if (exception != null) throw exception;
             }
 

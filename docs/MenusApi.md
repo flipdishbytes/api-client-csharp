@@ -4,15 +4,13 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateDraftMenuFromExistingMenu**](MenusApi.md#createdraftmenufromexistingmenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | 
-[**CreateNewMenuAsync**](MenusApi.md#createnewmenuasync) | **POST** /api/v1.0/{appId}/menus/async | 
-[**CreateNewMenuForApp**](MenusApi.md#createnewmenuforapp) | **POST** /api/v1.0/{appId}/menus | 
-[**DeleteMenu**](MenusApi.md#deletemenu) | **DELETE** /api/v1.0/menus/{menuId} | 
-[**DeleteMenuImage**](MenusApi.md#deletemenuimage) | **DELETE** /api/v1.0/menus/{menuId}/image | 
-[**DeleteMenuItemMetadata**](MenusApi.md#deletemenuitemmetadata) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | 
-[**DeleteTaxRate**](MenusApi.md#deletetaxrate) | **DELETE** /api/v1.0/menus/{menuId}/tax/{taxId} | 
+[**CreateDraftMenuFromExistingMenu**](MenusApi.md#createdraftmenufromexistingmenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | Clone a menu, (without attaching stores)
+[**CreateNewMenuAsync**](MenusApi.md#createnewmenuasync) | **POST** /api/v1.0/{appId}/menus/async | Create a new menu asynchronously
+[**CreateNewMenuForApp**](MenusApi.md#createnewmenuforapp) | **POST** /api/v1.0/{appId}/menus | Create a new menu
+[**DeleteMenu**](MenusApi.md#deletemenu) | **DELETE** /api/v1.0/menus/{menuId} | Mark a Menu as Deleted
+[**DeleteMenuImage**](MenusApi.md#deletemenuimage) | **DELETE** /api/v1.0/menus/{menuId}/image | Delete menu image
+[**DeleteMenuItemMetadata**](MenusApi.md#deletemenuitemmetadata) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Delete menu item metadata
 [**GetAllMenuMetadataByMenuIdAndStoreId**](MenusApi.md#getallmenumetadatabymenuidandstoreid) | **GET** /api/v1.0/menus/{menuId}/metadata/store/{storeId} | Get all menu metadata by menu ID and store ID
-[**GetMenuBulkShowHide**](MenusApi.md#getmenubulkshowhide) | **GET** /api/v1.0/menus/{menuId}/bulkshowhide/list | 
 [**GetMenuById**](MenusApi.md#getmenubyid) | **GET** /api/v1.0/menus/{menuId} | Get menu by identifier
 [**GetMenuItemMetadata**](MenusApi.md#getmenuitemmetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Get menu item metadata
 [**GetMenuItemMetadataByKey**](MenusApi.md#getmenuitemmetadatabykey) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get menu item metadata by key
@@ -22,26 +20,28 @@ Method | HTTP request | Description
 [**GetMenuTaxDetails**](MenusApi.md#getmenutaxdetails) | **GET** /api/v1.0/menus/{menuId}/tax | Get menus tax details
 [**GetMenusByAppId**](MenusApi.md#getmenusbyappid) | **GET** /api/v1.0/{appId}/menus | Get menus by appId
 [**GetMenusCheckpoints**](MenusApi.md#getmenuscheckpoints) | **GET** /api/v1.0/menus/{menuId}/checkpoints | Get a Menus Checkpoints
-[**RestoreAMenuCheckpoint**](MenusApi.md#restoreamenucheckpoint) | **POST** /api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore | 
-[**SetDisplayOnMenuTax**](MenusApi.md#setdisplayonmenutax) | **POST** /api/v1.0/menus/{menuId}/tax/show/{show} | 
-[**SetItemDisplayOrders**](MenusApi.md#setitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sectiondisplayorders | 
-[**SetMenuItemMetadata**](MenusApi.md#setmenuitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | 
-[**SetMenuItemOptionSetItemMetadata**](MenusApi.md#setmenuitemoptionsetitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | 
-[**SetMenuLock**](MenusApi.md#setmenulock) | **POST** /api/v1.0/menus/{menuId}/lock | 
-[**SetMenuName**](MenusApi.md#setmenuname) | **POST** /api/v1.0/menus/{menuId}/name | 
-[**ShowHideBulkItems**](MenusApi.md#showhidebulkitems) | **POST** /api/v1.0/menus/{menuId}/bulkshowhide | 
-[**UpdateMenu**](MenusApi.md#updatemenu) | **POST** /api/v1.0/menus/{menuId} | 
-[**UpdateTaxType**](MenusApi.md#updatetaxtype) | **POST** /api/v1.0/menus/{menuId}/tax/type/{type} | 
-[**UploadMenuImage**](MenusApi.md#uploadmenuimage) | **POST** /api/v1.0/menus/{menuId}/image | 
-[**UploadNewMenuForApp**](MenusApi.md#uploadnewmenuforapp) | **POST** /api/v1.0/{appId}/menus/xlsx | 
-[**UpsertTaxRate**](MenusApi.md#upserttaxrate) | **POST** /api/v1.0/menus/{menuId}/taxrate | 
+[**MenusDeleteTaxRate**](MenusApi.md#menusdeletetaxrate) | **DELETE** /api/v1.0/menus/{menuId}/tax/{taxId} | Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+[**MenusGetMenuBulkShowHide**](MenusApi.md#menusgetmenubulkshowhide) | **GET** /api/v1.0/menus/{menuId}/bulkshowhide/list | Get bulk show/hide menu items and option set items
+[**MenusSetDisplayOnMenuTax**](MenusApi.md#menussetdisplayonmenutax) | **POST** /api/v1.0/menus/{menuId}/tax/show/{show} | Set if tax shows for a Menu
+[**MenusSetItemDisplayOrders**](MenusApi.md#menussetitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sectiondisplayorders | Re-arrange Sections within a Menu
+[**MenusShowHideBulkItems**](MenusApi.md#menusshowhidebulkitems) | **POST** /api/v1.0/menus/{menuId}/bulkshowhide | Bulk show/hide menu items or option set items
+[**MenusUpdateTaxType**](MenusApi.md#menusupdatetaxtype) | **POST** /api/v1.0/menus/{menuId}/tax/type/{type} | Set the type of Tax on a Menu
+[**MenusUpsertTaxRate**](MenusApi.md#menusupserttaxrate) | **POST** /api/v1.0/menus/{menuId}/taxrate | Add/Update a Tax Rate
+[**RestoreAMenuCheckpoint**](MenusApi.md#restoreamenucheckpoint) | **POST** /api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore | Restore a Menu to a checkpoint
+[**SetMenuItemMetadata**](MenusApi.md#setmenuitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Update menu item metadata
+[**SetMenuItemOptionSetItemMetadata**](MenusApi.md#setmenuitemoptionsetitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Update menu item option set item metadata
+[**SetMenuLock**](MenusApi.md#setmenulock) | **POST** /api/v1.0/menus/{menuId}/lock | Lock/Unlock a Menu for Editing
+[**SetMenuName**](MenusApi.md#setmenuname) | **POST** /api/v1.0/menus/{menuId}/name | Set Menus Name
+[**UpdateMenu**](MenusApi.md#updatemenu) | **POST** /api/v1.0/menus/{menuId} | Update menu
+[**UploadMenuImage**](MenusApi.md#uploadmenuimage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
+[**UploadNewMenuForApp**](MenusApi.md#uploadnewmenuforapp) | **POST** /api/v1.0/{appId}/menus/xlsx | Create a new menu from xlsx file.
 
 
 <a name="createdraftmenufromexistingmenu"></a>
 # **CreateDraftMenuFromExistingMenu**
 > RestApiResultMenu CreateDraftMenuFromExistingMenu (int? menuId, string newName)
 
-
+Clone a menu, (without attaching stores)
 
 ### Example
 ```csharp
@@ -61,11 +61,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | 
-            var newName = newName_example;  // string | 
+            var menuId = 56;  // int? | Menu identifier
+            var newName = newName_example;  // string | Name of the new Menu
 
             try
             {
+                // Clone a menu, (without attaching stores)
                 RestApiResultMenu result = apiInstance.CreateDraftMenuFromExistingMenu(menuId, newName);
                 Debug.WriteLine(result);
             }
@@ -82,8 +83,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
- **newName** | **string**|  | 
+ **menuId** | **int?**| Menu identifier | 
+ **newName** | **string**| Name of the new Menu | 
 
 ### Return type
 
@@ -104,7 +105,9 @@ Name | Type | Description  | Notes
 # **CreateNewMenuAsync**
 > Object CreateNewMenuAsync (string appId, CreateFullMenu menu, string orgId = null)
 
+Create a new menu asynchronously
 
+You must listen to the webhook menu.async_creation.completed to know when the menu is ready
 
 ### Example
 ```csharp
@@ -124,12 +127,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenusApi();
-            var appId = appId_example;  // string | 
-            var menu = new CreateFullMenu(); // CreateFullMenu | 
-            var orgId = orgId_example;  // string |  (optional) 
+            var appId = appId_example;  // string | App id
+            var menu = new CreateFullMenu(); // CreateFullMenu | Menu
+            var orgId = orgId_example;  // string | Org id (optional) 
 
             try
             {
+                // Create a new menu asynchronously
                 Object result = apiInstance.CreateNewMenuAsync(appId, menu, orgId);
                 Debug.WriteLine(result);
             }
@@ -146,9 +150,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
- **menu** | [**CreateFullMenu**](CreateFullMenu.md)|  | 
- **orgId** | **string**|  | [optional] 
+ **appId** | **string**| App id | 
+ **menu** | [**CreateFullMenu**](CreateFullMenu.md)| Menu | 
+ **orgId** | **string**| Org id | [optional] 
 
 ### Return type
 
@@ -169,7 +173,9 @@ Name | Type | Description  | Notes
 # **CreateNewMenuForApp**
 > int? CreateNewMenuForApp (string appId, CreateFullMenu menu)
 
+Create a new menu
 
+[DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
 
 ### Example
 ```csharp
@@ -189,11 +195,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenusApi();
-            var appId = appId_example;  // string | 
-            var menu = new CreateFullMenu(); // CreateFullMenu | 
+            var appId = appId_example;  // string | App identifier
+            var menu = new CreateFullMenu(); // CreateFullMenu | Menu. If empty the system will create a menu with default items
 
             try
             {
+                // Create a new menu
                 int? result = apiInstance.CreateNewMenuForApp(appId, menu);
                 Debug.WriteLine(result);
             }
@@ -210,8 +217,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
- **menu** | [**CreateFullMenu**](CreateFullMenu.md)|  | 
+ **appId** | **string**| App identifier | 
+ **menu** | [**CreateFullMenu**](CreateFullMenu.md)| Menu. If empty the system will create a menu with default items | 
 
 ### Return type
 
@@ -232,7 +239,7 @@ Name | Type | Description  | Notes
 # **DeleteMenu**
 > void DeleteMenu (int? menuId)
 
-
+Mark a Menu as Deleted
 
 ### Example
 ```csharp
@@ -252,10 +259,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | 
+            var menuId = 56;  // int? | Menu Identifier
 
             try
             {
+                // Mark a Menu as Deleted
                 apiInstance.DeleteMenu(menuId);
             }
             catch (Exception e)
@@ -271,7 +279,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
+ **menuId** | **int?**| Menu Identifier | 
 
 ### Return type
 
@@ -292,7 +300,7 @@ void (empty response body)
 # **DeleteMenuImage**
 > void DeleteMenuImage (int? menuId)
 
-
+Delete menu image
 
 ### Example
 ```csharp
@@ -312,10 +320,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | 
+            var menuId = 56;  // int? | Menu identifier
 
             try
             {
+                // Delete menu image
                 apiInstance.DeleteMenuImage(menuId);
             }
             catch (Exception e)
@@ -331,7 +340,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
+ **menuId** | **int?**| Menu identifier | 
 
 ### Return type
 
@@ -352,7 +361,7 @@ void (empty response body)
 # **DeleteMenuItemMetadata**
 > void DeleteMenuItemMetadata (int? menuId, int? storeId, int? menuItemId, string key)
 
-
+Delete menu item metadata
 
 ### Example
 ```csharp
@@ -372,13 +381,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | 
-            var storeId = 56;  // int? | 
-            var menuItemId = 56;  // int? | 
-            var key = key_example;  // string | 
+            var menuId = 56;  // int? | Menu identifier
+            var storeId = 56;  // int? | Store identifier
+            var menuItemId = 56;  // int? | Menu item identifier
+            var key = key_example;  // string | Metadata key
 
             try
             {
+                // Delete menu item metadata
                 apiInstance.DeleteMenuItemMetadata(menuId, storeId, menuItemId, key);
             }
             catch (Exception e)
@@ -394,72 +404,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
- **storeId** | **int?**|  | 
- **menuItemId** | **int?**|  | 
- **key** | **string**|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="deletetaxrate"></a>
-# **DeleteTaxRate**
-> void DeleteTaxRate (int? menuId, int? taxId)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class DeleteTaxRateExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | 
-            var taxId = 56;  // int? | 
-
-            try
-            {
-                apiInstance.DeleteTaxRate(menuId, taxId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling MenusApi.DeleteTaxRate: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
- **taxId** | **int?**|  | 
+ **menuId** | **int?**| Menu identifier | 
+ **storeId** | **int?**| Store identifier | 
+ **menuItemId** | **int?**| Menu item identifier | 
+ **key** | **string**| Metadata key | 
 
 ### Return type
 
@@ -528,69 +476,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiArrayResultAllMetadataResult**](RestApiArrayResultAllMetadataResult.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getmenubulkshowhide"></a>
-# **GetMenuBulkShowHide**
-> RestApiArrayResultMenuElementListResponse GetMenuBulkShowHide (int? menuId, bool? isAvailable)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class GetMenuBulkShowHideExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | 
-            var isAvailable = true;  // bool? | 
-
-            try
-            {
-                RestApiArrayResultMenuElementListResponse result = apiInstance.GetMenuBulkShowHide(menuId, isAvailable);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling MenusApi.GetMenuBulkShowHide: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
- **isAvailable** | **bool?**|  | 
-
-### Return type
-
-[**RestApiArrayResultMenuElementListResponse**](RestApiArrayResultMenuElementListResponse.md)
 
 ### Authorization
 
@@ -1175,11 +1060,457 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="menusdeletetaxrate"></a>
+# **MenusDeleteTaxRate**
+> void MenusDeleteTaxRate (int? menuId, int? taxId)
+
+Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class MenusDeleteTaxRateExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | Menu identifier
+            var taxId = 56;  // int? | Id of Menu Tax to be removed
+
+            try
+            {
+                // Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+                apiInstance.MenusDeleteTaxRate(menuId, taxId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.MenusDeleteTaxRate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **taxId** | **int?**| Id of Menu Tax to be removed | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="menusgetmenubulkshowhide"></a>
+# **MenusGetMenuBulkShowHide**
+> RestApiArrayResultMenuElementListResponse MenusGetMenuBulkShowHide (int? menuId, bool? isAvailable)
+
+Get bulk show/hide menu items and option set items
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class MenusGetMenuBulkShowHideExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | Menu id
+            var isAvailable = true;  // bool? | Is available flag
+
+            try
+            {
+                // Get bulk show/hide menu items and option set items
+                RestApiArrayResultMenuElementListResponse result = apiInstance.MenusGetMenuBulkShowHide(menuId, isAvailable);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.MenusGetMenuBulkShowHide: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu id | 
+ **isAvailable** | **bool?**| Is available flag | 
+
+### Return type
+
+[**RestApiArrayResultMenuElementListResponse**](RestApiArrayResultMenuElementListResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="menussetdisplayonmenutax"></a>
+# **MenusSetDisplayOnMenuTax**
+> void MenusSetDisplayOnMenuTax (int? menuId, bool? show)
+
+Set if tax shows for a Menu
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class MenusSetDisplayOnMenuTaxExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | Menu identifier
+            var show = true;  // bool? | Boolean show or dont show tax (Exclusive tax type can only ever be TRUE)
+
+            try
+            {
+                // Set if tax shows for a Menu
+                apiInstance.MenusSetDisplayOnMenuTax(menuId, show);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.MenusSetDisplayOnMenuTax: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **show** | **bool?**| Boolean show or dont show tax (Exclusive tax type can only ever be TRUE) | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="menussetitemdisplayorders"></a>
+# **MenusSetItemDisplayOrders**
+> void MenusSetItemDisplayOrders (int? menuId, MenuObjectDisplayOrders displayOrders)
+
+Re-arrange Sections within a Menu
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class MenusSetItemDisplayOrdersExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | Menu identifier
+            var displayOrders = new MenuObjectDisplayOrders(); // MenuObjectDisplayOrders | Section Ids and their new display order
+
+            try
+            {
+                // Re-arrange Sections within a Menu
+                apiInstance.MenusSetItemDisplayOrders(menuId, displayOrders);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.MenusSetItemDisplayOrders: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **displayOrders** | [**MenuObjectDisplayOrders**](MenuObjectDisplayOrders.md)| Section Ids and their new display order | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="menusshowhidebulkitems"></a>
+# **MenusShowHideBulkItems**
+> RestApiArrayResultMenuElementEditResponse MenusShowHideBulkItems (int? menuId, List<MenuElementHide> menuElements, bool? isAvailable)
+
+Bulk show/hide menu items or option set items
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class MenusShowHideBulkItemsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | Menu id
+            var menuElements = new List<MenuElementHide>(); // List<MenuElementHide> | Elements to be show/hide
+            var isAvailable = true;  // bool? | Is available flag
+
+            try
+            {
+                // Bulk show/hide menu items or option set items
+                RestApiArrayResultMenuElementEditResponse result = apiInstance.MenusShowHideBulkItems(menuId, menuElements, isAvailable);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.MenusShowHideBulkItems: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu id | 
+ **menuElements** | [**List&lt;MenuElementHide&gt;**](MenuElementHide.md)| Elements to be show/hide | 
+ **isAvailable** | **bool?**| Is available flag | 
+
+### Return type
+
+[**RestApiArrayResultMenuElementEditResponse**](RestApiArrayResultMenuElementEditResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="menusupdatetaxtype"></a>
+# **MenusUpdateTaxType**
+> void MenusUpdateTaxType (int? menuId, string type)
+
+Set the type of Tax on a Menu
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class MenusUpdateTaxTypeExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | Menu identifier
+            var type = type_example;  // string | Type of Tax
+
+            try
+            {
+                // Set the type of Tax on a Menu
+                apiInstance.MenusUpdateTaxType(menuId, type);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.MenusUpdateTaxType: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **type** | **string**| Type of Tax | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="menusupserttaxrate"></a>
+# **MenusUpsertTaxRate**
+> MenuTaxRate MenusUpsertTaxRate (int? menuId, MenuTaxRate taxRate)
+
+Add/Update a Tax Rate
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class MenusUpsertTaxRateExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new MenusApi();
+            var menuId = 56;  // int? | Menu identifier
+            var taxRate = new MenuTaxRate(); // MenuTaxRate | Tax rate to add/update
+
+            try
+            {
+                // Add/Update a Tax Rate
+                MenuTaxRate result = apiInstance.MenusUpsertTaxRate(menuId, taxRate);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MenusApi.MenusUpsertTaxRate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **int?**| Menu identifier | 
+ **taxRate** | [**MenuTaxRate**](MenuTaxRate.md)| Tax rate to add/update | 
+
+### Return type
+
+[**MenuTaxRate**](MenuTaxRate.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="restoreamenucheckpoint"></a>
 # **RestoreAMenuCheckpoint**
 > void RestoreAMenuCheckpoint (int? menuId, int? checkpointId)
 
-
+Restore a Menu to a checkpoint
 
 ### Example
 ```csharp
@@ -1199,11 +1530,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | 
-            var checkpointId = 56;  // int? | 
+            var menuId = 56;  // int? | Menu identifier
+            var checkpointId = 56;  // int? | Checkpoint to restore menu to
 
             try
             {
+                // Restore a Menu to a checkpoint
                 apiInstance.RestoreAMenuCheckpoint(menuId, checkpointId);
             }
             catch (Exception e)
@@ -1219,8 +1551,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
- **checkpointId** | **int?**|  | 
+ **menuId** | **int?**| Menu identifier | 
+ **checkpointId** | **int?**| Checkpoint to restore menu to | 
 
 ### Return type
 
@@ -1233,130 +1565,6 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="setdisplayonmenutax"></a>
-# **SetDisplayOnMenuTax**
-> void SetDisplayOnMenuTax (int? menuId, bool? show)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class SetDisplayOnMenuTaxExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | 
-            var show = true;  // bool? | 
-
-            try
-            {
-                apiInstance.SetDisplayOnMenuTax(menuId, show);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling MenusApi.SetDisplayOnMenuTax: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
- **show** | **bool?**|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="setitemdisplayorders"></a>
-# **SetItemDisplayOrders**
-> void SetItemDisplayOrders (int? menuId, MenuObjectDisplayOrders displayOrders)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class SetItemDisplayOrdersExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | 
-            var displayOrders = new MenuObjectDisplayOrders(); // MenuObjectDisplayOrders | 
-
-            try
-            {
-                apiInstance.SetItemDisplayOrders(menuId, displayOrders);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling MenusApi.SetItemDisplayOrders: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
- **displayOrders** | [**MenuObjectDisplayOrders**](MenuObjectDisplayOrders.md)|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1365,7 +1573,7 @@ void (empty response body)
 # **SetMenuItemMetadata**
 > void SetMenuItemMetadata (int? menuId, int? storeId, int? menuItemId, Metadata metadata)
 
-
+Update menu item metadata
 
 ### Example
 ```csharp
@@ -1385,13 +1593,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | 
-            var storeId = 56;  // int? | 
-            var menuItemId = 56;  // int? | 
-            var metadata = new Metadata(); // Metadata | 
+            var menuId = 56;  // int? | Menu identifier
+            var storeId = 56;  // int? | Store identifier
+            var menuItemId = 56;  // int? | Menu item identifier
+            var metadata = new Metadata(); // Metadata | Metadata object
 
             try
             {
+                // Update menu item metadata
                 apiInstance.SetMenuItemMetadata(menuId, storeId, menuItemId, metadata);
             }
             catch (Exception e)
@@ -1407,10 +1616,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
- **storeId** | **int?**|  | 
- **menuItemId** | **int?**|  | 
- **metadata** | [**Metadata**](Metadata.md)|  | 
+ **menuId** | **int?**| Menu identifier | 
+ **storeId** | **int?**| Store identifier | 
+ **menuItemId** | **int?**| Menu item identifier | 
+ **metadata** | [**Metadata**](Metadata.md)| Metadata object | 
 
 ### Return type
 
@@ -1431,7 +1640,7 @@ void (empty response body)
 # **SetMenuItemOptionSetItemMetadata**
 > void SetMenuItemOptionSetItemMetadata (int? menuId, int? storeId, int? optionSetItemId, Metadata metadata)
 
-
+Update menu item option set item metadata
 
 ### Example
 ```csharp
@@ -1451,13 +1660,14 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | 
-            var storeId = 56;  // int? | 
-            var optionSetItemId = 56;  // int? | 
-            var metadata = new Metadata(); // Metadata | 
+            var menuId = 56;  // int? | Menu identifier
+            var storeId = 56;  // int? | Store identifier
+            var optionSetItemId = 56;  // int? | Menu item option set item identifier
+            var metadata = new Metadata(); // Metadata | Metadata object
 
             try
             {
+                // Update menu item option set item metadata
                 apiInstance.SetMenuItemOptionSetItemMetadata(menuId, storeId, optionSetItemId, metadata);
             }
             catch (Exception e)
@@ -1473,10 +1683,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
- **storeId** | **int?**|  | 
- **optionSetItemId** | **int?**|  | 
- **metadata** | [**Metadata**](Metadata.md)|  | 
+ **menuId** | **int?**| Menu identifier | 
+ **storeId** | **int?**| Store identifier | 
+ **optionSetItemId** | **int?**| Menu item option set item identifier | 
+ **metadata** | [**Metadata**](Metadata.md)| Metadata object | 
 
 ### Return type
 
@@ -1497,7 +1707,7 @@ void (empty response body)
 # **SetMenuLock**
 > void SetMenuLock (int? menuId, bool? locked)
 
-
+Lock/Unlock a Menu for Editing
 
 ### Example
 ```csharp
@@ -1517,11 +1727,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | 
-            var locked = true;  // bool? | 
+            var menuId = 56;  // int? | Menu identifier
+            var locked = true;  // bool? | True: Locks menu for editing, False: Unlocks for editing
 
             try
             {
+                // Lock/Unlock a Menu for Editing
                 apiInstance.SetMenuLock(menuId, locked);
             }
             catch (Exception e)
@@ -1537,8 +1748,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
- **locked** | **bool?**|  | 
+ **menuId** | **int?**| Menu identifier | 
+ **locked** | **bool?**| True: Locks menu for editing, False: Unlocks for editing | 
 
 ### Return type
 
@@ -1559,7 +1770,7 @@ void (empty response body)
 # **SetMenuName**
 > void SetMenuName (int? menuId, string name)
 
-
+Set Menus Name
 
 ### Example
 ```csharp
@@ -1579,11 +1790,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | 
-            var name = name_example;  // string | 
+            var menuId = 56;  // int? | Menu identifier
+            var name = name_example;  // string | Name to set for this Menu
 
             try
             {
+                // Set Menus Name
                 apiInstance.SetMenuName(menuId, name);
             }
             catch (Exception e)
@@ -1599,8 +1811,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
- **name** | **string**|  | 
+ **menuId** | **int?**| Menu identifier | 
+ **name** | **string**| Name to set for this Menu | 
 
 ### Return type
 
@@ -1617,76 +1829,11 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="showhidebulkitems"></a>
-# **ShowHideBulkItems**
-> RestApiArrayResultMenuElementEditResponse ShowHideBulkItems (int? menuId, List<MenuElementHide> menuElements, bool? isAvailable)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class ShowHideBulkItemsExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | 
-            var menuElements = new List<MenuElementHide>(); // List<MenuElementHide> | 
-            var isAvailable = true;  // bool? | 
-
-            try
-            {
-                RestApiArrayResultMenuElementEditResponse result = apiInstance.ShowHideBulkItems(menuId, menuElements, isAvailable);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling MenusApi.ShowHideBulkItems: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
- **menuElements** | [**List&lt;MenuElementHide&gt;**](MenuElementHide.md)|  | 
- **isAvailable** | **bool?**|  | 
-
-### Return type
-
-[**RestApiArrayResultMenuElementEditResponse**](RestApiArrayResultMenuElementEditResponse.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="updatemenu"></a>
 # **UpdateMenu**
 > void UpdateMenu (int? menuId, MenuBase menu)
 
-
+Update menu
 
 ### Example
 ```csharp
@@ -1706,11 +1853,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | 
-            var menu = new MenuBase(); // MenuBase | 
+            var menuId = 56;  // int? | Menu identifier
+            var menu = new MenuBase(); // MenuBase | Full menu data
 
             try
             {
+                // Update menu
                 apiInstance.UpdateMenu(menuId, menu);
             }
             catch (Exception e)
@@ -1726,8 +1874,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
- **menu** | [**MenuBase**](MenuBase.md)|  | 
+ **menuId** | **int?**| Menu identifier | 
+ **menu** | [**MenuBase**](MenuBase.md)| Full menu data | 
 
 ### Return type
 
@@ -1744,73 +1892,11 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatetaxtype"></a>
-# **UpdateTaxType**
-> void UpdateTaxType (int? menuId, string type)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class UpdateTaxTypeExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | 
-            var type = type_example;  // string | 
-
-            try
-            {
-                apiInstance.UpdateTaxType(menuId, type);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling MenusApi.UpdateTaxType: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
- **type** | **string**|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="uploadmenuimage"></a>
 # **UploadMenuImage**
 > RestApiStringResult UploadMenuImage (int? menuId, System.IO.Stream image)
 
-
+Upload menu image
 
 ### Example
 ```csharp
@@ -1830,11 +1916,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | 
+            var menuId = 56;  // int? | Menu identifier
             var image = new System.IO.Stream(); // System.IO.Stream | Menu image
 
             try
             {
+                // Upload menu image
                 RestApiStringResult result = apiInstance.UploadMenuImage(menuId, image);
                 Debug.WriteLine(result);
             }
@@ -1851,7 +1938,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
+ **menuId** | **int?**| Menu identifier | 
  **image** | **System.IO.Stream**| Menu image | 
 
 ### Return type
@@ -1873,7 +1960,7 @@ Name | Type | Description  | Notes
 # **UploadNewMenuForApp**
 > int? UploadNewMenuForApp (string appId, System.IO.Stream menu)
 
-
+Create a new menu from xlsx file.
 
 ### Example
 ```csharp
@@ -1893,11 +1980,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MenusApi();
-            var appId = appId_example;  // string | 
+            var appId = appId_example;  // string | App identifier
             var menu = new System.IO.Stream(); // System.IO.Stream | Uploaded xlsx menu
 
             try
             {
+                // Create a new menu from xlsx file.
                 int? result = apiInstance.UploadNewMenuForApp(appId, menu);
                 Debug.WriteLine(result);
             }
@@ -1914,7 +2002,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
+ **appId** | **string**| App identifier | 
  **menu** | **System.IO.Stream**| Uploaded xlsx menu | 
 
 ### Return type
@@ -1928,69 +2016,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="upserttaxrate"></a>
-# **UpsertTaxRate**
-> MenuTaxRate UpsertTaxRate (int? menuId, MenuTaxRate taxRate)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class UpsertTaxRateExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new MenusApi();
-            var menuId = 56;  // int? | 
-            var taxRate = new MenuTaxRate(); // MenuTaxRate | 
-
-            try
-            {
-                MenuTaxRate result = apiInstance.UpsertTaxRate(menuId, taxRate);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling MenusApi.UpsertTaxRate: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menuId** | **int?**|  | 
- **taxRate** | [**MenuTaxRate**](MenuTaxRate.md)|  | 
-
-### Return type
-
-[**MenuTaxRate**](MenuTaxRate.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

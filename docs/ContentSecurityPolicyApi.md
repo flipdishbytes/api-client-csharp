@@ -4,12 +4,12 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Report**](ContentSecurityPolicyApi.md#report) | **POST** /api/v1.0/csp/report | 
+[**ContentSecurityPolicyReport**](ContentSecurityPolicyApi.md#contentsecuritypolicyreport) | **POST** /api/v1.0/csp/report | 
 
 
-<a name="report"></a>
-# **Report**
-> void Report (CspReportRequest request)
+<a name="contentsecuritypolicyreport"></a>
+# **ContentSecurityPolicyReport**
+> Object ContentSecurityPolicyReport (CspReportRequest request)
 
 
 
@@ -23,7 +23,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class ReportExample
+    public class ContentSecurityPolicyReportExample
     {
         public void main()
         {
@@ -35,11 +35,12 @@ namespace Example
 
             try
             {
-                apiInstance.Report(request);
+                Object result = apiInstance.ContentSecurityPolicyReport(request);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ContentSecurityPolicyApi.Report: " + e.Message );
+                Debug.Print("Exception when calling ContentSecurityPolicyApi.ContentSecurityPolicyReport: " + e.Message );
             }
         }
     }
@@ -54,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**Object**
 
 ### Authorization
 

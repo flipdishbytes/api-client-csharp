@@ -33,7 +33,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="firebaseApp"></param>
         /// <returns>Object</returns>
-        Object AddFirebaseApp (FirebaseApp firebaseApp);
+        Object FirebaseAppsAddFirebaseApp (FirebaseApp firebaseApp);
 
         /// <summary>
         /// 
@@ -44,7 +44,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="firebaseApp"></param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> AddFirebaseAppWithHttpInfo (FirebaseApp firebaseApp);
+        ApiResponse<Object> FirebaseAppsAddFirebaseAppWithHttpInfo (FirebaseApp firebaseApp);
         /// <summary>
         /// 
         /// </summary>
@@ -54,7 +54,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whiteLabelId"></param>
         /// <returns>Object</returns>
-        Object DeleteFirebaseApp (int? whiteLabelId);
+        Object FirebaseAppsDeleteFirebaseApp (int? whiteLabelId);
 
         /// <summary>
         /// 
@@ -65,7 +65,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whiteLabelId"></param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> DeleteFirebaseAppWithHttpInfo (int? whiteLabelId);
+        ApiResponse<Object> FirebaseAppsDeleteFirebaseAppWithHttpInfo (int? whiteLabelId);
         /// <summary>
         /// 
         /// </summary>
@@ -74,8 +74,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId"></param>
-        /// <returns></returns>
-        void GetFirebaseApp (int? whitelabelId);
+        /// <returns>Object</returns>
+        Object FirebaseAppsGetFirebaseApp (int? whitelabelId);
 
         /// <summary>
         /// 
@@ -85,8 +85,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetFirebaseAppWithHttpInfo (int? whitelabelId);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> FirebaseAppsGetFirebaseAppWithHttpInfo (int? whitelabelId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -98,7 +98,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="firebaseApp"></param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> AddFirebaseAppAsync (FirebaseApp firebaseApp);
+        System.Threading.Tasks.Task<Object> FirebaseAppsAddFirebaseAppAsync (FirebaseApp firebaseApp);
 
         /// <summary>
         /// 
@@ -109,7 +109,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="firebaseApp"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AddFirebaseAppAsyncWithHttpInfo (FirebaseApp firebaseApp);
+        System.Threading.Tasks.Task<ApiResponse<Object>> FirebaseAppsAddFirebaseAppAsyncWithHttpInfo (FirebaseApp firebaseApp);
         /// <summary>
         /// 
         /// </summary>
@@ -119,7 +119,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whiteLabelId"></param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> DeleteFirebaseAppAsync (int? whiteLabelId);
+        System.Threading.Tasks.Task<Object> FirebaseAppsDeleteFirebaseAppAsync (int? whiteLabelId);
 
         /// <summary>
         /// 
@@ -130,7 +130,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whiteLabelId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFirebaseAppAsyncWithHttpInfo (int? whiteLabelId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> FirebaseAppsDeleteFirebaseAppAsyncWithHttpInfo (int? whiteLabelId);
         /// <summary>
         /// 
         /// </summary>
@@ -139,8 +139,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetFirebaseAppAsync (int? whitelabelId);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> FirebaseAppsGetFirebaseAppAsync (int? whitelabelId);
 
         /// <summary>
         /// 
@@ -150,8 +150,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetFirebaseAppAsyncWithHttpInfo (int? whitelabelId);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> FirebaseAppsGetFirebaseAppAsyncWithHttpInfo (int? whitelabelId);
         #endregion Asynchronous Operations
     }
 
@@ -258,9 +258,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="firebaseApp"></param>
         /// <returns>Object</returns>
-        public Object AddFirebaseApp (FirebaseApp firebaseApp)
+        public Object FirebaseAppsAddFirebaseApp (FirebaseApp firebaseApp)
         {
-             ApiResponse<Object> localVarResponse = AddFirebaseAppWithHttpInfo(firebaseApp);
+             ApiResponse<Object> localVarResponse = FirebaseAppsAddFirebaseAppWithHttpInfo(firebaseApp);
              return localVarResponse.Data;
         }
 
@@ -270,11 +270,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="firebaseApp"></param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > AddFirebaseAppWithHttpInfo (FirebaseApp firebaseApp)
+        public ApiResponse< Object > FirebaseAppsAddFirebaseAppWithHttpInfo (FirebaseApp firebaseApp)
         {
             // verify the required parameter 'firebaseApp' is set
             if (firebaseApp == null)
-                throw new ApiException(400, "Missing required parameter 'firebaseApp' when calling FirebaseAppsApi->AddFirebaseApp");
+                throw new ApiException(400, "Missing required parameter 'firebaseApp' when calling FirebaseAppsApi->FirebaseAppsAddFirebaseApp");
 
             var localVarPath = "./api/v1.0/FirebaseApp";
             var localVarPathParams = new Dictionary<String, String>();
@@ -330,7 +330,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddFirebaseApp", localVarResponse);
+                Exception exception = ExceptionFactory("FirebaseAppsAddFirebaseApp", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -345,9 +345,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="firebaseApp"></param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> AddFirebaseAppAsync (FirebaseApp firebaseApp)
+        public async System.Threading.Tasks.Task<Object> FirebaseAppsAddFirebaseAppAsync (FirebaseApp firebaseApp)
         {
-             ApiResponse<Object> localVarResponse = await AddFirebaseAppAsyncWithHttpInfo(firebaseApp);
+             ApiResponse<Object> localVarResponse = await FirebaseAppsAddFirebaseAppAsyncWithHttpInfo(firebaseApp);
              return localVarResponse.Data;
 
         }
@@ -358,11 +358,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="firebaseApp"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> AddFirebaseAppAsyncWithHttpInfo (FirebaseApp firebaseApp)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> FirebaseAppsAddFirebaseAppAsyncWithHttpInfo (FirebaseApp firebaseApp)
         {
             // verify the required parameter 'firebaseApp' is set
             if (firebaseApp == null)
-                throw new ApiException(400, "Missing required parameter 'firebaseApp' when calling FirebaseAppsApi->AddFirebaseApp");
+                throw new ApiException(400, "Missing required parameter 'firebaseApp' when calling FirebaseAppsApi->FirebaseAppsAddFirebaseApp");
 
             var localVarPath = "./api/v1.0/FirebaseApp";
             var localVarPathParams = new Dictionary<String, String>();
@@ -418,7 +418,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddFirebaseApp", localVarResponse);
+                Exception exception = ExceptionFactory("FirebaseAppsAddFirebaseApp", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -433,9 +433,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whiteLabelId"></param>
         /// <returns>Object</returns>
-        public Object DeleteFirebaseApp (int? whiteLabelId)
+        public Object FirebaseAppsDeleteFirebaseApp (int? whiteLabelId)
         {
-             ApiResponse<Object> localVarResponse = DeleteFirebaseAppWithHttpInfo(whiteLabelId);
+             ApiResponse<Object> localVarResponse = FirebaseAppsDeleteFirebaseAppWithHttpInfo(whiteLabelId);
              return localVarResponse.Data;
         }
 
@@ -445,11 +445,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whiteLabelId"></param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > DeleteFirebaseAppWithHttpInfo (int? whiteLabelId)
+        public ApiResponse< Object > FirebaseAppsDeleteFirebaseAppWithHttpInfo (int? whiteLabelId)
         {
             // verify the required parameter 'whiteLabelId' is set
             if (whiteLabelId == null)
-                throw new ApiException(400, "Missing required parameter 'whiteLabelId' when calling FirebaseAppsApi->DeleteFirebaseApp");
+                throw new ApiException(400, "Missing required parameter 'whiteLabelId' when calling FirebaseAppsApi->FirebaseAppsDeleteFirebaseApp");
 
             var localVarPath = "./api/v1.0/FirebaseApp/{whiteLabelId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -493,7 +493,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DeleteFirebaseApp", localVarResponse);
+                Exception exception = ExceptionFactory("FirebaseAppsDeleteFirebaseApp", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -508,9 +508,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whiteLabelId"></param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> DeleteFirebaseAppAsync (int? whiteLabelId)
+        public async System.Threading.Tasks.Task<Object> FirebaseAppsDeleteFirebaseAppAsync (int? whiteLabelId)
         {
-             ApiResponse<Object> localVarResponse = await DeleteFirebaseAppAsyncWithHttpInfo(whiteLabelId);
+             ApiResponse<Object> localVarResponse = await FirebaseAppsDeleteFirebaseAppAsyncWithHttpInfo(whiteLabelId);
              return localVarResponse.Data;
 
         }
@@ -521,11 +521,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whiteLabelId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFirebaseAppAsyncWithHttpInfo (int? whiteLabelId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> FirebaseAppsDeleteFirebaseAppAsyncWithHttpInfo (int? whiteLabelId)
         {
             // verify the required parameter 'whiteLabelId' is set
             if (whiteLabelId == null)
-                throw new ApiException(400, "Missing required parameter 'whiteLabelId' when calling FirebaseAppsApi->DeleteFirebaseApp");
+                throw new ApiException(400, "Missing required parameter 'whiteLabelId' when calling FirebaseAppsApi->FirebaseAppsDeleteFirebaseApp");
 
             var localVarPath = "./api/v1.0/FirebaseApp/{whiteLabelId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -569,7 +569,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DeleteFirebaseApp", localVarResponse);
+                Exception exception = ExceptionFactory("FirebaseAppsDeleteFirebaseApp", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -583,10 +583,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId"></param>
-        /// <returns></returns>
-        public void GetFirebaseApp (int? whitelabelId)
+        /// <returns>Object</returns>
+        public Object FirebaseAppsGetFirebaseApp (int? whitelabelId)
         {
-             GetFirebaseAppWithHttpInfo(whitelabelId);
+             ApiResponse<Object> localVarResponse = FirebaseAppsGetFirebaseAppWithHttpInfo(whitelabelId);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -594,12 +595,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetFirebaseAppWithHttpInfo (int? whitelabelId)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > FirebaseAppsGetFirebaseAppWithHttpInfo (int? whitelabelId)
         {
             // verify the required parameter 'whitelabelId' is set
             if (whitelabelId == null)
-                throw new ApiException(400, "Missing required parameter 'whitelabelId' when calling FirebaseAppsApi->GetFirebaseApp");
+                throw new ApiException(400, "Missing required parameter 'whitelabelId' when calling FirebaseAppsApi->FirebaseAppsGetFirebaseApp");
 
             var localVarPath = "./api/v1.0/FirebaseApp/{whitelabelId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -643,13 +644,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetFirebaseApp", localVarResponse);
+                Exception exception = ExceptionFactory("FirebaseAppsGetFirebaseApp", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -657,10 +658,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetFirebaseAppAsync (int? whitelabelId)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> FirebaseAppsGetFirebaseAppAsync (int? whitelabelId)
         {
-             await GetFirebaseAppAsyncWithHttpInfo(whitelabelId);
+             ApiResponse<Object> localVarResponse = await FirebaseAppsGetFirebaseAppAsyncWithHttpInfo(whitelabelId);
+             return localVarResponse.Data;
 
         }
 
@@ -669,12 +671,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="whitelabelId"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetFirebaseAppAsyncWithHttpInfo (int? whitelabelId)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> FirebaseAppsGetFirebaseAppAsyncWithHttpInfo (int? whitelabelId)
         {
             // verify the required parameter 'whitelabelId' is set
             if (whitelabelId == null)
-                throw new ApiException(400, "Missing required parameter 'whitelabelId' when calling FirebaseAppsApi->GetFirebaseApp");
+                throw new ApiException(400, "Missing required parameter 'whitelabelId' when calling FirebaseAppsApi->FirebaseAppsGetFirebaseApp");
 
             var localVarPath = "./api/v1.0/FirebaseApp/{whitelabelId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -718,13 +720,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetFirebaseApp", localVarResponse);
+                Exception exception = ExceptionFactory("FirebaseAppsGetFirebaseApp", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
     }

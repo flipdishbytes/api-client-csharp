@@ -82,8 +82,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
         /// <param name="storeId"></param>
-        /// <returns></returns>
-        void AttachStoreToSalesChannel (string appId, int? channelId, int? storeId);
+        /// <returns>Object</returns>
+        Object AttachStoreToSalesChannel (string appId, int? channelId, int? storeId);
 
         /// <summary>
         /// 
@@ -95,7 +95,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
         /// <param name="storeId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> AttachStoreToSalesChannelWithHttpInfo (string appId, int? channelId, int? storeId);
         /// <summary>
         /// 
@@ -106,8 +106,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
-        /// <returns></returns>
-        void DetachAllStoresFromSalesChannel (string appId, int? channelId);
+        /// <returns>Object</returns>
+        Object DetachAllStoresFromSalesChannel (string appId, int? channelId);
 
         /// <summary>
         /// 
@@ -118,7 +118,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> DetachAllStoresFromSalesChannelWithHttpInfo (string appId, int? channelId);
         /// <summary>
         /// 
@@ -130,8 +130,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
         /// <param name="storeId"></param>
-        /// <returns></returns>
-        void DetachStoreFromSalesChannel (string appId, int? channelId, int? storeId);
+        /// <returns>Object</returns>
+        Object DetachStoreFromSalesChannel (string appId, int? channelId, int? storeId);
 
         /// <summary>
         /// 
@@ -143,7 +143,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
         /// <param name="storeId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> DetachStoreFromSalesChannelWithHttpInfo (string appId, int? channelId, int? storeId);
         /// <summary>
         /// 
@@ -362,8 +362,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
         /// <param name="storeId"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task AttachStoreToSalesChannelAsync (string appId, int? channelId, int? storeId);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> AttachStoreToSalesChannelAsync (string appId, int? channelId, int? storeId);
 
         /// <summary>
         /// 
@@ -375,7 +375,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
         /// <param name="storeId"></param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AttachStoreToSalesChannelAsyncWithHttpInfo (string appId, int? channelId, int? storeId);
         /// <summary>
         /// 
@@ -386,8 +386,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DetachAllStoresFromSalesChannelAsync (string appId, int? channelId);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DetachAllStoresFromSalesChannelAsync (string appId, int? channelId);
 
         /// <summary>
         /// 
@@ -398,7 +398,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DetachAllStoresFromSalesChannelAsyncWithHttpInfo (string appId, int? channelId);
         /// <summary>
         /// 
@@ -410,8 +410,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
         /// <param name="storeId"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DetachStoreFromSalesChannelAsync (string appId, int? channelId, int? storeId);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DetachStoreFromSalesChannelAsync (string appId, int? channelId, int? storeId);
 
         /// <summary>
         /// 
@@ -423,7 +423,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
         /// <param name="storeId"></param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DetachStoreFromSalesChannelAsyncWithHttpInfo (string appId, int? channelId, int? storeId);
         /// <summary>
         /// 
@@ -1027,10 +1027,11 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
         /// <param name="storeId"></param>
-        /// <returns></returns>
-        public void AttachStoreToSalesChannel (string appId, int? channelId, int? storeId)
+        /// <returns>Object</returns>
+        public Object AttachStoreToSalesChannel (string appId, int? channelId, int? storeId)
         {
-             AttachStoreToSalesChannelWithHttpInfo(appId, channelId, storeId);
+             ApiResponse<Object> localVarResponse = AttachStoreToSalesChannelWithHttpInfo(appId, channelId, storeId);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -1040,8 +1041,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
         /// <param name="storeId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> AttachStoreToSalesChannelWithHttpInfo (string appId, int? channelId, int? storeId)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > AttachStoreToSalesChannelWithHttpInfo (string appId, int? channelId, int? storeId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1103,7 +1104,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1113,10 +1114,11 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
         /// <param name="storeId"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task AttachStoreToSalesChannelAsync (string appId, int? channelId, int? storeId)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> AttachStoreToSalesChannelAsync (string appId, int? channelId, int? storeId)
         {
-             await AttachStoreToSalesChannelAsyncWithHttpInfo(appId, channelId, storeId);
+             ApiResponse<Object> localVarResponse = await AttachStoreToSalesChannelAsyncWithHttpInfo(appId, channelId, storeId);
+             return localVarResponse.Data;
 
         }
 
@@ -1127,7 +1129,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
         /// <param name="storeId"></param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AttachStoreToSalesChannelAsyncWithHttpInfo (string appId, int? channelId, int? storeId)
         {
             // verify the required parameter 'appId' is set
@@ -1190,7 +1192,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1199,10 +1201,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
-        /// <returns></returns>
-        public void DetachAllStoresFromSalesChannel (string appId, int? channelId)
+        /// <returns>Object</returns>
+        public Object DetachAllStoresFromSalesChannel (string appId, int? channelId)
         {
-             DetachAllStoresFromSalesChannelWithHttpInfo(appId, channelId);
+             ApiResponse<Object> localVarResponse = DetachAllStoresFromSalesChannelWithHttpInfo(appId, channelId);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -1211,8 +1214,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DetachAllStoresFromSalesChannelWithHttpInfo (string appId, int? channelId)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DetachAllStoresFromSalesChannelWithHttpInfo (string appId, int? channelId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1270,7 +1273,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1279,10 +1282,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DetachAllStoresFromSalesChannelAsync (string appId, int? channelId)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DetachAllStoresFromSalesChannelAsync (string appId, int? channelId)
         {
-             await DetachAllStoresFromSalesChannelAsyncWithHttpInfo(appId, channelId);
+             ApiResponse<Object> localVarResponse = await DetachAllStoresFromSalesChannelAsyncWithHttpInfo(appId, channelId);
+             return localVarResponse.Data;
 
         }
 
@@ -1292,7 +1296,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DetachAllStoresFromSalesChannelAsyncWithHttpInfo (string appId, int? channelId)
         {
             // verify the required parameter 'appId' is set
@@ -1351,7 +1355,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1361,10 +1365,11 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
         /// <param name="storeId"></param>
-        /// <returns></returns>
-        public void DetachStoreFromSalesChannel (string appId, int? channelId, int? storeId)
+        /// <returns>Object</returns>
+        public Object DetachStoreFromSalesChannel (string appId, int? channelId, int? storeId)
         {
-             DetachStoreFromSalesChannelWithHttpInfo(appId, channelId, storeId);
+             ApiResponse<Object> localVarResponse = DetachStoreFromSalesChannelWithHttpInfo(appId, channelId, storeId);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -1374,8 +1379,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
         /// <param name="storeId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DetachStoreFromSalesChannelWithHttpInfo (string appId, int? channelId, int? storeId)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DetachStoreFromSalesChannelWithHttpInfo (string appId, int? channelId, int? storeId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -1437,7 +1442,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1447,10 +1452,11 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
         /// <param name="storeId"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DetachStoreFromSalesChannelAsync (string appId, int? channelId, int? storeId)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DetachStoreFromSalesChannelAsync (string appId, int? channelId, int? storeId)
         {
-             await DetachStoreFromSalesChannelAsyncWithHttpInfo(appId, channelId, storeId);
+             ApiResponse<Object> localVarResponse = await DetachStoreFromSalesChannelAsyncWithHttpInfo(appId, channelId, storeId);
+             return localVarResponse.Data;
 
         }
 
@@ -1461,7 +1467,7 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="channelId"></param>
         /// <param name="storeId"></param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DetachStoreFromSalesChannelAsyncWithHttpInfo (string appId, int? channelId, int? storeId)
         {
             // verify the required parameter 'appId' is set
@@ -1524,7 +1530,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>

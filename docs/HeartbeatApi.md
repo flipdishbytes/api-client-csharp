@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="headhostname"></a>
 # **HeadHostname**
-> RestApiStringResult HeadHostname ()
+> Object HeadHostname ()
 
 
 
@@ -37,7 +37,7 @@ namespace Example
 
             try
             {
-                RestApiStringResult result = apiInstance.HeadHostname();
+                Object result = apiInstance.HeadHostname();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -54,7 +54,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**RestApiStringResult**](RestApiStringResult.md)
+**Object**
 
 ### Authorization
 
@@ -126,7 +126,7 @@ This endpoint does not need any parameter.
 
 <a name="hostname"></a>
 # **Hostname**
-> RestApiStringResult Hostname ()
+> Object Hostname ()
 
 
 
@@ -151,7 +151,7 @@ namespace Example
 
             try
             {
-                RestApiStringResult result = apiInstance.Hostname();
+                Object result = apiInstance.Hostname();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -168,7 +168,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**RestApiStringResult**](RestApiStringResult.md)
+**Object**
 
 ### Authorization
 

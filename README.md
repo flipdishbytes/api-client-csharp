@@ -125,6 +125,7 @@ Class | Method | HTTP request | Description
 *AppStoreDeveloperApi* | [**UpdateExternalProduct**](docs/AppStoreDeveloperApi.md#updateexternalproduct) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_product | 
 *AppStoreDeveloperApi* | [**UploadAppStoreAppLogo**](docs/AppStoreDeveloperApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | 
 *AppStoreEntitlementsApi* | [**GetAppStoreAppEntitlements**](docs/AppStoreEntitlementsApi.md#getappstoreappentitlements) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/entitlements | 
+*AppsApi* | [**AppsSetPropertyId**](docs/AppsApi.md#appssetpropertyid) | **POST** /api/v1.0/apps/{appId}/orgId/{orgId} | 
 *AppsApi* | [**CreateApp**](docs/AppsApi.md#createapp) | **POST** /api/v1.0/apps | 
 *AppsApi* | [**GetApp**](docs/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | 
 *AppsApi* | [**GetAppHostnameStatus**](docs/AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
@@ -142,7 +143,6 @@ Class | Method | HTTP request | Description
 *AppsApi* | [**SetAppStoreName**](docs/AppsApi.md#setappstorename) | **POST** /api/v1.0/apps/{appId}/appstorename | 
 *AppsApi* | [**SetCompliance**](docs/AppsApi.md#setcompliance) | **POST** /api/v1.0/apps/{appId}/compliance | 
 *AppsApi* | [**SetPanaceaVanityUrl**](docs/AppsApi.md#setpanaceavanityurl) | **POST** /api/v1.0/apps/{appId}/panacea/url | 
-*AppsApi* | [**SetPropertyId**](docs/AppsApi.md#setpropertyid) | **POST** /api/v1.0/apps/{appId}/orgId/{orgId} | 
 *AppsApi* | [**SetThirdPartyIntegrations**](docs/AppsApi.md#setthirdpartyintegrations) | **POST** /api/v1.0/apps/{appId}/third-party-integrations | 
 *AppsApi* | [**ToggleNextGenWeb**](docs/AppsApi.md#togglenextgenweb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | 
 *AppsApi* | [**UploadAppLogo**](docs/AppsApi.md#uploadapplogo) | **POST** /api/v1.0/apps/{appId}/logo | 
@@ -171,9 +171,9 @@ Class | Method | HTTP request | Description
 *CampaignsApi* | [**UpdateRetentionCampaign**](docs/CampaignsApi.md#updateretentioncampaign) | **POST** /api/v1.0/{appId}/campaigns/retention/{campaignId} | 
 *CardReadersApi* | [**CancelCurrentlyInitiatedBluetoothDeviceUpdate**](docs/CardReadersApi.md#cancelcurrentlyinitiatedbluetoothdeviceupdate) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/cancelUpdate | 
 *CardReadersApi* | [**CancelReaderAction**](docs/CardReadersApi.md#cancelreaderaction) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action | 
+*CardReadersApi* | [**CardReadersGetReader**](docs/CardReadersApi.md#cardreadersgetreader) | **GET** /api/v1.0/{appId}/payments/terminals/stripe/{readerId} | 
 *CardReadersApi* | [**GenerateStripeTerminalLocation**](docs/CardReadersApi.md#generatestripeterminallocation) | **POST** /api/v1.0/{appId}/stripeterminal/location | 
 *CardReadersApi* | [**GetBluetoothTerminalStatus**](docs/CardReadersApi.md#getbluetoothterminalstatus) | **GET** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status | 
-*CardReadersApi* | [**GetReader**](docs/CardReadersApi.md#getreader) | **GET** /api/v1.0/{appId}/payments/terminals/stripe/{readerId} | 
 *CardReadersApi* | [**GetStripeConnectionToken**](docs/CardReadersApi.md#getstripeconnectiontoken) | **GET** /api/v1.0/{appId}/stripeterminal/connectiontoken | 
 *CardReadersApi* | [**InitiateBluetoothTerminalDeviceUpdateCheck**](docs/CardReadersApi.md#initiatebluetoothterminaldeviceupdatecheck) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate | 
 *CardReadersApi* | [**InitiateKioskBluetoothPairingMode**](docs/CardReadersApi.md#initiatekioskbluetoothpairingmode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | 
@@ -182,28 +182,28 @@ Class | Method | HTTP request | Description
 *CardReadersApi* | [**RegisterStripeTerminal**](docs/CardReadersApi.md#registerstripeterminal) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/register | 
 *CardReadersApi* | [**UnRegisterTerminal**](docs/CardReadersApi.md#unregisterterminal) | **DELETE** /api/v1.0/{appId}/payments/terminals/stripe/unregister | 
 *CardReadersApi* | [**UnpairCurrentlyPairedBluetoothDevice**](docs/CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | 
-*CatalogChangesApi* | [**GetPendingMenuChanges**](docs/CatalogChangesApi.md#getpendingmenuchanges) | **GET** /api/v1.0/{appId}/menus/catalog-changes | 
-*CatalogChangesApi* | [**GetPendingMenuChangesSummaries**](docs/CatalogChangesApi.md#getpendingmenuchangessummaries) | **GET** /api/v1.0/{appId}/menus/catalog-changes/summaries | 
-*CatalogChangesApi* | [**PublishPendingMenuChanges**](docs/CatalogChangesApi.md#publishpendingmenuchanges) | **POST** /api/v1.0/{appId}/menus/catalog-changes/publish | 
-*CatalogGroupsApi* | [**ArchiveGroup**](docs/CatalogGroupsApi.md#archivegroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/archive | 
-*CatalogGroupsApi* | [**CreateGroup**](docs/CatalogGroupsApi.md#creategroup) | **POST** /api/v1.0/{appId}/catalog/groups | 
-*CatalogGroupsApi* | [**DuplicateGroup**](docs/CatalogGroupsApi.md#duplicategroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/duplicate | 
-*CatalogGroupsApi* | [**GetGroupById**](docs/CatalogGroupsApi.md#getgroupbyid) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | 
-*CatalogGroupsApi* | [**GetGroups**](docs/CatalogGroupsApi.md#getgroups) | **GET** /api/v1.0/{appId}/catalog/groups | 
-*CatalogGroupsApi* | [**UpdateGroup**](docs/CatalogGroupsApi.md#updategroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | 
-*CatalogImagesApi* | [**UploadCatalogImage**](docs/CatalogImagesApi.md#uploadcatalogimage) | **POST** /api/v1.0/{appId}/catalog/images | 
-*CatalogItemsApi* | [**ArchiveCatalogItem**](docs/CatalogItemsApi.md#archivecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/archive | 
-*CatalogItemsApi* | [**CreateCatalogItem**](docs/CatalogItemsApi.md#createcatalogitem) | **POST** /api/v1.0/{appId}/catalog/items | 
-*CatalogItemsApi* | [**DuplicateCatalogItem**](docs/CatalogItemsApi.md#duplicatecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/duplicate | 
-*CatalogItemsApi* | [**GetCatalogItemById**](docs/CatalogItemsApi.md#getcatalogitembyid) | **GET** /api/v1.0/{appId}/catalog/items/{catalogItemId} | 
-*CatalogItemsApi* | [**GetItems**](docs/CatalogItemsApi.md#getitems) | **GET** /api/v1.0/{appId}/catalog/items | 
-*CatalogItemsApi* | [**UpdateCatalogItem**](docs/CatalogItemsApi.md#updatecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId} | 
-*CatalogProductsApi* | [**ArchiveProduct**](docs/CatalogProductsApi.md#archiveproduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId}/archive | 
-*CatalogProductsApi* | [**CreateProduct**](docs/CatalogProductsApi.md#createproduct) | **POST** /api/v1.0/{appId}/catalog/products | 
-*CatalogProductsApi* | [**DuplicateProduct**](docs/CatalogProductsApi.md#duplicateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId}/duplicate | 
-*CatalogProductsApi* | [**GetProductById**](docs/CatalogProductsApi.md#getproductbyid) | **GET** /api/v1.0/{appId}/catalog/products/{catalogItemId} | 
-*CatalogProductsApi* | [**GetProducts**](docs/CatalogProductsApi.md#getproducts) | **GET** /api/v1.0/{appId}/catalog/products | 
-*CatalogProductsApi* | [**UpdateProduct**](docs/CatalogProductsApi.md#updateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId} | 
+*CatalogChangesApi* | [**GetPendingMenuChanges**](docs/CatalogChangesApi.md#getpendingmenuchanges) | **GET** /api/v1.0/{appId}/menus/catalog-changes | Get menu pending changes from Catalog groups and items
+*CatalogChangesApi* | [**GetPendingMenuChangesSummaries**](docs/CatalogChangesApi.md#getpendingmenuchangessummaries) | **GET** /api/v1.0/{appId}/menus/catalog-changes/summaries | Get menu pending changes summaries by appId
+*CatalogChangesApi* | [**PublishPendingMenuChanges**](docs/CatalogChangesApi.md#publishpendingmenuchanges) | **POST** /api/v1.0/{appId}/menus/catalog-changes/publish | Update menus with the pending changes from Catalog groups and items
+*CatalogGroupsApi* | [**ArchiveGroup**](docs/CatalogGroupsApi.md#archivegroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/archive | Archive Catalog Group
+*CatalogGroupsApi* | [**CreateGroup**](docs/CatalogGroupsApi.md#creategroup) | **POST** /api/v1.0/{appId}/catalog/groups | Create a Catalog Group
+*CatalogGroupsApi* | [**DuplicateGroup**](docs/CatalogGroupsApi.md#duplicategroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/duplicate | Duplicate Catalog Group
+*CatalogGroupsApi* | [**GetGroupById**](docs/CatalogGroupsApi.md#getgroupbyid) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | Get group by Id
+*CatalogGroupsApi* | [**GetGroups**](docs/CatalogGroupsApi.md#getgroups) | **GET** /api/v1.0/{appId}/catalog/groups | Get paginated groups by app name id filtered by types
+*CatalogGroupsApi* | [**UpdateGroup**](docs/CatalogGroupsApi.md#updategroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | Update Catalog Group
+*CatalogImagesApi* | [**UploadCatalogImage**](docs/CatalogImagesApi.md#uploadcatalogimage) | **POST** /api/v1.0/{appId}/catalog/images | Upload a Catalog Image
+*CatalogItemsApi* | [**ArchiveCatalogItem**](docs/CatalogItemsApi.md#archivecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/archive | Archive Catalog Item
+*CatalogItemsApi* | [**CreateCatalogItem**](docs/CatalogItemsApi.md#createcatalogitem) | **POST** /api/v1.0/{appId}/catalog/items | Create a Catalog Item
+*CatalogItemsApi* | [**DuplicateCatalogItem**](docs/CatalogItemsApi.md#duplicatecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/duplicate | Duplicate Catalog Item
+*CatalogItemsApi* | [**GetCatalogItemById**](docs/CatalogItemsApi.md#getcatalogitembyid) | **GET** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Get item by Id
+*CatalogItemsApi* | [**GetItems**](docs/CatalogItemsApi.md#getitems) | **GET** /api/v1.0/{appId}/catalog/items | Get paginated items by app name id filtered by types
+*CatalogItemsApi* | [**UpdateCatalogItem**](docs/CatalogItemsApi.md#updatecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Update Catalog Item
+*CatalogProductsApi* | [**ArchiveProduct**](docs/CatalogProductsApi.md#archiveproduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId}/archive | Archive Product
+*CatalogProductsApi* | [**CreateProduct**](docs/CatalogProductsApi.md#createproduct) | **POST** /api/v1.0/{appId}/catalog/products | Create a Product
+*CatalogProductsApi* | [**DuplicateProduct**](docs/CatalogProductsApi.md#duplicateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId}/duplicate | Duplicate Product
+*CatalogProductsApi* | [**GetProductById**](docs/CatalogProductsApi.md#getproductbyid) | **GET** /api/v1.0/{appId}/catalog/products/{catalogItemId} | Get Product by Id
+*CatalogProductsApi* | [**GetProducts**](docs/CatalogProductsApi.md#getproducts) | **GET** /api/v1.0/{appId}/catalog/products | Get paginated products by app name id filtered by types
+*CatalogProductsApi* | [**UpdateProduct**](docs/CatalogProductsApi.md#updateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId} | Update Product
 *ChannelsApi* | [**AssignAppIdToSalesChannel**](docs/ChannelsApi.md#assignappidtosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/assign-appId | 
 *ChannelsApi* | [**AssignStoreToChannel**](docs/ChannelsApi.md#assignstoretochannel) | **POST** /api/v1.0/{appId}/channels/assign-store | 
 *ChannelsApi* | [**AttachStoreToSalesChannel**](docs/ChannelsApi.md#attachstoretosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | 
@@ -219,7 +219,7 @@ Class | Method | HTTP request | Description
 *ClientsApi* | [**GetClient**](docs/ClientsApi.md#getclient) | **GET** /api/v1.0/clients/{clientId} | 
 *ClientsApi* | [**SetSalesForceContactId**](docs/ClientsApi.md#setsalesforcecontactid) | **POST** /api/v1.0/clients/{clientId}/salesforcecontactid | 
 *ClientsApi* | [**SetStripeCustomerId**](docs/ClientsApi.md#setstripecustomerid) | **POST** /api/v1.0/clients/{clientId}/stripecustomerid | 
-*ContentSecurityPolicyApi* | [**Report**](docs/ContentSecurityPolicyApi.md#report) | **POST** /api/v1.0/csp/report | 
+*ContentSecurityPolicyApi* | [**ContentSecurityPolicyReport**](docs/ContentSecurityPolicyApi.md#contentsecuritypolicyreport) | **POST** /api/v1.0/csp/report | 
 *CrossSellApi* | [**GetCrossSellMenuItems**](docs/CrossSellApi.md#getcrosssellmenuitems) | **GET** /api/v1.0/{appId}/crossSell/menuItems | 
 *CustomersApi* | [**CreateCustomer**](docs/CustomersApi.md#createcustomer) | **POST** /api/v1.0/{appId}/customers | 
 *CustomersApi* | [**GetCustomerById**](docs/CustomersApi.md#getcustomerbyid) | **GET** /api/v1.0/{appId}/customers/{customerId} | 
@@ -233,17 +233,17 @@ Class | Method | HTTP request | Description
 *DeviceApi* | [**EnrollDevice**](docs/DeviceApi.md#enrolldevice) | **POST** /api/v1.0/{appId}/devices/enroll | 
 *DeviceApi* | [**GetDeviceDetails**](docs/DeviceApi.md#getdevicedetails) | **GET** /api/v1.0/{appId}/devices/device/{deviceModel}/{deviceId} | 
 *DeviceApi* | [**SearchDevices**](docs/DeviceApi.md#searchdevices) | **GET** /api/v1.0/{appId}/devices/search | 
-*DriversApi* | [**AddDriverNotificationToken**](docs/DriversApi.md#adddrivernotificationtoken) | **POST** /api/v1.0/drivers/token | 
-*DriversApi* | [**DeleteDriverProfileImage**](docs/DriversApi.md#deletedriverprofileimage) | **DELETE** /api/v1.0/drivers/profile/image | 
-*DriversApi* | [**DriverLogin**](docs/DriversApi.md#driverlogin) | **POST** /api/v1.0/drivers/login | 
-*DriversApi* | [**DriverRequestLoginCodeSms**](docs/DriversApi.md#driverrequestlogincodesms) | **POST** /api/v1.0/drivers/pin | 
-*DriversApi* | [**GetDriverProfile**](docs/DriversApi.md#getdriverprofile) | **GET** /api/v1.0/drivers/profile | 
-*DriversApi* | [**GetStoresForDriver**](docs/DriversApi.md#getstoresfordriver) | **GET** /api/v1.0/drivers/assignedstores | 
-*DriversApi* | [**RemoveDriverNotificationToken**](docs/DriversApi.md#removedrivernotificationtoken) | **DELETE** /api/v1.0/drivers/token | 
-*DriversApi* | [**SetDriverPresenceForStore**](docs/DriversApi.md#setdriverpresenceforstore) | **POST** /api/v1.0/drivers/stores/{storeId}/presence/{presence} | 
-*DriversApi* | [**SetDriverProfileImage**](docs/DriversApi.md#setdriverprofileimage) | **POST** /api/v1.0/drivers/profile/image | 
-*DriversApi* | [**UpdateDeliveryTrackingStatus**](docs/DriversApi.md#updatedeliverytrackingstatus) | **POST** /api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus} | 
-*DriversApi* | [**UpdateDriverProfile**](docs/DriversApi.md#updatedriverprofile) | **POST** /api/v1.0/drivers/profile | 
+*DriversApi* | [**DriversAddDriverNotificationToken**](docs/DriversApi.md#driversadddrivernotificationtoken) | **POST** /api/v1.0/drivers/token | 
+*DriversApi* | [**DriversDeleteDriverProfileImage**](docs/DriversApi.md#driversdeletedriverprofileimage) | **DELETE** /api/v1.0/drivers/profile/image | 
+*DriversApi* | [**DriversDriverLogin**](docs/DriversApi.md#driversdriverlogin) | **POST** /api/v1.0/drivers/login | 
+*DriversApi* | [**DriversDriverRequestLoginCodeSms**](docs/DriversApi.md#driversdriverrequestlogincodesms) | **POST** /api/v1.0/drivers/pin | 
+*DriversApi* | [**DriversGetDriverProfile**](docs/DriversApi.md#driversgetdriverprofile) | **GET** /api/v1.0/drivers/profile | 
+*DriversApi* | [**DriversGetStoresForDriver**](docs/DriversApi.md#driversgetstoresfordriver) | **GET** /api/v1.0/drivers/assignedstores | 
+*DriversApi* | [**DriversRemoveDriverNotificationToken**](docs/DriversApi.md#driversremovedrivernotificationtoken) | **DELETE** /api/v1.0/drivers/token | 
+*DriversApi* | [**DriversSetDriverPresenceForStore**](docs/DriversApi.md#driverssetdriverpresenceforstore) | **POST** /api/v1.0/drivers/stores/{storeId}/presence/{presence} | 
+*DriversApi* | [**DriversSetDriverProfileImage**](docs/DriversApi.md#driverssetdriverprofileimage) | **POST** /api/v1.0/drivers/profile/image | 
+*DriversApi* | [**DriversUpdateDeliveryTrackingStatus**](docs/DriversApi.md#driversupdatedeliverytrackingstatus) | **POST** /api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus} | 
+*DriversApi* | [**DriversUpdateDriverProfile**](docs/DriversApi.md#driversupdatedriverprofile) | **POST** /api/v1.0/drivers/profile | 
 *EventsApi* | [**GetCustomerEvents**](docs/EventsApi.md#getcustomerevents) | **GET** /api/v1.0/{appId}/events/customer/{customerId} | 
 *EventsApi* | [**GetEvents**](docs/EventsApi.md#getevents) | **GET** /api/v1.0/{appId}/events | 
 *EventsApi* | [**GetEventsById**](docs/EventsApi.md#geteventsbyid) | **GET** /api/v1.0/{appId}/events/{eventId} | 
@@ -256,9 +256,9 @@ Class | Method | HTTP request | Description
 *FeaturesApi* | [**DisableFeatures**](docs/FeaturesApi.md#disablefeatures) | **POST** /api/v1.0/{appId}/features/disable | 
 *FeaturesApi* | [**EnableFeatures**](docs/FeaturesApi.md#enablefeatures) | **POST** /api/v1.0/{appId}/features/enable | 
 *FilesApi* | [**DownloadFile**](docs/FilesApi.md#downloadfile) | **GET** /api/v1.0/{appId}/files/download/{fileId} | 
-*FirebaseAppsApi* | [**AddFirebaseApp**](docs/FirebaseAppsApi.md#addfirebaseapp) | **POST** /api/v1.0/FirebaseApp | 
-*FirebaseAppsApi* | [**DeleteFirebaseApp**](docs/FirebaseAppsApi.md#deletefirebaseapp) | **DELETE** /api/v1.0/FirebaseApp/{whiteLabelId} | 
-*FirebaseAppsApi* | [**GetFirebaseApp**](docs/FirebaseAppsApi.md#getfirebaseapp) | **GET** /api/v1.0/FirebaseApp/{whitelabelId} | 
+*FirebaseAppsApi* | [**FirebaseAppsAddFirebaseApp**](docs/FirebaseAppsApi.md#firebaseappsaddfirebaseapp) | **POST** /api/v1.0/FirebaseApp | 
+*FirebaseAppsApi* | [**FirebaseAppsDeleteFirebaseApp**](docs/FirebaseAppsApi.md#firebaseappsdeletefirebaseapp) | **DELETE** /api/v1.0/FirebaseApp/{whiteLabelId} | 
+*FirebaseAppsApi* | [**FirebaseAppsGetFirebaseApp**](docs/FirebaseAppsApi.md#firebaseappsgetfirebaseapp) | **GET** /api/v1.0/FirebaseApp/{whitelabelId} | 
 *FpmApi* | [**CreateFpmForStore**](docs/FpmApi.md#createfpmforstore) | **POST** /api/v1.0/{storeId}/fpm | 
 *FpmApi* | [**DeleteFpmForStore**](docs/FpmApi.md#deletefpmforstore) | **DELETE** /api/v1.0/{storeId}/fpm | 
 *FpmApi* | [**EditFpmForStore**](docs/FpmApi.md#editfpmforstore) | **POST** /api/v1.0/{storeId}/fpm/edit | 
@@ -281,20 +281,20 @@ Class | Method | HTTP request | Description
 *HydraApi* | [**AttachStoreToKiosk**](docs/HydraApi.md#attachstoretokiosk) | **POST** /api/v1.0/{appId}/AttachStoreToKiosk/{deviceId}/store/{storeId} | 
 *HydraApi* | [**AttachStoreToTerminal**](docs/HydraApi.md#attachstoretoterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId} | 
 *HydraApi* | [**CancelEmvPayment**](docs/HydraApi.md#cancelemvpayment) | **POST** /api/v1.0/{appId}/hydra/cancelemvpayment/{orderId} | 
-*HydraApi* | [**CreateEmv**](docs/HydraApi.md#createemv) | **POST** /api/v1.0/{appId}/emvterminals | 
-*HydraApi* | [**DeleteEmv**](docs/HydraApi.md#deleteemv) | **DELETE** /api/v1.0/{appId}/emvterminals/{id} | 
-*HydraApi* | [**DetachStoreFromKiosk**](docs/HydraApi.md#detachstorefromkiosk) | **DELETE** /api/v1.0/{appId}/DetachStoreFromKiosk/{deviceId}/store/{storeId} | 
 *HydraApi* | [**DetachStoreFromTerminal**](docs/HydraApi.md#detachstorefromterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId} | 
 *HydraApi* | [**GetAblyToken**](docs/HydraApi.md#getablytoken) | **GET** /api/v1.0/hydra/ably_token | 
 *HydraApi* | [**GetAttachedDevice**](docs/HydraApi.md#getattacheddevice) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/{deviceId} | 
 *HydraApi* | [**GetAttachedDevices**](docs/HydraApi.md#getattacheddevices) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/list | 
 *HydraApi* | [**GetEMVTerminalDetails**](docs/HydraApi.md#getemvterminaldetails) | **GET** /api/v1.0/{appId}/hydra/emvterminal | 
 *HydraApi* | [**GetEmvOrderState**](docs/HydraApi.md#getemvorderstate) | **GET** /api/v1.0/{appId}/hydra/emvorderstate/{orderId} | 
-*HydraApi* | [**GetEmvsForAppId**](docs/HydraApi.md#getemvsforappid) | **GET** /api/v1.0/{appId}/emvterminals | 
 *HydraApi* | [**GetKioskCashPaymentSettings**](docs/HydraApi.md#getkioskcashpaymentsettings) | **GET** /api/v1.0/{appId}/kioskcashsettings/{deviceId} | 
 *HydraApi* | [**GetKioskSettings**](docs/HydraApi.md#getkiosksettings) | **GET** /api/v1.0/{appId}/kiosksettings/{deviceId} | 
 *HydraApi* | [**GetRegistration**](docs/HydraApi.md#getregistration) | **GET** /api/v1.0/hydra/registration | 
 *HydraApi* | [**GetSettings**](docs/HydraApi.md#getsettings) | **GET** /api/v1.0/hydra/settings | 
+*HydraApi* | [**HydraCreateEmv**](docs/HydraApi.md#hydracreateemv) | **POST** /api/v1.0/{appId}/emvterminals | 
+*HydraApi* | [**HydraDeleteEmv**](docs/HydraApi.md#hydradeleteemv) | **DELETE** /api/v1.0/{appId}/emvterminals/{id} | 
+*HydraApi* | [**HydraDetachStoreFromKiosk**](docs/HydraApi.md#hydradetachstorefromkiosk) | **DELETE** /api/v1.0/{appId}/DetachStoreFromKiosk/{deviceId}/store/{storeId} | 
+*HydraApi* | [**HydraGetEmvsForAppId**](docs/HydraApi.md#hydragetemvsforappid) | **GET** /api/v1.0/{appId}/emvterminals | 
 *HydraApi* | [**LoginWithDeviceId**](docs/HydraApi.md#loginwithdeviceid) | **POST** /api/v1.0/hydra/{deviceId}/login | 
 *HydraApi* | [**Register**](docs/HydraApi.md#register) | **POST** /api/v1.0/{appId}/hydra/registration | 
 *HydraApi* | [**UnAssign**](docs/HydraApi.md#unassign) | **DELETE** /api/v1.0/{appId}/hydra/{deviceId}/registration | 
@@ -309,9 +309,9 @@ Class | Method | HTTP request | Description
 *KioskEntitlementsApi* | [**QueryKioskEntitlementsByOrgId**](docs/KioskEntitlementsApi.md#querykioskentitlementsbyorgid) | **GET** /api/v1.0/orgs/{orgId}/kiosk/entitlements | 
 *KioskIotApi* | [**GetKioskIotConnection**](docs/KioskIotApi.md#getkioskiotconnection) | **POST** /api/v1.0/kioskiot/connect | 
 *KioskIotApi* | [**QueryTelemetrySeries**](docs/KioskIotApi.md#querytelemetryseries) | **POST** /api/v1.0/{appId}/kioskiot/timeseries/query | 
-*LightspeedApi* | [**GenerateMenu**](docs/LightspeedApi.md#generatemenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
-*LightspeedApi* | [**GetStoreSettings**](docs/LightspeedApi.md#getstoresettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
-*LightspeedApi* | [**SaveStoreSettings**](docs/LightspeedApi.md#savestoresettings) | **POST** /api/v1.0/lightspeed/{storeId}/settings | 
+*LightspeedApi* | [**LightspeedGenerateMenu**](docs/LightspeedApi.md#lightspeedgeneratemenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
+*LightspeedApi* | [**LightspeedGetStoreSettings**](docs/LightspeedApi.md#lightspeedgetstoresettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
+*LightspeedApi* | [**LightspeedSaveStoreSettings**](docs/LightspeedApi.md#lightspeedsavestoresettings) | **POST** /api/v1.0/lightspeed/{storeId}/settings | 
 *LocationApi* | [**CreateLocation**](docs/LocationApi.md#createlocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location | 
 *LocationApi* | [**DeleteLocation**](docs/LocationApi.md#deletelocation) | **DELETE** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/delete | 
 *LocationApi* | [**MapLocationToExternalId**](docs/LocationApi.md#maplocationtoexternalid) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/map-external | 
@@ -323,43 +323,43 @@ Class | Method | HTTP request | Description
 *LocationAreasApi* | [**UpdateLocationArea**](docs/LocationAreasApi.md#updatelocationarea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/update | 
 *LookerDashboardApi* | [**LookerDashboardGetAll**](docs/LookerDashboardApi.md#lookerdashboardgetall) | **GET** /api/v1.0/{appId}/looker/dashboards | 
 *LookerSingleSignOnApi* | [**GetSSOEndpoint**](docs/LookerSingleSignOnApi.md#getssoendpoint) | **GET** /api/v1.0/{appId}/looker/sso | 
-*MenuOptionSetItemsApi* | [**AddMenuItemOptionSetItem**](docs/MenuOptionSetItemsApi.md#addmenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | 
-*MenuOptionSetItemsApi* | [**DeleteOptionSetItemImage**](docs/MenuOptionSetItemsApi.md#deleteoptionsetitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | 
+*MenuOptionSetItemsApi* | [**AddMenuItemOptionSetItem**](docs/MenuOptionSetItemsApi.md#addmenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Create menu item option set item
+*MenuOptionSetItemsApi* | [**DeleteOptionSetItemImage**](docs/MenuOptionSetItemsApi.md#deleteoptionsetitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Delete menu item option set item image
 *MenuOptionSetItemsApi* | [**GetMenuItemOptionSetItemById**](docs/MenuOptionSetItemsApi.md#getmenuitemoptionsetitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Get menu item option set item by identifier
 *MenuOptionSetItemsApi* | [**GetMenuItemOptionSetItems**](docs/MenuOptionSetItemsApi.md#getmenuitemoptionsetitems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Get menu item option set items
-*MenuOptionSetItemsApi* | [**RemoveMenuItemOptionSetItem**](docs/MenuOptionSetItemsApi.md#removemenuitemoptionsetitem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | 
-*MenuOptionSetItemsApi* | [**SetOptionSetItemTax**](docs/MenuOptionSetItemsApi.md#setoptionsetitemtax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/taxrate/{taxRateId} | 
-*MenuOptionSetItemsApi* | [**UpdateMenuItemOptionSetItem**](docs/MenuOptionSetItemsApi.md#updatemenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | 
-*MenuOptionSetItemsApi* | [**UploadOptionSetItemImage**](docs/MenuOptionSetItemsApi.md#uploadoptionsetitemimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | 
-*MenuOptionSetsApi* | [**CreateMenuItemOptionSet**](docs/MenuOptionSetsApi.md#createmenuitemoptionset) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets | 
-*MenuOptionSetsApi* | [**DeleteMenuItemOptionSet**](docs/MenuOptionSetsApi.md#deletemenuitemoptionset) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | 
-*MenuOptionSetsApi* | [**DeleteOptionSetImage**](docs/MenuOptionSetsApi.md#deleteoptionsetimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image | 
+*MenuOptionSetItemsApi* | [**RemoveMenuItemOptionSetItem**](docs/MenuOptionSetItemsApi.md#removemenuitemoptionsetitem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Delete menu item option set item
+*MenuOptionSetItemsApi* | [**SetOptionSetItemTax**](docs/MenuOptionSetItemsApi.md#setoptionsetitemtax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/taxrate/{taxRateId} | Set Tax Rate on OptionSetItem
+*MenuOptionSetItemsApi* | [**UpdateMenuItemOptionSetItem**](docs/MenuOptionSetItemsApi.md#updatemenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Update menu item option set item
+*MenuOptionSetItemsApi* | [**UploadOptionSetItemImage**](docs/MenuOptionSetItemsApi.md#uploadoptionsetitemimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Upload menu item option set item image
+*MenuOptionSetsApi* | [**CreateMenuItemOptionSet**](docs/MenuOptionSetsApi.md#createmenuitemoptionset) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets | Create menu item option set
+*MenuOptionSetsApi* | [**DeleteMenuItemOptionSet**](docs/MenuOptionSetsApi.md#deletemenuitemoptionset) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | Delete menu item option set
+*MenuOptionSetsApi* | [**DeleteOptionSetImage**](docs/MenuOptionSetsApi.md#deleteoptionsetimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image | Delete option set image
 *MenuOptionSetsApi* | [**GetMenuItemOptionSetById**](docs/MenuOptionSetsApi.md#getmenuitemoptionsetbyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | Get menu item option set by identifier
 *MenuOptionSetsApi* | [**GetMenuItemOptionSets**](docs/MenuOptionSetsApi.md#getmenuitemoptionsets) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets | Get menu item option sets
-*MenuOptionSetsApi* | [**UpdateMenuItemOptionSet**](docs/MenuOptionSetsApi.md#updatemenuitemoptionset) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | 
-*MenuOptionSetsApi* | [**UploadOptionSetImage**](docs/MenuOptionSetsApi.md#uploadoptionsetimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image | 
-*MenuSectionItemsApi* | [**CloneMenuSectionItem**](docs/MenuSectionItemsApi.md#clonemenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/clone | 
-*MenuSectionItemsApi* | [**CreateMenuSectionItem**](docs/MenuSectionItemsApi.md#createmenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems | 
-*MenuSectionItemsApi* | [**CreateMenuSectionItemFromCatalogItems**](docs/MenuSectionItemsApi.md#createmenusectionitemfromcatalogitems) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/add-catalogitems | 
-*MenuSectionItemsApi* | [**DeleteMenuSectionItem**](docs/MenuSectionItemsApi.md#deletemenusectionitem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | 
-*MenuSectionItemsApi* | [**DeleteMenuSectionItemImage**](docs/MenuSectionItemsApi.md#deletemenusectionitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | 
+*MenuOptionSetsApi* | [**UpdateMenuItemOptionSet**](docs/MenuOptionSetsApi.md#updatemenuitemoptionset) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | Update menu item option set
+*MenuOptionSetsApi* | [**UploadOptionSetImage**](docs/MenuOptionSetsApi.md#uploadoptionsetimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image | Upload menu item option set image
+*MenuSectionItemsApi* | [**CloneMenuSectionItem**](docs/MenuSectionItemsApi.md#clonemenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/clone | Clone menu section item
+*MenuSectionItemsApi* | [**CreateMenuSectionItem**](docs/MenuSectionItemsApi.md#createmenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems | Create menu section item
+*MenuSectionItemsApi* | [**CreateMenuSectionItemFromCatalogItems**](docs/MenuSectionItemsApi.md#createmenusectionitemfromcatalogitems) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/add-catalogitems | Create menu section items from a list of Catalog Items
+*MenuSectionItemsApi* | [**DeleteMenuSectionItem**](docs/MenuSectionItemsApi.md#deletemenusectionitem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Delete menu section item
+*MenuSectionItemsApi* | [**DeleteMenuSectionItemImage**](docs/MenuSectionItemsApi.md#deletemenusectionitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Delete menu section item image
 *MenuSectionItemsApi* | [**GetMenuItemById**](docs/MenuSectionItemsApi.md#getmenuitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Get menu item by identifier
 *MenuSectionItemsApi* | [**GetMenuItems**](docs/MenuSectionItemsApi.md#getmenuitems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems | Get menu items
-*MenuSectionItemsApi* | [**MoveMenuItem**](docs/MenuSectionItemsApi.md#movemenuitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/setorder/{destinationDisplayOrder} | 
-*MenuSectionItemsApi* | [**SetSectionItemTax**](docs/MenuSectionItemsApi.md#setsectionitemtax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/taxrate/{taxRateId} | 
-*MenuSectionItemsApi* | [**UpdateMenuSectionItem**](docs/MenuSectionItemsApi.md#updatemenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | 
-*MenuSectionItemsApi* | [**UploadMenuSectionItemImage**](docs/MenuSectionItemsApi.md#uploadmenusectionitemimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | 
+*MenuSectionItemsApi* | [**MoveMenuItem**](docs/MenuSectionItemsApi.md#movemenuitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/setorder/{destinationDisplayOrder} | Move an Item within a menu
+*MenuSectionItemsApi* | [**SetSectionItemTax**](docs/MenuSectionItemsApi.md#setsectionitemtax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/taxrate/{taxRateId} | Set tax rate for menu item
+*MenuSectionItemsApi* | [**UpdateMenuSectionItem**](docs/MenuSectionItemsApi.md#updatemenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Update menu section item
+*MenuSectionItemsApi* | [**UploadMenuSectionItemImage**](docs/MenuSectionItemsApi.md#uploadmenusectionitemimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Upload menu section item image
 *MenuSectionsApi* | [**CloneMenuSection**](docs/MenuSectionsApi.md#clonemenusection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/clone | Clone menu section
 *MenuSectionsApi* | [**CreateMenuAvailabilityForDay**](docs/MenuSectionsApi.md#createmenuavailabilityforday) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability/times/{dayOfWeek} | Set/update menu section availability hours.
 *MenuSectionsApi* | [**CreateMenuSection**](docs/MenuSectionsApi.md#createmenusection) | **POST** /api/v1.0/menus/{menuId}/sections | Create menu section
 *MenuSectionsApi* | [**CreateMenuSectionAvailability**](docs/MenuSectionsApi.md#createmenusectionavailability) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability | Create menu availability type
-*MenuSectionsApi* | [**DeleteMenuSection**](docs/MenuSectionsApi.md#deletemenusection) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | 
-*MenuSectionsApi* | [**DeleteMenuSectionImage**](docs/MenuSectionsApi.md#deletemenusectionimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | 
+*MenuSectionsApi* | [**DeleteMenuSection**](docs/MenuSectionsApi.md#deletemenusection) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Delete menu section
+*MenuSectionsApi* | [**DeleteMenuSectionImage**](docs/MenuSectionsApi.md#deletemenusectionimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Delete menu section image
 *MenuSectionsApi* | [**GetMenuSectionById**](docs/MenuSectionsApi.md#getmenusectionbyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Get menu section by identifier
 *MenuSectionsApi* | [**GetMenuSections**](docs/MenuSectionsApi.md#getmenusections) | **GET** /api/v1.0/menus/{menuId}/sections | Get menu sections
-*MenuSectionsApi* | [**SetItemDisplayOrders**](docs/MenuSectionsApi.md#setitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitemdisplayorders | 
+*MenuSectionsApi* | [**MenuSectionsSetItemDisplayOrders**](docs/MenuSectionsApi.md#menusectionssetitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitemdisplayorders | Re-arrange Items within a Section
 *MenuSectionsApi* | [**UpdateMenuSection**](docs/MenuSectionsApi.md#updatemenusection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Update menu section
-*MenuSectionsApi* | [**UploadMenuSectionImage**](docs/MenuSectionsApi.md#uploadmenusectionimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | 
+*MenuSectionsApi* | [**UploadMenuSectionImage**](docs/MenuSectionsApi.md#uploadmenusectionimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Upload menu section image
 *MenuZonesApi* | [**AddMenuZone**](docs/MenuZonesApi.md#addmenuzone) | **POST** /api/v1.0/menus/{menuId}/zones | Adds a new menu zone to a menu.
 *MenuZonesApi* | [**DeleteMenuZone**](docs/MenuZonesApi.md#deletemenuzone) | **DELETE** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | Deletes a menu zone.
 *MenuZonesApi* | [**DeleteMenuZoneImage**](docs/MenuZonesApi.md#deletemenuzoneimage) | **DELETE** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/image | Deletes a menu zone image.
@@ -371,15 +371,13 @@ Class | Method | HTTP request | Description
 *MenuZonesApi* | [**SetMenuZoneName**](docs/MenuZonesApi.md#setmenuzonename) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/name/{menuZoneName} | Sets the name of a menu zone.
 *MenuZonesApi* | [**UpdateMenuZone**](docs/MenuZonesApi.md#updatemenuzone) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | Updates a menu zone.
 *MenuZonesApi* | [**UploadMenuZoneImage**](docs/MenuZonesApi.md#uploadmenuzoneimage) | **POST** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/image | Uploads an image for a menu zone.
-*MenusApi* | [**CreateDraftMenuFromExistingMenu**](docs/MenusApi.md#createdraftmenufromexistingmenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | 
-*MenusApi* | [**CreateNewMenuAsync**](docs/MenusApi.md#createnewmenuasync) | **POST** /api/v1.0/{appId}/menus/async | 
-*MenusApi* | [**CreateNewMenuForApp**](docs/MenusApi.md#createnewmenuforapp) | **POST** /api/v1.0/{appId}/menus | 
-*MenusApi* | [**DeleteMenu**](docs/MenusApi.md#deletemenu) | **DELETE** /api/v1.0/menus/{menuId} | 
-*MenusApi* | [**DeleteMenuImage**](docs/MenusApi.md#deletemenuimage) | **DELETE** /api/v1.0/menus/{menuId}/image | 
-*MenusApi* | [**DeleteMenuItemMetadata**](docs/MenusApi.md#deletemenuitemmetadata) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | 
-*MenusApi* | [**DeleteTaxRate**](docs/MenusApi.md#deletetaxrate) | **DELETE** /api/v1.0/menus/{menuId}/tax/{taxId} | 
+*MenusApi* | [**CreateDraftMenuFromExistingMenu**](docs/MenusApi.md#createdraftmenufromexistingmenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | Clone a menu, (without attaching stores)
+*MenusApi* | [**CreateNewMenuAsync**](docs/MenusApi.md#createnewmenuasync) | **POST** /api/v1.0/{appId}/menus/async | Create a new menu asynchronously
+*MenusApi* | [**CreateNewMenuForApp**](docs/MenusApi.md#createnewmenuforapp) | **POST** /api/v1.0/{appId}/menus | Create a new menu
+*MenusApi* | [**DeleteMenu**](docs/MenusApi.md#deletemenu) | **DELETE** /api/v1.0/menus/{menuId} | Mark a Menu as Deleted
+*MenusApi* | [**DeleteMenuImage**](docs/MenusApi.md#deletemenuimage) | **DELETE** /api/v1.0/menus/{menuId}/image | Delete menu image
+*MenusApi* | [**DeleteMenuItemMetadata**](docs/MenusApi.md#deletemenuitemmetadata) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Delete menu item metadata
 *MenusApi* | [**GetAllMenuMetadataByMenuIdAndStoreId**](docs/MenusApi.md#getallmenumetadatabymenuidandstoreid) | **GET** /api/v1.0/menus/{menuId}/metadata/store/{storeId} | Get all menu metadata by menu ID and store ID
-*MenusApi* | [**GetMenuBulkShowHide**](docs/MenusApi.md#getmenubulkshowhide) | **GET** /api/v1.0/menus/{menuId}/bulkshowhide/list | 
 *MenusApi* | [**GetMenuById**](docs/MenusApi.md#getmenubyid) | **GET** /api/v1.0/menus/{menuId} | Get menu by identifier
 *MenusApi* | [**GetMenuItemMetadata**](docs/MenusApi.md#getmenuitemmetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Get menu item metadata
 *MenusApi* | [**GetMenuItemMetadataByKey**](docs/MenusApi.md#getmenuitemmetadatabykey) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get menu item metadata by key
@@ -389,29 +387,31 @@ Class | Method | HTTP request | Description
 *MenusApi* | [**GetMenuTaxDetails**](docs/MenusApi.md#getmenutaxdetails) | **GET** /api/v1.0/menus/{menuId}/tax | Get menus tax details
 *MenusApi* | [**GetMenusByAppId**](docs/MenusApi.md#getmenusbyappid) | **GET** /api/v1.0/{appId}/menus | Get menus by appId
 *MenusApi* | [**GetMenusCheckpoints**](docs/MenusApi.md#getmenuscheckpoints) | **GET** /api/v1.0/menus/{menuId}/checkpoints | Get a Menus Checkpoints
-*MenusApi* | [**RestoreAMenuCheckpoint**](docs/MenusApi.md#restoreamenucheckpoint) | **POST** /api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore | 
-*MenusApi* | [**SetDisplayOnMenuTax**](docs/MenusApi.md#setdisplayonmenutax) | **POST** /api/v1.0/menus/{menuId}/tax/show/{show} | 
-*MenusApi* | [**SetItemDisplayOrders**](docs/MenusApi.md#setitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sectiondisplayorders | 
-*MenusApi* | [**SetMenuItemMetadata**](docs/MenusApi.md#setmenuitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | 
-*MenusApi* | [**SetMenuItemOptionSetItemMetadata**](docs/MenusApi.md#setmenuitemoptionsetitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | 
-*MenusApi* | [**SetMenuLock**](docs/MenusApi.md#setmenulock) | **POST** /api/v1.0/menus/{menuId}/lock | 
-*MenusApi* | [**SetMenuName**](docs/MenusApi.md#setmenuname) | **POST** /api/v1.0/menus/{menuId}/name | 
-*MenusApi* | [**ShowHideBulkItems**](docs/MenusApi.md#showhidebulkitems) | **POST** /api/v1.0/menus/{menuId}/bulkshowhide | 
-*MenusApi* | [**UpdateMenu**](docs/MenusApi.md#updatemenu) | **POST** /api/v1.0/menus/{menuId} | 
-*MenusApi* | [**UpdateTaxType**](docs/MenusApi.md#updatetaxtype) | **POST** /api/v1.0/menus/{menuId}/tax/type/{type} | 
-*MenusApi* | [**UploadMenuImage**](docs/MenusApi.md#uploadmenuimage) | **POST** /api/v1.0/menus/{menuId}/image | 
-*MenusApi* | [**UploadNewMenuForApp**](docs/MenusApi.md#uploadnewmenuforapp) | **POST** /api/v1.0/{appId}/menus/xlsx | 
-*MenusApi* | [**UpsertTaxRate**](docs/MenusApi.md#upserttaxrate) | **POST** /api/v1.0/menus/{menuId}/taxrate | 
-*MenusNutritionInfoApi* | [**AddOrUpdateMenuItemNutritionInfo**](docs/MenusNutritionInfoApi.md#addorupdatemenuitemnutritioninfo) | **POST** /api/v1.0/menus/{menuId}/menuItem/{publicId}/nutrition | 
-*MenusNutritionInfoApi* | [**AddOrUpdateMenuItemOptionSetItemNutritionInfo**](docs/MenusNutritionInfoApi.md#addorupdatemenuitemoptionsetitemnutritioninfo) | **POST** /api/v1.0/menus/{menuId}/menuItemOption/{publicId}/nutrition | 
-*MenusNutritionInfoApi* | [**AddOrUpdateMenuNutritionInfoByMenuId**](docs/MenusNutritionInfoApi.md#addorupdatemenunutritioninfobymenuid) | **POST** /api/v1.0/menus/{menuId}/nutrition | 
-*MenusNutritionInfoApi* | [**DeleteMenuNutritionInfoByMenuId**](docs/MenusNutritionInfoApi.md#deletemenunutritioninfobymenuid) | **DELETE** /api/v1.0/menus/{menuId}/nutrition | 
-*MenusNutritionInfoApi* | [**GetAllergens**](docs/MenusNutritionInfoApi.md#getallergens) | **GET** /api/v1.0/{appId}/menus/nutrition/allergens | 
-*MenusNutritionInfoApi* | [**GetMenuNutritionInfoByMenuId**](docs/MenusNutritionInfoApi.md#getmenunutritioninfobymenuid) | **GET** /api/v1.0/menus/{menuId}/nutrition | 
-*MenusNutritionInfoV2Api* | [**AddOrUpdateMenuItemNutritionInfoV2**](docs/MenusNutritionInfoV2Api.md#addorupdatemenuitemnutritioninfov2) | **POST** /api/v1.0/{appId}/menus/{menuId}/menuItem/{publicId}/nutritionv2 | 
-*MenusNutritionInfoV2Api* | [**AddOrUpdateMenuItemOptionSetItemNutritionInfoV2**](docs/MenusNutritionInfoV2Api.md#addorupdatemenuitemoptionsetitemnutritioninfov2) | **POST** /api/v1.0/{appId}/menus/{menuId}/menuItemOption/{publicId}/nutritionv2 | 
-*MenusNutritionInfoV2Api* | [**GetAllergensV2**](docs/MenusNutritionInfoV2Api.md#getallergensv2) | **GET** /api/v1.0/{appId}/menus/nutritionv2/allergens | 
-*MenusNutritionInfoV2Api* | [**GetMenuNutritionInfoV2ByMenuId**](docs/MenusNutritionInfoV2Api.md#getmenunutritioninfov2bymenuid) | **GET** /api/v1.0/{appId}/menus/{menuId}/nutritionv2 | 
+*MenusApi* | [**MenusDeleteTaxRate**](docs/MenusApi.md#menusdeletetaxrate) | **DELETE** /api/v1.0/menus/{menuId}/tax/{taxId} | Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+*MenusApi* | [**MenusGetMenuBulkShowHide**](docs/MenusApi.md#menusgetmenubulkshowhide) | **GET** /api/v1.0/menus/{menuId}/bulkshowhide/list | Get bulk show/hide menu items and option set items
+*MenusApi* | [**MenusSetDisplayOnMenuTax**](docs/MenusApi.md#menussetdisplayonmenutax) | **POST** /api/v1.0/menus/{menuId}/tax/show/{show} | Set if tax shows for a Menu
+*MenusApi* | [**MenusSetItemDisplayOrders**](docs/MenusApi.md#menussetitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sectiondisplayorders | Re-arrange Sections within a Menu
+*MenusApi* | [**MenusShowHideBulkItems**](docs/MenusApi.md#menusshowhidebulkitems) | **POST** /api/v1.0/menus/{menuId}/bulkshowhide | Bulk show/hide menu items or option set items
+*MenusApi* | [**MenusUpdateTaxType**](docs/MenusApi.md#menusupdatetaxtype) | **POST** /api/v1.0/menus/{menuId}/tax/type/{type} | Set the type of Tax on a Menu
+*MenusApi* | [**MenusUpsertTaxRate**](docs/MenusApi.md#menusupserttaxrate) | **POST** /api/v1.0/menus/{menuId}/taxrate | Add/Update a Tax Rate
+*MenusApi* | [**RestoreAMenuCheckpoint**](docs/MenusApi.md#restoreamenucheckpoint) | **POST** /api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore | Restore a Menu to a checkpoint
+*MenusApi* | [**SetMenuItemMetadata**](docs/MenusApi.md#setmenuitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Update menu item metadata
+*MenusApi* | [**SetMenuItemOptionSetItemMetadata**](docs/MenusApi.md#setmenuitemoptionsetitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Update menu item option set item metadata
+*MenusApi* | [**SetMenuLock**](docs/MenusApi.md#setmenulock) | **POST** /api/v1.0/menus/{menuId}/lock | Lock/Unlock a Menu for Editing
+*MenusApi* | [**SetMenuName**](docs/MenusApi.md#setmenuname) | **POST** /api/v1.0/menus/{menuId}/name | Set Menus Name
+*MenusApi* | [**UpdateMenu**](docs/MenusApi.md#updatemenu) | **POST** /api/v1.0/menus/{menuId} | Update menu
+*MenusApi* | [**UploadMenuImage**](docs/MenusApi.md#uploadmenuimage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
+*MenusApi* | [**UploadNewMenuForApp**](docs/MenusApi.md#uploadnewmenuforapp) | **POST** /api/v1.0/{appId}/menus/xlsx | Create a new menu from xlsx file.
+*MenusNutritionInfoApi* | [**AddOrUpdateMenuItemNutritionInfo**](docs/MenusNutritionInfoApi.md#addorupdatemenuitemnutritioninfo) | **POST** /api/v1.0/menus/{menuId}/menuItem/{publicId}/nutrition | Add or update menuitem nutrition info by menu item's publicId
+*MenusNutritionInfoApi* | [**AddOrUpdateMenuItemOptionSetItemNutritionInfo**](docs/MenusNutritionInfoApi.md#addorupdatemenuitemoptionsetitemnutritioninfo) | **POST** /api/v1.0/menus/{menuId}/menuItemOption/{publicId}/nutrition | Add or update menuitem optionsetitem nutrition info its publicId
+*MenusNutritionInfoApi* | [**AddOrUpdateMenuNutritionInfoByMenuId**](docs/MenusNutritionInfoApi.md#addorupdatemenunutritioninfobymenuid) | **POST** /api/v1.0/menus/{menuId}/nutrition | Add or update menu nutrition by identifier
+*MenusNutritionInfoApi* | [**DeleteMenuNutritionInfoByMenuId**](docs/MenusNutritionInfoApi.md#deletemenunutritioninfobymenuid) | **DELETE** /api/v1.0/menus/{menuId}/nutrition | Delete menu nutrition information by menuId
+*MenusNutritionInfoApi* | [**GetAllergens**](docs/MenusNutritionInfoApi.md#getallergens) | **GET** /api/v1.0/{appId}/menus/nutrition/allergens | Get allergens
+*MenusNutritionInfoApi* | [**GetMenuNutritionInfoByMenuId**](docs/MenusNutritionInfoApi.md#getmenunutritioninfobymenuid) | **GET** /api/v1.0/menus/{menuId}/nutrition | Get menu nutrition by menuId
+*MenusNutritionInfoV2Api* | [**AddOrUpdateMenuItemNutritionInfoV2**](docs/MenusNutritionInfoV2Api.md#addorupdatemenuitemnutritioninfov2) | **POST** /api/v1.0/{appId}/menus/{menuId}/menuItem/{publicId}/nutritionv2 | Add or update menuitem nutrition info by menu item's publicId
+*MenusNutritionInfoV2Api* | [**AddOrUpdateMenuItemOptionSetItemNutritionInfoV2**](docs/MenusNutritionInfoV2Api.md#addorupdatemenuitemoptionsetitemnutritioninfov2) | **POST** /api/v1.0/{appId}/menus/{menuId}/menuItemOption/{publicId}/nutritionv2 | Add or update menuitem option set item's nutrition info by its publicId
+*MenusNutritionInfoV2Api* | [**GetAllergensV2**](docs/MenusNutritionInfoV2Api.md#getallergensv2) | **GET** /api/v1.0/{appId}/menus/nutritionv2/allergens | Get allergens
+*MenusNutritionInfoV2Api* | [**GetMenuNutritionInfoV2ByMenuId**](docs/MenusNutritionInfoV2Api.md#getmenunutritioninfov2bymenuid) | **GET** /api/v1.0/{appId}/menus/{menuId}/nutritionv2 | Get menu nutrition by menuId
 *MetafieldDefinitionsApi* | [**CreateMetafieldDefinition**](docs/MetafieldDefinitionsApi.md#createmetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | 
 *MetafieldDefinitionsApi* | [**GetMetafieldDefinitionByKey**](docs/MetafieldDefinitionsApi.md#getmetafielddefinitionbykey) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | 
 *MetafieldDefinitionsApi* | [**GetMetafieldDefinitions**](docs/MetafieldDefinitionsApi.md#getmetafielddefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | 
@@ -432,22 +432,22 @@ Class | Method | HTTP request | Description
 *OAuthClientsApi* | [**AddRedirectUri**](docs/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | 
 *OAuthClientsApi* | [**CreateOAuthApp**](docs/OAuthClientsApi.md#createoauthapp) | **POST** /api/v1.0/{appId}/oauthclients | 
 *OAuthClientsApi* | [**DeleteOAuthApp**](docs/OAuthClientsApi.md#deleteoauthapp) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId} | 
-*OAuthClientsApi* | [**GetApplications**](docs/OAuthClientsApi.md#getapplications) | **GET** /api/v1.0/{appId}/oauthclients/appnames | 
 *OAuthClientsApi* | [**GetOAuthApps**](docs/OAuthClientsApi.md#getoauthapps) | **GET** /api/v1.0/{appId}/oauthclients | 
 *OAuthClientsApi* | [**GetOAuthClientByClientId**](docs/OAuthClientsApi.md#getoauthclientbyclientid) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId} | 
 *OAuthClientsApi* | [**GetOAuthClientSecret**](docs/OAuthClientsApi.md#getoauthclientsecret) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/secret | 
 *OAuthClientsApi* | [**GetOauthAccessToken**](docs/OAuthClientsApi.md#getoauthaccesstoken) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/accesstoken | 
 *OAuthClientsApi* | [**GetRedirectUris**](docs/OAuthClientsApi.md#getredirecturis) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | 
+*OAuthClientsApi* | [**OAuthClientsGetApplications**](docs/OAuthClientsApi.md#oauthclientsgetapplications) | **GET** /api/v1.0/{appId}/oauthclients/appnames | 
 *OAuthClientsApi* | [**RemoveRedirectUri**](docs/OAuthClientsApi.md#removeredirecturi) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis/{uriId} | 
 *OAuthClientsApi* | [**UpdateOAuthApp**](docs/OAuthClientsApi.md#updateoauthapp) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId} | 
-*OnboardingApi* | [**GetOnboardingConfig**](docs/OnboardingApi.md#getonboardingconfig) | **GET** /api/v1.0/clients/{appId}/onboarding/config | 
-*OnboardingApi* | [**GetOnboardingConfigs**](docs/OnboardingApi.md#getonboardingconfigs) | **GET** /api/v1.0/clients/{appId}/onboarding/configs | 
-*OnboardingApi* | [**GetOnboardingItems**](docs/OnboardingApi.md#getonboardingitems) | **GET** /api/v1.0/clients/{appId}/onboarding/stores/{storeId} | 
-*OnboardingApi* | [**GetOnboardingItemsV2**](docs/OnboardingApi.md#getonboardingitemsv2) | **GET** /api/v1.0/clients/{appId}/onboarding/stores | 
-*OnboardingApi* | [**UpdateOnboardingConfig**](docs/OnboardingApi.md#updateonboardingconfig) | **POST** /api/v1.0/clients/{appId}/onboarding/config | 
-*OnboardingApi* | [**UpdateOnboardingConfigById**](docs/OnboardingApi.md#updateonboardingconfigbyid) | **POST** /api/v1.0/clients/{appId}/onboarding/config/{configId} | 
-*OnboardingApi* | [**UpdateOnboardingItem**](docs/OnboardingApi.md#updateonboardingitem) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId} | 
-*OnboardingApi* | [**UpdateOnboardingItemV2**](docs/OnboardingApi.md#updateonboardingitemv2) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/items/{onboardingItemId} | 
+*OnboardingApi* | [**OnboardingGetOnboardingConfig**](docs/OnboardingApi.md#onboardinggetonboardingconfig) | **GET** /api/v1.0/clients/{appId}/onboarding/config | 
+*OnboardingApi* | [**OnboardingGetOnboardingConfigs**](docs/OnboardingApi.md#onboardinggetonboardingconfigs) | **GET** /api/v1.0/clients/{appId}/onboarding/configs | 
+*OnboardingApi* | [**OnboardingGetOnboardingItems**](docs/OnboardingApi.md#onboardinggetonboardingitems) | **GET** /api/v1.0/clients/{appId}/onboarding/stores/{storeId} | 
+*OnboardingApi* | [**OnboardingGetOnboardingItemsV2**](docs/OnboardingApi.md#onboardinggetonboardingitemsv2) | **GET** /api/v1.0/clients/{appId}/onboarding/stores | 
+*OnboardingApi* | [**OnboardingUpdateOnboardingConfig**](docs/OnboardingApi.md#onboardingupdateonboardingconfig) | **POST** /api/v1.0/clients/{appId}/onboarding/config | 
+*OnboardingApi* | [**OnboardingUpdateOnboardingConfigById**](docs/OnboardingApi.md#onboardingupdateonboardingconfigbyid) | **POST** /api/v1.0/clients/{appId}/onboarding/config/{configId} | 
+*OnboardingApi* | [**OnboardingUpdateOnboardingItem**](docs/OnboardingApi.md#onboardingupdateonboardingitem) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId} | 
+*OnboardingApi* | [**OnboardingUpdateOnboardingItemV2**](docs/OnboardingApi.md#onboardingupdateonboardingitemv2) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/items/{onboardingItemId} | 
 *OrderBatchesApi* | [**GetAllOrderBatches**](docs/OrderBatchesApi.md#getallorderbatches) | **GET** /api/v1.0/{appId}/order-batches | 
 *OrderBatchesApi* | [**GetOrderBatch**](docs/OrderBatchesApi.md#getorderbatch) | **GET** /api/v1.0/{appId}/order-batches/{orderBatchId} | 
 *OrderBatchingConfigurationApi* | [**Get**](docs/OrderBatchingConfigurationApi.md#get) | **GET** /api/v1.0/stores/{storeId}/order-batching-configuration | 
@@ -553,9 +553,9 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**PutStoreDeliveryFeeConfig**](docs/StoresApi.md#putstoredeliveryfeeconfig) | **PUT** /api/v1.0/stores/{storeId}/feeConfig/deliveryZones | 
 *StoresApi* | [**SetBusinessHours**](docs/StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
 *StoresApi* | [**SetPreOrdeEnabled**](docs/StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
-*StoresApi* | [**SetPropertyId**](docs/StoresApi.md#setpropertyid) | **POST** /api/v1.0/stores/{storeId}/propertyId/{propertyId} | 
 *StoresApi* | [**SetStoreCollectionSettings**](docs/StoresApi.md#setstorecollectionsettings) | **POST** /api/v1.0/stores/{storeId}/collectionsettings | 
 *StoresApi* | [**SetStoreLeadTimes**](docs/StoresApi.md#setstoreleadtimes) | **POST** /api/v1.0/stores/{storeId}/leadTimes | 
+*StoresApi* | [**StoresSetPropertyId**](docs/StoresApi.md#storessetpropertyid) | **POST** /api/v1.0/stores/{storeId}/propertyId/{propertyId} | 
 *StoresApi* | [**SupportedSalesChannelsTypes**](docs/StoresApi.md#supportedsaleschannelstypes) | **POST** /api/v1.0/properties/{propertyId}/stores/{storeId}/supportedSalesChannels | 
 *StoresApi* | [**UnpublishStore**](docs/StoresApi.md#unpublishstore) | **POST** /api/v1.0/stores/{storeId}/unpublish | 
 *StoresApi* | [**UpdatePreOrderConfig**](docs/StoresApi.md#updatepreorderconfig) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | 
@@ -568,26 +568,26 @@ Class | Method | HTTP request | Description
 *StripeCustomConnectApi* | [**CreateStripeConnectedAccountLink**](docs/StripeCustomConnectApi.md#createstripeconnectedaccountlink) | **POST** /api/v1.0/{appId}/customconnect/{stripeConnectedAccountId}/create-account-link | 
 *StripeCustomConnectApi* | [**GetCustomConnect**](docs/StripeCustomConnectApi.md#getcustomconnect) | **GET** /api/v1.0/{appId}/customconnect/{storeId} | 
 *StripeCustomConnectApi* | [**GetVerificationStatus**](docs/StripeCustomConnectApi.md#getverificationstatus) | **GET** /api/v1.0/{appId}/customconnect/verification-status | 
-*StripeCustomConnectApi* | [**Refresh**](docs/StripeCustomConnectApi.md#refresh) | **GET** /api/v1.0/{appId}/customconnect/refresh-link | 
 *StripeCustomConnectApi* | [**SetBankAccountBusinessType**](docs/StripeCustomConnectApi.md#setbankaccountbusinesstype) | **POST** /api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype | 
+*StripeCustomConnectApi* | [**StripeCustomConnectRefresh**](docs/StripeCustomConnectApi.md#stripecustomconnectrefresh) | **GET** /api/v1.0/{appId}/customconnect/refresh-link | 
 *StripeCustomConnectApi* | [**UpdateBankAccountDetails**](docs/StripeCustomConnectApi.md#updatebankaccountdetails) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details | 
 *StripeCustomConnectApi* | [**UpdatePayoutSchedule**](docs/StripeCustomConnectApi.md#updatepayoutschedule) | **POST** /api/v1.0/{appId}/customconnect/update-payout-schedule/{stripeConnectedAccountId}/{interval} | 
-*StuartApi* | [**CancelJob**](docs/StuartApi.md#canceljob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | 
-*StuartApi* | [**GetJob**](docs/StuartApi.md#getjob) | **GET** /api/v1.0/stuart/jobs/{jobId} | 
-*StuartApi* | [**GetStuartSettings**](docs/StuartApi.md#getstuartsettings) | **GET** /api/v1.0/stuart/settings/{storeId} | 
-*StuartApi* | [**PostStuartSettings**](docs/StuartApi.md#poststuartsettings) | **POST** /api/v1.0/stuart/settings/{storeId} | 
+*StuartApi* | [**StuartCancelJob**](docs/StuartApi.md#stuartcanceljob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | 
+*StuartApi* | [**StuartGetJob**](docs/StuartApi.md#stuartgetjob) | **GET** /api/v1.0/stuart/jobs/{jobId} | 
+*StuartApi* | [**StuartGetStuartSettings**](docs/StuartApi.md#stuartgetstuartsettings) | **GET** /api/v1.0/stuart/settings/{storeId} | 
+*StuartApi* | [**StuartPostStuartSettings**](docs/StuartApi.md#stuartpoststuartsettings) | **POST** /api/v1.0/stuart/settings/{storeId} | 
 *SubscriptionsApi* | [**GetSubscriptionById**](docs/SubscriptionsApi.md#getsubscriptionbyid) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId} | 
 *SubscriptionsApi* | [**GetSubscriptionsForApp**](docs/SubscriptionsApi.md#getsubscriptionsforapp) | **GET** /api/v1.0/{appId}/subscriptions | 
 *SubscriptionsApi* | [**HasCustomerGotPaymentMethodOnFile**](docs/SubscriptionsApi.md#hascustomergotpaymentmethodonfile) | **GET** /api/v1.0/{appId}/subscriptions/hasPaymentMethod | 
-*TeammatesApi* | [**AcceptInvitation**](docs/TeammatesApi.md#acceptinvitation) | **GET** /api/v1.0/{appId}/teammates/accept/{otc} | 
-*TeammatesApi* | [**AcceptInvitations**](docs/TeammatesApi.md#acceptinvitations) | **POST** /api/v1.0/teammates/acceptInvitations | 
 *TeammatesApi* | [**CreateTeammate**](docs/TeammatesApi.md#createteammate) | **POST** /api/v1.0/{appId}/teammates | 
 *TeammatesApi* | [**DeleteTeammate**](docs/TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | 
 *TeammatesApi* | [**GetTeammateByAppIdAndTeammateId**](docs/TeammatesApi.md#getteammatebyappidandteammateid) | **GET** /api/v1.0/{appId}/teammates/{id} | 
 *TeammatesApi* | [**GetTeammatesByAppId**](docs/TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | 
 *TeammatesApi* | [**Grantaccess**](docs/TeammatesApi.md#grantaccess) | **POST** /api/v1.0/{appId}/teammates/grantaccess | 
-*TeammatesApi* | [**PendingInvitations**](docs/TeammatesApi.md#pendinginvitations) | **GET** /api/v1.0/teammates/pending-invitations | 
 *TeammatesApi* | [**RedeemInvitation**](docs/TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+*TeammatesApi* | [**TeammatesAcceptInvitation**](docs/TeammatesApi.md#teammatesacceptinvitation) | **GET** /api/v1.0/{appId}/teammates/accept/{otc} | 
+*TeammatesApi* | [**TeammatesAcceptInvitations**](docs/TeammatesApi.md#teammatesacceptinvitations) | **POST** /api/v1.0/teammates/acceptInvitations | 
+*TeammatesApi* | [**TeammatesPendingInvitations**](docs/TeammatesApi.md#teammatespendinginvitations) | **GET** /api/v1.0/teammates/pending-invitations | 
 *TeammatesApi* | [**UpdateTeammate**](docs/TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{id} | 
 *TerminalIotApi* | [**GetTerminalIotConnection**](docs/TerminalIotApi.md#getterminaliotconnection) | **POST** /api/v1.0/terminaliot/connect | 
 *TipsApi* | [**TipConfigGet**](docs/TipsApi.md#tipconfigget) | **GET** /api/v1.0/stores/{storeId}/tipconfig | 
@@ -645,28 +645,28 @@ Class | Method | HTTP request | Description
 *WebhooksApi* | [**GetWebhookSubscriptions**](docs/WebhooksApi.md#getwebhooksubscriptions) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | 
 *WebhooksApi* | [**UpdateWebhookSubscription**](docs/WebhooksApi.md#updatewebhooksubscription) | **PUT** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | 
 *WebsiteApi* | [**AddTestimonial**](docs/WebsiteApi.md#addtestimonial) | **POST** /api/v1.0/{appId}/website/testimonial | 
-*WebsiteApi* | [**CheckNow**](docs/WebsiteApi.md#checknow) | **GET** /api/v1.0/{appId}/website/dnscheck | 
 *WebsiteApi* | [**DeleteTestimonial**](docs/WebsiteApi.md#deletetestimonial) | **DELETE** /api/v1.0/{appId}/website/testimonial/{testimonialId} | 
 *WebsiteApi* | [**DeleteWebsiteImage**](docs/WebsiteApi.md#deletewebsiteimage) | **DELETE** /api/v1.0/{appId}/website/image/{imageId} | 
 *WebsiteApi* | [**EditTestimonial**](docs/WebsiteApi.md#edittestimonial) | **POST** /api/v1.0/{appId}/website/testimonial/{testimonialId} | 
 *WebsiteApi* | [**GetIndexConfiguration**](docs/WebsiteApi.md#getindexconfiguration) | **GET** /api/v1.0/{appId}/website/index | 
 *WebsiteApi* | [**SetIndexConfiguration**](docs/WebsiteApi.md#setindexconfiguration) | **POST** /api/v1.0/{appId}/website/index | 
 *WebsiteApi* | [**UploadWebsiteImage**](docs/WebsiteApi.md#uploadwebsiteimage) | **POST** /api/v1.0/{appId}/website/image/{imageLocation} | 
+*WebsiteApi* | [**WebsiteCheckNow**](docs/WebsiteApi.md#websitechecknow) | **GET** /api/v1.0/{appId}/website/dnscheck | 
+*WhiteLabelBuildsApi* | [**HealthCheck**](docs/WhiteLabelBuildsApi.md#healthcheck) | **GET** /api/v1.0/whitelabelbuilds/health | 
 *WhiteLabelBuildsApi* | [**SubmitAndroidApps**](docs/WhiteLabelBuildsApi.md#submitandroidapps) | **POST** /api/v1.0/whitelabelbuilds/android/multiple | 
 *WhiteLabelBuildsApi* | [**SubmitAndroidBuild**](docs/WhiteLabelBuildsApi.md#submitandroidbuild) | **POST** /api/v1.0/whitelabelbuilds/{appId}/android | 
 *WhiteLabelBuildsApi* | [**SubmitIosApps**](docs/WhiteLabelBuildsApi.md#submitiosapps) | **POST** /api/v1.0/whitelabelbuilds/ios/multiple | 
 *WhiteLabelBuildsApi* | [**SubmitIosBuild**](docs/WhiteLabelBuildsApi.md#submitiosbuild) | **POST** /api/v1.0/whitelabelbuilds/{appId}/ios | 
-*WhiteLabelBuildsApi* | [**WhiteLabelBuildsHealthCheck**](docs/WhiteLabelBuildsApi.md#whitelabelbuildshealthcheck) | **GET** /api/v1.0/whitelabelbuilds/health | 
 *WhiteLabelConfigApi* | [**GetAppGeneralConfig**](docs/WhiteLabelConfigApi.md#getappgeneralconfig) | **GET** /api/v1.0/whitelabelconfig/{appId}/general | 
+*WhiteLabelConfigApi* | [**GetAppStoreConfig**](docs/WhiteLabelConfigApi.md#getappstoreconfig) | **GET** /api/v1.0/whitelabelconfig/{appId}/appstore | 
 *WhiteLabelConfigApi* | [**GetPlayStoreConfig**](docs/WhiteLabelConfigApi.md#getplaystoreconfig) | **GET** /api/v1.0/whitelabelconfig/{appId}/playstore | 
-*WhiteLabelConfigApi* | [**GetWhiteLabelAppStoreConfig**](docs/WhiteLabelConfigApi.md#getwhitelabelappstoreconfig) | **GET** /api/v1.0/whitelabelconfig/{appId}/appstore | 
 *WhiteLabelConfigApi* | [**GetWhiteLabelConfig**](docs/WhiteLabelConfigApi.md#getwhitelabelconfig) | **GET** /api/v1.0/whitelabelconfig/id/{wlid} | 
 *WhiteLabelConfigApi* | [**GetWhiteLabelConfigByAppNameId**](docs/WhiteLabelConfigApi.md#getwhitelabelconfigbyappnameid) | **GET** /api/v1.0/whitelabelconfig/name/{appId} | 
+*WhiteLabelConfigApi* | [**HealthCheck**](docs/WhiteLabelConfigApi.md#healthcheck) | **GET** /api/v1.0/whitelabelconfig/health | 
 *WhiteLabelConfigApi* | [**UpdateAppGeneralConfig**](docs/WhiteLabelConfigApi.md#updateappgeneralconfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/general | 
+*WhiteLabelConfigApi* | [**UpdateAppStoreConfig**](docs/WhiteLabelConfigApi.md#updateappstoreconfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/appstore | 
 *WhiteLabelConfigApi* | [**UpdatePlayStoreConfig**](docs/WhiteLabelConfigApi.md#updateplaystoreconfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/playstore | 
-*WhiteLabelConfigApi* | [**UpdateWhiteLabelAppStoreConfig**](docs/WhiteLabelConfigApi.md#updatewhitelabelappstoreconfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/appstore | 
 *WhiteLabelConfigApi* | [**UploadAppStoreIcon**](docs/WhiteLabelConfigApi.md#uploadappstoreicon) | **POST** /api/v1.0/whitelabelconfig/{appId}/app-store-icon | 
-*WhiteLabelConfigApi* | [**WhiteLabelConfigHealthCheck**](docs/WhiteLabelConfigApi.md#whitelabelconfighealthcheck) | **GET** /api/v1.0/whitelabelconfig/health | 
 
 
 <a name="documentation-for-models"></a>
@@ -993,12 +993,8 @@ Class | Method | HTTP request | Description
  - [Model.OauthClientRedirectUri](docs/OauthClientRedirectUri.md)
  - [Model.ObjectDisplayOrder](docs/ObjectDisplayOrder.md)
  - [Model.OktaPortalFeatureFlag](docs/OktaPortalFeatureFlag.md)
- - [Model.OnboardingConfig](docs/OnboardingConfig.md)
  - [Model.OnboardingConfigUpdate](docs/OnboardingConfigUpdate.md)
- - [Model.OnboardingItem](docs/OnboardingItem.md)
  - [Model.OnboardingItemUpdate](docs/OnboardingItemUpdate.md)
- - [Model.OnboardingProcess](docs/OnboardingProcess.md)
- - [Model.OnboardingRootItem](docs/OnboardingRootItem.md)
  - [Model.Order](docs/Order.md)
  - [Model.OrderAcceptedEvent](docs/OrderAcceptedEvent.md)
  - [Model.OrderBatch](docs/OrderBatch.md)
@@ -1140,7 +1136,6 @@ Class | Method | HTTP request | Description
  - [Model.RestApiArrayResultMobileAppsStatistics](docs/RestApiArrayResultMobileAppsStatistics.md)
  - [Model.RestApiArrayResultOAuthApp](docs/RestApiArrayResultOAuthApp.md)
  - [Model.RestApiArrayResultOauthClientRedirectUri](docs/RestApiArrayResultOauthClientRedirectUri.md)
- - [Model.RestApiArrayResultOnboardingConfig](docs/RestApiArrayResultOnboardingConfig.md)
  - [Model.RestApiArrayResultOrderBatch](docs/RestApiArrayResultOrderBatch.md)
  - [Model.RestApiArrayResultOrderFulfillmentStatus](docs/RestApiArrayResultOrderFulfillmentStatus.md)
  - [Model.RestApiArrayResultPayoutSummary](docs/RestApiArrayResultPayoutSummary.md)
@@ -1287,8 +1282,6 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultOAuthApp](docs/RestApiResultOAuthApp.md)
  - [Model.RestApiResultOauthClientRedirectUri](docs/RestApiResultOauthClientRedirectUri.md)
  - [Model.RestApiResultOktaPortalFeatureFlag](docs/RestApiResultOktaPortalFeatureFlag.md)
- - [Model.RestApiResultOnboardingConfig](docs/RestApiResultOnboardingConfig.md)
- - [Model.RestApiResultOnboardingProcess](docs/RestApiResultOnboardingProcess.md)
  - [Model.RestApiResultOrder](docs/RestApiResultOrder.md)
  - [Model.RestApiResultOrderBatch](docs/RestApiResultOrderBatch.md)
  - [Model.RestApiResultOrderBatchingConfiguration](docs/RestApiResultOrderBatchingConfiguration.md)

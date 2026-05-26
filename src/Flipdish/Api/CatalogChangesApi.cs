@@ -25,10 +25,10 @@ namespace Flipdish.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// Get menu pending changes from Catalog groups and items
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -40,10 +40,10 @@ namespace Flipdish.Api
         RestApiPaginationResultPendingMenuChanges GetPendingMenuChanges (string appId, int? menuId = null, string catalogItemId = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// 
+        /// Get menu pending changes from Catalog groups and items
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -54,7 +54,7 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiPaginationResultPendingMenuChanges</returns>
         ApiResponse<RestApiPaginationResultPendingMenuChanges> GetPendingMenuChangesWithHttpInfo (string appId, int? menuId = null, string catalogItemId = null, int? page = null, int? limit = null);
         /// <summary>
-        /// 
+        /// Get menu pending changes summaries by appId
         /// </summary>
         /// <remarks>
         /// 
@@ -65,7 +65,7 @@ namespace Flipdish.Api
         RestApiArrayResultPendingMenuChangesSummaries GetPendingMenuChangesSummaries (string appId);
 
         /// <summary>
-        /// 
+        /// Get menu pending changes summaries by appId
         /// </summary>
         /// <remarks>
         /// 
@@ -75,10 +75,10 @@ namespace Flipdish.Api
         /// <returns>ApiResponse of RestApiArrayResultPendingMenuChangesSummaries</returns>
         ApiResponse<RestApiArrayResultPendingMenuChangesSummaries> GetPendingMenuChangesSummariesWithHttpInfo (string appId);
         /// <summary>
-        /// 
+        /// Update menus with the pending changes from Catalog groups and items
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -87,10 +87,10 @@ namespace Flipdish.Api
         void PublishPendingMenuChanges (string appId, PublishMenuChanges publishMenuChanges);
 
         /// <summary>
-        /// 
+        /// Update menus with the pending changes from Catalog groups and items
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -100,10 +100,10 @@ namespace Flipdish.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// Get menu pending changes from Catalog groups and items
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -115,10 +115,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiPaginationResultPendingMenuChanges> GetPendingMenuChangesAsync (string appId, int? menuId = null, string catalogItemId = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// 
+        /// Get menu pending changes from Catalog groups and items
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -129,7 +129,7 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiPaginationResultPendingMenuChanges)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiPaginationResultPendingMenuChanges>> GetPendingMenuChangesAsyncWithHttpInfo (string appId, int? menuId = null, string catalogItemId = null, int? page = null, int? limit = null);
         /// <summary>
-        /// 
+        /// Get menu pending changes summaries by appId
         /// </summary>
         /// <remarks>
         /// 
@@ -140,7 +140,7 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task<RestApiArrayResultPendingMenuChangesSummaries> GetPendingMenuChangesSummariesAsync (string appId);
 
         /// <summary>
-        /// 
+        /// Get menu pending changes summaries by appId
         /// </summary>
         /// <remarks>
         /// 
@@ -150,10 +150,10 @@ namespace Flipdish.Api
         /// <returns>Task of ApiResponse (RestApiArrayResultPendingMenuChangesSummaries)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultPendingMenuChangesSummaries>> GetPendingMenuChangesSummariesAsyncWithHttpInfo (string appId);
         /// <summary>
-        /// 
+        /// Update menus with the pending changes from Catalog groups and items
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -162,10 +162,10 @@ namespace Flipdish.Api
         System.Threading.Tasks.Task PublishPendingMenuChangesAsync (string appId, PublishMenuChanges publishMenuChanges);
 
         /// <summary>
-        /// 
+        /// Update menus with the pending changes from Catalog groups and items
         /// </summary>
         /// <remarks>
-        /// 
+        /// [BETA - this endpoint is under development, do not use it in your production system]
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -273,7 +273,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Get menu pending changes from Catalog groups and items [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -289,7 +289,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Get menu pending changes from Catalog groups and items [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -360,7 +360,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Get menu pending changes from Catalog groups and items [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -377,7 +377,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Get menu pending changes from Catalog groups and items [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -448,7 +448,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Get menu pending changes summaries by appId 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -460,7 +460,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Get menu pending changes summaries by appId 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -523,7 +523,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Get menu pending changes summaries by appId 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -536,7 +536,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Get menu pending changes summaries by appId 
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -599,7 +599,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Update menus with the pending changes from Catalog groups and items [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -611,7 +611,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Update menus with the pending changes from Catalog groups and items [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -691,7 +691,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Update menus with the pending changes from Catalog groups and items [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
@@ -704,7 +704,7 @@ namespace Flipdish.Api
         }
 
         /// <summary>
-        ///  
+        /// Update menus with the pending changes from Catalog groups and items [BETA - this endpoint is under development, do not use it in your production system]
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>

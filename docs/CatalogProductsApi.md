@@ -4,19 +4,21 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ArchiveProduct**](CatalogProductsApi.md#archiveproduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId}/archive | 
-[**CreateProduct**](CatalogProductsApi.md#createproduct) | **POST** /api/v1.0/{appId}/catalog/products | 
-[**DuplicateProduct**](CatalogProductsApi.md#duplicateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId}/duplicate | 
-[**GetProductById**](CatalogProductsApi.md#getproductbyid) | **GET** /api/v1.0/{appId}/catalog/products/{catalogItemId} | 
-[**GetProducts**](CatalogProductsApi.md#getproducts) | **GET** /api/v1.0/{appId}/catalog/products | 
-[**UpdateProduct**](CatalogProductsApi.md#updateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId} | 
+[**ArchiveProduct**](CatalogProductsApi.md#archiveproduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId}/archive | Archive Product
+[**CreateProduct**](CatalogProductsApi.md#createproduct) | **POST** /api/v1.0/{appId}/catalog/products | Create a Product
+[**DuplicateProduct**](CatalogProductsApi.md#duplicateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId}/duplicate | Duplicate Product
+[**GetProductById**](CatalogProductsApi.md#getproductbyid) | **GET** /api/v1.0/{appId}/catalog/products/{catalogItemId} | Get Product by Id
+[**GetProducts**](CatalogProductsApi.md#getproducts) | **GET** /api/v1.0/{appId}/catalog/products | Get paginated products by app name id filtered by types
+[**UpdateProduct**](CatalogProductsApi.md#updateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId} | Update Product
 
 
 <a name="archiveproduct"></a>
 # **ArchiveProduct**
 > void ArchiveProduct (string appId, string catalogItemId)
 
+Archive Product
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -41,6 +43,7 @@ namespace Example
 
             try
             {
+                // Archive Product
                 apiInstance.ArchiveProduct(appId, catalogItemId);
             }
             catch (Exception e)
@@ -78,7 +81,9 @@ void (empty response body)
 # **CreateProduct**
 > RestApiResultProduct CreateProduct (string appId, CreateProduct createProduct)
 
+Create a Product
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -103,6 +108,7 @@ namespace Example
 
             try
             {
+                // Create a Product
                 RestApiResultProduct result = apiInstance.CreateProduct(appId, createProduct);
                 Debug.WriteLine(result);
             }
@@ -141,7 +147,9 @@ Name | Type | Description  | Notes
 # **DuplicateProduct**
 > void DuplicateProduct (string appId, string catalogItemId)
 
+Duplicate Product
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -166,6 +174,7 @@ namespace Example
 
             try
             {
+                // Duplicate Product
                 apiInstance.DuplicateProduct(appId, catalogItemId);
             }
             catch (Exception e)
@@ -203,7 +212,9 @@ void (empty response body)
 # **GetProductById**
 > Product GetProductById (string appId, string catalogItemId)
 
+Get Product by Id
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -228,6 +239,7 @@ namespace Example
 
             try
             {
+                // Get Product by Id
                 Product result = apiInstance.GetProductById(appId, catalogItemId);
                 Debug.WriteLine(result);
             }
@@ -266,7 +278,9 @@ Name | Type | Description  | Notes
 # **GetProducts**
 > RestApiPaginationResultProduct GetProducts (string appId, List<string> productTypes, string searchTerm = null, int? page = null, int? limit = null)
 
+Get paginated products by app name id filtered by types
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -294,6 +308,7 @@ namespace Example
 
             try
             {
+                // Get paginated products by app name id filtered by types
                 RestApiPaginationResultProduct result = apiInstance.GetProducts(appId, productTypes, searchTerm, page, limit);
                 Debug.WriteLine(result);
             }
@@ -335,7 +350,9 @@ Name | Type | Description  | Notes
 # **UpdateProduct**
 > void UpdateProduct (string appId, string catalogItemId, UpdateProduct updateProduct)
 
+Update Product
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -361,6 +378,7 @@ namespace Example
 
             try
             {
+                // Update Product
                 apiInstance.UpdateProduct(appId, catalogItemId, updateProduct);
             }
             catch (Exception e)

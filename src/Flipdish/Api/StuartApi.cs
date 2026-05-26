@@ -33,8 +33,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
         /// <param name="storeId"></param>
-        /// <returns></returns>
-        void CancelJob (int? jobId, int? storeId);
+        /// <returns>Object</returns>
+        Object StuartCancelJob (int? jobId, int? storeId);
 
         /// <summary>
         /// 
@@ -45,8 +45,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
         /// <param name="storeId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CancelJobWithHttpInfo (int? jobId, int? storeId);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> StuartCancelJobWithHttpInfo (int? jobId, int? storeId);
         /// <summary>
         /// 
         /// </summary>
@@ -57,7 +57,7 @@ namespace Flipdish.Api
         /// <param name="jobId"></param>
         /// <param name="storeId"></param>
         /// <returns>RestApiResultJobResponse</returns>
-        RestApiResultJobResponse GetJob (int? jobId, int? storeId);
+        RestApiResultJobResponse StuartGetJob (int? jobId, int? storeId);
 
         /// <summary>
         /// 
@@ -69,7 +69,7 @@ namespace Flipdish.Api
         /// <param name="jobId"></param>
         /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultJobResponse</returns>
-        ApiResponse<RestApiResultJobResponse> GetJobWithHttpInfo (int? jobId, int? storeId);
+        ApiResponse<RestApiResultJobResponse> StuartGetJobWithHttpInfo (int? jobId, int? storeId);
         /// <summary>
         /// 
         /// </summary>
@@ -79,7 +79,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <returns>RestApiResultStuartSettings</returns>
-        RestApiResultStuartSettings GetStuartSettings (int? storeId);
+        RestApiResultStuartSettings StuartGetStuartSettings (int? storeId);
 
         /// <summary>
         /// 
@@ -90,7 +90,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultStuartSettings</returns>
-        ApiResponse<RestApiResultStuartSettings> GetStuartSettingsWithHttpInfo (int? storeId);
+        ApiResponse<RestApiResultStuartSettings> StuartGetStuartSettingsWithHttpInfo (int? storeId);
         /// <summary>
         /// 
         /// </summary>
@@ -101,7 +101,7 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="stuartSettings"></param>
         /// <returns>Object</returns>
-        Object PostStuartSettings (int? storeId, StuartSettings stuartSettings);
+        Object StuartPostStuartSettings (int? storeId, StuartSettings stuartSettings);
 
         /// <summary>
         /// 
@@ -113,7 +113,7 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="stuartSettings"></param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> PostStuartSettingsWithHttpInfo (int? storeId, StuartSettings stuartSettings);
+        ApiResponse<Object> StuartPostStuartSettingsWithHttpInfo (int? storeId, StuartSettings stuartSettings);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -125,8 +125,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
         /// <param name="storeId"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CancelJobAsync (int? jobId, int? storeId);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> StuartCancelJobAsync (int? jobId, int? storeId);
 
         /// <summary>
         /// 
@@ -137,8 +137,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
         /// <param name="storeId"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CancelJobAsyncWithHttpInfo (int? jobId, int? storeId);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> StuartCancelJobAsyncWithHttpInfo (int? jobId, int? storeId);
         /// <summary>
         /// 
         /// </summary>
@@ -149,7 +149,7 @@ namespace Flipdish.Api
         /// <param name="jobId"></param>
         /// <param name="storeId"></param>
         /// <returns>Task of RestApiResultJobResponse</returns>
-        System.Threading.Tasks.Task<RestApiResultJobResponse> GetJobAsync (int? jobId, int? storeId);
+        System.Threading.Tasks.Task<RestApiResultJobResponse> StuartGetJobAsync (int? jobId, int? storeId);
 
         /// <summary>
         /// 
@@ -161,7 +161,7 @@ namespace Flipdish.Api
         /// <param name="jobId"></param>
         /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultJobResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultJobResponse>> GetJobAsyncWithHttpInfo (int? jobId, int? storeId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultJobResponse>> StuartGetJobAsyncWithHttpInfo (int? jobId, int? storeId);
         /// <summary>
         /// 
         /// </summary>
@@ -171,7 +171,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <returns>Task of RestApiResultStuartSettings</returns>
-        System.Threading.Tasks.Task<RestApiResultStuartSettings> GetStuartSettingsAsync (int? storeId);
+        System.Threading.Tasks.Task<RestApiResultStuartSettings> StuartGetStuartSettingsAsync (int? storeId);
 
         /// <summary>
         /// 
@@ -182,7 +182,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultStuartSettings)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultStuartSettings>> GetStuartSettingsAsyncWithHttpInfo (int? storeId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultStuartSettings>> StuartGetStuartSettingsAsyncWithHttpInfo (int? storeId);
         /// <summary>
         /// 
         /// </summary>
@@ -193,7 +193,7 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="stuartSettings"></param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> PostStuartSettingsAsync (int? storeId, StuartSettings stuartSettings);
+        System.Threading.Tasks.Task<Object> StuartPostStuartSettingsAsync (int? storeId, StuartSettings stuartSettings);
 
         /// <summary>
         /// 
@@ -205,7 +205,7 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="stuartSettings"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostStuartSettingsAsyncWithHttpInfo (int? storeId, StuartSettings stuartSettings);
+        System.Threading.Tasks.Task<ApiResponse<Object>> StuartPostStuartSettingsAsyncWithHttpInfo (int? storeId, StuartSettings stuartSettings);
         #endregion Asynchronous Operations
     }
 
@@ -312,10 +312,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
         /// <param name="storeId"></param>
-        /// <returns></returns>
-        public void CancelJob (int? jobId, int? storeId)
+        /// <returns>Object</returns>
+        public Object StuartCancelJob (int? jobId, int? storeId)
         {
-             CancelJobWithHttpInfo(jobId, storeId);
+             ApiResponse<Object> localVarResponse = StuartCancelJobWithHttpInfo(jobId, storeId);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -324,15 +325,15 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
         /// <param name="storeId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> CancelJobWithHttpInfo (int? jobId, int? storeId)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > StuartCancelJobWithHttpInfo (int? jobId, int? storeId)
         {
             // verify the required parameter 'jobId' is set
             if (jobId == null)
-                throw new ApiException(400, "Missing required parameter 'jobId' when calling StuartApi->CancelJob");
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling StuartApi->StuartCancelJob");
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->CancelJob");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartCancelJob");
 
             var localVarPath = "./api/v1.0/stuart/jobs/{jobId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -377,13 +378,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CancelJob", localVarResponse);
+                Exception exception = ExceptionFactory("StuartCancelJob", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -392,10 +393,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
         /// <param name="storeId"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CancelJobAsync (int? jobId, int? storeId)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> StuartCancelJobAsync (int? jobId, int? storeId)
         {
-             await CancelJobAsyncWithHttpInfo(jobId, storeId);
+             ApiResponse<Object> localVarResponse = await StuartCancelJobAsyncWithHttpInfo(jobId, storeId);
+             return localVarResponse.Data;
 
         }
 
@@ -405,15 +407,15 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
         /// <param name="storeId"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CancelJobAsyncWithHttpInfo (int? jobId, int? storeId)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> StuartCancelJobAsyncWithHttpInfo (int? jobId, int? storeId)
         {
             // verify the required parameter 'jobId' is set
             if (jobId == null)
-                throw new ApiException(400, "Missing required parameter 'jobId' when calling StuartApi->CancelJob");
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling StuartApi->StuartCancelJob");
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->CancelJob");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartCancelJob");
 
             var localVarPath = "./api/v1.0/stuart/jobs/{jobId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -458,13 +460,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CancelJob", localVarResponse);
+                Exception exception = ExceptionFactory("StuartCancelJob", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -474,9 +476,9 @@ namespace Flipdish.Api
         /// <param name="jobId"></param>
         /// <param name="storeId"></param>
         /// <returns>RestApiResultJobResponse</returns>
-        public RestApiResultJobResponse GetJob (int? jobId, int? storeId)
+        public RestApiResultJobResponse StuartGetJob (int? jobId, int? storeId)
         {
-             ApiResponse<RestApiResultJobResponse> localVarResponse = GetJobWithHttpInfo(jobId, storeId);
+             ApiResponse<RestApiResultJobResponse> localVarResponse = StuartGetJobWithHttpInfo(jobId, storeId);
              return localVarResponse.Data;
         }
 
@@ -487,14 +489,14 @@ namespace Flipdish.Api
         /// <param name="jobId"></param>
         /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultJobResponse</returns>
-        public ApiResponse< RestApiResultJobResponse > GetJobWithHttpInfo (int? jobId, int? storeId)
+        public ApiResponse< RestApiResultJobResponse > StuartGetJobWithHttpInfo (int? jobId, int? storeId)
         {
             // verify the required parameter 'jobId' is set
             if (jobId == null)
-                throw new ApiException(400, "Missing required parameter 'jobId' when calling StuartApi->GetJob");
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling StuartApi->StuartGetJob");
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->GetJob");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartGetJob");
 
             var localVarPath = "./api/v1.0/stuart/jobs/{jobId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -539,7 +541,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetJob", localVarResponse);
+                Exception exception = ExceptionFactory("StuartGetJob", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -555,9 +557,9 @@ namespace Flipdish.Api
         /// <param name="jobId"></param>
         /// <param name="storeId"></param>
         /// <returns>Task of RestApiResultJobResponse</returns>
-        public async System.Threading.Tasks.Task<RestApiResultJobResponse> GetJobAsync (int? jobId, int? storeId)
+        public async System.Threading.Tasks.Task<RestApiResultJobResponse> StuartGetJobAsync (int? jobId, int? storeId)
         {
-             ApiResponse<RestApiResultJobResponse> localVarResponse = await GetJobAsyncWithHttpInfo(jobId, storeId);
+             ApiResponse<RestApiResultJobResponse> localVarResponse = await StuartGetJobAsyncWithHttpInfo(jobId, storeId);
              return localVarResponse.Data;
 
         }
@@ -569,14 +571,14 @@ namespace Flipdish.Api
         /// <param name="jobId"></param>
         /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultJobResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultJobResponse>> GetJobAsyncWithHttpInfo (int? jobId, int? storeId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultJobResponse>> StuartGetJobAsyncWithHttpInfo (int? jobId, int? storeId)
         {
             // verify the required parameter 'jobId' is set
             if (jobId == null)
-                throw new ApiException(400, "Missing required parameter 'jobId' when calling StuartApi->GetJob");
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling StuartApi->StuartGetJob");
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->GetJob");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartGetJob");
 
             var localVarPath = "./api/v1.0/stuart/jobs/{jobId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -621,7 +623,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetJob", localVarResponse);
+                Exception exception = ExceptionFactory("StuartGetJob", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -636,9 +638,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <returns>RestApiResultStuartSettings</returns>
-        public RestApiResultStuartSettings GetStuartSettings (int? storeId)
+        public RestApiResultStuartSettings StuartGetStuartSettings (int? storeId)
         {
-             ApiResponse<RestApiResultStuartSettings> localVarResponse = GetStuartSettingsWithHttpInfo(storeId);
+             ApiResponse<RestApiResultStuartSettings> localVarResponse = StuartGetStuartSettingsWithHttpInfo(storeId);
              return localVarResponse.Data;
         }
 
@@ -648,11 +650,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultStuartSettings</returns>
-        public ApiResponse< RestApiResultStuartSettings > GetStuartSettingsWithHttpInfo (int? storeId)
+        public ApiResponse< RestApiResultStuartSettings > StuartGetStuartSettingsWithHttpInfo (int? storeId)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->GetStuartSettings");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartGetStuartSettings");
 
             var localVarPath = "./api/v1.0/stuart/settings/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -696,7 +698,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetStuartSettings", localVarResponse);
+                Exception exception = ExceptionFactory("StuartGetStuartSettings", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -711,9 +713,9 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <returns>Task of RestApiResultStuartSettings</returns>
-        public async System.Threading.Tasks.Task<RestApiResultStuartSettings> GetStuartSettingsAsync (int? storeId)
+        public async System.Threading.Tasks.Task<RestApiResultStuartSettings> StuartGetStuartSettingsAsync (int? storeId)
         {
-             ApiResponse<RestApiResultStuartSettings> localVarResponse = await GetStuartSettingsAsyncWithHttpInfo(storeId);
+             ApiResponse<RestApiResultStuartSettings> localVarResponse = await StuartGetStuartSettingsAsyncWithHttpInfo(storeId);
              return localVarResponse.Data;
 
         }
@@ -724,11 +726,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultStuartSettings)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStuartSettings>> GetStuartSettingsAsyncWithHttpInfo (int? storeId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultStuartSettings>> StuartGetStuartSettingsAsyncWithHttpInfo (int? storeId)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->GetStuartSettings");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartGetStuartSettings");
 
             var localVarPath = "./api/v1.0/stuart/settings/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -772,7 +774,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetStuartSettings", localVarResponse);
+                Exception exception = ExceptionFactory("StuartGetStuartSettings", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -788,9 +790,9 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="stuartSettings"></param>
         /// <returns>Object</returns>
-        public Object PostStuartSettings (int? storeId, StuartSettings stuartSettings)
+        public Object StuartPostStuartSettings (int? storeId, StuartSettings stuartSettings)
         {
-             ApiResponse<Object> localVarResponse = PostStuartSettingsWithHttpInfo(storeId, stuartSettings);
+             ApiResponse<Object> localVarResponse = StuartPostStuartSettingsWithHttpInfo(storeId, stuartSettings);
              return localVarResponse.Data;
         }
 
@@ -801,14 +803,14 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="stuartSettings"></param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > PostStuartSettingsWithHttpInfo (int? storeId, StuartSettings stuartSettings)
+        public ApiResponse< Object > StuartPostStuartSettingsWithHttpInfo (int? storeId, StuartSettings stuartSettings)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->PostStuartSettings");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartPostStuartSettings");
             // verify the required parameter 'stuartSettings' is set
             if (stuartSettings == null)
-                throw new ApiException(400, "Missing required parameter 'stuartSettings' when calling StuartApi->PostStuartSettings");
+                throw new ApiException(400, "Missing required parameter 'stuartSettings' when calling StuartApi->StuartPostStuartSettings");
 
             var localVarPath = "./api/v1.0/stuart/settings/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -865,7 +867,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("PostStuartSettings", localVarResponse);
+                Exception exception = ExceptionFactory("StuartPostStuartSettings", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -881,9 +883,9 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="stuartSettings"></param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> PostStuartSettingsAsync (int? storeId, StuartSettings stuartSettings)
+        public async System.Threading.Tasks.Task<Object> StuartPostStuartSettingsAsync (int? storeId, StuartSettings stuartSettings)
         {
-             ApiResponse<Object> localVarResponse = await PostStuartSettingsAsyncWithHttpInfo(storeId, stuartSettings);
+             ApiResponse<Object> localVarResponse = await StuartPostStuartSettingsAsyncWithHttpInfo(storeId, stuartSettings);
              return localVarResponse.Data;
 
         }
@@ -895,14 +897,14 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="stuartSettings"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostStuartSettingsAsyncWithHttpInfo (int? storeId, StuartSettings stuartSettings)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> StuartPostStuartSettingsAsyncWithHttpInfo (int? storeId, StuartSettings stuartSettings)
         {
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->PostStuartSettings");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling StuartApi->StuartPostStuartSettings");
             // verify the required parameter 'stuartSettings' is set
             if (stuartSettings == null)
-                throw new ApiException(400, "Missing required parameter 'stuartSettings' when calling StuartApi->PostStuartSettings");
+                throw new ApiException(400, "Missing required parameter 'stuartSettings' when calling StuartApi->StuartPostStuartSettings");
 
             var localVarPath = "./api/v1.0/stuart/settings/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -959,7 +961,7 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("PostStuartSettings", localVarResponse);
+                Exception exception = ExceptionFactory("StuartPostStuartSettings", localVarResponse);
                 if (exception != null) throw exception;
             }
 

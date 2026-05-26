@@ -4,19 +4,21 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ArchiveCatalogItem**](CatalogItemsApi.md#archivecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/archive | 
-[**CreateCatalogItem**](CatalogItemsApi.md#createcatalogitem) | **POST** /api/v1.0/{appId}/catalog/items | 
-[**DuplicateCatalogItem**](CatalogItemsApi.md#duplicatecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/duplicate | 
-[**GetCatalogItemById**](CatalogItemsApi.md#getcatalogitembyid) | **GET** /api/v1.0/{appId}/catalog/items/{catalogItemId} | 
-[**GetItems**](CatalogItemsApi.md#getitems) | **GET** /api/v1.0/{appId}/catalog/items | 
-[**UpdateCatalogItem**](CatalogItemsApi.md#updatecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId} | 
+[**ArchiveCatalogItem**](CatalogItemsApi.md#archivecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/archive | Archive Catalog Item
+[**CreateCatalogItem**](CatalogItemsApi.md#createcatalogitem) | **POST** /api/v1.0/{appId}/catalog/items | Create a Catalog Item
+[**DuplicateCatalogItem**](CatalogItemsApi.md#duplicatecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/duplicate | Duplicate Catalog Item
+[**GetCatalogItemById**](CatalogItemsApi.md#getcatalogitembyid) | **GET** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Get item by Id
+[**GetItems**](CatalogItemsApi.md#getitems) | **GET** /api/v1.0/{appId}/catalog/items | Get paginated items by app name id filtered by types
+[**UpdateCatalogItem**](CatalogItemsApi.md#updatecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Update Catalog Item
 
 
 <a name="archivecatalogitem"></a>
 # **ArchiveCatalogItem**
 > void ArchiveCatalogItem (string appId, string catalogItemId)
 
+Archive Catalog Item
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -41,6 +43,7 @@ namespace Example
 
             try
             {
+                // Archive Catalog Item
                 apiInstance.ArchiveCatalogItem(appId, catalogItemId);
             }
             catch (Exception e)
@@ -78,7 +81,9 @@ void (empty response body)
 # **CreateCatalogItem**
 > RestApiResultCatalogItem CreateCatalogItem (string appId, CreateCatalogItem createCatalogItem)
 
+Create a Catalog Item
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -103,6 +108,7 @@ namespace Example
 
             try
             {
+                // Create a Catalog Item
                 RestApiResultCatalogItem result = apiInstance.CreateCatalogItem(appId, createCatalogItem);
                 Debug.WriteLine(result);
             }
@@ -141,7 +147,9 @@ Name | Type | Description  | Notes
 # **DuplicateCatalogItem**
 > void DuplicateCatalogItem (string appId, string catalogItemId)
 
+Duplicate Catalog Item
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -166,6 +174,7 @@ namespace Example
 
             try
             {
+                // Duplicate Catalog Item
                 apiInstance.DuplicateCatalogItem(appId, catalogItemId);
             }
             catch (Exception e)
@@ -203,7 +212,9 @@ void (empty response body)
 # **GetCatalogItemById**
 > CatalogItem GetCatalogItemById (string appId, string catalogItemId)
 
+Get item by Id
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -228,6 +239,7 @@ namespace Example
 
             try
             {
+                // Get item by Id
                 CatalogItem result = apiInstance.GetCatalogItemById(appId, catalogItemId);
                 Debug.WriteLine(result);
             }
@@ -266,7 +278,9 @@ Name | Type | Description  | Notes
 # **GetItems**
 > RestApiPaginationResultCatalogItem GetItems (string appId, List<string> itemTypes, string searchTerm = null, int? page = null, int? limit = null)
 
+Get paginated items by app name id filtered by types
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -294,6 +308,7 @@ namespace Example
 
             try
             {
+                // Get paginated items by app name id filtered by types
                 RestApiPaginationResultCatalogItem result = apiInstance.GetItems(appId, itemTypes, searchTerm, page, limit);
                 Debug.WriteLine(result);
             }
@@ -335,7 +350,9 @@ Name | Type | Description  | Notes
 # **UpdateCatalogItem**
 > void UpdateCatalogItem (string appId, string catalogItemId, UpdateCatalogItem updateCatalogItem)
 
+Update Catalog Item
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```csharp
@@ -361,6 +378,7 @@ namespace Example
 
             try
             {
+                // Update Catalog Item
                 apiInstance.UpdateCatalogItem(appId, catalogItemId, updateCatalogItem);
             }
             catch (Exception e)

@@ -32,8 +32,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns></returns>
-        void Report (CspReportRequest request);
+        /// <returns>Object</returns>
+        Object ContentSecurityPolicyReport (CspReportRequest request);
 
         /// <summary>
         /// 
@@ -43,8 +43,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ReportWithHttpInfo (CspReportRequest request);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ContentSecurityPolicyReportWithHttpInfo (CspReportRequest request);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -55,8 +55,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ReportAsync (CspReportRequest request);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ContentSecurityPolicyReportAsync (CspReportRequest request);
 
         /// <summary>
         /// 
@@ -66,8 +66,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ReportAsyncWithHttpInfo (CspReportRequest request);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ContentSecurityPolicyReportAsyncWithHttpInfo (CspReportRequest request);
         #endregion Asynchronous Operations
     }
 
@@ -173,10 +173,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns></returns>
-        public void Report (CspReportRequest request)
+        /// <returns>Object</returns>
+        public Object ContentSecurityPolicyReport (CspReportRequest request)
         {
-             ReportWithHttpInfo(request);
+             ApiResponse<Object> localVarResponse = ContentSecurityPolicyReportWithHttpInfo(request);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -184,12 +185,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ReportWithHttpInfo (CspReportRequest request)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ContentSecurityPolicyReportWithHttpInfo (CspReportRequest request)
         {
             // verify the required parameter 'request' is set
             if (request == null)
-                throw new ApiException(400, "Missing required parameter 'request' when calling ContentSecurityPolicyApi->Report");
+                throw new ApiException(400, "Missing required parameter 'request' when calling ContentSecurityPolicyApi->ContentSecurityPolicyReport");
 
             var localVarPath = "./api/v1.0/csp/report";
             var localVarPathParams = new Dictionary<String, String>();
@@ -245,13 +246,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Report", localVarResponse);
+                Exception exception = ExceptionFactory("ContentSecurityPolicyReport", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -259,10 +260,11 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ReportAsync (CspReportRequest request)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ContentSecurityPolicyReportAsync (CspReportRequest request)
         {
-             await ReportAsyncWithHttpInfo(request);
+             ApiResponse<Object> localVarResponse = await ContentSecurityPolicyReportAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
 
         }
 
@@ -271,12 +273,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ReportAsyncWithHttpInfo (CspReportRequest request)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ContentSecurityPolicyReportAsyncWithHttpInfo (CspReportRequest request)
         {
             // verify the required parameter 'request' is set
             if (request == null)
-                throw new ApiException(400, "Missing required parameter 'request' when calling ContentSecurityPolicyApi->Report");
+                throw new ApiException(400, "Missing required parameter 'request' when calling ContentSecurityPolicyApi->ContentSecurityPolicyReport");
 
             var localVarPath = "./api/v1.0/csp/report";
             var localVarPathParams = new Dictionary<String, String>();
@@ -332,13 +334,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Report", localVarResponse);
+                Exception exception = ExceptionFactory("ContentSecurityPolicyReport", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
     }

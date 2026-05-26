@@ -56,8 +56,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="paygreenConfigurationId"></param>
-        /// <returns></returns>
-        void DeletePayGreenConfiguration (string appId, int? paygreenConfigurationId);
+        /// <returns>Object</returns>
+        Object DeletePayGreenConfiguration (string appId, int? paygreenConfigurationId);
 
         /// <summary>
         /// 
@@ -68,7 +68,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="paygreenConfigurationId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> DeletePayGreenConfigurationWithHttpInfo (string appId, int? paygreenConfigurationId);
         /// <summary>
         /// 
@@ -265,8 +265,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="paygreenConfigurationId"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeletePayGreenConfigurationAsync (string appId, int? paygreenConfigurationId);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DeletePayGreenConfigurationAsync (string appId, int? paygreenConfigurationId);
 
         /// <summary>
         /// 
@@ -277,7 +277,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="paygreenConfigurationId"></param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeletePayGreenConfigurationAsyncWithHttpInfo (string appId, int? paygreenConfigurationId);
         /// <summary>
         /// 
@@ -733,10 +733,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="paygreenConfigurationId"></param>
-        /// <returns></returns>
-        public void DeletePayGreenConfiguration (string appId, int? paygreenConfigurationId)
+        /// <returns>Object</returns>
+        public Object DeletePayGreenConfiguration (string appId, int? paygreenConfigurationId)
         {
-             DeletePayGreenConfigurationWithHttpInfo(appId, paygreenConfigurationId);
+             ApiResponse<Object> localVarResponse = DeletePayGreenConfigurationWithHttpInfo(appId, paygreenConfigurationId);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -745,8 +746,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="paygreenConfigurationId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeletePayGreenConfigurationWithHttpInfo (string appId, int? paygreenConfigurationId)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DeletePayGreenConfigurationWithHttpInfo (string appId, int? paygreenConfigurationId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -804,7 +805,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -813,10 +814,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="paygreenConfigurationId"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeletePayGreenConfigurationAsync (string appId, int? paygreenConfigurationId)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DeletePayGreenConfigurationAsync (string appId, int? paygreenConfigurationId)
         {
-             await DeletePayGreenConfigurationAsyncWithHttpInfo(appId, paygreenConfigurationId);
+             ApiResponse<Object> localVarResponse = await DeletePayGreenConfigurationAsyncWithHttpInfo(appId, paygreenConfigurationId);
+             return localVarResponse.Data;
 
         }
 
@@ -826,7 +828,7 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="paygreenConfigurationId"></param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeletePayGreenConfigurationAsyncWithHttpInfo (string appId, int? paygreenConfigurationId)
         {
             // verify the required parameter 'appId' is set
@@ -885,7 +887,7 @@ namespace Flipdish.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>

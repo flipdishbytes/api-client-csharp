@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddFirebaseApp**](FirebaseAppsApi.md#addfirebaseapp) | **POST** /api/v1.0/FirebaseApp | 
-[**DeleteFirebaseApp**](FirebaseAppsApi.md#deletefirebaseapp) | **DELETE** /api/v1.0/FirebaseApp/{whiteLabelId} | 
-[**GetFirebaseApp**](FirebaseAppsApi.md#getfirebaseapp) | **GET** /api/v1.0/FirebaseApp/{whitelabelId} | 
+[**FirebaseAppsAddFirebaseApp**](FirebaseAppsApi.md#firebaseappsaddfirebaseapp) | **POST** /api/v1.0/FirebaseApp | 
+[**FirebaseAppsDeleteFirebaseApp**](FirebaseAppsApi.md#firebaseappsdeletefirebaseapp) | **DELETE** /api/v1.0/FirebaseApp/{whiteLabelId} | 
+[**FirebaseAppsGetFirebaseApp**](FirebaseAppsApi.md#firebaseappsgetfirebaseapp) | **GET** /api/v1.0/FirebaseApp/{whitelabelId} | 
 
 
-<a name="addfirebaseapp"></a>
-# **AddFirebaseApp**
-> Object AddFirebaseApp (FirebaseApp firebaseApp)
+<a name="firebaseappsaddfirebaseapp"></a>
+# **FirebaseAppsAddFirebaseApp**
+> Object FirebaseAppsAddFirebaseApp (FirebaseApp firebaseApp)
 
 
 
@@ -25,7 +25,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class AddFirebaseAppExample
+    public class FirebaseAppsAddFirebaseAppExample
     {
         public void main()
         {
@@ -37,12 +37,12 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.AddFirebaseApp(firebaseApp);
+                Object result = apiInstance.FirebaseAppsAddFirebaseApp(firebaseApp);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling FirebaseAppsApi.AddFirebaseApp: " + e.Message );
+                Debug.Print("Exception when calling FirebaseAppsApi.FirebaseAppsAddFirebaseApp: " + e.Message );
             }
         }
     }
@@ -70,9 +70,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletefirebaseapp"></a>
-# **DeleteFirebaseApp**
-> Object DeleteFirebaseApp (int? whiteLabelId)
+<a name="firebaseappsdeletefirebaseapp"></a>
+# **FirebaseAppsDeleteFirebaseApp**
+> Object FirebaseAppsDeleteFirebaseApp (int? whiteLabelId)
 
 
 
@@ -86,7 +86,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class DeleteFirebaseAppExample
+    public class FirebaseAppsDeleteFirebaseAppExample
     {
         public void main()
         {
@@ -98,12 +98,12 @@ namespace Example
 
             try
             {
-                Object result = apiInstance.DeleteFirebaseApp(whiteLabelId);
+                Object result = apiInstance.FirebaseAppsDeleteFirebaseApp(whiteLabelId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling FirebaseAppsApi.DeleteFirebaseApp: " + e.Message );
+                Debug.Print("Exception when calling FirebaseAppsApi.FirebaseAppsDeleteFirebaseApp: " + e.Message );
             }
         }
     }
@@ -131,9 +131,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getfirebaseapp"></a>
-# **GetFirebaseApp**
-> void GetFirebaseApp (int? whitelabelId)
+<a name="firebaseappsgetfirebaseapp"></a>
+# **FirebaseAppsGetFirebaseApp**
+> Object FirebaseAppsGetFirebaseApp (int? whitelabelId)
 
 
 
@@ -147,7 +147,7 @@ using Flipdish.Model;
 
 namespace Example
 {
-    public class GetFirebaseAppExample
+    public class FirebaseAppsGetFirebaseAppExample
     {
         public void main()
         {
@@ -159,11 +159,12 @@ namespace Example
 
             try
             {
-                apiInstance.GetFirebaseApp(whitelabelId);
+                Object result = apiInstance.FirebaseAppsGetFirebaseApp(whitelabelId);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling FirebaseAppsApi.GetFirebaseApp: " + e.Message );
+                Debug.Print("Exception when calling FirebaseAppsApi.FirebaseAppsGetFirebaseApp: " + e.Message );
             }
         }
     }
@@ -178,7 +179,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**Object**
 
 ### Authorization
 

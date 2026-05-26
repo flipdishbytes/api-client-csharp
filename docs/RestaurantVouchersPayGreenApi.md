@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 <a name="deletepaygreenconfiguration"></a>
 # **DeletePayGreenConfiguration**
-> void DeletePayGreenConfiguration (string appId, int? paygreenConfigurationId)
+> Object DeletePayGreenConfiguration (string appId, int? paygreenConfigurationId)
 
 
 
@@ -107,7 +107,8 @@ namespace Example
 
             try
             {
-                apiInstance.DeletePayGreenConfiguration(appId, paygreenConfigurationId);
+                Object result = apiInstance.DeletePayGreenConfiguration(appId, paygreenConfigurationId);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -127,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**Object**
 
 ### Authorization
 

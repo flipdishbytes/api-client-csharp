@@ -32,8 +32,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>RestApiResultOnboardingConfig</returns>
-        RestApiResultOnboardingConfig GetOnboardingConfig (string appId);
+        /// <returns>Object</returns>
+        Object OnboardingGetOnboardingConfig (string appId);
 
         /// <summary>
         /// 
@@ -43,8 +43,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>ApiResponse of RestApiResultOnboardingConfig</returns>
-        ApiResponse<RestApiResultOnboardingConfig> GetOnboardingConfigWithHttpInfo (string appId);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> OnboardingGetOnboardingConfigWithHttpInfo (string appId);
         /// <summary>
         /// 
         /// </summary>
@@ -53,8 +53,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>RestApiArrayResultOnboardingConfig</returns>
-        RestApiArrayResultOnboardingConfig GetOnboardingConfigs (string appId);
+        /// <returns>Object</returns>
+        Object OnboardingGetOnboardingConfigs (string appId);
 
         /// <summary>
         /// 
@@ -64,8 +64,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>ApiResponse of RestApiArrayResultOnboardingConfig</returns>
-        ApiResponse<RestApiArrayResultOnboardingConfig> GetOnboardingConfigsWithHttpInfo (string appId);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> OnboardingGetOnboardingConfigsWithHttpInfo (string appId);
         /// <summary>
         /// 
         /// </summary>
@@ -76,8 +76,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="storeId"></param>
         /// <param name="milestoneId"> (optional)</param>
-        /// <returns>RestApiResultOnboardingProcess</returns>
-        RestApiResultOnboardingProcess GetOnboardingItems (string appId, int? storeId, int? milestoneId = null);
+        /// <returns>Object</returns>
+        Object OnboardingGetOnboardingItems (string appId, int? storeId, int? milestoneId = null);
 
         /// <summary>
         /// 
@@ -89,8 +89,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="storeId"></param>
         /// <param name="milestoneId"> (optional)</param>
-        /// <returns>ApiResponse of RestApiResultOnboardingProcess</returns>
-        ApiResponse<RestApiResultOnboardingProcess> GetOnboardingItemsWithHttpInfo (string appId, int? storeId, int? milestoneId = null);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> OnboardingGetOnboardingItemsWithHttpInfo (string appId, int? storeId, int? milestoneId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -101,8 +101,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="storeId"> (optional)</param>
         /// <param name="milestoneId"> (optional)</param>
-        /// <returns>RestApiResultOnboardingProcess</returns>
-        RestApiResultOnboardingProcess GetOnboardingItemsV2 (string appId, int? storeId = null, int? milestoneId = null);
+        /// <returns>Object</returns>
+        Object OnboardingGetOnboardingItemsV2 (string appId, int? storeId = null, int? milestoneId = null);
 
         /// <summary>
         /// 
@@ -114,8 +114,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="storeId"> (optional)</param>
         /// <param name="milestoneId"> (optional)</param>
-        /// <returns>ApiResponse of RestApiResultOnboardingProcess</returns>
-        ApiResponse<RestApiResultOnboardingProcess> GetOnboardingItemsV2WithHttpInfo (string appId, int? storeId = null, int? milestoneId = null);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> OnboardingGetOnboardingItemsV2WithHttpInfo (string appId, int? storeId = null, int? milestoneId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -125,8 +125,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="configUpdate"></param>
-        /// <returns></returns>
-        void UpdateOnboardingConfig (string appId, OnboardingConfigUpdate configUpdate);
+        /// <returns>Object</returns>
+        Object OnboardingUpdateOnboardingConfig (string appId, OnboardingConfigUpdate configUpdate);
 
         /// <summary>
         /// 
@@ -137,8 +137,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="configUpdate"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateOnboardingConfigWithHttpInfo (string appId, OnboardingConfigUpdate configUpdate);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> OnboardingUpdateOnboardingConfigWithHttpInfo (string appId, OnboardingConfigUpdate configUpdate);
         /// <summary>
         /// 
         /// </summary>
@@ -149,8 +149,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="configId"></param>
         /// <param name="configUpdate"></param>
-        /// <returns></returns>
-        void UpdateOnboardingConfigById (string appId, int? configId, OnboardingConfigUpdate configUpdate);
+        /// <returns>Object</returns>
+        Object OnboardingUpdateOnboardingConfigById (string appId, int? configId, OnboardingConfigUpdate configUpdate);
 
         /// <summary>
         /// 
@@ -162,8 +162,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="configId"></param>
         /// <param name="configUpdate"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateOnboardingConfigByIdWithHttpInfo (string appId, int? configId, OnboardingConfigUpdate configUpdate);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> OnboardingUpdateOnboardingConfigByIdWithHttpInfo (string appId, int? configId, OnboardingConfigUpdate configUpdate);
         /// <summary>
         /// 
         /// </summary>
@@ -175,8 +175,8 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="onboardingItemId"></param>
         /// <param name="itemUpdate"></param>
-        /// <returns></returns>
-        void UpdateOnboardingItem (string appId, int? storeId, int? onboardingItemId, OnboardingItemUpdate itemUpdate);
+        /// <returns>Object</returns>
+        Object OnboardingUpdateOnboardingItem (string appId, int? storeId, int? onboardingItemId, OnboardingItemUpdate itemUpdate);
 
         /// <summary>
         /// 
@@ -189,8 +189,8 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="onboardingItemId"></param>
         /// <param name="itemUpdate"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateOnboardingItemWithHttpInfo (string appId, int? storeId, int? onboardingItemId, OnboardingItemUpdate itemUpdate);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> OnboardingUpdateOnboardingItemWithHttpInfo (string appId, int? storeId, int? onboardingItemId, OnboardingItemUpdate itemUpdate);
         /// <summary>
         /// 
         /// </summary>
@@ -202,8 +202,8 @@ namespace Flipdish.Api
         /// <param name="onboardingItemId"></param>
         /// <param name="itemUpdate"></param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns></returns>
-        void UpdateOnboardingItemV2 (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null);
+        /// <returns>Object</returns>
+        Object OnboardingUpdateOnboardingItemV2 (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null);
 
         /// <summary>
         /// 
@@ -216,8 +216,8 @@ namespace Flipdish.Api
         /// <param name="onboardingItemId"></param>
         /// <param name="itemUpdate"></param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateOnboardingItemV2WithHttpInfo (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> OnboardingUpdateOnboardingItemV2WithHttpInfo (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -228,8 +228,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>Task of RestApiResultOnboardingConfig</returns>
-        System.Threading.Tasks.Task<RestApiResultOnboardingConfig> GetOnboardingConfigAsync (string appId);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> OnboardingGetOnboardingConfigAsync (string appId);
 
         /// <summary>
         /// 
@@ -239,8 +239,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>Task of ApiResponse (RestApiResultOnboardingConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultOnboardingConfig>> GetOnboardingConfigAsyncWithHttpInfo (string appId);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingGetOnboardingConfigAsyncWithHttpInfo (string appId);
         /// <summary>
         /// 
         /// </summary>
@@ -249,8 +249,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>Task of RestApiArrayResultOnboardingConfig</returns>
-        System.Threading.Tasks.Task<RestApiArrayResultOnboardingConfig> GetOnboardingConfigsAsync (string appId);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> OnboardingGetOnboardingConfigsAsync (string appId);
 
         /// <summary>
         /// 
@@ -260,8 +260,8 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultOnboardingConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOnboardingConfig>> GetOnboardingConfigsAsyncWithHttpInfo (string appId);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingGetOnboardingConfigsAsyncWithHttpInfo (string appId);
         /// <summary>
         /// 
         /// </summary>
@@ -272,8 +272,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="storeId"></param>
         /// <param name="milestoneId"> (optional)</param>
-        /// <returns>Task of RestApiResultOnboardingProcess</returns>
-        System.Threading.Tasks.Task<RestApiResultOnboardingProcess> GetOnboardingItemsAsync (string appId, int? storeId, int? milestoneId = null);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> OnboardingGetOnboardingItemsAsync (string appId, int? storeId, int? milestoneId = null);
 
         /// <summary>
         /// 
@@ -285,8 +285,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="storeId"></param>
         /// <param name="milestoneId"> (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiResultOnboardingProcess)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultOnboardingProcess>> GetOnboardingItemsAsyncWithHttpInfo (string appId, int? storeId, int? milestoneId = null);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingGetOnboardingItemsAsyncWithHttpInfo (string appId, int? storeId, int? milestoneId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -297,8 +297,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="storeId"> (optional)</param>
         /// <param name="milestoneId"> (optional)</param>
-        /// <returns>Task of RestApiResultOnboardingProcess</returns>
-        System.Threading.Tasks.Task<RestApiResultOnboardingProcess> GetOnboardingItemsV2Async (string appId, int? storeId = null, int? milestoneId = null);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> OnboardingGetOnboardingItemsV2Async (string appId, int? storeId = null, int? milestoneId = null);
 
         /// <summary>
         /// 
@@ -310,8 +310,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="storeId"> (optional)</param>
         /// <param name="milestoneId"> (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiResultOnboardingProcess)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultOnboardingProcess>> GetOnboardingItemsV2AsyncWithHttpInfo (string appId, int? storeId = null, int? milestoneId = null);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingGetOnboardingItemsV2AsyncWithHttpInfo (string appId, int? storeId = null, int? milestoneId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -321,8 +321,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="configUpdate"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateOnboardingConfigAsync (string appId, OnboardingConfigUpdate configUpdate);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> OnboardingUpdateOnboardingConfigAsync (string appId, OnboardingConfigUpdate configUpdate);
 
         /// <summary>
         /// 
@@ -333,8 +333,8 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="configUpdate"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateOnboardingConfigAsyncWithHttpInfo (string appId, OnboardingConfigUpdate configUpdate);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingUpdateOnboardingConfigAsyncWithHttpInfo (string appId, OnboardingConfigUpdate configUpdate);
         /// <summary>
         /// 
         /// </summary>
@@ -345,8 +345,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="configId"></param>
         /// <param name="configUpdate"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateOnboardingConfigByIdAsync (string appId, int? configId, OnboardingConfigUpdate configUpdate);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> OnboardingUpdateOnboardingConfigByIdAsync (string appId, int? configId, OnboardingConfigUpdate configUpdate);
 
         /// <summary>
         /// 
@@ -358,8 +358,8 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="configId"></param>
         /// <param name="configUpdate"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateOnboardingConfigByIdAsyncWithHttpInfo (string appId, int? configId, OnboardingConfigUpdate configUpdate);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingUpdateOnboardingConfigByIdAsyncWithHttpInfo (string appId, int? configId, OnboardingConfigUpdate configUpdate);
         /// <summary>
         /// 
         /// </summary>
@@ -371,8 +371,8 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="onboardingItemId"></param>
         /// <param name="itemUpdate"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateOnboardingItemAsync (string appId, int? storeId, int? onboardingItemId, OnboardingItemUpdate itemUpdate);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> OnboardingUpdateOnboardingItemAsync (string appId, int? storeId, int? onboardingItemId, OnboardingItemUpdate itemUpdate);
 
         /// <summary>
         /// 
@@ -385,8 +385,8 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="onboardingItemId"></param>
         /// <param name="itemUpdate"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateOnboardingItemAsyncWithHttpInfo (string appId, int? storeId, int? onboardingItemId, OnboardingItemUpdate itemUpdate);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingUpdateOnboardingItemAsyncWithHttpInfo (string appId, int? storeId, int? onboardingItemId, OnboardingItemUpdate itemUpdate);
         /// <summary>
         /// 
         /// </summary>
@@ -398,8 +398,8 @@ namespace Flipdish.Api
         /// <param name="onboardingItemId"></param>
         /// <param name="itemUpdate"></param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateOnboardingItemV2Async (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> OnboardingUpdateOnboardingItemV2Async (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null);
 
         /// <summary>
         /// 
@@ -412,8 +412,8 @@ namespace Flipdish.Api
         /// <param name="onboardingItemId"></param>
         /// <param name="itemUpdate"></param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateOnboardingItemV2AsyncWithHttpInfo (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingUpdateOnboardingItemV2AsyncWithHttpInfo (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null);
         #endregion Asynchronous Operations
     }
 
@@ -519,10 +519,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>RestApiResultOnboardingConfig</returns>
-        public RestApiResultOnboardingConfig GetOnboardingConfig (string appId)
+        /// <returns>Object</returns>
+        public Object OnboardingGetOnboardingConfig (string appId)
         {
-             ApiResponse<RestApiResultOnboardingConfig> localVarResponse = GetOnboardingConfigWithHttpInfo(appId);
+             ApiResponse<Object> localVarResponse = OnboardingGetOnboardingConfigWithHttpInfo(appId);
              return localVarResponse.Data;
         }
 
@@ -531,12 +531,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>ApiResponse of RestApiResultOnboardingConfig</returns>
-        public ApiResponse< RestApiResultOnboardingConfig > GetOnboardingConfigWithHttpInfo (string appId)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > OnboardingGetOnboardingConfigWithHttpInfo (string appId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->GetOnboardingConfig");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingGetOnboardingConfig");
 
             var localVarPath = "./api/v1.0/clients/{appId}/onboarding/config";
             var localVarPathParams = new Dictionary<String, String>();
@@ -580,13 +580,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetOnboardingConfig", localVarResponse);
+                Exception exception = ExceptionFactory("OnboardingGetOnboardingConfig", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultOnboardingConfig>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiResultOnboardingConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOnboardingConfig)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -594,10 +594,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>Task of RestApiResultOnboardingConfig</returns>
-        public async System.Threading.Tasks.Task<RestApiResultOnboardingConfig> GetOnboardingConfigAsync (string appId)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> OnboardingGetOnboardingConfigAsync (string appId)
         {
-             ApiResponse<RestApiResultOnboardingConfig> localVarResponse = await GetOnboardingConfigAsyncWithHttpInfo(appId);
+             ApiResponse<Object> localVarResponse = await OnboardingGetOnboardingConfigAsyncWithHttpInfo(appId);
              return localVarResponse.Data;
 
         }
@@ -607,12 +607,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>Task of ApiResponse (RestApiResultOnboardingConfig)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOnboardingConfig>> GetOnboardingConfigAsyncWithHttpInfo (string appId)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingGetOnboardingConfigAsyncWithHttpInfo (string appId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->GetOnboardingConfig");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingGetOnboardingConfig");
 
             var localVarPath = "./api/v1.0/clients/{appId}/onboarding/config";
             var localVarPathParams = new Dictionary<String, String>();
@@ -656,13 +656,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetOnboardingConfig", localVarResponse);
+                Exception exception = ExceptionFactory("OnboardingGetOnboardingConfig", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultOnboardingConfig>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiResultOnboardingConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOnboardingConfig)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -670,10 +670,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>RestApiArrayResultOnboardingConfig</returns>
-        public RestApiArrayResultOnboardingConfig GetOnboardingConfigs (string appId)
+        /// <returns>Object</returns>
+        public Object OnboardingGetOnboardingConfigs (string appId)
         {
-             ApiResponse<RestApiArrayResultOnboardingConfig> localVarResponse = GetOnboardingConfigsWithHttpInfo(appId);
+             ApiResponse<Object> localVarResponse = OnboardingGetOnboardingConfigsWithHttpInfo(appId);
              return localVarResponse.Data;
         }
 
@@ -682,12 +682,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>ApiResponse of RestApiArrayResultOnboardingConfig</returns>
-        public ApiResponse< RestApiArrayResultOnboardingConfig > GetOnboardingConfigsWithHttpInfo (string appId)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > OnboardingGetOnboardingConfigsWithHttpInfo (string appId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->GetOnboardingConfigs");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingGetOnboardingConfigs");
 
             var localVarPath = "./api/v1.0/clients/{appId}/onboarding/configs";
             var localVarPathParams = new Dictionary<String, String>();
@@ -731,13 +731,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetOnboardingConfigs", localVarResponse);
+                Exception exception = ExceptionFactory("OnboardingGetOnboardingConfigs", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultOnboardingConfig>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiArrayResultOnboardingConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultOnboardingConfig)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -745,10 +745,10 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>Task of RestApiArrayResultOnboardingConfig</returns>
-        public async System.Threading.Tasks.Task<RestApiArrayResultOnboardingConfig> GetOnboardingConfigsAsync (string appId)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> OnboardingGetOnboardingConfigsAsync (string appId)
         {
-             ApiResponse<RestApiArrayResultOnboardingConfig> localVarResponse = await GetOnboardingConfigsAsyncWithHttpInfo(appId);
+             ApiResponse<Object> localVarResponse = await OnboardingGetOnboardingConfigsAsyncWithHttpInfo(appId);
              return localVarResponse.Data;
 
         }
@@ -758,12 +758,12 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <returns>Task of ApiResponse (RestApiArrayResultOnboardingConfig)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiArrayResultOnboardingConfig>> GetOnboardingConfigsAsyncWithHttpInfo (string appId)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingGetOnboardingConfigsAsyncWithHttpInfo (string appId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->GetOnboardingConfigs");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingGetOnboardingConfigs");
 
             var localVarPath = "./api/v1.0/clients/{appId}/onboarding/configs";
             var localVarPathParams = new Dictionary<String, String>();
@@ -807,13 +807,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetOnboardingConfigs", localVarResponse);
+                Exception exception = ExceptionFactory("OnboardingGetOnboardingConfigs", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiArrayResultOnboardingConfig>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiArrayResultOnboardingConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiArrayResultOnboardingConfig)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -823,10 +823,10 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="storeId"></param>
         /// <param name="milestoneId"> (optional)</param>
-        /// <returns>RestApiResultOnboardingProcess</returns>
-        public RestApiResultOnboardingProcess GetOnboardingItems (string appId, int? storeId, int? milestoneId = null)
+        /// <returns>Object</returns>
+        public Object OnboardingGetOnboardingItems (string appId, int? storeId, int? milestoneId = null)
         {
-             ApiResponse<RestApiResultOnboardingProcess> localVarResponse = GetOnboardingItemsWithHttpInfo(appId, storeId, milestoneId);
+             ApiResponse<Object> localVarResponse = OnboardingGetOnboardingItemsWithHttpInfo(appId, storeId, milestoneId);
              return localVarResponse.Data;
         }
 
@@ -837,15 +837,15 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="storeId"></param>
         /// <param name="milestoneId"> (optional)</param>
-        /// <returns>ApiResponse of RestApiResultOnboardingProcess</returns>
-        public ApiResponse< RestApiResultOnboardingProcess > GetOnboardingItemsWithHttpInfo (string appId, int? storeId, int? milestoneId = null)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > OnboardingGetOnboardingItemsWithHttpInfo (string appId, int? storeId, int? milestoneId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->GetOnboardingItems");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingGetOnboardingItems");
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling OnboardingApi->GetOnboardingItems");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling OnboardingApi->OnboardingGetOnboardingItems");
 
             var localVarPath = "./api/v1.0/clients/{appId}/onboarding/stores/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -891,13 +891,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetOnboardingItems", localVarResponse);
+                Exception exception = ExceptionFactory("OnboardingGetOnboardingItems", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultOnboardingProcess>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiResultOnboardingProcess) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOnboardingProcess)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -907,10 +907,10 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="storeId"></param>
         /// <param name="milestoneId"> (optional)</param>
-        /// <returns>Task of RestApiResultOnboardingProcess</returns>
-        public async System.Threading.Tasks.Task<RestApiResultOnboardingProcess> GetOnboardingItemsAsync (string appId, int? storeId, int? milestoneId = null)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> OnboardingGetOnboardingItemsAsync (string appId, int? storeId, int? milestoneId = null)
         {
-             ApiResponse<RestApiResultOnboardingProcess> localVarResponse = await GetOnboardingItemsAsyncWithHttpInfo(appId, storeId, milestoneId);
+             ApiResponse<Object> localVarResponse = await OnboardingGetOnboardingItemsAsyncWithHttpInfo(appId, storeId, milestoneId);
              return localVarResponse.Data;
 
         }
@@ -922,15 +922,15 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="storeId"></param>
         /// <param name="milestoneId"> (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiResultOnboardingProcess)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOnboardingProcess>> GetOnboardingItemsAsyncWithHttpInfo (string appId, int? storeId, int? milestoneId = null)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingGetOnboardingItemsAsyncWithHttpInfo (string appId, int? storeId, int? milestoneId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->GetOnboardingItems");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingGetOnboardingItems");
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling OnboardingApi->GetOnboardingItems");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling OnboardingApi->OnboardingGetOnboardingItems");
 
             var localVarPath = "./api/v1.0/clients/{appId}/onboarding/stores/{storeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -976,13 +976,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetOnboardingItems", localVarResponse);
+                Exception exception = ExceptionFactory("OnboardingGetOnboardingItems", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultOnboardingProcess>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiResultOnboardingProcess) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOnboardingProcess)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -992,10 +992,10 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="storeId"> (optional)</param>
         /// <param name="milestoneId"> (optional)</param>
-        /// <returns>RestApiResultOnboardingProcess</returns>
-        public RestApiResultOnboardingProcess GetOnboardingItemsV2 (string appId, int? storeId = null, int? milestoneId = null)
+        /// <returns>Object</returns>
+        public Object OnboardingGetOnboardingItemsV2 (string appId, int? storeId = null, int? milestoneId = null)
         {
-             ApiResponse<RestApiResultOnboardingProcess> localVarResponse = GetOnboardingItemsV2WithHttpInfo(appId, storeId, milestoneId);
+             ApiResponse<Object> localVarResponse = OnboardingGetOnboardingItemsV2WithHttpInfo(appId, storeId, milestoneId);
              return localVarResponse.Data;
         }
 
@@ -1006,12 +1006,12 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="storeId"> (optional)</param>
         /// <param name="milestoneId"> (optional)</param>
-        /// <returns>ApiResponse of RestApiResultOnboardingProcess</returns>
-        public ApiResponse< RestApiResultOnboardingProcess > GetOnboardingItemsV2WithHttpInfo (string appId, int? storeId = null, int? milestoneId = null)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > OnboardingGetOnboardingItemsV2WithHttpInfo (string appId, int? storeId = null, int? milestoneId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->GetOnboardingItemsV2");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingGetOnboardingItemsV2");
 
             var localVarPath = "./api/v1.0/clients/{appId}/onboarding/stores";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1057,13 +1057,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetOnboardingItemsV2", localVarResponse);
+                Exception exception = ExceptionFactory("OnboardingGetOnboardingItemsV2", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultOnboardingProcess>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiResultOnboardingProcess) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOnboardingProcess)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1073,10 +1073,10 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="storeId"> (optional)</param>
         /// <param name="milestoneId"> (optional)</param>
-        /// <returns>Task of RestApiResultOnboardingProcess</returns>
-        public async System.Threading.Tasks.Task<RestApiResultOnboardingProcess> GetOnboardingItemsV2Async (string appId, int? storeId = null, int? milestoneId = null)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> OnboardingGetOnboardingItemsV2Async (string appId, int? storeId = null, int? milestoneId = null)
         {
-             ApiResponse<RestApiResultOnboardingProcess> localVarResponse = await GetOnboardingItemsV2AsyncWithHttpInfo(appId, storeId, milestoneId);
+             ApiResponse<Object> localVarResponse = await OnboardingGetOnboardingItemsV2AsyncWithHttpInfo(appId, storeId, milestoneId);
              return localVarResponse.Data;
 
         }
@@ -1088,12 +1088,12 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="storeId"> (optional)</param>
         /// <param name="milestoneId"> (optional)</param>
-        /// <returns>Task of ApiResponse (RestApiResultOnboardingProcess)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultOnboardingProcess>> GetOnboardingItemsV2AsyncWithHttpInfo (string appId, int? storeId = null, int? milestoneId = null)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingGetOnboardingItemsV2AsyncWithHttpInfo (string appId, int? storeId = null, int? milestoneId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->GetOnboardingItemsV2");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingGetOnboardingItemsV2");
 
             var localVarPath = "./api/v1.0/clients/{appId}/onboarding/stores";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1139,13 +1139,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetOnboardingItemsV2", localVarResponse);
+                Exception exception = ExceptionFactory("OnboardingGetOnboardingItemsV2", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RestApiResultOnboardingProcess>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiResultOnboardingProcess) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultOnboardingProcess)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1154,10 +1154,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="configUpdate"></param>
-        /// <returns></returns>
-        public void UpdateOnboardingConfig (string appId, OnboardingConfigUpdate configUpdate)
+        /// <returns>Object</returns>
+        public Object OnboardingUpdateOnboardingConfig (string appId, OnboardingConfigUpdate configUpdate)
         {
-             UpdateOnboardingConfigWithHttpInfo(appId, configUpdate);
+             ApiResponse<Object> localVarResponse = OnboardingUpdateOnboardingConfigWithHttpInfo(appId, configUpdate);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -1166,15 +1167,15 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="configUpdate"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateOnboardingConfigWithHttpInfo (string appId, OnboardingConfigUpdate configUpdate)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > OnboardingUpdateOnboardingConfigWithHttpInfo (string appId, OnboardingConfigUpdate configUpdate)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->UpdateOnboardingConfig");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingUpdateOnboardingConfig");
             // verify the required parameter 'configUpdate' is set
             if (configUpdate == null)
-                throw new ApiException(400, "Missing required parameter 'configUpdate' when calling OnboardingApi->UpdateOnboardingConfig");
+                throw new ApiException(400, "Missing required parameter 'configUpdate' when calling OnboardingApi->OnboardingUpdateOnboardingConfig");
 
             var localVarPath = "./api/v1.0/clients/{appId}/onboarding/config";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1231,13 +1232,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UpdateOnboardingConfig", localVarResponse);
+                Exception exception = ExceptionFactory("OnboardingUpdateOnboardingConfig", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1246,10 +1247,11 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="configUpdate"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateOnboardingConfigAsync (string appId, OnboardingConfigUpdate configUpdate)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> OnboardingUpdateOnboardingConfigAsync (string appId, OnboardingConfigUpdate configUpdate)
         {
-             await UpdateOnboardingConfigAsyncWithHttpInfo(appId, configUpdate);
+             ApiResponse<Object> localVarResponse = await OnboardingUpdateOnboardingConfigAsyncWithHttpInfo(appId, configUpdate);
+             return localVarResponse.Data;
 
         }
 
@@ -1259,15 +1261,15 @@ namespace Flipdish.Api
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="configUpdate"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateOnboardingConfigAsyncWithHttpInfo (string appId, OnboardingConfigUpdate configUpdate)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingUpdateOnboardingConfigAsyncWithHttpInfo (string appId, OnboardingConfigUpdate configUpdate)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->UpdateOnboardingConfig");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingUpdateOnboardingConfig");
             // verify the required parameter 'configUpdate' is set
             if (configUpdate == null)
-                throw new ApiException(400, "Missing required parameter 'configUpdate' when calling OnboardingApi->UpdateOnboardingConfig");
+                throw new ApiException(400, "Missing required parameter 'configUpdate' when calling OnboardingApi->OnboardingUpdateOnboardingConfig");
 
             var localVarPath = "./api/v1.0/clients/{appId}/onboarding/config";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1324,13 +1326,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UpdateOnboardingConfig", localVarResponse);
+                Exception exception = ExceptionFactory("OnboardingUpdateOnboardingConfig", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1340,10 +1342,11 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="configId"></param>
         /// <param name="configUpdate"></param>
-        /// <returns></returns>
-        public void UpdateOnboardingConfigById (string appId, int? configId, OnboardingConfigUpdate configUpdate)
+        /// <returns>Object</returns>
+        public Object OnboardingUpdateOnboardingConfigById (string appId, int? configId, OnboardingConfigUpdate configUpdate)
         {
-             UpdateOnboardingConfigByIdWithHttpInfo(appId, configId, configUpdate);
+             ApiResponse<Object> localVarResponse = OnboardingUpdateOnboardingConfigByIdWithHttpInfo(appId, configId, configUpdate);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -1353,18 +1356,18 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="configId"></param>
         /// <param name="configUpdate"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateOnboardingConfigByIdWithHttpInfo (string appId, int? configId, OnboardingConfigUpdate configUpdate)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > OnboardingUpdateOnboardingConfigByIdWithHttpInfo (string appId, int? configId, OnboardingConfigUpdate configUpdate)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->UpdateOnboardingConfigById");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingUpdateOnboardingConfigById");
             // verify the required parameter 'configId' is set
             if (configId == null)
-                throw new ApiException(400, "Missing required parameter 'configId' when calling OnboardingApi->UpdateOnboardingConfigById");
+                throw new ApiException(400, "Missing required parameter 'configId' when calling OnboardingApi->OnboardingUpdateOnboardingConfigById");
             // verify the required parameter 'configUpdate' is set
             if (configUpdate == null)
-                throw new ApiException(400, "Missing required parameter 'configUpdate' when calling OnboardingApi->UpdateOnboardingConfigById");
+                throw new ApiException(400, "Missing required parameter 'configUpdate' when calling OnboardingApi->OnboardingUpdateOnboardingConfigById");
 
             var localVarPath = "./api/v1.0/clients/{appId}/onboarding/config/{configId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1422,13 +1425,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UpdateOnboardingConfigById", localVarResponse);
+                Exception exception = ExceptionFactory("OnboardingUpdateOnboardingConfigById", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1438,10 +1441,11 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="configId"></param>
         /// <param name="configUpdate"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateOnboardingConfigByIdAsync (string appId, int? configId, OnboardingConfigUpdate configUpdate)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> OnboardingUpdateOnboardingConfigByIdAsync (string appId, int? configId, OnboardingConfigUpdate configUpdate)
         {
-             await UpdateOnboardingConfigByIdAsyncWithHttpInfo(appId, configId, configUpdate);
+             ApiResponse<Object> localVarResponse = await OnboardingUpdateOnboardingConfigByIdAsyncWithHttpInfo(appId, configId, configUpdate);
+             return localVarResponse.Data;
 
         }
 
@@ -1452,18 +1456,18 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="configId"></param>
         /// <param name="configUpdate"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateOnboardingConfigByIdAsyncWithHttpInfo (string appId, int? configId, OnboardingConfigUpdate configUpdate)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingUpdateOnboardingConfigByIdAsyncWithHttpInfo (string appId, int? configId, OnboardingConfigUpdate configUpdate)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->UpdateOnboardingConfigById");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingUpdateOnboardingConfigById");
             // verify the required parameter 'configId' is set
             if (configId == null)
-                throw new ApiException(400, "Missing required parameter 'configId' when calling OnboardingApi->UpdateOnboardingConfigById");
+                throw new ApiException(400, "Missing required parameter 'configId' when calling OnboardingApi->OnboardingUpdateOnboardingConfigById");
             // verify the required parameter 'configUpdate' is set
             if (configUpdate == null)
-                throw new ApiException(400, "Missing required parameter 'configUpdate' when calling OnboardingApi->UpdateOnboardingConfigById");
+                throw new ApiException(400, "Missing required parameter 'configUpdate' when calling OnboardingApi->OnboardingUpdateOnboardingConfigById");
 
             var localVarPath = "./api/v1.0/clients/{appId}/onboarding/config/{configId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1521,13 +1525,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UpdateOnboardingConfigById", localVarResponse);
+                Exception exception = ExceptionFactory("OnboardingUpdateOnboardingConfigById", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1538,10 +1542,11 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="onboardingItemId"></param>
         /// <param name="itemUpdate"></param>
-        /// <returns></returns>
-        public void UpdateOnboardingItem (string appId, int? storeId, int? onboardingItemId, OnboardingItemUpdate itemUpdate)
+        /// <returns>Object</returns>
+        public Object OnboardingUpdateOnboardingItem (string appId, int? storeId, int? onboardingItemId, OnboardingItemUpdate itemUpdate)
         {
-             UpdateOnboardingItemWithHttpInfo(appId, storeId, onboardingItemId, itemUpdate);
+             ApiResponse<Object> localVarResponse = OnboardingUpdateOnboardingItemWithHttpInfo(appId, storeId, onboardingItemId, itemUpdate);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -1552,21 +1557,21 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="onboardingItemId"></param>
         /// <param name="itemUpdate"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateOnboardingItemWithHttpInfo (string appId, int? storeId, int? onboardingItemId, OnboardingItemUpdate itemUpdate)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > OnboardingUpdateOnboardingItemWithHttpInfo (string appId, int? storeId, int? onboardingItemId, OnboardingItemUpdate itemUpdate)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->UpdateOnboardingItem");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingUpdateOnboardingItem");
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling OnboardingApi->UpdateOnboardingItem");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling OnboardingApi->OnboardingUpdateOnboardingItem");
             // verify the required parameter 'onboardingItemId' is set
             if (onboardingItemId == null)
-                throw new ApiException(400, "Missing required parameter 'onboardingItemId' when calling OnboardingApi->UpdateOnboardingItem");
+                throw new ApiException(400, "Missing required parameter 'onboardingItemId' when calling OnboardingApi->OnboardingUpdateOnboardingItem");
             // verify the required parameter 'itemUpdate' is set
             if (itemUpdate == null)
-                throw new ApiException(400, "Missing required parameter 'itemUpdate' when calling OnboardingApi->UpdateOnboardingItem");
+                throw new ApiException(400, "Missing required parameter 'itemUpdate' when calling OnboardingApi->OnboardingUpdateOnboardingItem");
 
             var localVarPath = "./api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1625,13 +1630,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UpdateOnboardingItem", localVarResponse);
+                Exception exception = ExceptionFactory("OnboardingUpdateOnboardingItem", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1642,10 +1647,11 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="onboardingItemId"></param>
         /// <param name="itemUpdate"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateOnboardingItemAsync (string appId, int? storeId, int? onboardingItemId, OnboardingItemUpdate itemUpdate)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> OnboardingUpdateOnboardingItemAsync (string appId, int? storeId, int? onboardingItemId, OnboardingItemUpdate itemUpdate)
         {
-             await UpdateOnboardingItemAsyncWithHttpInfo(appId, storeId, onboardingItemId, itemUpdate);
+             ApiResponse<Object> localVarResponse = await OnboardingUpdateOnboardingItemAsyncWithHttpInfo(appId, storeId, onboardingItemId, itemUpdate);
+             return localVarResponse.Data;
 
         }
 
@@ -1657,21 +1663,21 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <param name="onboardingItemId"></param>
         /// <param name="itemUpdate"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateOnboardingItemAsyncWithHttpInfo (string appId, int? storeId, int? onboardingItemId, OnboardingItemUpdate itemUpdate)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingUpdateOnboardingItemAsyncWithHttpInfo (string appId, int? storeId, int? onboardingItemId, OnboardingItemUpdate itemUpdate)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->UpdateOnboardingItem");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingUpdateOnboardingItem");
             // verify the required parameter 'storeId' is set
             if (storeId == null)
-                throw new ApiException(400, "Missing required parameter 'storeId' when calling OnboardingApi->UpdateOnboardingItem");
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling OnboardingApi->OnboardingUpdateOnboardingItem");
             // verify the required parameter 'onboardingItemId' is set
             if (onboardingItemId == null)
-                throw new ApiException(400, "Missing required parameter 'onboardingItemId' when calling OnboardingApi->UpdateOnboardingItem");
+                throw new ApiException(400, "Missing required parameter 'onboardingItemId' when calling OnboardingApi->OnboardingUpdateOnboardingItem");
             // verify the required parameter 'itemUpdate' is set
             if (itemUpdate == null)
-                throw new ApiException(400, "Missing required parameter 'itemUpdate' when calling OnboardingApi->UpdateOnboardingItem");
+                throw new ApiException(400, "Missing required parameter 'itemUpdate' when calling OnboardingApi->OnboardingUpdateOnboardingItem");
 
             var localVarPath = "./api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1730,13 +1736,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UpdateOnboardingItem", localVarResponse);
+                Exception exception = ExceptionFactory("OnboardingUpdateOnboardingItem", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1747,10 +1753,11 @@ namespace Flipdish.Api
         /// <param name="onboardingItemId"></param>
         /// <param name="itemUpdate"></param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns></returns>
-        public void UpdateOnboardingItemV2 (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null)
+        /// <returns>Object</returns>
+        public Object OnboardingUpdateOnboardingItemV2 (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null)
         {
-             UpdateOnboardingItemV2WithHttpInfo(appId, onboardingItemId, itemUpdate, storeId);
+             ApiResponse<Object> localVarResponse = OnboardingUpdateOnboardingItemV2WithHttpInfo(appId, onboardingItemId, itemUpdate, storeId);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -1761,18 +1768,18 @@ namespace Flipdish.Api
         /// <param name="onboardingItemId"></param>
         /// <param name="itemUpdate"></param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateOnboardingItemV2WithHttpInfo (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > OnboardingUpdateOnboardingItemV2WithHttpInfo (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->UpdateOnboardingItemV2");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingUpdateOnboardingItemV2");
             // verify the required parameter 'onboardingItemId' is set
             if (onboardingItemId == null)
-                throw new ApiException(400, "Missing required parameter 'onboardingItemId' when calling OnboardingApi->UpdateOnboardingItemV2");
+                throw new ApiException(400, "Missing required parameter 'onboardingItemId' when calling OnboardingApi->OnboardingUpdateOnboardingItemV2");
             // verify the required parameter 'itemUpdate' is set
             if (itemUpdate == null)
-                throw new ApiException(400, "Missing required parameter 'itemUpdate' when calling OnboardingApi->UpdateOnboardingItemV2");
+                throw new ApiException(400, "Missing required parameter 'itemUpdate' when calling OnboardingApi->OnboardingUpdateOnboardingItemV2");
 
             var localVarPath = "./api/v1.0/clients/{appId}/onboarding/stores/items/{onboardingItemId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1831,13 +1838,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UpdateOnboardingItemV2", localVarResponse);
+                Exception exception = ExceptionFactory("OnboardingUpdateOnboardingItemV2", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -1848,10 +1855,11 @@ namespace Flipdish.Api
         /// <param name="onboardingItemId"></param>
         /// <param name="itemUpdate"></param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateOnboardingItemV2Async (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> OnboardingUpdateOnboardingItemV2Async (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null)
         {
-             await UpdateOnboardingItemV2AsyncWithHttpInfo(appId, onboardingItemId, itemUpdate, storeId);
+             ApiResponse<Object> localVarResponse = await OnboardingUpdateOnboardingItemV2AsyncWithHttpInfo(appId, onboardingItemId, itemUpdate, storeId);
+             return localVarResponse.Data;
 
         }
 
@@ -1863,18 +1871,18 @@ namespace Flipdish.Api
         /// <param name="onboardingItemId"></param>
         /// <param name="itemUpdate"></param>
         /// <param name="storeId"> (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateOnboardingItemV2AsyncWithHttpInfo (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> OnboardingUpdateOnboardingItemV2AsyncWithHttpInfo (string appId, int? onboardingItemId, OnboardingItemUpdate itemUpdate, int? storeId = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->UpdateOnboardingItemV2");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OnboardingApi->OnboardingUpdateOnboardingItemV2");
             // verify the required parameter 'onboardingItemId' is set
             if (onboardingItemId == null)
-                throw new ApiException(400, "Missing required parameter 'onboardingItemId' when calling OnboardingApi->UpdateOnboardingItemV2");
+                throw new ApiException(400, "Missing required parameter 'onboardingItemId' when calling OnboardingApi->OnboardingUpdateOnboardingItemV2");
             // verify the required parameter 'itemUpdate' is set
             if (itemUpdate == null)
-                throw new ApiException(400, "Missing required parameter 'itemUpdate' when calling OnboardingApi->UpdateOnboardingItemV2");
+                throw new ApiException(400, "Missing required parameter 'itemUpdate' when calling OnboardingApi->OnboardingUpdateOnboardingItemV2");
 
             var localVarPath = "./api/v1.0/clients/{appId}/onboarding/stores/items/{onboardingItemId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1933,13 +1941,13 @@ namespace Flipdish.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UpdateOnboardingItemV2", localVarResponse);
+                Exception exception = ExceptionFactory("OnboardingUpdateOnboardingItemV2", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                null);
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
     }

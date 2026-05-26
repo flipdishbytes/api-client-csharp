@@ -5,15 +5,15 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetAppGeneralConfig**](WhiteLabelConfigApi.md#getappgeneralconfig) | **GET** /api/v1.0/whitelabelconfig/{appId}/general | 
+[**GetAppStoreConfig**](WhiteLabelConfigApi.md#getappstoreconfig) | **GET** /api/v1.0/whitelabelconfig/{appId}/appstore | 
 [**GetPlayStoreConfig**](WhiteLabelConfigApi.md#getplaystoreconfig) | **GET** /api/v1.0/whitelabelconfig/{appId}/playstore | 
-[**GetWhiteLabelAppStoreConfig**](WhiteLabelConfigApi.md#getwhitelabelappstoreconfig) | **GET** /api/v1.0/whitelabelconfig/{appId}/appstore | 
 [**GetWhiteLabelConfig**](WhiteLabelConfigApi.md#getwhitelabelconfig) | **GET** /api/v1.0/whitelabelconfig/id/{wlid} | 
 [**GetWhiteLabelConfigByAppNameId**](WhiteLabelConfigApi.md#getwhitelabelconfigbyappnameid) | **GET** /api/v1.0/whitelabelconfig/name/{appId} | 
+[**HealthCheck**](WhiteLabelConfigApi.md#healthcheck) | **GET** /api/v1.0/whitelabelconfig/health | 
 [**UpdateAppGeneralConfig**](WhiteLabelConfigApi.md#updateappgeneralconfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/general | 
+[**UpdateAppStoreConfig**](WhiteLabelConfigApi.md#updateappstoreconfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/appstore | 
 [**UpdatePlayStoreConfig**](WhiteLabelConfigApi.md#updateplaystoreconfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/playstore | 
-[**UpdateWhiteLabelAppStoreConfig**](WhiteLabelConfigApi.md#updatewhitelabelappstoreconfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/appstore | 
 [**UploadAppStoreIcon**](WhiteLabelConfigApi.md#uploadappstoreicon) | **POST** /api/v1.0/whitelabelconfig/{appId}/app-store-icon | 
-[**WhiteLabelConfigHealthCheck**](WhiteLabelConfigApi.md#whitelabelconfighealthcheck) | **GET** /api/v1.0/whitelabelconfig/health | 
 
 
 <a name="getappgeneralconfig"></a>
@@ -77,6 +77,67 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getappstoreconfig"></a>
+# **GetAppStoreConfig**
+> RestApiResultAppStoreConfigModel GetAppStoreConfig (string appId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetAppStoreConfigExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new WhiteLabelConfigApi();
+            var appId = appId_example;  // string | 
+
+            try
+            {
+                RestApiResultAppStoreConfigModel result = apiInstance.GetAppStoreConfig(appId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WhiteLabelConfigApi.GetAppStoreConfig: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+
+### Return type
+
+[**RestApiResultAppStoreConfigModel**](RestApiResultAppStoreConfigModel.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getplaystoreconfig"></a>
 # **GetPlayStoreConfig**
 > RestApiResultPlayStoreConfigModel GetPlayStoreConfig (string appId)
@@ -126,67 +187,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultPlayStoreConfigModel**](RestApiResultPlayStoreConfigModel.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getwhitelabelappstoreconfig"></a>
-# **GetWhiteLabelAppStoreConfig**
-> RestApiResultAppStoreConfigModel GetWhiteLabelAppStoreConfig (string appId)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class GetWhiteLabelAppStoreConfigExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new WhiteLabelConfigApi();
-            var appId = appId_example;  // string | 
-
-            try
-            {
-                RestApiResultAppStoreConfigModel result = apiInstance.GetWhiteLabelAppStoreConfig(appId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WhiteLabelConfigApi.GetWhiteLabelAppStoreConfig: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
-
-### Return type
-
-[**RestApiResultAppStoreConfigModel**](RestApiResultAppStoreConfigModel.md)
 
 ### Authorization
 
@@ -321,6 +321,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="healthcheck"></a>
+# **HealthCheck**
+> string HealthCheck ()
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class HealthCheckExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new WhiteLabelConfigApi();
+
+            try
+            {
+                string result = apiInstance.HealthCheck();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WhiteLabelConfigApi.HealthCheck: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**string**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="updateappgeneralconfig"></a>
 # **UpdateAppGeneralConfig**
 > RestApiResultAppGeneralConfigModel UpdateAppGeneralConfig (string appId, AppGeneralConfigModel appGeneralConfig)
@@ -372,6 +429,69 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultAppGeneralConfigModel**](RestApiResultAppGeneralConfigModel.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="updateappstoreconfig"></a>
+# **UpdateAppStoreConfig**
+> RestApiResultAppStoreConfigModel UpdateAppStoreConfig (string appId, AppStoreConfigModel appStoreConfig)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UpdateAppStoreConfigExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new WhiteLabelConfigApi();
+            var appId = appId_example;  // string | 
+            var appStoreConfig = new AppStoreConfigModel(); // AppStoreConfigModel | 
+
+            try
+            {
+                RestApiResultAppStoreConfigModel result = apiInstance.UpdateAppStoreConfig(appId, appStoreConfig);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WhiteLabelConfigApi.UpdateAppStoreConfig: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **appStoreConfig** | [**AppStoreConfigModel**](AppStoreConfigModel.md)|  | 
+
+### Return type
+
+[**RestApiResultAppStoreConfigModel**](RestApiResultAppStoreConfigModel.md)
 
 ### Authorization
 
@@ -447,69 +567,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatewhitelabelappstoreconfig"></a>
-# **UpdateWhiteLabelAppStoreConfig**
-> RestApiResultAppStoreConfigModel UpdateWhiteLabelAppStoreConfig (string appId, AppStoreConfigModel appStoreConfig)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class UpdateWhiteLabelAppStoreConfigExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new WhiteLabelConfigApi();
-            var appId = appId_example;  // string | 
-            var appStoreConfig = new AppStoreConfigModel(); // AppStoreConfigModel | 
-
-            try
-            {
-                RestApiResultAppStoreConfigModel result = apiInstance.UpdateWhiteLabelAppStoreConfig(appId, appStoreConfig);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WhiteLabelConfigApi.UpdateWhiteLabelAppStoreConfig: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
- **appStoreConfig** | [**AppStoreConfigModel**](AppStoreConfigModel.md)|  | 
-
-### Return type
-
-[**RestApiResultAppStoreConfigModel**](RestApiResultAppStoreConfigModel.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="uploadappstoreicon"></a>
 # **UploadAppStoreIcon**
 > RestApiResultAssetResultModel UploadAppStoreIcon (string appId, HttpPostedFileBase _file)
@@ -569,63 +626,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="whitelabelconfighealthcheck"></a>
-# **WhiteLabelConfigHealthCheck**
-> string WhiteLabelConfigHealthCheck ()
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class WhiteLabelConfigHealthCheckExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new WhiteLabelConfigApi();
-
-            try
-            {
-                string result = apiInstance.WhiteLabelConfigHealthCheck();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WhiteLabelConfigApi.WhiteLabelConfigHealthCheck: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-**string**
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

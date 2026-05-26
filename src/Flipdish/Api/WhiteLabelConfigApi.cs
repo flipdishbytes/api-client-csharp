@@ -53,6 +53,27 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
+        /// <returns>RestApiResultAppStoreConfigModel</returns>
+        RestApiResultAppStoreConfigModel GetAppStoreConfig (string appId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiResultAppStoreConfigModel</returns>
+        ApiResponse<RestApiResultAppStoreConfigModel> GetAppStoreConfigWithHttpInfo (string appId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <returns>RestApiResultPlayStoreConfigModel</returns>
         RestApiResultPlayStoreConfigModel GetPlayStoreConfig (string appId);
 
@@ -66,27 +87,6 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <returns>ApiResponse of RestApiResultPlayStoreConfigModel</returns>
         ApiResponse<RestApiResultPlayStoreConfigModel> GetPlayStoreConfigWithHttpInfo (string appId);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <returns>RestApiResultAppStoreConfigModel</returns>
-        RestApiResultAppStoreConfigModel GetWhiteLabelAppStoreConfig (string appId);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <returns>ApiResponse of RestApiResultAppStoreConfigModel</returns>
-        ApiResponse<RestApiResultAppStoreConfigModel> GetWhiteLabelAppStoreConfigWithHttpInfo (string appId);
         /// <summary>
         /// 
         /// </summary>
@@ -136,6 +136,25 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>string</returns>
+        string HealthCheck ();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> HealthCheckWithHttpInfo ();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="appGeneralConfig"></param>
         /// <returns>RestApiResultAppGeneralConfigModel</returns>
@@ -152,6 +171,29 @@ namespace Flipdish.Api
         /// <param name="appGeneralConfig"></param>
         /// <returns>ApiResponse of RestApiResultAppGeneralConfigModel</returns>
         ApiResponse<RestApiResultAppGeneralConfigModel> UpdateAppGeneralConfigWithHttpInfo (string appId, AppGeneralConfigModel appGeneralConfig);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreConfig"></param>
+        /// <returns>RestApiResultAppStoreConfigModel</returns>
+        RestApiResultAppStoreConfigModel UpdateAppStoreConfig (string appId, AppStoreConfigModel appStoreConfig);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreConfig"></param>
+        /// <returns>ApiResponse of RestApiResultAppStoreConfigModel</returns>
+        ApiResponse<RestApiResultAppStoreConfigModel> UpdateAppStoreConfigWithHttpInfo (string appId, AppStoreConfigModel appStoreConfig);
         /// <summary>
         /// 
         /// </summary>
@@ -183,29 +225,6 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="appStoreConfig"></param>
-        /// <returns>RestApiResultAppStoreConfigModel</returns>
-        RestApiResultAppStoreConfigModel UpdateWhiteLabelAppStoreConfig (string appId, AppStoreConfigModel appStoreConfig);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="appStoreConfig"></param>
-        /// <returns>ApiResponse of RestApiResultAppStoreConfigModel</returns>
-        ApiResponse<RestApiResultAppStoreConfigModel> UpdateWhiteLabelAppStoreConfigWithHttpInfo (string appId, AppStoreConfigModel appStoreConfig);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
         /// <param name="_file"></param>
         /// <returns>RestApiResultAssetResultModel</returns>
         RestApiResultAssetResultModel UploadAppStoreIcon (string appId, HttpPostedFileBase _file);
@@ -221,25 +240,6 @@ namespace Flipdish.Api
         /// <param name="_file"></param>
         /// <returns>ApiResponse of RestApiResultAssetResultModel</returns>
         ApiResponse<RestApiResultAssetResultModel> UploadAppStoreIconWithHttpInfo (string appId, HttpPostedFileBase _file);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>string</returns>
-        string WhiteLabelConfigHealthCheck ();
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> WhiteLabelConfigHealthCheckWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -271,6 +271,27 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
+        /// <returns>Task of RestApiResultAppStoreConfigModel</returns>
+        System.Threading.Tasks.Task<RestApiResultAppStoreConfigModel> GetAppStoreConfigAsync (string appId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultAppStoreConfigModel)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreConfigModel>> GetAppStoreConfigAsyncWithHttpInfo (string appId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <returns>Task of RestApiResultPlayStoreConfigModel</returns>
         System.Threading.Tasks.Task<RestApiResultPlayStoreConfigModel> GetPlayStoreConfigAsync (string appId);
 
@@ -284,27 +305,6 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <returns>Task of ApiResponse (RestApiResultPlayStoreConfigModel)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultPlayStoreConfigModel>> GetPlayStoreConfigAsyncWithHttpInfo (string appId);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <returns>Task of RestApiResultAppStoreConfigModel</returns>
-        System.Threading.Tasks.Task<RestApiResultAppStoreConfigModel> GetWhiteLabelAppStoreConfigAsync (string appId);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <returns>Task of ApiResponse (RestApiResultAppStoreConfigModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreConfigModel>> GetWhiteLabelAppStoreConfigAsyncWithHttpInfo (string appId);
         /// <summary>
         /// 
         /// </summary>
@@ -354,6 +354,25 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> HealthCheckAsync ();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> HealthCheckAsyncWithHttpInfo ();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="appGeneralConfig"></param>
         /// <returns>Task of RestApiResultAppGeneralConfigModel</returns>
@@ -370,6 +389,29 @@ namespace Flipdish.Api
         /// <param name="appGeneralConfig"></param>
         /// <returns>Task of ApiResponse (RestApiResultAppGeneralConfigModel)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultAppGeneralConfigModel>> UpdateAppGeneralConfigAsyncWithHttpInfo (string appId, AppGeneralConfigModel appGeneralConfig);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreConfig"></param>
+        /// <returns>Task of RestApiResultAppStoreConfigModel</returns>
+        System.Threading.Tasks.Task<RestApiResultAppStoreConfigModel> UpdateAppStoreConfigAsync (string appId, AppStoreConfigModel appStoreConfig);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreConfig"></param>
+        /// <returns>Task of ApiResponse (RestApiResultAppStoreConfigModel)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreConfigModel>> UpdateAppStoreConfigAsyncWithHttpInfo (string appId, AppStoreConfigModel appStoreConfig);
         /// <summary>
         /// 
         /// </summary>
@@ -401,29 +443,6 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="appStoreConfig"></param>
-        /// <returns>Task of RestApiResultAppStoreConfigModel</returns>
-        System.Threading.Tasks.Task<RestApiResultAppStoreConfigModel> UpdateWhiteLabelAppStoreConfigAsync (string appId, AppStoreConfigModel appStoreConfig);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="appStoreConfig"></param>
-        /// <returns>Task of ApiResponse (RestApiResultAppStoreConfigModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreConfigModel>> UpdateWhiteLabelAppStoreConfigAsyncWithHttpInfo (string appId, AppStoreConfigModel appStoreConfig);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
         /// <param name="_file"></param>
         /// <returns>Task of RestApiResultAssetResultModel</returns>
         System.Threading.Tasks.Task<RestApiResultAssetResultModel> UploadAppStoreIconAsync (string appId, HttpPostedFileBase _file);
@@ -439,25 +458,6 @@ namespace Flipdish.Api
         /// <param name="_file"></param>
         /// <returns>Task of ApiResponse (RestApiResultAssetResultModel)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultAssetResultModel>> UploadAppStoreIconAsyncWithHttpInfo (string appId, HttpPostedFileBase _file);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> WhiteLabelConfigHealthCheckAsync ();
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> WhiteLabelConfigHealthCheckAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -714,6 +714,157 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
+        /// <returns>RestApiResultAppStoreConfigModel</returns>
+        public RestApiResultAppStoreConfigModel GetAppStoreConfig (string appId)
+        {
+             ApiResponse<RestApiResultAppStoreConfigModel> localVarResponse = GetAppStoreConfigWithHttpInfo(appId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>ApiResponse of RestApiResultAppStoreConfigModel</returns>
+        public ApiResponse< RestApiResultAppStoreConfigModel > GetAppStoreConfigWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WhiteLabelConfigApi->GetAppStoreConfig");
+
+            var localVarPath = "./api/v1.0/whitelabelconfig/{appId}/appstore";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAppStoreConfig", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultAppStoreConfigModel>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultAppStoreConfigModel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreConfigModel)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>Task of RestApiResultAppStoreConfigModel</returns>
+        public async System.Threading.Tasks.Task<RestApiResultAppStoreConfigModel> GetAppStoreConfigAsync (string appId)
+        {
+             ApiResponse<RestApiResultAppStoreConfigModel> localVarResponse = await GetAppStoreConfigAsyncWithHttpInfo(appId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultAppStoreConfigModel)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreConfigModel>> GetAppStoreConfigAsyncWithHttpInfo (string appId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WhiteLabelConfigApi->GetAppStoreConfig");
+
+            var localVarPath = "./api/v1.0/whitelabelconfig/{appId}/appstore";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAppStoreConfig", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultAppStoreConfigModel>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultAppStoreConfigModel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreConfigModel)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <returns>RestApiResultPlayStoreConfigModel</returns>
         public RestApiResultPlayStoreConfigModel GetPlayStoreConfig (string appId)
         {
@@ -858,157 +1009,6 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultPlayStoreConfigModel>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultPlayStoreConfigModel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultPlayStoreConfigModel)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <returns>RestApiResultAppStoreConfigModel</returns>
-        public RestApiResultAppStoreConfigModel GetWhiteLabelAppStoreConfig (string appId)
-        {
-             ApiResponse<RestApiResultAppStoreConfigModel> localVarResponse = GetWhiteLabelAppStoreConfigWithHttpInfo(appId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <returns>ApiResponse of RestApiResultAppStoreConfigModel</returns>
-        public ApiResponse< RestApiResultAppStoreConfigModel > GetWhiteLabelAppStoreConfigWithHttpInfo (string appId)
-        {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling WhiteLabelConfigApi->GetWhiteLabelAppStoreConfig");
-
-            var localVarPath = "./api/v1.0/whitelabelconfig/{appId}/appstore";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetWhiteLabelAppStoreConfig", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RestApiResultAppStoreConfigModel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiResultAppStoreConfigModel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreConfigModel)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <returns>Task of RestApiResultAppStoreConfigModel</returns>
-        public async System.Threading.Tasks.Task<RestApiResultAppStoreConfigModel> GetWhiteLabelAppStoreConfigAsync (string appId)
-        {
-             ApiResponse<RestApiResultAppStoreConfigModel> localVarResponse = await GetWhiteLabelAppStoreConfigAsyncWithHttpInfo(appId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <returns>Task of ApiResponse (RestApiResultAppStoreConfigModel)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreConfigModel>> GetWhiteLabelAppStoreConfigAsyncWithHttpInfo (string appId)
-        {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling WhiteLabelConfigApi->GetWhiteLabelAppStoreConfig");
-
-            var localVarPath = "./api/v1.0/whitelabelconfig/{appId}/appstore";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetWhiteLabelAppStoreConfig", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RestApiResultAppStoreConfigModel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiResultAppStoreConfigModel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreConfigModel)));
         }
 
         /// <summary>
@@ -1317,6 +1317,145 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>string</returns>
+        public string HealthCheck ()
+        {
+             ApiResponse<string> localVarResponse = HealthCheckWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > HealthCheckWithHttpInfo ()
+        {
+
+            var localVarPath = "./api/v1.0/whitelabelconfig/health";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("HealthCheck", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> HealthCheckAsync ()
+        {
+             ApiResponse<string> localVarResponse = await HealthCheckAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> HealthCheckAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "./api/v1.0/whitelabelconfig/health";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("HealthCheck", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
         /// <param name="appGeneralConfig"></param>
         /// <returns>RestApiResultAppGeneralConfigModel</returns>
@@ -1498,6 +1637,193 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultAppGeneralConfigModel>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAppGeneralConfigModel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppGeneralConfigModel)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreConfig"></param>
+        /// <returns>RestApiResultAppStoreConfigModel</returns>
+        public RestApiResultAppStoreConfigModel UpdateAppStoreConfig (string appId, AppStoreConfigModel appStoreConfig)
+        {
+             ApiResponse<RestApiResultAppStoreConfigModel> localVarResponse = UpdateAppStoreConfigWithHttpInfo(appId, appStoreConfig);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreConfig"></param>
+        /// <returns>ApiResponse of RestApiResultAppStoreConfigModel</returns>
+        public ApiResponse< RestApiResultAppStoreConfigModel > UpdateAppStoreConfigWithHttpInfo (string appId, AppStoreConfigModel appStoreConfig)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WhiteLabelConfigApi->UpdateAppStoreConfig");
+            // verify the required parameter 'appStoreConfig' is set
+            if (appStoreConfig == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreConfig' when calling WhiteLabelConfigApi->UpdateAppStoreConfig");
+
+            var localVarPath = "./api/v1.0/whitelabelconfig/{appId}/appstore";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (appStoreConfig != null && appStoreConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(appStoreConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = appStoreConfig; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateAppStoreConfig", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultAppStoreConfigModel>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultAppStoreConfigModel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreConfigModel)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreConfig"></param>
+        /// <returns>Task of RestApiResultAppStoreConfigModel</returns>
+        public async System.Threading.Tasks.Task<RestApiResultAppStoreConfigModel> UpdateAppStoreConfigAsync (string appId, AppStoreConfigModel appStoreConfig)
+        {
+             ApiResponse<RestApiResultAppStoreConfigModel> localVarResponse = await UpdateAppStoreConfigAsyncWithHttpInfo(appId, appStoreConfig);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="appStoreConfig"></param>
+        /// <returns>Task of ApiResponse (RestApiResultAppStoreConfigModel)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreConfigModel>> UpdateAppStoreConfigAsyncWithHttpInfo (string appId, AppStoreConfigModel appStoreConfig)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling WhiteLabelConfigApi->UpdateAppStoreConfig");
+            // verify the required parameter 'appStoreConfig' is set
+            if (appStoreConfig == null)
+                throw new ApiException(400, "Missing required parameter 'appStoreConfig' when calling WhiteLabelConfigApi->UpdateAppStoreConfig");
+
+            var localVarPath = "./api/v1.0/whitelabelconfig/{appId}/appstore";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (appStoreConfig != null && appStoreConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(appStoreConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = appStoreConfig; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateAppStoreConfig", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultAppStoreConfigModel>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultAppStoreConfigModel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreConfigModel)));
         }
 
         /// <summary>
@@ -1692,193 +2018,6 @@ namespace Flipdish.Api
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
-        /// <param name="appStoreConfig"></param>
-        /// <returns>RestApiResultAppStoreConfigModel</returns>
-        public RestApiResultAppStoreConfigModel UpdateWhiteLabelAppStoreConfig (string appId, AppStoreConfigModel appStoreConfig)
-        {
-             ApiResponse<RestApiResultAppStoreConfigModel> localVarResponse = UpdateWhiteLabelAppStoreConfigWithHttpInfo(appId, appStoreConfig);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="appStoreConfig"></param>
-        /// <returns>ApiResponse of RestApiResultAppStoreConfigModel</returns>
-        public ApiResponse< RestApiResultAppStoreConfigModel > UpdateWhiteLabelAppStoreConfigWithHttpInfo (string appId, AppStoreConfigModel appStoreConfig)
-        {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling WhiteLabelConfigApi->UpdateWhiteLabelAppStoreConfig");
-            // verify the required parameter 'appStoreConfig' is set
-            if (appStoreConfig == null)
-                throw new ApiException(400, "Missing required parameter 'appStoreConfig' when calling WhiteLabelConfigApi->UpdateWhiteLabelAppStoreConfig");
-
-            var localVarPath = "./api/v1.0/whitelabelconfig/{appId}/appstore";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (appStoreConfig != null && appStoreConfig.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(appStoreConfig); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = appStoreConfig; // byte array
-            }
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("UpdateWhiteLabelAppStoreConfig", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RestApiResultAppStoreConfigModel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiResultAppStoreConfigModel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreConfigModel)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="appStoreConfig"></param>
-        /// <returns>Task of RestApiResultAppStoreConfigModel</returns>
-        public async System.Threading.Tasks.Task<RestApiResultAppStoreConfigModel> UpdateWhiteLabelAppStoreConfigAsync (string appId, AppStoreConfigModel appStoreConfig)
-        {
-             ApiResponse<RestApiResultAppStoreConfigModel> localVarResponse = await UpdateWhiteLabelAppStoreConfigAsyncWithHttpInfo(appId, appStoreConfig);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
-        /// <param name="appStoreConfig"></param>
-        /// <returns>Task of ApiResponse (RestApiResultAppStoreConfigModel)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultAppStoreConfigModel>> UpdateWhiteLabelAppStoreConfigAsyncWithHttpInfo (string appId, AppStoreConfigModel appStoreConfig)
-        {
-            // verify the required parameter 'appId' is set
-            if (appId == null)
-                throw new ApiException(400, "Missing required parameter 'appId' when calling WhiteLabelConfigApi->UpdateWhiteLabelAppStoreConfig");
-            // verify the required parameter 'appStoreConfig' is set
-            if (appStoreConfig == null)
-                throw new ApiException(400, "Missing required parameter 'appStoreConfig' when calling WhiteLabelConfigApi->UpdateWhiteLabelAppStoreConfig");
-
-            var localVarPath = "./api/v1.0/whitelabelconfig/{appId}/appstore";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
-            if (appStoreConfig != null && appStoreConfig.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(appStoreConfig); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = appStoreConfig; // byte array
-            }
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("UpdateWhiteLabelAppStoreConfig", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RestApiResultAppStoreConfigModel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (RestApiResultAppStoreConfigModel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAppStoreConfigModel)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appId"></param>
         /// <param name="_file"></param>
         /// <returns>RestApiResultAssetResultModel</returns>
         public RestApiResultAssetResultModel UploadAppStoreIcon (string appId, HttpPostedFileBase _file)
@@ -2059,145 +2198,6 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultAssetResultModel>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultAssetResultModel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultAssetResultModel)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>string</returns>
-        public string WhiteLabelConfigHealthCheck ()
-        {
-             ApiResponse<string> localVarResponse = WhiteLabelConfigHealthCheckWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > WhiteLabelConfigHealthCheckWithHttpInfo ()
-        {
-
-            var localVarPath = "./api/v1.0/whitelabelconfig/health";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("WhiteLabelConfigHealthCheck", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> WhiteLabelConfigHealthCheckAsync ()
-        {
-             ApiResponse<string> localVarResponse = await WhiteLabelConfigHealthCheckAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> WhiteLabelConfigHealthCheckAsyncWithHttpInfo ()
-        {
-
-            var localVarPath = "./api/v1.0/whitelabelconfig/health";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("WhiteLabelConfigHealthCheck", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
     }
