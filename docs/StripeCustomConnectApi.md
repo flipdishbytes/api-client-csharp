@@ -8,7 +8,6 @@ Method | HTTP request | Description
 [**CreateStripeConnectedAccount**](StripeCustomConnectApi.md#createstripeconnectedaccount) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/create-update-account | 
 [**CreateStripeConnectedAccountLink**](StripeCustomConnectApi.md#createstripeconnectedaccountlink) | **POST** /api/v1.0/{appId}/customconnect/{stripeConnectedAccountId}/create-account-link | 
 [**GetCustomConnect**](StripeCustomConnectApi.md#getcustomconnect) | **GET** /api/v1.0/{appId}/customconnect/{storeId} | 
-[**GetVerificationStatus**](StripeCustomConnectApi.md#getverificationstatus) | **GET** /api/v1.0/{appId}/customconnect/verification-status | 
 [**SetBankAccountBusinessType**](StripeCustomConnectApi.md#setbankaccountbusinesstype) | **POST** /api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype | 
 [**StripeCustomConnectRefresh**](StripeCustomConnectApi.md#stripecustomconnectrefresh) | **GET** /api/v1.0/{appId}/customconnect/refresh-link | 
 [**UpdateBankAccountDetails**](StripeCustomConnectApi.md#updatebankaccountdetails) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details | 
@@ -257,69 +256,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiArrayResultStripeCustomConnectedAccount**](RestApiArrayResultStripeCustomConnectedAccount.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getverificationstatus"></a>
-# **GetVerificationStatus**
-> RestApiResultStripeConnectedAccount GetVerificationStatus (string appId, string stripeConnectedAccountId)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class GetVerificationStatusExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new StripeCustomConnectApi();
-            var appId = appId_example;  // string | 
-            var stripeConnectedAccountId = stripeConnectedAccountId_example;  // string | 
-
-            try
-            {
-                RestApiResultStripeConnectedAccount result = apiInstance.GetVerificationStatus(appId, stripeConnectedAccountId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling StripeCustomConnectApi.GetVerificationStatus: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **string**|  | 
- **stripeConnectedAccountId** | **string**|  | 
-
-### Return type
-
-[**RestApiResultStripeConnectedAccount**](RestApiResultStripeConnectedAccount.md)
 
 ### Authorization
 
