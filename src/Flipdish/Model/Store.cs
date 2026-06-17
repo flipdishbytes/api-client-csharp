@@ -795,7 +795,13 @@ namespace Flipdish.Model
             /// Enum None for value: None
             /// </summary>
             [EnumMember(Value = "None")]
-            None = 5
+            None = 5,
+            
+            /// <summary>
+            /// Enum PhoneAgent for value: PhoneAgent
+            /// </summary>
+            [EnumMember(Value = "PhoneAgent")]
+            PhoneAgent = 6
         }
 
 
