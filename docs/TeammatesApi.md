@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**GetTeammatesByAppId**](TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | 
 [**Grantaccess**](TeammatesApi.md#grantaccess) | **POST** /api/v1.0/{appId}/teammates/grantaccess | 
 [**RedeemInvitation**](TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+[**TeammateMobileRedirect**](TeammatesApi.md#teammatemobileredirect) | **GET** /api/v1.0/teammates/mobile-redirect | 
 [**TeammatesAcceptInvitation**](TeammatesApi.md#teammatesacceptinvitation) | **GET** /api/v1.0/{appId}/teammates/accept/{otc} | 
 [**TeammatesAcceptInvitations**](TeammatesApi.md#teammatesacceptinvitations) | **POST** /api/v1.0/teammates/acceptInvitations | 
 [**TeammatesPendingInvitations**](TeammatesApi.md#teammatespendinginvitations) | **GET** /api/v1.0/teammates/pending-invitations | 
@@ -379,6 +380,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultRedeemInvitationResult**](RestApiResultRedeemInvitationResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="teammatemobileredirect"></a>
+# **TeammateMobileRedirect**
+> Object TeammateMobileRedirect (string portalUrl)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class TeammateMobileRedirectExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new TeammatesApi();
+            var portalUrl = portalUrl_example;  // string | 
+
+            try
+            {
+                Object result = apiInstance.TeammateMobileRedirect(portalUrl);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TeammatesApi.TeammateMobileRedirect: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **portalUrl** | **string**|  | 
+
+### Return type
+
+**Object**
 
 ### Authorization
 
