@@ -40,7 +40,7 @@ namespace Flipdish.Model
         /// <param name="marketingUrl">Marketing URL.</param>
         /// <param name="privacyUrl">Privacy URL.</param>
         /// <param name="supportUrl">Support URL.</param>
-        /// <param name="playConsoleAccount">Play Console account  0: UK, 1: IE.</param>
+        /// <param name="playConsoleAccount">Play Console account: 0 &#x3D; IE, 1 &#x3D; UK, 2 &#x3D; IE2.</param>
         /// <param name="releaseNotes">Release notes.</param>
         /// <param name="storeIcon">Store icon URL.</param>
         /// <param name="readyToPublishAndroid">Ready to publish Android.</param>
@@ -125,9 +125,9 @@ namespace Flipdish.Model
         public string SupportUrl { get; set; }
 
         /// <summary>
-        /// Play Console account  0: UK, 1: IE
+        /// Play Console account: 0 &#x3D; IE, 1 &#x3D; UK, 2 &#x3D; IE2
         /// </summary>
-        /// <value>Play Console account  0: UK, 1: IE</value>
+        /// <value>Play Console account: 0 &#x3D; IE, 1 &#x3D; UK, 2 &#x3D; IE2</value>
         [DataMember(Name="PlayConsoleAccount", EmitDefaultValue=false)]
         public int? PlayConsoleAccount { get; set; }
 
