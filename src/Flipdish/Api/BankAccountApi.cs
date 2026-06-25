@@ -34,8 +34,9 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="bankAccountId"></param>
         /// <param name="storeId"></param>
+        /// <param name="skipBankAccountUpdateWarningEmail"> (optional)</param>
         /// <returns></returns>
-        void AttachBankAccountToStore (string appId, int? bankAccountId, int? storeId);
+        void AttachBankAccountToStore (string appId, int? bankAccountId, int? storeId, bool? skipBankAccountUpdateWarningEmail = null);
 
         /// <summary>
         /// 
@@ -47,8 +48,9 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="bankAccountId"></param>
         /// <param name="storeId"></param>
+        /// <param name="skipBankAccountUpdateWarningEmail"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> AttachBankAccountToStoreWithHttpInfo (string appId, int? bankAccountId, int? storeId);
+        ApiResponse<Object> AttachBankAccountToStoreWithHttpInfo (string appId, int? bankAccountId, int? storeId, bool? skipBankAccountUpdateWarningEmail = null);
         /// <summary>
         /// 
         /// </summary>
@@ -245,8 +247,9 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="bankAccountId"></param>
         /// <param name="storeId"></param>
+        /// <param name="skipBankAccountUpdateWarningEmail"> (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task AttachBankAccountToStoreAsync (string appId, int? bankAccountId, int? storeId);
+        System.Threading.Tasks.Task AttachBankAccountToStoreAsync (string appId, int? bankAccountId, int? storeId, bool? skipBankAccountUpdateWarningEmail = null);
 
         /// <summary>
         /// 
@@ -258,8 +261,9 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="bankAccountId"></param>
         /// <param name="storeId"></param>
+        /// <param name="skipBankAccountUpdateWarningEmail"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AttachBankAccountToStoreAsyncWithHttpInfo (string appId, int? bankAccountId, int? storeId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> AttachBankAccountToStoreAsyncWithHttpInfo (string appId, int? bankAccountId, int? storeId, bool? skipBankAccountUpdateWarningEmail = null);
         /// <summary>
         /// 
         /// </summary>
@@ -551,10 +555,11 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="bankAccountId"></param>
         /// <param name="storeId"></param>
+        /// <param name="skipBankAccountUpdateWarningEmail"> (optional)</param>
         /// <returns></returns>
-        public void AttachBankAccountToStore (string appId, int? bankAccountId, int? storeId)
+        public void AttachBankAccountToStore (string appId, int? bankAccountId, int? storeId, bool? skipBankAccountUpdateWarningEmail = null)
         {
-             AttachBankAccountToStoreWithHttpInfo(appId, bankAccountId, storeId);
+             AttachBankAccountToStoreWithHttpInfo(appId, bankAccountId, storeId, skipBankAccountUpdateWarningEmail);
         }
 
         /// <summary>
@@ -564,8 +569,9 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="bankAccountId"></param>
         /// <param name="storeId"></param>
+        /// <param name="skipBankAccountUpdateWarningEmail"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> AttachBankAccountToStoreWithHttpInfo (string appId, int? bankAccountId, int? storeId)
+        public ApiResponse<Object> AttachBankAccountToStoreWithHttpInfo (string appId, int? bankAccountId, int? storeId, bool? skipBankAccountUpdateWarningEmail = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -604,6 +610,7 @@ namespace Flipdish.Api
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
             if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (skipBankAccountUpdateWarningEmail != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "skipBankAccountUpdateWarningEmail", skipBankAccountUpdateWarningEmail)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -637,10 +644,11 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="bankAccountId"></param>
         /// <param name="storeId"></param>
+        /// <param name="skipBankAccountUpdateWarningEmail"> (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task AttachBankAccountToStoreAsync (string appId, int? bankAccountId, int? storeId)
+        public async System.Threading.Tasks.Task AttachBankAccountToStoreAsync (string appId, int? bankAccountId, int? storeId, bool? skipBankAccountUpdateWarningEmail = null)
         {
-             await AttachBankAccountToStoreAsyncWithHttpInfo(appId, bankAccountId, storeId);
+             await AttachBankAccountToStoreAsyncWithHttpInfo(appId, bankAccountId, storeId, skipBankAccountUpdateWarningEmail);
 
         }
 
@@ -651,8 +659,9 @@ namespace Flipdish.Api
         /// <param name="appId"></param>
         /// <param name="bankAccountId"></param>
         /// <param name="storeId"></param>
+        /// <param name="skipBankAccountUpdateWarningEmail"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> AttachBankAccountToStoreAsyncWithHttpInfo (string appId, int? bankAccountId, int? storeId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AttachBankAccountToStoreAsyncWithHttpInfo (string appId, int? bankAccountId, int? storeId, bool? skipBankAccountUpdateWarningEmail = null)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
@@ -691,6 +700,7 @@ namespace Flipdish.Api
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
             if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
             if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (skipBankAccountUpdateWarningEmail != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "skipBankAccountUpdateWarningEmail", skipBankAccountUpdateWarningEmail)); // query parameter
 
             // authentication (oauth2) required
             // oauth required

@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a name="attachbankaccounttostore"></a>
 # **AttachBankAccountToStore**
-> void AttachBankAccountToStore (string appId, int? bankAccountId, int? storeId)
+> void AttachBankAccountToStore (string appId, int? bankAccountId, int? storeId, bool? skipBankAccountUpdateWarningEmail = null)
 
 
 
@@ -42,10 +42,11 @@ namespace Example
             var appId = appId_example;  // string | 
             var bankAccountId = 56;  // int? | 
             var storeId = 56;  // int? | 
+            var skipBankAccountUpdateWarningEmail = true;  // bool? |  (optional) 
 
             try
             {
-                apiInstance.AttachBankAccountToStore(appId, bankAccountId, storeId);
+                apiInstance.AttachBankAccountToStore(appId, bankAccountId, storeId, skipBankAccountUpdateWarningEmail);
             }
             catch (Exception e)
             {
@@ -63,6 +64,7 @@ Name | Type | Description  | Notes
  **appId** | **string**|  | 
  **bankAccountId** | **int?**|  | 
  **storeId** | **int?**|  | 
+ **skipBankAccountUpdateWarningEmail** | **bool?**|  | [optional] 
 
 ### Return type
 
