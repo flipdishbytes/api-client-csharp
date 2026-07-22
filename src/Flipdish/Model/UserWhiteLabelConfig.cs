@@ -91,22 +91,28 @@ namespace Flipdish.Model
             StoreStaff = 9,
             
             /// <summary>
+            /// Enum StaffMember for value: StaffMember
+            /// </summary>
+            [EnumMember(Value = "StaffMember")]
+            StaffMember = 10,
+            
+            /// <summary>
             /// Enum StoreReadOnlyAccess for value: StoreReadOnlyAccess
             /// </summary>
             [EnumMember(Value = "StoreReadOnlyAccess")]
-            StoreReadOnlyAccess = 10,
+            StoreReadOnlyAccess = 11,
             
             /// <summary>
             /// Enum FinanceManager for value: FinanceManager
             /// </summary>
             [EnumMember(Value = "FinanceManager")]
-            FinanceManager = 11,
+            FinanceManager = 12,
             
             /// <summary>
             /// Enum Support for value: Support
             /// </summary>
             [EnumMember(Value = "Support")]
-            Support = 12
+            Support = 13
         }
 
         /// <summary>
