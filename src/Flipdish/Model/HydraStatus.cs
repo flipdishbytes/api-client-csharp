@@ -71,11 +71,13 @@ namespace Flipdish.Model
         /// </summary>
         /// <param name="appId">appId (required).</param>
         /// <param name="storeIds">Store to assign the hydra.</param>
+        /// <param name="propertyIds">AuthZ Property ids for assigned stores.</param>
         /// <param name="isRegistered">The device has been already registered (required).</param>
         /// <param name="pinCode">6 digit PIN code (not starting with zero)..</param>
         /// <param name="images">Hydra images (covers).</param>
         /// <param name="userType">Hydra User Type.</param>
-        public HydraStatus(string appId = default(string), List<int?> storeIds = default(List<int?>), bool? isRegistered = default(bool?), int? pinCode = default(int?), List<string> images = default(List<string>), UserTypeEnum? userType = default(UserTypeEnum?))
+        /// <param name="hydraUserId">Zeus Hydra user id.</param>
+        public HydraStatus(string appId = default(string), List<int?> storeIds = default(List<int?>), List<string> propertyIds = default(List<string>), bool? isRegistered = default(bool?), int? pinCode = default(int?), List<string> images = default(List<string>), UserTypeEnum? userType = default(UserTypeEnum?), int? hydraUserId = default(int?))
         {
             // to ensure "appId" is required (not null)
             if (appId == null)
@@ -96,9 +98,11 @@ namespace Flipdish.Model
                 this.IsRegistered = isRegistered;
             }
             this.StoreIds = storeIds;
+            this.PropertyIds = propertyIds;
             this.PinCode = pinCode;
             this.Images = images;
             this.UserType = userType;
+            this.HydraUserId = hydraUserId;
         }
         
         /// <summary>
@@ -113,6 +117,13 @@ namespace Flipdish.Model
         /// <value>Store to assign the hydra</value>
         [DataMember(Name="StoreIds", EmitDefaultValue=false)]
         public List<int?> StoreIds { get; set; }
+
+        /// <summary>
+        /// AuthZ Property ids for assigned stores
+        /// </summary>
+        /// <value>AuthZ Property ids for assigned stores</value>
+        [DataMember(Name="PropertyIds", EmitDefaultValue=false)]
+        public List<string> PropertyIds { get; set; }
 
         /// <summary>
         /// The device has been already registered
@@ -137,6 +148,13 @@ namespace Flipdish.Model
 
 
         /// <summary>
+        /// Zeus Hydra user id
+        /// </summary>
+        /// <value>Zeus Hydra user id</value>
+        [DataMember(Name="HydraUserId", EmitDefaultValue=false)]
+        public int? HydraUserId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -146,10 +164,12 @@ namespace Flipdish.Model
             sb.Append("class HydraStatus {\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("  StoreIds: ").Append(StoreIds).Append("\n");
+            sb.Append("  PropertyIds: ").Append(PropertyIds).Append("\n");
             sb.Append("  IsRegistered: ").Append(IsRegistered).Append("\n");
             sb.Append("  PinCode: ").Append(PinCode).Append("\n");
             sb.Append("  Images: ").Append(Images).Append("\n");
             sb.Append("  UserType: ").Append(UserType).Append("\n");
+            sb.Append("  HydraUserId: ").Append(HydraUserId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -195,6 +215,11 @@ namespace Flipdish.Model
                     this.StoreIds.SequenceEqual(input.StoreIds)
                 ) && 
                 (
+                    this.PropertyIds == input.PropertyIds ||
+                    this.PropertyIds != null &&
+                    this.PropertyIds.SequenceEqual(input.PropertyIds)
+                ) && 
+                (
                     this.IsRegistered == input.IsRegistered ||
                     (this.IsRegistered != null &&
                     this.IsRegistered.Equals(input.IsRegistered))
@@ -213,6 +238,11 @@ namespace Flipdish.Model
                     this.UserType == input.UserType ||
                     (this.UserType != null &&
                     this.UserType.Equals(input.UserType))
+                ) && 
+                (
+                    this.HydraUserId == input.HydraUserId ||
+                    (this.HydraUserId != null &&
+                    this.HydraUserId.Equals(input.HydraUserId))
                 );
         }
 
@@ -229,6 +259,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.AppId.GetHashCode();
                 if (this.StoreIds != null)
                     hashCode = hashCode * 59 + this.StoreIds.GetHashCode();
+                if (this.PropertyIds != null)
+                    hashCode = hashCode * 59 + this.PropertyIds.GetHashCode();
                 if (this.IsRegistered != null)
                     hashCode = hashCode * 59 + this.IsRegistered.GetHashCode();
                 if (this.PinCode != null)
@@ -237,6 +269,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Images.GetHashCode();
                 if (this.UserType != null)
                     hashCode = hashCode * 59 + this.UserType.GetHashCode();
+                if (this.HydraUserId != null)
+                    hashCode = hashCode * 59 + this.HydraUserId.GetHashCode();
                 return hashCode;
             }
         }
