@@ -301,6 +301,7 @@ Class | Method | HTTP request | Description
 *HydraApi* | [**UnassignEmv**](docs/HydraApi.md#unassignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId} | 
 *HydraApi* | [**UpdateKioskCashVisibilitySettings**](docs/HydraApi.md#updatekioskcashvisibilitysettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | 
 *HydraApi* | [**UpdateKioskSettings**](docs/HydraApi.md#updatekiosksettings) | **POST** /api/v1.0/{appId}/kiosksettings/{deviceId} | 
+*IntegrationMetadataCatalogueApi* | [**IntegrationMetadataCatalogueGetPixelPointProducts**](docs/IntegrationMetadataCatalogueApi.md#integrationmetadatacataloguegetpixelpointproducts) | **GET** /api/v1.0/integrationmetadatacatalogue/pixelpoint/stores/{storeId}/products | 
 *IntercomApi* | [**UserHash**](docs/IntercomApi.md#userhash) | **GET** /api/v1.0/intercom/userHash | 
 *InvoicesApi* | [**GetInvoices**](docs/InvoicesApi.md#getinvoices) | **GET** /api/v1.0/{appId}/invoices | 
 *InvoicesApi* | [**InvoicePdf**](docs/InvoicesApi.md#invoicepdf) | **GET** /api/v1.0/{appId}/invoices/InvoicePdf | 
@@ -1064,6 +1065,7 @@ Class | Method | HTTP request | Description
  - [Model.PhoneCall](docs/PhoneCall.md)
  - [Model.PhoneCallEndedEvent](docs/PhoneCallEndedEvent.md)
  - [Model.PhoneCallStartedEvent](docs/PhoneCallStartedEvent.md)
+ - [Model.PixelPointProductCatalogue](docs/PixelPointProductCatalogue.md)
  - [Model.PlayStoreConfigModel](docs/PlayStoreConfigModel.md)
  - [Model.PosRevenueDetails](docs/PosRevenueDetails.md)
  - [Model.PreOrderConfig](docs/PreOrderConfig.md)
@@ -1297,6 +1299,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultPayoutReport3Overview](docs/RestApiResultPayoutReport3Overview.md)
  - [Model.RestApiResultPayoutReport3PropertyDetails](docs/RestApiResultPayoutReport3PropertyDetails.md)
  - [Model.RestApiResultPayoutReport3StorePayouts](docs/RestApiResultPayoutReport3StorePayouts.md)
+ - [Model.RestApiResultPixelPointProductCatalogue](docs/RestApiResultPixelPointProductCatalogue.md)
  - [Model.RestApiResultPlayStoreConfigModel](docs/RestApiResultPlayStoreConfigModel.md)
  - [Model.RestApiResultPreOrderConfig](docs/RestApiResultPreOrderConfig.md)
  - [Model.RestApiResultProcessingFeeConfig](docs/RestApiResultProcessingFeeConfig.md)
