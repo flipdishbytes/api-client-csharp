@@ -29,9 +29,9 @@ namespace Flipdish.Model
     public partial class HydraStatus :  IEquatable<HydraStatus>
     {
         /// <summary>
-        /// Hydra User Type
+        /// Hydra User Type as integer. Prefer {Flipdish.PublicModels.V1.Hydra.HydraStatus.DeviceType}.
         /// </summary>
-        /// <value>Hydra User Type</value>
+        /// <value>Hydra User Type as integer. Prefer {Flipdish.PublicModels.V1.Hydra.HydraStatus.DeviceType}.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum UserTypeEnum
         {
@@ -56,11 +56,44 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Hydra User Type
+        /// Hydra User Type as integer. Prefer {Flipdish.PublicModels.V1.Hydra.HydraStatus.DeviceType}.
         /// </summary>
-        /// <value>Hydra User Type</value>
+        /// <value>Hydra User Type as integer. Prefer {Flipdish.PublicModels.V1.Hydra.HydraStatus.DeviceType}.</value>
         [DataMember(Name="UserType", EmitDefaultValue=false)]
         public UserTypeEnum? UserType { get; set; }
+        /// <summary>
+        /// Hydra device type (Kiosk / Terminal), serialized as string.
+        /// </summary>
+        /// <value>Hydra device type (Kiosk / Terminal), serialized as string.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DeviceTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Kiosk for value: Kiosk
+            /// </summary>
+            [EnumMember(Value = "Kiosk")]
+            Kiosk = 1,
+            
+            /// <summary>
+            /// Enum Terminal for value: Terminal
+            /// </summary>
+            [EnumMember(Value = "Terminal")]
+            Terminal = 2,
+            
+            /// <summary>
+            /// Enum LegacyPrinter for value: LegacyPrinter
+            /// </summary>
+            [EnumMember(Value = "LegacyPrinter")]
+            LegacyPrinter = 3
+        }
+
+        /// <summary>
+        /// Hydra device type (Kiosk / Terminal), serialized as string.
+        /// </summary>
+        /// <value>Hydra device type (Kiosk / Terminal), serialized as string.</value>
+        [DataMember(Name="DeviceType", EmitDefaultValue=false)]
+        public DeviceTypeEnum? DeviceType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="HydraStatus" /> class.
         /// </summary>
@@ -75,9 +108,10 @@ namespace Flipdish.Model
         /// <param name="isRegistered">The device has been already registered (required).</param>
         /// <param name="pinCode">6 digit PIN code (not starting with zero)..</param>
         /// <param name="images">Hydra images (covers).</param>
-        /// <param name="userType">Hydra User Type.</param>
+        /// <param name="userType">Hydra User Type as integer. Prefer {Flipdish.PublicModels.V1.Hydra.HydraStatus.DeviceType}..</param>
+        /// <param name="deviceType">Hydra device type (Kiosk / Terminal), serialized as string..</param>
         /// <param name="hydraUserId">Zeus Hydra user id.</param>
-        public HydraStatus(string appId = default(string), List<int?> storeIds = default(List<int?>), List<string> propertyIds = default(List<string>), bool? isRegistered = default(bool?), int? pinCode = default(int?), List<string> images = default(List<string>), UserTypeEnum? userType = default(UserTypeEnum?), int? hydraUserId = default(int?))
+        public HydraStatus(string appId = default(string), List<int?> storeIds = default(List<int?>), List<string> propertyIds = default(List<string>), bool? isRegistered = default(bool?), int? pinCode = default(int?), List<string> images = default(List<string>), UserTypeEnum? userType = default(UserTypeEnum?), DeviceTypeEnum? deviceType = default(DeviceTypeEnum?), int? hydraUserId = default(int?))
         {
             // to ensure "appId" is required (not null)
             if (appId == null)
@@ -102,6 +136,7 @@ namespace Flipdish.Model
             this.PinCode = pinCode;
             this.Images = images;
             this.UserType = userType;
+            this.DeviceType = deviceType;
             this.HydraUserId = hydraUserId;
         }
         
@@ -147,6 +182,7 @@ namespace Flipdish.Model
         public List<string> Images { get; set; }
 
 
+
         /// <summary>
         /// Zeus Hydra user id
         /// </summary>
@@ -169,6 +205,7 @@ namespace Flipdish.Model
             sb.Append("  PinCode: ").Append(PinCode).Append("\n");
             sb.Append("  Images: ").Append(Images).Append("\n");
             sb.Append("  UserType: ").Append(UserType).Append("\n");
+            sb.Append("  DeviceType: ").Append(DeviceType).Append("\n");
             sb.Append("  HydraUserId: ").Append(HydraUserId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -240,6 +277,11 @@ namespace Flipdish.Model
                     this.UserType.Equals(input.UserType))
                 ) && 
                 (
+                    this.DeviceType == input.DeviceType ||
+                    (this.DeviceType != null &&
+                    this.DeviceType.Equals(input.DeviceType))
+                ) && 
+                (
                     this.HydraUserId == input.HydraUserId ||
                     (this.HydraUserId != null &&
                     this.HydraUserId.Equals(input.HydraUserId))
@@ -269,6 +311,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Images.GetHashCode();
                 if (this.UserType != null)
                     hashCode = hashCode * 59 + this.UserType.GetHashCode();
+                if (this.DeviceType != null)
+                    hashCode = hashCode * 59 + this.DeviceType.GetHashCode();
                 if (this.HydraUserId != null)
                     hashCode = hashCode * 59 + this.HydraUserId.GetHashCode();
                 return hashCode;

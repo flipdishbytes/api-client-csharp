@@ -29,9 +29,9 @@ namespace Flipdish.Model
     public partial class HydraCreatedEvent :  IEquatable<HydraCreatedEvent>
     {
         /// <summary>
-        /// Hydra user type (Kiosk / Terminal)
+        /// Hydra user type (Kiosk / Terminal) as integer. Prefer {Flipdish.PublicModels.V1.Events.Hydra.HydraCreatedEvent.DeviceType}.
         /// </summary>
-        /// <value>Hydra user type (Kiosk / Terminal)</value>
+        /// <value>Hydra user type (Kiosk / Terminal) as integer. Prefer {Flipdish.PublicModels.V1.Events.Hydra.HydraCreatedEvent.DeviceType}.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum UserTypeEnum
         {
@@ -56,18 +56,52 @@ namespace Flipdish.Model
         }
 
         /// <summary>
-        /// Hydra user type (Kiosk / Terminal)
+        /// Hydra user type (Kiosk / Terminal) as integer. Prefer {Flipdish.PublicModels.V1.Events.Hydra.HydraCreatedEvent.DeviceType}.
         /// </summary>
-        /// <value>Hydra user type (Kiosk / Terminal)</value>
+        /// <value>Hydra user type (Kiosk / Terminal) as integer. Prefer {Flipdish.PublicModels.V1.Events.Hydra.HydraCreatedEvent.DeviceType}.</value>
         [DataMember(Name="UserType", EmitDefaultValue=false)]
         public UserTypeEnum? UserType { get; set; }
+        /// <summary>
+        /// Hydra device type (Kiosk / Terminal), serialized as string.
+        /// </summary>
+        /// <value>Hydra device type (Kiosk / Terminal), serialized as string.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DeviceTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Kiosk for value: Kiosk
+            /// </summary>
+            [EnumMember(Value = "Kiosk")]
+            Kiosk = 1,
+            
+            /// <summary>
+            /// Enum Terminal for value: Terminal
+            /// </summary>
+            [EnumMember(Value = "Terminal")]
+            Terminal = 2,
+            
+            /// <summary>
+            /// Enum LegacyPrinter for value: LegacyPrinter
+            /// </summary>
+            [EnumMember(Value = "LegacyPrinter")]
+            LegacyPrinter = 3
+        }
+
+        /// <summary>
+        /// Hydra device type (Kiosk / Terminal), serialized as string.
+        /// </summary>
+        /// <value>Hydra device type (Kiosk / Terminal), serialized as string.</value>
+        [DataMember(Name="DeviceType", EmitDefaultValue=false)]
+        public DeviceTypeEnum? DeviceType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="HydraCreatedEvent" /> class.
         /// </summary>
         /// <param name="user">Optional user who triggered creation (may be null for device self-create)..</param>
         /// <param name="deviceId">Device id.</param>
         /// <param name="hydraUserId">Zeus Hydra user id.</param>
-        /// <param name="userType">Hydra user type (Kiosk / Terminal).</param>
+        /// <param name="userType">Hydra user type (Kiosk / Terminal) as integer. Prefer {Flipdish.PublicModels.V1.Events.Hydra.HydraCreatedEvent.DeviceType}..</param>
+        /// <param name="deviceType">Hydra device type (Kiosk / Terminal), serialized as string..</param>
         /// <param name="eventName">The event name.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
@@ -77,12 +111,13 @@ namespace Flipdish.Model
         /// <param name="ipAddress">Ip Address.</param>
         /// <param name="activityId">Activity Id.</param>
         /// <param name="activityType">Activity Type.</param>
-        public HydraCreatedEvent(UserEventInfo user = default(UserEventInfo), string deviceId = default(string), int? hydraUserId = default(int?), UserTypeEnum? userType = default(UserTypeEnum?), string eventName = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string orgId = default(string), string ipAddress = default(string), string activityId = default(string), string activityType = default(string))
+        public HydraCreatedEvent(UserEventInfo user = default(UserEventInfo), string deviceId = default(string), int? hydraUserId = default(int?), UserTypeEnum? userType = default(UserTypeEnum?), DeviceTypeEnum? deviceType = default(DeviceTypeEnum?), string eventName = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string orgId = default(string), string ipAddress = default(string), string activityId = default(string), string activityType = default(string))
         {
             this.User = user;
             this.DeviceId = deviceId;
             this.HydraUserId = hydraUserId;
             this.UserType = userType;
+            this.DeviceType = deviceType;
             this.EventName = eventName;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
@@ -114,6 +149,7 @@ namespace Flipdish.Model
         /// <value>Zeus Hydra user id</value>
         [DataMember(Name="HydraUserId", EmitDefaultValue=false)]
         public int? HydraUserId { get; set; }
+
 
 
         /// <summary>
@@ -191,6 +227,7 @@ namespace Flipdish.Model
             sb.Append("  DeviceId: ").Append(DeviceId).Append("\n");
             sb.Append("  HydraUserId: ").Append(HydraUserId).Append("\n");
             sb.Append("  UserType: ").Append(UserType).Append("\n");
+            sb.Append("  DeviceType: ").Append(DeviceType).Append("\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
@@ -253,6 +290,11 @@ namespace Flipdish.Model
                     this.UserType == input.UserType ||
                     (this.UserType != null &&
                     this.UserType.Equals(input.UserType))
+                ) && 
+                (
+                    this.DeviceType == input.DeviceType ||
+                    (this.DeviceType != null &&
+                    this.DeviceType.Equals(input.DeviceType))
                 ) && 
                 (
                     this.EventName == input.EventName ||
@@ -318,6 +360,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.HydraUserId.GetHashCode();
                 if (this.UserType != null)
                     hashCode = hashCode * 59 + this.UserType.GetHashCode();
+                if (this.DeviceType != null)
+                    hashCode = hashCode * 59 + this.DeviceType.GetHashCode();
                 if (this.EventName != null)
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 if (this.FlipdishEventId != null)
