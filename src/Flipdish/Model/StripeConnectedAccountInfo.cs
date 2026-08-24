@@ -179,7 +179,8 @@ namespace Flipdish.Model
         /// <param name="payoutsEnabled">Payouts Enabled status.</param>
         /// <param name="payoutsPaused">Flag indicating if payouts are paused.</param>
         /// <param name="paymentsEnabled">Flag indicating if payments are enabled.</param>
-        public StripeConnectedAccountInfo(AccountStatusEnum? accountStatus = default(AccountStatusEnum?), string stripeId = default(string), CardPaymentStatusEnum? cardPaymentStatus = default(CardPaymentStatusEnum?), PayoutScheduleIntervalEnum? payoutScheduleInterval = default(PayoutScheduleIntervalEnum?), bool? payoutsEnabled = default(bool?), bool? payoutsPaused = default(bool?), bool? paymentsEnabled = default(bool?))
+        /// <param name="disabledReason">If the Stripe connected account is disabled, this is Stripe&#39;s raw  requirements.disabled_reason describing why, as last recorded from a Stripe  connected-account webhook. Known values are requirements.fields_needed,  requirements.past_due, requirements.pending_verification,  rejected.fraud, rejected.terms_of_service, rejected.listed,  rejected.other and platform_paused, but Stripe can introduce new ones, so  the value is passed through unmapped (the same way  CapabilityRequirementsInfo.DisabledReason is). null when the account is  not disabled. Note that {Flipdish.PublicModels.V1.BankAccount.StripeConnectedAccountInfo.AccountStatus} is a deliberately lossy mapping of  this value and the two can legitimately disagree - do not derive one from the other..</param>
+        public StripeConnectedAccountInfo(AccountStatusEnum? accountStatus = default(AccountStatusEnum?), string stripeId = default(string), CardPaymentStatusEnum? cardPaymentStatus = default(CardPaymentStatusEnum?), PayoutScheduleIntervalEnum? payoutScheduleInterval = default(PayoutScheduleIntervalEnum?), bool? payoutsEnabled = default(bool?), bool? payoutsPaused = default(bool?), bool? paymentsEnabled = default(bool?), string disabledReason = default(string))
         {
             this.AccountStatus = accountStatus;
             this.StripeId = stripeId;
@@ -188,6 +189,7 @@ namespace Flipdish.Model
             this.PayoutsEnabled = payoutsEnabled;
             this.PayoutsPaused = payoutsPaused;
             this.PaymentsEnabled = paymentsEnabled;
+            this.DisabledReason = disabledReason;
         }
         
 
@@ -222,6 +224,13 @@ namespace Flipdish.Model
         public bool? PaymentsEnabled { get; set; }
 
         /// <summary>
+        /// If the Stripe connected account is disabled, this is Stripe&#39;s raw  requirements.disabled_reason describing why, as last recorded from a Stripe  connected-account webhook. Known values are requirements.fields_needed,  requirements.past_due, requirements.pending_verification,  rejected.fraud, rejected.terms_of_service, rejected.listed,  rejected.other and platform_paused, but Stripe can introduce new ones, so  the value is passed through unmapped (the same way  CapabilityRequirementsInfo.DisabledReason is). null when the account is  not disabled. Note that {Flipdish.PublicModels.V1.BankAccount.StripeConnectedAccountInfo.AccountStatus} is a deliberately lossy mapping of  this value and the two can legitimately disagree - do not derive one from the other.
+        /// </summary>
+        /// <value>If the Stripe connected account is disabled, this is Stripe&#39;s raw  requirements.disabled_reason describing why, as last recorded from a Stripe  connected-account webhook. Known values are requirements.fields_needed,  requirements.past_due, requirements.pending_verification,  rejected.fraud, rejected.terms_of_service, rejected.listed,  rejected.other and platform_paused, but Stripe can introduce new ones, so  the value is passed through unmapped (the same way  CapabilityRequirementsInfo.DisabledReason is). null when the account is  not disabled. Note that {Flipdish.PublicModels.V1.BankAccount.StripeConnectedAccountInfo.AccountStatus} is a deliberately lossy mapping of  this value and the two can legitimately disagree - do not derive one from the other.</value>
+        [DataMember(Name="DisabledReason", EmitDefaultValue=false)]
+        public string DisabledReason { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -236,6 +245,7 @@ namespace Flipdish.Model
             sb.Append("  PayoutsEnabled: ").Append(PayoutsEnabled).Append("\n");
             sb.Append("  PayoutsPaused: ").Append(PayoutsPaused).Append("\n");
             sb.Append("  PaymentsEnabled: ").Append(PaymentsEnabled).Append("\n");
+            sb.Append("  DisabledReason: ").Append(DisabledReason).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -304,6 +314,11 @@ namespace Flipdish.Model
                     this.PaymentsEnabled == input.PaymentsEnabled ||
                     (this.PaymentsEnabled != null &&
                     this.PaymentsEnabled.Equals(input.PaymentsEnabled))
+                ) && 
+                (
+                    this.DisabledReason == input.DisabledReason ||
+                    (this.DisabledReason != null &&
+                    this.DisabledReason.Equals(input.DisabledReason))
                 );
         }
 
@@ -330,6 +345,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PayoutsPaused.GetHashCode();
                 if (this.PaymentsEnabled != null)
                     hashCode = hashCode * 59 + this.PaymentsEnabled.GetHashCode();
+                if (this.DisabledReason != null)
+                    hashCode = hashCode * 59 + this.DisabledReason.GetHashCode();
                 return hashCode;
             }
         }
