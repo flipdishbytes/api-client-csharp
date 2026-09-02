@@ -32,7 +32,7 @@ namespace Flipdish.Model
         /// Initializes a new instance of the <see cref="GetEndUserFeeConfigsResponse" /> class.
         /// </summary>
         /// <param name="endUserFees">The current end user fee configs for the Store, one per channel and payment method combination present.</param>
-        /// <param name="isV2FeeCalculationEnabled">Whether the V2 (tiered) fee calculation is enabled for this Store, per the backend_finance_UseV2FeeCalculation Split.io flag.</param>
+        /// <param name="isV2FeeCalculationEnabled">Whether the V2 (tiered) fee calculation is enabled for this Store.</param>
         public GetEndUserFeeConfigsResponse(List<EndUserFeeConfig> endUserFees = default(List<EndUserFeeConfig>), bool? isV2FeeCalculationEnabled = default(bool?))
         {
             this.EndUserFees = endUserFees;
@@ -47,9 +47,9 @@ namespace Flipdish.Model
         public List<EndUserFeeConfig> EndUserFees { get; set; }
 
         /// <summary>
-        /// Whether the V2 (tiered) fee calculation is enabled for this Store, per the backend_finance_UseV2FeeCalculation Split.io flag
+        /// Whether the V2 (tiered) fee calculation is enabled for this Store
         /// </summary>
-        /// <value>Whether the V2 (tiered) fee calculation is enabled for this Store, per the backend_finance_UseV2FeeCalculation Split.io flag</value>
+        /// <value>Whether the V2 (tiered) fee calculation is enabled for this Store</value>
         [DataMember(Name="IsV2FeeCalculationEnabled", EmitDefaultValue=false)]
         public bool? IsV2FeeCalculationEnabled { get; set; }
 

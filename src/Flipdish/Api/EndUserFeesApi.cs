@@ -72,6 +72,31 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <returns>ApiResponse of RestApiResultGetEndUserFeeConfigsResponse</returns>
         ApiResponse<RestApiResultGetEndUserFeeConfigsResponse> GetEndUserFeesForStoreWithHttpInfo (string appId, int? storeId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>RestApiResultSetV2FeeCalculationRequest</returns>
+        RestApiResultSetV2FeeCalculationRequest SetV2FeeCalculation (SetV2FeeCalculationRequest input, string appId, int? storeId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>ApiResponse of RestApiResultSetV2FeeCalculationRequest</returns>
+        ApiResponse<RestApiResultSetV2FeeCalculationRequest> SetV2FeeCalculationWithHttpInfo (SetV2FeeCalculationRequest input, string appId, int? storeId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -122,6 +147,31 @@ namespace Flipdish.Api
         /// <param name="storeId"></param>
         /// <returns>Task of ApiResponse (RestApiResultGetEndUserFeeConfigsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultGetEndUserFeeConfigsResponse>> GetEndUserFeesForStoreAsyncWithHttpInfo (string appId, int? storeId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>Task of RestApiResultSetV2FeeCalculationRequest</returns>
+        System.Threading.Tasks.Task<RestApiResultSetV2FeeCalculationRequest> SetV2FeeCalculationAsync (SetV2FeeCalculationRequest input, string appId, int? storeId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultSetV2FeeCalculationRequest)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultSetV2FeeCalculationRequest>> SetV2FeeCalculationAsyncWithHttpInfo (SetV2FeeCalculationRequest input, string appId, int? storeId);
         #endregion Asynchronous Operations
     }
 
@@ -582,6 +632,205 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultGetEndUserFeeConfigsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultGetEndUserFeeConfigsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultGetEndUserFeeConfigsResponse)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>RestApiResultSetV2FeeCalculationRequest</returns>
+        public RestApiResultSetV2FeeCalculationRequest SetV2FeeCalculation (SetV2FeeCalculationRequest input, string appId, int? storeId)
+        {
+             ApiResponse<RestApiResultSetV2FeeCalculationRequest> localVarResponse = SetV2FeeCalculationWithHttpInfo(input, appId, storeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>ApiResponse of RestApiResultSetV2FeeCalculationRequest</returns>
+        public ApiResponse< RestApiResultSetV2FeeCalculationRequest > SetV2FeeCalculationWithHttpInfo (SetV2FeeCalculationRequest input, string appId, int? storeId)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EndUserFeesApi->SetV2FeeCalculation");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling EndUserFeesApi->SetV2FeeCalculation");
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling EndUserFeesApi->SetV2FeeCalculation");
+
+            var localVarPath = "./api/v1.0/{appId}/stores/{storeId}/end-user-fees/v2-fee-calculation";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetV2FeeCalculation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultSetV2FeeCalculationRequest>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultSetV2FeeCalculationRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultSetV2FeeCalculationRequest)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>Task of RestApiResultSetV2FeeCalculationRequest</returns>
+        public async System.Threading.Tasks.Task<RestApiResultSetV2FeeCalculationRequest> SetV2FeeCalculationAsync (SetV2FeeCalculationRequest input, string appId, int? storeId)
+        {
+             ApiResponse<RestApiResultSetV2FeeCalculationRequest> localVarResponse = await SetV2FeeCalculationAsyncWithHttpInfo(input, appId, storeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <param name="appId"></param>
+        /// <param name="storeId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultSetV2FeeCalculationRequest)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultSetV2FeeCalculationRequest>> SetV2FeeCalculationAsyncWithHttpInfo (SetV2FeeCalculationRequest input, string appId, int? storeId)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EndUserFeesApi->SetV2FeeCalculation");
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling EndUserFeesApi->SetV2FeeCalculation");
+            // verify the required parameter 'storeId' is set
+            if (storeId == null)
+                throw new ApiException(400, "Missing required parameter 'storeId' when calling EndUserFeesApi->SetV2FeeCalculation");
+
+            var localVarPath = "./api/v1.0/{appId}/stores/{storeId}/end-user-fees/v2-fee-calculation";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (storeId != null) localVarPathParams.Add("storeId", this.Configuration.ApiClient.ParameterToString(storeId)); // path parameter
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetV2FeeCalculation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultSetV2FeeCalculationRequest>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultSetV2FeeCalculationRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultSetV2FeeCalculationRequest)));
         }
 
     }

@@ -246,6 +246,7 @@ Class | Method | HTTP request | Description
 *DriversApi* | [**DriversUpdateDriverProfile**](docs/DriversApi.md#driversupdatedriverprofile) | **POST** /api/v1.0/drivers/profile | 
 *EndUserFeesApi* | [**CreateEndUserFeeConfig**](docs/EndUserFeesApi.md#createenduserfeeconfig) | **POST** /api/v1.0/{appId}/stores/{storeId}/end-user-fees | 
 *EndUserFeesApi* | [**GetEndUserFeesForStore**](docs/EndUserFeesApi.md#getenduserfeesforstore) | **GET** /api/v1.0/{appId}/stores/{storeId}/end-user-fees | 
+*EndUserFeesApi* | [**SetV2FeeCalculation**](docs/EndUserFeesApi.md#setv2feecalculation) | **POST** /api/v1.0/{appId}/stores/{storeId}/end-user-fees/v2-fee-calculation | 
 *EventsApi* | [**GetCustomerEvents**](docs/EventsApi.md#getcustomerevents) | **GET** /api/v1.0/{appId}/events/customer/{customerId} | 
 *EventsApi* | [**GetEvents**](docs/EventsApi.md#getevents) | **GET** /api/v1.0/{appId}/events | 
 *EventsApi* | [**GetEventsById**](docs/EventsApi.md#geteventsbyid) | **GET** /api/v1.0/{appId}/events/{eventId} | 
@@ -1320,6 +1321,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultRestaurantVoucherPayGreenStoreConfiguration](docs/RestApiResultRestaurantVoucherPayGreenStoreConfiguration.md)
  - [Model.RestApiResultRetentionCampaign](docs/RestApiResultRetentionCampaign.md)
  - [Model.RestApiResultServiceCharge](docs/RestApiResultServiceCharge.md)
+ - [Model.RestApiResultSetV2FeeCalculationRequest](docs/RestApiResultSetV2FeeCalculationRequest.md)
  - [Model.RestApiResultSmsProviderCredential](docs/RestApiResultSmsProviderCredential.md)
  - [Model.RestApiResultStore](docs/RestApiResultStore.md)
  - [Model.RestApiResultStoreAddress](docs/RestApiResultStoreAddress.md)
@@ -1370,6 +1372,7 @@ Class | Method | HTTP request | Description
  - [Model.SetPasswordWithPinModel](docs/SetPasswordWithPinModel.md)
  - [Model.SetUserDeliveryLocationCoordinatesRequest](docs/SetUserDeliveryLocationCoordinatesRequest.md)
  - [Model.SetUserDeliveryLocationFieldRequest](docs/SetUserDeliveryLocationFieldRequest.md)
+ - [Model.SetV2FeeCalculationRequest](docs/SetV2FeeCalculationRequest.md)
  - [Model.SetVoucherValidityPeriodsSimplifiedRequest](docs/SetVoucherValidityPeriodsSimplifiedRequest.md)
  - [Model.Setting](docs/Setting.md)
  - [Model.SignupStep](docs/SignupStep.md)
