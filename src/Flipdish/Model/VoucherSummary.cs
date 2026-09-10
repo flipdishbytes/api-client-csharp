@@ -176,6 +176,57 @@ namespace Flipdish.Model
         [DataMember(Name="VoucherSubType", EmitDefaultValue=false)]
         public VoucherSubTypeEnum? VoucherSubType { get; set; }
         /// <summary>
+        /// Defines ChannelRestrictions
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ChannelRestrictionsEnum
+        {
+            
+            /// <summary>
+            /// Enum Ios for value: Ios
+            /// </summary>
+            [EnumMember(Value = "Ios")]
+            Ios = 1,
+            
+            /// <summary>
+            /// Enum Android for value: Android
+            /// </summary>
+            [EnumMember(Value = "Android")]
+            Android = 2,
+            
+            /// <summary>
+            /// Enum Web for value: Web
+            /// </summary>
+            [EnumMember(Value = "Web")]
+            Web = 3,
+            
+            /// <summary>
+            /// Enum Kiosk for value: Kiosk
+            /// </summary>
+            [EnumMember(Value = "Kiosk")]
+            Kiosk = 4,
+            
+            /// <summary>
+            /// Enum Pos for value: Pos
+            /// </summary>
+            [EnumMember(Value = "Pos")]
+            Pos = 5,
+            
+            /// <summary>
+            /// Enum Google for value: Google
+            /// </summary>
+            [EnumMember(Value = "Google")]
+            Google = 6
+        }
+
+
+        /// <summary>
+        /// Channels the voucher is restricted to
+        /// </summary>
+        /// <value>Channels the voucher is restricted to</value>
+        [DataMember(Name="ChannelRestrictions", EmitDefaultValue=false)]
+        public List<ChannelRestrictionsEnum> ChannelRestrictions { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="VoucherSummary" /> class.
         /// </summary>
         /// <param name="voucherId">Voucher Id.</param>
@@ -185,9 +236,11 @@ namespace Flipdish.Model
         /// <param name="voucherSubType">Voucher Sub Type.</param>
         /// <param name="description">Voucher Description (Visible on printout).</param>
         /// <param name="isEnabled">Is voucher enabled.</param>
+        /// <param name="isPromoted">Marks the voucher as promoted.</param>
         /// <param name="storeNames">Store names associated with this voucher.</param>
         /// <param name="isAvailableOnAllStores">True if the voucher is available on all active stores in the app.</param>
-        public VoucherSummary(int? voucherId = default(int?), string code = default(string), StatusEnum? status = default(StatusEnum?), VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), string description = default(string), bool? isEnabled = default(bool?), List<string> storeNames = default(List<string>), bool? isAvailableOnAllStores = default(bool?))
+        /// <param name="channelRestrictions">Channels the voucher is restricted to.</param>
+        public VoucherSummary(int? voucherId = default(int?), string code = default(string), StatusEnum? status = default(StatusEnum?), VoucherTypeEnum? voucherType = default(VoucherTypeEnum?), VoucherSubTypeEnum? voucherSubType = default(VoucherSubTypeEnum?), string description = default(string), bool? isEnabled = default(bool?), bool? isPromoted = default(bool?), List<string> storeNames = default(List<string>), bool? isAvailableOnAllStores = default(bool?), List<ChannelRestrictionsEnum> channelRestrictions = default(List<ChannelRestrictionsEnum>))
         {
             this.VoucherId = voucherId;
             this.Code = code;
@@ -196,8 +249,10 @@ namespace Flipdish.Model
             this.VoucherSubType = voucherSubType;
             this.Description = description;
             this.IsEnabled = isEnabled;
+            this.IsPromoted = isPromoted;
             this.StoreNames = storeNames;
             this.IsAvailableOnAllStores = isAvailableOnAllStores;
+            this.ChannelRestrictions = channelRestrictions;
         }
         
         /// <summary>
@@ -232,6 +287,13 @@ namespace Flipdish.Model
         public bool? IsEnabled { get; set; }
 
         /// <summary>
+        /// Marks the voucher as promoted
+        /// </summary>
+        /// <value>Marks the voucher as promoted</value>
+        [DataMember(Name="IsPromoted", EmitDefaultValue=false)]
+        public bool? IsPromoted { get; set; }
+
+        /// <summary>
         /// Store names associated with this voucher
         /// </summary>
         /// <value>Store names associated with this voucher</value>
@@ -244,6 +306,7 @@ namespace Flipdish.Model
         /// <value>True if the voucher is available on all active stores in the app</value>
         [DataMember(Name="IsAvailableOnAllStores", EmitDefaultValue=false)]
         public bool? IsAvailableOnAllStores { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -260,8 +323,10 @@ namespace Flipdish.Model
             sb.Append("  VoucherSubType: ").Append(VoucherSubType).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
+            sb.Append("  IsPromoted: ").Append(IsPromoted).Append("\n");
             sb.Append("  StoreNames: ").Append(StoreNames).Append("\n");
             sb.Append("  IsAvailableOnAllStores: ").Append(IsAvailableOnAllStores).Append("\n");
+            sb.Append("  ChannelRestrictions: ").Append(ChannelRestrictions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -332,6 +397,11 @@ namespace Flipdish.Model
                     this.IsEnabled.Equals(input.IsEnabled))
                 ) && 
                 (
+                    this.IsPromoted == input.IsPromoted ||
+                    (this.IsPromoted != null &&
+                    this.IsPromoted.Equals(input.IsPromoted))
+                ) && 
+                (
                     this.StoreNames == input.StoreNames ||
                     this.StoreNames != null &&
                     this.StoreNames.SequenceEqual(input.StoreNames)
@@ -340,6 +410,11 @@ namespace Flipdish.Model
                     this.IsAvailableOnAllStores == input.IsAvailableOnAllStores ||
                     (this.IsAvailableOnAllStores != null &&
                     this.IsAvailableOnAllStores.Equals(input.IsAvailableOnAllStores))
+                ) && 
+                (
+                    this.ChannelRestrictions == input.ChannelRestrictions ||
+                    this.ChannelRestrictions != null &&
+                    this.ChannelRestrictions.SequenceEqual(input.ChannelRestrictions)
                 );
         }
 
@@ -366,10 +441,14 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.IsEnabled != null)
                     hashCode = hashCode * 59 + this.IsEnabled.GetHashCode();
+                if (this.IsPromoted != null)
+                    hashCode = hashCode * 59 + this.IsPromoted.GetHashCode();
                 if (this.StoreNames != null)
                     hashCode = hashCode * 59 + this.StoreNames.GetHashCode();
                 if (this.IsAvailableOnAllStores != null)
                     hashCode = hashCode * 59 + this.IsAvailableOnAllStores.GetHashCode();
+                if (this.ChannelRestrictions != null)
+                    hashCode = hashCode * 59 + this.ChannelRestrictions.GetHashCode();
                 return hashCode;
             }
         }

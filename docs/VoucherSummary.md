@@ -10,8 +10,10 @@ Name | Type | Description | Notes
 **VoucherSubType** | **string** | Voucher Sub Type | [optional] 
 **Description** | **string** | Voucher Description (Visible on printout) | [optional] 
 **IsEnabled** | **bool?** | Is voucher enabled | [optional] 
+**IsPromoted** | **bool?** | Marks the voucher as promoted | [optional] 
 **StoreNames** | **List&lt;string&gt;** | Store names associated with this voucher | [optional] 
 **IsAvailableOnAllStores** | **bool?** | True if the voucher is available on all active stores in the app | [optional] 
+**ChannelRestrictions** | **List&lt;string&gt;** | Channels the voucher is restricted to | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
