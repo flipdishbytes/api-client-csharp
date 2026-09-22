@@ -58,7 +58,13 @@ namespace Flipdish.Model
             /// Enum MessageBird for value: MessageBird
             /// </summary>
             [EnumMember(Value = "MessageBird")]
-            MessageBird = 4
+            MessageBird = 4,
+            
+            /// <summary>
+            /// Enum CommunicationService for value: CommunicationService
+            /// </summary>
+            [EnumMember(Value = "CommunicationService")]
+            CommunicationService = 5
         }
 
         /// <summary>
