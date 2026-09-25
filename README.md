@@ -655,7 +655,6 @@ Class | Method | HTTP request | Description
 *WebsiteApi* | [**GetIndexConfiguration**](docs/WebsiteApi.md#getindexconfiguration) | **GET** /api/v1.0/{appId}/website/index | 
 *WebsiteApi* | [**SetIndexConfiguration**](docs/WebsiteApi.md#setindexconfiguration) | **POST** /api/v1.0/{appId}/website/index | 
 *WebsiteApi* | [**UploadWebsiteImage**](docs/WebsiteApi.md#uploadwebsiteimage) | **POST** /api/v1.0/{appId}/website/image/{imageLocation} | 
-*WebsiteApi* | [**WebsiteCheckNow**](docs/WebsiteApi.md#websitechecknow) | **GET** /api/v1.0/{appId}/website/dnscheck | 
 *WhiteLabelBuildsApi* | [**HealthCheck**](docs/WhiteLabelBuildsApi.md#healthcheck) | **GET** /api/v1.0/whitelabelbuilds/health | 
 *WhiteLabelBuildsApi* | [**SubmitAndroidApps**](docs/WhiteLabelBuildsApi.md#submitandroidapps) | **POST** /api/v1.0/whitelabelbuilds/android/multiple | 
 *WhiteLabelBuildsApi* | [**SubmitAndroidBuild**](docs/WhiteLabelBuildsApi.md#submitandroidbuild) | **POST** /api/v1.0/whitelabelbuilds/{appId}/android | 
