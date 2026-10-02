@@ -10,7 +10,10 @@ trigger:
     include:
       - master
 
-pr: none
+pr:
+  branches:
+    include:
+      - master
 
 pool:
   vmImage: 'windows-latest'
@@ -19,14 +22,26 @@ variables:
   nuspec: '**/Flipdish.csproj'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-
+  # Publishing (pack + push) only on push to master. PR runs build + restore only.
+  # Azure Pipelines has no 'Push' Build.Reason: push-triggered runs are 'IndividualCI'
+  # or 'BatchedCI'. Build.Reason is a runtime variable - it is NOT available to
+  # ${{ }} template expressions - so evaluate isMaster with $[ ].
+  # String eq/in are case-insensitive, so eq(variables['isMaster'], 'true') below
+  # matches the 'True'/'False' values a runtime expression produces.
+  isMaster: $[ and(eq(variables['Build.SourceBranch'], 'refs/heads/master'), in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI')) ]
 
 steps:
+# Pin NuGet to 6.x: NuGet 7.x fails to parse the legacy solution file format
+# (Format Version 12.00 / VS 14) with "Could not load Microsoft.Build.Framework
+# Version=15.1.0.0" (see builds 1.1.530/1.2.434).
 - task: NuGetToolInstaller@1
+  inputs:
+    versionSpec: '6.x'
 
 - task: NuGetCommand@2
   inputs:
-    restoreSolution: '$(solution)'
+    # 'solution' was never defined - restore silently did nothing before.
+    restoreSolution: 'Flipdish.sln'
 
 - task: MSBuild@1
   inputs:
@@ -36,9 +51,14 @@ steps:
     configuration: '$(buildConfiguration)'
     clean: true
     maximumCpuCount: true
-    restoreNugetPackages: true
+    # restoreNugetPackages must stay OFF: it makes MSBuild@1 run the agent's
+    # bundled externals NuGet (C:\actions-runner\...\externals\nuget\NuGet.exe),
+    # which fails on this legacy .sln ("Error parsing solution file ...
+    # Microsoft.Build.Framework, Version=15.1.0.0" -> exit 1). Restore is
+    # already handled above by NuGetCommand@2 using the pinned NuGet 6.x.
 
 - task: NuGetCommand@2
+  condition: and(succeeded(), eq(variables['isMaster'], 'true'))
   inputs:
     command: 'pack'
     packagesToPack: '$(nuspec)'
@@ -47,13 +67,15 @@ steps:
     NUGET_ENABLE_LEGACY_PROJECT_JSON_PACK: true
 
 - task: NuGetCommand@2
+  condition: and(succeeded(), eq(variables['isMaster'], 'true'))
   inputs:
     command: 'push'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
     nuGetFeedType: 'external'
     publishFeedCredentials: 'Nuget service'
 
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+# there are no tests in the solution (only src\Flipdish) - same as netcore repo
+#- task: VSTest@2
+#  inputs:
+#    platform: '$(buildPlatform)'
+#    configuration: '$(buildConfiguration)'
