@@ -115,11 +115,13 @@ namespace Flipdish.Model
         /// <param name="phoneNumber">Customer Phone Number.</param>
         /// <param name="appType">Customer AppType.</param>
         /// <param name="name">Customer Name.</param>
-        public CustomerCreateModel(string phoneNumber = default(string), AppTypeEnum? appType = default(AppTypeEnum?), string name = default(string))
+        /// <param name="marketingEnabled">marketingEnabled.</param>
+        public CustomerCreateModel(string phoneNumber = default(string), AppTypeEnum? appType = default(AppTypeEnum?), string name = default(string), bool? marketingEnabled = default(bool?))
         {
             this.PhoneNumber = phoneNumber;
             this.AppType = appType;
             this.Name = name;
+            this.MarketingEnabled = marketingEnabled;
         }
         
         /// <summary>
@@ -138,6 +140,12 @@ namespace Flipdish.Model
         public string Name { get; set; }
 
         /// <summary>
+        /// Gets or Sets MarketingEnabled
+        /// </summary>
+        [DataMember(Name="MarketingEnabled", EmitDefaultValue=false)]
+        public bool? MarketingEnabled { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -148,6 +156,7 @@ namespace Flipdish.Model
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  AppType: ").Append(AppType).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  MarketingEnabled: ").Append(MarketingEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -196,6 +205,11 @@ namespace Flipdish.Model
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.MarketingEnabled == input.MarketingEnabled ||
+                    (this.MarketingEnabled != null &&
+                    this.MarketingEnabled.Equals(input.MarketingEnabled))
                 );
         }
 
@@ -214,6 +228,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.AppType.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.MarketingEnabled != null)
+                    hashCode = hashCode * 59 + this.MarketingEnabled.GetHashCode();
                 return hashCode;
             }
         }
