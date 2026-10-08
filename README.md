@@ -258,7 +258,6 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**GetWhiteLabelEvents**](docs/EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/{appId}/events/whitelabel/{whitelabelId} | 
 *FeaturesApi* | [**DisableFeatures**](docs/FeaturesApi.md#disablefeatures) | **POST** /api/v1.0/{appId}/features/disable | 
 *FeaturesApi* | [**EnableFeatures**](docs/FeaturesApi.md#enablefeatures) | **POST** /api/v1.0/{appId}/features/enable | 
-*FilesApi* | [**DownloadFile**](docs/FilesApi.md#downloadfile) | **GET** /api/v1.0/{appId}/files/download/{fileId} | 
 *FirebaseAppsApi* | [**FirebaseAppsAddFirebaseApp**](docs/FirebaseAppsApi.md#firebaseappsaddfirebaseapp) | **POST** /api/v1.0/FirebaseApp | 
 *FirebaseAppsApi* | [**FirebaseAppsDeleteFirebaseApp**](docs/FirebaseAppsApi.md#firebaseappsdeletefirebaseapp) | **DELETE** /api/v1.0/FirebaseApp/{whiteLabelId} | 
 *FirebaseAppsApi* | [**FirebaseAppsGetFirebaseApp**](docs/FirebaseAppsApi.md#firebaseappsgetfirebaseapp) | **GET** /api/v1.0/FirebaseApp/{whitelabelId} | 
@@ -837,7 +836,6 @@ Class | Method | HTTP request | Description
  - [Model.FieldChangeInformation](docs/FieldChangeInformation.md)
  - [Model.FieldGroup](docs/FieldGroup.md)
  - [Model.FileCreationResult](docs/FileCreationResult.md)
- - [Model.FileDownloadResult](docs/FileDownloadResult.md)
  - [Model.FirebaseApp](docs/FirebaseApp.md)
  - [Model.FlipdishAccountName](docs/FlipdishAccountName.md)
  - [Model.FlipdishEventBase](docs/FlipdishEventBase.md)
@@ -1251,7 +1249,6 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultEndUserFeeConfig](docs/RestApiResultEndUserFeeConfig.md)
  - [Model.RestApiResultExecuteConfigurationActionResult](docs/RestApiResultExecuteConfigurationActionResult.md)
  - [Model.RestApiResultFileCreationResult](docs/RestApiResultFileCreationResult.md)
- - [Model.RestApiResultFileDownloadResult](docs/RestApiResultFileDownloadResult.md)
  - [Model.RestApiResultFulfillmentStatesConfiguration](docs/RestApiResultFulfillmentStatesConfiguration.md)
  - [Model.RestApiResultGetEndUserFeeConfigsResponse](docs/RestApiResultGetEndUserFeeConfigsResponse.md)
  - [Model.RestApiResultGroup](docs/RestApiResultGroup.md)
