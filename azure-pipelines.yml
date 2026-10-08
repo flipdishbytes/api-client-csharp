@@ -19,16 +19,24 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  nuspec: '**/Flipdish.csproj'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
+  # Secret nuget.org API key (NUGET_API_KEY) lives in this variable group
+  # (Pipelines > Library > 'Flipdish NuGet'). Keep the group authorized for
+  # this pipeline, otherwise runs fail with an authorization error.
+- group: 'Flipdish NuGet'
+- name: nuspec
+  value: '**/Flipdish.csproj'
+- name: buildPlatform
+  value: 'Any CPU'
+- name: buildConfiguration
+  value: 'Release'
   # Publishing (pack + push) only on push to master. PR runs build + restore only.
   # Azure Pipelines has no 'Push' Build.Reason: push-triggered runs are 'IndividualCI'
   # or 'BatchedCI'. Build.Reason is a runtime variable - it is NOT available to
   # ${{ }} template expressions - so evaluate isMaster with $[ ].
   # String eq/in are case-insensitive, so eq(variables['isMaster'], 'true') below
   # matches the 'True'/'False' values a runtime expression produces.
-  isMaster: $[ and(eq(variables['Build.SourceBranch'], 'refs/heads/master'), in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI')) ]
+- name: isMaster
+  value: $[ and(eq(variables['Build.SourceBranch'], 'refs/heads/master'), in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI')) ]
 
 steps:
 # Pin NuGet to 6.x: NuGet 7.x fails to parse the legacy solution file format
@@ -66,13 +74,36 @@ steps:
   env:
     NUGET_ENABLE_LEGACY_PROJECT_JSON_PACK: true
 
-- task: NuGetCommand@2
+# Push with the API key from the 'Flipdish NuGet' variable group (secret
+# NUGET_API_KEY, mapped into env below so it is masked in logs). The
+# NuGetCommand@2 task (>= 2.280.1) refuses API-key external service
+# connections on NuGet 6.x ("External service connections that use API key
+# authentication require NuGet 7.6 or later" - build 1.2.439), and the 6.x
+# pin must stay for the legacy .sln restore, so push runs as a script.
+# dotnet is preinstalled on hosted Windows agents; the nupkg produced by
+# nuget.exe pack pushes exactly like any other package.
+- task: PowerShell@2
+  displayName: 'dotnet nuget push (nuget.org)'
   condition: and(succeeded(), eq(variables['isMaster'], 'true'))
+  env:
+    NUGET_API_KEY: $(NUGET_API_KEY)
   inputs:
-    command: 'push'
-    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
-    nuGetFeedType: 'external'
-    publishFeedCredentials: 'Nuget service'
+    targetType: 'inline'
+    script: |
+      $ErrorActionPreference = 'Stop'
+      $pkgs = Get-ChildItem "$env:BUILD_ARTIFACTSTAGINGDIRECTORY" -Filter *.nupkg |
+        Where-Object { $_.Name -notlike '*.symbols.nupkg' }
+      if (-not $pkgs) {
+        Write-Host "##vso[task.logissue type=error]No .nupkg packages found in $env:BUILD_ARTIFACTSTAGINGDIRECTORY"
+        exit 1
+      }
+      foreach ($pkg in $pkgs) {
+        Write-Host "Pushing $($pkg.Name)"
+        # --no-symbols: dotnet push would otherwise auto-push a matching .snupkg
+        # --skip-duplicate: build re-runs after a successful push become a no-op
+        dotnet nuget push "$($pkg.FullName)" --source https://api.nuget.org/v3/index.json --api-key "$env:NUGET_API_KEY" --no-symbols --skip-duplicate
+        if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      }
 
 # there are no tests in the solution (only src\Flipdish) - same as netcore repo
 #- task: VSTest@2
