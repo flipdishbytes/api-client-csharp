@@ -149,6 +149,29 @@ namespace Flipdish.Api
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId"></param>
+        /// <param name="deviceId"></param>
+        /// <returns>RestApiResultKioskStripeLocation</returns>
+        RestApiResultKioskStripeLocation GetKioskStripeLocation (string appId, string deviceId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceId"></param>
+        /// <returns>ApiResponse of RestApiResultKioskStripeLocation</returns>
+        ApiResponse<RestApiResultKioskStripeLocation> GetKioskStripeLocationWithHttpInfo (string appId, string deviceId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
         /// <returns>RestApiResultStripeTerminalConnectionToken</returns>
         RestApiResultStripeTerminalConnectionToken GetStripeConnectionToken (string appId);
 
@@ -450,6 +473,29 @@ namespace Flipdish.Api
         /// <param name="deviceId"></param>
         /// <returns>Task of ApiResponse (RestApiResultBluetoothTerminalStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestApiResultBluetoothTerminalStatus>> GetBluetoothTerminalStatusAsyncWithHttpInfo (string appId, string deviceId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceId"></param>
+        /// <returns>Task of RestApiResultKioskStripeLocation</returns>
+        System.Threading.Tasks.Task<RestApiResultKioskStripeLocation> GetKioskStripeLocationAsync (string appId, string deviceId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultKioskStripeLocation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultKioskStripeLocation>> GetKioskStripeLocationAsyncWithHttpInfo (string appId, string deviceId);
         /// <summary>
         /// 
         /// </summary>
@@ -1587,6 +1633,169 @@ namespace Flipdish.Api
             return new ApiResponse<RestApiResultBluetoothTerminalStatus>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
                 (RestApiResultBluetoothTerminalStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultBluetoothTerminalStatus)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceId"></param>
+        /// <returns>RestApiResultKioskStripeLocation</returns>
+        public RestApiResultKioskStripeLocation GetKioskStripeLocation (string appId, string deviceId)
+        {
+             ApiResponse<RestApiResultKioskStripeLocation> localVarResponse = GetKioskStripeLocationWithHttpInfo(appId, deviceId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceId"></param>
+        /// <returns>ApiResponse of RestApiResultKioskStripeLocation</returns>
+        public ApiResponse< RestApiResultKioskStripeLocation > GetKioskStripeLocationWithHttpInfo (string appId, string deviceId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->GetKioskStripeLocation");
+            // verify the required parameter 'deviceId' is set
+            if (deviceId == null)
+                throw new ApiException(400, "Missing required parameter 'deviceId' when calling CardReadersApi->GetKioskStripeLocation");
+
+            var localVarPath = "./api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/stripe-location";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (deviceId != null) localVarPathParams.Add("deviceId", this.Configuration.ApiClient.ParameterToString(deviceId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetKioskStripeLocation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultKioskStripeLocation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultKioskStripeLocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultKioskStripeLocation)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceId"></param>
+        /// <returns>Task of RestApiResultKioskStripeLocation</returns>
+        public async System.Threading.Tasks.Task<RestApiResultKioskStripeLocation> GetKioskStripeLocationAsync (string appId, string deviceId)
+        {
+             ApiResponse<RestApiResultKioskStripeLocation> localVarResponse = await GetKioskStripeLocationAsyncWithHttpInfo(appId, deviceId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="appId"></param>
+        /// <param name="deviceId"></param>
+        /// <returns>Task of ApiResponse (RestApiResultKioskStripeLocation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultKioskStripeLocation>> GetKioskStripeLocationAsyncWithHttpInfo (string appId, string deviceId)
+        {
+            // verify the required parameter 'appId' is set
+            if (appId == null)
+                throw new ApiException(400, "Missing required parameter 'appId' when calling CardReadersApi->GetKioskStripeLocation");
+            // verify the required parameter 'deviceId' is set
+            if (deviceId == null)
+                throw new ApiException(400, "Missing required parameter 'deviceId' when calling CardReadersApi->GetKioskStripeLocation");
+
+            var localVarPath = "./api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/stripe-location";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (deviceId != null) localVarPathParams.Add("deviceId", this.Configuration.ApiClient.ParameterToString(deviceId)); // path parameter
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetKioskStripeLocation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RestApiResultKioskStripeLocation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (RestApiResultKioskStripeLocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestApiResultKioskStripeLocation)));
         }
 
         /// <summary>
