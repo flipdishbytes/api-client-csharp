@@ -13,11 +13,9 @@ Method | HTTP request | Description
 [**GetLocalisedTimeZones**](AccountsApi.md#getlocalisedtimezones) | **GET** /api/v1.0/accounts/timezones | 
 [**Login**](AccountsApi.md#login) | **POST** /api/v1.0/accounts/login | 
 [**LoginSso**](AccountsApi.md#loginsso) | **POST** /api/v1.0/accounts/login/sso | 
-[**LoginWithPin**](AccountsApi.md#loginwithpin) | **POST** /api/v1.0/accounts/login/pin | 
 [**Logout**](AccountsApi.md#logout) | **POST** /api/v1.0/accounts/logout | 
 [**PasswordResetWithToken**](AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | 
 [**RecaptchaValidate**](AccountsApi.md#recaptchavalidate) | **POST** /api/v1.0/accounts/recaptcha | 
-[**RequestLoginPin**](AccountsApi.md#requestloginpin) | **POST** /api/v1.0/accounts/pin | 
 [**RequestPasswordReset**](AccountsApi.md#requestpasswordreset) | **POST** /api/v1.0/accounts/passwordreset | 
 [**SendPinForPasswordReset**](AccountsApi.md#sendpinforpasswordreset) | **POST** /api/v1.0/accounts/password/resetpin | 
 [**SkipSignupStep**](AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | 
@@ -557,66 +555,6 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="loginwithpin"></a>
-# **LoginWithPin**
-> void LoginWithPin (LoginWithPinModel loginModel)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class LoginWithPinExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new AccountsApi();
-            var loginModel = new LoginWithPinModel(); // LoginWithPinModel | 
-
-            try
-            {
-                apiInstance.LoginWithPin(loginModel);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AccountsApi.LoginWithPin: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **loginModel** | [**LoginWithPinModel**](LoginWithPinModel.md)|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="logout"></a>
 # **Logout**
 > void Logout ()
@@ -789,67 +727,6 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="requestloginpin"></a>
-# **RequestLoginPin**
-> RequestLoginPinResponse RequestLoginPin (RequestLoginPinModel requestLoginPinRequest)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class RequestLoginPinExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new AccountsApi();
-            var requestLoginPinRequest = new RequestLoginPinModel(); // RequestLoginPinModel | 
-
-            try
-            {
-                RequestLoginPinResponse result = apiInstance.RequestLoginPin(requestLoginPinRequest);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AccountsApi.RequestLoginPin: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **requestLoginPinRequest** | [**RequestLoginPinModel**](RequestLoginPinModel.md)|  | 
-
-### Return type
-
-[**RequestLoginPinResponse**](RequestLoginPinResponse.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

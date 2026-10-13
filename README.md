@@ -85,11 +85,9 @@ Class | Method | HTTP request | Description
 *AccountsApi* | [**GetLocalisedTimeZones**](docs/AccountsApi.md#getlocalisedtimezones) | **GET** /api/v1.0/accounts/timezones | 
 *AccountsApi* | [**Login**](docs/AccountsApi.md#login) | **POST** /api/v1.0/accounts/login | 
 *AccountsApi* | [**LoginSso**](docs/AccountsApi.md#loginsso) | **POST** /api/v1.0/accounts/login/sso | 
-*AccountsApi* | [**LoginWithPin**](docs/AccountsApi.md#loginwithpin) | **POST** /api/v1.0/accounts/login/pin | 
 *AccountsApi* | [**Logout**](docs/AccountsApi.md#logout) | **POST** /api/v1.0/accounts/logout | 
 *AccountsApi* | [**PasswordResetWithToken**](docs/AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | 
 *AccountsApi* | [**RecaptchaValidate**](docs/AccountsApi.md#recaptchavalidate) | **POST** /api/v1.0/accounts/recaptcha | 
-*AccountsApi* | [**RequestLoginPin**](docs/AccountsApi.md#requestloginpin) | **POST** /api/v1.0/accounts/pin | 
 *AccountsApi* | [**RequestPasswordReset**](docs/AccountsApi.md#requestpasswordreset) | **POST** /api/v1.0/accounts/passwordreset | 
 *AccountsApi* | [**SendPinForPasswordReset**](docs/AccountsApi.md#sendpinforpasswordreset) | **POST** /api/v1.0/accounts/password/resetpin | 
 *AccountsApi* | [**SkipSignupStep**](docs/AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | 
@@ -911,7 +909,6 @@ Class | Method | HTTP request | Description
  - [Model.LocationCreatedEvent](docs/LocationCreatedEvent.md)
  - [Model.LocationDeletedEvent](docs/LocationDeletedEvent.md)
  - [Model.LoginModel](docs/LoginModel.md)
- - [Model.LoginWithPinModel](docs/LoginWithPinModel.md)
  - [Model.LoyaltyCampaign](docs/LoyaltyCampaign.md)
  - [Model.LoyaltyCampaignBase](docs/LoyaltyCampaignBase.md)
  - [Model.LoyaltyCampaignCreatedEvent](docs/LoyaltyCampaignCreatedEvent.md)
@@ -1091,8 +1088,6 @@ Class | Method | HTTP request | Description
  - [Model.RedeemInvitationResult](docs/RedeemInvitationResult.md)
  - [Model.Refund](docs/Refund.md)
  - [Model.Reject](docs/Reject.md)
- - [Model.RequestLoginPinModel](docs/RequestLoginPinModel.md)
- - [Model.RequestLoginPinResponse](docs/RequestLoginPinResponse.md)
  - [Model.RequestPasswordResetModel](docs/RequestPasswordResetModel.md)
  - [Model.RequestPasswordResetPinResponse](docs/RequestPasswordResetPinResponse.md)
  - [Model.Response](docs/Response.md)
