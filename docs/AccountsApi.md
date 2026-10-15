@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AnswerSignUpQuestion**](AccountsApi.md#answersignupquestion) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | 
 [**ChangePassword**](AccountsApi.md#changepassword) | **PUT** /api/v1.0/accounts/password | 
-[**ChangePasswordWithPin**](AccountsApi.md#changepasswordwithpin) | **PUT** /api/v1.0/accounts/password/pin | 
 [**CreateAccount**](AccountsApi.md#createaccount) | **POST** /api/v1.0/accounts | 
 [**CreateBasicAccount**](AccountsApi.md#createbasicaccount) | **POST** /api/v1.0/accounts/basic-account | 
 [**GetAccountDetails**](AccountsApi.md#getaccountdetails) | **GET** /api/v1.0/accounts | 
@@ -17,7 +16,6 @@ Method | HTTP request | Description
 [**PasswordResetWithToken**](AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | 
 [**RecaptchaValidate**](AccountsApi.md#recaptchavalidate) | **POST** /api/v1.0/accounts/recaptcha | 
 [**RequestPasswordReset**](AccountsApi.md#requestpasswordreset) | **POST** /api/v1.0/accounts/passwordreset | 
-[**SendPinForPasswordReset**](AccountsApi.md#sendpinforpasswordreset) | **POST** /api/v1.0/accounts/password/resetpin | 
 [**SkipSignupStep**](AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | 
 [**UpdateAccount**](AccountsApi.md#updateaccount) | **PUT** /api/v1.0/accounts | 
 
@@ -128,66 +126,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **changePasswordModel** | [**ChangePasswordModel**](ChangePasswordModel.md)|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="changepasswordwithpin"></a>
-# **ChangePasswordWithPin**
-> void ChangePasswordWithPin (SetPasswordWithPinModel changePasswordModel)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class ChangePasswordWithPinExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new AccountsApi();
-            var changePasswordModel = new SetPasswordWithPinModel(); // SetPasswordWithPinModel | 
-
-            try
-            {
-                apiInstance.ChangePasswordWithPin(changePasswordModel);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AccountsApi.ChangePasswordWithPin: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **changePasswordModel** | [**SetPasswordWithPinModel**](SetPasswordWithPinModel.md)|  | 
 
 ### Return type
 
@@ -779,67 +717,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="sendpinforpasswordreset"></a>
-# **SendPinForPasswordReset**
-> RequestPasswordResetPinResponse SendPinForPasswordReset (RequestPasswordResetModel requestPasswordResetRequest)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Flipdish.Api;
-using Flipdish.Client;
-using Flipdish.Model;
-
-namespace Example
-{
-    public class SendPinForPasswordResetExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new AccountsApi();
-            var requestPasswordResetRequest = new RequestPasswordResetModel(); // RequestPasswordResetModel | 
-
-            try
-            {
-                RequestPasswordResetPinResponse result = apiInstance.SendPinForPasswordReset(requestPasswordResetRequest);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AccountsApi.SendPinForPasswordReset: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **requestPasswordResetRequest** | [**RequestPasswordResetModel**](RequestPasswordResetModel.md)|  | 
-
-### Return type
-
-[**RequestPasswordResetPinResponse**](RequestPasswordResetPinResponse.md)
 
 ### Authorization
 
