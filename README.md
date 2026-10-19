@@ -656,6 +656,8 @@ Class | Method | HTTP request | Description
 *WhiteLabelConfigApi* | [**UpdateAppStoreConfig**](docs/WhiteLabelConfigApi.md#updateappstoreconfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/appstore | 
 *WhiteLabelConfigApi* | [**UpdatePlayStoreConfig**](docs/WhiteLabelConfigApi.md#updateplaystoreconfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/playstore | 
 *WhiteLabelConfigApi* | [**UploadAppStoreIcon**](docs/WhiteLabelConfigApi.md#uploadappstoreicon) | **POST** /api/v1.0/whitelabelconfig/{appId}/app-store-icon | 
+*WhiteLabelContactFormTypeApi* | [**GetAppContactFormType**](docs/WhiteLabelContactFormTypeApi.md#getappcontactformtype) | **GET** /api/v1.0/whitelabelconfig/{appId}/contact-form-type | 
+*WhiteLabelContactFormTypeApi* | [**UpdateAppContactFormType**](docs/WhiteLabelContactFormTypeApi.md#updateappcontactformtype) | **POST** /api/v1.0/whitelabelconfig/{appId}/contact-form-type | 
 
 
 <a name="documentation-for-models"></a>
@@ -743,6 +745,7 @@ Class | Method | HTTP request | Description
  - [Model.ClientDeviceEnrollmentResult](docs/ClientDeviceEnrollmentResult.md)
  - [Model.ClientDeviceSummary](docs/ClientDeviceSummary.md)
  - [Model.ConfiguredStore](docs/ConfiguredStore.md)
+ - [Model.ContactFormTypeConfigModel](docs/ContactFormTypeConfigModel.md)
  - [Model.Coordinates](docs/Coordinates.md)
  - [Model.CountryFormResponse](docs/CountryFormResponse.md)
  - [Model.CountryWithAccountFieldsDefinitions](docs/CountryWithAccountFieldsDefinitions.md)
@@ -1220,6 +1223,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultChannel](docs/RestApiResultChannel.md)
  - [Model.RestApiResultClientDevice](docs/RestApiResultClientDevice.md)
  - [Model.RestApiResultClientDeviceEnrollmentResult](docs/RestApiResultClientDeviceEnrollmentResult.md)
+ - [Model.RestApiResultContactFormTypeConfigModel](docs/RestApiResultContactFormTypeConfigModel.md)
  - [Model.RestApiResultCoordinates](docs/RestApiResultCoordinates.md)
  - [Model.RestApiResultCountryFormResponse](docs/RestApiResultCountryFormResponse.md)
  - [Model.RestApiResultCreatedMenuSectionItems](docs/RestApiResultCreatedMenuSectionItems.md)
