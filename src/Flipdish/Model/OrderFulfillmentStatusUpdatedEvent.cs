@@ -37,6 +37,9 @@ namespace Flipdish.Model
         /// <param name="orderId">Order Id.</param>
         /// <param name="statusName">Fulfillment status name.</param>
         /// <param name="statusId">Fulfillment status ID.</param>
+        /// <param name="customer">Optional slim customer (Id + language) for push / notification consumers.</param>
+        /// <param name="store">Optional slim store (Name); StoreId remains top-level.</param>
+        /// <param name="appType">Order app type (e.g. Ios, Android) when known.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
         /// <param name="createTime">The time of creation of the event.</param>
         /// <param name="position">Position.</param>
@@ -45,7 +48,7 @@ namespace Flipdish.Model
         /// <param name="ipAddress">Ip Address.</param>
         /// <param name="activityId">Activity Id.</param>
         /// <param name="activityType">Activity Type.</param>
-        public OrderFulfillmentStatusUpdatedEvent(string eventName = default(string), int? storeId = default(int?), string description = default(string), int? orderId = default(int?), string statusName = default(string), string statusId = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string orgId = default(string), string ipAddress = default(string), string activityId = default(string), string activityType = default(string))
+        public OrderFulfillmentStatusUpdatedEvent(string eventName = default(string), int? storeId = default(int?), string description = default(string), int? orderId = default(int?), string statusName = default(string), string statusId = default(string), FulfillmentStatusEventCustomer customer = default(FulfillmentStatusEventCustomer), FulfillmentStatusEventStore store = default(FulfillmentStatusEventStore), string appType = default(string), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string orgId = default(string), string ipAddress = default(string), string activityId = default(string), string activityType = default(string))
         {
             this.EventName = eventName;
             this.StoreId = storeId;
@@ -53,6 +56,9 @@ namespace Flipdish.Model
             this.OrderId = orderId;
             this.StatusName = statusName;
             this.StatusId = statusId;
+            this.Customer = customer;
+            this.Store = store;
+            this.AppType = appType;
             this.FlipdishEventId = flipdishEventId;
             this.CreateTime = createTime;
             this.Position = position;
@@ -104,6 +110,27 @@ namespace Flipdish.Model
         /// <value>Fulfillment status ID</value>
         [DataMember(Name="StatusId", EmitDefaultValue=false)]
         public string StatusId { get; set; }
+
+        /// <summary>
+        /// Optional slim customer (Id + language) for push / notification consumers
+        /// </summary>
+        /// <value>Optional slim customer (Id + language) for push / notification consumers</value>
+        [DataMember(Name="Customer", EmitDefaultValue=false)]
+        public FulfillmentStatusEventCustomer Customer { get; set; }
+
+        /// <summary>
+        /// Optional slim store (Name); StoreId remains top-level
+        /// </summary>
+        /// <value>Optional slim store (Name); StoreId remains top-level</value>
+        [DataMember(Name="Store", EmitDefaultValue=false)]
+        public FulfillmentStatusEventStore Store { get; set; }
+
+        /// <summary>
+        /// Order app type (e.g. Ios, Android) when known
+        /// </summary>
+        /// <value>Order app type (e.g. Ios, Android) when known</value>
+        [DataMember(Name="AppType", EmitDefaultValue=false)]
+        public string AppType { get; set; }
 
         /// <summary>
         /// The identitfier of the event
@@ -175,6 +202,9 @@ namespace Flipdish.Model
             sb.Append("  OrderId: ").Append(OrderId).Append("\n");
             sb.Append("  StatusName: ").Append(StatusName).Append("\n");
             sb.Append("  StatusId: ").Append(StatusId).Append("\n");
+            sb.Append("  Customer: ").Append(Customer).Append("\n");
+            sb.Append("  Store: ").Append(Store).Append("\n");
+            sb.Append("  AppType: ").Append(AppType).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
             sb.Append("  CreateTime: ").Append(CreateTime).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -248,6 +278,21 @@ namespace Flipdish.Model
                     this.StatusId.Equals(input.StatusId))
                 ) && 
                 (
+                    this.Customer == input.Customer ||
+                    (this.Customer != null &&
+                    this.Customer.Equals(input.Customer))
+                ) && 
+                (
+                    this.Store == input.Store ||
+                    (this.Store != null &&
+                    this.Store.Equals(input.Store))
+                ) && 
+                (
+                    this.AppType == input.AppType ||
+                    (this.AppType != null &&
+                    this.AppType.Equals(input.AppType))
+                ) && 
+                (
                     this.FlipdishEventId == input.FlipdishEventId ||
                     (this.FlipdishEventId != null &&
                     this.FlipdishEventId.Equals(input.FlipdishEventId))
@@ -310,6 +355,12 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.StatusName.GetHashCode();
                 if (this.StatusId != null)
                     hashCode = hashCode * 59 + this.StatusId.GetHashCode();
+                if (this.Customer != null)
+                    hashCode = hashCode * 59 + this.Customer.GetHashCode();
+                if (this.Store != null)
+                    hashCode = hashCode * 59 + this.Store.GetHashCode();
+                if (this.AppType != null)
+                    hashCode = hashCode * 59 + this.AppType.GetHashCode();
                 if (this.FlipdishEventId != null)
                     hashCode = hashCode * 59 + this.FlipdishEventId.GetHashCode();
                 if (this.CreateTime != null)
