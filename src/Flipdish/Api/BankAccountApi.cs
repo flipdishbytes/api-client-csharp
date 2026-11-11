@@ -104,10 +104,10 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="bankAccountId"></param>
         /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
         /// <returns>RestApiResultBankAccountDetail</returns>
-        RestApiResultBankAccountDetail GetBankAccountById (int? bankAccountId, string appId);
+        RestApiResultBankAccountDetail GetBankAccountById (string appId, int? bankAccountId);
 
         /// <summary>
         /// 
@@ -116,10 +116,10 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="bankAccountId"></param>
         /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
         /// <returns>ApiResponse of RestApiResultBankAccountDetail</returns>
-        ApiResponse<RestApiResultBankAccountDetail> GetBankAccountByIdWithHttpInfo (int? bankAccountId, string appId);
+        ApiResponse<RestApiResultBankAccountDetail> GetBankAccountByIdWithHttpInfo (string appId, int? bankAccountId);
         /// <summary>
         /// 
         /// </summary>
@@ -317,10 +317,10 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="bankAccountId"></param>
         /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
         /// <returns>Task of RestApiResultBankAccountDetail</returns>
-        System.Threading.Tasks.Task<RestApiResultBankAccountDetail> GetBankAccountByIdAsync (int? bankAccountId, string appId);
+        System.Threading.Tasks.Task<RestApiResultBankAccountDetail> GetBankAccountByIdAsync (string appId, int? bankAccountId);
 
         /// <summary>
         /// 
@@ -329,10 +329,10 @@ namespace Flipdish.Api
         /// 
         /// </remarks>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="bankAccountId"></param>
         /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
         /// <returns>Task of ApiResponse (RestApiResultBankAccountDetail)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestApiResultBankAccountDetail>> GetBankAccountByIdAsyncWithHttpInfo (int? bankAccountId, string appId);
+        System.Threading.Tasks.Task<ApiResponse<RestApiResultBankAccountDetail>> GetBankAccountByIdAsyncWithHttpInfo (string appId, int? bankAccountId);
         /// <summary>
         /// 
         /// </summary>
@@ -1079,12 +1079,12 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="bankAccountId"></param>
         /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
         /// <returns>RestApiResultBankAccountDetail</returns>
-        public RestApiResultBankAccountDetail GetBankAccountById (int? bankAccountId, string appId)
+        public RestApiResultBankAccountDetail GetBankAccountById (string appId, int? bankAccountId)
         {
-             ApiResponse<RestApiResultBankAccountDetail> localVarResponse = GetBankAccountByIdWithHttpInfo(bankAccountId, appId);
+             ApiResponse<RestApiResultBankAccountDetail> localVarResponse = GetBankAccountByIdWithHttpInfo(appId, bankAccountId);
              return localVarResponse.Data;
         }
 
@@ -1092,17 +1092,17 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="bankAccountId"></param>
         /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
         /// <returns>ApiResponse of RestApiResultBankAccountDetail</returns>
-        public ApiResponse< RestApiResultBankAccountDetail > GetBankAccountByIdWithHttpInfo (int? bankAccountId, string appId)
+        public ApiResponse< RestApiResultBankAccountDetail > GetBankAccountByIdWithHttpInfo (string appId, int? bankAccountId)
         {
-            // verify the required parameter 'bankAccountId' is set
-            if (bankAccountId == null)
-                throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling BankAccountApi->GetBankAccountById");
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling BankAccountApi->GetBankAccountById");
+            // verify the required parameter 'bankAccountId' is set
+            if (bankAccountId == null)
+                throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling BankAccountApi->GetBankAccountById");
 
             var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1128,8 +1128,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -1160,12 +1160,12 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="bankAccountId"></param>
         /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
         /// <returns>Task of RestApiResultBankAccountDetail</returns>
-        public async System.Threading.Tasks.Task<RestApiResultBankAccountDetail> GetBankAccountByIdAsync (int? bankAccountId, string appId)
+        public async System.Threading.Tasks.Task<RestApiResultBankAccountDetail> GetBankAccountByIdAsync (string appId, int? bankAccountId)
         {
-             ApiResponse<RestApiResultBankAccountDetail> localVarResponse = await GetBankAccountByIdAsyncWithHttpInfo(bankAccountId, appId);
+             ApiResponse<RestApiResultBankAccountDetail> localVarResponse = await GetBankAccountByIdAsyncWithHttpInfo(appId, bankAccountId);
              return localVarResponse.Data;
 
         }
@@ -1174,17 +1174,17 @@ namespace Flipdish.Api
         ///  
         /// </summary>
         /// <exception cref="Flipdish.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="bankAccountId"></param>
         /// <param name="appId"></param>
+        /// <param name="bankAccountId"></param>
         /// <returns>Task of ApiResponse (RestApiResultBankAccountDetail)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultBankAccountDetail>> GetBankAccountByIdAsyncWithHttpInfo (int? bankAccountId, string appId)
+        public async System.Threading.Tasks.Task<ApiResponse<RestApiResultBankAccountDetail>> GetBankAccountByIdAsyncWithHttpInfo (string appId, int? bankAccountId)
         {
-            // verify the required parameter 'bankAccountId' is set
-            if (bankAccountId == null)
-                throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling BankAccountApi->GetBankAccountById");
             // verify the required parameter 'appId' is set
             if (appId == null)
                 throw new ApiException(400, "Missing required parameter 'appId' when calling BankAccountApi->GetBankAccountById");
+            // verify the required parameter 'bankAccountId' is set
+            if (bankAccountId == null)
+                throw new ApiException(400, "Missing required parameter 'bankAccountId' when calling BankAccountApi->GetBankAccountById");
 
             var localVarPath = "./api/v1.0/{appId}/bankaccounts/{bankAccountId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1210,8 +1210,8 @@ namespace Flipdish.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
             if (appId != null) localVarPathParams.Add("appId", this.Configuration.ApiClient.ParameterToString(appId)); // path parameter
+            if (bankAccountId != null) localVarPathParams.Add("bankAccountId", this.Configuration.ApiClient.ParameterToString(bankAccountId)); // path parameter
 
             // authentication (oauth2) required
             // oauth required

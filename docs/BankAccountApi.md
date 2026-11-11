@@ -208,7 +208,7 @@ void (empty response body)
 
 <a name="getbankaccountbyid"></a>
 # **GetBankAccountById**
-> RestApiResultBankAccountDetail GetBankAccountById (int? bankAccountId, string appId)
+> RestApiResultBankAccountDetail GetBankAccountById (string appId, int? bankAccountId)
 
 
 
@@ -230,12 +230,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new BankAccountApi();
-            var bankAccountId = 56;  // int? | 
             var appId = appId_example;  // string | 
+            var bankAccountId = 56;  // int? | 
 
             try
             {
-                RestApiResultBankAccountDetail result = apiInstance.GetBankAccountById(bankAccountId, appId);
+                RestApiResultBankAccountDetail result = apiInstance.GetBankAccountById(appId, bankAccountId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -251,8 +251,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bankAccountId** | **int?**|  | 
  **appId** | **string**|  | 
+ **bankAccountId** | **int?**|  | 
 
 ### Return type
 
