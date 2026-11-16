@@ -29,12 +29,40 @@ namespace Flipdish.Model
     public partial class StorePreOrderConfigUpdatedEvent :  IEquatable<StorePreOrderConfigUpdatedEvent>
     {
         /// <summary>
+        /// Type of pre order configuration Delivery / Pickup
+        /// </summary>
+        /// <value>Type of pre order configuration Delivery / Pickup</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DeliveryTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Delivery for value: Delivery
+            /// </summary>
+            [EnumMember(Value = "Delivery")]
+            Delivery = 1,
+            
+            /// <summary>
+            /// Enum Pickup for value: Pickup
+            /// </summary>
+            [EnumMember(Value = "Pickup")]
+            Pickup = 2
+        }
+
+        /// <summary>
+        /// Type of pre order configuration Delivery / Pickup
+        /// </summary>
+        /// <value>Type of pre order configuration Delivery / Pickup</value>
+        [DataMember(Name="DeliveryType", EmitDefaultValue=false)]
+        public DeliveryTypeEnum? DeliveryType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="StorePreOrderConfigUpdatedEvent" /> class.
         /// </summary>
         /// <param name="eventName">The event name.</param>
         /// <param name="storeId">Store Id.</param>
         /// <param name="user">User which deleted delivery zone for this store.</param>
         /// <param name="description">Description.</param>
+        /// <param name="deliveryType">Type of pre order configuration Delivery / Pickup.</param>
         /// <param name="preOrderConfig">Pre Order Configuration.</param>
         /// <param name="oldPreOrderConfig">Old Pre Order Configuration.</param>
         /// <param name="flipdishEventId">The identitfier of the event.</param>
@@ -45,12 +73,13 @@ namespace Flipdish.Model
         /// <param name="ipAddress">Ip Address.</param>
         /// <param name="activityId">Activity Id.</param>
         /// <param name="activityType">Activity Type.</param>
-        public StorePreOrderConfigUpdatedEvent(string eventName = default(string), int? storeId = default(int?), UserEventInfo user = default(UserEventInfo), string description = default(string), PreOrderConfig preOrderConfig = default(PreOrderConfig), PreOrderConfig oldPreOrderConfig = default(PreOrderConfig), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string orgId = default(string), string ipAddress = default(string), string activityId = default(string), string activityType = default(string))
+        public StorePreOrderConfigUpdatedEvent(string eventName = default(string), int? storeId = default(int?), UserEventInfo user = default(UserEventInfo), string description = default(string), DeliveryTypeEnum? deliveryType = default(DeliveryTypeEnum?), PreOrderConfig preOrderConfig = default(PreOrderConfig), PreOrderConfig oldPreOrderConfig = default(PreOrderConfig), Guid? flipdishEventId = default(Guid?), DateTime? createTime = default(DateTime?), int? position = default(int?), string appId = default(string), string orgId = default(string), string ipAddress = default(string), string activityId = default(string), string activityType = default(string))
         {
             this.EventName = eventName;
             this.StoreId = storeId;
             this.User = user;
             this.Description = description;
+            this.DeliveryType = deliveryType;
             this.PreOrderConfig = preOrderConfig;
             this.OldPreOrderConfig = oldPreOrderConfig;
             this.FlipdishEventId = flipdishEventId;
@@ -90,6 +119,7 @@ namespace Flipdish.Model
         /// <value>Description</value>
         [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
+
 
         /// <summary>
         /// Pre Order Configuration
@@ -173,6 +203,7 @@ namespace Flipdish.Model
             sb.Append("  StoreId: ").Append(StoreId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  DeliveryType: ").Append(DeliveryType).Append("\n");
             sb.Append("  PreOrderConfig: ").Append(PreOrderConfig).Append("\n");
             sb.Append("  OldPreOrderConfig: ").Append(OldPreOrderConfig).Append("\n");
             sb.Append("  FlipdishEventId: ").Append(FlipdishEventId).Append("\n");
@@ -236,6 +267,11 @@ namespace Flipdish.Model
                     this.Description == input.Description ||
                     (this.Description != null &&
                     this.Description.Equals(input.Description))
+                ) && 
+                (
+                    this.DeliveryType == input.DeliveryType ||
+                    (this.DeliveryType != null &&
+                    this.DeliveryType.Equals(input.DeliveryType))
                 ) && 
                 (
                     this.PreOrderConfig == input.PreOrderConfig ||
@@ -306,6 +342,8 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.DeliveryType != null)
+                    hashCode = hashCode * 59 + this.DeliveryType.GetHashCode();
                 if (this.PreOrderConfig != null)
                     hashCode = hashCode * 59 + this.PreOrderConfig.GetHashCode();
                 if (this.OldPreOrderConfig != null)
