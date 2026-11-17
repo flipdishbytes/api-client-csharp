@@ -748,9 +748,12 @@ namespace Flipdish.Model
         /// <param name="cashOrderValue">Cash Order Value.</param>
         /// <param name="paidOnlineOrderValueExcludingDeliveryFees">Paid Online Order Value Excluding Delivery Fees.</param>
         /// <param name="cashOrderValueExcludingDeliveryFees">Cash Order Value Excluding Delivery Fees.</param>
+        /// <param name="userEndFee">Total user end fee (processing fee charged to the customer, including VAT).</param>
+        /// <param name="cashUserEndFee">User end fee charged on cash orders.</param>
+        /// <param name="paidOnlineUserEndFee">User end fee charged on paid online (card) orders.</param>
         /// <param name="startTime">Start Time.</param>
         /// <param name="endTime">End Time.</param>
-        public StoreEndOfDayReport(int? storeId = default(int?), string storeName = default(string), CurrencyEnum? currency = default(CurrencyEnum?), int? orderCount = default(int?), double? orderValue = default(double?), double? orderValueExcludingDeliveryFees = default(double?), int? collectionOrderCount = default(int?), int? collectionCashOrderCount = default(int?), int? collectionPaidOnlineOrderCount = default(int?), double? collectionOrderValue = default(double?), double? collectionCashOrderValue = default(double?), double? collectionPaidOnlineOrderValue = default(double?), int? deliveryOrderCount = default(int?), int? deliveryCashOrderCount = default(int?), int? deliveryPaidOnlineOrderCount = default(int?), double? deliveryOrderValue = default(double?), double? deliveryCashOrderValue = default(double?), double? deliveryPaidOnlineOrderValue = default(double?), int? paidOnlineOrderCount = default(int?), int? cashOrderCount = default(int?), double? paidOnlineOrderValue = default(double?), double? cashOrderValue = default(double?), double? paidOnlineOrderValueExcludingDeliveryFees = default(double?), double? cashOrderValueExcludingDeliveryFees = default(double?), DateTime? startTime = default(DateTime?), DateTime? endTime = default(DateTime?))
+        public StoreEndOfDayReport(int? storeId = default(int?), string storeName = default(string), CurrencyEnum? currency = default(CurrencyEnum?), int? orderCount = default(int?), double? orderValue = default(double?), double? orderValueExcludingDeliveryFees = default(double?), int? collectionOrderCount = default(int?), int? collectionCashOrderCount = default(int?), int? collectionPaidOnlineOrderCount = default(int?), double? collectionOrderValue = default(double?), double? collectionCashOrderValue = default(double?), double? collectionPaidOnlineOrderValue = default(double?), int? deliveryOrderCount = default(int?), int? deliveryCashOrderCount = default(int?), int? deliveryPaidOnlineOrderCount = default(int?), double? deliveryOrderValue = default(double?), double? deliveryCashOrderValue = default(double?), double? deliveryPaidOnlineOrderValue = default(double?), int? paidOnlineOrderCount = default(int?), int? cashOrderCount = default(int?), double? paidOnlineOrderValue = default(double?), double? cashOrderValue = default(double?), double? paidOnlineOrderValueExcludingDeliveryFees = default(double?), double? cashOrderValueExcludingDeliveryFees = default(double?), double? userEndFee = default(double?), double? cashUserEndFee = default(double?), double? paidOnlineUserEndFee = default(double?), DateTime? startTime = default(DateTime?), DateTime? endTime = default(DateTime?))
         {
             this.StoreId = storeId;
             this.StoreName = storeName;
@@ -776,6 +779,9 @@ namespace Flipdish.Model
             this.CashOrderValue = cashOrderValue;
             this.PaidOnlineOrderValueExcludingDeliveryFees = paidOnlineOrderValueExcludingDeliveryFees;
             this.CashOrderValueExcludingDeliveryFees = cashOrderValueExcludingDeliveryFees;
+            this.UserEndFee = userEndFee;
+            this.CashUserEndFee = cashUserEndFee;
+            this.PaidOnlineUserEndFee = paidOnlineUserEndFee;
             this.StartTime = startTime;
             this.EndTime = endTime;
         }
@@ -943,6 +949,27 @@ namespace Flipdish.Model
         public double? CashOrderValueExcludingDeliveryFees { get; set; }
 
         /// <summary>
+        /// Total user end fee (processing fee charged to the customer, including VAT)
+        /// </summary>
+        /// <value>Total user end fee (processing fee charged to the customer, including VAT)</value>
+        [DataMember(Name="UserEndFee", EmitDefaultValue=false)]
+        public double? UserEndFee { get; set; }
+
+        /// <summary>
+        /// User end fee charged on cash orders
+        /// </summary>
+        /// <value>User end fee charged on cash orders</value>
+        [DataMember(Name="CashUserEndFee", EmitDefaultValue=false)]
+        public double? CashUserEndFee { get; set; }
+
+        /// <summary>
+        /// User end fee charged on paid online (card) orders
+        /// </summary>
+        /// <value>User end fee charged on paid online (card) orders</value>
+        [DataMember(Name="PaidOnlineUserEndFee", EmitDefaultValue=false)]
+        public double? PaidOnlineUserEndFee { get; set; }
+
+        /// <summary>
         /// Start Time
         /// </summary>
         /// <value>Start Time</value>
@@ -988,6 +1015,9 @@ namespace Flipdish.Model
             sb.Append("  CashOrderValue: ").Append(CashOrderValue).Append("\n");
             sb.Append("  PaidOnlineOrderValueExcludingDeliveryFees: ").Append(PaidOnlineOrderValueExcludingDeliveryFees).Append("\n");
             sb.Append("  CashOrderValueExcludingDeliveryFees: ").Append(CashOrderValueExcludingDeliveryFees).Append("\n");
+            sb.Append("  UserEndFee: ").Append(UserEndFee).Append("\n");
+            sb.Append("  CashUserEndFee: ").Append(CashUserEndFee).Append("\n");
+            sb.Append("  PaidOnlineUserEndFee: ").Append(PaidOnlineUserEndFee).Append("\n");
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
             sb.Append("}\n");
@@ -1145,6 +1175,21 @@ namespace Flipdish.Model
                     this.CashOrderValueExcludingDeliveryFees.Equals(input.CashOrderValueExcludingDeliveryFees))
                 ) && 
                 (
+                    this.UserEndFee == input.UserEndFee ||
+                    (this.UserEndFee != null &&
+                    this.UserEndFee.Equals(input.UserEndFee))
+                ) && 
+                (
+                    this.CashUserEndFee == input.CashUserEndFee ||
+                    (this.CashUserEndFee != null &&
+                    this.CashUserEndFee.Equals(input.CashUserEndFee))
+                ) && 
+                (
+                    this.PaidOnlineUserEndFee == input.PaidOnlineUserEndFee ||
+                    (this.PaidOnlineUserEndFee != null &&
+                    this.PaidOnlineUserEndFee.Equals(input.PaidOnlineUserEndFee))
+                ) && 
+                (
                     this.StartTime == input.StartTime ||
                     (this.StartTime != null &&
                     this.StartTime.Equals(input.StartTime))
@@ -1213,6 +1258,12 @@ namespace Flipdish.Model
                     hashCode = hashCode * 59 + this.PaidOnlineOrderValueExcludingDeliveryFees.GetHashCode();
                 if (this.CashOrderValueExcludingDeliveryFees != null)
                     hashCode = hashCode * 59 + this.CashOrderValueExcludingDeliveryFees.GetHashCode();
+                if (this.UserEndFee != null)
+                    hashCode = hashCode * 59 + this.UserEndFee.GetHashCode();
+                if (this.CashUserEndFee != null)
+                    hashCode = hashCode * 59 + this.CashUserEndFee.GetHashCode();
+                if (this.PaidOnlineUserEndFee != null)
+                    hashCode = hashCode * 59 + this.PaidOnlineUserEndFee.GetHashCode();
                 if (this.StartTime != null)
                     hashCode = hashCode * 59 + this.StartTime.GetHashCode();
                 if (this.EndTime != null)

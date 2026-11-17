@@ -27,6 +27,9 @@ Name | Type | Description | Notes
 **CashOrderValue** | **double?** | Cash Order Value | [optional] 
 **PaidOnlineOrderValueExcludingDeliveryFees** | **double?** | Paid Online Order Value Excluding Delivery Fees | [optional] 
 **CashOrderValueExcludingDeliveryFees** | **double?** | Cash Order Value Excluding Delivery Fees | [optional] 
+**UserEndFee** | **double?** | Total user end fee (processing fee charged to the customer, including VAT) | [optional] 
+**CashUserEndFee** | **double?** | User end fee charged on cash orders | [optional] 
+**PaidOnlineUserEndFee** | **double?** | User end fee charged on paid online (card) orders | [optional] 
 **StartTime** | **DateTime?** | Start Time | [optional] 
 **EndTime** | **DateTime?** | End Time | [optional] 
 
