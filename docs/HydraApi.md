@@ -5,6 +5,7 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AssignEmv**](HydraApi.md#assignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/assign/{hydraConfigId}/{emvTerminalId} | 
+[**AttachStoreToKiosk**](HydraApi.md#attachstoretokiosk) | **POST** /api/v1.0/{appId}/AttachStoreToKiosk/{deviceId}/store/{storeId} | 
 [**AttachStoreToTerminal**](HydraApi.md#attachstoretoterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId} | 
 [**CancelEmvPayment**](HydraApi.md#cancelemvpayment) | **POST** /api/v1.0/{appId}/hydra/cancelemvpayment/{orderId} | 
 [**DetachStoreFromTerminal**](HydraApi.md#detachstorefromterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId} | 
@@ -19,8 +20,11 @@ Method | HTTP request | Description
 [**GetSettings**](HydraApi.md#getsettings) | **GET** /api/v1.0/hydra/settings | 
 [**HydraCreateEmv**](HydraApi.md#hydracreateemv) | **POST** /api/v1.0/{appId}/emvterminals | 
 [**HydraDeleteEmv**](HydraApi.md#hydradeleteemv) | **DELETE** /api/v1.0/{appId}/emvterminals/{id} | 
+[**HydraDetachStoreFromKiosk**](HydraApi.md#hydradetachstorefromkiosk) | **DELETE** /api/v1.0/{appId}/DetachStoreFromKiosk/{deviceId}/store/{storeId} | 
 [**HydraGetEmvsForAppId**](HydraApi.md#hydragetemvsforappid) | **GET** /api/v1.0/{appId}/emvterminals | 
 [**LoginWithDeviceId**](HydraApi.md#loginwithdeviceid) | **POST** /api/v1.0/hydra/{deviceId}/login | 
+[**Register**](HydraApi.md#register) | **POST** /api/v1.0/{appId}/hydra/registration | 
+[**UnAssign**](HydraApi.md#unassign) | **DELETE** /api/v1.0/{appId}/hydra/{deviceId}/registration | 
 [**UnassignEmv**](HydraApi.md#unassignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId} | 
 [**UpdateKioskCashVisibilitySettings**](HydraApi.md#updatekioskcashvisibilitysettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | 
 [**UpdateKioskSettings**](HydraApi.md#updatekiosksettings) | **POST** /api/v1.0/{appId}/kiosksettings/{deviceId} | 
@@ -78,6 +82,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="attachstoretokiosk"></a>
+# **AttachStoreToKiosk**
+> RestApiResultHydraStatus AttachStoreToKiosk (string appId, int? storeId, string deviceId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class AttachStoreToKioskExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new HydraApi();
+            var appId = appId_example;  // string | 
+            var storeId = 56;  // int? | 
+            var deviceId = deviceId_example;  // string | 
+
+            try
+            {
+                RestApiResultHydraStatus result = apiInstance.AttachStoreToKiosk(appId, storeId, deviceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling HydraApi.AttachStoreToKiosk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **storeId** | **int?**|  | 
+ **deviceId** | **string**|  | 
+
+### Return type
+
+[**RestApiResultHydraStatus**](RestApiResultHydraStatus.md)
 
 ### Authorization
 
@@ -966,6 +1035,71 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="hydradetachstorefromkiosk"></a>
+# **HydraDetachStoreFromKiosk**
+> RestApiResultHydraStatus HydraDetachStoreFromKiosk (string appId, int? storeId, string deviceId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class HydraDetachStoreFromKioskExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new HydraApi();
+            var appId = appId_example;  // string | 
+            var storeId = 56;  // int? | 
+            var deviceId = deviceId_example;  // string | 
+
+            try
+            {
+                RestApiResultHydraStatus result = apiInstance.HydraDetachStoreFromKiosk(appId, storeId, deviceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling HydraApi.HydraDetachStoreFromKiosk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **storeId** | **int?**|  | 
+ **deviceId** | **string**|  | 
+
+### Return type
+
+[**RestApiResultHydraStatus**](RestApiResultHydraStatus.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="hydragetemvsforappid"></a>
 # **HydraGetEmvsForAppId**
 > RestApiArrayResultEmvTerminalWithAssignments HydraGetEmvsForAppId (string appId)
@@ -1075,6 +1209,131 @@ Name | Type | Description  | Notes
  **deviceId** | **string**|  | 
  **hydraUserType** | **string**|  | [optional] 
  **serialNumber** | **string**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="register"></a>
+# **Register**
+> RestApiResultHydraRegistrationStatus Register (string appId, HydraRegistrationRequest hydraRegistration)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class RegisterExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new HydraApi();
+            var appId = appId_example;  // string | 
+            var hydraRegistration = new HydraRegistrationRequest(); // HydraRegistrationRequest | 
+
+            try
+            {
+                RestApiResultHydraRegistrationStatus result = apiInstance.Register(appId, hydraRegistration);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling HydraApi.Register: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **hydraRegistration** | [**HydraRegistrationRequest**](HydraRegistrationRequest.md)|  | 
+
+### Return type
+
+[**RestApiResultHydraRegistrationStatus**](RestApiResultHydraRegistrationStatus.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="unassign"></a>
+# **UnAssign**
+> void UnAssign (string appId, string deviceId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UnAssignExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new HydraApi();
+            var appId = appId_example;  // string | 
+            var deviceId = deviceId_example;  // string | 
+
+            try
+            {
+                apiInstance.UnAssign(appId, deviceId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling HydraApi.UnAssign: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **deviceId** | **string**|  | 
 
 ### Return type
 
