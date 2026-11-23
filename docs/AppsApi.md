@@ -6,8 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AppsSetPropertyId**](AppsApi.md#appssetpropertyid) | **POST** /api/v1.0/apps/{appId}/orgId/{orgId} | 
 [**CreateApp**](AppsApi.md#createapp) | **POST** /api/v1.0/apps | 
+[**DeleteAppHomeScreenBackground**](AppsApi.md#deleteapphomescreenbackground) | **DELETE** /api/v1.0/apps/{appId}/home-screen-background | 
 [**GetApp**](AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | 
 [**GetAppHostnameStatus**](AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
+[**GetAppMobileSettings**](AppsApi.md#getappmobilesettings) | **GET** /api/v1.0/apps/{appId}/mobile-app-settings | 
 [**GetAppName**](AppsApi.md#getappname) | **GET** /api/v1.0/apps/{appId}/name | 
 [**GetApps**](AppsApi.md#getapps) | **GET** /api/v1.0/apps | 
 [**GetCompliance**](AppsApi.md#getcompliance) | **GET** /api/v1.0/apps/{appId}/compliance | 
@@ -19,11 +21,13 @@ Method | HTTP request | Description
 [**SetAppConfig**](AppsApi.md#setappconfig) | **POST** /api/v1.0/apps/{appId}/config | 
 [**SetAppHostname**](AppsApi.md#setapphostname) | **POST** /api/v1.0/apps/{appId}/hostname | 
 [**SetAppLanguages**](AppsApi.md#setapplanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | 
+[**SetAppMobileSettings**](AppsApi.md#setappmobilesettings) | **POST** /api/v1.0/apps/{appId}/mobile-app-settings | 
 [**SetAppStoreName**](AppsApi.md#setappstorename) | **POST** /api/v1.0/apps/{appId}/appstorename | 
 [**SetCompliance**](AppsApi.md#setcompliance) | **POST** /api/v1.0/apps/{appId}/compliance | 
 [**SetPanaceaVanityUrl**](AppsApi.md#setpanaceavanityurl) | **POST** /api/v1.0/apps/{appId}/panacea/url | 
 [**SetThirdPartyIntegrations**](AppsApi.md#setthirdpartyintegrations) | **POST** /api/v1.0/apps/{appId}/third-party-integrations | 
 [**ToggleNextGenWeb**](AppsApi.md#togglenextgenweb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | 
+[**UploadAppHomeScreenBackground**](AppsApi.md#uploadapphomescreenbackground) | **POST** /api/v1.0/apps/{appId}/home-screen-background | 
 [**UploadAppLogo**](AppsApi.md#uploadapplogo) | **POST** /api/v1.0/apps/{appId}/logo | 
 
 
@@ -151,6 +155,66 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="deleteapphomescreenbackground"></a>
+# **DeleteAppHomeScreenBackground**
+> void DeleteAppHomeScreenBackground (string appId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class DeleteAppHomeScreenBackgroundExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AppsApi();
+            var appId = appId_example;  // string | 
+
+            try
+            {
+                apiInstance.DeleteAppHomeScreenBackground(appId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AppsApi.DeleteAppHomeScreenBackground: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getapp"></a>
 # **GetApp**
 > RestApiResultApp GetApp (string appId)
@@ -261,6 +325,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultDnsRecordInformation**](RestApiResultDnsRecordInformation.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getappmobilesettings"></a>
+# **GetAppMobileSettings**
+> RestApiResultMobileAppSettings GetAppMobileSettings (string appId)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class GetAppMobileSettingsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AppsApi();
+            var appId = appId_example;  // string | 
+
+            try
+            {
+                RestApiResultMobileAppSettings result = apiInstance.GetAppMobileSettings(appId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AppsApi.GetAppMobileSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+
+### Return type
+
+[**RestApiResultMobileAppSettings**](RestApiResultMobileAppSettings.md)
 
 ### Authorization
 
@@ -957,6 +1082,68 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="setappmobilesettings"></a>
+# **SetAppMobileSettings**
+> void SetAppMobileSettings (string appId, MobileAppSettingsUpdateModel update)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class SetAppMobileSettingsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AppsApi();
+            var appId = appId_example;  // string | 
+            var update = new MobileAppSettingsUpdateModel(); // MobileAppSettingsUpdateModel | 
+
+            try
+            {
+                apiInstance.SetAppMobileSettings(appId, update);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AppsApi.SetAppMobileSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **update** | [**MobileAppSettingsUpdateModel**](MobileAppSettingsUpdateModel.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="setappstorename"></a>
 # **SetAppStoreName**
 > void SetAppStoreName (string appId, string appStoreName)
@@ -1270,6 +1457,68 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="uploadapphomescreenbackground"></a>
+# **UploadAppHomeScreenBackground**
+> void UploadAppHomeScreenBackground (string appId, System.IO.Stream image)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Flipdish.Api;
+using Flipdish.Client;
+using Flipdish.Model;
+
+namespace Example
+{
+    public class UploadAppHomeScreenBackgroundExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AppsApi();
+            var appId = appId_example;  // string | 
+            var image = new System.IO.Stream(); // System.IO.Stream | Home screen background
+
+            try
+            {
+                apiInstance.UploadAppHomeScreenBackground(appId, image);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AppsApi.UploadAppHomeScreenBackground: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **string**|  | 
+ **image** | **System.IO.Stream**| Home screen background | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

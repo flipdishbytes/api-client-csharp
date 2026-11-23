@@ -123,8 +123,10 @@ Class | Method | HTTP request | Description
 *AppStoreEntitlementsApi* | [**GetAppStoreAppEntitlements**](docs/AppStoreEntitlementsApi.md#getappstoreappentitlements) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/entitlements | 
 *AppsApi* | [**AppsSetPropertyId**](docs/AppsApi.md#appssetpropertyid) | **POST** /api/v1.0/apps/{appId}/orgId/{orgId} | 
 *AppsApi* | [**CreateApp**](docs/AppsApi.md#createapp) | **POST** /api/v1.0/apps | 
+*AppsApi* | [**DeleteAppHomeScreenBackground**](docs/AppsApi.md#deleteapphomescreenbackground) | **DELETE** /api/v1.0/apps/{appId}/home-screen-background | 
 *AppsApi* | [**GetApp**](docs/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | 
 *AppsApi* | [**GetAppHostnameStatus**](docs/AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
+*AppsApi* | [**GetAppMobileSettings**](docs/AppsApi.md#getappmobilesettings) | **GET** /api/v1.0/apps/{appId}/mobile-app-settings | 
 *AppsApi* | [**GetAppName**](docs/AppsApi.md#getappname) | **GET** /api/v1.0/apps/{appId}/name | 
 *AppsApi* | [**GetApps**](docs/AppsApi.md#getapps) | **GET** /api/v1.0/apps | 
 *AppsApi* | [**GetCompliance**](docs/AppsApi.md#getcompliance) | **GET** /api/v1.0/apps/{appId}/compliance | 
@@ -136,11 +138,13 @@ Class | Method | HTTP request | Description
 *AppsApi* | [**SetAppConfig**](docs/AppsApi.md#setappconfig) | **POST** /api/v1.0/apps/{appId}/config | 
 *AppsApi* | [**SetAppHostname**](docs/AppsApi.md#setapphostname) | **POST** /api/v1.0/apps/{appId}/hostname | 
 *AppsApi* | [**SetAppLanguages**](docs/AppsApi.md#setapplanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | 
+*AppsApi* | [**SetAppMobileSettings**](docs/AppsApi.md#setappmobilesettings) | **POST** /api/v1.0/apps/{appId}/mobile-app-settings | 
 *AppsApi* | [**SetAppStoreName**](docs/AppsApi.md#setappstorename) | **POST** /api/v1.0/apps/{appId}/appstorename | 
 *AppsApi* | [**SetCompliance**](docs/AppsApi.md#setcompliance) | **POST** /api/v1.0/apps/{appId}/compliance | 
 *AppsApi* | [**SetPanaceaVanityUrl**](docs/AppsApi.md#setpanaceavanityurl) | **POST** /api/v1.0/apps/{appId}/panacea/url | 
 *AppsApi* | [**SetThirdPartyIntegrations**](docs/AppsApi.md#setthirdpartyintegrations) | **POST** /api/v1.0/apps/{appId}/third-party-integrations | 
 *AppsApi* | [**ToggleNextGenWeb**](docs/AppsApi.md#togglenextgenweb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | 
+*AppsApi* | [**UploadAppHomeScreenBackground**](docs/AppsApi.md#uploadapphomescreenbackground) | **POST** /api/v1.0/apps/{appId}/home-screen-background | 
 *AppsApi* | [**UploadAppLogo**](docs/AppsApi.md#uploadapplogo) | **POST** /api/v1.0/apps/{appId}/logo | 
 *AuditLogsApi* | [**AddOrderAuditLog**](docs/AuditLogsApi.md#addorderauditlog) | **POST** /api/v1.0/auditlogs/orders/{orderId} | 
 *AuditLogsApi* | [**AddStoreAuditLogEvent**](docs/AuditLogsApi.md#addstoreauditlogevent) | **POST** /api/v1.0/auditlogs/stores/{storeId} | 
@@ -852,6 +856,7 @@ Class | Method | HTTP request | Description
  - [Model.GroupedCoordinates](docs/GroupedCoordinates.md)
  - [Model.HasPaymentMethodResponse](docs/HasPaymentMethodResponse.md)
  - [Model.HomeAction](docs/HomeAction.md)
+ - [Model.HomeScreenBackground](docs/HomeScreenBackground.md)
  - [Model.HomeStatistics](docs/HomeStatistics.md)
  - [Model.HttpPostedFileBase](docs/HttpPostedFileBase.md)
  - [Model.HydraAssignedEvent](docs/HydraAssignedEvent.md)
@@ -970,6 +975,8 @@ Class | Method | HTTP request | Description
  - [Model.Metafield](docs/Metafield.md)
  - [Model.MetafieldDefinition](docs/MetafieldDefinition.md)
  - [Model.MetafieldDefinitionRecommendation](docs/MetafieldDefinitionRecommendation.md)
+ - [Model.MobileAppSettings](docs/MobileAppSettings.md)
+ - [Model.MobileAppSettingsUpdateModel](docs/MobileAppSettingsUpdateModel.md)
  - [Model.MobileAppsImage](docs/MobileAppsImage.md)
  - [Model.MobileAppsStatistics](docs/MobileAppsStatistics.md)
  - [Model.MobileAppsSubmission](docs/MobileAppsSubmission.md)
@@ -1272,6 +1279,7 @@ Class | Method | HTTP request | Description
  - [Model.RestApiResultMenuZone](docs/RestApiResultMenuZone.md)
  - [Model.RestApiResultMetadata](docs/RestApiResultMetadata.md)
  - [Model.RestApiResultMetafieldDefinition](docs/RestApiResultMetafieldDefinition.md)
+ - [Model.RestApiResultMobileAppSettings](docs/RestApiResultMobileAppSettings.md)
  - [Model.RestApiResultMobileAppsImage](docs/RestApiResultMobileAppsImage.md)
  - [Model.RestApiResultMobileAppsSubmission](docs/RestApiResultMobileAppsSubmission.md)
  - [Model.RestApiResultMobileAppsSubmissionDetails](docs/RestApiResultMobileAppsSubmissionDetails.md)
